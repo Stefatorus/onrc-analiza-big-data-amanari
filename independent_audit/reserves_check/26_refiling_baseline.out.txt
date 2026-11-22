@@ -1,0 +1,5 @@
+        sol       n  next_within_30d  next_within_90d  next_within_365d
+0   Respins   48211           0.4384           0.6908            0.8437
+1     Admis  594631           0.1442           0.2348            0.4887
+2  Renunțat    6411           0.7252           0.8069            0.8911
+median days to next request after a rejection: 30.0  after an admission: 128.7

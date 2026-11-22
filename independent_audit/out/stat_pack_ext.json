@@ -1,0 +1,8776 @@
+{
+ "efort_anual": {
+  "meta": "Toate deciziile emise (finale largi + amânări), pe an calendaristic; 2023 de la 1 aprilie, 2026 până la ultima decizie.",
+  "columns": [
+   "an",
+   "perioada",
+   "zile_lucr_legale",
+   "decizii_total",
+   "finale",
+   "amanari",
+   "decizii_pe_zi_lucr",
+   "pondere_amanari_pct"
+  ],
+  "rows": [
+   {
+    "an": 2023,
+    "perioada": "2023-04-01 – 2023-12-31",
+    "zile_lucr_legale": 185,
+    "decizii_total": 677838,
+    "finale": 539723,
+    "amanari": 138115,
+    "decizii_pe_zi_lucr": 3664,
+    "pondere_amanari_pct": 20.4
+   },
+   {
+    "an": 2024,
+    "perioada": "2024-01-01 – 2024-12-31",
+    "zile_lucr_legale": 252,
+    "decizii_total": 924065,
+    "finale": 740580,
+    "amanari": 183485,
+    "decizii_pe_zi_lucr": 3667,
+    "pondere_amanari_pct": 19.9
+   },
+   {
+    "an": 2025,
+    "perioada": "2025-01-01 – 2025-12-31",
+    "zile_lucr_legale": 248,
+    "decizii_total": 1268621,
+    "finale": 1013779,
+    "amanari": 254842,
+    "decizii_pe_zi_lucr": 5115,
+    "pondere_amanari_pct": 20.1
+   },
+   {
+    "an": 2026,
+    "perioada": "2026-01-01 – 2026-11-20",
+    "zile_lucr_legale": 224,
+    "decizii_total": 1159219,
+    "finale": 922194,
+    "amanari": 237025,
+    "decizii_pe_zi_lucr": 5175,
+    "pondere_amanari_pct": 20.4
+   }
+  ]
+ },
+ "efort_aceeasi_perioada": {
+  "meta": "1 octombrie – 19 noiembrie, fiecare an (20.11.2026 e o zi parțială în arhivă și e exclusă): toate deciziile (finale largi + amânări) pe zi lucrătoare legală.",
+  "columns": [
+   "an",
+   "decizii_total",
+   "decizii_pe_zi_lucr",
+   "finale_pe_zi_lucr",
+   "amanari_pe_zi_lucr",
+   "fata_de_2023_pct"
+  ],
+  "rows": [
+   {
+    "an": 2023,
+    "decizii_total": 129957,
+    "decizii_pe_zi_lucr": 3713,
+    "finale_pe_zi_lucr": 2956,
+    "amanari_pe_zi_lucr": 757,
+    "fata_de_2023_pct": 0.0
+   },
+   {
+    "an": 2024,
+    "decizii_total": 152138,
+    "decizii_pe_zi_lucr": 4226,
+    "finale_pe_zi_lucr": 3490,
+    "amanari_pe_zi_lucr": 736,
+    "fata_de_2023_pct": 13.8
+   },
+   {
+    "an": 2025,
+    "decizii_total": 175005,
+    "decizii_pe_zi_lucr": 4861,
+    "finale_pe_zi_lucr": 3810,
+    "amanari_pe_zi_lucr": 1051,
+    "fata_de_2023_pct": 30.9
+   },
+   {
+    "an": 2026,
+    "decizii_total": 190053,
+    "decizii_pe_zi_lucr": 5279,
+    "finale_pe_zi_lucr": 4267,
+    "amanari_pe_zi_lucr": 1012,
+    "fata_de_2023_pct": 42.2
+   }
+  ]
+ },
+ "efort_sezon_MJ": {
+  "meta": "Toate deciziile pe zi lucrătoare legală, în aceleași ferestre ca intrările din nota MJ (ian.–iun. vs aug.–oct.), pe ani: scăderea din aug.–oct. e sezonieră.",
+  "columns": [
+   "an",
+   "decizii_pe_zi_ian_iun",
+   "decizii_pe_zi_aug_oct",
+   "aug_oct_fata_de_ian_iun_pct"
+  ],
+  "rows": [
+   {
+    "an": 2024,
+    "decizii_pe_zi_ian_iun": 4113,
+    "decizii_pe_zi_aug_oct": 3114,
+    "aug_oct_fata_de_ian_iun_pct": -24.3
+   },
+   {
+    "an": 2025,
+    "decizii_pe_zi_ian_iun": 5448,
+    "decizii_pe_zi_aug_oct": 4714,
+    "aug_oct_fata_de_ian_iun_pct": -13.5
+   },
+   {
+    "an": 2026,
+    "decizii_pe_zi_ian_iun": 5462,
+    "decizii_pe_zi_aug_oct": 4770,
+    "aug_oct_fata_de_ian_iun_pct": -12.7
+   }
+  ]
+ },
+ "efort_in_afara_programului": {
+  "meta": "Decizii cu marca temporală în weekend / sărbători legale sau, în zile lucrătoare, după 16:00 ori înainte de 8:00. Marca e cea din BERC; nu dovedește ore suplimentare individuale.",
+  "columns": [
+   "an",
+   "zile_nelucratoare_cu_decizii",
+   "decizii_in_zile_nelucratoare",
+   "pondere_zile_nelucratoare_pct",
+   "pondere_dupa_16_sau_inainte_8_pct"
+  ],
+  "rows": [
+   {
+    "an": 2023,
+    "zile_nelucratoare_cu_decizii": 5,
+    "decizii_in_zile_nelucratoare": 5,
+    "pondere_zile_nelucratoare_pct": 0.0,
+    "pondere_dupa_16_sau_inainte_8_pct": 14.4
+   },
+   {
+    "an": 2024,
+    "zile_nelucratoare_cu_decizii": 13,
+    "decizii_in_zile_nelucratoare": 18,
+    "pondere_zile_nelucratoare_pct": 0.0,
+    "pondere_dupa_16_sau_inainte_8_pct": 16.0
+   },
+   {
+    "an": 2025,
+    "zile_nelucratoare_cu_decizii": 5,
+    "decizii_in_zile_nelucratoare": 6,
+    "pondere_zile_nelucratoare_pct": 0.0,
+    "pondere_dupa_16_sau_inainte_8_pct": 14.3
+   },
+   {
+    "an": 2026,
+    "zile_nelucratoare_cu_decizii": 5,
+    "decizii_in_zile_nelucratoare": 5,
+    "pondere_zile_nelucratoare_pct": 0.0,
+    "pondere_dupa_16_sau_inainte_8_pct": 10.6
+   }
+  ]
+ },
+ "efort_in_afara_programului_lunar_2026": {
+  "meta": "2026, pe luna deciziei.",
+  "columns": [
+   "luna",
+   "decizii",
+   "in_zile_nelucratoare",
+   "dupa_program",
+   "pondere_in_afara_pct"
+  ],
+  "rows": [
+   {
+    "luna": "2026-01",
+    "decizii": 100127,
+    "in_zile_nelucratoare": 0,
+    "dupa_program": 12510,
+    "pondere_in_afara_pct": 12.5
+   },
+   {
+    "luna": "2026-02",
+    "decizii": 118287,
+    "in_zile_nelucratoare": 1,
+    "dupa_program": 15297,
+    "pondere_in_afara_pct": 12.9
+   },
+   {
+    "luna": "2026-03",
+    "decizii": 124267,
+    "in_zile_nelucratoare": 0,
+    "dupa_program": 16180,
+    "pondere_in_afara_pct": 13.0
+   },
+   {
+    "luna": "2026-04",
+    "decizii": 105439,
+    "in_zile_nelucratoare": 1,
+    "dupa_program": 12179,
+    "pondere_in_afara_pct": 11.6
+   },
+   {
+    "luna": "2026-05",
+    "decizii": 108015,
+    "in_zile_nelucratoare": 1,
+    "dupa_program": 12764,
+    "pondere_in_afara_pct": 11.8
+   },
+   {
+    "luna": "2026-06",
+    "decizii": 104804,
+    "in_zile_nelucratoare": 1,
+    "dupa_program": 11382,
+    "pondere_in_afara_pct": 10.9
+   },
+   {
+    "luna": "2026-07",
+    "decizii": 107959,
+    "in_zile_nelucratoare": 0,
+    "dupa_program": 10444,
+    "pondere_in_afara_pct": 9.7
+   },
+   {
+    "luna": "2026-08",
+    "decizii": 91141,
+    "in_zile_nelucratoare": 0,
+    "dupa_program": 8018,
+    "pondere_in_afara_pct": 8.8
+   },
+   {
+    "luna": "2026-09",
+    "decizii": 107134,
+    "in_zile_nelucratoare": 1,
+    "dupa_program": 8460,
+    "pondere_in_afara_pct": 7.9
+   },
+   {
+    "luna": "2026-10",
+    "decizii": 111798,
+    "in_zile_nelucratoare": 0,
+    "dupa_program": 7975,
+    "pondere_in_afara_pct": 7.1
+   },
+   {
+    "luna": "2026-11",
+    "decizii": 80248,
+    "in_zile_nelucratoare": 0,
+    "dupa_program": 7355,
+    "pondere_in_afara_pct": 9.2
+   }
+  ]
+ },
+ "efort_ora_deciziei_2026": {
+  "meta": "Ponderea deciziilor pe ora mărcii temporale, zile lucrătoare 2026.",
+  "columns": [
+   "ora",
+   "decizii_pct"
+  ],
+  "rows": [
+   {
+    "ora": 0,
+    "decizii_pct": 0.35
+   },
+   {
+    "ora": 1,
+    "decizii_pct": 0.0
+   },
+   {
+    "ora": 2,
+    "decizii_pct": 0.0
+   },
+   {
+    "ora": 3,
+    "decizii_pct": 0.0
+   },
+   {
+    "ora": 4,
+    "decizii_pct": 0.0
+   },
+   {
+    "ora": 5,
+    "decizii_pct": 0.0
+   },
+   {
+    "ora": 6,
+    "decizii_pct": 0.2
+   },
+   {
+    "ora": 7,
+    "decizii_pct": 2.07
+   },
+   {
+    "ora": 8,
+    "decizii_pct": 8.06
+   },
+   {
+    "ora": 9,
+    "decizii_pct": 11.34
+   },
+   {
+    "ora": 10,
+    "decizii_pct": 12.58
+   },
+   {
+    "ora": 11,
+    "decizii_pct": 12.91
+   },
+   {
+    "ora": 12,
+    "decizii_pct": 12.47
+   },
+   {
+    "ora": 13,
+    "decizii_pct": 11.65
+   },
+   {
+    "ora": 14,
+    "decizii_pct": 11.16
+   },
+   {
+    "ora": 15,
+    "decizii_pct": 9.27
+   },
+   {
+    "ora": 16,
+    "decizii_pct": 4.87
+   },
+   {
+    "ora": 17,
+    "decizii_pct": 1.84
+   },
+   {
+    "ora": 18,
+    "decizii_pct": 0.71
+   },
+   {
+    "ora": 19,
+    "decizii_pct": 0.27
+   },
+   {
+    "ora": 20,
+    "decizii_pct": 0.14
+   },
+   {
+    "ora": 21,
+    "decizii_pct": 0.09
+   },
+   {
+    "ora": 22,
+    "decizii_pct": 0.04
+   },
+   {
+    "ora": 23,
+    "decizii_pct": 0.01
+   }
+  ]
+ },
+ "judete_lunar": {
+  "meta": "Pe oficiu de depunere și luna deciziei: finale stricte, mediana așteptării (zile), % respinse, % amânări din toate deciziile.",
+  "columns": [
+   "cod",
+   "luna",
+   "finale",
+   "mediana",
+   "respinse_pct",
+   "amanari_pct"
+  ],
+  "rows": [
+   {
+    "cod": "AB",
+    "luna": "2025-01",
+    "finale": 1045,
+    "mediana": 1.0,
+    "respinse_pct": 2.0,
+    "amanari_pct": 4.6
+   },
+   {
+    "cod": "AB",
+    "luna": "2025-02",
+    "finale": 1341,
+    "mediana": 1.1,
+    "respinse_pct": 1.9,
+    "amanari_pct": 6.9
+   },
+   {
+    "cod": "AB",
+    "luna": "2025-03",
+    "finale": 1541,
+    "mediana": 1.1,
+    "respinse_pct": 2.6,
+    "amanari_pct": 7.3
+   },
+   {
+    "cod": "AB",
+    "luna": "2025-04",
+    "finale": 1150,
+    "mediana": 1.1,
+    "respinse_pct": 4.3,
+    "amanari_pct": 9.0
+   },
+   {
+    "cod": "AB",
+    "luna": "2025-05",
+    "finale": 1121,
+    "mediana": 1.1,
+    "respinse_pct": 3.0,
+    "amanari_pct": 9.7
+   },
+   {
+    "cod": "AB",
+    "luna": "2025-06",
+    "finale": 1059,
+    "mediana": 1.1,
+    "respinse_pct": 3.4,
+    "amanari_pct": 7.6
+   },
+   {
+    "cod": "AB",
+    "luna": "2025-07",
+    "finale": 1690,
+    "mediana": 1.1,
+    "respinse_pct": 2.4,
+    "amanari_pct": 10.5
+   },
+   {
+    "cod": "AB",
+    "luna": "2025-08",
+    "finale": 1008,
+    "mediana": 1.1,
+    "respinse_pct": 3.1,
+    "amanari_pct": 8.8
+   },
+   {
+    "cod": "AB",
+    "luna": "2025-09",
+    "finale": 1291,
+    "mediana": 1.0,
+    "respinse_pct": 3.0,
+    "amanari_pct": 10.2
+   },
+   {
+    "cod": "AB",
+    "luna": "2025-10",
+    "finale": 1323,
+    "mediana": 1.0,
+    "respinse_pct": 2.8,
+    "amanari_pct": 10.4
+   },
+   {
+    "cod": "AB",
+    "luna": "2025-11",
+    "finale": 1145,
+    "mediana": 1.0,
+    "respinse_pct": 2.8,
+    "amanari_pct": 10.3
+   },
+   {
+    "cod": "AB",
+    "luna": "2025-12",
+    "finale": 1118,
+    "mediana": 1.2,
+    "respinse_pct": 4.7,
+    "amanari_pct": 11.9
+   },
+   {
+    "cod": "AB",
+    "luna": "2026-01",
+    "finale": 1259,
+    "mediana": 1.2,
+    "respinse_pct": 4.6,
+    "amanari_pct": 12.7
+   },
+   {
+    "cod": "AB",
+    "luna": "2026-02",
+    "finale": 1509,
+    "mediana": 2.1,
+    "respinse_pct": 3.2,
+    "amanari_pct": 10.8
+   },
+   {
+    "cod": "AB",
+    "luna": "2026-03",
+    "finale": 1583,
+    "mediana": 1.2,
+    "respinse_pct": 3.9,
+    "amanari_pct": 11.2
+   },
+   {
+    "cod": "AB",
+    "luna": "2026-04",
+    "finale": 953,
+    "mediana": 3.1,
+    "respinse_pct": 4.7,
+    "amanari_pct": 16.3
+   },
+   {
+    "cod": "AB",
+    "luna": "2026-05",
+    "finale": 1225,
+    "mediana": 5.1,
+    "respinse_pct": 5.0,
+    "amanari_pct": 17.1
+   },
+   {
+    "cod": "AB",
+    "luna": "2026-06",
+    "finale": 1232,
+    "mediana": 5.1,
+    "respinse_pct": 6.3,
+    "amanari_pct": 17.5
+   },
+   {
+    "cod": "AB",
+    "luna": "2026-07",
+    "finale": 1214,
+    "mediana": 6.1,
+    "respinse_pct": 6.3,
+    "amanari_pct": 16.7
+   },
+   {
+    "cod": "AB",
+    "luna": "2026-08",
+    "finale": 1126,
+    "mediana": 11.0,
+    "respinse_pct": 7.9,
+    "amanari_pct": 18.6
+   },
+   {
+    "cod": "AB",
+    "luna": "2026-09",
+    "finale": 1463,
+    "mediana": 21.7,
+    "respinse_pct": 6.2,
+    "amanari_pct": 16.9
+   },
+   {
+    "cod": "AB",
+    "luna": "2026-10",
+    "finale": 1593,
+    "mediana": 35.1,
+    "respinse_pct": 8.5,
+    "amanari_pct": 19.2
+   },
+   {
+    "cod": "AB",
+    "luna": "2026-11",
+    "finale": 1042,
+    "mediana": 50.0,
+    "respinse_pct": 10.3,
+    "amanari_pct": 20.2
+   },
+   {
+    "cod": "AG",
+    "luna": "2025-01",
+    "finale": 2023,
+    "mediana": 1.1,
+    "respinse_pct": 2.5,
+    "amanari_pct": 10.7
+   },
+   {
+    "cod": "AG",
+    "luna": "2025-02",
+    "finale": 2736,
+    "mediana": 1.1,
+    "respinse_pct": 3.0,
+    "amanari_pct": 10.4
+   },
+   {
+    "cod": "AG",
+    "luna": "2025-03",
+    "finale": 2784,
+    "mediana": 1.2,
+    "respinse_pct": 5.3,
+    "amanari_pct": 10.9
+   },
+   {
+    "cod": "AG",
+    "luna": "2025-04",
+    "finale": 2238,
+    "mediana": 1.2,
+    "respinse_pct": 3.0,
+    "amanari_pct": 11.0
+   },
+   {
+    "cod": "AG",
+    "luna": "2025-05",
+    "finale": 2283,
+    "mediana": 1.1,
+    "respinse_pct": 3.1,
+    "amanari_pct": 9.5
+   },
+   {
+    "cod": "AG",
+    "luna": "2025-06",
+    "finale": 1828,
+    "mediana": 1.2,
+    "respinse_pct": 4.0,
+    "amanari_pct": 11.6
+   },
+   {
+    "cod": "AG",
+    "luna": "2025-07",
+    "finale": 2095,
+    "mediana": 1.1,
+    "respinse_pct": 2.9,
+    "amanari_pct": 12.0
+   },
+   {
+    "cod": "AG",
+    "luna": "2025-08",
+    "finale": 1979,
+    "mediana": 1.1,
+    "respinse_pct": 3.5,
+    "amanari_pct": 10.5
+   },
+   {
+    "cod": "AG",
+    "luna": "2025-09",
+    "finale": 2185,
+    "mediana": 1.2,
+    "respinse_pct": 3.4,
+    "amanari_pct": 11.3
+   },
+   {
+    "cod": "AG",
+    "luna": "2025-10",
+    "finale": 2291,
+    "mediana": 1.1,
+    "respinse_pct": 3.6,
+    "amanari_pct": 11.5
+   },
+   {
+    "cod": "AG",
+    "luna": "2025-11",
+    "finale": 2074,
+    "mediana": 1.2,
+    "respinse_pct": 3.4,
+    "amanari_pct": 10.6
+   },
+   {
+    "cod": "AG",
+    "luna": "2025-12",
+    "finale": 2395,
+    "mediana": 1.2,
+    "respinse_pct": 4.0,
+    "amanari_pct": 11.6
+   },
+   {
+    "cod": "AG",
+    "luna": "2026-01",
+    "finale": 2397,
+    "mediana": 1.1,
+    "respinse_pct": 2.9,
+    "amanari_pct": 11.3
+   },
+   {
+    "cod": "AG",
+    "luna": "2026-02",
+    "finale": 2958,
+    "mediana": 1.2,
+    "respinse_pct": 4.0,
+    "amanari_pct": 12.7
+   },
+   {
+    "cod": "AG",
+    "luna": "2026-03",
+    "finale": 2792,
+    "mediana": 1.1,
+    "respinse_pct": 3.2,
+    "amanari_pct": 12.4
+   },
+   {
+    "cod": "AG",
+    "luna": "2026-04",
+    "finale": 1891,
+    "mediana": 1.3,
+    "respinse_pct": 5.0,
+    "amanari_pct": 13.9
+   },
+   {
+    "cod": "AG",
+    "luna": "2026-05",
+    "finale": 2231,
+    "mediana": 5.1,
+    "respinse_pct": 6.1,
+    "amanari_pct": 17.6
+   },
+   {
+    "cod": "AG",
+    "luna": "2026-06",
+    "finale": 2242,
+    "mediana": 5.1,
+    "respinse_pct": 7.9,
+    "amanari_pct": 17.8
+   },
+   {
+    "cod": "AG",
+    "luna": "2026-07",
+    "finale": 2366,
+    "mediana": 6.1,
+    "respinse_pct": 7.6,
+    "amanari_pct": 15.6
+   },
+   {
+    "cod": "AG",
+    "luna": "2026-08",
+    "finale": 1931,
+    "mediana": 11.0,
+    "respinse_pct": 8.1,
+    "amanari_pct": 15.3
+   },
+   {
+    "cod": "AG",
+    "luna": "2026-09",
+    "finale": 2412,
+    "mediana": 21.8,
+    "respinse_pct": 5.1,
+    "amanari_pct": 12.9
+   },
+   {
+    "cod": "AG",
+    "luna": "2026-10",
+    "finale": 2408,
+    "mediana": 35.0,
+    "respinse_pct": 6.2,
+    "amanari_pct": 12.5
+   },
+   {
+    "cod": "AG",
+    "luna": "2026-11",
+    "finale": 1630,
+    "mediana": 50.1,
+    "respinse_pct": 6.1,
+    "amanari_pct": 14.4
+   },
+   {
+    "cod": "AR",
+    "luna": "2025-01",
+    "finale": 1136,
+    "mediana": 1.2,
+    "respinse_pct": 3.1,
+    "amanari_pct": 14.9
+   },
+   {
+    "cod": "AR",
+    "luna": "2025-02",
+    "finale": 1824,
+    "mediana": 1.1,
+    "respinse_pct": 3.2,
+    "amanari_pct": 10.8
+   },
+   {
+    "cod": "AR",
+    "luna": "2025-03",
+    "finale": 1787,
+    "mediana": 1.1,
+    "respinse_pct": 3.8,
+    "amanari_pct": 11.2
+   },
+   {
+    "cod": "AR",
+    "luna": "2025-04",
+    "finale": 1415,
+    "mediana": 1.1,
+    "respinse_pct": 3.5,
+    "amanari_pct": 13.1
+   },
+   {
+    "cod": "AR",
+    "luna": "2025-05",
+    "finale": 1507,
+    "mediana": 1.1,
+    "respinse_pct": 2.6,
+    "amanari_pct": 13.0
+   },
+   {
+    "cod": "AR",
+    "luna": "2025-06",
+    "finale": 1393,
+    "mediana": 1.3,
+    "respinse_pct": 4.1,
+    "amanari_pct": 12.5
+   },
+   {
+    "cod": "AR",
+    "luna": "2025-07",
+    "finale": 1399,
+    "mediana": 1.1,
+    "respinse_pct": 3.7,
+    "amanari_pct": 18.1
+   },
+   {
+    "cod": "AR",
+    "luna": "2025-08",
+    "finale": 1307,
+    "mediana": 1.1,
+    "respinse_pct": 6.3,
+    "amanari_pct": 15.3
+   },
+   {
+    "cod": "AR",
+    "luna": "2025-09",
+    "finale": 1366,
+    "mediana": 1.1,
+    "respinse_pct": 5.4,
+    "amanari_pct": 17.9
+   },
+   {
+    "cod": "AR",
+    "luna": "2025-10",
+    "finale": 1702,
+    "mediana": 1.1,
+    "respinse_pct": 3.4,
+    "amanari_pct": 13.3
+   },
+   {
+    "cod": "AR",
+    "luna": "2025-11",
+    "finale": 1383,
+    "mediana": 1.1,
+    "respinse_pct": 4.1,
+    "amanari_pct": 15.3
+   },
+   {
+    "cod": "AR",
+    "luna": "2025-12",
+    "finale": 1465,
+    "mediana": 1.1,
+    "respinse_pct": 4.4,
+    "amanari_pct": 15.9
+   },
+   {
+    "cod": "AR",
+    "luna": "2026-01",
+    "finale": 1249,
+    "mediana": 2.0,
+    "respinse_pct": 5.8,
+    "amanari_pct": 16.7
+   },
+   {
+    "cod": "AR",
+    "luna": "2026-02",
+    "finale": 1885,
+    "mediana": 2.0,
+    "respinse_pct": 4.9,
+    "amanari_pct": 16.7
+   },
+   {
+    "cod": "AR",
+    "luna": "2026-03",
+    "finale": 2042,
+    "mediana": 1.8,
+    "respinse_pct": 4.2,
+    "amanari_pct": 14.3
+   },
+   {
+    "cod": "AR",
+    "luna": "2026-04",
+    "finale": 1418,
+    "mediana": 3.1,
+    "respinse_pct": 3.6,
+    "amanari_pct": 14.4
+   },
+   {
+    "cod": "AR",
+    "luna": "2026-05",
+    "finale": 1690,
+    "mediana": 5.1,
+    "respinse_pct": 5.7,
+    "amanari_pct": 19.8
+   },
+   {
+    "cod": "AR",
+    "luna": "2026-06",
+    "finale": 1651,
+    "mediana": 5.1,
+    "respinse_pct": 6.7,
+    "amanari_pct": 20.9
+   },
+   {
+    "cod": "AR",
+    "luna": "2026-07",
+    "finale": 1659,
+    "mediana": 6.1,
+    "respinse_pct": 5.4,
+    "amanari_pct": 18.7
+   },
+   {
+    "cod": "AR",
+    "luna": "2026-08",
+    "finale": 1443,
+    "mediana": 11.0,
+    "respinse_pct": 5.9,
+    "amanari_pct": 20.5
+   },
+   {
+    "cod": "AR",
+    "luna": "2026-09",
+    "finale": 1991,
+    "mediana": 21.8,
+    "respinse_pct": 5.7,
+    "amanari_pct": 17.4
+   },
+   {
+    "cod": "AR",
+    "luna": "2026-10",
+    "finale": 1883,
+    "mediana": 35.9,
+    "respinse_pct": 7.7,
+    "amanari_pct": 18.5
+   },
+   {
+    "cod": "AR",
+    "luna": "2026-11",
+    "finale": 1393,
+    "mediana": 53.0,
+    "respinse_pct": 6.1,
+    "amanari_pct": 21.4
+   },
+   {
+    "cod": "B",
+    "luna": "2025-01",
+    "finale": 18312,
+    "mediana": 3.9,
+    "respinse_pct": 8.3,
+    "amanari_pct": 21.9
+   },
+   {
+    "cod": "B",
+    "luna": "2025-02",
+    "finale": 23988,
+    "mediana": 6.8,
+    "respinse_pct": 8.5,
+    "amanari_pct": 19.8
+   },
+   {
+    "cod": "B",
+    "luna": "2025-03",
+    "finale": 26468,
+    "mediana": 8.0,
+    "respinse_pct": 7.7,
+    "amanari_pct": 19.9
+   },
+   {
+    "cod": "B",
+    "luna": "2025-04",
+    "finale": 22828,
+    "mediana": 7.1,
+    "respinse_pct": 9.9,
+    "amanari_pct": 22.1
+   },
+   {
+    "cod": "B",
+    "luna": "2025-05",
+    "finale": 21337,
+    "mediana": 4.1,
+    "respinse_pct": 8.5,
+    "amanari_pct": 22.4
+   },
+   {
+    "cod": "B",
+    "luna": "2025-06",
+    "finale": 18956,
+    "mediana": 3.2,
+    "respinse_pct": 10.6,
+    "amanari_pct": 22.6
+   },
+   {
+    "cod": "B",
+    "luna": "2025-07",
+    "finale": 20870,
+    "mediana": 2.0,
+    "respinse_pct": 9.7,
+    "amanari_pct": 24.3
+   },
+   {
+    "cod": "B",
+    "luna": "2025-08",
+    "finale": 17249,
+    "mediana": 2.9,
+    "respinse_pct": 11.5,
+    "amanari_pct": 23.7
+   },
+   {
+    "cod": "B",
+    "luna": "2025-09",
+    "finale": 20885,
+    "mediana": 3.0,
+    "respinse_pct": 10.3,
+    "amanari_pct": 26.8
+   },
+   {
+    "cod": "B",
+    "luna": "2025-10",
+    "finale": 21591,
+    "mediana": 1.8,
+    "respinse_pct": 11.0,
+    "amanari_pct": 24.3
+   },
+   {
+    "cod": "B",
+    "luna": "2025-11",
+    "finale": 18858,
+    "mediana": 1.7,
+    "respinse_pct": 9.4,
+    "amanari_pct": 24.6
+   },
+   {
+    "cod": "B",
+    "luna": "2025-12",
+    "finale": 18787,
+    "mediana": 3.9,
+    "respinse_pct": 10.3,
+    "amanari_pct": 22.9
+   },
+   {
+    "cod": "B",
+    "luna": "2026-01",
+    "finale": 19052,
+    "mediana": 4.2,
+    "respinse_pct": 9.5,
+    "amanari_pct": 23.8
+   },
+   {
+    "cod": "B",
+    "luna": "2026-02",
+    "finale": 20745,
+    "mediana": 7.8,
+    "respinse_pct": 8.7,
+    "amanari_pct": 23.1
+   },
+   {
+    "cod": "B",
+    "luna": "2026-03",
+    "finale": 24659,
+    "mediana": 6.1,
+    "respinse_pct": 8.9,
+    "amanari_pct": 24.0
+   },
+   {
+    "cod": "B",
+    "luna": "2026-04",
+    "finale": 18888,
+    "mediana": 5.1,
+    "respinse_pct": 11.0,
+    "amanari_pct": 23.0
+   },
+   {
+    "cod": "B",
+    "luna": "2026-05",
+    "finale": 19780,
+    "mediana": 5.2,
+    "respinse_pct": 8.8,
+    "amanari_pct": 23.0
+   },
+   {
+    "cod": "B",
+    "luna": "2026-06",
+    "finale": 19645,
+    "mediana": 5.2,
+    "respinse_pct": 9.8,
+    "amanari_pct": 22.0
+   },
+   {
+    "cod": "B",
+    "luna": "2026-07",
+    "finale": 20567,
+    "mediana": 6.3,
+    "respinse_pct": 9.5,
+    "amanari_pct": 21.0
+   },
+   {
+    "cod": "B",
+    "luna": "2026-08",
+    "finale": 16680,
+    "mediana": 12.3,
+    "respinse_pct": 8.9,
+    "amanari_pct": 22.4
+   },
+   {
+    "cod": "B",
+    "luna": "2026-09",
+    "finale": 17209,
+    "mediana": 21.1,
+    "respinse_pct": 8.2,
+    "amanari_pct": 20.5
+   },
+   {
+    "cod": "B",
+    "luna": "2026-10",
+    "finale": 17057,
+    "mediana": 33.7,
+    "respinse_pct": 9.6,
+    "amanari_pct": 21.4
+   },
+   {
+    "cod": "B",
+    "luna": "2026-11",
+    "finale": 13241,
+    "mediana": 47.9,
+    "respinse_pct": 7.5,
+    "amanari_pct": 22.7
+   },
+   {
+    "cod": "BC",
+    "luna": "2025-01",
+    "finale": 1432,
+    "mediana": 1.1,
+    "respinse_pct": 6.6,
+    "amanari_pct": 14.7
+   },
+   {
+    "cod": "BC",
+    "luna": "2025-02",
+    "finale": 2092,
+    "mediana": 1.1,
+    "respinse_pct": 6.8,
+    "amanari_pct": 14.1
+   },
+   {
+    "cod": "BC",
+    "luna": "2025-03",
+    "finale": 1958,
+    "mediana": 1.1,
+    "respinse_pct": 7.8,
+    "amanari_pct": 17.1
+   },
+   {
+    "cod": "BC",
+    "luna": "2025-04",
+    "finale": 1602,
+    "mediana": 1.1,
+    "respinse_pct": 9.3,
+    "amanari_pct": 16.6
+   },
+   {
+    "cod": "BC",
+    "luna": "2025-05",
+    "finale": 1573,
+    "mediana": 1.1,
+    "respinse_pct": 6.2,
+    "amanari_pct": 15.6
+   },
+   {
+    "cod": "BC",
+    "luna": "2025-06",
+    "finale": 1302,
+    "mediana": 1.2,
+    "respinse_pct": 7.8,
+    "amanari_pct": 17.1
+   },
+   {
+    "cod": "BC",
+    "luna": "2025-07",
+    "finale": 1446,
+    "mediana": 1.1,
+    "respinse_pct": 8.8,
+    "amanari_pct": 17.7
+   },
+   {
+    "cod": "BC",
+    "luna": "2025-08",
+    "finale": 1281,
+    "mediana": 1.1,
+    "respinse_pct": 8.7,
+    "amanari_pct": 19.8
+   },
+   {
+    "cod": "BC",
+    "luna": "2025-09",
+    "finale": 1474,
+    "mediana": 1.2,
+    "respinse_pct": 7.6,
+    "amanari_pct": 19.0
+   },
+   {
+    "cod": "BC",
+    "luna": "2025-10",
+    "finale": 1696,
+    "mediana": 1.2,
+    "respinse_pct": 7.9,
+    "amanari_pct": 16.3
+   },
+   {
+    "cod": "BC",
+    "luna": "2025-11",
+    "finale": 1346,
+    "mediana": 1.1,
+    "respinse_pct": 5.6,
+    "amanari_pct": 16.1
+   },
+   {
+    "cod": "BC",
+    "luna": "2025-12",
+    "finale": 1520,
+    "mediana": 1.1,
+    "respinse_pct": 7.6,
+    "amanari_pct": 17.8
+   },
+   {
+    "cod": "BC",
+    "luna": "2026-01",
+    "finale": 1454,
+    "mediana": 1.1,
+    "respinse_pct": 7.4,
+    "amanari_pct": 19.5
+   },
+   {
+    "cod": "BC",
+    "luna": "2026-02",
+    "finale": 1829,
+    "mediana": 1.2,
+    "respinse_pct": 9.2,
+    "amanari_pct": 19.7
+   },
+   {
+    "cod": "BC",
+    "luna": "2026-03",
+    "finale": 1857,
+    "mediana": 1.2,
+    "respinse_pct": 8.2,
+    "amanari_pct": 17.4
+   },
+   {
+    "cod": "BC",
+    "luna": "2026-04",
+    "finale": 1360,
+    "mediana": 2.1,
+    "respinse_pct": 7.1,
+    "amanari_pct": 19.8
+   },
+   {
+    "cod": "BC",
+    "luna": "2026-05",
+    "finale": 1401,
+    "mediana": 5.1,
+    "respinse_pct": 10.6,
+    "amanari_pct": 24.4
+   },
+   {
+    "cod": "BC",
+    "luna": "2026-06",
+    "finale": 1544,
+    "mediana": 5.2,
+    "respinse_pct": 12.3,
+    "amanari_pct": 24.8
+   },
+   {
+    "cod": "BC",
+    "luna": "2026-07",
+    "finale": 1603,
+    "mediana": 6.2,
+    "respinse_pct": 11.0,
+    "amanari_pct": 22.4
+   },
+   {
+    "cod": "BC",
+    "luna": "2026-08",
+    "finale": 1422,
+    "mediana": 11.9,
+    "respinse_pct": 12.7,
+    "amanari_pct": 22.7
+   },
+   {
+    "cod": "BC",
+    "luna": "2026-09",
+    "finale": 1716,
+    "mediana": 21.8,
+    "respinse_pct": 9.2,
+    "amanari_pct": 22.7
+   },
+   {
+    "cod": "BC",
+    "luna": "2026-10",
+    "finale": 1599,
+    "mediana": 35.9,
+    "respinse_pct": 13.8,
+    "amanari_pct": 22.0
+   },
+   {
+    "cod": "BC",
+    "luna": "2026-11",
+    "finale": 1139,
+    "mediana": 50.0,
+    "respinse_pct": 11.6,
+    "amanari_pct": 26.2
+   },
+   {
+    "cod": "BH",
+    "luna": "2025-01",
+    "finale": 2095,
+    "mediana": 5.2,
+    "respinse_pct": 7.7,
+    "amanari_pct": 23.9
+   },
+   {
+    "cod": "BH",
+    "luna": "2025-02",
+    "finale": 2732,
+    "mediana": 3.3,
+    "respinse_pct": 9.6,
+    "amanari_pct": 23.0
+   },
+   {
+    "cod": "BH",
+    "luna": "2025-03",
+    "finale": 3011,
+    "mediana": 4.0,
+    "respinse_pct": 9.2,
+    "amanari_pct": 21.5
+   },
+   {
+    "cod": "BH",
+    "luna": "2025-04",
+    "finale": 2489,
+    "mediana": 6.5,
+    "respinse_pct": 11.2,
+    "amanari_pct": 22.9
+   },
+   {
+    "cod": "BH",
+    "luna": "2025-05",
+    "finale": 2474,
+    "mediana": 5.3,
+    "respinse_pct": 7.3,
+    "amanari_pct": 24.5
+   },
+   {
+    "cod": "BH",
+    "luna": "2025-06",
+    "finale": 2194,
+    "mediana": 4.2,
+    "respinse_pct": 9.0,
+    "amanari_pct": 25.6
+   },
+   {
+    "cod": "BH",
+    "luna": "2025-07",
+    "finale": 2403,
+    "mediana": 1.6,
+    "respinse_pct": 8.6,
+    "amanari_pct": 25.7
+   },
+   {
+    "cod": "BH",
+    "luna": "2025-08",
+    "finale": 2025,
+    "mediana": 1.8,
+    "respinse_pct": 9.5,
+    "amanari_pct": 26.1
+   },
+   {
+    "cod": "BH",
+    "luna": "2025-09",
+    "finale": 2296,
+    "mediana": 1.9,
+    "respinse_pct": 7.9,
+    "amanari_pct": 26.7
+   },
+   {
+    "cod": "BH",
+    "luna": "2025-10",
+    "finale": 2518,
+    "mediana": 1.4,
+    "respinse_pct": 8.3,
+    "amanari_pct": 26.0
+   },
+   {
+    "cod": "BH",
+    "luna": "2025-11",
+    "finale": 2336,
+    "mediana": 1.7,
+    "respinse_pct": 8.9,
+    "amanari_pct": 26.5
+   },
+   {
+    "cod": "BH",
+    "luna": "2025-12",
+    "finale": 2614,
+    "mediana": 3.0,
+    "respinse_pct": 9.8,
+    "amanari_pct": 27.1
+   },
+   {
+    "cod": "BH",
+    "luna": "2026-01",
+    "finale": 2159,
+    "mediana": 2.9,
+    "respinse_pct": 11.5,
+    "amanari_pct": 26.0
+   },
+   {
+    "cod": "BH",
+    "luna": "2026-02",
+    "finale": 2898,
+    "mediana": 3.7,
+    "respinse_pct": 8.5,
+    "amanari_pct": 29.7
+   },
+   {
+    "cod": "BH",
+    "luna": "2026-03",
+    "finale": 3043,
+    "mediana": 5.0,
+    "respinse_pct": 8.9,
+    "amanari_pct": 26.0
+   },
+   {
+    "cod": "BH",
+    "luna": "2026-04",
+    "finale": 2596,
+    "mediana": 5.9,
+    "respinse_pct": 8.9,
+    "amanari_pct": 22.4
+   },
+   {
+    "cod": "BH",
+    "luna": "2026-05",
+    "finale": 2663,
+    "mediana": 5.1,
+    "respinse_pct": 7.1,
+    "amanari_pct": 20.0
+   },
+   {
+    "cod": "BH",
+    "luna": "2026-06",
+    "finale": 2696,
+    "mediana": 5.2,
+    "respinse_pct": 7.3,
+    "amanari_pct": 19.4
+   },
+   {
+    "cod": "BH",
+    "luna": "2026-07",
+    "finale": 2899,
+    "mediana": 6.1,
+    "respinse_pct": 7.0,
+    "amanari_pct": 17.8
+   },
+   {
+    "cod": "BH",
+    "luna": "2026-08",
+    "finale": 2710,
+    "mediana": 11.6,
+    "respinse_pct": 6.6,
+    "amanari_pct": 20.2
+   },
+   {
+    "cod": "BH",
+    "luna": "2026-09",
+    "finale": 3544,
+    "mediana": 21.8,
+    "respinse_pct": 7.3,
+    "amanari_pct": 18.1
+   },
+   {
+    "cod": "BH",
+    "luna": "2026-10",
+    "finale": 3474,
+    "mediana": 35.9,
+    "respinse_pct": 9.4,
+    "amanari_pct": 17.0
+   },
+   {
+    "cod": "BH",
+    "luna": "2026-11",
+    "finale": 2254,
+    "mediana": 53.1,
+    "respinse_pct": 8.3,
+    "amanari_pct": 19.6
+   },
+   {
+    "cod": "BN",
+    "luna": "2025-01",
+    "finale": 814,
+    "mediana": 1.1,
+    "respinse_pct": 6.3,
+    "amanari_pct": 16.8
+   },
+   {
+    "cod": "BN",
+    "luna": "2025-02",
+    "finale": 1001,
+    "mediana": 3.1,
+    "respinse_pct": 5.9,
+    "amanari_pct": 17.2
+   },
+   {
+    "cod": "BN",
+    "luna": "2025-03",
+    "finale": 997,
+    "mediana": 9.1,
+    "respinse_pct": 9.7,
+    "amanari_pct": 17.3
+   },
+   {
+    "cod": "BN",
+    "luna": "2025-04",
+    "finale": 1241,
+    "mediana": 10.0,
+    "respinse_pct": 5.8,
+    "amanari_pct": 17.1
+   },
+   {
+    "cod": "BN",
+    "luna": "2025-05",
+    "finale": 1037,
+    "mediana": 2.0,
+    "respinse_pct": 6.4,
+    "amanari_pct": 19.7
+   },
+   {
+    "cod": "BN",
+    "luna": "2025-06",
+    "finale": 814,
+    "mediana": 1.2,
+    "respinse_pct": 7.4,
+    "amanari_pct": 16.6
+   },
+   {
+    "cod": "BN",
+    "luna": "2025-07",
+    "finale": 947,
+    "mediana": 1.2,
+    "respinse_pct": 7.0,
+    "amanari_pct": 20.7
+   },
+   {
+    "cod": "BN",
+    "luna": "2025-08",
+    "finale": 807,
+    "mediana": 3.1,
+    "respinse_pct": 8.2,
+    "amanari_pct": 19.5
+   },
+   {
+    "cod": "BN",
+    "luna": "2025-09",
+    "finale": 962,
+    "mediana": 1.2,
+    "respinse_pct": 6.0,
+    "amanari_pct": 18.9
+   },
+   {
+    "cod": "BN",
+    "luna": "2025-10",
+    "finale": 955,
+    "mediana": 1.1,
+    "respinse_pct": 7.2,
+    "amanari_pct": 18.5
+   },
+   {
+    "cod": "BN",
+    "luna": "2025-11",
+    "finale": 895,
+    "mediana": 1.2,
+    "respinse_pct": 4.1,
+    "amanari_pct": 17.6
+   },
+   {
+    "cod": "BN",
+    "luna": "2025-12",
+    "finale": 896,
+    "mediana": 2.9,
+    "respinse_pct": 8.5,
+    "amanari_pct": 17.6
+   },
+   {
+    "cod": "BN",
+    "luna": "2026-01",
+    "finale": 847,
+    "mediana": 3.0,
+    "respinse_pct": 6.1,
+    "amanari_pct": 17.0
+   },
+   {
+    "cod": "BN",
+    "luna": "2026-02",
+    "finale": 809,
+    "mediana": 8.1,
+    "respinse_pct": 6.2,
+    "amanari_pct": 17.2
+   },
+   {
+    "cod": "BN",
+    "luna": "2026-03",
+    "finale": 1017,
+    "mediana": 14.0,
+    "respinse_pct": 5.7,
+    "amanari_pct": 17.2
+   },
+   {
+    "cod": "BN",
+    "luna": "2026-04",
+    "finale": 1176,
+    "mediana": 8.0,
+    "respinse_pct": 6.0,
+    "amanari_pct": 19.2
+   },
+   {
+    "cod": "BN",
+    "luna": "2026-05",
+    "finale": 995,
+    "mediana": 5.2,
+    "respinse_pct": 7.3,
+    "amanari_pct": 21.0
+   },
+   {
+    "cod": "BN",
+    "luna": "2026-06",
+    "finale": 919,
+    "mediana": 6.0,
+    "respinse_pct": 7.9,
+    "amanari_pct": 18.3
+   },
+   {
+    "cod": "BN",
+    "luna": "2026-07",
+    "finale": 823,
+    "mediana": 11.0,
+    "respinse_pct": 7.4,
+    "amanari_pct": 15.7
+   },
+   {
+    "cod": "BN",
+    "luna": "2026-08",
+    "finale": 876,
+    "mediana": 16.1,
+    "respinse_pct": 5.8,
+    "amanari_pct": 20.5
+   },
+   {
+    "cod": "BN",
+    "luna": "2026-09",
+    "finale": 1092,
+    "mediana": 26.9,
+    "respinse_pct": 6.9,
+    "amanari_pct": 17.6
+   },
+   {
+    "cod": "BN",
+    "luna": "2026-10",
+    "finale": 1198,
+    "mediana": 37.0,
+    "respinse_pct": 8.0,
+    "amanari_pct": 15.8
+   },
+   {
+    "cod": "BN",
+    "luna": "2026-11",
+    "finale": 820,
+    "mediana": 55.9,
+    "respinse_pct": 8.8,
+    "amanari_pct": 19.1
+   },
+   {
+    "cod": "BR",
+    "luna": "2025-01",
+    "finale": 695,
+    "mediana": 2.0,
+    "respinse_pct": 3.3,
+    "amanari_pct": 15.7
+   },
+   {
+    "cod": "BR",
+    "luna": "2025-02",
+    "finale": 1104,
+    "mediana": 3.9,
+    "respinse_pct": 5.0,
+    "amanari_pct": 20.7
+   },
+   {
+    "cod": "BR",
+    "luna": "2025-03",
+    "finale": 1221,
+    "mediana": 1.2,
+    "respinse_pct": 7.0,
+    "amanari_pct": 16.7
+   },
+   {
+    "cod": "BR",
+    "luna": "2025-04",
+    "finale": 814,
+    "mediana": 1.1,
+    "respinse_pct": 5.5,
+    "amanari_pct": 16.9
+   },
+   {
+    "cod": "BR",
+    "luna": "2025-05",
+    "finale": 833,
+    "mediana": 1.1,
+    "respinse_pct": 4.1,
+    "amanari_pct": 15.7
+   },
+   {
+    "cod": "BR",
+    "luna": "2025-06",
+    "finale": 768,
+    "mediana": 1.1,
+    "respinse_pct": 5.2,
+    "amanari_pct": 18.1
+   },
+   {
+    "cod": "BR",
+    "luna": "2025-07",
+    "finale": 833,
+    "mediana": 1.1,
+    "respinse_pct": 12.5,
+    "amanari_pct": 18.0
+   },
+   {
+    "cod": "BR",
+    "luna": "2025-08",
+    "finale": 666,
+    "mediana": 1.9,
+    "respinse_pct": 6.6,
+    "amanari_pct": 20.0
+   },
+   {
+    "cod": "BR",
+    "luna": "2025-09",
+    "finale": 721,
+    "mediana": 1.1,
+    "respinse_pct": 4.6,
+    "amanari_pct": 16.3
+   },
+   {
+    "cod": "BR",
+    "luna": "2025-10",
+    "finale": 916,
+    "mediana": 1.1,
+    "respinse_pct": 4.4,
+    "amanari_pct": 15.8
+   },
+   {
+    "cod": "BR",
+    "luna": "2025-11",
+    "finale": 722,
+    "mediana": 1.1,
+    "respinse_pct": 5.4,
+    "amanari_pct": 17.9
+   },
+   {
+    "cod": "BR",
+    "luna": "2025-12",
+    "finale": 753,
+    "mediana": 3.0,
+    "respinse_pct": 7.4,
+    "amanari_pct": 18.2
+   },
+   {
+    "cod": "BR",
+    "luna": "2026-01",
+    "finale": 744,
+    "mediana": 2.0,
+    "respinse_pct": 5.0,
+    "amanari_pct": 17.1
+   },
+   {
+    "cod": "BR",
+    "luna": "2026-02",
+    "finale": 834,
+    "mediana": 4.1,
+    "respinse_pct": 5.5,
+    "amanari_pct": 20.8
+   },
+   {
+    "cod": "BR",
+    "luna": "2026-03",
+    "finale": 946,
+    "mediana": 4.2,
+    "respinse_pct": 7.0,
+    "amanari_pct": 18.8
+   },
+   {
+    "cod": "BR",
+    "luna": "2026-04",
+    "finale": 865,
+    "mediana": 7.7,
+    "respinse_pct": 6.5,
+    "amanari_pct": 17.4
+   },
+   {
+    "cod": "BR",
+    "luna": "2026-05",
+    "finale": 814,
+    "mediana": 5.0,
+    "respinse_pct": 6.6,
+    "amanari_pct": 15.7
+   },
+   {
+    "cod": "BR",
+    "luna": "2026-06",
+    "finale": 715,
+    "mediana": 5.1,
+    "respinse_pct": 5.9,
+    "amanari_pct": 17.3
+   },
+   {
+    "cod": "BR",
+    "luna": "2026-07",
+    "finale": 762,
+    "mediana": 6.1,
+    "respinse_pct": 5.0,
+    "amanari_pct": 13.6
+   },
+   {
+    "cod": "BR",
+    "luna": "2026-08",
+    "finale": 740,
+    "mediana": 10.9,
+    "respinse_pct": 4.7,
+    "amanari_pct": 14.9
+   },
+   {
+    "cod": "BR",
+    "luna": "2026-09",
+    "finale": 888,
+    "mediana": 21.2,
+    "respinse_pct": 4.6,
+    "amanari_pct": 13.1
+   },
+   {
+    "cod": "BR",
+    "luna": "2026-10",
+    "finale": 981,
+    "mediana": 33.9,
+    "respinse_pct": 3.6,
+    "amanari_pct": 11.3
+   },
+   {
+    "cod": "BR",
+    "luna": "2026-11",
+    "finale": 561,
+    "mediana": 49.1,
+    "respinse_pct": 3.6,
+    "amanari_pct": 18.3
+   },
+   {
+    "cod": "BT",
+    "luna": "2025-01",
+    "finale": 538,
+    "mediana": 2.4,
+    "respinse_pct": 7.8,
+    "amanari_pct": 20.2
+   },
+   {
+    "cod": "BT",
+    "luna": "2025-02",
+    "finale": 698,
+    "mediana": 4.5,
+    "respinse_pct": 4.6,
+    "amanari_pct": 16.3
+   },
+   {
+    "cod": "BT",
+    "luna": "2025-03",
+    "finale": 941,
+    "mediana": 4.5,
+    "respinse_pct": 4.8,
+    "amanari_pct": 16.7
+   },
+   {
+    "cod": "BT",
+    "luna": "2025-04",
+    "finale": 683,
+    "mediana": 3.0,
+    "respinse_pct": 3.7,
+    "amanari_pct": 15.6
+   },
+   {
+    "cod": "BT",
+    "luna": "2025-05",
+    "finale": 700,
+    "mediana": 1.2,
+    "respinse_pct": 3.6,
+    "amanari_pct": 19.7
+   },
+   {
+    "cod": "BT",
+    "luna": "2025-06",
+    "finale": 647,
+    "mediana": 1.2,
+    "respinse_pct": 4.8,
+    "amanari_pct": 12.8
+   },
+   {
+    "cod": "BT",
+    "luna": "2025-07",
+    "finale": 707,
+    "mediana": 1.2,
+    "respinse_pct": 5.0,
+    "amanari_pct": 20.2
+   },
+   {
+    "cod": "BT",
+    "luna": "2025-08",
+    "finale": 598,
+    "mediana": 1.2,
+    "respinse_pct": 7.9,
+    "amanari_pct": 24.0
+   },
+   {
+    "cod": "BT",
+    "luna": "2025-09",
+    "finale": 790,
+    "mediana": 2.0,
+    "respinse_pct": 10.8,
+    "amanari_pct": 19.2
+   },
+   {
+    "cod": "BT",
+    "luna": "2025-10",
+    "finale": 719,
+    "mediana": 1.2,
+    "respinse_pct": 5.4,
+    "amanari_pct": 19.8
+   },
+   {
+    "cod": "BT",
+    "luna": "2025-11",
+    "finale": 630,
+    "mediana": 1.2,
+    "respinse_pct": 4.4,
+    "amanari_pct": 19.1
+   },
+   {
+    "cod": "BT",
+    "luna": "2025-12",
+    "finale": 476,
+    "mediana": 3.1,
+    "respinse_pct": 9.5,
+    "amanari_pct": 18.2
+   },
+   {
+    "cod": "BT",
+    "luna": "2026-01",
+    "finale": 767,
+    "mediana": 3.2,
+    "respinse_pct": 4.4,
+    "amanari_pct": 20.8
+   },
+   {
+    "cod": "BT",
+    "luna": "2026-02",
+    "finale": 873,
+    "mediana": 5.2,
+    "respinse_pct": 5.7,
+    "amanari_pct": 19.4
+   },
+   {
+    "cod": "BT",
+    "luna": "2026-03",
+    "finale": 975,
+    "mediana": 4.4,
+    "respinse_pct": 5.0,
+    "amanari_pct": 17.8
+   },
+   {
+    "cod": "BT",
+    "luna": "2026-04",
+    "finale": 633,
+    "mediana": 4.0,
+    "respinse_pct": 6.6,
+    "amanari_pct": 14.7
+   },
+   {
+    "cod": "BT",
+    "luna": "2026-05",
+    "finale": 727,
+    "mediana": 5.0,
+    "respinse_pct": 5.4,
+    "amanari_pct": 15.8
+   },
+   {
+    "cod": "BT",
+    "luna": "2026-06",
+    "finale": 647,
+    "mediana": 5.1,
+    "respinse_pct": 6.6,
+    "amanari_pct": 18.7
+   },
+   {
+    "cod": "BT",
+    "luna": "2026-07",
+    "finale": 673,
+    "mediana": 6.1,
+    "respinse_pct": 5.5,
+    "amanari_pct": 12.8
+   },
+   {
+    "cod": "BT",
+    "luna": "2026-08",
+    "finale": 580,
+    "mediana": 10.7,
+    "respinse_pct": 5.9,
+    "amanari_pct": 14.6
+   },
+   {
+    "cod": "BT",
+    "luna": "2026-09",
+    "finale": 837,
+    "mediana": 21.3,
+    "respinse_pct": 3.8,
+    "amanari_pct": 12.9
+   },
+   {
+    "cod": "BT",
+    "luna": "2026-10",
+    "finale": 886,
+    "mediana": 35.1,
+    "respinse_pct": 7.1,
+    "amanari_pct": 14.0
+   },
+   {
+    "cod": "BT",
+    "luna": "2026-11",
+    "finale": 637,
+    "mediana": 52.9,
+    "respinse_pct": 7.4,
+    "amanari_pct": 14.0
+   },
+   {
+    "cod": "BV",
+    "luna": "2025-01",
+    "finale": 2077,
+    "mediana": 3.9,
+    "respinse_pct": 9.5,
+    "amanari_pct": 19.8
+   },
+   {
+    "cod": "BV",
+    "luna": "2025-02",
+    "finale": 2840,
+    "mediana": 9.1,
+    "respinse_pct": 8.2,
+    "amanari_pct": 16.0
+   },
+   {
+    "cod": "BV",
+    "luna": "2025-03",
+    "finale": 3398,
+    "mediana": 10.0,
+    "respinse_pct": 8.6,
+    "amanari_pct": 17.1
+   },
+   {
+    "cod": "BV",
+    "luna": "2025-04",
+    "finale": 2697,
+    "mediana": 14.8,
+    "respinse_pct": 7.3,
+    "amanari_pct": 18.3
+   },
+   {
+    "cod": "BV",
+    "luna": "2025-05",
+    "finale": 3396,
+    "mediana": 8.0,
+    "respinse_pct": 7.3,
+    "amanari_pct": 20.1
+   },
+   {
+    "cod": "BV",
+    "luna": "2025-06",
+    "finale": 2704,
+    "mediana": 3.1,
+    "respinse_pct": 12.1,
+    "amanari_pct": 24.3
+   },
+   {
+    "cod": "BV",
+    "luna": "2025-07",
+    "finale": 2776,
+    "mediana": 1.7,
+    "respinse_pct": 8.4,
+    "amanari_pct": 23.6
+   },
+   {
+    "cod": "BV",
+    "luna": "2025-08",
+    "finale": 2336,
+    "mediana": 1.8,
+    "respinse_pct": 9.6,
+    "amanari_pct": 26.2
+   },
+   {
+    "cod": "BV",
+    "luna": "2025-09",
+    "finale": 2853,
+    "mediana": 3.0,
+    "respinse_pct": 10.7,
+    "amanari_pct": 25.8
+   },
+   {
+    "cod": "BV",
+    "luna": "2025-10",
+    "finale": 3046,
+    "mediana": 1.6,
+    "respinse_pct": 9.6,
+    "amanari_pct": 23.5
+   },
+   {
+    "cod": "BV",
+    "luna": "2025-11",
+    "finale": 2684,
+    "mediana": 1.4,
+    "respinse_pct": 8.5,
+    "amanari_pct": 23.0
+   },
+   {
+    "cod": "BV",
+    "luna": "2025-12",
+    "finale": 2831,
+    "mediana": 3.1,
+    "respinse_pct": 11.7,
+    "amanari_pct": 24.3
+   },
+   {
+    "cod": "BV",
+    "luna": "2026-01",
+    "finale": 2643,
+    "mediana": 3.1,
+    "respinse_pct": 9.6,
+    "amanari_pct": 24.4
+   },
+   {
+    "cod": "BV",
+    "luna": "2026-02",
+    "finale": 2902,
+    "mediana": 5.1,
+    "respinse_pct": 9.5,
+    "amanari_pct": 23.9
+   },
+   {
+    "cod": "BV",
+    "luna": "2026-03",
+    "finale": 2301,
+    "mediana": 14.9,
+    "respinse_pct": 8.4,
+    "amanari_pct": 21.5
+   },
+   {
+    "cod": "BV",
+    "luna": "2026-04",
+    "finale": 3558,
+    "mediana": 17.9,
+    "respinse_pct": 7.1,
+    "amanari_pct": 24.2
+   },
+   {
+    "cod": "BV",
+    "luna": "2026-05",
+    "finale": 3245,
+    "mediana": 5.8,
+    "respinse_pct": 14.0,
+    "amanari_pct": 24.1
+   },
+   {
+    "cod": "BV",
+    "luna": "2026-06",
+    "finale": 2936,
+    "mediana": 6.0,
+    "respinse_pct": 12.5,
+    "amanari_pct": 25.5
+   },
+   {
+    "cod": "BV",
+    "luna": "2026-07",
+    "finale": 3073,
+    "mediana": 7.3,
+    "respinse_pct": 11.5,
+    "amanari_pct": 23.4
+   },
+   {
+    "cod": "BV",
+    "luna": "2026-08",
+    "finale": 2555,
+    "mediana": 12.5,
+    "respinse_pct": 12.2,
+    "amanari_pct": 24.4
+   },
+   {
+    "cod": "BV",
+    "luna": "2026-09",
+    "finale": 3132,
+    "mediana": 23.8,
+    "respinse_pct": 9.2,
+    "amanari_pct": 22.2
+   },
+   {
+    "cod": "BV",
+    "luna": "2026-10",
+    "finale": 3243,
+    "mediana": 36.2,
+    "respinse_pct": 11.2,
+    "amanari_pct": 20.6
+   },
+   {
+    "cod": "BV",
+    "luna": "2026-11",
+    "finale": 2062,
+    "mediana": 50.8,
+    "respinse_pct": 11.9,
+    "amanari_pct": 24.8
+   },
+   {
+    "cod": "BZ",
+    "luna": "2025-01",
+    "finale": 812,
+    "mediana": 1.2,
+    "respinse_pct": 8.6,
+    "amanari_pct": 19.0
+   },
+   {
+    "cod": "BZ",
+    "luna": "2025-02",
+    "finale": 1164,
+    "mediana": 2.2,
+    "respinse_pct": 6.5,
+    "amanari_pct": 19.4
+   },
+   {
+    "cod": "BZ",
+    "luna": "2025-03",
+    "finale": 1194,
+    "mediana": 1.3,
+    "respinse_pct": 7.2,
+    "amanari_pct": 17.9
+   },
+   {
+    "cod": "BZ",
+    "luna": "2025-04",
+    "finale": 935,
+    "mediana": 1.2,
+    "respinse_pct": 8.9,
+    "amanari_pct": 18.7
+   },
+   {
+    "cod": "BZ",
+    "luna": "2025-05",
+    "finale": 954,
+    "mediana": 1.1,
+    "respinse_pct": 5.2,
+    "amanari_pct": 19.1
+   },
+   {
+    "cod": "BZ",
+    "luna": "2025-06",
+    "finale": 839,
+    "mediana": 1.2,
+    "respinse_pct": 8.0,
+    "amanari_pct": 20.9
+   },
+   {
+    "cod": "BZ",
+    "luna": "2025-07",
+    "finale": 908,
+    "mediana": 1.2,
+    "respinse_pct": 8.6,
+    "amanari_pct": 23.6
+   },
+   {
+    "cod": "BZ",
+    "luna": "2025-08",
+    "finale": 834,
+    "mediana": 1.2,
+    "respinse_pct": 8.3,
+    "amanari_pct": 22.4
+   },
+   {
+    "cod": "BZ",
+    "luna": "2025-09",
+    "finale": 1017,
+    "mediana": 1.3,
+    "respinse_pct": 8.2,
+    "amanari_pct": 22.2
+   },
+   {
+    "cod": "BZ",
+    "luna": "2025-10",
+    "finale": 1021,
+    "mediana": 1.2,
+    "respinse_pct": 9.0,
+    "amanari_pct": 24.5
+   },
+   {
+    "cod": "BZ",
+    "luna": "2025-11",
+    "finale": 882,
+    "mediana": 1.2,
+    "respinse_pct": 9.0,
+    "amanari_pct": 22.9
+   },
+   {
+    "cod": "BZ",
+    "luna": "2025-12",
+    "finale": 905,
+    "mediana": 3.0,
+    "respinse_pct": 12.4,
+    "amanari_pct": 23.3
+   },
+   {
+    "cod": "BZ",
+    "luna": "2026-01",
+    "finale": 994,
+    "mediana": 1.2,
+    "respinse_pct": 8.1,
+    "amanari_pct": 24.4
+   },
+   {
+    "cod": "BZ",
+    "luna": "2026-02",
+    "finale": 1268,
+    "mediana": 1.8,
+    "respinse_pct": 10.1,
+    "amanari_pct": 25.2
+   },
+   {
+    "cod": "BZ",
+    "luna": "2026-03",
+    "finale": 1177,
+    "mediana": 2.9,
+    "respinse_pct": 9.9,
+    "amanari_pct": 21.8
+   },
+   {
+    "cod": "BZ",
+    "luna": "2026-04",
+    "finale": 1054,
+    "mediana": 6.0,
+    "respinse_pct": 9.7,
+    "amanari_pct": 20.6
+   },
+   {
+    "cod": "BZ",
+    "luna": "2026-05",
+    "finale": 1206,
+    "mediana": 5.1,
+    "respinse_pct": 6.3,
+    "amanari_pct": 16.4
+   },
+   {
+    "cod": "BZ",
+    "luna": "2026-06",
+    "finale": 1094,
+    "mediana": 5.1,
+    "respinse_pct": 5.9,
+    "amanari_pct": 17.6
+   },
+   {
+    "cod": "BZ",
+    "luna": "2026-07",
+    "finale": 1181,
+    "mediana": 6.1,
+    "respinse_pct": 5.2,
+    "amanari_pct": 15.5
+   },
+   {
+    "cod": "BZ",
+    "luna": "2026-08",
+    "finale": 1001,
+    "mediana": 11.1,
+    "respinse_pct": 6.2,
+    "amanari_pct": 16.8
+   },
+   {
+    "cod": "BZ",
+    "luna": "2026-09",
+    "finale": 1379,
+    "mediana": 21.8,
+    "respinse_pct": 4.9,
+    "amanari_pct": 16.2
+   },
+   {
+    "cod": "BZ",
+    "luna": "2026-10",
+    "finale": 1426,
+    "mediana": 35.0,
+    "respinse_pct": 8.3,
+    "amanari_pct": 16.3
+   },
+   {
+    "cod": "BZ",
+    "luna": "2026-11",
+    "finale": 973,
+    "mediana": 50.1,
+    "respinse_pct": 8.6,
+    "amanari_pct": 16.8
+   },
+   {
+    "cod": "CJ",
+    "luna": "2025-01",
+    "finale": 3370,
+    "mediana": 1.9,
+    "respinse_pct": 5.1,
+    "amanari_pct": 16.7
+   },
+   {
+    "cod": "CJ",
+    "luna": "2025-02",
+    "finale": 4275,
+    "mediana": 3.2,
+    "respinse_pct": 5.7,
+    "amanari_pct": 16.2
+   },
+   {
+    "cod": "CJ",
+    "luna": "2025-03",
+    "finale": 4939,
+    "mediana": 5.9,
+    "respinse_pct": 5.1,
+    "amanari_pct": 15.2
+   },
+   {
+    "cod": "CJ",
+    "luna": "2025-04",
+    "finale": 4050,
+    "mediana": 4.1,
+    "respinse_pct": 5.8,
+    "amanari_pct": 17.8
+   },
+   {
+    "cod": "CJ",
+    "luna": "2025-05",
+    "finale": 3795,
+    "mediana": 1.2,
+    "respinse_pct": 4.6,
+    "amanari_pct": 17.1
+   },
+   {
+    "cod": "CJ",
+    "luna": "2025-06",
+    "finale": 3530,
+    "mediana": 1.2,
+    "respinse_pct": 5.9,
+    "amanari_pct": 18.1
+   },
+   {
+    "cod": "CJ",
+    "luna": "2025-07",
+    "finale": 3854,
+    "mediana": 1.2,
+    "respinse_pct": 5.3,
+    "amanari_pct": 19.2
+   },
+   {
+    "cod": "CJ",
+    "luna": "2025-08",
+    "finale": 3379,
+    "mediana": 1.2,
+    "respinse_pct": 6.1,
+    "amanari_pct": 18.5
+   },
+   {
+    "cod": "CJ",
+    "luna": "2025-09",
+    "finale": 4032,
+    "mediana": 1.2,
+    "respinse_pct": 5.3,
+    "amanari_pct": 19.4
+   },
+   {
+    "cod": "CJ",
+    "luna": "2025-10",
+    "finale": 4263,
+    "mediana": 1.2,
+    "respinse_pct": 5.5,
+    "amanari_pct": 20.1
+   },
+   {
+    "cod": "CJ",
+    "luna": "2025-11",
+    "finale": 3828,
+    "mediana": 1.2,
+    "respinse_pct": 5.7,
+    "amanari_pct": 20.4
+   },
+   {
+    "cod": "CJ",
+    "luna": "2025-12",
+    "finale": 4359,
+    "mediana": 1.4,
+    "respinse_pct": 6.6,
+    "amanari_pct": 20.9
+   },
+   {
+    "cod": "CJ",
+    "luna": "2026-01",
+    "finale": 3606,
+    "mediana": 1.3,
+    "respinse_pct": 8.3,
+    "amanari_pct": 20.9
+   },
+   {
+    "cod": "CJ",
+    "luna": "2026-02",
+    "finale": 4349,
+    "mediana": 3.9,
+    "respinse_pct": 6.6,
+    "amanari_pct": 20.1
+   },
+   {
+    "cod": "CJ",
+    "luna": "2026-03",
+    "finale": 4494,
+    "mediana": 7.1,
+    "respinse_pct": 5.4,
+    "amanari_pct": 18.5
+   },
+   {
+    "cod": "CJ",
+    "luna": "2026-04",
+    "finale": 4230,
+    "mediana": 6.1,
+    "respinse_pct": 7.0,
+    "amanari_pct": 19.6
+   },
+   {
+    "cod": "CJ",
+    "luna": "2026-05",
+    "finale": 4169,
+    "mediana": 5.1,
+    "respinse_pct": 7.3,
+    "amanari_pct": 20.7
+   },
+   {
+    "cod": "CJ",
+    "luna": "2026-06",
+    "finale": 4214,
+    "mediana": 5.1,
+    "respinse_pct": 7.9,
+    "amanari_pct": 20.7
+   },
+   {
+    "cod": "CJ",
+    "luna": "2026-07",
+    "finale": 4802,
+    "mediana": 6.1,
+    "respinse_pct": 7.8,
+    "amanari_pct": 19.2
+   },
+   {
+    "cod": "CJ",
+    "luna": "2026-08",
+    "finale": 3704,
+    "mediana": 11.9,
+    "respinse_pct": 8.2,
+    "amanari_pct": 20.3
+   },
+   {
+    "cod": "CJ",
+    "luna": "2026-09",
+    "finale": 4884,
+    "mediana": 22.0,
+    "respinse_pct": 7.1,
+    "amanari_pct": 19.7
+   },
+   {
+    "cod": "CJ",
+    "luna": "2026-10",
+    "finale": 5132,
+    "mediana": 35.9,
+    "respinse_pct": 10.6,
+    "amanari_pct": 18.5
+   },
+   {
+    "cod": "CJ",
+    "luna": "2026-11",
+    "finale": 3557,
+    "mediana": 52.9,
+    "respinse_pct": 9.9,
+    "amanari_pct": 22.1
+   },
+   {
+    "cod": "CL",
+    "luna": "2025-01",
+    "finale": 577,
+    "mediana": 1.3,
+    "respinse_pct": 7.5,
+    "amanari_pct": 22.0
+   },
+   {
+    "cod": "CL",
+    "luna": "2025-02",
+    "finale": 841,
+    "mediana": 1.3,
+    "respinse_pct": 7.3,
+    "amanari_pct": 20.3
+   },
+   {
+    "cod": "CL",
+    "luna": "2025-03",
+    "finale": 754,
+    "mediana": 2.2,
+    "respinse_pct": 9.4,
+    "amanari_pct": 25.1
+   },
+   {
+    "cod": "CL",
+    "luna": "2025-04",
+    "finale": 709,
+    "mediana": 1.3,
+    "respinse_pct": 9.3,
+    "amanari_pct": 22.9
+   },
+   {
+    "cod": "CL",
+    "luna": "2025-05",
+    "finale": 651,
+    "mediana": 1.2,
+    "respinse_pct": 10.8,
+    "amanari_pct": 19.8
+   },
+   {
+    "cod": "CL",
+    "luna": "2025-06",
+    "finale": 576,
+    "mediana": 1.3,
+    "respinse_pct": 9.4,
+    "amanari_pct": 19.4
+   },
+   {
+    "cod": "CL",
+    "luna": "2025-07",
+    "finale": 588,
+    "mediana": 1.3,
+    "respinse_pct": 9.7,
+    "amanari_pct": 24.1
+   },
+   {
+    "cod": "CL",
+    "luna": "2025-08",
+    "finale": 539,
+    "mediana": 1.2,
+    "respinse_pct": 5.0,
+    "amanari_pct": 17.7
+   },
+   {
+    "cod": "CL",
+    "luna": "2025-09",
+    "finale": 665,
+    "mediana": 1.3,
+    "respinse_pct": 8.0,
+    "amanari_pct": 23.3
+   },
+   {
+    "cod": "CL",
+    "luna": "2025-10",
+    "finale": 609,
+    "mediana": 1.2,
+    "respinse_pct": 9.9,
+    "amanari_pct": 22.9
+   },
+   {
+    "cod": "CL",
+    "luna": "2025-11",
+    "finale": 621,
+    "mediana": 1.1,
+    "respinse_pct": 5.2,
+    "amanari_pct": 20.2
+   },
+   {
+    "cod": "CL",
+    "luna": "2025-12",
+    "finale": 534,
+    "mediana": 1.3,
+    "respinse_pct": 11.4,
+    "amanari_pct": 22.7
+   },
+   {
+    "cod": "CL",
+    "luna": "2026-01",
+    "finale": 591,
+    "mediana": 1.2,
+    "respinse_pct": 8.3,
+    "amanari_pct": 19.6
+   },
+   {
+    "cod": "CL",
+    "luna": "2026-02",
+    "finale": 850,
+    "mediana": 1.2,
+    "respinse_pct": 8.4,
+    "amanari_pct": 21.4
+   },
+   {
+    "cod": "CL",
+    "luna": "2026-03",
+    "finale": 880,
+    "mediana": 1.2,
+    "respinse_pct": 7.7,
+    "amanari_pct": 21.5
+   },
+   {
+    "cod": "CL",
+    "luna": "2026-04",
+    "finale": 557,
+    "mediana": 3.8,
+    "respinse_pct": 11.1,
+    "amanari_pct": 20.1
+   },
+   {
+    "cod": "CL",
+    "luna": "2026-05",
+    "finale": 695,
+    "mediana": 5.1,
+    "respinse_pct": 5.5,
+    "amanari_pct": 16.8
+   },
+   {
+    "cod": "CL",
+    "luna": "2026-06",
+    "finale": 648,
+    "mediana": 5.1,
+    "respinse_pct": 6.5,
+    "amanari_pct": 16.6
+   },
+   {
+    "cod": "CL",
+    "luna": "2026-07",
+    "finale": 696,
+    "mediana": 6.1,
+    "respinse_pct": 4.2,
+    "amanari_pct": 15.3
+   },
+   {
+    "cod": "CL",
+    "luna": "2026-08",
+    "finale": 634,
+    "mediana": 11.1,
+    "respinse_pct": 6.0,
+    "amanari_pct": 14.8
+   },
+   {
+    "cod": "CL",
+    "luna": "2026-09",
+    "finale": 827,
+    "mediana": 21.1,
+    "respinse_pct": 6.3,
+    "amanari_pct": 11.9
+   },
+   {
+    "cod": "CL",
+    "luna": "2026-10",
+    "finale": 827,
+    "mediana": 35.1,
+    "respinse_pct": 5.9,
+    "amanari_pct": 13.8
+   },
+   {
+    "cod": "CL",
+    "luna": "2026-11",
+    "finale": 640,
+    "mediana": 50.2,
+    "respinse_pct": 4.5,
+    "amanari_pct": 13.3
+   },
+   {
+    "cod": "CS",
+    "luna": "2025-01",
+    "finale": 462,
+    "mediana": 1.1,
+    "respinse_pct": 3.5,
+    "amanari_pct": 12.2
+   },
+   {
+    "cod": "CS",
+    "luna": "2025-02",
+    "finale": 689,
+    "mediana": 1.2,
+    "respinse_pct": 5.5,
+    "amanari_pct": 10.5
+   },
+   {
+    "cod": "CS",
+    "luna": "2025-03",
+    "finale": 753,
+    "mediana": 8.3,
+    "respinse_pct": 3.7,
+    "amanari_pct": 11.6
+   },
+   {
+    "cod": "CS",
+    "luna": "2025-04",
+    "finale": 697,
+    "mediana": 6.0,
+    "respinse_pct": 6.2,
+    "amanari_pct": 12.0
+   },
+   {
+    "cod": "CS",
+    "luna": "2025-05",
+    "finale": 640,
+    "mediana": 2.2,
+    "respinse_pct": 3.0,
+    "amanari_pct": 12.3
+   },
+   {
+    "cod": "CS",
+    "luna": "2025-06",
+    "finale": 501,
+    "mediana": 1.2,
+    "respinse_pct": 4.6,
+    "amanari_pct": 15.6
+   },
+   {
+    "cod": "CS",
+    "luna": "2025-07",
+    "finale": 601,
+    "mediana": 1.1,
+    "respinse_pct": 5.5,
+    "amanari_pct": 14.8
+   },
+   {
+    "cod": "CS",
+    "luna": "2025-08",
+    "finale": 527,
+    "mediana": 1.1,
+    "respinse_pct": 4.9,
+    "amanari_pct": 15.3
+   },
+   {
+    "cod": "CS",
+    "luna": "2025-09",
+    "finale": 537,
+    "mediana": 1.1,
+    "respinse_pct": 5.4,
+    "amanari_pct": 19.4
+   },
+   {
+    "cod": "CS",
+    "luna": "2025-10",
+    "finale": 697,
+    "mediana": 1.1,
+    "respinse_pct": 5.9,
+    "amanari_pct": 15.5
+   },
+   {
+    "cod": "CS",
+    "luna": "2025-11",
+    "finale": 611,
+    "mediana": 1.1,
+    "respinse_pct": 3.6,
+    "amanari_pct": 15.8
+   },
+   {
+    "cod": "CS",
+    "luna": "2025-12",
+    "finale": 461,
+    "mediana": 2.9,
+    "respinse_pct": 8.7,
+    "amanari_pct": 14.6
+   },
+   {
+    "cod": "CS",
+    "luna": "2026-01",
+    "finale": 574,
+    "mediana": 4.8,
+    "respinse_pct": 5.2,
+    "amanari_pct": 14.3
+   },
+   {
+    "cod": "CS",
+    "luna": "2026-02",
+    "finale": 816,
+    "mediana": 5.0,
+    "respinse_pct": 2.9,
+    "amanari_pct": 15.7
+   },
+   {
+    "cod": "CS",
+    "luna": "2026-03",
+    "finale": 790,
+    "mediana": 3.8,
+    "respinse_pct": 5.7,
+    "amanari_pct": 13.9
+   },
+   {
+    "cod": "CS",
+    "luna": "2026-04",
+    "finale": 570,
+    "mediana": 3.0,
+    "respinse_pct": 6.3,
+    "amanari_pct": 17.2
+   },
+   {
+    "cod": "CS",
+    "luna": "2026-05",
+    "finale": 626,
+    "mediana": 5.1,
+    "respinse_pct": 4.0,
+    "amanari_pct": 15.6
+   },
+   {
+    "cod": "CS",
+    "luna": "2026-06",
+    "finale": 538,
+    "mediana": 5.1,
+    "respinse_pct": 4.8,
+    "amanari_pct": 14.3
+   },
+   {
+    "cod": "CS",
+    "luna": "2026-07",
+    "finale": 615,
+    "mediana": 6.1,
+    "respinse_pct": 4.9,
+    "amanari_pct": 17.9
+   },
+   {
+    "cod": "CS",
+    "luna": "2026-08",
+    "finale": 474,
+    "mediana": 11.0,
+    "respinse_pct": 6.5,
+    "amanari_pct": 15.5
+   },
+   {
+    "cod": "CS",
+    "luna": "2026-09",
+    "finale": 669,
+    "mediana": 21.2,
+    "respinse_pct": 5.1,
+    "amanari_pct": 15.1
+   },
+   {
+    "cod": "CS",
+    "luna": "2026-10",
+    "finale": 608,
+    "mediana": 34.0,
+    "respinse_pct": 7.2,
+    "amanari_pct": 13.6
+   },
+   {
+    "cod": "CS",
+    "luna": "2026-11",
+    "finale": 462,
+    "mediana": 50.0,
+    "respinse_pct": 6.5,
+    "amanari_pct": 18.7
+   },
+   {
+    "cod": "CT",
+    "luna": "2025-01",
+    "finale": 2895,
+    "mediana": 6.1,
+    "respinse_pct": 6.3,
+    "amanari_pct": 15.7
+   },
+   {
+    "cod": "CT",
+    "luna": "2025-02",
+    "finale": 3925,
+    "mediana": 11.1,
+    "respinse_pct": 5.6,
+    "amanari_pct": 13.1
+   },
+   {
+    "cod": "CT",
+    "luna": "2025-03",
+    "finale": 4138,
+    "mediana": 14.0,
+    "respinse_pct": 5.1,
+    "amanari_pct": 13.5
+   },
+   {
+    "cod": "CT",
+    "luna": "2025-04",
+    "finale": 4180,
+    "mediana": 26.1,
+    "respinse_pct": 4.8,
+    "amanari_pct": 16.1
+   },
+   {
+    "cod": "CT",
+    "luna": "2025-05",
+    "finale": 4660,
+    "mediana": 13.1,
+    "respinse_pct": 5.9,
+    "amanari_pct": 16.6
+   },
+   {
+    "cod": "CT",
+    "luna": "2025-06",
+    "finale": 4038,
+    "mediana": 4.0,
+    "respinse_pct": 8.4,
+    "amanari_pct": 19.8
+   },
+   {
+    "cod": "CT",
+    "luna": "2025-07",
+    "finale": 3478,
+    "mediana": 1.2,
+    "respinse_pct": 8.7,
+    "amanari_pct": 21.2
+   },
+   {
+    "cod": "CT",
+    "luna": "2025-08",
+    "finale": 2878,
+    "mediana": 1.7,
+    "respinse_pct": 8.5,
+    "amanari_pct": 22.1
+   },
+   {
+    "cod": "CT",
+    "luna": "2025-09",
+    "finale": 3104,
+    "mediana": 2.9,
+    "respinse_pct": 7.3,
+    "amanari_pct": 24.0
+   },
+   {
+    "cod": "CT",
+    "luna": "2025-10",
+    "finale": 3367,
+    "mediana": 1.2,
+    "respinse_pct": 8.4,
+    "amanari_pct": 21.6
+   },
+   {
+    "cod": "CT",
+    "luna": "2025-11",
+    "finale": 3260,
+    "mediana": 1.8,
+    "respinse_pct": 8.4,
+    "amanari_pct": 21.9
+   },
+   {
+    "cod": "CT",
+    "luna": "2025-12",
+    "finale": 3187,
+    "mediana": 2.9,
+    "respinse_pct": 8.0,
+    "amanari_pct": 20.1
+   },
+   {
+    "cod": "CT",
+    "luna": "2026-01",
+    "finale": 3178,
+    "mediana": 3.8,
+    "respinse_pct": 6.8,
+    "amanari_pct": 21.6
+   },
+   {
+    "cod": "CT",
+    "luna": "2026-02",
+    "finale": 3712,
+    "mediana": 4.8,
+    "respinse_pct": 7.1,
+    "amanari_pct": 22.0
+   },
+   {
+    "cod": "CT",
+    "luna": "2026-03",
+    "finale": 2854,
+    "mediana": 14.2,
+    "respinse_pct": 7.8,
+    "amanari_pct": 21.2
+   },
+   {
+    "cod": "CT",
+    "luna": "2026-04",
+    "finale": 4426,
+    "mediana": 16.0,
+    "respinse_pct": 5.6,
+    "amanari_pct": 21.6
+   },
+   {
+    "cod": "CT",
+    "luna": "2026-05",
+    "finale": 3787,
+    "mediana": 5.2,
+    "respinse_pct": 9.3,
+    "amanari_pct": 19.6
+   },
+   {
+    "cod": "CT",
+    "luna": "2026-06",
+    "finale": 3367,
+    "mediana": 6.9,
+    "respinse_pct": 8.2,
+    "amanari_pct": 20.5
+   },
+   {
+    "cod": "CT",
+    "luna": "2026-07",
+    "finale": 3534,
+    "mediana": 7.0,
+    "respinse_pct": 8.7,
+    "amanari_pct": 18.9
+   },
+   {
+    "cod": "CT",
+    "luna": "2026-08",
+    "finale": 2499,
+    "mediana": 12.0,
+    "respinse_pct": 8.4,
+    "amanari_pct": 17.8
+   },
+   {
+    "cod": "CT",
+    "luna": "2026-09",
+    "finale": 3437,
+    "mediana": 21.9,
+    "respinse_pct": 5.5,
+    "amanari_pct": 19.0
+   },
+   {
+    "cod": "CT",
+    "luna": "2026-10",
+    "finale": 3219,
+    "mediana": 34.8,
+    "respinse_pct": 6.5,
+    "amanari_pct": 16.6
+   },
+   {
+    "cod": "CT",
+    "luna": "2026-11",
+    "finale": 1758,
+    "mediana": 49.1,
+    "respinse_pct": 8.0,
+    "amanari_pct": 19.9
+   },
+   {
+    "cod": "CV",
+    "luna": "2025-01",
+    "finale": 343,
+    "mediana": 1.1,
+    "respinse_pct": 5.2,
+    "amanari_pct": 19.7
+   },
+   {
+    "cod": "CV",
+    "luna": "2025-02",
+    "finale": 611,
+    "mediana": 1.1,
+    "respinse_pct": 6.7,
+    "amanari_pct": 15.0
+   },
+   {
+    "cod": "CV",
+    "luna": "2025-03",
+    "finale": 625,
+    "mediana": 1.1,
+    "respinse_pct": 4.8,
+    "amanari_pct": 18.3
+   },
+   {
+    "cod": "CV",
+    "luna": "2025-04",
+    "finale": 509,
+    "mediana": 2.0,
+    "respinse_pct": 8.1,
+    "amanari_pct": 19.8
+   },
+   {
+    "cod": "CV",
+    "luna": "2025-05",
+    "finale": 473,
+    "mediana": 1.1,
+    "respinse_pct": 5.9,
+    "amanari_pct": 20.5
+   },
+   {
+    "cod": "CV",
+    "luna": "2025-06",
+    "finale": 437,
+    "mediana": 1.2,
+    "respinse_pct": 10.8,
+    "amanari_pct": 20.3
+   },
+   {
+    "cod": "CV",
+    "luna": "2025-07",
+    "finale": 527,
+    "mediana": 1.1,
+    "respinse_pct": 4.7,
+    "amanari_pct": 19.4
+   },
+   {
+    "cod": "CV",
+    "luna": "2025-08",
+    "finale": 369,
+    "mediana": 1.1,
+    "respinse_pct": 9.2,
+    "amanari_pct": 23.1
+   },
+   {
+    "cod": "CV",
+    "luna": "2025-09",
+    "finale": 510,
+    "mediana": 1.2,
+    "respinse_pct": 8.6,
+    "amanari_pct": 22.7
+   },
+   {
+    "cod": "CV",
+    "luna": "2025-10",
+    "finale": 456,
+    "mediana": 1.1,
+    "respinse_pct": 8.1,
+    "amanari_pct": 22.4
+   },
+   {
+    "cod": "CV",
+    "luna": "2025-11",
+    "finale": 459,
+    "mediana": 1.1,
+    "respinse_pct": 8.7,
+    "amanari_pct": 21.5
+   },
+   {
+    "cod": "CV",
+    "luna": "2025-12",
+    "finale": 430,
+    "mediana": 1.1,
+    "respinse_pct": 7.2,
+    "amanari_pct": 21.5
+   },
+   {
+    "cod": "CV",
+    "luna": "2026-01",
+    "finale": 524,
+    "mediana": 1.8,
+    "respinse_pct": 7.6,
+    "amanari_pct": 20.8
+   },
+   {
+    "cod": "CV",
+    "luna": "2026-02",
+    "finale": 554,
+    "mediana": 2.8,
+    "respinse_pct": 6.9,
+    "amanari_pct": 21.4
+   },
+   {
+    "cod": "CV",
+    "luna": "2026-03",
+    "finale": 731,
+    "mediana": 3.9,
+    "respinse_pct": 8.1,
+    "amanari_pct": 21.8
+   },
+   {
+    "cod": "CV",
+    "luna": "2026-04",
+    "finale": 510,
+    "mediana": 5.0,
+    "respinse_pct": 9.8,
+    "amanari_pct": 18.1
+   },
+   {
+    "cod": "CV",
+    "luna": "2026-05",
+    "finale": 487,
+    "mediana": 5.1,
+    "respinse_pct": 5.7,
+    "amanari_pct": 16.0
+   },
+   {
+    "cod": "CV",
+    "luna": "2026-06",
+    "finale": 509,
+    "mediana": 5.1,
+    "respinse_pct": 6.7,
+    "amanari_pct": 15.9
+   },
+   {
+    "cod": "CV",
+    "luna": "2026-07",
+    "finale": 586,
+    "mediana": 6.1,
+    "respinse_pct": 4.8,
+    "amanari_pct": 14.4
+   },
+   {
+    "cod": "CV",
+    "luna": "2026-08",
+    "finale": 497,
+    "mediana": 10.2,
+    "respinse_pct": 5.0,
+    "amanari_pct": 12.8
+   },
+   {
+    "cod": "CV",
+    "luna": "2026-09",
+    "finale": 619,
+    "mediana": 21.2,
+    "respinse_pct": 3.6,
+    "amanari_pct": 14.3
+   },
+   {
+    "cod": "CV",
+    "luna": "2026-10",
+    "finale": 779,
+    "mediana": 35.9,
+    "respinse_pct": 7.3,
+    "amanari_pct": 14.2
+   },
+   {
+    "cod": "CV",
+    "luna": "2026-11",
+    "finale": 498,
+    "mediana": 52.9,
+    "respinse_pct": 9.4,
+    "amanari_pct": 16.7
+   },
+   {
+    "cod": "DB",
+    "luna": "2025-01",
+    "finale": 1163,
+    "mediana": 1.8,
+    "respinse_pct": 6.0,
+    "amanari_pct": 19.0
+   },
+   {
+    "cod": "DB",
+    "luna": "2025-02",
+    "finale": 1849,
+    "mediana": 2.0,
+    "respinse_pct": 6.7,
+    "amanari_pct": 16.1
+   },
+   {
+    "cod": "DB",
+    "luna": "2025-03",
+    "finale": 1778,
+    "mediana": 1.8,
+    "respinse_pct": 7.6,
+    "amanari_pct": 15.9
+   },
+   {
+    "cod": "DB",
+    "luna": "2025-04",
+    "finale": 1281,
+    "mediana": 2.1,
+    "respinse_pct": 7.9,
+    "amanari_pct": 21.2
+   },
+   {
+    "cod": "DB",
+    "luna": "2025-05",
+    "finale": 1379,
+    "mediana": 1.2,
+    "respinse_pct": 8.3,
+    "amanari_pct": 19.3
+   },
+   {
+    "cod": "DB",
+    "luna": "2025-06",
+    "finale": 1017,
+    "mediana": 1.2,
+    "respinse_pct": 8.7,
+    "amanari_pct": 18.6
+   },
+   {
+    "cod": "DB",
+    "luna": "2025-07",
+    "finale": 1193,
+    "mediana": 1.2,
+    "respinse_pct": 5.2,
+    "amanari_pct": 19.2
+   },
+   {
+    "cod": "DB",
+    "luna": "2025-08",
+    "finale": 1005,
+    "mediana": 1.3,
+    "respinse_pct": 8.6,
+    "amanari_pct": 20.3
+   },
+   {
+    "cod": "DB",
+    "luna": "2025-09",
+    "finale": 1254,
+    "mediana": 1.6,
+    "respinse_pct": 7.5,
+    "amanari_pct": 22.7
+   },
+   {
+    "cod": "DB",
+    "luna": "2025-10",
+    "finale": 1241,
+    "mediana": 1.2,
+    "respinse_pct": 9.1,
+    "amanari_pct": 21.6
+   },
+   {
+    "cod": "DB",
+    "luna": "2025-11",
+    "finale": 1165,
+    "mediana": 1.2,
+    "respinse_pct": 7.5,
+    "amanari_pct": 22.6
+   },
+   {
+    "cod": "DB",
+    "luna": "2025-12",
+    "finale": 1145,
+    "mediana": 2.9,
+    "respinse_pct": 8.3,
+    "amanari_pct": 20.8
+   },
+   {
+    "cod": "DB",
+    "luna": "2026-01",
+    "finale": 1229,
+    "mediana": 2.8,
+    "respinse_pct": 7.0,
+    "amanari_pct": 21.3
+   },
+   {
+    "cod": "DB",
+    "luna": "2026-02",
+    "finale": 1515,
+    "mediana": 3.2,
+    "respinse_pct": 7.5,
+    "amanari_pct": 19.3
+   },
+   {
+    "cod": "DB",
+    "luna": "2026-03",
+    "finale": 1400,
+    "mediana": 6.1,
+    "respinse_pct": 7.6,
+    "amanari_pct": 21.0
+   },
+   {
+    "cod": "DB",
+    "luna": "2026-04",
+    "finale": 1402,
+    "mediana": 7.0,
+    "respinse_pct": 7.4,
+    "amanari_pct": 17.9
+   },
+   {
+    "cod": "DB",
+    "luna": "2026-05",
+    "finale": 1282,
+    "mediana": 5.1,
+    "respinse_pct": 6.2,
+    "amanari_pct": 18.9
+   },
+   {
+    "cod": "DB",
+    "luna": "2026-06",
+    "finale": 1300,
+    "mediana": 5.2,
+    "respinse_pct": 9.2,
+    "amanari_pct": 20.0
+   },
+   {
+    "cod": "DB",
+    "luna": "2026-07",
+    "finale": 1393,
+    "mediana": 6.1,
+    "respinse_pct": 7.5,
+    "amanari_pct": 15.3
+   },
+   {
+    "cod": "DB",
+    "luna": "2026-08",
+    "finale": 1291,
+    "mediana": 11.1,
+    "respinse_pct": 6.8,
+    "amanari_pct": 17.5
+   },
+   {
+    "cod": "DB",
+    "luna": "2026-09",
+    "finale": 1706,
+    "mediana": 21.5,
+    "respinse_pct": 6.4,
+    "amanari_pct": 19.8
+   },
+   {
+    "cod": "DB",
+    "luna": "2026-10",
+    "finale": 1738,
+    "mediana": 35.9,
+    "respinse_pct": 11.0,
+    "amanari_pct": 19.8
+   },
+   {
+    "cod": "DB",
+    "luna": "2026-11",
+    "finale": 1123,
+    "mediana": 50.0,
+    "respinse_pct": 12.2,
+    "amanari_pct": 21.6
+   },
+   {
+    "cod": "DJ",
+    "luna": "2025-01",
+    "finale": 2441,
+    "mediana": 1.6,
+    "respinse_pct": 5.0,
+    "amanari_pct": 17.2
+   },
+   {
+    "cod": "DJ",
+    "luna": "2025-02",
+    "finale": 2914,
+    "mediana": 3.2,
+    "respinse_pct": 6.3,
+    "amanari_pct": 16.0
+   },
+   {
+    "cod": "DJ",
+    "luna": "2025-03",
+    "finale": 3030,
+    "mediana": 5.0,
+    "respinse_pct": 5.8,
+    "amanari_pct": 15.2
+   },
+   {
+    "cod": "DJ",
+    "luna": "2025-04",
+    "finale": 2461,
+    "mediana": 7.0,
+    "respinse_pct": 6.4,
+    "amanari_pct": 17.6
+   },
+   {
+    "cod": "DJ",
+    "luna": "2025-05",
+    "finale": 2313,
+    "mediana": 5.0,
+    "respinse_pct": 5.2,
+    "amanari_pct": 16.5
+   },
+   {
+    "cod": "DJ",
+    "luna": "2025-06",
+    "finale": 2588,
+    "mediana": 6.0,
+    "respinse_pct": 5.4,
+    "amanari_pct": 22.4
+   },
+   {
+    "cod": "DJ",
+    "luna": "2025-07",
+    "finale": 2553,
+    "mediana": 1.3,
+    "respinse_pct": 8.5,
+    "amanari_pct": 22.6
+   },
+   {
+    "cod": "DJ",
+    "luna": "2025-08",
+    "finale": 2055,
+    "mediana": 2.0,
+    "respinse_pct": 7.8,
+    "amanari_pct": 21.5
+   },
+   {
+    "cod": "DJ",
+    "luna": "2025-09",
+    "finale": 2475,
+    "mediana": 2.0,
+    "respinse_pct": 7.3,
+    "amanari_pct": 23.2
+   },
+   {
+    "cod": "DJ",
+    "luna": "2025-10",
+    "finale": 2303,
+    "mediana": 1.2,
+    "respinse_pct": 8.0,
+    "amanari_pct": 22.0
+   },
+   {
+    "cod": "DJ",
+    "luna": "2025-11",
+    "finale": 2398,
+    "mediana": 1.2,
+    "respinse_pct": 7.0,
+    "amanari_pct": 21.9
+   },
+   {
+    "cod": "DJ",
+    "luna": "2025-12",
+    "finale": 2166,
+    "mediana": 4.1,
+    "respinse_pct": 8.5,
+    "amanari_pct": 22.3
+   },
+   {
+    "cod": "DJ",
+    "luna": "2026-01",
+    "finale": 2291,
+    "mediana": 3.3,
+    "respinse_pct": 6.9,
+    "amanari_pct": 22.0
+   },
+   {
+    "cod": "DJ",
+    "luna": "2026-02",
+    "finale": 2602,
+    "mediana": 5.0,
+    "respinse_pct": 6.2,
+    "amanari_pct": 22.4
+   },
+   {
+    "cod": "DJ",
+    "luna": "2026-03",
+    "finale": 2691,
+    "mediana": 4.9,
+    "respinse_pct": 6.7,
+    "amanari_pct": 23.8
+   },
+   {
+    "cod": "DJ",
+    "luna": "2026-04",
+    "finale": 1850,
+    "mediana": 6.2,
+    "respinse_pct": 10.6,
+    "amanari_pct": 22.0
+   },
+   {
+    "cod": "DJ",
+    "luna": "2026-05",
+    "finale": 2093,
+    "mediana": 6.2,
+    "respinse_pct": 7.2,
+    "amanari_pct": 19.5
+   },
+   {
+    "cod": "DJ",
+    "luna": "2026-06",
+    "finale": 2160,
+    "mediana": 6.0,
+    "respinse_pct": 9.3,
+    "amanari_pct": 19.3
+   },
+   {
+    "cod": "DJ",
+    "luna": "2026-07",
+    "finale": 2249,
+    "mediana": 7.0,
+    "respinse_pct": 7.4,
+    "amanari_pct": 18.7
+   },
+   {
+    "cod": "DJ",
+    "luna": "2026-08",
+    "finale": 1652,
+    "mediana": 11.9,
+    "respinse_pct": 10.0,
+    "amanari_pct": 19.6
+   },
+   {
+    "cod": "DJ",
+    "luna": "2026-09",
+    "finale": 2027,
+    "mediana": 23.7,
+    "respinse_pct": 7.1,
+    "amanari_pct": 18.9
+   },
+   {
+    "cod": "DJ",
+    "luna": "2026-10",
+    "finale": 2156,
+    "mediana": 35.6,
+    "respinse_pct": 9.2,
+    "amanari_pct": 18.4
+   },
+   {
+    "cod": "DJ",
+    "luna": "2026-11",
+    "finale": 1211,
+    "mediana": 51.9,
+    "respinse_pct": 8.0,
+    "amanari_pct": 23.2
+   },
+   {
+    "cod": "GJ",
+    "luna": "2025-01",
+    "finale": 881,
+    "mediana": 1.1,
+    "respinse_pct": 3.5,
+    "amanari_pct": 20.7
+   },
+   {
+    "cod": "GJ",
+    "luna": "2025-02",
+    "finale": 1119,
+    "mediana": 1.1,
+    "respinse_pct": 5.4,
+    "amanari_pct": 17.4
+   },
+   {
+    "cod": "GJ",
+    "luna": "2025-03",
+    "finale": 1065,
+    "mediana": 1.2,
+    "respinse_pct": 4.9,
+    "amanari_pct": 20.7
+   },
+   {
+    "cod": "GJ",
+    "luna": "2025-04",
+    "finale": 855,
+    "mediana": 1.1,
+    "respinse_pct": 6.2,
+    "amanari_pct": 18.8
+   },
+   {
+    "cod": "GJ",
+    "luna": "2025-05",
+    "finale": 799,
+    "mediana": 1.1,
+    "respinse_pct": 3.8,
+    "amanari_pct": 18.9
+   },
+   {
+    "cod": "GJ",
+    "luna": "2025-06",
+    "finale": 778,
+    "mediana": 1.1,
+    "respinse_pct": 5.5,
+    "amanari_pct": 20.1
+   },
+   {
+    "cod": "GJ",
+    "luna": "2025-07",
+    "finale": 880,
+    "mediana": 1.1,
+    "respinse_pct": 5.1,
+    "amanari_pct": 21.4
+   },
+   {
+    "cod": "GJ",
+    "luna": "2025-08",
+    "finale": 730,
+    "mediana": 1.1,
+    "respinse_pct": 6.2,
+    "amanari_pct": 18.7
+   },
+   {
+    "cod": "GJ",
+    "luna": "2025-09",
+    "finale": 934,
+    "mediana": 1.1,
+    "respinse_pct": 5.4,
+    "amanari_pct": 18.3
+   },
+   {
+    "cod": "GJ",
+    "luna": "2025-10",
+    "finale": 935,
+    "mediana": 1.0,
+    "respinse_pct": 4.2,
+    "amanari_pct": 16.6
+   },
+   {
+    "cod": "GJ",
+    "luna": "2025-11",
+    "finale": 901,
+    "mediana": 1.1,
+    "respinse_pct": 3.7,
+    "amanari_pct": 19.2
+   },
+   {
+    "cod": "GJ",
+    "luna": "2025-12",
+    "finale": 836,
+    "mediana": 1.2,
+    "respinse_pct": 6.2,
+    "amanari_pct": 18.2
+   },
+   {
+    "cod": "GJ",
+    "luna": "2026-01",
+    "finale": 891,
+    "mediana": 1.1,
+    "respinse_pct": 3.8,
+    "amanari_pct": 15.7
+   },
+   {
+    "cod": "GJ",
+    "luna": "2026-02",
+    "finale": 999,
+    "mediana": 1.1,
+    "respinse_pct": 3.9,
+    "amanari_pct": 19.7
+   },
+   {
+    "cod": "GJ",
+    "luna": "2026-03",
+    "finale": 1038,
+    "mediana": 1.2,
+    "respinse_pct": 4.2,
+    "amanari_pct": 15.5
+   },
+   {
+    "cod": "GJ",
+    "luna": "2026-04",
+    "finale": 762,
+    "mediana": 3.0,
+    "respinse_pct": 4.9,
+    "amanari_pct": 16.1
+   },
+   {
+    "cod": "GJ",
+    "luna": "2026-05",
+    "finale": 837,
+    "mediana": 5.0,
+    "respinse_pct": 4.1,
+    "amanari_pct": 13.5
+   },
+   {
+    "cod": "GJ",
+    "luna": "2026-06",
+    "finale": 776,
+    "mediana": 5.1,
+    "respinse_pct": 3.9,
+    "amanari_pct": 13.0
+   },
+   {
+    "cod": "GJ",
+    "luna": "2026-07",
+    "finale": 914,
+    "mediana": 6.1,
+    "respinse_pct": 3.0,
+    "amanari_pct": 13.4
+   },
+   {
+    "cod": "GJ",
+    "luna": "2026-08",
+    "finale": 789,
+    "mediana": 10.9,
+    "respinse_pct": 3.7,
+    "amanari_pct": 12.6
+   },
+   {
+    "cod": "GJ",
+    "luna": "2026-09",
+    "finale": 1101,
+    "mediana": 21.2,
+    "respinse_pct": 2.5,
+    "amanari_pct": 12.2
+   },
+   {
+    "cod": "GJ",
+    "luna": "2026-10",
+    "finale": 1124,
+    "mediana": 34.1,
+    "respinse_pct": 2.8,
+    "amanari_pct": 12.1
+   },
+   {
+    "cod": "GJ",
+    "luna": "2026-11",
+    "finale": 743,
+    "mediana": 50.2,
+    "respinse_pct": 4.6,
+    "amanari_pct": 19.0
+   },
+   {
+    "cod": "GL",
+    "luna": "2025-01",
+    "finale": 1187,
+    "mediana": 5.7,
+    "respinse_pct": 10.3,
+    "amanari_pct": 21.6
+   },
+   {
+    "cod": "GL",
+    "luna": "2025-02",
+    "finale": 1745,
+    "mediana": 5.1,
+    "respinse_pct": 7.7,
+    "amanari_pct": 18.7
+   },
+   {
+    "cod": "GL",
+    "luna": "2025-03",
+    "finale": 2267,
+    "mediana": 13.7,
+    "respinse_pct": 11.2,
+    "amanari_pct": 23.0
+   },
+   {
+    "cod": "GL",
+    "luna": "2025-04",
+    "finale": 2244,
+    "mediana": 4.8,
+    "respinse_pct": 14.1,
+    "amanari_pct": 21.5
+   },
+   {
+    "cod": "GL",
+    "luna": "2025-05",
+    "finale": 1802,
+    "mediana": 2.0,
+    "respinse_pct": 11.3,
+    "amanari_pct": 24.5
+   },
+   {
+    "cod": "GL",
+    "luna": "2025-06",
+    "finale": 1561,
+    "mediana": 1.3,
+    "respinse_pct": 12.6,
+    "amanari_pct": 24.1
+   },
+   {
+    "cod": "GL",
+    "luna": "2025-07",
+    "finale": 1825,
+    "mediana": 1.3,
+    "respinse_pct": 11.0,
+    "amanari_pct": 24.3
+   },
+   {
+    "cod": "GL",
+    "luna": "2025-08",
+    "finale": 1415,
+    "mediana": 1.8,
+    "respinse_pct": 10.9,
+    "amanari_pct": 24.0
+   },
+   {
+    "cod": "GL",
+    "luna": "2025-09",
+    "finale": 1690,
+    "mediana": 2.1,
+    "respinse_pct": 10.6,
+    "amanari_pct": 24.6
+   },
+   {
+    "cod": "GL",
+    "luna": "2025-10",
+    "finale": 2069,
+    "mediana": 1.1,
+    "respinse_pct": 7.1,
+    "amanari_pct": 21.5
+   },
+   {
+    "cod": "GL",
+    "luna": "2025-11",
+    "finale": 1668,
+    "mediana": 1.8,
+    "respinse_pct": 10.1,
+    "amanari_pct": 23.8
+   },
+   {
+    "cod": "GL",
+    "luna": "2025-12",
+    "finale": 1150,
+    "mediana": 3.8,
+    "respinse_pct": 11.9,
+    "amanari_pct": 22.2
+   },
+   {
+    "cod": "GL",
+    "luna": "2026-01",
+    "finale": 1936,
+    "mediana": 4.8,
+    "respinse_pct": 7.7,
+    "amanari_pct": 22.5
+   },
+   {
+    "cod": "GL",
+    "luna": "2026-02",
+    "finale": 1201,
+    "mediana": 7.1,
+    "respinse_pct": 9.7,
+    "amanari_pct": 23.5
+   },
+   {
+    "cod": "GL",
+    "luna": "2026-03",
+    "finale": 1541,
+    "mediana": 21.8,
+    "respinse_pct": 13.8,
+    "amanari_pct": 25.7
+   },
+   {
+    "cod": "GL",
+    "luna": "2026-04",
+    "finale": 2396,
+    "mediana": 18.9,
+    "respinse_pct": 8.4,
+    "amanari_pct": 20.6
+   },
+   {
+    "cod": "GL",
+    "luna": "2026-05",
+    "finale": 2020,
+    "mediana": 5.2,
+    "respinse_pct": 9.2,
+    "amanari_pct": 17.5
+   },
+   {
+    "cod": "GL",
+    "luna": "2026-06",
+    "finale": 1972,
+    "mediana": 5.1,
+    "respinse_pct": 7.2,
+    "amanari_pct": 16.3
+   },
+   {
+    "cod": "GL",
+    "luna": "2026-07",
+    "finale": 1854,
+    "mediana": 6.2,
+    "respinse_pct": 5.9,
+    "amanari_pct": 16.0
+   },
+   {
+    "cod": "GL",
+    "luna": "2026-08",
+    "finale": 1433,
+    "mediana": 11.7,
+    "respinse_pct": 6.7,
+    "amanari_pct": 16.6
+   },
+   {
+    "cod": "GL",
+    "luna": "2026-09",
+    "finale": 1901,
+    "mediana": 21.8,
+    "respinse_pct": 4.8,
+    "amanari_pct": 13.9
+   },
+   {
+    "cod": "GL",
+    "luna": "2026-10",
+    "finale": 2009,
+    "mediana": 34.7,
+    "respinse_pct": 5.5,
+    "amanari_pct": 13.7
+   },
+   {
+    "cod": "GL",
+    "luna": "2026-11",
+    "finale": 1217,
+    "mediana": 49.8,
+    "respinse_pct": 5.2,
+    "amanari_pct": 16.9
+   },
+   {
+    "cod": "GR",
+    "luna": "2025-01",
+    "finale": 515,
+    "mediana": 2.0,
+    "respinse_pct": 8.9,
+    "amanari_pct": 24.9
+   },
+   {
+    "cod": "GR",
+    "luna": "2025-02",
+    "finale": 877,
+    "mediana": 3.3,
+    "respinse_pct": 8.6,
+    "amanari_pct": 23.4
+   },
+   {
+    "cod": "GR",
+    "luna": "2025-03",
+    "finale": 948,
+    "mediana": 3.9,
+    "respinse_pct": 8.1,
+    "amanari_pct": 19.4
+   },
+   {
+    "cod": "GR",
+    "luna": "2025-04",
+    "finale": 657,
+    "mediana": 6.0,
+    "respinse_pct": 6.8,
+    "amanari_pct": 23.4
+   },
+   {
+    "cod": "GR",
+    "luna": "2025-05",
+    "finale": 654,
+    "mediana": 3.1,
+    "respinse_pct": 10.2,
+    "amanari_pct": 19.5
+   },
+   {
+    "cod": "GR",
+    "luna": "2025-06",
+    "finale": 610,
+    "mediana": 1.8,
+    "respinse_pct": 7.4,
+    "amanari_pct": 19.1
+   },
+   {
+    "cod": "GR",
+    "luna": "2025-07",
+    "finale": 623,
+    "mediana": 1.3,
+    "respinse_pct": 10.0,
+    "amanari_pct": 29.5
+   },
+   {
+    "cod": "GR",
+    "luna": "2025-08",
+    "finale": 592,
+    "mediana": 1.8,
+    "respinse_pct": 13.9,
+    "amanari_pct": 24.1
+   },
+   {
+    "cod": "GR",
+    "luna": "2025-09",
+    "finale": 790,
+    "mediana": 1.8,
+    "respinse_pct": 8.6,
+    "amanari_pct": 24.0
+   },
+   {
+    "cod": "GR",
+    "luna": "2025-10",
+    "finale": 727,
+    "mediana": 1.3,
+    "respinse_pct": 11.7,
+    "amanari_pct": 24.0
+   },
+   {
+    "cod": "GR",
+    "luna": "2025-11",
+    "finale": 680,
+    "mediana": 1.5,
+    "respinse_pct": 8.8,
+    "amanari_pct": 22.2
+   },
+   {
+    "cod": "GR",
+    "luna": "2025-12",
+    "finale": 717,
+    "mediana": 1.9,
+    "respinse_pct": 9.9,
+    "amanari_pct": 23.5
+   },
+   {
+    "cod": "GR",
+    "luna": "2026-01",
+    "finale": 584,
+    "mediana": 3.0,
+    "respinse_pct": 11.3,
+    "amanari_pct": 24.8
+   },
+   {
+    "cod": "GR",
+    "luna": "2026-02",
+    "finale": 678,
+    "mediana": 6.0,
+    "respinse_pct": 10.6,
+    "amanari_pct": 24.5
+   },
+   {
+    "cod": "GR",
+    "luna": "2026-03",
+    "finale": 598,
+    "mediana": 14.8,
+    "respinse_pct": 16.1,
+    "amanari_pct": 29.9
+   },
+   {
+    "cod": "GR",
+    "luna": "2026-04",
+    "finale": 815,
+    "mediana": 16.9,
+    "respinse_pct": 12.3,
+    "amanari_pct": 26.3
+   },
+   {
+    "cod": "GR",
+    "luna": "2026-05",
+    "finale": 813,
+    "mediana": 5.7,
+    "respinse_pct": 13.4,
+    "amanari_pct": 20.8
+   },
+   {
+    "cod": "GR",
+    "luna": "2026-06",
+    "finale": 687,
+    "mediana": 5.3,
+    "respinse_pct": 11.8,
+    "amanari_pct": 20.5
+   },
+   {
+    "cod": "GR",
+    "luna": "2026-07",
+    "finale": 785,
+    "mediana": 6.2,
+    "respinse_pct": 8.4,
+    "amanari_pct": 18.2
+   },
+   {
+    "cod": "GR",
+    "luna": "2026-08",
+    "finale": 651,
+    "mediana": 11.0,
+    "respinse_pct": 8.9,
+    "amanari_pct": 20.5
+   },
+   {
+    "cod": "GR",
+    "luna": "2026-09",
+    "finale": 781,
+    "mediana": 21.9,
+    "respinse_pct": 8.8,
+    "amanari_pct": 21.9
+   },
+   {
+    "cod": "GR",
+    "luna": "2026-10",
+    "finale": 942,
+    "mediana": 34.9,
+    "respinse_pct": 8.8,
+    "amanari_pct": 15.9
+   },
+   {
+    "cod": "GR",
+    "luna": "2026-11",
+    "finale": 540,
+    "mediana": 50.0,
+    "respinse_pct": 9.3,
+    "amanari_pct": 19.2
+   },
+   {
+    "cod": "HD",
+    "luna": "2025-01",
+    "finale": 1231,
+    "mediana": 1.2,
+    "respinse_pct": 3.8,
+    "amanari_pct": 13.7
+   },
+   {
+    "cod": "HD",
+    "luna": "2025-02",
+    "finale": 1768,
+    "mediana": 2.1,
+    "respinse_pct": 2.8,
+    "amanari_pct": 10.3
+   },
+   {
+    "cod": "HD",
+    "luna": "2025-03",
+    "finale": 1724,
+    "mediana": 3.1,
+    "respinse_pct": 3.5,
+    "amanari_pct": 12.8
+   },
+   {
+    "cod": "HD",
+    "luna": "2025-04",
+    "finale": 1317,
+    "mediana": 1.2,
+    "respinse_pct": 6.1,
+    "amanari_pct": 14.9
+   },
+   {
+    "cod": "HD",
+    "luna": "2025-05",
+    "finale": 1318,
+    "mediana": 1.1,
+    "respinse_pct": 4.4,
+    "amanari_pct": 13.4
+   },
+   {
+    "cod": "HD",
+    "luna": "2025-06",
+    "finale": 1146,
+    "mediana": 1.1,
+    "respinse_pct": 5.9,
+    "amanari_pct": 14.5
+   },
+   {
+    "cod": "HD",
+    "luna": "2025-07",
+    "finale": 1316,
+    "mediana": 1.1,
+    "respinse_pct": 4.6,
+    "amanari_pct": 16.4
+   },
+   {
+    "cod": "HD",
+    "luna": "2025-08",
+    "finale": 1109,
+    "mediana": 1.2,
+    "respinse_pct": 5.3,
+    "amanari_pct": 14.3
+   },
+   {
+    "cod": "HD",
+    "luna": "2025-09",
+    "finale": 1202,
+    "mediana": 1.1,
+    "respinse_pct": 4.1,
+    "amanari_pct": 14.9
+   },
+   {
+    "cod": "HD",
+    "luna": "2025-10",
+    "finale": 1349,
+    "mediana": 1.1,
+    "respinse_pct": 4.1,
+    "amanari_pct": 17.0
+   },
+   {
+    "cod": "HD",
+    "luna": "2025-11",
+    "finale": 1266,
+    "mediana": 1.2,
+    "respinse_pct": 5.6,
+    "amanari_pct": 18.0
+   },
+   {
+    "cod": "HD",
+    "luna": "2025-12",
+    "finale": 1172,
+    "mediana": 1.2,
+    "respinse_pct": 6.8,
+    "amanari_pct": 15.8
+   },
+   {
+    "cod": "HD",
+    "luna": "2026-01",
+    "finale": 1106,
+    "mediana": 1.3,
+    "respinse_pct": 4.5,
+    "amanari_pct": 15.0
+   },
+   {
+    "cod": "HD",
+    "luna": "2026-02",
+    "finale": 1417,
+    "mediana": 3.1,
+    "respinse_pct": 4.5,
+    "amanari_pct": 16.6
+   },
+   {
+    "cod": "HD",
+    "luna": "2026-03",
+    "finale": 1793,
+    "mediana": 3.7,
+    "respinse_pct": 4.8,
+    "amanari_pct": 18.3
+   },
+   {
+    "cod": "HD",
+    "luna": "2026-04",
+    "finale": 1119,
+    "mediana": 4.2,
+    "respinse_pct": 7.7,
+    "amanari_pct": 15.7
+   },
+   {
+    "cod": "HD",
+    "luna": "2026-05",
+    "finale": 1257,
+    "mediana": 5.1,
+    "respinse_pct": 7.1,
+    "amanari_pct": 18.8
+   },
+   {
+    "cod": "HD",
+    "luna": "2026-06",
+    "finale": 1151,
+    "mediana": 5.2,
+    "respinse_pct": 10.4,
+    "amanari_pct": 19.6
+   },
+   {
+    "cod": "HD",
+    "luna": "2026-07",
+    "finale": 1253,
+    "mediana": 6.2,
+    "respinse_pct": 7.5,
+    "amanari_pct": 19.0
+   },
+   {
+    "cod": "HD",
+    "luna": "2026-08",
+    "finale": 1121,
+    "mediana": 11.9,
+    "respinse_pct": 9.6,
+    "amanari_pct": 18.6
+   },
+   {
+    "cod": "HD",
+    "luna": "2026-09",
+    "finale": 1200,
+    "mediana": 21.1,
+    "respinse_pct": 5.8,
+    "amanari_pct": 14.7
+   },
+   {
+    "cod": "HD",
+    "luna": "2026-10",
+    "finale": 1362,
+    "mediana": 34.9,
+    "respinse_pct": 7.9,
+    "amanari_pct": 17.2
+   },
+   {
+    "cod": "HD",
+    "luna": "2026-11",
+    "finale": 1048,
+    "mediana": 49.9,
+    "respinse_pct": 10.1,
+    "amanari_pct": 21.3
+   },
+   {
+    "cod": "HR",
+    "luna": "2025-01",
+    "finale": 666,
+    "mediana": 1.1,
+    "respinse_pct": 4.8,
+    "amanari_pct": 14.6
+   },
+   {
+    "cod": "HR",
+    "luna": "2025-02",
+    "finale": 1055,
+    "mediana": 1.2,
+    "respinse_pct": 5.9,
+    "amanari_pct": 17.9
+   },
+   {
+    "cod": "HR",
+    "luna": "2025-03",
+    "finale": 1133,
+    "mediana": 1.1,
+    "respinse_pct": 5.7,
+    "amanari_pct": 13.6
+   },
+   {
+    "cod": "HR",
+    "luna": "2025-04",
+    "finale": 849,
+    "mediana": 1.0,
+    "respinse_pct": 3.5,
+    "amanari_pct": 13.6
+   },
+   {
+    "cod": "HR",
+    "luna": "2025-05",
+    "finale": 831,
+    "mediana": 1.1,
+    "respinse_pct": 2.2,
+    "amanari_pct": 11.4
+   },
+   {
+    "cod": "HR",
+    "luna": "2025-06",
+    "finale": 708,
+    "mediana": 1.1,
+    "respinse_pct": 2.8,
+    "amanari_pct": 9.7
+   },
+   {
+    "cod": "HR",
+    "luna": "2025-07",
+    "finale": 768,
+    "mediana": 1.0,
+    "respinse_pct": 2.5,
+    "amanari_pct": 13.8
+   },
+   {
+    "cod": "HR",
+    "luna": "2025-08",
+    "finale": 630,
+    "mediana": 1.1,
+    "respinse_pct": 5.1,
+    "amanari_pct": 14.5
+   },
+   {
+    "cod": "HR",
+    "luna": "2025-09",
+    "finale": 712,
+    "mediana": 1.3,
+    "respinse_pct": 4.4,
+    "amanari_pct": 19.1
+   },
+   {
+    "cod": "HR",
+    "luna": "2025-10",
+    "finale": 776,
+    "mediana": 1.1,
+    "respinse_pct": 5.8,
+    "amanari_pct": 15.8
+   },
+   {
+    "cod": "HR",
+    "luna": "2025-11",
+    "finale": 739,
+    "mediana": 1.1,
+    "respinse_pct": 5.7,
+    "amanari_pct": 15.6
+   },
+   {
+    "cod": "HR",
+    "luna": "2025-12",
+    "finale": 663,
+    "mediana": 1.0,
+    "respinse_pct": 4.2,
+    "amanari_pct": 11.6
+   },
+   {
+    "cod": "HR",
+    "luna": "2026-01",
+    "finale": 856,
+    "mediana": 3.1,
+    "respinse_pct": 3.9,
+    "amanari_pct": 14.1
+   },
+   {
+    "cod": "HR",
+    "luna": "2026-02",
+    "finale": 893,
+    "mediana": 6.9,
+    "respinse_pct": 3.7,
+    "amanari_pct": 13.2
+   },
+   {
+    "cod": "HR",
+    "luna": "2026-03",
+    "finale": 1123,
+    "mediana": 1.8,
+    "respinse_pct": 5.0,
+    "amanari_pct": 12.7
+   },
+   {
+    "cod": "HR",
+    "luna": "2026-04",
+    "finale": 672,
+    "mediana": 5.9,
+    "respinse_pct": 6.4,
+    "amanari_pct": 17.0
+   },
+   {
+    "cod": "HR",
+    "luna": "2026-05",
+    "finale": 783,
+    "mediana": 5.1,
+    "respinse_pct": 3.6,
+    "amanari_pct": 15.4
+   },
+   {
+    "cod": "HR",
+    "luna": "2026-06",
+    "finale": 805,
+    "mediana": 5.1,
+    "respinse_pct": 5.0,
+    "amanari_pct": 16.6
+   },
+   {
+    "cod": "HR",
+    "luna": "2026-07",
+    "finale": 985,
+    "mediana": 6.1,
+    "respinse_pct": 4.0,
+    "amanari_pct": 15.7
+   },
+   {
+    "cod": "HR",
+    "luna": "2026-08",
+    "finale": 801,
+    "mediana": 11.8,
+    "respinse_pct": 6.7,
+    "amanari_pct": 15.4
+   },
+   {
+    "cod": "HR",
+    "luna": "2026-09",
+    "finale": 1052,
+    "mediana": 21.1,
+    "respinse_pct": 3.9,
+    "amanari_pct": 13.0
+   },
+   {
+    "cod": "HR",
+    "luna": "2026-10",
+    "finale": 1302,
+    "mediana": 35.2,
+    "respinse_pct": 5.3,
+    "amanari_pct": 14.2
+   },
+   {
+    "cod": "HR",
+    "luna": "2026-11",
+    "finale": 1026,
+    "mediana": 53.1,
+    "respinse_pct": 5.3,
+    "amanari_pct": 16.8
+   },
+   {
+    "cod": "IF",
+    "luna": "2025-01",
+    "finale": 3785,
+    "mediana": 3.0,
+    "respinse_pct": 7.0,
+    "amanari_pct": 20.2
+   },
+   {
+    "cod": "IF",
+    "luna": "2025-02",
+    "finale": 5006,
+    "mediana": 10.3,
+    "respinse_pct": 7.4,
+    "amanari_pct": 17.9
+   },
+   {
+    "cod": "IF",
+    "luna": "2025-03",
+    "finale": 6828,
+    "mediana": 13.0,
+    "respinse_pct": 6.2,
+    "amanari_pct": 18.0
+   },
+   {
+    "cod": "IF",
+    "luna": "2025-04",
+    "finale": 5473,
+    "mediana": 14.1,
+    "respinse_pct": 7.9,
+    "amanari_pct": 19.0
+   },
+   {
+    "cod": "IF",
+    "luna": "2025-05",
+    "finale": 5648,
+    "mediana": 5.1,
+    "respinse_pct": 8.5,
+    "amanari_pct": 21.7
+   },
+   {
+    "cod": "IF",
+    "luna": "2025-06",
+    "finale": 4523,
+    "mediana": 2.8,
+    "respinse_pct": 10.3,
+    "amanari_pct": 23.0
+   },
+   {
+    "cod": "IF",
+    "luna": "2025-07",
+    "finale": 4984,
+    "mediana": 1.8,
+    "respinse_pct": 9.6,
+    "amanari_pct": 24.9
+   },
+   {
+    "cod": "IF",
+    "luna": "2025-08",
+    "finale": 4334,
+    "mediana": 1.8,
+    "respinse_pct": 10.3,
+    "amanari_pct": 22.4
+   },
+   {
+    "cod": "IF",
+    "luna": "2025-09",
+    "finale": 4821,
+    "mediana": 1.9,
+    "respinse_pct": 9.9,
+    "amanari_pct": 25.2
+   },
+   {
+    "cod": "IF",
+    "luna": "2025-10",
+    "finale": 5398,
+    "mediana": 1.6,
+    "respinse_pct": 10.5,
+    "amanari_pct": 24.2
+   },
+   {
+    "cod": "IF",
+    "luna": "2025-11",
+    "finale": 4678,
+    "mediana": 1.8,
+    "respinse_pct": 9.6,
+    "amanari_pct": 24.0
+   },
+   {
+    "cod": "IF",
+    "luna": "2025-12",
+    "finale": 4956,
+    "mediana": 2.7,
+    "respinse_pct": 8.3,
+    "amanari_pct": 24.0
+   },
+   {
+    "cod": "IF",
+    "luna": "2026-01",
+    "finale": 4312,
+    "mediana": 1.9,
+    "respinse_pct": 8.9,
+    "amanari_pct": 22.6
+   },
+   {
+    "cod": "IF",
+    "luna": "2026-02",
+    "finale": 5305,
+    "mediana": 4.1,
+    "respinse_pct": 8.4,
+    "amanari_pct": 23.6
+   },
+   {
+    "cod": "IF",
+    "luna": "2026-03",
+    "finale": 5889,
+    "mediana": 3.8,
+    "respinse_pct": 7.7,
+    "amanari_pct": 25.8
+   },
+   {
+    "cod": "IF",
+    "luna": "2026-04",
+    "finale": 4063,
+    "mediana": 5.1,
+    "respinse_pct": 9.6,
+    "amanari_pct": 23.7
+   },
+   {
+    "cod": "IF",
+    "luna": "2026-05",
+    "finale": 4801,
+    "mediana": 5.2,
+    "respinse_pct": 8.8,
+    "amanari_pct": 23.3
+   },
+   {
+    "cod": "IF",
+    "luna": "2026-06",
+    "finale": 4793,
+    "mediana": 5.2,
+    "respinse_pct": 9.3,
+    "amanari_pct": 23.4
+   },
+   {
+    "cod": "IF",
+    "luna": "2026-07",
+    "finale": 4740,
+    "mediana": 6.6,
+    "respinse_pct": 10.5,
+    "amanari_pct": 23.4
+   },
+   {
+    "cod": "IF",
+    "luna": "2026-08",
+    "finale": 4039,
+    "mediana": 11.8,
+    "respinse_pct": 10.3,
+    "amanari_pct": 22.8
+   },
+   {
+    "cod": "IF",
+    "luna": "2026-09",
+    "finale": 4367,
+    "mediana": 21.5,
+    "respinse_pct": 8.3,
+    "amanari_pct": 21.7
+   },
+   {
+    "cod": "IF",
+    "luna": "2026-10",
+    "finale": 4330,
+    "mediana": 34.3,
+    "respinse_pct": 9.7,
+    "amanari_pct": 21.1
+   },
+   {
+    "cod": "IF",
+    "luna": "2026-11",
+    "finale": 2952,
+    "mediana": 49.1,
+    "respinse_pct": 8.5,
+    "amanari_pct": 25.8
+   },
+   {
+    "cod": "IL",
+    "luna": "2025-01",
+    "finale": 363,
+    "mediana": 4.9,
+    "respinse_pct": 8.8,
+    "amanari_pct": 13.1
+   },
+   {
+    "cod": "IL",
+    "luna": "2025-02",
+    "finale": 632,
+    "mediana": 3.0,
+    "respinse_pct": 5.7,
+    "amanari_pct": 16.6
+   },
+   {
+    "cod": "IL",
+    "luna": "2025-03",
+    "finale": 606,
+    "mediana": 1.8,
+    "respinse_pct": 8.7,
+    "amanari_pct": 18.9
+   },
+   {
+    "cod": "IL",
+    "luna": "2025-04",
+    "finale": 495,
+    "mediana": 3.1,
+    "respinse_pct": 9.1,
+    "amanari_pct": 19.2
+   },
+   {
+    "cod": "IL",
+    "luna": "2025-05",
+    "finale": 545,
+    "mediana": 1.3,
+    "respinse_pct": 7.7,
+    "amanari_pct": 18.0
+   },
+   {
+    "cod": "IL",
+    "luna": "2025-06",
+    "finale": 460,
+    "mediana": 1.8,
+    "respinse_pct": 5.9,
+    "amanari_pct": 16.2
+   },
+   {
+    "cod": "IL",
+    "luna": "2025-07",
+    "finale": 473,
+    "mediana": 1.2,
+    "respinse_pct": 8.2,
+    "amanari_pct": 24.4
+   },
+   {
+    "cod": "IL",
+    "luna": "2025-08",
+    "finale": 363,
+    "mediana": 2.3,
+    "respinse_pct": 10.7,
+    "amanari_pct": 22.8
+   },
+   {
+    "cod": "IL",
+    "luna": "2025-09",
+    "finale": 477,
+    "mediana": 3.0,
+    "respinse_pct": 11.3,
+    "amanari_pct": 26.7
+   },
+   {
+    "cod": "IL",
+    "luna": "2025-10",
+    "finale": 514,
+    "mediana": 1.2,
+    "respinse_pct": 10.3,
+    "amanari_pct": 27.4
+   },
+   {
+    "cod": "IL",
+    "luna": "2025-11",
+    "finale": 503,
+    "mediana": 1.2,
+    "respinse_pct": 11.1,
+    "amanari_pct": 22.0
+   },
+   {
+    "cod": "IL",
+    "luna": "2025-12",
+    "finale": 474,
+    "mediana": 1.7,
+    "respinse_pct": 11.2,
+    "amanari_pct": 24.8
+   },
+   {
+    "cod": "IL",
+    "luna": "2026-01",
+    "finale": 466,
+    "mediana": 3.0,
+    "respinse_pct": 12.0,
+    "amanari_pct": 21.0
+   },
+   {
+    "cod": "IL",
+    "luna": "2026-02",
+    "finale": 742,
+    "mediana": 4.1,
+    "respinse_pct": 5.5,
+    "amanari_pct": 23.4
+   },
+   {
+    "cod": "IL",
+    "luna": "2026-03",
+    "finale": 700,
+    "mediana": 8.2,
+    "respinse_pct": 8.9,
+    "amanari_pct": 20.5
+   },
+   {
+    "cod": "IL",
+    "luna": "2026-04",
+    "finale": 554,
+    "mediana": 4.1,
+    "respinse_pct": 11.6,
+    "amanari_pct": 22.0
+   },
+   {
+    "cod": "IL",
+    "luna": "2026-05",
+    "finale": 552,
+    "mediana": 5.1,
+    "respinse_pct": 6.3,
+    "amanari_pct": 20.3
+   },
+   {
+    "cod": "IL",
+    "luna": "2026-06",
+    "finale": 529,
+    "mediana": 5.1,
+    "respinse_pct": 7.8,
+    "amanari_pct": 24.0
+   },
+   {
+    "cod": "IL",
+    "luna": "2026-07",
+    "finale": 545,
+    "mediana": 6.8,
+    "respinse_pct": 10.1,
+    "amanari_pct": 20.7
+   },
+   {
+    "cod": "IL",
+    "luna": "2026-08",
+    "finale": 542,
+    "mediana": 11.9,
+    "respinse_pct": 11.1,
+    "amanari_pct": 23.6
+   },
+   {
+    "cod": "IL",
+    "luna": "2026-09",
+    "finale": 809,
+    "mediana": 22.0,
+    "respinse_pct": 6.7,
+    "amanari_pct": 19.7
+   },
+   {
+    "cod": "IL",
+    "luna": "2026-10",
+    "finale": 977,
+    "mediana": 38.0,
+    "respinse_pct": 11.1,
+    "amanari_pct": 19.4
+   },
+   {
+    "cod": "IL",
+    "luna": "2026-11",
+    "finale": 561,
+    "mediana": 53.1,
+    "respinse_pct": 13.9,
+    "amanari_pct": 22.5
+   },
+   {
+    "cod": "IS",
+    "luna": "2025-01",
+    "finale": 3587,
+    "mediana": 1.1,
+    "respinse_pct": 4.2,
+    "amanari_pct": 13.5
+   },
+   {
+    "cod": "IS",
+    "luna": "2025-02",
+    "finale": 4455,
+    "mediana": 1.2,
+    "respinse_pct": 4.8,
+    "amanari_pct": 15.3
+   },
+   {
+    "cod": "IS",
+    "luna": "2025-03",
+    "finale": 4432,
+    "mediana": 4.1,
+    "respinse_pct": 5.2,
+    "amanari_pct": 15.8
+   },
+   {
+    "cod": "IS",
+    "luna": "2025-04",
+    "finale": 3454,
+    "mediana": 3.2,
+    "respinse_pct": 6.9,
+    "amanari_pct": 17.8
+   },
+   {
+    "cod": "IS",
+    "luna": "2025-05",
+    "finale": 3616,
+    "mediana": 1.9,
+    "respinse_pct": 4.4,
+    "amanari_pct": 17.2
+   },
+   {
+    "cod": "IS",
+    "luna": "2025-06",
+    "finale": 2814,
+    "mediana": 1.8,
+    "respinse_pct": 6.5,
+    "amanari_pct": 20.4
+   },
+   {
+    "cod": "IS",
+    "luna": "2025-07",
+    "finale": 3319,
+    "mediana": 1.2,
+    "respinse_pct": 6.2,
+    "amanari_pct": 21.2
+   },
+   {
+    "cod": "IS",
+    "luna": "2025-08",
+    "finale": 2717,
+    "mediana": 1.2,
+    "respinse_pct": 6.6,
+    "amanari_pct": 19.5
+   },
+   {
+    "cod": "IS",
+    "luna": "2025-09",
+    "finale": 3252,
+    "mediana": 1.4,
+    "respinse_pct": 6.1,
+    "amanari_pct": 21.5
+   },
+   {
+    "cod": "IS",
+    "luna": "2025-10",
+    "finale": 3274,
+    "mediana": 1.1,
+    "respinse_pct": 5.8,
+    "amanari_pct": 20.1
+   },
+   {
+    "cod": "IS",
+    "luna": "2025-11",
+    "finale": 3123,
+    "mediana": 1.2,
+    "respinse_pct": 5.4,
+    "amanari_pct": 19.7
+   },
+   {
+    "cod": "IS",
+    "luna": "2025-12",
+    "finale": 3253,
+    "mediana": 2.9,
+    "respinse_pct": 6.0,
+    "amanari_pct": 19.8
+   },
+   {
+    "cod": "IS",
+    "luna": "2026-01",
+    "finale": 3086,
+    "mediana": 2.2,
+    "respinse_pct": 6.6,
+    "amanari_pct": 20.8
+   },
+   {
+    "cod": "IS",
+    "luna": "2026-02",
+    "finale": 3795,
+    "mediana": 3.1,
+    "respinse_pct": 6.7,
+    "amanari_pct": 21.7
+   },
+   {
+    "cod": "IS",
+    "luna": "2026-03",
+    "finale": 3755,
+    "mediana": 3.2,
+    "respinse_pct": 6.6,
+    "amanari_pct": 21.6
+   },
+   {
+    "cod": "IS",
+    "luna": "2026-04",
+    "finale": 2774,
+    "mediana": 4.0,
+    "respinse_pct": 8.2,
+    "amanari_pct": 20.7
+   },
+   {
+    "cod": "IS",
+    "luna": "2026-05",
+    "finale": 3021,
+    "mediana": 5.1,
+    "respinse_pct": 8.8,
+    "amanari_pct": 22.1
+   },
+   {
+    "cod": "IS",
+    "luna": "2026-06",
+    "finale": 3014,
+    "mediana": 5.2,
+    "respinse_pct": 10.3,
+    "amanari_pct": 21.8
+   },
+   {
+    "cod": "IS",
+    "luna": "2026-07",
+    "finale": 3081,
+    "mediana": 6.2,
+    "respinse_pct": 9.5,
+    "amanari_pct": 19.2
+   },
+   {
+    "cod": "IS",
+    "luna": "2026-08",
+    "finale": 2744,
+    "mediana": 11.7,
+    "respinse_pct": 9.2,
+    "amanari_pct": 20.1
+   },
+   {
+    "cod": "IS",
+    "luna": "2026-09",
+    "finale": 3166,
+    "mediana": 21.7,
+    "respinse_pct": 7.5,
+    "amanari_pct": 18.4
+   },
+   {
+    "cod": "IS",
+    "luna": "2026-10",
+    "finale": 3237,
+    "mediana": 35.1,
+    "respinse_pct": 9.8,
+    "amanari_pct": 19.6
+   },
+   {
+    "cod": "IS",
+    "luna": "2026-11",
+    "finale": 2364,
+    "mediana": 50.1,
+    "respinse_pct": 9.3,
+    "amanari_pct": 23.7
+   },
+   {
+    "cod": "MH",
+    "luna": "2025-01",
+    "finale": 580,
+    "mediana": 3.8,
+    "respinse_pct": 7.2,
+    "amanari_pct": 9.4
+   },
+   {
+    "cod": "MH",
+    "luna": "2025-02",
+    "finale": 764,
+    "mediana": 5.9,
+    "respinse_pct": 3.4,
+    "amanari_pct": 8.2
+   },
+   {
+    "cod": "MH",
+    "luna": "2025-03",
+    "finale": 941,
+    "mediana": 6.7,
+    "respinse_pct": 4.9,
+    "amanari_pct": 10.8
+   },
+   {
+    "cod": "MH",
+    "luna": "2025-04",
+    "finale": 658,
+    "mediana": 9.5,
+    "respinse_pct": 6.4,
+    "amanari_pct": 13.9
+   },
+   {
+    "cod": "MH",
+    "luna": "2025-05",
+    "finale": 641,
+    "mediana": 4.0,
+    "respinse_pct": 4.4,
+    "amanari_pct": 13.8
+   },
+   {
+    "cod": "MH",
+    "luna": "2025-06",
+    "finale": 602,
+    "mediana": 2.0,
+    "respinse_pct": 7.5,
+    "amanari_pct": 18.6
+   },
+   {
+    "cod": "MH",
+    "luna": "2025-07",
+    "finale": 631,
+    "mediana": 1.8,
+    "respinse_pct": 8.4,
+    "amanari_pct": 21.1
+   },
+   {
+    "cod": "MH",
+    "luna": "2025-08",
+    "finale": 480,
+    "mediana": 3.9,
+    "respinse_pct": 7.9,
+    "amanari_pct": 17.9
+   },
+   {
+    "cod": "MH",
+    "luna": "2025-09",
+    "finale": 601,
+    "mediana": 2.2,
+    "respinse_pct": 6.7,
+    "amanari_pct": 19.3
+   },
+   {
+    "cod": "MH",
+    "luna": "2025-10",
+    "finale": 620,
+    "mediana": 2.2,
+    "respinse_pct": 7.7,
+    "amanari_pct": 17.1
+   },
+   {
+    "cod": "MH",
+    "luna": "2025-11",
+    "finale": 482,
+    "mediana": 2.9,
+    "respinse_pct": 5.4,
+    "amanari_pct": 21.2
+   },
+   {
+    "cod": "MH",
+    "luna": "2025-12",
+    "finale": 489,
+    "mediana": 2.2,
+    "respinse_pct": 9.6,
+    "amanari_pct": 22.3
+   },
+   {
+    "cod": "MH",
+    "luna": "2026-01",
+    "finale": 463,
+    "mediana": 2.0,
+    "respinse_pct": 6.5,
+    "amanari_pct": 16.1
+   },
+   {
+    "cod": "MH",
+    "luna": "2026-02",
+    "finale": 432,
+    "mediana": 2.9,
+    "respinse_pct": 5.1,
+    "amanari_pct": 17.9
+   },
+   {
+    "cod": "MH",
+    "luna": "2026-03",
+    "finale": 732,
+    "mediana": 6.8,
+    "respinse_pct": 6.6,
+    "amanari_pct": 16.2
+   },
+   {
+    "cod": "MH",
+    "luna": "2026-04",
+    "finale": 477,
+    "mediana": 3.8,
+    "respinse_pct": 5.2,
+    "amanari_pct": 18.5
+   },
+   {
+    "cod": "MH",
+    "luna": "2026-05",
+    "finale": 552,
+    "mediana": 5.1,
+    "respinse_pct": 5.3,
+    "amanari_pct": 17.2
+   },
+   {
+    "cod": "MH",
+    "luna": "2026-06",
+    "finale": 489,
+    "mediana": 5.1,
+    "respinse_pct": 8.0,
+    "amanari_pct": 20.7
+   },
+   {
+    "cod": "MH",
+    "luna": "2026-07",
+    "finale": 538,
+    "mediana": 6.1,
+    "respinse_pct": 8.0,
+    "amanari_pct": 18.9
+   },
+   {
+    "cod": "MH",
+    "luna": "2026-08",
+    "finale": 499,
+    "mediana": 11.1,
+    "respinse_pct": 8.4,
+    "amanari_pct": 17.9
+   },
+   {
+    "cod": "MH",
+    "luna": "2026-09",
+    "finale": 682,
+    "mediana": 21.2,
+    "respinse_pct": 5.0,
+    "amanari_pct": 16.1
+   },
+   {
+    "cod": "MH",
+    "luna": "2026-10",
+    "finale": 708,
+    "mediana": 36.0,
+    "respinse_pct": 6.1,
+    "amanari_pct": 14.1
+   },
+   {
+    "cod": "MH",
+    "luna": "2026-11",
+    "finale": 446,
+    "mediana": 53.0,
+    "respinse_pct": 7.8,
+    "amanari_pct": 14.9
+   },
+   {
+    "cod": "MM",
+    "luna": "2025-01",
+    "finale": 1403,
+    "mediana": 1.1,
+    "respinse_pct": 5.1,
+    "amanari_pct": 16.3
+   },
+   {
+    "cod": "MM",
+    "luna": "2025-02",
+    "finale": 2284,
+    "mediana": 1.9,
+    "respinse_pct": 5.0,
+    "amanari_pct": 16.1
+   },
+   {
+    "cod": "MM",
+    "luna": "2025-03",
+    "finale": 2204,
+    "mediana": 1.1,
+    "respinse_pct": 6.0,
+    "amanari_pct": 17.2
+   },
+   {
+    "cod": "MM",
+    "luna": "2025-04",
+    "finale": 1569,
+    "mediana": 1.1,
+    "respinse_pct": 6.5,
+    "amanari_pct": 18.6
+   },
+   {
+    "cod": "MM",
+    "luna": "2025-05",
+    "finale": 1612,
+    "mediana": 1.1,
+    "respinse_pct": 6.5,
+    "amanari_pct": 19.0
+   },
+   {
+    "cod": "MM",
+    "luna": "2025-06",
+    "finale": 1451,
+    "mediana": 1.2,
+    "respinse_pct": 7.2,
+    "amanari_pct": 19.7
+   },
+   {
+    "cod": "MM",
+    "luna": "2025-07",
+    "finale": 1622,
+    "mediana": 1.1,
+    "respinse_pct": 5.3,
+    "amanari_pct": 20.8
+   },
+   {
+    "cod": "MM",
+    "luna": "2025-08",
+    "finale": 1365,
+    "mediana": 1.1,
+    "respinse_pct": 7.0,
+    "amanari_pct": 18.9
+   },
+   {
+    "cod": "MM",
+    "luna": "2025-09",
+    "finale": 1603,
+    "mediana": 1.1,
+    "respinse_pct": 6.0,
+    "amanari_pct": 22.2
+   },
+   {
+    "cod": "MM",
+    "luna": "2025-10",
+    "finale": 1826,
+    "mediana": 1.1,
+    "respinse_pct": 6.1,
+    "amanari_pct": 17.8
+   },
+   {
+    "cod": "MM",
+    "luna": "2025-11",
+    "finale": 1397,
+    "mediana": 1.1,
+    "respinse_pct": 5.8,
+    "amanari_pct": 18.9
+   },
+   {
+    "cod": "MM",
+    "luna": "2025-12",
+    "finale": 1579,
+    "mediana": 1.1,
+    "respinse_pct": 6.8,
+    "amanari_pct": 20.1
+   },
+   {
+    "cod": "MM",
+    "luna": "2026-01",
+    "finale": 1502,
+    "mediana": 1.2,
+    "respinse_pct": 5.9,
+    "amanari_pct": 18.6
+   },
+   {
+    "cod": "MM",
+    "luna": "2026-02",
+    "finale": 2102,
+    "mediana": 1.9,
+    "respinse_pct": 5.3,
+    "amanari_pct": 22.6
+   },
+   {
+    "cod": "MM",
+    "luna": "2026-03",
+    "finale": 2212,
+    "mediana": 1.2,
+    "respinse_pct": 6.0,
+    "amanari_pct": 21.3
+   },
+   {
+    "cod": "MM",
+    "luna": "2026-04",
+    "finale": 1487,
+    "mediana": 5.9,
+    "respinse_pct": 7.3,
+    "amanari_pct": 18.7
+   },
+   {
+    "cod": "MM",
+    "luna": "2026-05",
+    "finale": 1714,
+    "mediana": 5.1,
+    "respinse_pct": 7.6,
+    "amanari_pct": 20.0
+   },
+   {
+    "cod": "MM",
+    "luna": "2026-06",
+    "finale": 1675,
+    "mediana": 5.1,
+    "respinse_pct": 8.5,
+    "amanari_pct": 19.9
+   },
+   {
+    "cod": "MM",
+    "luna": "2026-07",
+    "finale": 1503,
+    "mediana": 6.2,
+    "respinse_pct": 9.0,
+    "amanari_pct": 21.0
+   },
+   {
+    "cod": "MM",
+    "luna": "2026-08",
+    "finale": 1352,
+    "mediana": 11.9,
+    "respinse_pct": 8.9,
+    "amanari_pct": 18.4
+   },
+   {
+    "cod": "MM",
+    "luna": "2026-09",
+    "finale": 1512,
+    "mediana": 21.9,
+    "respinse_pct": 7.5,
+    "amanari_pct": 17.7
+   },
+   {
+    "cod": "MM",
+    "luna": "2026-10",
+    "finale": 1811,
+    "mediana": 35.9,
+    "respinse_pct": 9.2,
+    "amanari_pct": 18.3
+   },
+   {
+    "cod": "MM",
+    "luna": "2026-11",
+    "finale": 1387,
+    "mediana": 51.1,
+    "respinse_pct": 8.7,
+    "amanari_pct": 21.6
+   },
+   {
+    "cod": "MS",
+    "luna": "2025-01",
+    "finale": 1249,
+    "mediana": 2.3,
+    "respinse_pct": 6.6,
+    "amanari_pct": 18.2
+   },
+   {
+    "cod": "MS",
+    "luna": "2025-02",
+    "finale": 1898,
+    "mediana": 3.9,
+    "respinse_pct": 3.9,
+    "amanari_pct": 16.4
+   },
+   {
+    "cod": "MS",
+    "luna": "2025-03",
+    "finale": 1832,
+    "mediana": 5.3,
+    "respinse_pct": 6.4,
+    "amanari_pct": 15.5
+   },
+   {
+    "cod": "MS",
+    "luna": "2025-04",
+    "finale": 1517,
+    "mediana": 7.2,
+    "respinse_pct": 5.4,
+    "amanari_pct": 19.8
+   },
+   {
+    "cod": "MS",
+    "luna": "2025-05",
+    "finale": 1726,
+    "mediana": 1.3,
+    "respinse_pct": 6.4,
+    "amanari_pct": 19.1
+   },
+   {
+    "cod": "MS",
+    "luna": "2025-06",
+    "finale": 1402,
+    "mediana": 1.2,
+    "respinse_pct": 6.3,
+    "amanari_pct": 17.9
+   },
+   {
+    "cod": "MS",
+    "luna": "2025-07",
+    "finale": 1480,
+    "mediana": 1.2,
+    "respinse_pct": 6.1,
+    "amanari_pct": 23.3
+   },
+   {
+    "cod": "MS",
+    "luna": "2025-08",
+    "finale": 1297,
+    "mediana": 1.2,
+    "respinse_pct": 8.6,
+    "amanari_pct": 17.1
+   },
+   {
+    "cod": "MS",
+    "luna": "2025-09",
+    "finale": 1487,
+    "mediana": 1.2,
+    "respinse_pct": 5.4,
+    "amanari_pct": 21.5
+   },
+   {
+    "cod": "MS",
+    "luna": "2025-10",
+    "finale": 1594,
+    "mediana": 1.2,
+    "respinse_pct": 6.2,
+    "amanari_pct": 21.9
+   },
+   {
+    "cod": "MS",
+    "luna": "2025-11",
+    "finale": 1611,
+    "mediana": 1.1,
+    "respinse_pct": 6.0,
+    "amanari_pct": 20.4
+   },
+   {
+    "cod": "MS",
+    "luna": "2025-12",
+    "finale": 1551,
+    "mediana": 1.2,
+    "respinse_pct": 7.5,
+    "amanari_pct": 18.8
+   },
+   {
+    "cod": "MS",
+    "luna": "2026-01",
+    "finale": 1522,
+    "mediana": 1.3,
+    "respinse_pct": 5.0,
+    "amanari_pct": 18.9
+   },
+   {
+    "cod": "MS",
+    "luna": "2026-02",
+    "finale": 1866,
+    "mediana": 2.1,
+    "respinse_pct": 6.9,
+    "amanari_pct": 19.8
+   },
+   {
+    "cod": "MS",
+    "luna": "2026-03",
+    "finale": 1928,
+    "mediana": 5.9,
+    "respinse_pct": 7.0,
+    "amanari_pct": 21.6
+   },
+   {
+    "cod": "MS",
+    "luna": "2026-04",
+    "finale": 1763,
+    "mediana": 7.2,
+    "respinse_pct": 7.4,
+    "amanari_pct": 19.7
+   },
+   {
+    "cod": "MS",
+    "luna": "2026-05",
+    "finale": 1724,
+    "mediana": 5.1,
+    "respinse_pct": 7.1,
+    "amanari_pct": 18.2
+   },
+   {
+    "cod": "MS",
+    "luna": "2026-06",
+    "finale": 1618,
+    "mediana": 5.1,
+    "respinse_pct": 7.0,
+    "amanari_pct": 17.9
+   },
+   {
+    "cod": "MS",
+    "luna": "2026-07",
+    "finale": 1752,
+    "mediana": 6.1,
+    "respinse_pct": 6.7,
+    "amanari_pct": 17.3
+   },
+   {
+    "cod": "MS",
+    "luna": "2026-08",
+    "finale": 1666,
+    "mediana": 10.9,
+    "respinse_pct": 5.8,
+    "amanari_pct": 16.1
+   },
+   {
+    "cod": "MS",
+    "luna": "2026-09",
+    "finale": 1996,
+    "mediana": 21.9,
+    "respinse_pct": 6.0,
+    "amanari_pct": 17.0
+   },
+   {
+    "cod": "MS",
+    "luna": "2026-10",
+    "finale": 2157,
+    "mediana": 34.8,
+    "respinse_pct": 7.0,
+    "amanari_pct": 14.4
+   },
+   {
+    "cod": "MS",
+    "luna": "2026-11",
+    "finale": 1593,
+    "mediana": 50.0,
+    "respinse_pct": 6.0,
+    "amanari_pct": 15.8
+   },
+   {
+    "cod": "NT",
+    "luna": "2025-01",
+    "finale": 918,
+    "mediana": 1.1,
+    "respinse_pct": 6.9,
+    "amanari_pct": 17.1
+   },
+   {
+    "cod": "NT",
+    "luna": "2025-02",
+    "finale": 1297,
+    "mediana": 1.1,
+    "respinse_pct": 6.6,
+    "amanari_pct": 16.8
+   },
+   {
+    "cod": "NT",
+    "luna": "2025-03",
+    "finale": 1341,
+    "mediana": 1.1,
+    "respinse_pct": 5.6,
+    "amanari_pct": 14.5
+   },
+   {
+    "cod": "NT",
+    "luna": "2025-04",
+    "finale": 1037,
+    "mediana": 1.1,
+    "respinse_pct": 6.6,
+    "amanari_pct": 16.6
+   },
+   {
+    "cod": "NT",
+    "luna": "2025-05",
+    "finale": 985,
+    "mediana": 1.1,
+    "respinse_pct": 5.1,
+    "amanari_pct": 17.0
+   },
+   {
+    "cod": "NT",
+    "luna": "2025-06",
+    "finale": 842,
+    "mediana": 1.1,
+    "respinse_pct": 7.5,
+    "amanari_pct": 19.2
+   },
+   {
+    "cod": "NT",
+    "luna": "2025-07",
+    "finale": 961,
+    "mediana": 1.1,
+    "respinse_pct": 6.8,
+    "amanari_pct": 19.4
+   },
+   {
+    "cod": "NT",
+    "luna": "2025-08",
+    "finale": 924,
+    "mediana": 1.1,
+    "respinse_pct": 7.0,
+    "amanari_pct": 16.6
+   },
+   {
+    "cod": "NT",
+    "luna": "2025-09",
+    "finale": 948,
+    "mediana": 1.1,
+    "respinse_pct": 6.2,
+    "amanari_pct": 18.0
+   },
+   {
+    "cod": "NT",
+    "luna": "2025-10",
+    "finale": 1005,
+    "mediana": 1.0,
+    "respinse_pct": 6.2,
+    "amanari_pct": 18.6
+   },
+   {
+    "cod": "NT",
+    "luna": "2025-11",
+    "finale": 911,
+    "mediana": 1.0,
+    "respinse_pct": 5.4,
+    "amanari_pct": 17.9
+   },
+   {
+    "cod": "NT",
+    "luna": "2025-12",
+    "finale": 925,
+    "mediana": 1.1,
+    "respinse_pct": 6.6,
+    "amanari_pct": 19.8
+   },
+   {
+    "cod": "NT",
+    "luna": "2026-01",
+    "finale": 975,
+    "mediana": 1.1,
+    "respinse_pct": 7.8,
+    "amanari_pct": 20.4
+   },
+   {
+    "cod": "NT",
+    "luna": "2026-02",
+    "finale": 1291,
+    "mediana": 1.1,
+    "respinse_pct": 8.1,
+    "amanari_pct": 22.4
+   },
+   {
+    "cod": "NT",
+    "luna": "2026-03",
+    "finale": 1336,
+    "mediana": 1.1,
+    "respinse_pct": 6.3,
+    "amanari_pct": 19.7
+   },
+   {
+    "cod": "NT",
+    "luna": "2026-04",
+    "finale": 903,
+    "mediana": 3.0,
+    "respinse_pct": 7.8,
+    "amanari_pct": 19.9
+   },
+   {
+    "cod": "NT",
+    "luna": "2026-05",
+    "finale": 1030,
+    "mediana": 5.1,
+    "respinse_pct": 7.0,
+    "amanari_pct": 22.7
+   },
+   {
+    "cod": "NT",
+    "luna": "2026-06",
+    "finale": 1095,
+    "mediana": 5.2,
+    "respinse_pct": 7.5,
+    "amanari_pct": 19.6
+   },
+   {
+    "cod": "NT",
+    "luna": "2026-07",
+    "finale": 1209,
+    "mediana": 6.1,
+    "respinse_pct": 6.0,
+    "amanari_pct": 17.5
+   },
+   {
+    "cod": "NT",
+    "luna": "2026-08",
+    "finale": 1084,
+    "mediana": 11.9,
+    "respinse_pct": 7.7,
+    "amanari_pct": 18.3
+   },
+   {
+    "cod": "NT",
+    "luna": "2026-09",
+    "finale": 1189,
+    "mediana": 21.2,
+    "respinse_pct": 6.2,
+    "amanari_pct": 18.6
+   },
+   {
+    "cod": "NT",
+    "luna": "2026-10",
+    "finale": 1310,
+    "mediana": 35.0,
+    "respinse_pct": 8.3,
+    "amanari_pct": 17.7
+   },
+   {
+    "cod": "NT",
+    "luna": "2026-11",
+    "finale": 895,
+    "mediana": 50.4,
+    "respinse_pct": 8.2,
+    "amanari_pct": 20.5
+   },
+   {
+    "cod": "OT",
+    "luna": "2025-01",
+    "finale": 947,
+    "mediana": 1.1,
+    "respinse_pct": 1.8,
+    "amanari_pct": 7.4
+   },
+   {
+    "cod": "OT",
+    "luna": "2025-02",
+    "finale": 1253,
+    "mediana": 2.0,
+    "respinse_pct": 3.7,
+    "amanari_pct": 9.5
+   },
+   {
+    "cod": "OT",
+    "luna": "2025-03",
+    "finale": 1475,
+    "mediana": 1.2,
+    "respinse_pct": 3.9,
+    "amanari_pct": 10.8
+   },
+   {
+    "cod": "OT",
+    "luna": "2025-04",
+    "finale": 1070,
+    "mediana": 1.1,
+    "respinse_pct": 4.2,
+    "amanari_pct": 11.9
+   },
+   {
+    "cod": "OT",
+    "luna": "2025-05",
+    "finale": 862,
+    "mediana": 1.2,
+    "respinse_pct": 3.1,
+    "amanari_pct": 10.6
+   },
+   {
+    "cod": "OT",
+    "luna": "2025-06",
+    "finale": 823,
+    "mediana": 1.2,
+    "respinse_pct": 3.8,
+    "amanari_pct": 13.6
+   },
+   {
+    "cod": "OT",
+    "luna": "2025-07",
+    "finale": 911,
+    "mediana": 1.2,
+    "respinse_pct": 3.8,
+    "amanari_pct": 12.4
+   },
+   {
+    "cod": "OT",
+    "luna": "2025-08",
+    "finale": 719,
+    "mediana": 1.1,
+    "respinse_pct": 3.2,
+    "amanari_pct": 13.4
+   },
+   {
+    "cod": "OT",
+    "luna": "2025-09",
+    "finale": 916,
+    "mediana": 1.1,
+    "respinse_pct": 4.7,
+    "amanari_pct": 15.6
+   },
+   {
+    "cod": "OT",
+    "luna": "2025-10",
+    "finale": 876,
+    "mediana": 1.1,
+    "respinse_pct": 4.9,
+    "amanari_pct": 16.3
+   },
+   {
+    "cod": "OT",
+    "luna": "2025-11",
+    "finale": 850,
+    "mediana": 1.1,
+    "respinse_pct": 4.6,
+    "amanari_pct": 12.8
+   },
+   {
+    "cod": "OT",
+    "luna": "2025-12",
+    "finale": 881,
+    "mediana": 1.2,
+    "respinse_pct": 4.1,
+    "amanari_pct": 14.7
+   },
+   {
+    "cod": "OT",
+    "luna": "2026-01",
+    "finale": 838,
+    "mediana": 1.3,
+    "respinse_pct": 4.1,
+    "amanari_pct": 13.3
+   },
+   {
+    "cod": "OT",
+    "luna": "2026-02",
+    "finale": 986,
+    "mediana": 5.9,
+    "respinse_pct": 3.2,
+    "amanari_pct": 13.1
+   },
+   {
+    "cod": "OT",
+    "luna": "2026-03",
+    "finale": 1151,
+    "mediana": 6.1,
+    "respinse_pct": 3.2,
+    "amanari_pct": 14.4
+   },
+   {
+    "cod": "OT",
+    "luna": "2026-04",
+    "finale": 738,
+    "mediana": 4.9,
+    "respinse_pct": 6.8,
+    "amanari_pct": 13.5
+   },
+   {
+    "cod": "OT",
+    "luna": "2026-05",
+    "finale": 856,
+    "mediana": 5.0,
+    "respinse_pct": 3.6,
+    "amanari_pct": 15.9
+   },
+   {
+    "cod": "OT",
+    "luna": "2026-06",
+    "finale": 823,
+    "mediana": 5.1,
+    "respinse_pct": 5.1,
+    "amanari_pct": 15.2
+   },
+   {
+    "cod": "OT",
+    "luna": "2026-07",
+    "finale": 788,
+    "mediana": 6.1,
+    "respinse_pct": 5.6,
+    "amanari_pct": 12.4
+   },
+   {
+    "cod": "OT",
+    "luna": "2026-08",
+    "finale": 726,
+    "mediana": 11.0,
+    "respinse_pct": 5.1,
+    "amanari_pct": 12.0
+   },
+   {
+    "cod": "OT",
+    "luna": "2026-09",
+    "finale": 1071,
+    "mediana": 21.1,
+    "respinse_pct": 3.5,
+    "amanari_pct": 11.8
+   },
+   {
+    "cod": "OT",
+    "luna": "2026-10",
+    "finale": 1198,
+    "mediana": 35.3,
+    "respinse_pct": 5.1,
+    "amanari_pct": 11.8
+   },
+   {
+    "cod": "OT",
+    "luna": "2026-11",
+    "finale": 971,
+    "mediana": 53.0,
+    "respinse_pct": 6.4,
+    "amanari_pct": 16.6
+   },
+   {
+    "cod": "PH",
+    "luna": "2025-01",
+    "finale": 2208,
+    "mediana": 1.3,
+    "respinse_pct": 5.5,
+    "amanari_pct": 21.8
+   },
+   {
+    "cod": "PH",
+    "luna": "2025-02",
+    "finale": 2647,
+    "mediana": 2.3,
+    "respinse_pct": 7.7,
+    "amanari_pct": 21.6
+   },
+   {
+    "cod": "PH",
+    "luna": "2025-03",
+    "finale": 3029,
+    "mediana": 2.1,
+    "respinse_pct": 7.9,
+    "amanari_pct": 23.0
+   },
+   {
+    "cod": "PH",
+    "luna": "2025-04",
+    "finale": 2341,
+    "mediana": 2.8,
+    "respinse_pct": 9.7,
+    "amanari_pct": 23.8
+   },
+   {
+    "cod": "PH",
+    "luna": "2025-05",
+    "finale": 2161,
+    "mediana": 1.3,
+    "respinse_pct": 6.4,
+    "amanari_pct": 23.9
+   },
+   {
+    "cod": "PH",
+    "luna": "2025-06",
+    "finale": 2087,
+    "mediana": 1.7,
+    "respinse_pct": 8.5,
+    "amanari_pct": 23.2
+   },
+   {
+    "cod": "PH",
+    "luna": "2025-07",
+    "finale": 2264,
+    "mediana": 1.2,
+    "respinse_pct": 7.6,
+    "amanari_pct": 24.4
+   },
+   {
+    "cod": "PH",
+    "luna": "2025-08",
+    "finale": 1928,
+    "mediana": 1.3,
+    "respinse_pct": 7.8,
+    "amanari_pct": 24.4
+   },
+   {
+    "cod": "PH",
+    "luna": "2025-09",
+    "finale": 2214,
+    "mediana": 1.4,
+    "respinse_pct": 7.3,
+    "amanari_pct": 26.3
+   },
+   {
+    "cod": "PH",
+    "luna": "2025-10",
+    "finale": 2498,
+    "mediana": 1.3,
+    "respinse_pct": 7.9,
+    "amanari_pct": 25.1
+   },
+   {
+    "cod": "PH",
+    "luna": "2025-11",
+    "finale": 2245,
+    "mediana": 1.4,
+    "respinse_pct": 8.7,
+    "amanari_pct": 27.0
+   },
+   {
+    "cod": "PH",
+    "luna": "2025-12",
+    "finale": 2234,
+    "mediana": 3.8,
+    "respinse_pct": 9.7,
+    "amanari_pct": 25.0
+   },
+   {
+    "cod": "PH",
+    "luna": "2026-01",
+    "finale": 2354,
+    "mediana": 4.1,
+    "respinse_pct": 8.4,
+    "amanari_pct": 26.6
+   },
+   {
+    "cod": "PH",
+    "luna": "2026-02",
+    "finale": 2390,
+    "mediana": 8.1,
+    "respinse_pct": 9.5,
+    "amanari_pct": 27.3
+   },
+   {
+    "cod": "PH",
+    "luna": "2026-03",
+    "finale": 2202,
+    "mediana": 12.1,
+    "respinse_pct": 11.4,
+    "amanari_pct": 27.3
+   },
+   {
+    "cod": "PH",
+    "luna": "2026-04",
+    "finale": 2769,
+    "mediana": 17.0,
+    "respinse_pct": 5.8,
+    "amanari_pct": 25.4
+   },
+   {
+    "cod": "PH",
+    "luna": "2026-05",
+    "finale": 2514,
+    "mediana": 5.2,
+    "respinse_pct": 10.6,
+    "amanari_pct": 21.6
+   },
+   {
+    "cod": "PH",
+    "luna": "2026-06",
+    "finale": 2378,
+    "mediana": 6.0,
+    "respinse_pct": 10.1,
+    "amanari_pct": 22.2
+   },
+   {
+    "cod": "PH",
+    "luna": "2026-07",
+    "finale": 2435,
+    "mediana": 7.0,
+    "respinse_pct": 9.3,
+    "amanari_pct": 20.1
+   },
+   {
+    "cod": "PH",
+    "luna": "2026-08",
+    "finale": 1898,
+    "mediana": 14.7,
+    "respinse_pct": 9.1,
+    "amanari_pct": 22.3
+   },
+   {
+    "cod": "PH",
+    "luna": "2026-09",
+    "finale": 2483,
+    "mediana": 24.1,
+    "respinse_pct": 7.6,
+    "amanari_pct": 18.9
+   },
+   {
+    "cod": "PH",
+    "luna": "2026-10",
+    "finale": 2874,
+    "mediana": 37.9,
+    "respinse_pct": 8.8,
+    "amanari_pct": 19.6
+   },
+   {
+    "cod": "PH",
+    "luna": "2026-11",
+    "finale": 1822,
+    "mediana": 52.0,
+    "respinse_pct": 9.5,
+    "amanari_pct": 21.8
+   },
+   {
+    "cod": "SB",
+    "luna": "2025-01",
+    "finale": 1628,
+    "mediana": 1.7,
+    "respinse_pct": 4.8,
+    "amanari_pct": 17.2
+   },
+   {
+    "cod": "SB",
+    "luna": "2025-02",
+    "finale": 2327,
+    "mediana": 1.6,
+    "respinse_pct": 5.2,
+    "amanari_pct": 19.1
+   },
+   {
+    "cod": "SB",
+    "luna": "2025-03",
+    "finale": 2383,
+    "mediana": 1.2,
+    "respinse_pct": 4.9,
+    "amanari_pct": 19.2
+   },
+   {
+    "cod": "SB",
+    "luna": "2025-04",
+    "finale": 2010,
+    "mediana": 1.2,
+    "respinse_pct": 6.0,
+    "amanari_pct": 19.8
+   },
+   {
+    "cod": "SB",
+    "luna": "2025-05",
+    "finale": 1879,
+    "mediana": 1.1,
+    "respinse_pct": 6.5,
+    "amanari_pct": 20.3
+   },
+   {
+    "cod": "SB",
+    "luna": "2025-06",
+    "finale": 1765,
+    "mediana": 1.2,
+    "respinse_pct": 7.8,
+    "amanari_pct": 22.8
+   },
+   {
+    "cod": "SB",
+    "luna": "2025-07",
+    "finale": 2053,
+    "mediana": 1.2,
+    "respinse_pct": 6.7,
+    "amanari_pct": 23.2
+   },
+   {
+    "cod": "SB",
+    "luna": "2025-08",
+    "finale": 1587,
+    "mediana": 1.2,
+    "respinse_pct": 7.1,
+    "amanari_pct": 23.2
+   },
+   {
+    "cod": "SB",
+    "luna": "2025-09",
+    "finale": 1858,
+    "mediana": 1.2,
+    "respinse_pct": 7.0,
+    "amanari_pct": 24.1
+   },
+   {
+    "cod": "SB",
+    "luna": "2025-10",
+    "finale": 2055,
+    "mediana": 1.2,
+    "respinse_pct": 6.9,
+    "amanari_pct": 22.8
+   },
+   {
+    "cod": "SB",
+    "luna": "2025-11",
+    "finale": 1892,
+    "mediana": 1.2,
+    "respinse_pct": 7.4,
+    "amanari_pct": 24.1
+   },
+   {
+    "cod": "SB",
+    "luna": "2025-12",
+    "finale": 1983,
+    "mediana": 1.8,
+    "respinse_pct": 8.4,
+    "amanari_pct": 22.8
+   },
+   {
+    "cod": "SB",
+    "luna": "2026-01",
+    "finale": 1710,
+    "mediana": 1.2,
+    "respinse_pct": 8.9,
+    "amanari_pct": 23.1
+   },
+   {
+    "cod": "SB",
+    "luna": "2026-02",
+    "finale": 2449,
+    "mediana": 1.8,
+    "respinse_pct": 7.0,
+    "amanari_pct": 23.9
+   },
+   {
+    "cod": "SB",
+    "luna": "2026-03",
+    "finale": 2368,
+    "mediana": 2.1,
+    "respinse_pct": 8.0,
+    "amanari_pct": 23.1
+   },
+   {
+    "cod": "SB",
+    "luna": "2026-04",
+    "finale": 1699,
+    "mediana": 3.6,
+    "respinse_pct": 9.4,
+    "amanari_pct": 20.9
+   },
+   {
+    "cod": "SB",
+    "luna": "2026-05",
+    "finale": 1919,
+    "mediana": 5.1,
+    "respinse_pct": 6.5,
+    "amanari_pct": 21.0
+   },
+   {
+    "cod": "SB",
+    "luna": "2026-06",
+    "finale": 1857,
+    "mediana": 5.2,
+    "respinse_pct": 9.7,
+    "amanari_pct": 21.4
+   },
+   {
+    "cod": "SB",
+    "luna": "2026-07",
+    "finale": 2015,
+    "mediana": 6.2,
+    "respinse_pct": 7.9,
+    "amanari_pct": 19.4
+   },
+   {
+    "cod": "SB",
+    "luna": "2026-08",
+    "finale": 1728,
+    "mediana": 11.1,
+    "respinse_pct": 9.9,
+    "amanari_pct": 19.6
+   },
+   {
+    "cod": "SB",
+    "luna": "2026-09",
+    "finale": 2182,
+    "mediana": 21.3,
+    "respinse_pct": 7.1,
+    "amanari_pct": 17.6
+   },
+   {
+    "cod": "SB",
+    "luna": "2026-10",
+    "finale": 2262,
+    "mediana": 35.0,
+    "respinse_pct": 8.1,
+    "amanari_pct": 18.9
+   },
+   {
+    "cod": "SB",
+    "luna": "2026-11",
+    "finale": 1490,
+    "mediana": 52.9,
+    "respinse_pct": 8.7,
+    "amanari_pct": 20.6
+   },
+   {
+    "cod": "SJ",
+    "luna": "2025-01",
+    "finale": 715,
+    "mediana": 1.0,
+    "respinse_pct": 2.7,
+    "amanari_pct": 8.3
+   },
+   {
+    "cod": "SJ",
+    "luna": "2025-02",
+    "finale": 909,
+    "mediana": 1.0,
+    "respinse_pct": 3.4,
+    "amanari_pct": 11.0
+   },
+   {
+    "cod": "SJ",
+    "luna": "2025-03",
+    "finale": 1027,
+    "mediana": 1.0,
+    "respinse_pct": 2.7,
+    "amanari_pct": 8.4
+   },
+   {
+    "cod": "SJ",
+    "luna": "2025-04",
+    "finale": 753,
+    "mediana": 1.0,
+    "respinse_pct": 4.8,
+    "amanari_pct": 12.8
+   },
+   {
+    "cod": "SJ",
+    "luna": "2025-05",
+    "finale": 760,
+    "mediana": 0.9,
+    "respinse_pct": 3.0,
+    "amanari_pct": 10.2
+   },
+   {
+    "cod": "SJ",
+    "luna": "2025-06",
+    "finale": 588,
+    "mediana": 0.9,
+    "respinse_pct": 2.6,
+    "amanari_pct": 11.8
+   },
+   {
+    "cod": "SJ",
+    "luna": "2025-07",
+    "finale": 708,
+    "mediana": 1.0,
+    "respinse_pct": 4.9,
+    "amanari_pct": 14.9
+   },
+   {
+    "cod": "SJ",
+    "luna": "2025-08",
+    "finale": 613,
+    "mediana": 1.0,
+    "respinse_pct": 5.9,
+    "amanari_pct": 16.1
+   },
+   {
+    "cod": "SJ",
+    "luna": "2025-09",
+    "finale": 821,
+    "mediana": 1.0,
+    "respinse_pct": 3.2,
+    "amanari_pct": 18.1
+   },
+   {
+    "cod": "SJ",
+    "luna": "2025-10",
+    "finale": 728,
+    "mediana": 1.0,
+    "respinse_pct": 4.9,
+    "amanari_pct": 13.8
+   },
+   {
+    "cod": "SJ",
+    "luna": "2025-11",
+    "finale": 678,
+    "mediana": 1.0,
+    "respinse_pct": 2.4,
+    "amanari_pct": 13.0
+   },
+   {
+    "cod": "SJ",
+    "luna": "2025-12",
+    "finale": 732,
+    "mediana": 1.0,
+    "respinse_pct": 4.9,
+    "amanari_pct": 16.5
+   },
+   {
+    "cod": "SJ",
+    "luna": "2026-01",
+    "finale": 657,
+    "mediana": 1.1,
+    "respinse_pct": 4.3,
+    "amanari_pct": 13.2
+   },
+   {
+    "cod": "SJ",
+    "luna": "2026-02",
+    "finale": 844,
+    "mediana": 6.9,
+    "respinse_pct": 3.8,
+    "amanari_pct": 17.3
+   },
+   {
+    "cod": "SJ",
+    "luna": "2026-03",
+    "finale": 932,
+    "mediana": 7.9,
+    "respinse_pct": 5.7,
+    "amanari_pct": 16.4
+   },
+   {
+    "cod": "SJ",
+    "luna": "2026-04",
+    "finale": 861,
+    "mediana": 8.0,
+    "respinse_pct": 6.6,
+    "amanari_pct": 20.0
+   },
+   {
+    "cod": "SJ",
+    "luna": "2026-05",
+    "finale": 885,
+    "mediana": 5.1,
+    "respinse_pct": 9.3,
+    "amanari_pct": 17.5
+   },
+   {
+    "cod": "SJ",
+    "luna": "2026-06",
+    "finale": 748,
+    "mediana": 5.1,
+    "respinse_pct": 9.0,
+    "amanari_pct": 19.4
+   },
+   {
+    "cod": "SJ",
+    "luna": "2026-07",
+    "finale": 856,
+    "mediana": 6.1,
+    "respinse_pct": 7.9,
+    "amanari_pct": 15.7
+   },
+   {
+    "cod": "SJ",
+    "luna": "2026-08",
+    "finale": 646,
+    "mediana": 11.8,
+    "respinse_pct": 9.8,
+    "amanari_pct": 19.1
+   },
+   {
+    "cod": "SJ",
+    "luna": "2026-09",
+    "finale": 806,
+    "mediana": 21.9,
+    "respinse_pct": 7.2,
+    "amanari_pct": 17.4
+   },
+   {
+    "cod": "SJ",
+    "luna": "2026-10",
+    "finale": 884,
+    "mediana": 34.9,
+    "respinse_pct": 8.7,
+    "amanari_pct": 17.5
+   },
+   {
+    "cod": "SJ",
+    "luna": "2026-11",
+    "finale": 600,
+    "mediana": 50.1,
+    "respinse_pct": 9.2,
+    "amanari_pct": 18.0
+   },
+   {
+    "cod": "SM",
+    "luna": "2025-01",
+    "finale": 897,
+    "mediana": 4.0,
+    "respinse_pct": 3.7,
+    "amanari_pct": 10.7
+   },
+   {
+    "cod": "SM",
+    "luna": "2025-02",
+    "finale": 901,
+    "mediana": 7.0,
+    "respinse_pct": 5.0,
+    "amanari_pct": 12.6
+   },
+   {
+    "cod": "SM",
+    "luna": "2025-03",
+    "finale": 1063,
+    "mediana": 10.7,
+    "respinse_pct": 4.9,
+    "amanari_pct": 13.1
+   },
+   {
+    "cod": "SM",
+    "luna": "2025-04",
+    "finale": 885,
+    "mediana": 13.5,
+    "respinse_pct": 8.0,
+    "amanari_pct": 18.9
+   },
+   {
+    "cod": "SM",
+    "luna": "2025-05",
+    "finale": 1050,
+    "mediana": 7.0,
+    "respinse_pct": 5.3,
+    "amanari_pct": 16.9
+   },
+   {
+    "cod": "SM",
+    "luna": "2025-06",
+    "finale": 781,
+    "mediana": 2.0,
+    "respinse_pct": 10.4,
+    "amanari_pct": 16.2
+   },
+   {
+    "cod": "SM",
+    "luna": "2025-07",
+    "finale": 798,
+    "mediana": 1.1,
+    "respinse_pct": 4.9,
+    "amanari_pct": 18.9
+   },
+   {
+    "cod": "SM",
+    "luna": "2025-08",
+    "finale": 736,
+    "mediana": 1.1,
+    "respinse_pct": 9.5,
+    "amanari_pct": 21.1
+   },
+   {
+    "cod": "SM",
+    "luna": "2025-09",
+    "finale": 807,
+    "mediana": 1.1,
+    "respinse_pct": 6.9,
+    "amanari_pct": 21.3
+   },
+   {
+    "cod": "SM",
+    "luna": "2025-10",
+    "finale": 1007,
+    "mediana": 1.1,
+    "respinse_pct": 4.9,
+    "amanari_pct": 18.0
+   },
+   {
+    "cod": "SM",
+    "luna": "2025-11",
+    "finale": 907,
+    "mediana": 1.1,
+    "respinse_pct": 6.2,
+    "amanari_pct": 17.2
+   },
+   {
+    "cod": "SM",
+    "luna": "2025-12",
+    "finale": 730,
+    "mediana": 1.1,
+    "respinse_pct": 4.4,
+    "amanari_pct": 16.0
+   },
+   {
+    "cod": "SM",
+    "luna": "2026-01",
+    "finale": 875,
+    "mediana": 2.0,
+    "respinse_pct": 6.9,
+    "amanari_pct": 16.6
+   },
+   {
+    "cod": "SM",
+    "luna": "2026-02",
+    "finale": 1005,
+    "mediana": 3.9,
+    "respinse_pct": 4.7,
+    "amanari_pct": 20.9
+   },
+   {
+    "cod": "SM",
+    "luna": "2026-03",
+    "finale": 859,
+    "mediana": 7.8,
+    "respinse_pct": 5.8,
+    "amanari_pct": 17.4
+   },
+   {
+    "cod": "SM",
+    "luna": "2026-04",
+    "finale": 1067,
+    "mediana": 15.0,
+    "respinse_pct": 5.6,
+    "amanari_pct": 19.6
+   },
+   {
+    "cod": "SM",
+    "luna": "2026-05",
+    "finale": 1032,
+    "mediana": 5.1,
+    "respinse_pct": 7.7,
+    "amanari_pct": 18.7
+   },
+   {
+    "cod": "SM",
+    "luna": "2026-06",
+    "finale": 967,
+    "mediana": 5.1,
+    "respinse_pct": 8.7,
+    "amanari_pct": 21.9
+   },
+   {
+    "cod": "SM",
+    "luna": "2026-07",
+    "finale": 1016,
+    "mediana": 6.2,
+    "respinse_pct": 9.2,
+    "amanari_pct": 19.1
+   },
+   {
+    "cod": "SM",
+    "luna": "2026-08",
+    "finale": 873,
+    "mediana": 11.9,
+    "respinse_pct": 9.3,
+    "amanari_pct": 19.3
+   },
+   {
+    "cod": "SM",
+    "luna": "2026-09",
+    "finale": 1180,
+    "mediana": 21.9,
+    "respinse_pct": 6.4,
+    "amanari_pct": 18.2
+   },
+   {
+    "cod": "SM",
+    "luna": "2026-10",
+    "finale": 1238,
+    "mediana": 35.9,
+    "respinse_pct": 9.5,
+    "amanari_pct": 18.4
+   },
+   {
+    "cod": "SM",
+    "luna": "2026-11",
+    "finale": 748,
+    "mediana": 53.0,
+    "respinse_pct": 12.2,
+    "amanari_pct": 22.7
+   },
+   {
+    "cod": "SV",
+    "luna": "2025-01",
+    "finale": 1120,
+    "mediana": 2.0,
+    "respinse_pct": 8.8,
+    "amanari_pct": 25.3
+   },
+   {
+    "cod": "SV",
+    "luna": "2025-02",
+    "finale": 1504,
+    "mediana": 3.1,
+    "respinse_pct": 5.8,
+    "amanari_pct": 16.1
+   },
+   {
+    "cod": "SV",
+    "luna": "2025-03",
+    "finale": 1824,
+    "mediana": 3.1,
+    "respinse_pct": 7.6,
+    "amanari_pct": 16.9
+   },
+   {
+    "cod": "SV",
+    "luna": "2025-04",
+    "finale": 1309,
+    "mediana": 1.3,
+    "respinse_pct": 6.4,
+    "amanari_pct": 18.7
+   },
+   {
+    "cod": "SV",
+    "luna": "2025-05",
+    "finale": 1408,
+    "mediana": 1.2,
+    "respinse_pct": 6.0,
+    "amanari_pct": 18.7
+   },
+   {
+    "cod": "SV",
+    "luna": "2025-06",
+    "finale": 1411,
+    "mediana": 1.7,
+    "respinse_pct": 6.0,
+    "amanari_pct": 16.8
+   },
+   {
+    "cod": "SV",
+    "luna": "2025-07",
+    "finale": 1376,
+    "mediana": 1.1,
+    "respinse_pct": 7.0,
+    "amanari_pct": 21.5
+   },
+   {
+    "cod": "SV",
+    "luna": "2025-08",
+    "finale": 1311,
+    "mediana": 1.1,
+    "respinse_pct": 6.5,
+    "amanari_pct": 14.4
+   },
+   {
+    "cod": "SV",
+    "luna": "2025-09",
+    "finale": 1391,
+    "mediana": 1.1,
+    "respinse_pct": 6.7,
+    "amanari_pct": 18.9
+   },
+   {
+    "cod": "SV",
+    "luna": "2025-10",
+    "finale": 1354,
+    "mediana": 1.1,
+    "respinse_pct": 6.9,
+    "amanari_pct": 19.3
+   },
+   {
+    "cod": "SV",
+    "luna": "2025-11",
+    "finale": 1363,
+    "mediana": 1.2,
+    "respinse_pct": 7.9,
+    "amanari_pct": 20.0
+   },
+   {
+    "cod": "SV",
+    "luna": "2025-12",
+    "finale": 1464,
+    "mediana": 1.1,
+    "respinse_pct": 7.5,
+    "amanari_pct": 18.4
+   },
+   {
+    "cod": "SV",
+    "luna": "2026-01",
+    "finale": 1405,
+    "mediana": 1.9,
+    "respinse_pct": 6.4,
+    "amanari_pct": 19.7
+   },
+   {
+    "cod": "SV",
+    "luna": "2026-02",
+    "finale": 1995,
+    "mediana": 4.9,
+    "respinse_pct": 6.3,
+    "amanari_pct": 18.8
+   },
+   {
+    "cod": "SV",
+    "luna": "2026-03",
+    "finale": 1431,
+    "mediana": 5.9,
+    "respinse_pct": 8.6,
+    "amanari_pct": 16.9
+   },
+   {
+    "cod": "SV",
+    "luna": "2026-04",
+    "finale": 1909,
+    "mediana": 16.0,
+    "respinse_pct": 4.0,
+    "amanari_pct": 19.4
+   },
+   {
+    "cod": "SV",
+    "luna": "2026-05",
+    "finale": 1780,
+    "mediana": 5.1,
+    "respinse_pct": 8.2,
+    "amanari_pct": 17.4
+   },
+   {
+    "cod": "SV",
+    "luna": "2026-06",
+    "finale": 1656,
+    "mediana": 5.1,
+    "respinse_pct": 7.7,
+    "amanari_pct": 18.4
+   },
+   {
+    "cod": "SV",
+    "luna": "2026-07",
+    "finale": 1723,
+    "mediana": 6.1,
+    "respinse_pct": 5.9,
+    "amanari_pct": 16.6
+   },
+   {
+    "cod": "SV",
+    "luna": "2026-08",
+    "finale": 1509,
+    "mediana": 11.8,
+    "respinse_pct": 6.8,
+    "amanari_pct": 17.3
+   },
+   {
+    "cod": "SV",
+    "luna": "2026-09",
+    "finale": 1657,
+    "mediana": 21.2,
+    "respinse_pct": 5.4,
+    "amanari_pct": 15.6
+   },
+   {
+    "cod": "SV",
+    "luna": "2026-10",
+    "finale": 1716,
+    "mediana": 35.1,
+    "respinse_pct": 7.0,
+    "amanari_pct": 18.8
+   },
+   {
+    "cod": "SV",
+    "luna": "2026-11",
+    "finale": 1291,
+    "mediana": 53.0,
+    "respinse_pct": 7.7,
+    "amanari_pct": 16.9
+   },
+   {
+    "cod": "TL",
+    "luna": "2025-01",
+    "finale": 776,
+    "mediana": 1.3,
+    "respinse_pct": 7.5,
+    "amanari_pct": 18.0
+   },
+   {
+    "cod": "TL",
+    "luna": "2025-02",
+    "finale": 882,
+    "mediana": 4.3,
+    "respinse_pct": 7.6,
+    "amanari_pct": 17.9
+   },
+   {
+    "cod": "TL",
+    "luna": "2025-03",
+    "finale": 1001,
+    "mediana": 6.8,
+    "respinse_pct": 6.7,
+    "amanari_pct": 15.0
+   },
+   {
+    "cod": "TL",
+    "luna": "2025-04",
+    "finale": 707,
+    "mediana": 14.1,
+    "respinse_pct": 5.0,
+    "amanari_pct": 18.4
+   },
+   {
+    "cod": "TL",
+    "luna": "2025-05",
+    "finale": 892,
+    "mediana": 7.1,
+    "respinse_pct": 9.8,
+    "amanari_pct": 22.1
+   },
+   {
+    "cod": "TL",
+    "luna": "2025-06",
+    "finale": 803,
+    "mediana": 3.9,
+    "respinse_pct": 9.7,
+    "amanari_pct": 19.4
+   },
+   {
+    "cod": "TL",
+    "luna": "2025-07",
+    "finale": 755,
+    "mediana": 1.8,
+    "respinse_pct": 11.3,
+    "amanari_pct": 28.9
+   },
+   {
+    "cod": "TL",
+    "luna": "2025-08",
+    "finale": 645,
+    "mediana": 3.1,
+    "respinse_pct": 18.1,
+    "amanari_pct": 29.1
+   },
+   {
+    "cod": "TL",
+    "luna": "2025-09",
+    "finale": 760,
+    "mediana": 1.6,
+    "respinse_pct": 11.6,
+    "amanari_pct": 26.0
+   },
+   {
+    "cod": "TL",
+    "luna": "2025-10",
+    "finale": 769,
+    "mediana": 1.3,
+    "respinse_pct": 13.4,
+    "amanari_pct": 24.7
+   },
+   {
+    "cod": "TL",
+    "luna": "2025-11",
+    "finale": 627,
+    "mediana": 1.3,
+    "respinse_pct": 11.3,
+    "amanari_pct": 27.7
+   },
+   {
+    "cod": "TL",
+    "luna": "2025-12",
+    "finale": 670,
+    "mediana": 3.1,
+    "respinse_pct": 14.6,
+    "amanari_pct": 24.5
+   },
+   {
+    "cod": "TL",
+    "luna": "2026-01",
+    "finale": 573,
+    "mediana": 3.1,
+    "respinse_pct": 12.9,
+    "amanari_pct": 28.2
+   },
+   {
+    "cod": "TL",
+    "luna": "2026-02",
+    "finale": 719,
+    "mediana": 8.0,
+    "respinse_pct": 12.2,
+    "amanari_pct": 26.3
+   },
+   {
+    "cod": "TL",
+    "luna": "2026-03",
+    "finale": 894,
+    "mediana": 10.1,
+    "respinse_pct": 12.5,
+    "amanari_pct": 24.0
+   },
+   {
+    "cod": "TL",
+    "luna": "2026-04",
+    "finale": 866,
+    "mediana": 12.0,
+    "respinse_pct": 10.0,
+    "amanari_pct": 20.4
+   },
+   {
+    "cod": "TL",
+    "luna": "2026-05",
+    "finale": 816,
+    "mediana": 5.2,
+    "respinse_pct": 10.8,
+    "amanari_pct": 20.0
+   },
+   {
+    "cod": "TL",
+    "luna": "2026-06",
+    "finale": 774,
+    "mediana": 5.1,
+    "respinse_pct": 9.3,
+    "amanari_pct": 18.0
+   },
+   {
+    "cod": "TL",
+    "luna": "2026-07",
+    "finale": 735,
+    "mediana": 6.2,
+    "respinse_pct": 7.5,
+    "amanari_pct": 19.5
+   },
+   {
+    "cod": "TL",
+    "luna": "2026-08",
+    "finale": 584,
+    "mediana": 11.2,
+    "respinse_pct": 11.5,
+    "amanari_pct": 18.0
+   },
+   {
+    "cod": "TL",
+    "luna": "2026-09",
+    "finale": 735,
+    "mediana": 21.9,
+    "respinse_pct": 6.7,
+    "amanari_pct": 16.4
+   },
+   {
+    "cod": "TL",
+    "luna": "2026-10",
+    "finale": 850,
+    "mediana": 35.0,
+    "respinse_pct": 8.9,
+    "amanari_pct": 17.6
+   },
+   {
+    "cod": "TL",
+    "luna": "2026-11",
+    "finale": 565,
+    "mediana": 50.2,
+    "respinse_pct": 11.9,
+    "amanari_pct": 19.2
+   },
+   {
+    "cod": "TM",
+    "luna": "2025-01",
+    "finale": 3479,
+    "mediana": 1.2,
+    "respinse_pct": 7.8,
+    "amanari_pct": 21.9
+   },
+   {
+    "cod": "TM",
+    "luna": "2025-02",
+    "finale": 4487,
+    "mediana": 3.1,
+    "respinse_pct": 9.7,
+    "amanari_pct": 20.5
+   },
+   {
+    "cod": "TM",
+    "luna": "2025-03",
+    "finale": 4748,
+    "mediana": 6.0,
+    "respinse_pct": 8.1,
+    "amanari_pct": 20.7
+   },
+   {
+    "cod": "TM",
+    "luna": "2025-04",
+    "finale": 4287,
+    "mediana": 6.9,
+    "respinse_pct": 9.7,
+    "amanari_pct": 23.5
+   },
+   {
+    "cod": "TM",
+    "luna": "2025-05",
+    "finale": 3953,
+    "mediana": 2.2,
+    "respinse_pct": 9.8,
+    "amanari_pct": 23.9
+   },
+   {
+    "cod": "TM",
+    "luna": "2025-06",
+    "finale": 3244,
+    "mediana": 1.7,
+    "respinse_pct": 9.3,
+    "amanari_pct": 23.3
+   },
+   {
+    "cod": "TM",
+    "luna": "2025-07",
+    "finale": 3730,
+    "mediana": 1.3,
+    "respinse_pct": 10.8,
+    "amanari_pct": 25.2
+   },
+   {
+    "cod": "TM",
+    "luna": "2025-08",
+    "finale": 3001,
+    "mediana": 1.7,
+    "respinse_pct": 8.5,
+    "amanari_pct": 23.0
+   },
+   {
+    "cod": "TM",
+    "luna": "2025-09",
+    "finale": 3187,
+    "mediana": 1.2,
+    "respinse_pct": 8.9,
+    "amanari_pct": 23.6
+   },
+   {
+    "cod": "TM",
+    "luna": "2025-10",
+    "finale": 3833,
+    "mediana": 1.2,
+    "respinse_pct": 8.4,
+    "amanari_pct": 25.1
+   },
+   {
+    "cod": "TM",
+    "luna": "2025-11",
+    "finale": 3645,
+    "mediana": 1.2,
+    "respinse_pct": 9.2,
+    "amanari_pct": 23.6
+   },
+   {
+    "cod": "TM",
+    "luna": "2025-12",
+    "finale": 3644,
+    "mediana": 2.7,
+    "respinse_pct": 9.3,
+    "amanari_pct": 23.4
+   },
+   {
+    "cod": "TM",
+    "luna": "2026-01",
+    "finale": 3390,
+    "mediana": 2.0,
+    "respinse_pct": 9.8,
+    "amanari_pct": 24.3
+   },
+   {
+    "cod": "TM",
+    "luna": "2026-02",
+    "finale": 4328,
+    "mediana": 3.7,
+    "respinse_pct": 9.0,
+    "amanari_pct": 26.0
+   },
+   {
+    "cod": "TM",
+    "luna": "2026-03",
+    "finale": 4753,
+    "mediana": 3.3,
+    "respinse_pct": 9.1,
+    "amanari_pct": 25.4
+   },
+   {
+    "cod": "TM",
+    "luna": "2026-04",
+    "finale": 3401,
+    "mediana": 5.7,
+    "respinse_pct": 9.9,
+    "amanari_pct": 23.5
+   },
+   {
+    "cod": "TM",
+    "luna": "2026-05",
+    "finale": 3626,
+    "mediana": 5.4,
+    "respinse_pct": 10.2,
+    "amanari_pct": 24.0
+   },
+   {
+    "cod": "TM",
+    "luna": "2026-06",
+    "finale": 3612,
+    "mediana": 5.3,
+    "respinse_pct": 10.1,
+    "amanari_pct": 24.0
+   },
+   {
+    "cod": "TM",
+    "luna": "2026-07",
+    "finale": 3987,
+    "mediana": 6.4,
+    "respinse_pct": 10.1,
+    "amanari_pct": 22.9
+   },
+   {
+    "cod": "TM",
+    "luna": "2026-08",
+    "finale": 3081,
+    "mediana": 11.8,
+    "respinse_pct": 10.4,
+    "amanari_pct": 22.9
+   },
+   {
+    "cod": "TM",
+    "luna": "2026-09",
+    "finale": 3320,
+    "mediana": 21.9,
+    "respinse_pct": 9.4,
+    "amanari_pct": 21.6
+   },
+   {
+    "cod": "TM",
+    "luna": "2026-10",
+    "finale": 4207,
+    "mediana": 34.8,
+    "respinse_pct": 9.1,
+    "amanari_pct": 21.3
+   },
+   {
+    "cod": "TM",
+    "luna": "2026-11",
+    "finale": 3114,
+    "mediana": 49.9,
+    "respinse_pct": 8.9,
+    "amanari_pct": 23.9
+   },
+   {
+    "cod": "TR",
+    "luna": "2025-01",
+    "finale": 513,
+    "mediana": 2.0,
+    "respinse_pct": 6.8,
+    "amanari_pct": 10.5
+   },
+   {
+    "cod": "TR",
+    "luna": "2025-02",
+    "finale": 652,
+    "mediana": 1.9,
+    "respinse_pct": 3.1,
+    "amanari_pct": 17.9
+   },
+   {
+    "cod": "TR",
+    "luna": "2025-03",
+    "finale": 733,
+    "mediana": 3.0,
+    "respinse_pct": 6.5,
+    "amanari_pct": 16.5
+   },
+   {
+    "cod": "TR",
+    "luna": "2025-04",
+    "finale": 520,
+    "mediana": 4.2,
+    "respinse_pct": 5.2,
+    "amanari_pct": 19.0
+   },
+   {
+    "cod": "TR",
+    "luna": "2025-05",
+    "finale": 639,
+    "mediana": 3.1,
+    "respinse_pct": 9.4,
+    "amanari_pct": 18.0
+   },
+   {
+    "cod": "TR",
+    "luna": "2025-06",
+    "finale": 527,
+    "mediana": 2.2,
+    "respinse_pct": 6.3,
+    "amanari_pct": 19.3
+   },
+   {
+    "cod": "TR",
+    "luna": "2025-07",
+    "finale": 543,
+    "mediana": 1.3,
+    "respinse_pct": 8.1,
+    "amanari_pct": 23.5
+   },
+   {
+    "cod": "TR",
+    "luna": "2025-08",
+    "finale": 468,
+    "mediana": 3.0,
+    "respinse_pct": 8.8,
+    "amanari_pct": 22.9
+   },
+   {
+    "cod": "TR",
+    "luna": "2025-09",
+    "finale": 542,
+    "mediana": 3.3,
+    "respinse_pct": 8.7,
+    "amanari_pct": 24.9
+   },
+   {
+    "cod": "TR",
+    "luna": "2025-10",
+    "finale": 553,
+    "mediana": 1.6,
+    "respinse_pct": 9.8,
+    "amanari_pct": 27.7
+   },
+   {
+    "cod": "TR",
+    "luna": "2025-11",
+    "finale": 557,
+    "mediana": 3.1,
+    "respinse_pct": 14.4,
+    "amanari_pct": 26.1
+   },
+   {
+    "cod": "TR",
+    "luna": "2025-12",
+    "finale": 492,
+    "mediana": 3.0,
+    "respinse_pct": 10.0,
+    "amanari_pct": 23.0
+   },
+   {
+    "cod": "TR",
+    "luna": "2026-01",
+    "finale": 543,
+    "mediana": 9.0,
+    "respinse_pct": 10.3,
+    "amanari_pct": 23.6
+   },
+   {
+    "cod": "TR",
+    "luna": "2026-02",
+    "finale": 716,
+    "mediana": 7.1,
+    "respinse_pct": 10.9,
+    "amanari_pct": 24.2
+   },
+   {
+    "cod": "TR",
+    "luna": "2026-03",
+    "finale": 304,
+    "mediana": 24.0,
+    "respinse_pct": 14.1,
+    "amanari_pct": 21.4
+   },
+   {
+    "cod": "TR",
+    "luna": "2026-04",
+    "finale": 1069,
+    "mediana": 28.1,
+    "respinse_pct": 7.8,
+    "amanari_pct": 25.7
+   },
+   {
+    "cod": "TR",
+    "luna": "2026-05",
+    "finale": 759,
+    "mediana": 5.7,
+    "respinse_pct": 14.9,
+    "amanari_pct": 19.3
+   },
+   {
+    "cod": "TR",
+    "luna": "2026-06",
+    "finale": 613,
+    "mediana": 5.1,
+    "respinse_pct": 8.5,
+    "amanari_pct": 19.4
+   },
+   {
+    "cod": "TR",
+    "luna": "2026-07",
+    "finale": 694,
+    "mediana": 6.2,
+    "respinse_pct": 9.8,
+    "amanari_pct": 19.2
+   },
+   {
+    "cod": "TR",
+    "luna": "2026-08",
+    "finale": 715,
+    "mediana": 11.4,
+    "respinse_pct": 8.3,
+    "amanari_pct": 18.7
+   },
+   {
+    "cod": "TR",
+    "luna": "2026-09",
+    "finale": 758,
+    "mediana": 22.0,
+    "respinse_pct": 7.3,
+    "amanari_pct": 19.5
+   },
+   {
+    "cod": "TR",
+    "luna": "2026-10",
+    "finale": 943,
+    "mediana": 36.0,
+    "respinse_pct": 10.5,
+    "amanari_pct": 19.0
+   },
+   {
+    "cod": "TR",
+    "luna": "2026-11",
+    "finale": 543,
+    "mediana": 53.1,
+    "respinse_pct": 13.6,
+    "amanari_pct": 19.2
+   },
+   {
+    "cod": "VL",
+    "luna": "2025-01",
+    "finale": 1244,
+    "mediana": 1.2,
+    "respinse_pct": 1.4,
+    "amanari_pct": 8.4
+   },
+   {
+    "cod": "VL",
+    "luna": "2025-02",
+    "finale": 1362,
+    "mediana": 1.1,
+    "respinse_pct": 3.5,
+    "amanari_pct": 7.3
+   },
+   {
+    "cod": "VL",
+    "luna": "2025-03",
+    "finale": 1422,
+    "mediana": 1.1,
+    "respinse_pct": 2.3,
+    "amanari_pct": 10.3
+   },
+   {
+    "cod": "VL",
+    "luna": "2025-04",
+    "finale": 1057,
+    "mediana": 1.1,
+    "respinse_pct": 3.3,
+    "amanari_pct": 10.1
+   },
+   {
+    "cod": "VL",
+    "luna": "2025-05",
+    "finale": 1050,
+    "mediana": 1.2,
+    "respinse_pct": 3.5,
+    "amanari_pct": 9.9
+   },
+   {
+    "cod": "VL",
+    "luna": "2025-06",
+    "finale": 882,
+    "mediana": 1.2,
+    "respinse_pct": 3.3,
+    "amanari_pct": 10.5
+   },
+   {
+    "cod": "VL",
+    "luna": "2025-07",
+    "finale": 1074,
+    "mediana": 1.1,
+    "respinse_pct": 3.9,
+    "amanari_pct": 10.6
+   },
+   {
+    "cod": "VL",
+    "luna": "2025-08",
+    "finale": 877,
+    "mediana": 1.2,
+    "respinse_pct": 2.4,
+    "amanari_pct": 11.8
+   },
+   {
+    "cod": "VL",
+    "luna": "2025-09",
+    "finale": 1116,
+    "mediana": 1.2,
+    "respinse_pct": 3.0,
+    "amanari_pct": 11.6
+   },
+   {
+    "cod": "VL",
+    "luna": "2025-10",
+    "finale": 1082,
+    "mediana": 1.2,
+    "respinse_pct": 2.7,
+    "amanari_pct": 10.9
+   },
+   {
+    "cod": "VL",
+    "luna": "2025-11",
+    "finale": 1012,
+    "mediana": 1.2,
+    "respinse_pct": 3.4,
+    "amanari_pct": 10.4
+   },
+   {
+    "cod": "VL",
+    "luna": "2025-12",
+    "finale": 1094,
+    "mediana": 1.1,
+    "respinse_pct": 3.2,
+    "amanari_pct": 9.4
+   },
+   {
+    "cod": "VL",
+    "luna": "2026-01",
+    "finale": 1238,
+    "mediana": 1.2,
+    "respinse_pct": 2.7,
+    "amanari_pct": 13.1
+   },
+   {
+    "cod": "VL",
+    "luna": "2026-02",
+    "finale": 1352,
+    "mediana": 1.2,
+    "respinse_pct": 4.5,
+    "amanari_pct": 13.5
+   },
+   {
+    "cod": "VL",
+    "luna": "2026-03",
+    "finale": 1343,
+    "mediana": 1.2,
+    "respinse_pct": 4.5,
+    "amanari_pct": 11.9
+   },
+   {
+    "cod": "VL",
+    "luna": "2026-04",
+    "finale": 924,
+    "mediana": 1.8,
+    "respinse_pct": 4.1,
+    "amanari_pct": 13.5
+   },
+   {
+    "cod": "VL",
+    "luna": "2026-05",
+    "finale": 1004,
+    "mediana": 5.1,
+    "respinse_pct": 6.1,
+    "amanari_pct": 18.2
+   },
+   {
+    "cod": "VL",
+    "luna": "2026-06",
+    "finale": 1020,
+    "mediana": 5.1,
+    "respinse_pct": 8.0,
+    "amanari_pct": 16.9
+   },
+   {
+    "cod": "VL",
+    "luna": "2026-07",
+    "finale": 997,
+    "mediana": 6.1,
+    "respinse_pct": 6.4,
+    "amanari_pct": 16.8
+   },
+   {
+    "cod": "VL",
+    "luna": "2026-08",
+    "finale": 973,
+    "mediana": 11.0,
+    "respinse_pct": 6.6,
+    "amanari_pct": 15.6
+   },
+   {
+    "cod": "VL",
+    "luna": "2026-09",
+    "finale": 1307,
+    "mediana": 21.1,
+    "respinse_pct": 6.2,
+    "amanari_pct": 14.1
+   },
+   {
+    "cod": "VL",
+    "luna": "2026-10",
+    "finale": 1367,
+    "mediana": 34.2,
+    "respinse_pct": 7.3,
+    "amanari_pct": 15.1
+   },
+   {
+    "cod": "VL",
+    "luna": "2026-11",
+    "finale": 950,
+    "mediana": 50.0,
+    "respinse_pct": 6.7,
+    "amanari_pct": 20.2
+   },
+   {
+    "cod": "VN",
+    "luna": "2025-01",
+    "finale": 724,
+    "mediana": 2.7,
+    "respinse_pct": 6.6,
+    "amanari_pct": 17.0
+   },
+   {
+    "cod": "VN",
+    "luna": "2025-02",
+    "finale": 920,
+    "mediana": 4.3,
+    "respinse_pct": 6.2,
+    "amanari_pct": 16.4
+   },
+   {
+    "cod": "VN",
+    "luna": "2025-03",
+    "finale": 907,
+    "mediana": 1.2,
+    "respinse_pct": 8.6,
+    "amanari_pct": 16.8
+   },
+   {
+    "cod": "VN",
+    "luna": "2025-04",
+    "finale": 700,
+    "mediana": 1.2,
+    "respinse_pct": 8.6,
+    "amanari_pct": 17.1
+   },
+   {
+    "cod": "VN",
+    "luna": "2025-05",
+    "finale": 773,
+    "mediana": 1.2,
+    "respinse_pct": 4.9,
+    "amanari_pct": 15.6
+   },
+   {
+    "cod": "VN",
+    "luna": "2025-06",
+    "finale": 657,
+    "mediana": 1.2,
+    "respinse_pct": 8.1,
+    "amanari_pct": 19.6
+   },
+   {
+    "cod": "VN",
+    "luna": "2025-07",
+    "finale": 762,
+    "mediana": 1.1,
+    "respinse_pct": 7.0,
+    "amanari_pct": 20.9
+   },
+   {
+    "cod": "VN",
+    "luna": "2025-08",
+    "finale": 599,
+    "mediana": 1.2,
+    "respinse_pct": 7.3,
+    "amanari_pct": 20.5
+   },
+   {
+    "cod": "VN",
+    "luna": "2025-09",
+    "finale": 761,
+    "mediana": 1.2,
+    "respinse_pct": 7.6,
+    "amanari_pct": 18.4
+   },
+   {
+    "cod": "VN",
+    "luna": "2025-10",
+    "finale": 730,
+    "mediana": 1.1,
+    "respinse_pct": 7.7,
+    "amanari_pct": 21.0
+   },
+   {
+    "cod": "VN",
+    "luna": "2025-11",
+    "finale": 720,
+    "mediana": 1.1,
+    "respinse_pct": 7.8,
+    "amanari_pct": 19.2
+   },
+   {
+    "cod": "VN",
+    "luna": "2025-12",
+    "finale": 705,
+    "mediana": 2.8,
+    "respinse_pct": 6.4,
+    "amanari_pct": 18.6
+   },
+   {
+    "cod": "VN",
+    "luna": "2026-01",
+    "finale": 846,
+    "mediana": 3.9,
+    "respinse_pct": 8.6,
+    "amanari_pct": 20.8
+   },
+   {
+    "cod": "VN",
+    "luna": "2026-02",
+    "finale": 803,
+    "mediana": 7.3,
+    "respinse_pct": 8.6,
+    "amanari_pct": 19.2
+   },
+   {
+    "cod": "VN",
+    "luna": "2026-03",
+    "finale": 908,
+    "mediana": 11.0,
+    "respinse_pct": 7.8,
+    "amanari_pct": 19.4
+   },
+   {
+    "cod": "VN",
+    "luna": "2026-04",
+    "finale": 1064,
+    "mediana": 14.0,
+    "respinse_pct": 7.5,
+    "amanari_pct": 19.8
+   },
+   {
+    "cod": "VN",
+    "luna": "2026-05",
+    "finale": 921,
+    "mediana": 5.1,
+    "respinse_pct": 9.9,
+    "amanari_pct": 18.3
+   },
+   {
+    "cod": "VN",
+    "luna": "2026-06",
+    "finale": 877,
+    "mediana": 5.1,
+    "respinse_pct": 8.4,
+    "amanari_pct": 16.8
+   },
+   {
+    "cod": "VN",
+    "luna": "2026-07",
+    "finale": 913,
+    "mediana": 6.1,
+    "respinse_pct": 6.4,
+    "amanari_pct": 17.0
+   },
+   {
+    "cod": "VN",
+    "luna": "2026-08",
+    "finale": 841,
+    "mediana": 11.0,
+    "respinse_pct": 8.3,
+    "amanari_pct": 16.5
+   },
+   {
+    "cod": "VN",
+    "luna": "2026-09",
+    "finale": 1254,
+    "mediana": 21.9,
+    "respinse_pct": 7.2,
+    "amanari_pct": 15.9
+   },
+   {
+    "cod": "VN",
+    "luna": "2026-10",
+    "finale": 1228,
+    "mediana": 36.0,
+    "respinse_pct": 9.4,
+    "amanari_pct": 16.6
+   },
+   {
+    "cod": "VN",
+    "luna": "2026-11",
+    "finale": 820,
+    "mediana": 53.1,
+    "respinse_pct": 8.3,
+    "amanari_pct": 17.5
+   },
+   {
+    "cod": "VS",
+    "luna": "2025-01",
+    "finale": 621,
+    "mediana": 1.2,
+    "respinse_pct": 3.1,
+    "amanari_pct": 13.0
+   },
+   {
+    "cod": "VS",
+    "luna": "2025-02",
+    "finale": 764,
+    "mediana": 2.7,
+    "respinse_pct": 4.1,
+    "amanari_pct": 14.0
+   },
+   {
+    "cod": "VS",
+    "luna": "2025-03",
+    "finale": 882,
+    "mediana": 5.1,
+    "respinse_pct": 4.0,
+    "amanari_pct": 9.6
+   },
+   {
+    "cod": "VS",
+    "luna": "2025-04",
+    "finale": 743,
+    "mediana": 5.7,
+    "respinse_pct": 3.2,
+    "amanari_pct": 12.3
+   },
+   {
+    "cod": "VS",
+    "luna": "2025-05",
+    "finale": 739,
+    "mediana": 3.0,
+    "respinse_pct": 4.9,
+    "amanari_pct": 8.8
+   },
+   {
+    "cod": "VS",
+    "luna": "2025-06",
+    "finale": 578,
+    "mediana": 1.1,
+    "respinse_pct": 4.8,
+    "amanari_pct": 12.7
+   },
+   {
+    "cod": "VS",
+    "luna": "2025-07",
+    "finale": 697,
+    "mediana": 1.1,
+    "respinse_pct": 3.7,
+    "amanari_pct": 15.6
+   },
+   {
+    "cod": "VS",
+    "luna": "2025-08",
+    "finale": 529,
+    "mediana": 1.1,
+    "respinse_pct": 4.7,
+    "amanari_pct": 10.8
+   },
+   {
+    "cod": "VS",
+    "luna": "2025-09",
+    "finale": 744,
+    "mediana": 1.6,
+    "respinse_pct": 4.0,
+    "amanari_pct": 18.2
+   },
+   {
+    "cod": "VS",
+    "luna": "2025-10",
+    "finale": 769,
+    "mediana": 1.1,
+    "respinse_pct": 5.2,
+    "amanari_pct": 13.1
+   },
+   {
+    "cod": "VS",
+    "luna": "2025-11",
+    "finale": 651,
+    "mediana": 1.1,
+    "respinse_pct": 4.1,
+    "amanari_pct": 14.0
+   },
+   {
+    "cod": "VS",
+    "luna": "2025-12",
+    "finale": 673,
+    "mediana": 1.1,
+    "respinse_pct": 4.5,
+    "amanari_pct": 19.8
+   },
+   {
+    "cod": "VS",
+    "luna": "2026-01",
+    "finale": 680,
+    "mediana": 3.1,
+    "respinse_pct": 6.8,
+    "amanari_pct": 17.0
+   },
+   {
+    "cod": "VS",
+    "luna": "2026-02",
+    "finale": 978,
+    "mediana": 7.0,
+    "respinse_pct": 5.4,
+    "amanari_pct": 18.0
+   },
+   {
+    "cod": "VS",
+    "luna": "2026-03",
+    "finale": 993,
+    "mediana": 6.9,
+    "respinse_pct": 3.8,
+    "amanari_pct": 16.4
+   },
+   {
+    "cod": "VS",
+    "luna": "2026-04",
+    "finale": 777,
+    "mediana": 6.1,
+    "respinse_pct": 7.6,
+    "amanari_pct": 16.7
+   },
+   {
+    "cod": "VS",
+    "luna": "2026-05",
+    "finale": 808,
+    "mediana": 5.1,
+    "respinse_pct": 6.7,
+    "amanari_pct": 16.4
+   },
+   {
+    "cod": "VS",
+    "luna": "2026-06",
+    "finale": 716,
+    "mediana": 5.1,
+    "respinse_pct": 6.0,
+    "amanari_pct": 19.3
+   },
+   {
+    "cod": "VS",
+    "luna": "2026-07",
+    "finale": 818,
+    "mediana": 6.1,
+    "respinse_pct": 6.8,
+    "amanari_pct": 15.5
+   },
+   {
+    "cod": "VS",
+    "luna": "2026-08",
+    "finale": 699,
+    "mediana": 11.2,
+    "respinse_pct": 5.7,
+    "amanari_pct": 16.7
+   },
+   {
+    "cod": "VS",
+    "luna": "2026-09",
+    "finale": 850,
+    "mediana": 21.1,
+    "respinse_pct": 5.6,
+    "amanari_pct": 12.9
+   },
+   {
+    "cod": "VS",
+    "luna": "2026-10",
+    "finale": 812,
+    "mediana": 35.0,
+    "respinse_pct": 4.9,
+    "amanari_pct": 14.5
+   },
+   {
+    "cod": "VS",
+    "luna": "2026-11",
+    "finale": 586,
+    "mediana": 53.0,
+    "respinse_pct": 7.0,
+    "amanari_pct": 17.8
+   }
+  ]
+ },
+ "national_lunar": {
+  "meta": "Mediana națională pe luna deciziei, aceeași definiție.",
+  "columns": [
+   "luna",
+   "mediana"
+  ],
+  "rows": [
+   {
+    "luna": "2025-01",
+    "mediana": 2.7
+   },
+   {
+    "luna": "2025-02",
+    "mediana": 4.1
+   },
+   {
+    "luna": "2025-03",
+    "mediana": 6.1
+   },
+   {
+    "luna": "2025-04",
+    "mediana": 6.7
+   },
+   {
+    "luna": "2025-05",
+    "mediana": 3.1
+   },
+   {
+    "luna": "2025-06",
+    "mediana": 2.2
+   },
+   {
+    "luna": "2025-07",
+    "mediana": 1.3
+   },
+   {
+    "luna": "2025-08",
+    "mediana": 1.8
+   },
+   {
+    "luna": "2025-09",
+    "mediana": 1.8
+   },
+   {
+    "luna": "2025-10",
+    "mediana": 1.2
+   },
+   {
+    "luna": "2025-11",
+    "mediana": 1.2
+   },
+   {
+    "luna": "2025-12",
+    "mediana": 2.8
+   },
+   {
+    "luna": "2026-01",
+    "mediana": 3.0
+   },
+   {
+    "luna": "2026-02",
+    "mediana": 4.3
+   },
+   {
+    "luna": "2026-03",
+    "mediana": 5.3
+   },
+   {
+    "luna": "2026-04",
+    "mediana": 6.1
+   },
+   {
+    "luna": "2026-05",
+    "mediana": 5.1
+   },
+   {
+    "luna": "2026-06",
+    "mediana": 5.2
+   },
+   {
+    "luna": "2026-07",
+    "mediana": 6.2
+   },
+   {
+    "luna": "2026-08",
+    "mediana": 11.9
+   },
+   {
+    "luna": "2026-09",
+    "mediana": 21.8
+   },
+   {
+    "luna": "2026-10",
+    "mediana": 35.0
+   },
+   {
+    "luna": "2026-11",
+    "mediana": 50.0
+   }
+  ]
+ },
+ "judete_pondere_2026": {
+  "meta": "Ponderea fiecărui oficiu în toate deciziile din 2026.",
+  "columns": [
+   "cod",
+   "pondere_decizii_2026_pct"
+  ],
+  "rows": [
+   {
+    "cod": "AB",
+    "pondere_decizii_2026_pct": 1.46
+   },
+   {
+    "cod": "AG",
+    "pondere_decizii_2026_pct": 2.54
+   },
+   {
+    "cod": "AR",
+    "pondere_decizii_2026_pct": 1.94
+   },
+   {
+    "cod": "B",
+    "pondere_decizii_2026_pct": 23.24
+   },
+   {
+    "cod": "BC",
+    "pondere_decizii_2026_pct": 1.88
+   },
+   {
+    "cod": "BH",
+    "pondere_decizii_2026_pct": 3.4
+   },
+   {
+    "cod": "BN",
+    "pondere_decizii_2026_pct": 1.12
+   },
+   {
+    "cod": "BR",
+    "pondere_decizii_2026_pct": 0.91
+   },
+   {
+    "cod": "BT",
+    "pondere_decizii_2026_pct": 0.85
+   },
+   {
+    "cod": "BV",
+    "pondere_decizii_2026_pct": 3.58
+   },
+   {
+    "cod": "BZ",
+    "pondere_decizii_2026_pct": 1.36
+   },
+   {
+    "cod": "CJ",
+    "pondere_decizii_2026_pct": 5.08
+   },
+   {
+    "cod": "CL",
+    "pondere_decizii_2026_pct": 0.82
+   },
+   {
+    "cod": "CS",
+    "pondere_decizii_2026_pct": 0.69
+   },
+   {
+    "cod": "CT",
+    "pondere_decizii_2026_pct": 3.86
+   },
+   {
+    "cod": "CV",
+    "pondere_decizii_2026_pct": 0.66
+   },
+   {
+    "cod": "DB",
+    "pondere_decizii_2026_pct": 1.65
+   },
+   {
+    "cod": "DJ",
+    "pondere_decizii_2026_pct": 2.51
+   },
+   {
+    "cod": "GJ",
+    "pondere_decizii_2026_pct": 1.01
+   },
+   {
+    "cod": "GL",
+    "pondere_decizii_2026_pct": 2.07
+   },
+   {
+    "cod": "GR",
+    "pondere_decizii_2026_pct": 0.89
+   },
+   {
+    "cod": "HD",
+    "pondere_decizii_2026_pct": 1.45
+   },
+   {
+    "cod": "HR",
+    "pondere_decizii_2026_pct": 1.04
+   },
+   {
+    "cod": "IF",
+    "pondere_decizii_2026_pct": 5.6
+   },
+   {
+    "cod": "IL",
+    "pondere_decizii_2026_pct": 0.77
+   },
+   {
+    "cod": "IS",
+    "pondere_decizii_2026_pct": 3.71
+   },
+   {
+    "cod": "MH",
+    "pondere_decizii_2026_pct": 0.63
+   },
+   {
+    "cod": "MM",
+    "pondere_decizii_2026_pct": 1.97
+   },
+   {
+    "cod": "MS",
+    "pondere_decizii_2026_pct": 2.06
+   },
+   {
+    "cod": "NT",
+    "pondere_decizii_2026_pct": 1.33
+   },
+   {
+    "cod": "OT",
+    "pondere_decizii_2026_pct": 1.01
+   },
+   {
+    "cod": "PH",
+    "pondere_decizii_2026_pct": 2.94
+   },
+   {
+    "cod": "SB",
+    "pondere_decizii_2026_pct": 2.37
+   },
+   {
+    "cod": "SJ",
+    "pondere_decizii_2026_pct": 0.91
+   },
+   {
+    "cod": "SM",
+    "pondere_decizii_2026_pct": 1.16
+   },
+   {
+    "cod": "SV",
+    "pondere_decizii_2026_pct": 1.92
+   },
+   {
+    "cod": "TL",
+    "pondere_decizii_2026_pct": 0.89
+   },
+   {
+    "cod": "TM",
+    "pondere_decizii_2026_pct": 4.62
+   },
+   {
+    "cod": "TR",
+    "pondere_decizii_2026_pct": 0.84
+   },
+   {
+    "cod": "VL",
+    "pondere_decizii_2026_pct": 1.27
+   },
+   {
+    "cod": "VN",
+    "pondere_decizii_2026_pct": 1.1
+   },
+   {
+    "cod": "VS",
+    "pondere_decizii_2026_pct": 0.9
+   }
+  ]
+ },
+ "judete_portal_etape": {
+  "meta": "Eșantion myportal pe oficiu: dosare în operare / la registrator (mic pe oficiu: orientativ).",
+  "columns": [
+   "cod",
+   "stage1_operare",
+   "stage2_registrator",
+   "n_resolved",
+   "median_handling_days",
+   "pending_total",
+   "tip_blocaj"
+  ],
+  "rows": [
+   {
+    "cod": "B",
+    "stage1_operare": 63,
+    "stage2_registrator": 31,
+    "n_resolved": 107,
+    "median_handling_days": 14.0,
+    "pending_total": 94,
+    "tip_blocaj": "operare"
+   },
+   {
+    "cod": "CJ",
+    "stage1_operare": 26,
+    "stage2_registrator": 7,
+    "n_resolved": 19,
+    "median_handling_days": 25.0,
+    "pending_total": 33,
+    "tip_blocaj": "operare"
+   },
+   {
+    "cod": "IF",
+    "stage1_operare": 21,
+    "stage2_registrator": 10,
+    "n_resolved": 23,
+    "median_handling_days": 10.0,
+    "pending_total": 31,
+    "tip_blocaj": "operare"
+   },
+   {
+    "cod": "TM",
+    "stage1_operare": 13,
+    "stage2_registrator": 18,
+    "n_resolved": 17,
+    "median_handling_days": 25.0,
+    "pending_total": 31,
+    "tip_blocaj": "mixt"
+   },
+   {
+    "cod": "BH",
+    "stage1_operare": 11,
+    "stage2_registrator": 15,
+    "n_resolved": 18,
+    "median_handling_days": 15.0,
+    "pending_total": 26,
+    "tip_blocaj": "mixt"
+   },
+   {
+    "cod": "BV",
+    "stage1_operare": 14,
+    "stage2_registrator": 10,
+    "n_resolved": 26,
+    "median_handling_days": 12.0,
+    "pending_total": 24,
+    "tip_blocaj": "mixt"
+   },
+   {
+    "cod": "DJ",
+    "stage1_operare": 20,
+    "stage2_registrator": 1,
+    "n_resolved": 17,
+    "median_handling_days": 11.0,
+    "pending_total": 21,
+    "tip_blocaj": "operare"
+   },
+   {
+    "cod": "PH",
+    "stage1_operare": 18,
+    "stage2_registrator": 0,
+    "n_resolved": 11,
+    "median_handling_days": 22.0,
+    "pending_total": 18,
+    "tip_blocaj": "operare"
+   },
+   {
+    "cod": "MS",
+    "stage1_operare": 3,
+    "stage2_registrator": 13,
+    "n_resolved": 8,
+    "median_handling_days": 7.0,
+    "pending_total": 16,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "AG",
+    "stage1_operare": 5,
+    "stage2_registrator": 10,
+    "n_resolved": 14,
+    "median_handling_days": 12.5,
+    "pending_total": 15,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "BC",
+    "stage1_operare": 0,
+    "stage2_registrator": 15,
+    "n_resolved": 7,
+    "median_handling_days": 5.0,
+    "pending_total": 15,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "SV",
+    "stage1_operare": 7,
+    "stage2_registrator": 7,
+    "n_resolved": 10,
+    "median_handling_days": 11.5,
+    "pending_total": 14,
+    "tip_blocaj": "mixt"
+   },
+   {
+    "cod": "CT",
+    "stage1_operare": 12,
+    "stage2_registrator": 2,
+    "n_resolved": 14,
+    "median_handling_days": 16.0,
+    "pending_total": 14,
+    "tip_blocaj": "operare"
+   },
+   {
+    "cod": "AR",
+    "stage1_operare": 3,
+    "stage2_registrator": 11,
+    "n_resolved": 9,
+    "median_handling_days": 14.0,
+    "pending_total": 14,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "MM",
+    "stage1_operare": 3,
+    "stage2_registrator": 9,
+    "n_resolved": 10,
+    "median_handling_days": 19.5,
+    "pending_total": 12,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "GJ",
+    "stage1_operare": 0,
+    "stage2_registrator": 12,
+    "n_resolved": 8,
+    "median_handling_days": 17.0,
+    "pending_total": 12,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "NT",
+    "stage1_operare": 4,
+    "stage2_registrator": 6,
+    "n_resolved": 7,
+    "median_handling_days": 10.0,
+    "pending_total": 10,
+    "tip_blocaj": "mixt"
+   },
+   {
+    "cod": "IS",
+    "stage1_operare": 1,
+    "stage2_registrator": 9,
+    "n_resolved": 19,
+    "median_handling_days": 19.0,
+    "pending_total": 10,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "SB",
+    "stage1_operare": 6,
+    "stage2_registrator": 3,
+    "n_resolved": 11,
+    "median_handling_days": 9.0,
+    "pending_total": 9,
+    "tip_blocaj": "operare"
+   },
+   {
+    "cod": "DB",
+    "stage1_operare": 4,
+    "stage2_registrator": 5,
+    "n_resolved": 5,
+    "median_handling_days": 29.0,
+    "pending_total": 9,
+    "tip_blocaj": "mixt"
+   },
+   {
+    "cod": "AB",
+    "stage1_operare": 5,
+    "stage2_registrator": 4,
+    "n_resolved": 7,
+    "median_handling_days": 20.0,
+    "pending_total": 9,
+    "tip_blocaj": "mixt"
+   },
+   {
+    "cod": "HR",
+    "stage1_operare": 0,
+    "stage2_registrator": 8,
+    "n_resolved": 6,
+    "median_handling_days": 10.5,
+    "pending_total": 8,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "HD",
+    "stage1_operare": 2,
+    "stage2_registrator": 6,
+    "n_resolved": 9,
+    "median_handling_days": 6.0,
+    "pending_total": 8,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "BZ",
+    "stage1_operare": 1,
+    "stage2_registrator": 7,
+    "n_resolved": 11,
+    "median_handling_days": 6.0,
+    "pending_total": 8,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "GL",
+    "stage1_operare": 0,
+    "stage2_registrator": 7,
+    "n_resolved": 11,
+    "median_handling_days": 28.0,
+    "pending_total": 7,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "OT",
+    "stage1_operare": 0,
+    "stage2_registrator": 7,
+    "n_resolved": 2,
+    "median_handling_days": 6.5,
+    "pending_total": 7,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "SM",
+    "stage1_operare": 2,
+    "stage2_registrator": 5,
+    "n_resolved": 9,
+    "median_handling_days": 21.0,
+    "pending_total": 7,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "SJ",
+    "stage1_operare": 0,
+    "stage2_registrator": 6,
+    "n_resolved": 7,
+    "median_handling_days": 16.0,
+    "pending_total": 6,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "VN",
+    "stage1_operare": 3,
+    "stage2_registrator": 3,
+    "n_resolved": 9,
+    "median_handling_days": 15.0,
+    "pending_total": 6,
+    "tip_blocaj": "mixt"
+   },
+   {
+    "cod": "BN",
+    "stage1_operare": 5,
+    "stage2_registrator": 1,
+    "n_resolved": 9,
+    "median_handling_days": 32.0,
+    "pending_total": 6,
+    "tip_blocaj": "operare"
+   },
+   {
+    "cod": "BR",
+    "stage1_operare": 2,
+    "stage2_registrator": 4,
+    "n_resolved": 4,
+    "median_handling_days": 5.5,
+    "pending_total": 6,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "GR",
+    "stage1_operare": 0,
+    "stage2_registrator": 5,
+    "n_resolved": 6,
+    "median_handling_days": 16.5,
+    "pending_total": 5,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "CL",
+    "stage1_operare": 1,
+    "stage2_registrator": 4,
+    "n_resolved": 6,
+    "median_handling_days": 18.0,
+    "pending_total": 5,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "BT",
+    "stage1_operare": 0,
+    "stage2_registrator": 4,
+    "n_resolved": 9,
+    "median_handling_days": 14.0,
+    "pending_total": 4,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "CV",
+    "stage1_operare": 0,
+    "stage2_registrator": 4,
+    "n_resolved": 2,
+    "median_handling_days": 21.0,
+    "pending_total": 4,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "IL",
+    "stage1_operare": 0,
+    "stage2_registrator": 3,
+    "n_resolved": 5,
+    "median_handling_days": 6.0,
+    "pending_total": 3,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "TL",
+    "stage1_operare": 0,
+    "stage2_registrator": 3,
+    "n_resolved": 7,
+    "median_handling_days": 15.0,
+    "pending_total": 3,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "TR",
+    "stage1_operare": 2,
+    "stage2_registrator": 1,
+    "n_resolved": 4,
+    "median_handling_days": 25.0,
+    "pending_total": 3,
+    "tip_blocaj": "operare"
+   },
+   {
+    "cod": "MH",
+    "stage1_operare": 0,
+    "stage2_registrator": 3,
+    "n_resolved": 5,
+    "median_handling_days": 15.0,
+    "pending_total": 3,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "CS",
+    "stage1_operare": 0,
+    "stage2_registrator": 2,
+    "n_resolved": 3,
+    "median_handling_days": 24.0,
+    "pending_total": 2,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "VL",
+    "stage1_operare": 0,
+    "stage2_registrator": 2,
+    "n_resolved": 12,
+    "median_handling_days": 26.0,
+    "pending_total": 2,
+    "tip_blocaj": "registrator"
+   },
+   {
+    "cod": "VS",
+    "stage1_operare": 2,
+    "stage2_registrator": 0,
+    "n_resolved": 2,
+    "median_handling_days": 26.5,
+    "pending_total": 2,
+    "tip_blocaj": "operare"
+   }
+  ]
+ }
+}

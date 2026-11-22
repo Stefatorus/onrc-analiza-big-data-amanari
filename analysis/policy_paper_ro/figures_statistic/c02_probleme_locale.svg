@@ -1,0 +1,788 @@
+<svg class="fig" xmlns:xlink="http://www.w3.org/1999/xlink"   viewBox="0 0 470.551181 360" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-22T15:49:06.661100</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.8.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 360 
+L 470.551181 360 
+L 470.551181 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 60.542 329.048 
+L 443.12757 329.048 
+L 443.12757 7.992 
+L 60.542 7.992 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 69.449203 329.048 
+L 69.449203 7.992 
+" clip-path="url(#p8df8d6f042)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="mcc5f106cf7" d="M 0 0 
+L 0 2.5 
+" style="stroke: #46505c; stroke-width: 0.5"/>
+      </defs>
+      <g>
+       <use xlink:href="#mcc5f106cf7" x="69.449203" y="329.048" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="69.449203" y="340.058469" transform="rotate(-0 69.449203 340.058469)">−2</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 130.04242 329.048 
+L 130.04242 7.992 
+" clip-path="url(#p8df8d6f042)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mcc5f106cf7" x="130.04242" y="329.048" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="130.04242" y="340.058469" transform="rotate(-0 130.04242 340.058469)">−1</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 190.635636 329.048 
+L 190.635636 7.992 
+" clip-path="url(#p8df8d6f042)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mcc5f106cf7" x="190.635636" y="329.048" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="190.635636" y="340.058469" transform="rotate(-0 190.635636 340.058469)">0</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 251.228853 329.048 
+L 251.228853 7.992 
+" clip-path="url(#p8df8d6f042)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mcc5f106cf7" x="251.228853" y="329.048" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="251.228853" y="340.058469" transform="rotate(-0 251.228853 340.058469)">1</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 311.82207 329.048 
+L 311.82207 7.992 
+" clip-path="url(#p8df8d6f042)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mcc5f106cf7" x="311.82207" y="329.048" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="311.82207" y="340.058469" transform="rotate(-0 311.82207 340.058469)">2</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 372.415286 329.048 
+L 372.415286 7.992 
+" clip-path="url(#p8df8d6f042)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#mcc5f106cf7" x="372.415286" y="329.048" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="372.415286" y="340.058469" transform="rotate(-0 372.415286 340.058469)">3</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_13">
+      <path d="M 433.008503 329.048 
+L 433.008503 7.992 
+" clip-path="url(#p8df8d6f042)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#mcc5f106cf7" x="433.008503" y="329.048" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="433.008503" y="340.058469" transform="rotate(-0 433.008503 340.058469)">4</text>
+     </g>
+    </g>
+    <g id="text_8">
+     <text style="font: 6.2px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="251.834785" y="349.963125" transform="rotate(-0 251.834785 349.963125)">zile peste mediana națională, în medie pe lună, ianuarie 2025 – iulie 2026 (roșu = episoade locale marcate)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_15"/>
+     <g id="text_9">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="313.904419" transform="rotate(-0 57.042 313.904419)">Argeș</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_16"/>
+     <g id="text_10">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="306.908515" transform="rotate(-0 57.042 306.908515)">Neamț</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_17"/>
+     <g id="text_11">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="299.912612" transform="rotate(-0 57.042 299.912612)">Vâlcea</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_18"/>
+     <g id="text_12">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="292.916708" transform="rotate(-0 57.042 292.916708)">Bacău</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_19"/>
+     <g id="text_13">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="285.954321" transform="rotate(-0 57.042 285.954321)">Gorj</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_20"/>
+     <g id="text_14">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="278.924902" transform="rotate(-0 57.042 278.924902)">Alba</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_21"/>
+     <g id="text_15">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="271.928998" transform="rotate(-0 57.042 271.928998)">Arad</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_22"/>
+     <g id="text_16">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="264.96661" transform="rotate(-0 57.042 264.96661)">Călărași</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_23"/>
+     <g id="text_17">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="257.937191" transform="rotate(-0 57.042 257.937191)">Maramureș</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_24"/>
+     <g id="text_18">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="250.941288" transform="rotate(-0 57.042 250.941288)">Sibiu</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_25"/>
+     <g id="text_19">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="243.945384" transform="rotate(-0 57.042 243.945384)">Covasna</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_26"/>
+     <g id="text_20">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="236.949481" transform="rotate(-0 57.042 236.949481)">Hunedoara</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_27"/>
+     <g id="text_21">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="229.953578" transform="rotate(-0 57.042 229.953578)">Buzău</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_28"/>
+     <g id="text_22">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="222.957674" transform="rotate(-0 57.042 222.957674)">Harghita</text>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_29"/>
+     <g id="text_23">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="215.961771" transform="rotate(-0 57.042 215.961771)">Olt</text>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_30"/>
+     <g id="text_24">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="208.965867" transform="rotate(-0 57.042 208.965867)">Iași</text>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_31"/>
+     <g id="text_25">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="202.003479" transform="rotate(-0 57.042 202.003479)">Sălaj</text>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_32"/>
+     <g id="text_26">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="194.97406" transform="rotate(-0 57.042 194.97406)">Brăila</text>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_33"/>
+     <g id="text_27">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="187.988899" transform="rotate(-0 57.042 187.988899)">Dâmbovița</text>
+     </g>
+    </g>
+    <g id="ytick_20">
+     <g id="line2d_34"/>
+     <g id="text_28">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="181.015769" transform="rotate(-0 57.042 181.015769)">Cluj</text>
+     </g>
+    </g>
+    <g id="ytick_21">
+     <g id="line2d_35"/>
+     <g id="text_29">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="173.98635" transform="rotate(-0 57.042 173.98635)">Botoșani</text>
+     </g>
+    </g>
+    <g id="ytick_22">
+     <g id="line2d_36"/>
+     <g id="text_30">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="166.990447" transform="rotate(-0 57.042 166.990447)">Mureș</text>
+     </g>
+    </g>
+    <g id="ytick_23">
+     <g id="line2d_37"/>
+     <g id="text_31">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="160.028059" transform="rotate(-0 57.042 160.028059)">Caraș-Severin</text>
+     </g>
+    </g>
+    <g id="ytick_24">
+     <g id="line2d_38"/>
+     <g id="text_32">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="152.99864" transform="rotate(-0 57.042 152.99864)">Timiș</text>
+     </g>
+    </g>
+    <g id="ytick_25">
+     <g id="line2d_39"/>
+     <g id="text_33">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="146.002736" transform="rotate(-0 57.042 146.002736)">Ialomița</text>
+     </g>
+    </g>
+    <g id="ytick_26">
+     <g id="line2d_40"/>
+     <g id="text_34">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="139.006833" transform="rotate(-0 57.042 139.006833)">Suceava</text>
+     </g>
+    </g>
+    <g id="ytick_27">
+     <g id="line2d_41"/>
+     <g id="text_35">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="132.01093" transform="rotate(-0 57.042 132.01093)">Vaslui</text>
+     </g>
+    </g>
+    <g id="ytick_28">
+     <g id="line2d_42"/>
+     <g id="text_36">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="125.015026" transform="rotate(-0 57.042 125.015026)">Vrancea</text>
+     </g>
+    </g>
+    <g id="ytick_29">
+     <g id="line2d_43"/>
+     <g id="text_37">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="118.019123" transform="rotate(-0 57.042 118.019123)">Bihor</text>
+     </g>
+    </g>
+    <g id="ytick_30">
+     <g id="line2d_44"/>
+     <g id="text_38">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="111.023219" transform="rotate(-0 57.042 111.023219)">Dolj</text>
+     </g>
+    </g>
+    <g id="ytick_31">
+     <g id="line2d_45"/>
+     <g id="text_39">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="104.027316" transform="rotate(-0 57.042 104.027316)">Mehedinți</text>
+     </g>
+    </g>
+    <g id="ytick_32">
+     <g id="line2d_46"/>
+     <g id="text_40">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="97.031412" transform="rotate(-0 57.042 97.031412)">Prahova</text>
+     </g>
+    </g>
+    <g id="ytick_33">
+     <g id="line2d_47"/>
+     <g id="text_41">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="90.069025" transform="rotate(-0 57.042 90.069025)">Giurgiu</text>
+     </g>
+    </g>
+    <g id="ytick_34">
+     <g id="line2d_48"/>
+     <g id="text_42">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="83.039606" transform="rotate(-0 57.042 83.039606)">Municipiul București</text>
+     </g>
+    </g>
+    <g id="ytick_35">
+     <g id="line2d_49"/>
+     <g id="text_43">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="76.043702" transform="rotate(-0 57.042 76.043702)">Ilfov</text>
+     </g>
+    </g>
+    <g id="ytick_36">
+     <g id="line2d_50"/>
+     <g id="text_44">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="69.047799" transform="rotate(-0 57.042 69.047799)">Bistrița-Năsăud</text>
+     </g>
+    </g>
+    <g id="ytick_37">
+     <g id="line2d_51"/>
+     <g id="text_45">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="62.051895" transform="rotate(-0 57.042 62.051895)">Satu Mare</text>
+     </g>
+    </g>
+    <g id="ytick_38">
+     <g id="line2d_52"/>
+     <g id="text_46">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="55.055992" transform="rotate(-0 57.042 55.055992)">Tulcea</text>
+     </g>
+    </g>
+    <g id="ytick_39">
+     <g id="line2d_53"/>
+     <g id="text_47">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="48.093604" transform="rotate(-0 57.042 48.093604)">Galați</text>
+     </g>
+    </g>
+    <g id="ytick_40">
+     <g id="line2d_54"/>
+     <g id="text_48">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="41.064185" transform="rotate(-0 57.042 41.064185)">Teleorman</text>
+     </g>
+    </g>
+    <g id="ytick_41">
+     <g id="line2d_55"/>
+     <g id="text_49">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="34.068282" transform="rotate(-0 57.042 34.068282)">Brașov</text>
+     </g>
+    </g>
+    <g id="ytick_42">
+     <g id="line2d_56"/>
+     <g id="text_50">
+      <text style="fill: #46505c; font: 5.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="57.042" y="27.105894" transform="rotate(-0 57.042 27.105894)">Constanța</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 190.635636 314.454545 
+L 77.932253 314.454545 
+L 77.932253 309.417495 
+L 190.635636 309.417495 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 190.635636 307.458642 
+L 80.355982 307.458642 
+L 80.355982 302.421592 
+L 190.635636 302.421592 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 190.635636 300.462739 
+L 80.355982 300.462739 
+L 80.355982 295.425688 
+L 190.635636 295.425688 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 190.635636 293.466835 
+L 80.355982 293.466835 
+L 80.355982 288.429785 
+L 190.635636 288.429785 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 190.635636 286.470932 
+L 80.961914 286.470932 
+L 80.961914 281.433881 
+L 190.635636 281.433881 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 190.635636 279.475028 
+L 83.991575 279.475028 
+L 83.991575 274.437978 
+L 190.635636 274.437978 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 190.635636 272.479125 
+L 90.050897 272.479125 
+L 90.050897 267.442074 
+L 190.635636 267.442074 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 190.635636 265.483221 
+L 93.080557 265.483221 
+L 93.080557 260.446171 
+L 190.635636 260.446171 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 190.635636 258.487318 
+L 96.71615 258.487318 
+L 96.71615 253.450268 
+L 190.635636 253.450268 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 190.635636 251.491415 
+L 97.322083 251.491415 
+L 97.322083 246.454364 
+L 190.635636 246.454364 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 190.635636 244.495511 
+L 107.622929 244.495511 
+L 107.622929 239.458461 
+L 190.635636 239.458461 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 190.635636 237.499608 
+L 111.864455 237.499608 
+L 111.864455 232.462557 
+L 190.635636 232.462557 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 190.635636 230.503704 
+L 111.864455 230.503704 
+L 111.864455 225.466654 
+L 190.635636 225.466654 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 190.635636 223.507801 
+L 117.317844 223.507801 
+L 117.317844 218.47075 
+L 190.635636 218.47075 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 190.635636 216.511897 
+L 122.771234 216.511897 
+L 122.771234 211.474847 
+L 190.635636 211.474847 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 190.635636 209.515994 
+L 130.648352 209.515994 
+L 130.648352 204.478944 
+L 190.635636 204.478944 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 190.635636 202.520091 
+L 132.466148 202.520091 
+L 132.466148 197.48304 
+L 190.635636 197.48304 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 190.635636 195.524187 
+L 138.52547 195.524187 
+L 138.52547 190.487137 
+L 190.635636 190.487137 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 190.635636 188.528284 
+L 142.161063 188.528284 
+L 142.161063 183.491233 
+L 190.635636 183.491233 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 190.635636 181.53238 
+L 156.703435 181.53238 
+L 156.703435 176.49533 
+L 190.635636 176.49533 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 190.635636 174.536477 
+L 157.309367 174.536477 
+L 157.309367 169.499426 
+L 190.635636 169.499426 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 190.635636 167.540574 
+L 161.550892 167.540574 
+L 161.550892 162.503523 
+L 190.635636 162.503523 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 190.635636 160.54467 
+L 162.156824 160.54467 
+L 162.156824 155.50762 
+L 190.635636 155.50762 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 190.635636 153.548767 
+L 165.186485 153.548767 
+L 165.186485 148.511716 
+L 190.635636 148.511716 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 190.635636 146.552863 
+L 167.610214 146.552863 
+L 167.610214 141.515813 
+L 190.635636 141.515813 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 190.635636 139.55696 
+L 171.245807 139.55696 
+L 171.245807 134.519909 
+L 190.635636 134.519909 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_29">
+    <path d="M 190.635636 132.561056 
+L 174.8814 132.561056 
+L 174.8814 127.524006 
+L 190.635636 127.524006 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_30">
+    <path d="M 190.635636 125.565153 
+L 199.118687 125.565153 
+L 199.118687 120.528103 
+L 190.635636 120.528103 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_31">
+    <path d="M 190.635636 118.56925 
+L 202.148347 118.56925 
+L 202.148347 113.532199 
+L 190.635636 113.532199 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_32">
+    <path d="M 190.635636 111.573346 
+L 216.084787 111.573346 
+L 216.084787 106.536296 
+L 190.635636 106.536296 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_33">
+    <path d="M 190.635636 104.577443 
+L 218.508516 104.577443 
+L 218.508516 99.540392 
+L 190.635636 99.540392 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_34">
+    <path d="M 190.635636 97.581539 
+L 226.385634 97.581539 
+L 226.385634 92.544489 
+L 190.635636 92.544489 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #b86e14"/>
+   </g>
+   <g id="patch_35">
+    <path d="M 190.635636 90.585636 
+L 246.381396 90.585636 
+L 246.381396 85.548585 
+L 190.635636 85.548585 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #b86e14"/>
+   </g>
+   <g id="patch_36">
+    <path d="M 190.635636 83.589732 
+L 248.199192 83.589732 
+L 248.199192 78.552682 
+L 190.635636 78.552682 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #b86e14"/>
+   </g>
+   <g id="patch_37">
+    <path d="M 190.635636 76.593829 
+L 259.711903 76.593829 
+L 259.711903 71.556779 
+L 190.635636 71.556779 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #b86e14"/>
+   </g>
+   <g id="patch_38">
+    <path d="M 190.635636 69.597926 
+L 261.5297 69.597926 
+L 261.5297 64.560875 
+L 190.635636 64.560875 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #b86e14"/>
+   </g>
+   <g id="patch_39">
+    <path d="M 190.635636 62.602022 
+L 272.436479 62.602022 
+L 272.436479 57.564972 
+L 190.635636 57.564972 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #b86e14"/>
+   </g>
+   <g id="patch_40">
+    <path d="M 190.635636 55.606119 
+L 283.94919 55.606119 
+L 283.94919 50.569068 
+L 190.635636 50.569068 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #a63228"/>
+   </g>
+   <g id="patch_41">
+    <path d="M 190.635636 48.610215 
+L 328.78817 48.610215 
+L 328.78817 43.573165 
+L 190.635636 43.573165 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #a63228"/>
+   </g>
+   <g id="patch_42">
+    <path d="M 190.635636 41.614312 
+L 339.694949 41.614312 
+L 339.694949 36.577261 
+L 190.635636 36.577261 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #a63228"/>
+   </g>
+   <g id="patch_43">
+    <path d="M 190.635636 34.618408 
+L 354.843253 34.618408 
+L 354.843253 29.581358 
+L 190.635636 29.581358 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #a63228"/>
+   </g>
+   <g id="patch_44">
+    <path d="M 190.635636 27.622505 
+L 425.737317 27.622505 
+L 425.737317 22.585455 
+L 190.635636 22.585455 
+z
+" clip-path="url(#p8df8d6f042)" style="fill: #a63228"/>
+   </g>
+   <g id="line2d_57">
+    <path d="M 190.635636 329.048 
+L 190.635636 7.992 
+" clip-path="url(#p8df8d6f042)" style="fill: none; stroke: #687380; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="patch_45">
+    <path d="M 60.542 329.048 
+L 60.542 7.992 
+" style="fill: none; stroke: #c2beb4; stroke-width: 0.55; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_46">
+    <path d="M 60.542 329.048 
+L 443.12757 329.048 
+" style="fill: none; stroke: #14324d; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_51">
+    <text style="fill: #46505c; font: 5.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: start" x="262.741564" y="75.504194" transform="rotate(-0 262.741564 75.504194)">vârf apr. 2025</text>
+   </g>
+   <g id="text_52">
+    <text style="fill: #46505c; font: 5.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: start" x="264.559361" y="68.475385" transform="rotate(-0 264.559361 68.475385)">vârf mar. 2026</text>
+   </g>
+   <g id="text_53">
+    <text style="fill: #46505c; font: 5.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: start" x="275.46614" y="61.512388" transform="rotate(-0 275.46614 61.512388)">vârf apr. 2026</text>
+   </g>
+   <g id="text_54">
+    <text style="fill: #46505c; font: 5.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: start" x="286.978851" y="54.516484" transform="rotate(-0 286.978851 54.516484)">vârf apr. 2025</text>
+   </g>
+   <g id="text_55">
+    <text style="fill: #46505c; font: 5.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: start" x="331.817831" y="47.487674" transform="rotate(-0 331.817831 47.487674)">vârf mar. 2026</text>
+   </g>
+   <g id="text_56">
+    <text style="fill: #46505c; font: 5.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: start" x="342.72461" y="40.524677" transform="rotate(-0 342.72461 40.524677)">vârf apr. 2026</text>
+   </g>
+   <g id="text_57">
+    <text style="fill: #46505c; font: 5.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: start" x="357.872914" y="33.528774" transform="rotate(-0 357.872914 33.528774)">vârf apr. 2026</text>
+   </g>
+   <g id="text_58">
+    <text style="fill: #46505c; font: 5.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: start" x="428.766978" y="26.53287" transform="rotate(-0 428.766978 26.53287)">vârf apr. 2025</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p8df8d6f042">
+   <rect x="60.542" y="7.992" width="382.58557" height="321.056"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,47 @@
+{
+  "snapshot_rows": 4067013,
+  "duplicate_rows": 3498,
+  "scope_rows": 4019256,
+  "excluded_territory_rows": 2,
+  "omitted_waits": 80,
+  "finals_full_nov_days": 12,
+  "finals_full_nov": 52912,
+  "postponements_full_nov": 13591,
+  "finals_nov_day": 4409.333333333333,
+  "portal_nov_workday": 19954.75,
+  "crisis_inm_n": 32025,
+  "crisis_inm_gt5": 30146,
+  "crisis_inm_gt10": 22093,
+  "crossings": {
+    "2024_5": "2024-08-12",
+    "2026_5": "2026-07-27",
+    "daily_2026_5": "2026-07-24",
+    "2024_10": "2024-08-26",
+    "2026_10": "2026-08-31",
+    "daily_2026_10": "2026-08-27"
+  },
+  "recent_wait": {
+    "CERERE265": 57.03320601851852,
+    "INMATRIC265": 41.839756944444446
+  },
+  "month_portal": {
+    "2026-09": 613835,
+    "2026-10": 442062,
+    "2026-11": 242495
+  },
+  "month_additive_nov": {
+    "month": "2026-11",
+    "workdays": 12,
+    "portal_apps_obs": 242495,
+    "reg_decided_so_far": 3508,
+    "pred_non_reg": 194003,
+    "reg_inflow_est": 48492,
+    "reg_inflow_p05": 36737,
+    "reg_inflow_p95": 60248,
+    "reg_per_wd_est": 4041.0,
+    "reg_per_wd_p05": 3061.0,
+    "reg_per_wd_p95": 5021.0,
+    "implied_reg_share_pct": 20.0,
+    "still_in_queue_from_month": 44984
+  }
+}

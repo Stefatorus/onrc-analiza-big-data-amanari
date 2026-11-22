@@ -1,0 +1,60 @@
+== C101 strict 2026-04-27 2026-06-30 ==3wd 54.0  among <=3wd share ==3 93.8
+== C101 strict 2026-04-27 2026-05-31 ==3wd 54.5  among <=3wd share ==3 95.5
+== C101 strict 2026-04-27 2026-07-31 ==3wd 37.4  among <=3wd share ==3 92.6
+== C101 amanari 2026-04-27 2026-06-30 ==3wd 70.5  among <=3wd share ==3 95.3
+== C101 amanari 2026-04-27 2026-05-31 ==3wd 70.7  among <=3wd share ==3 96.9
+== C101 amanari 2026-04-27 2026-07-31 ==3wd 50.3  among <=3wd share ==3 94.8
+== C101 inmatric 2026-04-27 2026-06-30 ==3wd 48.5  among <=3wd share ==3 94.3
+== C101 inmatric 2026-04-27 2026-05-31 ==3wd 49.5  among <=3wd share ==3 94.6
+== C101 inmatric 2026-04-27 2026-07-31 ==3wd 34.4  among <=3wd share ==3 94.2
+== C101 all decisions 2026-04-27 2026-06-30 ==3wd 57.5  among <=3wd share ==3 94.2
+== C101 all decisions 2026-04-27 2026-05-31 ==3wd 57.9  among <=3wd share ==3 95.9
+== C101 all decisions 2026-04-27 2026-07-31 ==3wd 40.0  among <=3wd share ==3 93.2
+   by filing date 27.04-30.06 strict 52.3
+   by filing date 27.04-30.06 amanari 68.3
+== C102 CERERE265 rej fast 0.8 rej slow 9.8 F fast 13.0 F slow 21.4 F all 20.7
+   tau app vs res 0.427  tau app_nr vs res 0.427
+== C102 INMATRIC265 rej fast 0.9 rej slow 5.8 F fast 44.4 F slow 44.9 F all 44.8
+   tau app vs res 0.268  tau app_nr vs res 0.268
+   jtype values in fast lane {'J': 0.78, 'F': 0.207, 'C': 0.006, nan: 0.006}
+   jtype values all {'J': 0.742, 'F': 0.244, nan: 0.011, 'C': 0.003}
+== C88 ratio max {'TR': (4.62, '2026-04'), 'CT': (4.26, '2025-05'), 'GL': (4.07, '2026-03'), 'BV': (2.94, '2026-04'), 'PH': (2.8, '2026-04'), 'GR': (2.78, '2026-04')}
+   z(log ratio) max {'BN': (5.63, '2026-07'), 'CT': (4.29, '2026-06'), 'DJ': (4.07, '2026-05'), 'MH': (3.7, '2025-10'), 'TR': (3.55, '2025-11'), 'B': (2.88, '2025-07')}
+   z(diff) max {'BN': (6.07, '2026-07'), 'CT': (4.62, '2026-06'), 'DJ': (4.37, '2026-05'), 'TR': (4.28, '2025-11'), 'MH': (4.25, '2025-10'), 'B': (3.14, '2025-07')}
+   robust z max {'BN': (86.9, '2026-07'), 'CT': (51.22, '2025-05'), 'BV': (29.23, '2025-05'), 'TL': (25.21, '2025-05'), 'SM': (25.0, '2025-05'), 'DJ': (23.83, '2025-06')}
+== C18 2024-07-29 2024-11-30 N timing 236467 days with dec 88 per day 2687 median 12.11
+== C18 2024-07-18 2024-11-30 N timing 236483 days with dec 89 per day 2657 median 12.11
+== C18 2024-07-26 2024-11-30 N timing 236467 days with dec 88 per day 2687 median 12.11
+== C19 N timing/days with dec 1010770 247 4092
+== C34 2026-10-31 2026-11-06 strict 22043 all decisions 27224  stage1 out/stage2 out (strict) 1.199  (all) 1.161
+== C34 2026-10-30 2026-11-05 strict 21152 all decisions 26296  stage1 out/stage2 out (strict) 1.208  (all) 1.167
+== C34 2026-11-02 2026-11-06 strict 22043 all decisions 27224  stage1 out/stage2 out (strict) 1.199  (all) 1.161
+== C70 backtest
+        origin     def  pred12     obs  dev_vs_pred%  abs_err_vs_obs%  wd
+0   2026-03-01  strict  4517.1  4417.2         -2.21             2.26  20
+1   2026-03-01   broad  4535.7  4436.0         -2.20             2.25  20
+2   2026-03-29  strict  4431.7  4222.6         -4.72             4.95  18
+3   2026-03-29   broad  4451.1  4239.2         -4.76             5.00  18
+4   2026-04-26  strict  4119.2  4185.2          1.60             1.58  19
+5   2026-04-26   broad  4138.1  4205.2          1.62             1.60  19
+6   2026-05-24  strict  4227.3  4134.5         -2.20             2.25  19
+7   2026-05-24   broad  4249.1  4152.2         -2.28             2.33  19
+8   2026-06-21  strict  4078.6  3791.2         -7.05             7.58  20
+9   2026-06-21   broad  4097.4  3802.7         -7.19             7.75  20
+10  2026-07-19  strict  3900.4  3601.0         -7.68             8.32  20
+11  2026-07-19   broad  3913.1  3605.5         -7.86             8.53  20
+12  2026-08-16  strict  3570.6  3529.2         -1.16             1.17  20
+13  2026-08-16   broad  3574.3  3533.8         -1.13             1.15  20
+14  2026-09-13  strict  3648.5  4174.8         14.43            12.61  20
+15  2026-09-13   broad  3654.6  4182.6         14.45            12.63  20
+16  2026-10-11  strict  4262.8  4165.8         -2.27             2.33  20
+17  2026-10-11   broad  4270.2  4170.7         -2.33             2.38  20
+    strict MAE% 4.78  obs>=pred 2 /9
+    broad MAE% 4.85  obs>=pred 2 /9
+== C71 filings per wd by month 2025 relative to Nov: {1: 1.177, 2: 1.329, 3: 1.259, 4: 1.009, 5: 0.981, 6: 0.935, 7: 0.895, 8: 0.887, 9: 0.942, 10: 0.929, 11: 1.0, 12: 1.027}
+   2023 rel Nov {4: 0.897, 5: 0.979, 6: 0.866, 7: 0.791, 8: 0.779, 9: 0.839, 10: 0.888, 11: 1.0, 12: 1.149}
+   2024 H1 per wd {1: 3665.0, 2: 3494.0, 3: 3418.0, 4: 3187.0, 5: 2936.0, 6: 2795.0}
+== C76 lambda finals per calendar day Oct1-Nov20 3087  x median W Nov(50.0)= 154337  x mean W Oct-Nov 118248
+   all decisions/cal day x 50 = 192046
+== truncation daily strict finals {Timestamp('2026-11-09 00:00:00'): 4760, Timestamp('2026-11-10 00:00:00'): 4004, Timestamp('2026-11-11 00:00:00'): 4472, Timestamp('2026-11-12 00:00:00'): 4669, Timestamp('2026-11-13 00:00:00'): 4275, Timestamp('2026-11-16 00:00:00'): 4855, Timestamp('2026-11-17 00:00:00'): 4458, Timestamp('2026-11-18 00:00:00'): 4727, Timestamp('2026-11-19 00:00:00'): 4118, Timestamp('2026-11-20 00:00:00'): 892}
+   C14 by day of decision {Timestamp('2026-11-16 00:00:00'): 56.68, Timestamp('2026-11-17 00:00:00'): 57.05, Timestamp('2026-11-18 00:00:00'): 57.96, Timestamp('2026-11-19 00:00:00'): 58.22, Timestamp('2026-11-20 00:00:00'): 56.95}

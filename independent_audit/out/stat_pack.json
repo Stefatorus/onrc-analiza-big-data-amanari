@@ -1,0 +1,5093 @@
+{
+ "calitatea_datelor": {
+  "meta": "Auditul arhivei BERC (analysis_decisions.pkl).",
+  "columns": [
+   "indicator",
+   "valoare",
+   "observație"
+  ],
+  "rows": [
+   {
+    "indicator": "Înregistrări în arhivă",
+    "valoare": "4077510",
+    "observație": ""
+   },
+   {
+    "indicator": "Fără dată de depunere sau de decizie",
+    "valoare": "0",
+    "observație": "excluse"
+   },
+   {
+    "indicator": "Decizii înainte de 2023-04-01",
+    "valoare": "47757",
+    "observație": "în afara ferestrei analizate"
+   },
+   {
+    "indicator": "Așteptare negativă (decizie înainte de depunere)",
+    "valoare": "13811",
+    "observație": "excluse din statisticile de timp"
+   },
+   {
+    "indicator": "Așteptare peste 400 de zile",
+    "valoare": "42",
+    "observație": "excluse din statisticile de timp (dosare istorice)"
+   },
+   {
+    "indicator": "Soluții cu grafie atipică (ADMIS, certificări cu ţ etc.)",
+    "valoare": "5",
+    "observație": "nu intră în nicio definiție de «finală»"
+   },
+   {
+    "indicator": "Decizii finale stricte (admis, respins, renunțat)",
+    "valoare": "3241580",
+    "observație": ""
+   },
+   {
+    "indicator": "Amânări (AUTO_AMANARI)",
+    "valoare": "821246",
+    "observație": ""
+   },
+   {
+    "indicator": "Ultima decizie din arhivă",
+    "valoare": "2026-11-20 17:21",
+    "observație": ""
+   }
+  ]
+ },
+ "categorii": {
+  "meta": "Decizii pe categorie de buletin, toată arhiva.",
+  "columns": [
+   "cat",
+   "decizii",
+   "pondere_pct"
+  ],
+  "rows": [
+   {
+    "cat": "AUTO_AMANARI",
+    "decizii": 821219,
+    "pondere_pct": 20.14
+   },
+   {
+    "cat": "CERERE265",
+    "decizii": 2691413,
+    "pondere_pct": 66.01
+   },
+   {
+    "cat": "CERERE_HJ265",
+    "decizii": 14424,
+    "pondere_pct": 0.35
+   },
+   {
+    "cat": "INMATRIC265",
+    "decizii": 550454,
+    "pondere_pct": 13.5
+   }
+  ]
+ },
+ "serie_lunara": {
+  "meta": "Pe luna DECIZIEI. Timpii: finale stricte, 0 ≤ W < 400 zile calendaristice. Noiembrie 2026 e parțial (până la ultima decizie din arhivă).",
+  "columns": [
+   "luna",
+   "zile_lucr_legale",
+   "zile_cu_decizii",
+   "finale_largi",
+   "finale_largi_pe_zi_cu_decizii",
+   "finale_stricte_pe_zi_lucr",
+   "amanari_pe_zi_lucr",
+   "cota_amanari_pct",
+   "cota_respinse_pct",
+   "W_p25",
+   "W_med",
+   "W_p75",
+   "W_p90",
+   "cota_le2z_pct",
+   "med_CERERE",
+   "med_INMATRIC"
+  ],
+  "rows": [
+   {
+    "luna": "2023-04",
+    "zile_lucr_legale": 18,
+    "zile_cu_decizii": 20,
+    "finale_largi": 53017,
+    "finale_largi_pe_zi_cu_decizii": 2651,
+    "finale_stricte_pe_zi_lucr": 2927,
+    "amanari_pe_zi_lucr": 736,
+    "cota_amanari_pct": 20.0,
+    "cota_respinse_pct": 6.25,
+    "W_p25": 1.51,
+    "W_med": 1.64,
+    "W_p75": 4.55,
+    "W_p90": 11.65,
+    "cota_le2z_pct": 59.8,
+    "med_CERERE": 1.6,
+    "med_INMATRIC": 1.6
+   },
+   {
+    "luna": "2023-05",
+    "zile_lucr_legale": 22,
+    "zile_cu_decizii": 23,
+    "finale_largi": 68181,
+    "finale_largi_pe_zi_cu_decizii": 2964,
+    "finale_stricte_pe_zi_lucr": 3074,
+    "amanari_pe_zi_lucr": 817,
+    "cota_amanari_pct": 20.9,
+    "cota_respinse_pct": 4.77,
+    "W_p25": 1.51,
+    "W_med": 1.64,
+    "W_p75": 3.67,
+    "W_p90": 8.34,
+    "cota_le2z_pct": 61.1,
+    "med_CERERE": 1.6,
+    "med_INMATRIC": 1.6
+   },
+   {
+    "luna": "2023-06",
+    "zile_lucr_legale": 20,
+    "zile_cu_decizii": 20,
+    "finale_largi": 57074,
+    "finale_largi_pe_zi_cu_decizii": 2854,
+    "finale_stricte_pe_zi_lucr": 2840,
+    "amanari_pe_zi_lucr": 775,
+    "cota_amanari_pct": 21.4,
+    "cota_respinse_pct": 6.25,
+    "W_p25": 1.52,
+    "W_med": 1.65,
+    "W_p75": 5.38,
+    "W_p90": 11.75,
+    "cota_le2z_pct": 59.9,
+    "med_CERERE": 1.7,
+    "med_INMATRIC": 1.6
+   },
+   {
+    "luna": "2023-07",
+    "zile_lucr_legale": 21,
+    "zile_cu_decizii": 21,
+    "finale_largi": 53488,
+    "finale_largi_pe_zi_cu_decizii": 2547,
+    "finale_stricte_pe_zi_lucr": 2543,
+    "amanari_pe_zi_lucr": 677,
+    "cota_amanari_pct": 21.0,
+    "cota_respinse_pct": 6.67,
+    "W_p25": 1.51,
+    "W_med": 1.65,
+    "W_p75": 3.65,
+    "W_p90": 11.47,
+    "cota_le2z_pct": 58.2,
+    "med_CERERE": 1.6,
+    "med_INMATRIC": 1.6
+   },
+   {
+    "luna": "2023-08",
+    "zile_lucr_legale": 22,
+    "zile_cu_decizii": 22,
+    "finale_largi": 54547,
+    "finale_largi_pe_zi_cu_decizii": 2479,
+    "finale_stricte_pe_zi_lucr": 2478,
+    "amanari_pe_zi_lucr": 646,
+    "cota_amanari_pct": 20.7,
+    "cota_respinse_pct": 5.54,
+    "W_p25": 1.5,
+    "W_med": 1.63,
+    "W_p75": 3.71,
+    "W_p90": 9.63,
+    "cota_le2z_pct": 62.9,
+    "med_CERERE": 1.6,
+    "med_INMATRIC": 1.6
+   },
+   {
+    "luna": "2023-09",
+    "zile_lucr_legale": 21,
+    "zile_cu_decizii": 21,
+    "finale_largi": 56591,
+    "finale_largi_pe_zi_cu_decizii": 2695,
+    "finale_stricte_pe_zi_lucr": 2680,
+    "amanari_pe_zi_lucr": 708,
+    "cota_amanari_pct": 20.8,
+    "cota_respinse_pct": 5.45,
+    "W_p25": 1.5,
+    "W_med": 1.62,
+    "W_p75": 3.59,
+    "W_p90": 8.56,
+    "cota_le2z_pct": 63.2,
+    "med_CERERE": 1.6,
+    "med_INMATRIC": 1.6
+   },
+   {
+    "luna": "2023-10",
+    "zile_lucr_legale": 22,
+    "zile_cu_decizii": 22,
+    "finale_largi": 62608,
+    "finale_largi_pe_zi_cu_decizii": 2846,
+    "finale_stricte_pe_zi_lucr": 2826,
+    "amanari_pe_zi_lucr": 737,
+    "cota_amanari_pct": 20.6,
+    "cota_respinse_pct": 5.62,
+    "W_p25": 1.51,
+    "W_med": 1.64,
+    "W_p75": 3.63,
+    "W_p90": 8.55,
+    "cota_le2z_pct": 59.9,
+    "med_CERERE": 1.6,
+    "med_INMATRIC": 1.6
+   },
+   {
+    "luna": "2023-11",
+    "zile_lucr_legale": 21,
+    "zile_cu_decizii": 21,
+    "finale_largi": 67033,
+    "finale_largi_pe_zi_cu_decizii": 3192,
+    "finale_stricte_pe_zi_lucr": 3171,
+    "amanari_pe_zi_lucr": 784,
+    "cota_amanari_pct": 19.7,
+    "cota_respinse_pct": 5.13,
+    "W_p25": 1.51,
+    "W_med": 1.63,
+    "W_p75": 3.59,
+    "W_p90": 8.37,
+    "cota_le2z_pct": 63.9,
+    "med_CERERE": 1.6,
+    "med_INMATRIC": 1.6
+   },
+   {
+    "luna": "2023-12",
+    "zile_lucr_legale": 18,
+    "zile_cu_decizii": 18,
+    "finale_largi": 67184,
+    "finale_largi_pe_zi_cu_decizii": 3732,
+    "finale_stricte_pe_zi_lucr": 3716,
+    "amanari_pe_zi_lucr": 856,
+    "cota_amanari_pct": 18.7,
+    "cota_respinse_pct": 5.17,
+    "W_p25": 1.51,
+    "W_med": 1.65,
+    "W_p75": 5.42,
+    "W_p90": 8.64,
+    "cota_le2z_pct": 62.5,
+    "med_CERERE": 1.6,
+    "med_INMATRIC": 1.7
+   },
+   {
+    "luna": "2024-01",
+    "zile_lucr_legale": 20,
+    "zile_cu_decizii": 20,
+    "finale_largi": 71163,
+    "finale_largi_pe_zi_cu_decizii": 3558,
+    "finale_stricte_pe_zi_lucr": 3543,
+    "amanari_pe_zi_lucr": 909,
+    "cota_amanari_pct": 20.3,
+    "cota_respinse_pct": 5.29,
+    "W_p25": 1.52,
+    "W_med": 1.66,
+    "W_p75": 3.68,
+    "W_p90": 9.5,
+    "cota_le2z_pct": 56.7,
+    "med_CERERE": 1.7,
+    "med_INMATRIC": 1.6
+   },
+   {
+    "luna": "2024-02",
+    "zile_lucr_legale": 21,
+    "zile_cu_decizii": 23,
+    "finale_largi": 74535,
+    "finale_largi_pe_zi_cu_decizii": 3241,
+    "finale_stricte_pe_zi_lucr": 3527,
+    "amanari_pe_zi_lucr": 911,
+    "cota_amanari_pct": 20.4,
+    "cota_respinse_pct": 5.71,
+    "W_p25": 1.51,
+    "W_med": 1.64,
+    "W_p75": 3.76,
+    "W_p90": 9.48,
+    "cota_le2z_pct": 61.4,
+    "med_CERERE": 1.6,
+    "med_INMATRIC": 1.6
+   },
+   {
+    "luna": "2024-03",
+    "zile_lucr_legale": 21,
+    "zile_cu_decizii": 22,
+    "finale_largi": 73167,
+    "finale_largi_pe_zi_cu_decizii": 3326,
+    "finale_stricte_pe_zi_lucr": 3464,
+    "amanari_pe_zi_lucr": 887,
+    "cota_amanari_pct": 20.3,
+    "cota_respinse_pct": 5.65,
+    "W_p25": 1.5,
+    "W_med": 1.62,
+    "W_p75": 3.59,
+    "W_p90": 9.36,
+    "cota_le2z_pct": 63.3,
+    "med_CERERE": 1.6,
+    "med_INMATRIC": 1.6
+   },
+   {
+    "luna": "2024-04",
+    "zile_lucr_legale": 22,
+    "zile_cu_decizii": 22,
+    "finale_largi": 71261,
+    "finale_largi_pe_zi_cu_decizii": 3239,
+    "finale_stricte_pe_zi_lucr": 3218,
+    "amanari_pe_zi_lucr": 780,
+    "cota_amanari_pct": 19.4,
+    "cota_respinse_pct": 5.93,
+    "W_p25": 1.51,
+    "W_med": 1.64,
+    "W_p75": 3.63,
+    "W_p90": 9.4,
+    "cota_le2z_pct": 60.3,
+    "med_CERERE": 1.6,
+    "med_INMATRIC": 1.6
+   },
+   {
+    "luna": "2024-05",
+    "zile_lucr_legale": 20,
+    "zile_cu_decizii": 20,
+    "finale_largi": 59649,
+    "finale_largi_pe_zi_cu_decizii": 2982,
+    "finale_stricte_pe_zi_lucr": 2962,
+    "amanari_pe_zi_lucr": 744,
+    "cota_amanari_pct": 20.0,
+    "cota_respinse_pct": 6.04,
+    "W_p25": 1.5,
+    "W_med": 1.63,
+    "W_p75": 3.68,
+    "W_p90": 11.52,
+    "cota_le2z_pct": 61.6,
+    "med_CERERE": 1.6,
+    "med_INMATRIC": 1.6
+   },
+   {
+    "luna": "2024-06",
+    "zile_lucr_legale": 19,
+    "zile_cu_decizii": 19,
+    "finale_largi": 53205,
+    "finale_largi_pe_zi_cu_decizii": 2800,
+    "finale_stricte_pe_zi_lucr": 2784,
+    "amanari_pe_zi_lucr": 783,
+    "cota_amanari_pct": 21.8,
+    "cota_respinse_pct": 6.43,
+    "W_p25": 1.5,
+    "W_med": 1.64,
+    "W_p75": 4.44,
+    "W_p90": 10.5,
+    "cota_le2z_pct": 60.3,
+    "med_CERERE": 1.6,
+    "med_INMATRIC": 1.6
+   },
+   {
+    "luna": "2024-07",
+    "zile_lucr_legale": 23,
+    "zile_cu_decizii": 24,
+    "finale_largi": 40452,
+    "finale_largi_pe_zi_cu_decizii": 1686,
+    "finale_stricte_pe_zi_lucr": 1755,
+    "amanari_pe_zi_lucr": 468,
+    "cota_amanari_pct": 21.0,
+    "cota_respinse_pct": 5.2,
+    "W_p25": 1.51,
+    "W_med": 1.66,
+    "W_p75": 3.68,
+    "W_p90": 11.39,
+    "cota_le2z_pct": 58.7,
+    "med_CERERE": 1.7,
+    "med_INMATRIC": 1.7
+   },
+   {
+    "luna": "2024-08",
+    "zile_lucr_legale": 21,
+    "zile_cu_decizii": 20,
+    "finale_largi": 30656,
+    "finale_largi_pe_zi_cu_decizii": 1533,
+    "finale_stricte_pe_zi_lucr": 1448,
+    "amanari_pe_zi_lucr": 456,
+    "cota_amanari_pct": 23.8,
+    "cota_respinse_pct": 0.01,
+    "W_p25": 3.28,
+    "W_med": 10.01,
+    "W_p75": 17.66,
+    "W_p90": 22.19,
+    "cota_le2z_pct": 16.4,
+    "med_CERERE": 9.2,
+    "med_INMATRIC": 12.2
+   },
+   {
+    "luna": "2024-09",
+    "zile_lucr_legale": 21,
+    "zile_cu_decizii": 21,
+    "finale_largi": 51648,
+    "finale_largi_pe_zi_cu_decizii": 2459,
+    "finale_stricte_pe_zi_lucr": 2433,
+    "amanari_pe_zi_lucr": 607,
+    "cota_amanari_pct": 19.8,
+    "cota_respinse_pct": 7.48,
+    "W_p25": 13.87,
+    "W_med": 20.02,
+    "W_p75": 24.94,
+    "W_p90": 30.25,
+    "cota_le2z_pct": 5.2,
+    "med_CERERE": 20.0,
+    "med_INMATRIC": 20.1
+   },
+   {
+    "luna": "2024-10",
+    "zile_lucr_legale": 23,
+    "zile_cu_decizii": 24,
+    "finale_largi": 80147,
+    "finale_largi_pe_zi_cu_decizii": 3339,
+    "finale_stricte_pe_zi_lucr": 3454,
+    "amanari_pe_zi_lucr": 765,
+    "cota_amanari_pct": 18.0,
+    "cota_respinse_pct": 6.95,
+    "W_p25": 5.85,
+    "W_med": 13.09,
+    "W_p75": 21.81,
+    "W_p90": 28.91,
+    "cota_le2z_pct": 12.8,
+    "med_CERERE": 13.0,
+    "med_INMATRIC": 13.9
+   },
+   {
+    "luna": "2024-11",
+    "zile_lucr_legale": 21,
+    "zile_cu_decizii": 24,
+    "finale_largi": 73543,
+    "finale_largi_pe_zi_cu_decizii": 3064,
+    "finale_stricte_pe_zi_lucr": 3480,
+    "amanari_pe_zi_lucr": 726,
+    "cota_amanari_pct": 17.2,
+    "cota_respinse_pct": 7.22,
+    "W_p25": 1.17,
+    "W_med": 5.1,
+    "W_p75": 14.27,
+    "W_p90": 22.78,
+    "cota_le2z_pct": 31.3,
+    "med_CERERE": 5.0,
+    "med_INMATRIC": 6.5
+   },
+   {
+    "luna": "2024-12",
+    "zile_lucr_legale": 20,
+    "zile_cu_decizii": 23,
+    "finale_largi": 61154,
+    "finale_largi_pe_zi_cu_decizii": 2659,
+    "finale_stricte_pe_zi_lucr": 3032,
+    "amanari_pe_zi_lucr": 733,
+    "cota_amanari_pct": 19.3,
+    "cota_respinse_pct": 8.29,
+    "W_p25": 1.05,
+    "W_med": 2.86,
+    "W_p75": 6.05,
+    "W_p90": 17.59,
+    "cota_le2z_pct": 46.9,
+    "med_CERERE": 2.3,
+    "med_INMATRIC": 3.1
+   },
+   {
+    "luna": "2025-01",
+    "zile_lucr_legale": 18,
+    "zile_cu_decizii": 18,
+    "finale_largi": 73757,
+    "finale_largi_pe_zi_cu_decizii": 4098,
+    "finale_stricte_pe_zi_lucr": 4082,
+    "amanari_pe_zi_lucr": 922,
+    "cota_amanari_pct": 18.4,
+    "cota_respinse_pct": 6.38,
+    "W_p25": 1.06,
+    "W_med": 2.72,
+    "W_p75": 5.7,
+    "W_p90": 15.03,
+    "cota_le2z_pct": 45.5,
+    "med_CERERE": 2.4,
+    "med_INMATRIC": 3.0
+   },
+   {
+    "luna": "2025-02",
+    "zile_lucr_legale": 20,
+    "zile_cu_decizii": 20,
+    "finale_largi": 98486,
+    "finale_largi_pe_zi_cu_decizii": 4924,
+    "finale_stricte_pe_zi_lucr": 4907,
+    "amanari_pe_zi_lucr": 1017,
+    "cota_amanari_pct": 17.1,
+    "cota_respinse_pct": 6.59,
+    "W_p25": 1.26,
+    "W_med": 4.07,
+    "W_p75": 7.9,
+    "W_p90": 14.02,
+    "cota_le2z_pct": 31.0,
+    "med_CERERE": 4.0,
+    "med_INMATRIC": 5.0
+   },
+   {
+    "luna": "2025-03",
+    "zile_lucr_legale": 21,
+    "zile_cu_decizii": 21,
+    "finale_largi": 107464,
+    "finale_largi_pe_zi_cu_decizii": 5117,
+    "finale_stricte_pe_zi_lucr": 5102,
+    "amanari_pe_zi_lucr": 1074,
+    "cota_amanari_pct": 17.3,
+    "cota_respinse_pct": 6.63,
+    "W_p25": 2.06,
+    "W_med": 6.07,
+    "W_p75": 9.96,
+    "W_p90": 17.86,
+    "cota_le2z_pct": 24.3,
+    "med_CERERE": 6.0,
+    "med_INMATRIC": 6.9
+   },
+   {
+    "luna": "2025-04",
+    "zile_lucr_legale": 20,
+    "zile_cu_decizii": 21,
+    "finale_largi": 88738,
+    "finale_largi_pe_zi_cu_decizii": 4226,
+    "finale_stricte_pe_zi_lucr": 4424,
+    "amanari_pe_zi_lucr": 1054,
+    "cota_amanari_pct": 19.2,
+    "cota_respinse_pct": 7.73,
+    "W_p25": 1.9,
+    "W_med": 6.71,
+    "W_p75": 12.2,
+    "W_p90": 19.99,
+    "cota_le2z_pct": 26.2,
+    "med_CERERE": 6.4,
+    "med_INMATRIC": 6.8
+   },
+   {
+    "luna": "2025-05",
+    "zile_lucr_legale": 21,
+    "zile_cu_decizii": 20,
+    "finale_largi": 87729,
+    "finale_largi_pe_zi_cu_decizii": 4386,
+    "finale_stricte_pe_zi_lucr": 4165,
+    "amanari_pe_zi_lucr": 1002,
+    "cota_amanari_pct": 19.3,
+    "cota_respinse_pct": 6.75,
+    "W_p25": 1.1,
+    "W_med": 3.07,
+    "W_p75": 7.14,
+    "W_p90": 18.03,
+    "cota_le2z_pct": 40.5,
+    "med_CERERE": 3.0,
+    "med_INMATRIC": 3.7
+   },
+   {
+    "luna": "2025-06",
+    "zile_lucr_legale": 20,
+    "zile_cu_decizii": 20,
+    "finale_largi": 76477,
+    "finale_largi_pe_zi_cu_decizii": 3824,
+    "finale_stricte_pe_zi_lucr": 3812,
+    "amanari_pe_zi_lucr": 974,
+    "cota_amanari_pct": 20.3,
+    "cota_respinse_pct": 8.25,
+    "W_p25": 1.07,
+    "W_med": 2.19,
+    "W_p75": 5.68,
+    "W_p90": 16.84,
+    "cota_le2z_pct": 48.0,
+    "med_CERERE": 2.1,
+    "med_INMATRIC": 3.0
+   },
+   {
+    "luna": "2025-07",
+    "zile_lucr_legale": 23,
+    "zile_cu_decizii": 23,
+    "finale_largi": 83572,
+    "finale_largi_pe_zi_cu_decizii": 3634,
+    "finale_stricte_pe_zi_lucr": 3627,
+    "amanari_pe_zi_lucr": 1023,
+    "cota_amanari_pct": 22.0,
+    "cota_respinse_pct": 7.8,
+    "W_p25": 1.03,
+    "W_med": 1.26,
+    "W_p75": 4.07,
+    "W_p90": 13.87,
+    "cota_le2z_pct": 57.9,
+    "med_CERERE": 1.2,
+    "med_INMATRIC": 1.7
+   },
+   {
+    "luna": "2025-08",
+    "zile_lucr_legale": 20,
+    "zile_cu_decizii": 21,
+    "finale_largi": 69980,
+    "finale_largi_pe_zi_cu_decizii": 3332,
+    "finale_stricte_pe_zi_lucr": 3491,
+    "amanari_pe_zi_lucr": 936,
+    "cota_amanari_pct": 21.1,
+    "cota_respinse_pct": 8.63,
+    "W_p25": 1.04,
+    "W_med": 1.78,
+    "W_p75": 4.9,
+    "W_p90": 15.64,
+    "cota_le2z_pct": 53.3,
+    "med_CERERE": 1.7,
+    "med_INMATRIC": 2.1
+   },
+   {
+    "luna": "2025-09",
+    "zile_lucr_legale": 22,
+    "zile_cu_decizii": 23,
+    "finale_largi": 82131,
+    "finale_largi_pe_zi_cu_decizii": 3571,
+    "finale_stricte_pe_zi_lucr": 3730,
+    "amanari_pe_zi_lucr": 1111,
+    "cota_amanari_pct": 22.9,
+    "cota_respinse_pct": 7.89,
+    "W_p25": 1.05,
+    "W_med": 1.84,
+    "W_p75": 4.83,
+    "W_p90": 13.01,
+    "cota_le2z_pct": 51.8,
+    "med_CERERE": 1.7,
+    "med_INMATRIC": 2.8
+   },
+   {
+    "luna": "2025-10",
+    "zile_lucr_legale": 23,
+    "zile_cu_decizii": 24,
+    "finale_largi": 87155,
+    "finale_largi_pe_zi_cu_decizii": 3631,
+    "finale_stricte_pe_zi_lucr": 3785,
+    "amanari_pe_zi_lucr": 1042,
+    "cota_amanari_pct": 21.6,
+    "cota_respinse_pct": 8.09,
+    "W_p25": 1.02,
+    "W_med": 1.21,
+    "W_p75": 3.95,
+    "W_p90": 13.9,
+    "cota_le2z_pct": 59.7,
+    "med_CERERE": 1.2,
+    "med_INMATRIC": 1.3
+   },
+   {
+    "luna": "2025-11",
+    "zile_lucr_legale": 20,
+    "zile_cu_decizii": 20,
+    "finale_largi": 78848,
+    "finale_largi_pe_zi_cu_decizii": 3942,
+    "finale_stricte_pe_zi_lucr": 3920,
+    "amanari_pe_zi_lucr": 1091,
+    "cota_amanari_pct": 21.7,
+    "cota_respinse_pct": 7.56,
+    "W_p25": 1.02,
+    "W_med": 1.23,
+    "W_p75": 3.87,
+    "W_p90": 12.54,
+    "cota_le2z_pct": 58.8,
+    "med_CERERE": 1.2,
+    "med_INMATRIC": 1.7
+   },
+   {
+    "luna": "2025-12",
+    "zile_lucr_legale": 20,
+    "zile_cu_decizii": 21,
+    "finale_largi": 79442,
+    "finale_largi_pe_zi_cu_decizii": 3783,
+    "finale_stricte_pe_zi_lucr": 3955,
+    "amanari_pe_zi_lucr": 1064,
+    "cota_amanari_pct": 21.1,
+    "cota_respinse_pct": 8.39,
+    "W_p25": 1.08,
+    "W_med": 2.84,
+    "W_p75": 5.96,
+    "W_p90": 15.13,
+    "cota_le2z_pct": 45.6,
+    "med_CERERE": 2.3,
+    "med_INMATRIC": 3.1
+   },
+   {
+    "luna": "2026-01",
+    "zile_lucr_legale": 18,
+    "zile_cu_decizii": 18,
+    "finale_largi": 78708,
+    "finale_largi_pe_zi_cu_decizii": 4373,
+    "finale_stricte_pe_zi_lucr": 4354,
+    "amanari_pe_zi_lucr": 1190,
+    "cota_amanari_pct": 21.4,
+    "cota_respinse_pct": 7.83,
+    "W_p25": 1.13,
+    "W_med": 2.96,
+    "W_p75": 6.91,
+    "W_p90": 17.89,
+    "cota_le2z_pct": 41.1,
+    "med_CERERE": 2.9,
+    "med_INMATRIC": 3.0
+   },
+   {
+    "luna": "2026-02",
+    "zile_lucr_legale": 20,
+    "zile_cu_decizii": 21,
+    "finale_largi": 92516,
+    "finale_largi_pe_zi_cu_decizii": 4406,
+    "finale_stricte_pe_zi_lucr": 4610,
+    "amanari_pe_zi_lucr": 1289,
+    "cota_amanari_pct": 21.8,
+    "cota_respinse_pct": 7.36,
+    "W_p25": 1.98,
+    "W_med": 4.3,
+    "W_p75": 7.98,
+    "W_p90": 14.94,
+    "cota_le2z_pct": 25.4,
+    "med_CERERE": 4.2,
+    "med_INMATRIC": 4.9
+   },
+   {
+    "luna": "2026-03",
+    "zile_lucr_legale": 22,
+    "zile_cu_decizii": 22,
+    "finale_largi": 97412,
+    "finale_largi_pe_zi_cu_decizii": 4428,
+    "finale_stricte_pe_zi_lucr": 4410,
+    "amanari_pe_zi_lucr": 1221,
+    "cota_amanari_pct": 21.6,
+    "cota_respinse_pct": 7.61,
+    "W_p25": 2.19,
+    "W_med": 5.35,
+    "W_p75": 9.8,
+    "W_p90": 18.2,
+    "cota_le2z_pct": 22.3,
+    "med_CERERE": 5.2,
+    "med_INMATRIC": 6.0
+   },
+   {
+    "luna": "2026-04",
+    "zile_lucr_legale": 20,
+    "zile_cu_decizii": 21,
+    "finale_largi": 83169,
+    "finale_largi_pe_zi_cu_decizii": 3960,
+    "finale_stricte_pe_zi_lucr": 4143,
+    "amanari_pe_zi_lucr": 1114,
+    "cota_amanari_pct": 21.1,
+    "cota_respinse_pct": 8.25,
+    "W_p25": 3.14,
+    "W_med": 6.08,
+    "W_p75": 14.99,
+    "W_p90": 20.92,
+    "cota_le2z_pct": 15.4,
+    "med_CERERE": 6.1,
+    "med_INMATRIC": 6.2
+   },
+   {
+    "luna": "2026-05",
+    "zile_lucr_legale": 20,
+    "zile_cu_decizii": 21,
+    "finale_largi": 85564,
+    "finale_largi_pe_zi_cu_decizii": 4074,
+    "finale_stricte_pe_zi_lucr": 4257,
+    "amanari_pe_zi_lucr": 1123,
+    "cota_amanari_pct": 20.8,
+    "cota_respinse_pct": 8.31,
+    "W_p25": 3.2,
+    "W_med": 5.13,
+    "W_p75": 6.96,
+    "W_p90": 18.57,
+    "cota_le2z_pct": 1.3,
+    "med_CERERE": 5.1,
+    "med_INMATRIC": 5.6
+   },
+   {
+    "luna": "2026-06",
+    "zile_lucr_legale": 21,
+    "zile_cu_decizii": 22,
+    "finale_largi": 83045,
+    "finale_largi_pe_zi_cu_decizii": 3775,
+    "finale_stricte_pe_zi_lucr": 3938,
+    "amanari_pe_zi_lucr": 1036,
+    "cota_amanari_pct": 20.8,
+    "cota_respinse_pct": 8.85,
+    "W_p25": 4.52,
+    "W_med": 5.2,
+    "W_p75": 7.0,
+    "W_p90": 19.78,
+    "cota_le2z_pct": 1.0,
+    "med_CERERE": 5.2,
+    "med_INMATRIC": 5.9
+   },
+   {
+    "luna": "2026-07",
+    "zile_lucr_legale": 23,
+    "zile_cu_decizii": 23,
+    "finale_largi": 87040,
+    "finale_largi_pe_zi_cu_decizii": 3784,
+    "finale_stricte_pe_zi_lucr": 3775,
+    "amanari_pe_zi_lucr": 910,
+    "cota_amanari_pct": 19.4,
+    "cota_respinse_pct": 8.31,
+    "W_p25": 5.94,
+    "W_med": 6.23,
+    "W_p75": 7.96,
+    "W_p90": 19.8,
+    "cota_le2z_pct": 1.2,
+    "med_CERERE": 6.2,
+    "med_INMATRIC": 6.9
+   },
+   {
+    "luna": "2026-08",
+    "zile_lucr_legale": 21,
+    "zile_cu_decizii": 21,
+    "finale_largi": 72883,
+    "finale_largi_pe_zi_cu_decizii": 3471,
+    "finale_stricte_pe_zi_lucr": 3467,
+    "amanari_pe_zi_lucr": 869,
+    "cota_amanari_pct": 20.0,
+    "cota_respinse_pct": 8.49,
+    "W_p25": 8.98,
+    "W_med": 11.93,
+    "W_p75": 14.26,
+    "W_p90": 21.9,
+    "cota_le2z_pct": 1.0,
+    "med_CERERE": 11.9,
+    "med_INMATRIC": 12.0
+   },
+   {
+    "luna": "2026-09",
+    "zile_lucr_legale": 22,
+    "zile_cu_decizii": 23,
+    "finale_largi": 87357,
+    "finale_largi_pe_zi_cu_decizii": 3798,
+    "finale_stricte_pe_zi_lucr": 3963,
+    "amanari_pe_zi_lucr": 899,
+    "cota_amanari_pct": 18.5,
+    "cota_respinse_pct": 6.98,
+    "W_p25": 19.03,
+    "W_med": 21.83,
+    "W_p75": 26.09,
+    "W_p90": 28.73,
+    "cota_le2z_pct": 0.9,
+    "med_CERERE": 21.8,
+    "med_INMATRIC": 21.2
+   },
+   {
+    "luna": "2026-10",
+    "zile_lucr_legale": 22,
+    "zile_cu_decizii": 22,
+    "finale_largi": 91194,
+    "finale_largi_pe_zi_cu_decizii": 4145,
+    "finale_stricte_pe_zi_lucr": 4139,
+    "amanari_pe_zi_lucr": 937,
+    "cota_amanari_pct": 18.4,
+    "cota_respinse_pct": 8.71,
+    "W_p25": 29.96,
+    "W_med": 35.01,
+    "W_p75": 39.97,
+    "W_p90": 44.08,
+    "cota_le2z_pct": 1.1,
+    "med_CERERE": 35.1,
+    "med_INMATRIC": 30.8
+   },
+   {
+    "luna": "2026-11",
+    "zile_lucr_legale": 15,
+    "zile_cu_decizii": 15,
+    "finale_largi": 63306,
+    "finale_largi_pe_zi_cu_decizii": 4220,
+    "finale_stricte_pe_zi_lucr": 4218,
+    "amanari_pe_zi_lucr": 1129,
+    "cota_amanari_pct": 21.1,
+    "cota_respinse_pct": 8.35,
+    "W_p25": 42.73,
+    "W_med": 50.02,
+    "W_p75": 55.74,
+    "W_p90": 58.02,
+    "cota_le2z_pct": 1.0,
+    "med_CERERE": 52.9,
+    "med_INMATRIC": 42.0
+   }
+  ]
+ },
+ "serie_saptamanala_2026": {
+  "meta": "Pe săptămâna DECIZIEI (luni–duminică), finale stricte, 2026.",
+  "columns": [
+   "saptamana",
+   "n",
+   "med_CERERE",
+   "p90_CERERE",
+   "med_INMATRIC",
+   "cota_le14z_pct"
+  ],
+  "rows": [
+   {
+    "saptamana": "2026-01-05",
+    "n": 10814,
+    "med_CERERE": 14.0,
+    "p90_CERERE": 20.9,
+    "med_INMATRIC": 15.0,
+    "cota_le14z_pct": 49.8
+   },
+   {
+    "saptamana": "2026-01-12",
+    "n": 21938,
+    "med_CERERE": 2.0,
+    "p90_CERERE": 17.0,
+    "med_INMATRIC": 2.2,
+    "cota_le14z_pct": 86.9
+   },
+   {
+    "saptamana": "2026-01-19",
+    "n": 20971,
+    "med_CERERE": 1.9,
+    "p90_CERERE": 6.9,
+    "med_INMATRIC": 2.2,
+    "cota_le14z_pct": 95.9
+   },
+   {
+    "saptamana": "2026-01-26",
+    "n": 24643,
+    "med_CERERE": 3.0,
+    "p90_CERERE": 16.8,
+    "med_INMATRIC": 3.1,
+    "cota_le14z_pct": 88.5
+   },
+   {
+    "saptamana": "2026-02-02",
+    "n": 23741,
+    "med_CERERE": 3.8,
+    "p90_CERERE": 12.1,
+    "med_INMATRIC": 3.9,
+    "cota_le14z_pct": 90.9
+   },
+   {
+    "saptamana": "2026-02-09",
+    "n": 23431,
+    "med_CERERE": 4.1,
+    "p90_CERERE": 13.8,
+    "med_INMATRIC": 5.0,
+    "cota_le14z_pct": 90.3
+   },
+   {
+    "saptamana": "2026-02-16",
+    "n": 22960,
+    "med_CERERE": 5.0,
+    "p90_CERERE": 16.5,
+    "med_INMATRIC": 5.0,
+    "cota_le14z_pct": 88.2
+   },
+   {
+    "saptamana": "2026-02-23",
+    "n": 22062,
+    "med_CERERE": 5.0,
+    "p90_CERERE": 16.9,
+    "med_INMATRIC": 5.9,
+    "cota_le14z_pct": 87.2
+   },
+   {
+    "saptamana": "2026-03-02",
+    "n": 21868,
+    "med_CERERE": 5.8,
+    "p90_CERERE": 17.9,
+    "med_INMATRIC": 6.9,
+    "cota_le14z_pct": 86.1
+   },
+   {
+    "saptamana": "2026-03-09",
+    "n": 22038,
+    "med_CERERE": 5.7,
+    "p90_CERERE": 18.0,
+    "med_INMATRIC": 6.8,
+    "cota_le14z_pct": 85.3
+   },
+   {
+    "saptamana": "2026-03-16",
+    "n": 22490,
+    "med_CERERE": 5.8,
+    "p90_CERERE": 17.6,
+    "med_INMATRIC": 6.0,
+    "cota_le14z_pct": 83.8
+   },
+   {
+    "saptamana": "2026-03-23",
+    "n": 21947,
+    "med_CERERE": 5.0,
+    "p90_CERERE": 18.0,
+    "med_INMATRIC": 5.0,
+    "cota_le14z_pct": 81.8
+   },
+   {
+    "saptamana": "2026-03-30",
+    "n": 22171,
+    "med_CERERE": 4.8,
+    "p90_CERERE": 19.7,
+    "med_INMATRIC": 5.1,
+    "cota_le14z_pct": 77.0
+   },
+   {
+    "saptamana": "2026-04-06",
+    "n": 15976,
+    "med_CERERE": 5.5,
+    "p90_CERERE": 20.6,
+    "med_INMATRIC": 6.0,
+    "cota_le14z_pct": 72.8
+   },
+   {
+    "saptamana": "2026-04-13",
+    "n": 16396,
+    "med_CERERE": 8.0,
+    "p90_CERERE": 21.9,
+    "med_INMATRIC": 8.2,
+    "cota_le14z_pct": 65.1
+   },
+   {
+    "saptamana": "2026-04-20",
+    "n": 21464,
+    "med_CERERE": 7.1,
+    "p90_CERERE": 21.0,
+    "med_INMATRIC": 5.8,
+    "cota_le14z_pct": 65.5
+   },
+   {
+    "saptamana": "2026-04-27",
+    "n": 15531,
+    "med_CERERE": 5.9,
+    "p90_CERERE": 14.0,
+    "med_INMATRIC": 5.8,
+    "cota_le14z_pct": 89.4
+   },
+   {
+    "saptamana": "2026-05-04",
+    "n": 21890,
+    "med_CERERE": 6.2,
+    "p90_CERERE": 19.0,
+    "med_INMATRIC": 6.7,
+    "cota_le14z_pct": 84.6
+   },
+   {
+    "saptamana": "2026-05-11",
+    "n": 21328,
+    "med_CERERE": 5.1,
+    "p90_CERERE": 20.0,
+    "med_INMATRIC": 5.1,
+    "cota_le14z_pct": 86.5
+   },
+   {
+    "saptamana": "2026-05-18",
+    "n": 20770,
+    "med_CERERE": 5.0,
+    "p90_CERERE": 13.7,
+    "med_INMATRIC": 5.0,
+    "cota_le14z_pct": 90.1
+   },
+   {
+    "saptamana": "2026-05-25",
+    "n": 21152,
+    "med_CERERE": 5.1,
+    "p90_CERERE": 18.6,
+    "med_INMATRIC": 5.1,
+    "cota_le14z_pct": 87.5
+   },
+   {
+    "saptamana": "2026-06-01",
+    "n": 16712,
+    "med_CERERE": 6.1,
+    "p90_CERERE": 20.7,
+    "med_INMATRIC": 6.2,
+    "cota_le14z_pct": 85.3
+   },
+   {
+    "saptamana": "2026-06-08",
+    "n": 20626,
+    "med_CERERE": 5.0,
+    "p90_CERERE": 19.6,
+    "med_INMATRIC": 5.0,
+    "cota_le14z_pct": 86.1
+   },
+   {
+    "saptamana": "2026-06-15",
+    "n": 20065,
+    "med_CERERE": 5.0,
+    "p90_CERERE": 13.1,
+    "med_INMATRIC": 5.0,
+    "cota_le14z_pct": 90.2
+   },
+   {
+    "saptamana": "2026-06-22",
+    "n": 17944,
+    "med_CERERE": 5.1,
+    "p90_CERERE": 19.9,
+    "med_INMATRIC": 5.5,
+    "cota_le14z_pct": 85.3
+   },
+   {
+    "saptamana": "2026-06-29",
+    "n": 18700,
+    "med_CERERE": 6.0,
+    "p90_CERERE": 18.9,
+    "med_INMATRIC": 6.0,
+    "cota_le14z_pct": 86.5
+   },
+   {
+    "saptamana": "2026-07-06",
+    "n": 19999,
+    "med_CERERE": 6.0,
+    "p90_CERERE": 16.7,
+    "med_INMATRIC": 6.0,
+    "cota_le14z_pct": 88.3
+   },
+   {
+    "saptamana": "2026-07-13",
+    "n": 19180,
+    "med_CERERE": 6.0,
+    "p90_CERERE": 18.0,
+    "med_INMATRIC": 6.0,
+    "cota_le14z_pct": 87.2
+   },
+   {
+    "saptamana": "2026-07-20",
+    "n": 18306,
+    "med_CERERE": 6.8,
+    "p90_CERERE": 20.8,
+    "med_INMATRIC": 6.9,
+    "cota_le14z_pct": 85.5
+   },
+   {
+    "saptamana": "2026-07-27",
+    "n": 18001,
+    "med_CERERE": 7.1,
+    "p90_CERERE": 20.7,
+    "med_INMATRIC": 8.0,
+    "cota_le14z_pct": 85.2
+   },
+   {
+    "saptamana": "2026-08-03",
+    "n": 17876,
+    "med_CERERE": 8.1,
+    "p90_CERERE": 18.7,
+    "med_INMATRIC": 9.0,
+    "cota_le14z_pct": 86.2
+   },
+   {
+    "saptamana": "2026-08-10",
+    "n": 17836,
+    "med_CERERE": 9.3,
+    "p90_CERERE": 20.7,
+    "med_INMATRIC": 10.5,
+    "cota_le14z_pct": 84.1
+   },
+   {
+    "saptamana": "2026-08-17",
+    "n": 16497,
+    "med_CERERE": 12.0,
+    "p90_CERERE": 23.0,
+    "med_INMATRIC": 12.1,
+    "cota_le14z_pct": 77.3
+   },
+   {
+    "saptamana": "2026-08-24",
+    "n": 17302,
+    "med_CERERE": 14.0,
+    "p90_CERERE": 23.9,
+    "med_INMATRIC": 14.1,
+    "cota_le14z_pct": 46.8
+   },
+   {
+    "saptamana": "2026-08-31",
+    "n": 17278,
+    "med_CERERE": 16.1,
+    "p90_CERERE": 25.9,
+    "med_INMATRIC": 16.8,
+    "cota_le14z_pct": 5.1
+   },
+   {
+    "saptamana": "2026-09-07",
+    "n": 19507,
+    "med_CERERE": 19.5,
+    "p90_CERERE": 27.0,
+    "med_INMATRIC": 19.7,
+    "cota_le14z_pct": 4.4
+   },
+   {
+    "saptamana": "2026-09-14",
+    "n": 20519,
+    "med_CERERE": 21.2,
+    "p90_CERERE": 27.9,
+    "med_INMATRIC": 21.7,
+    "cota_le14z_pct": 4.7
+   },
+   {
+    "saptamana": "2026-09-21",
+    "n": 20174,
+    "med_CERERE": 24.1,
+    "p90_CERERE": 31.9,
+    "med_INMATRIC": 24.1,
+    "cota_le14z_pct": 5.3
+   },
+   {
+    "saptamana": "2026-09-28",
+    "n": 21671,
+    "med_CERERE": 27.9,
+    "p90_CERERE": 34.9,
+    "med_INMATRIC": 27.6,
+    "cota_le14z_pct": 6.8
+   },
+   {
+    "saptamana": "2026-10-05",
+    "n": 21129,
+    "med_CERERE": 30.9,
+    "p90_CERERE": 38.9,
+    "med_INMATRIC": 30.6,
+    "cota_le14z_pct": 6.9
+   },
+   {
+    "saptamana": "2026-10-12",
+    "n": 21935,
+    "med_CERERE": 34.9,
+    "p90_CERERE": 41.0,
+    "med_INMATRIC": 34.0,
+    "cota_le14z_pct": 7.0
+   },
+   {
+    "saptamana": "2026-10-19",
+    "n": 20658,
+    "med_CERERE": 39.0,
+    "p90_CERERE": 45.2,
+    "med_INMATRIC": 34.7,
+    "cota_le14z_pct": 8.2
+   },
+   {
+    "saptamana": "2026-10-26",
+    "n": 18673,
+    "med_CERERE": 43.1,
+    "p90_CERERE": 48.7,
+    "med_INMATRIC": 30.9,
+    "cota_le14z_pct": 10.1
+   },
+   {
+    "saptamana": "2026-11-02",
+    "n": 22043,
+    "med_CERERE": 49.0,
+    "p90_CERERE": 52.9,
+    "med_INMATRIC": 37.9,
+    "cota_le14z_pct": 9.0
+   },
+   {
+    "saptamana": "2026-11-09",
+    "n": 22180,
+    "med_CERERE": 54.1,
+    "p90_CERERE": 56.3,
+    "med_INMATRIC": 43.6,
+    "cota_le14z_pct": 9.8
+   },
+   {
+    "saptamana": "2026-11-16",
+    "n": 19050,
+    "med_CERERE": 57.1,
+    "p90_CERERE": 62.0,
+    "med_INMATRIC": 41.1,
+    "cota_le14z_pct": 10.8
+   }
+  ]
+ },
+ "portal_flux_includere": {
+  "meta": "Regula de includere a eșantionului myportal folosit pentru Kaplan–Meier (cenzurare la 21.11.2026).",
+  "columns": [
+   "pas",
+   "dosare"
+  ],
+  "rows": [
+   {
+    "pas": "Dosare în recoltarea myportal (toate rulările)",
+    "dosare": 7469
+   },
+   {
+    "pas": "…cu detaliile dosarului găsite",
+    "dosare": 2299
+   },
+   {
+    "pas": "…cereri supuse soluționării (nu acte administrative arhivate)",
+    "dosare": 1859
+   },
+   {
+    "pas": "…în etapă cunoscută (rezolvat / operare / registrator) și cu dată de depunere",
+    "dosare": 1819
+   },
+   {
+    "pas": "…excluzând dosarele rezolvate fără dată a soluției",
+    "dosare": 1819
+   },
+   {
+    "pas": "…cu durată nenegativă: eșantionul Kaplan–Meier",
+    "dosare": 1819
+   }
+  ]
+ },
+ "KM_septembrie_pe_saptamani": {
+  "meta": "Cohorta din septembrie, pe săptămâna depunerii: dacă mediana crește cu săptămâna, cenzurarea e informativă și mediana lunară e o limită de jos.",
+  "columns": [
+   "saptamana_depunerii",
+   "n",
+   "rezolvate_pct",
+   "urmarire_min_zile",
+   "mediana_KM"
+  ],
+  "rows": [
+   {
+    "saptamana_depunerii": "2026-08-31",
+    "n": 57,
+    "rezolvate_pct": 100.0,
+    "urmarire_min_zile": 77,
+    "mediana_KM": 28.0
+   },
+   {
+    "saptamana_depunerii": "2026-09-07",
+    "n": 88,
+    "rezolvate_pct": 100.0,
+    "urmarire_min_zile": 69,
+    "mediana_KM": 35.0
+   },
+   {
+    "saptamana_depunerii": "2026-09-14",
+    "n": 119,
+    "rezolvate_pct": 92.4,
+    "urmarire_min_zile": 62,
+    "mediana_KM": 50.0
+   },
+   {
+    "saptamana_depunerii": "2026-09-21",
+    "n": 236,
+    "rezolvate_pct": 15.7,
+    "urmarire_min_zile": 56,
+    "mediana_KM": null
+   },
+   {
+    "saptamana_depunerii": "2026-09-28",
+    "n": 105,
+    "rezolvate_pct": 10.5,
+    "urmarire_min_zile": 52,
+    "mediana_KM": null
+   }
+  ]
+ },
+ "cohorte_depunere_BERC": {
+  "meta": "Pe luna DEPUNERII, doar dosare deja decise (BERC). Lunile recente sunt cenzurate: medianele lor sunt prea mici.",
+  "columns": [
+   "luna_dep",
+   "n",
+   "W_med",
+   "W_p90"
+  ],
+  "rows": [
+   {
+    "luna_dep": "2026-01",
+    "n": 82781,
+    "W_med": 3.0,
+    "W_p90": 14.1
+   },
+   {
+    "luna_dep": "2026-02",
+    "n": 96360,
+    "W_med": 5.0,
+    "W_p90": 17.8
+   },
+   {
+    "luna_dep": "2026-03",
+    "n": 100020,
+    "W_med": 5.3,
+    "W_p90": 20.3
+   },
+   {
+    "luna_dep": "2026-04",
+    "n": 78373,
+    "W_med": 6.1,
+    "W_p90": 19.7
+   },
+   {
+    "luna_dep": "2026-05",
+    "n": 83398,
+    "W_med": 5.1,
+    "W_p90": 18.8
+   },
+   {
+    "luna_dep": "2026-06",
+    "n": 85238,
+    "W_med": 5.1,
+    "W_p90": 19.1
+   },
+   {
+    "luna_dep": "2026-07",
+    "n": 94046,
+    "W_med": 7.1,
+    "W_p90": 20.7
+   },
+   {
+    "luna_dep": "2026-08",
+    "n": 117498,
+    "W_med": 19.0,
+    "W_p90": 29.0
+   },
+   {
+    "luna_dep": "2026-09",
+    "n": 143963,
+    "W_med": 39.0,
+    "W_p90": 55.9
+   },
+   {
+    "luna_dep": "2026-10",
+    "n": 18761,
+    "W_med": 17.9,
+    "W_p90": 41.2
+   },
+   {
+    "luna_dep": "2026-11",
+    "n": 4585,
+    "W_med": 6.6,
+    "W_p90": 13.8
+   }
+  ]
+ },
+ "cohorte_KM_portal": {
+  "meta": "Eșantion myportal: Kaplan–Meier pe luna depunerii; dosarele încă nerezolvate sunt cenzurate la 21.11.2026. «mediana_KM» lipsă = mai puțin de jumătate rezolvate.",
+  "columns": [
+   "luna_dep",
+   "n_portal",
+   "rezolvate_pct",
+   "urmarire_min_zile",
+   "mediana_naiva_doar_rezolvate",
+   "mediana_KM",
+   "mediana_KM_IC95_inf",
+   "mediana_KM_IC95_sup",
+   "la_risc_50z",
+   "la_risc_58z",
+   "la_risc_66z",
+   "S_30z"
+  ],
+  "rows": [
+   {
+    "luna_dep": "2026-05",
+    "n_portal": 135,
+    "rezolvate_pct": 100.0,
+    "urmarire_min_zile": 176,
+    "mediana_naiva_doar_rezolvate": 5.0,
+    "mediana_KM": 5.0,
+    "mediana_KM_IC95_inf": 5.0,
+    "mediana_KM_IC95_sup": 6.0,
+    "la_risc_50z": 0,
+    "la_risc_58z": 0,
+    "la_risc_66z": 0,
+    "S_30z": 0.0
+   },
+   {
+    "luna_dep": "2026-06",
+    "n_portal": 159,
+    "rezolvate_pct": 100.0,
+    "urmarire_min_zile": 144,
+    "mediana_naiva_doar_rezolvate": 5.0,
+    "mediana_KM": 5.0,
+    "mediana_KM_IC95_inf": 5.0,
+    "mediana_KM_IC95_sup": 6.0,
+    "la_risc_50z": 0,
+    "la_risc_58z": 0,
+    "la_risc_66z": 0,
+    "S_30z": 0.0
+   },
+   {
+    "luna_dep": "2026-07",
+    "n_portal": 184,
+    "rezolvate_pct": 100.0,
+    "urmarire_min_zile": 113,
+    "mediana_naiva_doar_rezolvate": 7.0,
+    "mediana_KM": 7.0,
+    "mediana_KM_IC95_inf": 7.0,
+    "mediana_KM_IC95_sup": 8.0,
+    "la_risc_50z": 0,
+    "la_risc_58z": 0,
+    "la_risc_66z": 0,
+    "S_30z": 0.0
+   },
+   {
+    "luna_dep": "2026-08",
+    "n_portal": 212,
+    "rezolvate_pct": 100.0,
+    "urmarire_min_zile": 82,
+    "mediana_naiva_doar_rezolvate": 19.0,
+    "mediana_KM": 19.0,
+    "mediana_KM_IC95_inf": 16.0,
+    "mediana_KM_IC95_sup": 20.0,
+    "la_risc_50z": 0,
+    "la_risc_58z": 0,
+    "la_risc_66z": 0,
+    "S_30z": 0.061
+   },
+   {
+    "luna_dep": "2026-09",
+    "n_portal": 605,
+    "rezolvate_pct": 50.1,
+    "urmarire_min_zile": 52,
+    "mediana_naiva_doar_rezolvate": 39.0,
+    "mediana_KM": 58.0,
+    "mediana_KM_IC95_inf": 56.0,
+    "mediana_KM_IC95_sup": 62.0,
+    "la_risc_50z": 388,
+    "la_risc_58z": 170,
+    "la_risc_66z": 2,
+    "S_30z": 0.886
+   },
+   {
+    "luna_dep": "2026-10",
+    "n_portal": 350,
+    "rezolvate_pct": 21.4,
+    "urmarire_min_zile": 21,
+    "mediana_naiva_doar_rezolvate": 13.0,
+    "mediana_KM": null,
+    "mediana_KM_IC95_inf": null,
+    "mediana_KM_IC95_sup": null,
+    "la_risc_50z": 32,
+    "la_risc_58z": 0,
+    "la_risc_66z": 0,
+    "S_30z": 0.818
+   },
+   {
+    "luna_dep": "2026-11",
+    "n_portal": 174,
+    "rezolvate_pct": 11.5,
+    "urmarire_min_zile": 1,
+    "mediana_naiva_doar_rezolvate": 5.5,
+    "mediana_KM": null,
+    "mediana_KM_IC95_inf": null,
+    "mediana_KM_IC95_sup": null,
+    "la_risc_50z": 0,
+    "la_risc_58z": 0,
+    "la_risc_66z": 0,
+    "S_30z": 0.841
+   }
+  ]
+ },
+ "km_curves": {
+  "2026-05": [
+   [
+    1.0,
+    0.9778
+   ],
+   [
+    2.0,
+    0.9704
+   ],
+   [
+    3.0,
+    0.6593
+   ],
+   [
+    4.0,
+    0.6444
+   ],
+   [
+    5.0,
+    0.437
+   ],
+   [
+    6.0,
+    0.2889
+   ],
+   [
+    7.0,
+    0.2296
+   ],
+   [
+    8.0,
+    0.2222
+   ],
+   [
+    9.0,
+    0.1926
+   ],
+   [
+    10.0,
+    0.1852
+   ],
+   [
+    11.0,
+    0.1704
+   ],
+   [
+    12.0,
+    0.163
+   ],
+   [
+    13.0,
+    0.1556
+   ],
+   [
+    15.0,
+    0.1333
+   ],
+   [
+    16.0,
+    0.1259
+   ],
+   [
+    17.0,
+    0.1111
+   ],
+   [
+    18.0,
+    0.0963
+   ],
+   [
+    19.0,
+    0.0741
+   ],
+   [
+    21.0,
+    0.0222
+   ],
+   [
+    22.0,
+    0.0074
+   ],
+   [
+    23.0,
+    0.0
+   ]
+  ],
+  "2026-06": [
+   [
+    1.0,
+    0.9937
+   ],
+   [
+    2.0,
+    0.9497
+   ],
+   [
+    3.0,
+    0.8302
+   ],
+   [
+    4.0,
+    0.7421
+   ],
+   [
+    5.0,
+    0.434
+   ],
+   [
+    6.0,
+    0.2956
+   ],
+   [
+    7.0,
+    0.2264
+   ],
+   [
+    8.0,
+    0.2075
+   ],
+   [
+    9.0,
+    0.2013
+   ],
+   [
+    10.0,
+    0.1887
+   ],
+   [
+    11.0,
+    0.1635
+   ],
+   [
+    12.0,
+    0.1572
+   ],
+   [
+    13.0,
+    0.1384
+   ],
+   [
+    14.0,
+    0.1321
+   ],
+   [
+    15.0,
+    0.1195
+   ],
+   [
+    16.0,
+    0.1006
+   ],
+   [
+    20.0,
+    0.0755
+   ],
+   [
+    21.0,
+    0.0252
+   ],
+   [
+    22.0,
+    0.0189
+   ],
+   [
+    23.0,
+    0.0126
+   ],
+   [
+    24.0,
+    0.0063
+   ],
+   [
+    26.0,
+    0.0
+   ]
+  ],
+  "2026-07": [
+   [
+    1.0,
+    0.9946
+   ],
+   [
+    2.0,
+    0.9837
+   ],
+   [
+    3.0,
+    0.9674
+   ],
+   [
+    4.0,
+    0.9239
+   ],
+   [
+    5.0,
+    0.9022
+   ],
+   [
+    6.0,
+    0.6848
+   ],
+   [
+    7.0,
+    0.4783
+   ],
+   [
+    8.0,
+    0.3207
+   ],
+   [
+    9.0,
+    0.2772
+   ],
+   [
+    10.0,
+    0.2337
+   ],
+   [
+    11.0,
+    0.1848
+   ],
+   [
+    12.0,
+    0.1685
+   ],
+   [
+    13.0,
+    0.1467
+   ],
+   [
+    15.0,
+    0.1359
+   ],
+   [
+    16.0,
+    0.1196
+   ],
+   [
+    17.0,
+    0.1141
+   ],
+   [
+    18.0,
+    0.0978
+   ],
+   [
+    19.0,
+    0.0924
+   ],
+   [
+    20.0,
+    0.087
+   ],
+   [
+    21.0,
+    0.0761
+   ],
+   [
+    22.0,
+    0.0543
+   ],
+   [
+    23.0,
+    0.0489
+   ],
+   [
+    24.0,
+    0.0326
+   ],
+   [
+    25.0,
+    0.0217
+   ],
+   [
+    26.0,
+    0.0109
+   ],
+   [
+    27.0,
+    0.0054
+   ],
+   [
+    28.0,
+    0.0
+   ]
+  ],
+  "2026-08": [
+   [
+    1.0,
+    0.9953
+   ],
+   [
+    2.0,
+    0.9906
+   ],
+   [
+    4.0,
+    0.9858
+   ],
+   [
+    5.0,
+    0.9811
+   ],
+   [
+    6.0,
+    0.967
+   ],
+   [
+    8.0,
+    0.9481
+   ],
+   [
+    9.0,
+    0.8915
+   ],
+   [
+    10.0,
+    0.8726
+   ],
+   [
+    11.0,
+    0.8491
+   ],
+   [
+    12.0,
+    0.8113
+   ],
+   [
+    13.0,
+    0.75
+   ],
+   [
+    14.0,
+    0.6745
+   ],
+   [
+    15.0,
+    0.6179
+   ],
+   [
+    16.0,
+    0.5613
+   ],
+   [
+    17.0,
+    0.5377
+   ],
+   [
+    18.0,
+    0.5047
+   ],
+   [
+    19.0,
+    0.4434
+   ],
+   [
+    20.0,
+    0.3774
+   ],
+   [
+    21.0,
+    0.3113
+   ],
+   [
+    22.0,
+    0.2453
+   ],
+   [
+    23.0,
+    0.1981
+   ],
+   [
+    24.0,
+    0.1651
+   ],
+   [
+    25.0,
+    0.1368
+   ],
+   [
+    26.0,
+    0.1321
+   ],
+   [
+    27.0,
+    0.0896
+   ],
+   [
+    28.0,
+    0.0708
+   ],
+   [
+    30.0,
+    0.0613
+   ],
+   [
+    31.0,
+    0.0472
+   ],
+   [
+    32.0,
+    0.0425
+   ],
+   [
+    34.0,
+    0.0377
+   ],
+   [
+    35.0,
+    0.0283
+   ],
+   [
+    37.0,
+    0.0189
+   ],
+   [
+    39.0,
+    0.0142
+   ],
+   [
+    41.0,
+    0.0
+   ]
+  ],
+  "2026-09": [
+   [
+    1.0,
+    0.9967
+   ],
+   [
+    2.0,
+    0.9934
+   ],
+   [
+    3.0,
+    0.9917
+   ],
+   [
+    5.0,
+    0.9901
+   ],
+   [
+    6.0,
+    0.9868
+   ],
+   [
+    7.0,
+    0.9851
+   ],
+   [
+    9.0,
+    0.9835
+   ],
+   [
+    12.0,
+    0.9818
+   ],
+   [
+    13.0,
+    0.9802
+   ],
+   [
+    14.0,
+    0.9736
+   ],
+   [
+    16.0,
+    0.9702
+   ],
+   [
+    17.0,
+    0.9686
+   ],
+   [
+    18.0,
+    0.9669
+   ],
+   [
+    22.0,
+    0.9653
+   ],
+   [
+    23.0,
+    0.9636
+   ],
+   [
+    24.0,
+    0.9521
+   ],
+   [
+    25.0,
+    0.9504
+   ],
+   [
+    27.0,
+    0.9388
+   ],
+   [
+    28.0,
+    0.9107
+   ],
+   [
+    29.0,
+    0.9008
+   ],
+   [
+    30.0,
+    0.886
+   ],
+   [
+    31.0,
+    0.8545
+   ],
+   [
+    32.0,
+    0.8512
+   ],
+   [
+    33.0,
+    0.843
+   ],
+   [
+    34.0,
+    0.8215
+   ],
+   [
+    35.0,
+    0.7983
+   ],
+   [
+    36.0,
+    0.7769
+   ],
+   [
+    37.0,
+    0.7752
+   ],
+   [
+    38.0,
+    0.762
+   ],
+   [
+    39.0,
+    0.7421
+   ],
+   [
+    40.0,
+    0.7322
+   ],
+   [
+    42.0,
+    0.7273
+   ],
+   [
+    43.0,
+    0.7041
+   ],
+   [
+    44.0,
+    0.6926
+   ],
+   [
+    45.0,
+    0.6843
+   ],
+   [
+    46.0,
+    0.6777
+   ],
+   [
+    47.0,
+    0.6744
+   ],
+   [
+    48.0,
+    0.6545
+   ],
+   [
+    49.0,
+    0.6413
+   ],
+   [
+    50.0,
+    0.6182
+   ],
+   [
+    51.0,
+    0.6099
+   ],
+   [
+    52.0,
+    0.6066
+   ],
+   [
+    53.0,
+    0.6012
+   ],
+   [
+    54.0,
+    0.5799
+   ],
+   [
+    55.0,
+    0.5598
+   ],
+   [
+    56.0,
+    0.5374
+   ],
+   [
+    57.0,
+    0.5056
+   ],
+   [
+    58.0,
+    0.4848
+   ],
+   [
+    59.0,
+    0.4708
+   ],
+   [
+    60.0,
+    0.462
+   ],
+   [
+    62.0,
+    0.3753
+   ],
+   [
+    63.0,
+    0.3465
+   ],
+   [
+    64.0,
+    0.3176
+   ],
+   [
+    65.0,
+    0.2647
+   ],
+   [
+    66.0,
+    0.1323
+   ]
+  ],
+  "2026-10": [
+   [
+    1.0,
+    0.9943
+   ],
+   [
+    2.0,
+    0.98
+   ],
+   [
+    3.0,
+    0.9714
+   ],
+   [
+    4.0,
+    0.9629
+   ],
+   [
+    5.0,
+    0.9457
+   ],
+   [
+    6.0,
+    0.9286
+   ],
+   [
+    7.0,
+    0.92
+   ],
+   [
+    8.0,
+    0.9143
+   ],
+   [
+    10.0,
+    0.9057
+   ],
+   [
+    11.0,
+    0.9029
+   ],
+   [
+    12.0,
+    0.8943
+   ],
+   [
+    13.0,
+    0.8886
+   ],
+   [
+    14.0,
+    0.8829
+   ],
+   [
+    15.0,
+    0.88
+   ],
+   [
+    16.0,
+    0.8771
+   ],
+   [
+    17.0,
+    0.8743
+   ],
+   [
+    19.0,
+    0.8686
+   ],
+   [
+    20.0,
+    0.86
+   ],
+   [
+    21.0,
+    0.8571
+   ],
+   [
+    22.0,
+    0.8543
+   ],
+   [
+    23.0,
+    0.8425
+   ],
+   [
+    24.0,
+    0.8395
+   ],
+   [
+    26.0,
+    0.836
+   ],
+   [
+    28.0,
+    0.8325
+   ],
+   [
+    29.0,
+    0.8219
+   ],
+   [
+    30.0,
+    0.8182
+   ],
+   [
+    32.0,
+    0.8142
+   ],
+   [
+    33.0,
+    0.8098
+   ],
+   [
+    37.0,
+    0.8051
+   ],
+   [
+    41.0,
+    0.7977
+   ],
+   [
+    42.0,
+    0.7753
+   ],
+   [
+    43.0,
+    0.738
+   ],
+   [
+    46.0,
+    0.7263
+   ]
+  ],
+  "2026-11": [
+   [
+    1.0,
+    0.9713
+   ],
+   [
+    2.0,
+    0.9652
+   ],
+   [
+    3.0,
+    0.9587
+   ],
+   [
+    5.0,
+    0.9359
+   ],
+   [
+    6.0,
+    0.903
+   ],
+   [
+    7.0,
+    0.8948
+   ],
+   [
+    8.0,
+    0.8779
+   ],
+   [
+    9.0,
+    0.859
+   ],
+   [
+    14.0,
+    0.8407
+   ]
+  ]
+ },
+ "distributii_pe_perioade": {
+  "meta": "Distribuția așteptării (zile calendaristice), finale stricte, pe data deciziei.",
+  "columns": [
+   "perioada",
+   "n",
+   "medie",
+   "p10",
+   "p25",
+   "p50",
+   "p75",
+   "p90",
+   "p99",
+   "cota_le1z_pct",
+   "cota_peste30z_pct"
+  ],
+  "rows": [
+   {
+    "perioada": "Platforma veche (apr. 2023–17.07.2024)",
+    "n": 975366,
+    "medie": 4.0,
+    "p10": 1.42,
+    "p25": 1.51,
+    "p50": 1.64,
+    "p75": 3.66,
+    "p90": 9.48,
+    "p99": 19.69,
+    "cota_le1z_pct": 0.3,
+    "cota_peste30z_pct": 0.0
+   },
+   {
+    "perioada": "Lansarea portalului (29.07–30.11.2024)",
+    "n": 236467,
+    "medie": 13.44,
+    "p10": 1.07,
+    "p25": 3.72,
+    "p50": 12.11,
+    "p75": 20.96,
+    "p90": 27.43,
+    "p99": 43.0,
+    "cota_le1z_pct": 6.9,
+    "cota_peste30z_pct": 7.0
+   },
+   {
+    "perioada": "Stabil 2025",
+    "n": 1010770,
+    "medie": 5.35,
+    "p10": 0.95,
+    "p25": 1.08,
+    "p50": 2.97,
+    "p75": 6.95,
+    "p90": 16.66,
+    "p99": 26.03,
+    "cota_le1z_pct": 15.8,
+    "cota_peste30z_pct": 0.4
+   },
+   {
+    "perioada": "2026 până în iulie",
+    "n": 605114,
+    "medie": 7.37,
+    "p10": 1.16,
+    "p25": 3.04,
+    "p50": 5.76,
+    "p75": 8.09,
+    "p90": 18.92,
+    "p99": 27.03,
+    "cota_le1z_pct": 4.8,
+    "cota_peste30z_pct": 0.6
+   },
+   {
+    "perioada": "August–septembrie 2026",
+    "n": 160000,
+    "medie": 17.87,
+    "p10": 8.22,
+    "p25": 11.92,
+    "p50": 18.06,
+    "p75": 23.45,
+    "p90": 27.09,
+    "p99": 35.59,
+    "cota_le1z_pct": 0.4,
+    "cota_peste30z_pct": 4.1
+   },
+   {
+    "perioada": "Octombrie–noiembrie 2026",
+    "n": 154328,
+    "medie": 38.31,
+    "p10": 16.74,
+    "p25": 30.85,
+    "p50": 39.03,
+    "p75": 49.01,
+    "p90": 55.8,
+    "p99": 62.03,
+    "cota_le1z_pct": 0.4,
+    "cota_peste30z_pct": 77.7
+   }
+  ]
+ },
+ "bootstrap_C14": {
+  "n": 15568,
+  "median": 57.09,
+  "ci95": [
+   57.08,
+   57.11
+  ]
+ },
+ "profil_zile_saptamana_2026": {
+  "meta": "Ponderea depunerilor (CERERE265 + INMATRIC265, după data depunerii) și a deciziilor finale stricte, pe zi a săptămânii, 2026.",
+  "columns": [
+   "zi",
+   "depuneri_pct",
+   "decizii_pct"
+  ],
+  "rows": [
+   {
+    "zi": "luni",
+    "depuneri_pct": 20.04,
+    "decizii_pct": 20.12
+   },
+   {
+    "zi": "marți",
+    "depuneri_pct": 20.91,
+    "decizii_pct": 19.51
+   },
+   {
+    "zi": "miercuri",
+    "depuneri_pct": 20.24,
+    "decizii_pct": 20.65
+   },
+   {
+    "zi": "joi",
+    "depuneri_pct": 20.57,
+    "decizii_pct": 20.93
+   },
+   {
+    "zi": "vineri",
+    "depuneri_pct": 16.13,
+    "decizii_pct": 18.8
+   },
+   {
+    "zi": "sâmbătă",
+    "depuneri_pct": 1.0,
+    "decizii_pct": 0.0
+   },
+   {
+    "zi": "duminică",
+    "depuneri_pct": 1.11,
+    "decizii_pct": 0.0
+   }
+  ]
+ },
+ "profil_ore_depunere_2026": {
+  "meta": "Ponderea depunerilor pe ora înregistrării, 2026 (ora din marca temporală a cererii).",
+  "columns": [
+   "ora",
+   "depuneri_pct"
+  ],
+  "rows": [
+   {
+    "ora": 0,
+    "depuneri_pct": 0.34
+   },
+   {
+    "ora": 1,
+    "depuneri_pct": 0.17
+   },
+   {
+    "ora": 2,
+    "depuneri_pct": 0.09
+   },
+   {
+    "ora": 3,
+    "depuneri_pct": 0.05
+   },
+   {
+    "ora": 4,
+    "depuneri_pct": 0.03
+   },
+   {
+    "ora": 5,
+    "depuneri_pct": 0.04
+   },
+   {
+    "ora": 6,
+    "depuneri_pct": 0.1
+   },
+   {
+    "ora": 7,
+    "depuneri_pct": 0.83
+   },
+   {
+    "ora": 8,
+    "depuneri_pct": 3.73
+   },
+   {
+    "ora": 9,
+    "depuneri_pct": 11.95
+   },
+   {
+    "ora": 10,
+    "depuneri_pct": 13.54
+   },
+   {
+    "ora": 11,
+    "depuneri_pct": 14.49
+   },
+   {
+    "ora": 12,
+    "depuneri_pct": 14.44
+   },
+   {
+    "ora": 13,
+    "depuneri_pct": 9.59
+   },
+   {
+    "ora": 14,
+    "depuneri_pct": 8.46
+   },
+   {
+    "ora": 15,
+    "depuneri_pct": 8.14
+   },
+   {
+    "ora": 16,
+    "depuneri_pct": 5.15
+   },
+   {
+    "ora": 17,
+    "depuneri_pct": 2.46
+   },
+   {
+    "ora": 18,
+    "depuneri_pct": 1.63
+   },
+   {
+    "ora": 19,
+    "depuneri_pct": 1.27
+   },
+   {
+    "ora": 20,
+    "depuneri_pct": 1.06
+   },
+   {
+    "ora": 21,
+    "depuneri_pct": 0.96
+   },
+   {
+    "ora": 22,
+    "depuneri_pct": 0.86
+   },
+   {
+    "ora": 23,
+    "depuneri_pct": 0.63
+   }
+  ]
+ },
+ "intarziere_publicare": {
+  "meta": "Diferența dintre momentul publicării în buletin și momentul deciziei (zile).",
+  "columns": [
+   "an",
+   "n",
+   "p50",
+   "p90",
+   "p99"
+  ],
+  "rows": [
+   {
+    "an": 2023,
+    "n": 677840,
+    "p50": 0.87,
+    "p90": 3.21,
+    "p99": 119.86
+   },
+   {
+    "an": 2024,
+    "n": 924072,
+    "p50": 0.9,
+    "p90": 3.81,
+    "p99": 33.05
+   },
+   {
+    "an": 2025,
+    "n": 1268622,
+    "p50": 0.76,
+    "p90": 3.24,
+    "p99": 22.78
+   },
+   {
+    "an": 2026,
+    "n": 1159219,
+    "p50": 0.67,
+    "p90": 2.87,
+    "p99": 5.01
+   }
+  ]
+ },
+ "cicluri_amanare_nov2026": {
+  "meta": "Decizii finale din 1–20.11.2026: câte amânări a avut același dosar (legat prin număr și dată de depunere). Legătura poate rata dosare renumerotate.",
+  "columns": [
+   "amanari_anterioare",
+   "decizii_finale_pct"
+  ],
+  "rows": [
+   {
+    "amanari_anterioare": "0",
+    "decizii_finale_pct": 78.63
+   },
+   {
+    "amanari_anterioare": "1",
+    "decizii_finale_pct": 21.12
+   },
+   {
+    "amanari_anterioare": "2",
+    "decizii_finale_pct": 0.24
+   },
+   {
+    "amanari_anterioare": "3",
+    "decizii_finale_pct": 0.01
+   },
+   {
+    "amanari_anterioare": "4+",
+    "decizii_finale_pct": 0.0
+   }
+  ]
+ },
+ "adjourn_link": {
+  "n_final": 63272,
+  "share_with_adjournment": 0.2137,
+  "wait_med_with": 54.7,
+  "wait_med_without": 49.8
+ },
+ "little": {
+  "lambda_finals_per_legal_wd": 4220,
+  "W_med_cal": 50.0,
+  "W_mean_wd": 32.2,
+  "W_med_wd": 36.0,
+  "L_implied": 136088,
+  "L_official_MJ": 204414
+ },
+ "judete_alfabetic": {
+  "meta": "42 de oficii, în ordine alfabetică (NU e clasament). Județ = oficiul de depunere.",
+  "columns": [
+   "code",
+   "name",
+   "region",
+   "n_nov",
+   "median_nov",
+   "p90_nov",
+   "median_y25",
+   "rejection_pct_2025",
+   "rejection_pct_crisis",
+   "postponement_action_pct",
+   "formation_gt10_pct"
+  ],
+  "rows": [
+   {
+    "code": "AB",
+    "name": "Alba",
+    "region": "Centru",
+    "n_nov": 964,
+    "median_nov": 49.9938,
+    "p90_nov": 57.1538,
+    "median_y25": 1.0569,
+    "rejection_pct_2025": 2.9681,
+    "rejection_pct_crisis": 8.0642,
+    "postponement_action_pct": 18.5427,
+    "formation_gt10_pct": 57.1429
+   },
+   {
+    "code": "AR",
+    "name": "Arad",
+    "region": "Vest",
+    "n_nov": 1284,
+    "median_nov": 52.9864,
+    "p90_nov": 57.4308,
+    "median_y25": 1.1083,
+    "rejection_pct_2025": 3.9462,
+    "rejection_pct_crisis": 6.3758,
+    "postponement_action_pct": 19.0617,
+    "formation_gt10_pct": 72.6103
+   },
+   {
+    "code": "AG",
+    "name": "Argeș",
+    "region": "Sud-Muntenia",
+    "n_nov": 1521,
+    "median_nov": 50.0999,
+    "p90_nov": 57.1225,
+    "median_y25": 1.1478,
+    "rejection_pct_2025": 3.5313,
+    "rejection_pct_crisis": 6.3623,
+    "postponement_action_pct": 13.5691,
+    "formation_gt10_pct": 71.3555
+   },
+   {
+    "code": "BC",
+    "name": "Bacău",
+    "region": "Nord-Est",
+    "n_nov": 986,
+    "median_nov": 50.1046,
+    "p90_nov": 57.8535,
+    "median_y25": 1.1124,
+    "rejection_pct_2025": 7.5772,
+    "rejection_pct_crisis": 11.9282,
+    "postponement_action_pct": 23.1373,
+    "formation_gt10_pct": 69.2552
+   },
+   {
+    "code": "BH",
+    "name": "Bihor",
+    "region": "Nord-Vest",
+    "n_nov": 2064,
+    "median_nov": 53.0397,
+    "p90_nov": 57.7852,
+    "median_y25": 3.3297,
+    "rejection_pct_2025": 9.0105,
+    "rejection_pct_crisis": 7.886,
+    "postponement_action_pct": 18.6432,
+    "formation_gt10_pct": 74.1031
+   },
+   {
+    "code": "BN",
+    "name": "Bistrița-Năsăud",
+    "region": "Nord-Vest",
+    "n_nov": 783,
+    "median_nov": 55.8055,
+    "p90_nov": 61.0321,
+    "median_y25": 3.0091,
+    "rejection_pct_2025": 6.927,
+    "rejection_pct_crisis": 7.4528,
+    "postponement_action_pct": 18.0678,
+    "formation_gt10_pct": 78.6624
+   },
+   {
+    "code": "BT",
+    "name": "Botoșani",
+    "region": "Nord-Est",
+    "n_nov": 583,
+    "median_nov": 52.9978,
+    "p90_nov": 57.2233,
+    "median_y25": 2.1446,
+    "rejection_pct_2025": 5.9334,
+    "rejection_pct_crisis": 6.1175,
+    "postponement_action_pct": 13.6555,
+    "formation_gt10_pct": 63.8783
+   },
+   {
+    "code": "BV",
+    "name": "Brașov",
+    "region": "Centru",
+    "n_nov": 1896,
+    "median_nov": 50.9355,
+    "p90_nov": 57.6344,
+    "median_y25": 5.698,
+    "rejection_pct_2025": 9.3282,
+    "rejection_pct_crisis": 11.0904,
+    "postponement_action_pct": 22.7354,
+    "formation_gt10_pct": 78.3784
+   },
+   {
+    "code": "BR",
+    "name": "Brăila",
+    "region": "Sud-Est",
+    "n_nov": 531,
+    "median_nov": 49.0962,
+    "p90_nov": 57.1399,
+    "median_y25": 1.2856,
+    "rejection_pct_2025": 6.0159,
+    "rejection_pct_crisis": 4.124,
+    "postponement_action_pct": 13.8055,
+    "formation_gt10_pct": 57.5931
+   },
+   {
+    "code": "BZ",
+    "name": "Buzău",
+    "region": "Sud-Est",
+    "n_nov": 901,
+    "median_nov": 50.1414,
+    "p90_nov": 57.1832,
+    "median_y25": 1.245,
+    "rejection_pct_2025": 8.3444,
+    "rejection_pct_crisis": 7.0284,
+    "postponement_action_pct": 16.2462,
+    "formation_gt10_pct": 69.7561
+   },
+   {
+    "code": "CS",
+    "name": "Caraș-Severin",
+    "region": "Vest",
+    "n_nov": 414,
+    "median_nov": 49.9864,
+    "p90_nov": 57.8812,
+    "median_y25": 1.9224,
+    "rejection_pct_2025": 5.038,
+    "rejection_pct_crisis": 6.4935,
+    "postponement_action_pct": 15.0177,
+    "formation_gt10_pct": 71.0638
+   },
+   {
+    "code": "CJ",
+    "name": "Cluj",
+    "region": "Nord-Vest",
+    "n_nov": 3215,
+    "median_nov": 52.829,
+    "p90_nov": 57.7203,
+    "median_y25": 2.1541,
+    "rejection_pct_2025": 5.613,
+    "rejection_pct_crisis": 8.8781,
+    "postponement_action_pct": 19.9467,
+    "formation_gt10_pct": 68.4444
+   },
+   {
+    "code": "CT",
+    "name": "Constanța",
+    "region": "Sud-Est",
+    "n_nov": 1573,
+    "median_nov": 49.1068,
+    "p90_nov": 58.093,
+    "median_y25": 5.1296,
+    "rejection_pct_2025": 7.0612,
+    "rejection_pct_crisis": 6.9004,
+    "postponement_action_pct": 18.1328,
+    "formation_gt10_pct": 74.0842
+   },
+   {
+    "code": "CV",
+    "name": "Covasna",
+    "region": "Centru",
+    "n_nov": 473,
+    "median_nov": 52.8695,
+    "p90_nov": 57.1672,
+    "median_y25": 1.1271,
+    "rejection_pct_2025": 7.2765,
+    "rejection_pct_crisis": 6.1838,
+    "postponement_action_pct": 13.895,
+    "formation_gt10_pct": 66.1538
+   },
+   {
+    "code": "CL",
+    "name": "Călărași",
+    "region": "Sud-Muntenia",
+    "n_nov": 572,
+    "median_nov": 50.0688,
+    "p90_nov": 57.231,
+    "median_y25": 1.2384,
+    "rejection_pct_2025": 8.6139,
+    "rejection_pct_crisis": 5.8699,
+    "postponement_action_pct": 13.2357,
+    "formation_gt10_pct": 73.9837
+   },
+   {
+    "code": "DJ",
+    "name": "Dolj",
+    "region": "Sud-Vest Oltenia",
+    "n_nov": 1201,
+    "median_nov": 51.9473,
+    "p90_nov": 61.9404,
+    "median_y25": 3.1523,
+    "rejection_pct_2025": 6.7527,
+    "rejection_pct_crisis": 8.6441,
+    "postponement_action_pct": 19.4406,
+    "formation_gt10_pct": 64.199
+   },
+   {
+    "code": "DB",
+    "name": "Dâmbovița",
+    "region": "Sud-Muntenia",
+    "n_nov": 1019,
+    "median_nov": 49.9817,
+    "p90_nov": 57.5459,
+    "median_y25": 1.7337,
+    "rejection_pct_2025": 7.6207,
+    "rejection_pct_crisis": 9.0051,
+    "postponement_action_pct": 19.5187,
+    "formation_gt10_pct": 61.8959
+   },
+   {
+    "code": "GL",
+    "name": "Galați",
+    "region": "Sud-Est",
+    "n_nov": 1116,
+    "median_nov": 49.8321,
+    "p90_nov": 56.7205,
+    "median_y25": 3.0587,
+    "rejection_pct_2025": 10.8185,
+    "rejection_pct_crisis": 5.6014,
+    "postponement_action_pct": 14.8967,
+    "formation_gt10_pct": 69.0756
+   },
+   {
+    "code": "GR",
+    "name": "Giurgiu",
+    "region": "Sud-Muntenia",
+    "n_nov": 501,
+    "median_nov": 49.9997,
+    "p90_nov": 57.5717,
+    "median_y25": 2.7144,
+    "rejection_pct_2025": 9.4337,
+    "rejection_pct_crisis": 8.9411,
+    "postponement_action_pct": 19.3439,
+    "formation_gt10_pct": 73.1544
+   },
+   {
+    "code": "GJ",
+    "name": "Gorj",
+    "region": "Sud-Vest Oltenia",
+    "n_nov": 660,
+    "median_nov": 50.0671,
+    "p90_nov": 57.7654,
+    "median_y25": 1.0994,
+    "rejection_pct_2025": 5.007,
+    "rejection_pct_crisis": 3.1941,
+    "postponement_action_pct": 13.3428,
+    "formation_gt10_pct": 59.4306
+   },
+   {
+    "code": "HR",
+    "name": "Harghita",
+    "region": "Centru",
+    "n_nov": 928,
+    "median_nov": 53.0933,
+    "p90_nov": 57.849,
+    "median_y25": 1.0739,
+    "rejection_pct_2025": 4.4816,
+    "rejection_pct_crisis": 5.2567,
+    "postponement_action_pct": 14.5287,
+    "formation_gt10_pct": 67.6349
+   },
+   {
+    "code": "HD",
+    "name": "Hunedoara",
+    "region": "Vest",
+    "n_nov": 968,
+    "median_nov": 49.927,
+    "p90_nov": 57.1999,
+    "median_y25": 1.2079,
+    "rejection_pct_2025": 4.661,
+    "rejection_pct_crisis": 8.2664,
+    "postponement_action_pct": 17.5934,
+    "formation_gt10_pct": 67.4468
+   },
+   {
+    "code": "IL",
+    "name": "Ialomița",
+    "region": "Sud-Muntenia",
+    "n_nov": 517,
+    "median_nov": 53.0226,
+    "p90_nov": 57.9395,
+    "median_y25": 2.0923,
+    "rejection_pct_2025": 9.0412,
+    "rejection_pct_crisis": 10.4071,
+    "postponement_action_pct": 20.6461,
+    "formation_gt10_pct": 69.2308
+   },
+   {
+    "code": "IS",
+    "name": "Iași",
+    "region": "Nord-Est",
+    "n_nov": 2100,
+    "median_nov": 50.1549,
+    "p90_nov": 57.5319,
+    "median_y25": 1.9678,
+    "rejection_pct_2025": 5.6469,
+    "rejection_pct_crisis": 9.1031,
+    "postponement_action_pct": 20.0774,
+    "formation_gt10_pct": 74.0913
+   },
+   {
+    "code": "IF",
+    "name": "Ilfov",
+    "region": "București–Ilfov",
+    "n_nov": 2865,
+    "median_nov": 49.1226,
+    "p90_nov": 57.0489,
+    "median_y25": 3.9345,
+    "rejection_pct_2025": 8.8011,
+    "rejection_pct_crisis": 9.3517,
+    "postponement_action_pct": 22.3992,
+    "formation_gt10_pct": 72.067
+   },
+   {
+    "code": "MM",
+    "name": "Maramureș",
+    "region": "Nord-Vest",
+    "n_nov": 1237,
+    "median_nov": 51.7784,
+    "p90_nov": 57.7992,
+    "median_y25": 1.1363,
+    "rejection_pct_2025": 6.118,
+    "rejection_pct_crisis": 8.6298,
+    "postponement_action_pct": 18.6739,
+    "formation_gt10_pct": 70.1413
+   },
+   {
+    "code": "MH",
+    "name": "Mehedinți",
+    "region": "Sud-Vest Oltenia",
+    "n_nov": 418,
+    "median_nov": 52.9864,
+    "p90_nov": 57.1489,
+    "median_y25": 3.9219,
+    "rejection_pct_2025": 6.4921,
+    "rejection_pct_crisis": 6.5853,
+    "postponement_action_pct": 15.5744,
+    "formation_gt10_pct": 68.5083
+   },
+   {
+    "code": "B",
+    "name": "Municipiul București",
+    "region": "București–Ilfov",
+    "n_nov": 11855,
+    "median_nov": 47.9493,
+    "p90_nov": 56.8531,
+    "median_y25": 4.6858,
+    "rejection_pct_2025": 9.707,
+    "rejection_pct_crisis": 8.8113,
+    "postponement_action_pct": 21.8617,
+    "formation_gt10_pct": 69.7186
+   },
+   {
+    "code": "MS",
+    "name": "Mureș",
+    "region": "Centru",
+    "n_nov": 1414,
+    "median_nov": 49.9905,
+    "p90_nov": 57.4432,
+    "median_y25": 2.8923,
+    "rejection_pct_2025": 6.2193,
+    "rejection_pct_crisis": 6.3413,
+    "postponement_action_pct": 15.8849,
+    "formation_gt10_pct": 60.4106
+   },
+   {
+    "code": "NT",
+    "name": "Neamț",
+    "region": "Nord-Est",
+    "n_nov": 840,
+    "median_nov": 50.2177,
+    "p90_nov": 57.6476,
+    "median_y25": 1.0889,
+    "rejection_pct_2025": 6.3549,
+    "rejection_pct_crisis": 7.5335,
+    "postponement_action_pct": 18.4945,
+    "formation_gt10_pct": 64.6919
+   },
+   {
+    "code": "OT",
+    "name": "Olt",
+    "region": "Sud-Vest Oltenia",
+    "n_nov": 898,
+    "median_nov": 52.9828,
+    "p90_nov": 57.8874,
+    "median_y25": 1.1532,
+    "rejection_pct_2025": 3.8378,
+    "rejection_pct_crisis": 4.9045,
+    "postponement_action_pct": 12.9634,
+    "formation_gt10_pct": 69.2547
+   },
+   {
+    "code": "PH",
+    "name": "Prahova",
+    "region": "Sud-Muntenia",
+    "n_nov": 1671,
+    "median_nov": 51.9118,
+    "p90_nov": 60.926,
+    "median_y25": 1.8602,
+    "rejection_pct_2025": 8.0282,
+    "rejection_pct_crisis": 8.786,
+    "postponement_action_pct": 20.583,
+    "formation_gt10_pct": 75.4717
+   },
+   {
+    "code": "SM",
+    "name": "Satu Mare",
+    "region": "Nord-Vest",
+    "n_nov": 699,
+    "median_nov": 52.9739,
+    "p90_nov": 58.0167,
+    "median_y25": 3.897,
+    "rejection_pct_2025": 6.0929,
+    "rejection_pct_crisis": 9.0311,
+    "postponement_action_pct": 19.343,
+    "formation_gt10_pct": 74.8521
+   },
+   {
+    "code": "SB",
+    "name": "Sibiu",
+    "region": "Centru",
+    "n_nov": 1420,
+    "median_nov": 52.9073,
+    "p90_nov": 57.2064,
+    "median_y25": 1.2112,
+    "rejection_pct_2025": 6.5703,
+    "rejection_pct_crisis": 8.33,
+    "postponement_action_pct": 19.0732,
+    "formation_gt10_pct": 63.4318
+   },
+   {
+    "code": "SV",
+    "name": "Suceava",
+    "region": "Nord-Est",
+    "n_nov": 1164,
+    "median_nov": 52.9717,
+    "p90_nov": 57.2253,
+    "median_y25": 1.8046,
+    "rejection_pct_2025": 7.0007,
+    "rejection_pct_crisis": 6.4946,
+    "postponement_action_pct": 17.4116,
+    "formation_gt10_pct": 66.56
+   },
+   {
+    "code": "SJ",
+    "name": "Sălaj",
+    "region": "Nord-Vest",
+    "n_nov": 560,
+    "median_nov": 50.0923,
+    "p90_nov": 57.2081,
+    "median_y25": 0.972,
+    "rejection_pct_2025": 3.7645,
+    "rejection_pct_crisis": 8.5595,
+    "postponement_action_pct": 18.0029,
+    "formation_gt10_pct": 62.406
+   },
+   {
+    "code": "TR",
+    "name": "Teleorman",
+    "region": "Sud-Muntenia",
+    "n_nov": 513,
+    "median_nov": 53.0514,
+    "p90_nov": 57.8881,
+    "median_y25": 2.9429,
+    "rejection_pct_2025": 8.0395,
+    "rejection_pct_crisis": 9.7494,
+    "postponement_action_pct": 19.0609,
+    "formation_gt10_pct": 72.973
+   },
+   {
+    "code": "TM",
+    "name": "Timiș",
+    "region": "Vest",
+    "n_nov": 2739,
+    "median_nov": 49.7857,
+    "p90_nov": 57.4977,
+    "median_y25": 3.0554,
+    "rejection_pct_2025": 9.2077,
+    "rejection_pct_crisis": 9.4997,
+    "postponement_action_pct": 22.247,
+    "formation_gt10_pct": 66.7067
+   },
+   {
+    "code": "TL",
+    "name": "Tulcea",
+    "region": "Sud-Est",
+    "n_nov": 531,
+    "median_nov": 50.1791,
+    "p90_nov": 57.8774,
+    "median_y25": 4.2215,
+    "rejection_pct_2025": 10.3662,
+    "rejection_pct_crisis": 9.5594,
+    "postponement_action_pct": 17.7266,
+    "formation_gt10_pct": 65.7459
+   },
+   {
+    "code": "VS",
+    "name": "Vaslui",
+    "region": "Nord-Est",
+    "n_nov": 546,
+    "median_nov": 53.0587,
+    "p90_nov": 57.8718,
+    "median_y25": 1.852,
+    "rejection_pct_2025": 4.2223,
+    "rejection_pct_crisis": 5.7252,
+    "postponement_action_pct": 15.1355,
+    "formation_gt10_pct": 66.7925
+   },
+   {
+    "code": "VN",
+    "name": "Vrancea",
+    "region": "Sud-Est",
+    "n_nov": 776,
+    "median_nov": 53.052,
+    "p90_nov": 57.9536,
+    "median_y25": 1.3238,
+    "rejection_pct_2025": 7.2641,
+    "rejection_pct_crisis": 8.3477,
+    "postponement_action_pct": 16.5198,
+    "formation_gt10_pct": 68.9796
+   },
+   {
+    "code": "VL",
+    "name": "Vâlcea",
+    "region": "Sud-Vest Oltenia",
+    "n_nov": 856,
+    "median_nov": 50.0193,
+    "p90_nov": 57.0513,
+    "median_y25": 1.1587,
+    "rejection_pct_2025": 2.9869,
+    "rejection_pct_crisis": 6.7293,
+    "postponement_action_pct": 15.556,
+    "formation_gt10_pct": 63.5036
+   }
+  ]
+ },
+ "county_dispersion": {
+  "n": 42,
+  "min": 47.9,
+  "max": 55.8,
+  "iqr": [
+   50.0,
+   53.0
+  ],
+  "cv_pct": 3.3,
+  "spearman_2025_vs_nov": -0.07
+ },
+ "model_ipoteze_intrare": {
+  "meta": "Ipotezele motorului de prognoză (distribuții triunghiulare: minim, mod, maxim). Sursă: forecast_inputs.csv, SHA-256 6a5efc21c3406b9f….",
+  "columns": [
+   "parametru",
+   "minim",
+   "mod",
+   "maxim"
+  ],
+  "rows": [
+   {
+    "parametru": "stoc_initial",
+    "minim": 145000.0,
+    "mod": 200000.0,
+    "maxim": 300000.0
+   },
+   {
+    "parametru": "flux_zilnic_recurent",
+    "minim": 2900.0,
+    "mod": 3350.0,
+    "maxim": 4000.0
+   },
+   {
+    "parametru": "crestere_anuala_flux",
+    "minim": -0.04,
+    "mod": 0.01,
+    "maxim": 0.07
+   },
+   {
+    "parametru": "pondere_caen_iesiri",
+    "minim": 0.15,
+    "mod": 0.265,
+    "maxim": 0.4
+   },
+   {
+    "parametru": "dosare_caen_suplimentare",
+    "minim": 140000.0,
+    "mod": 245000.0,
+    "maxim": 390000.0
+   },
+   {
+    "parametru": "efort_caen",
+    "minim": 0.5,
+    "mod": 0.8,
+    "maxim": 1.25
+   },
+   {
+    "parametru": "populatie_capital",
+    "minim": 100000.0,
+    "mod": 158477.0,
+    "maxim": 220000.0
+   },
+   {
+    "parametru": "proportie_reducere",
+    "minim": 0.1,
+    "mod": 0.17,
+    "maxim": 0.27
+   },
+   {
+    "parametru": "conformare_ulterioara",
+    "minim": 0.65,
+    "mod": 0.8,
+    "maxim": 0.95
+   },
+   {
+    "parametru": "depuneri_separate_ulterioare",
+    "minim": 0.65,
+    "mod": 0.8,
+    "maxim": 0.95
+   },
+   {
+    "parametru": "efort_capital",
+    "minim": 1.1,
+    "mod": 1.35,
+    "maxim": 1.6
+   },
+   {
+    "parametru": "dosare_defensive",
+    "minim": 30000.0,
+    "mod": 75000.0,
+    "maxim": 110000.0
+   },
+   {
+    "parametru": "cazuri_anaf",
+    "minim": 45000.0,
+    "mod": 165000.0,
+    "maxim": 260000.0
+   },
+   {
+    "parametru": "fractie_anaf_capacitate_comuna",
+    "minim": 0.0,
+    "mod": 0.25,
+    "maxim": 0.7
+   },
+   {
+    "parametru": "efort_anaf",
+    "minim": 0.35,
+    "mod": 0.5,
+    "maxim": 0.75
+   },
+   {
+    "parametru": "rezolvari_observate_pe_zi",
+    "minim": 3982.5,
+    "mod": 4425.0,
+    "maxim": 4779.0
+   }
+  ]
+ },
+ "model_scenarii_OUG": {
+  "meta": "Scenarii OUG, toate perioadele: p10 / mediană / p90 (zile) și câștigul pe aceleași simulări. Sursă: scenarios.csv, SHA-256 42e0b681330ed57f….",
+  "columns": [
+   "scenario",
+   "period",
+   "p10",
+   "median",
+   "p90",
+   "median_saved",
+   "median_stock"
+  ],
+  "rows": [
+   {
+    "scenario": "referinta",
+    "period": "2027-03-31",
+    "p10": 110.0,
+    "median": 134.0,
+    "p90": 162.0,
+    "median_saved": 0.0,
+    "median_stock": 383521.9
+   },
+   {
+    "scenario": "referinta",
+    "period": "2027-06-30",
+    "p10": 105.0,
+    "median": 138.0,
+    "p90": 175.0,
+    "median_saved": 0.0,
+    "median_stock": 408665.955
+   },
+   {
+    "scenario": "referinta",
+    "period": "2027-12-31",
+    "p10": 112.0,
+    "median": 164.0,
+    "p90": 216.0,
+    "median_saved": 0.0,
+    "median_stock": 451823.057
+   },
+   {
+    "scenario": "referinta",
+    "period": "2028-01-31",
+    "p10": 105.9,
+    "median": 156.0,
+    "p90": 212.0,
+    "median_saved": 0.0,
+    "median_stock": 447926.618
+   },
+   {
+    "scenario": "referinta",
+    "period": "2028-06-30",
+    "p10": 74.0,
+    "median": 136.0,
+    "p90": 214.1,
+    "median_saved": 0.0,
+    "median_stock": 395446.55
+   },
+   {
+    "scenario": "referinta",
+    "period": "peak",
+    "p10": 124.0,
+    "median": 165.0,
+    "p90": 220.0,
+    "median_saved": 0.0,
+    "median_stock": null
+   },
+   {
+    "scenario": "oug_redus",
+    "period": "2027-03-31",
+    "p10": 105.0,
+    "median": 131.0,
+    "p90": 156.0,
+    "median_saved": 5.0,
+    "median_stock": 378421.9
+   },
+   {
+    "scenario": "oug_redus",
+    "period": "2027-06-30",
+    "p10": 99.0,
+    "median": 131.0,
+    "p90": 167.0,
+    "median_saved": 7.0,
+    "median_stock": 397465.955
+   },
+   {
+    "scenario": "oug_redus",
+    "period": "2027-12-31",
+    "p10": 102.0,
+    "median": 152.0,
+    "p90": 207.0,
+    "median_saved": 8.0,
+    "median_stock": 427623.057
+   },
+   {
+    "scenario": "oug_redus",
+    "period": "2028-01-31",
+    "p10": 98.0,
+    "median": 148.0,
+    "p90": 204.0,
+    "median_saved": 8.0,
+    "median_stock": 423426.618
+   },
+   {
+    "scenario": "oug_redus",
+    "period": "2028-06-30",
+    "p10": 66.0,
+    "median": 126.0,
+    "p90": 203.0,
+    "median_saved": 8.0,
+    "median_stock": 370946.55
+   },
+   {
+    "scenario": "oug_redus",
+    "period": "peak",
+    "p10": 118.0,
+    "median": 157.0,
+    "p90": 210.0,
+    "median_saved": 8.0,
+    "median_stock": null
+   },
+   {
+    "scenario": "oug_central",
+    "period": "2027-03-31",
+    "p10": 96.0,
+    "median": 118.0,
+    "p90": 142.0,
+    "median_saved": 16.0,
+    "median_stock": 363676.48
+   },
+   {
+    "scenario": "oug_central",
+    "period": "2027-06-30",
+    "p10": 84.0,
+    "median": 112.0,
+    "p90": 145.0,
+    "median_saved": 25.0,
+    "median_stock": 364559.248
+   },
+   {
+    "scenario": "oug_central",
+    "period": "2027-12-31",
+    "p10": 80.0,
+    "median": 129.0,
+    "p90": 182.0,
+    "median_saved": 34.0,
+    "median_stock": 356756.117
+   },
+   {
+    "scenario": "oug_central",
+    "period": "2028-01-31",
+    "p10": 71.0,
+    "median": 120.0,
+    "p90": 177.1,
+    "median_saved": 34.0,
+    "median_stock": 351015.874
+   },
+   {
+    "scenario": "oug_central",
+    "period": "2028-06-30",
+    "p10": 41.0,
+    "median": 102.5,
+    "p90": 172.0,
+    "median_saved": 34.0,
+    "median_stock": 296851.033
+   },
+   {
+    "scenario": "oug_central",
+    "period": "peak",
+    "p10": 104.0,
+    "median": 137.0,
+    "p90": 186.0,
+    "median_saved": 30.0,
+    "median_stock": null
+   },
+   {
+    "scenario": "oug_ridicat",
+    "period": "2027-03-31",
+    "p10": 77.0,
+    "median": 99.0,
+    "p90": 120.0,
+    "median_saved": 35.0,
+    "median_stock": 336096.292
+   },
+   {
+    "scenario": "oug_ridicat",
+    "period": "2027-06-30",
+    "p10": 58.0,
+    "median": 84.0,
+    "p90": 112.0,
+    "median_saved": 53.0,
+    "median_stock": 303395.066
+   },
+   {
+    "scenario": "oug_ridicat",
+    "period": "2027-12-31",
+    "p10": 35.0,
+    "median": 80.0,
+    "p90": 133.0,
+    "median_saved": 81.0,
+    "median_stock": 225134.018
+   },
+   {
+    "scenario": "oug_ridicat",
+    "period": "2028-01-31",
+    "p10": 28.0,
+    "median": 72.0,
+    "p90": 133.0,
+    "median_saved": 81.0,
+    "median_stock": 217284.497
+   },
+   {
+    "scenario": "oug_ridicat",
+    "period": "2028-06-30",
+    "p10": 3.0,
+    "median": 56.0,
+    "p90": 122.1,
+    "median_saved": 79.0,
+    "median_stock": 161801.408
+   },
+   {
+    "scenario": "oug_ridicat",
+    "period": "peak",
+    "p10": 85.0,
+    "median": 109.0,
+    "p90": 141.0,
+    "median_saved": 54.0,
+    "median_stock": null
+   },
+   {
+    "scenario": "doar_art_iii",
+    "period": "2027-03-31",
+    "p10": 110.0,
+    "median": 134.0,
+    "p90": 161.0,
+    "median_saved": 0.0,
+    "median_stock": 382801.48
+   },
+   {
+    "scenario": "doar_art_iii",
+    "period": "2027-06-30",
+    "p10": 105.0,
+    "median": 135.0,
+    "p90": 174.0,
+    "median_saved": 0.0,
+    "median_stock": 406559.248
+   },
+   {
+    "scenario": "doar_art_iii",
+    "period": "2027-12-31",
+    "p10": 111.0,
+    "median": 161.0,
+    "p90": 214.1,
+    "median_saved": 1.0,
+    "median_stock": 447506.117
+   },
+   {
+    "scenario": "doar_art_iii",
+    "period": "2028-01-31",
+    "p10": 102.0,
+    "median": 155.0,
+    "p90": 211.0,
+    "median_saved": 1.0,
+    "median_stock": 442890.874
+   },
+   {
+    "scenario": "doar_art_iii",
+    "period": "2028-06-30",
+    "p10": 70.0,
+    "median": 132.0,
+    "p90": 210.0,
+    "median_saved": 2.0,
+    "median_stock": 388726.033
+   },
+   {
+    "scenario": "doar_art_iii",
+    "period": "peak",
+    "p10": 124.0,
+    "median": 162.5,
+    "p90": 217.0,
+    "median_saved": 1.0,
+    "median_stock": null
+   },
+   {
+    "scenario": "oug_digital",
+    "period": "2027-03-31",
+    "p10": 63.0,
+    "median": 79.0,
+    "p90": 100.0,
+    "median_saved": 53.0,
+    "median_stock": 255248.525
+   },
+   {
+    "scenario": "oug_digital",
+    "period": "2027-06-30",
+    "p10": 41.0,
+    "median": 64.0,
+    "p90": 90.0,
+    "median_saved": 73.0,
+    "median_stock": 213677.465
+   },
+   {
+    "scenario": "oug_digital",
+    "period": "2027-12-31",
+    "p10": 21.0,
+    "median": 63.0,
+    "p90": 112.0,
+    "median_saved": 97.0,
+    "median_stock": 182233.184
+   },
+   {
+    "scenario": "oug_digital",
+    "period": "2028-01-31",
+    "p10": 11.0,
+    "median": 56.0,
+    "p90": 108.0,
+    "median_saved": 98.0,
+    "median_stock": 174261.214
+   },
+   {
+    "scenario": "oug_digital",
+    "period": "2028-06-30",
+    "p10": 3.0,
+    "median": 34.0,
+    "p90": 98.0,
+    "median_saved": 99.0,
+    "median_stock": 104635.67
+   },
+   {
+    "scenario": "oug_digital",
+    "period": "peak",
+    "p10": 69.0,
+    "median": 87.0,
+    "p90": 116.0,
+    "median_saved": 79.0,
+    "median_stock": null
+   },
+   {
+    "scenario": "oug_esalonare",
+    "period": "2027-03-31",
+    "p10": 96.0,
+    "median": 118.0,
+    "p90": 142.0,
+    "median_saved": 16.0,
+    "median_stock": 363676.48
+   },
+   {
+    "scenario": "oug_esalonare",
+    "period": "2027-06-30",
+    "p10": 96.0,
+    "median": 124.0,
+    "p90": 159.0,
+    "median_saved": 14.0,
+    "median_stock": 400733.204
+   },
+   {
+    "scenario": "oug_esalonare",
+    "period": "2027-12-31",
+    "p10": 80.0,
+    "median": 129.0,
+    "p90": 182.0,
+    "median_saved": 34.0,
+    "median_stock": 358041.507
+   },
+   {
+    "scenario": "oug_esalonare",
+    "period": "2028-01-31",
+    "p10": 71.0,
+    "median": 120.0,
+    "p90": 177.1,
+    "median_saved": 34.0,
+    "median_stock": 351015.874
+   },
+   {
+    "scenario": "oug_esalonare",
+    "period": "2028-06-30",
+    "p10": 41.0,
+    "median": 102.5,
+    "p90": 172.0,
+    "median_saved": 34.0,
+    "median_stock": 296851.033
+   },
+   {
+    "scenario": "oug_esalonare",
+    "period": "peak",
+    "p10": 108.0,
+    "median": 138.0,
+    "p90": 186.0,
+    "median_saved": 28.0,
+    "median_stock": null
+   },
+   {
+    "scenario": "pachet",
+    "period": "2027-03-31",
+    "p10": 63.0,
+    "median": 79.0,
+    "p90": 100.0,
+    "median_saved": 53.0,
+    "median_stock": 255248.525
+   },
+   {
+    "scenario": "pachet",
+    "period": "2027-06-30",
+    "p10": 51.0,
+    "median": 76.0,
+    "p90": 100.0,
+    "median_saved": 62.0,
+    "median_stock": 249938.636
+   },
+   {
+    "scenario": "pachet",
+    "period": "2027-12-31",
+    "p10": 21.0,
+    "median": 63.0,
+    "p90": 112.3,
+    "median_saved": 96.0,
+    "median_stock": 183570.114
+   },
+   {
+    "scenario": "pachet",
+    "period": "2028-01-31",
+    "p10": 11.0,
+    "median": 56.0,
+    "p90": 108.0,
+    "median_saved": 98.0,
+    "median_stock": 174261.214
+   },
+   {
+    "scenario": "pachet",
+    "period": "2028-06-30",
+    "p10": 3.0,
+    "median": 34.0,
+    "p90": 98.0,
+    "median_saved": 99.0,
+    "median_stock": 104635.67
+   },
+   {
+    "scenario": "pachet",
+    "period": "peak",
+    "p10": 69.0,
+    "median": 88.0,
+    "p90": 117.0,
+    "median_saved": 77.0,
+    "median_stock": null
+   },
+   {
+    "scenario": "pachet_dupa_caen",
+    "period": "2027-03-31",
+    "p10": 63.0,
+    "median": 79.0,
+    "p90": 100.0,
+    "median_saved": 53.0,
+    "median_stock": 255248.525
+   },
+   {
+    "scenario": "pachet_dupa_caen",
+    "period": "2027-06-30",
+    "p10": 41.0,
+    "median": 64.0,
+    "p90": 90.0,
+    "median_saved": 73.0,
+    "median_stock": 213677.465
+   },
+   {
+    "scenario": "pachet_dupa_caen",
+    "period": "2027-12-31",
+    "p10": 21.0,
+    "median": 63.0,
+    "p90": 112.3,
+    "median_saved": 96.0,
+    "median_stock": 183570.114
+   },
+   {
+    "scenario": "pachet_dupa_caen",
+    "period": "2028-01-31",
+    "p10": 11.0,
+    "median": 56.0,
+    "p90": 108.0,
+    "median_saved": 98.0,
+    "median_stock": 174261.214
+   },
+   {
+    "scenario": "pachet_dupa_caen",
+    "period": "2028-06-30",
+    "p10": 3.0,
+    "median": 34.0,
+    "p90": 98.0,
+    "median_saved": 99.0,
+    "median_stock": 104635.67
+   },
+   {
+    "scenario": "pachet_dupa_caen",
+    "period": "peak",
+    "p10": 69.0,
+    "median": 87.0,
+    "p90": 116.0,
+    "median_saved": 79.0,
+    "median_stock": null
+   }
+  ]
+ },
+ "model_pachete": {
+  "meta": "Pachete de măsuri P0–P5 (P6–P7 omise: ating limita metricii de ~3 zile). Sursă: solutions_feasibility_and_simulations.csv, SHA-256 86c2a5709d20d868….",
+  "columns": [
+   "id",
+   "package",
+   "time_to_effect_days",
+   "wait_jun28_p10",
+   "wait_jun28_p50",
+   "wait_jun28_p90",
+   "days_saved_jun28_med"
+  ],
+  "rows": [
+   {
+    "id": "P0",
+    "package": "P0: Status Quo (Fără măsuri noi)",
+    "time_to_effect_days": "—",
+    "wait_jun28_p10": 74.0,
+    "wait_jun28_p50": 136.0,
+    "wait_jun28_p90": 214.1,
+    "days_saved_jun28_med": 0.0
+   },
+   {
+    "id": "P1",
+    "package": "P1: Doar amânare termene (+6 luni CAEN & capital, 0 capacitate)",
+    "time_to_effect_days": "1–7 zile",
+    "wait_jun28_p10": 74.0,
+    "wait_jun28_p50": 136.0,
+    "wait_jun28_p90": 214.1,
+    "days_saved_jun28_med": 0.0
+   },
+   {
+    "id": "P2",
+    "package": "P2: Proiect OUG MJ neamendat (central +375 u/zi, Art. III 25%, expiră 8.01.2028)",
+    "time_to_effect_days": "30–45 zile",
+    "wait_jun28_p10": 41.0,
+    "wait_jun28_p50": 102.5,
+    "wait_jun28_p90": 172.0,
+    "days_saved_jun28_med": 34.0
+   },
+   {
+    "id": "P3",
+    "package": "P3: OUG extins + ocupare 40% din cele 134 posturi finanțate (+750 u/zi)",
+    "time_to_effect_days": "60–120 zile",
+    "wait_jun28_p10": 3.0,
+    "wait_jun28_p50": 38.0,
+    "wait_jun28_p90": 94.0,
+    "days_saved_jun28_med": 98.0
+   },
+   {
+    "id": "P4",
+    "package": "P4: Decongestionare legislativă Zero-IT (OUG conversie CAEN 1-la-1 [-75%] + eșalonare CUI)",
+    "time_to_effect_days": "1–15 zile",
+    "wait_jun28_p10": 20.0,
+    "wait_jun28_p50": 81.0,
+    "wait_jun28_p90": 147.0,
+    "days_saved_jun28_med": 55.0
+   },
+   {
+    "id": "P5",
+    "package": "P5: Pachet Minim Realist 0–60 zile (OUG prelungit + CAEN 1-la-1 [-75%] + Eșalonare + Triaj)",
+    "time_to_effect_days": "15–45 zile",
+    "wait_jun28_p10": 3.0,
+    "wait_jun28_p50": 21.0,
+    "wait_jun28_p90": 81.0,
+    "days_saved_jun28_med": 111.0
+   }
+  ]
+ },
+ "model_validare_capacitate": {
+  "meta": "Test pe date nevăzute al ritmului de soluționare: 9 ferestre × 3 reguli. Sursă: forecast_capacity_backtest.csv, SHA-256 fa74fcf86e6e5467….",
+  "columns": [
+   "origin",
+   "test_start",
+   "test_end",
+   "test_workdays",
+   "model",
+   "predicted_per_day",
+   "observed_per_day",
+   "error_percent"
+  ],
+  "rows": [
+   {
+    "origin": "2026-03-01",
+    "test_start": "2026-03-02",
+    "test_end": "2026-03-27",
+    "test_workdays": 20,
+    "model": "ultimele_12_zile",
+    "predicted_per_day": 4242.583,
+    "observed_per_day": 4361.05,
+    "error_percent": 2.792
+   },
+   {
+    "origin": "2026-03-01",
+    "test_start": "2026-03-02",
+    "test_end": "2026-03-27",
+    "test_workdays": 20,
+    "model": "ultimele_4_saptamani",
+    "predicted_per_day": 4421.9,
+    "observed_per_day": 4361.05,
+    "error_percent": -1.376
+   },
+   {
+    "origin": "2026-03-01",
+    "test_start": "2026-03-02",
+    "test_end": "2026-03-27",
+    "test_workdays": 20,
+    "model": "ultimele_8_saptamani",
+    "predicted_per_day": 4368.895,
+    "observed_per_day": 4361.05,
+    "error_percent": -0.18
+   },
+   {
+    "origin": "2026-03-29",
+    "test_start": "2026-03-30",
+    "test_end": "2026-04-24",
+    "test_workdays": 18,
+    "model": "ultimele_12_zile",
+    "predicted_per_day": 4133.75,
+    "observed_per_day": 4174.5,
+    "error_percent": 0.986
+   },
+   {
+    "origin": "2026-03-29",
+    "test_start": "2026-03-30",
+    "test_end": "2026-04-24",
+    "test_workdays": 18,
+    "model": "ultimele_4_saptamani",
+    "predicted_per_day": 4213.9,
+    "observed_per_day": 4174.5,
+    "error_percent": -0.935
+   },
+   {
+    "origin": "2026-03-29",
+    "test_start": "2026-03-30",
+    "test_end": "2026-04-24",
+    "test_workdays": 18,
+    "model": "ultimele_8_saptamani",
+    "predicted_per_day": 4385.6,
+    "observed_per_day": 4174.5,
+    "error_percent": -4.814
+   },
+   {
+    "origin": "2026-04-26",
+    "test_start": "2026-04-27",
+    "test_end": "2026-05-22",
+    "test_workdays": 19,
+    "model": "ultimele_12_zile",
+    "predicted_per_day": 3745.917,
+    "observed_per_day": 4140.684,
+    "error_percent": 10.539
+   },
+   {
+    "origin": "2026-04-26",
+    "test_start": "2026-04-27",
+    "test_end": "2026-05-22",
+    "test_workdays": 19,
+    "model": "ultimele_4_saptamani",
+    "predicted_per_day": 3957.111,
+    "observed_per_day": 4140.684,
+    "error_percent": 4.639
+   },
+   {
+    "origin": "2026-04-26",
+    "test_start": "2026-04-27",
+    "test_end": "2026-05-22",
+    "test_workdays": 19,
+    "model": "ultimele_8_saptamani",
+    "predicted_per_day": 4169.605,
+    "observed_per_day": 4140.684,
+    "error_percent": -0.694
+   },
+   {
+    "origin": "2026-05-24",
+    "test_start": "2026-05-25",
+    "test_end": "2026-06-19",
+    "test_workdays": 19,
+    "model": "ultimele_12_zile",
+    "predicted_per_day": 3906.917,
+    "observed_per_day": 4081.316,
+    "error_percent": 4.464
+   },
+   {
+    "origin": "2026-05-24",
+    "test_start": "2026-05-25",
+    "test_end": "2026-06-19",
+    "test_workdays": 19,
+    "model": "ultimele_4_saptamani",
+    "predicted_per_day": 3965.632,
+    "observed_per_day": 4081.316,
+    "error_percent": 2.917
+   },
+   {
+    "origin": "2026-05-24",
+    "test_start": "2026-05-25",
+    "test_end": "2026-06-19",
+    "test_workdays": 19,
+    "model": "ultimele_8_saptamani",
+    "predicted_per_day": 4067.216,
+    "observed_per_day": 4081.316,
+    "error_percent": 0.347
+   },
+   {
+    "origin": "2026-06-21",
+    "test_start": "2026-06-22",
+    "test_end": "2026-07-17",
+    "test_workdays": 20,
+    "model": "ultimele_12_zile",
+    "predicted_per_day": 3804.667,
+    "observed_per_day": 3740.75,
+    "error_percent": -1.68
+   },
+   {
+    "origin": "2026-06-21",
+    "test_start": "2026-06-22",
+    "test_end": "2026-07-17",
+    "test_workdays": 20,
+    "model": "ultimele_4_saptamani",
+    "predicted_per_day": 3940.0,
+    "observed_per_day": 3740.75,
+    "error_percent": -5.057
+   },
+   {
+    "origin": "2026-06-21",
+    "test_start": "2026-06-22",
+    "test_end": "2026-07-17",
+    "test_workdays": 20,
+    "model": "ultimele_8_saptamani",
+    "predicted_per_day": 4040.316,
+    "observed_per_day": 3740.75,
+    "error_percent": -7.414
+   },
+   {
+    "origin": "2026-07-19",
+    "test_start": "2026-07-20",
+    "test_end": "2026-08-14",
+    "test_workdays": 20,
+    "model": "ultimele_12_zile",
+    "predicted_per_day": 3617.5,
+    "observed_per_day": 3558.75,
+    "error_percent": -1.624
+   },
+   {
+    "origin": "2026-07-19",
+    "test_start": "2026-07-20",
+    "test_end": "2026-08-14",
+    "test_workdays": 20,
+    "model": "ultimele_4_saptamani",
+    "predicted_per_day": 3600.25,
+    "observed_per_day": 3558.75,
+    "error_percent": -1.153
+   },
+   {
+    "origin": "2026-07-19",
+    "test_start": "2026-07-20",
+    "test_end": "2026-08-14",
+    "test_workdays": 20,
+    "model": "ultimele_8_saptamani",
+    "predicted_per_day": 3834.564,
+    "observed_per_day": 3558.75,
+    "error_percent": -7.193
+   },
+   {
+    "origin": "2026-08-16",
+    "test_start": "2026-08-17",
+    "test_end": "2026-09-11",
+    "test_workdays": 20,
+    "model": "ultimele_12_zile",
+    "predicted_per_day": 3302.0,
+    "observed_per_day": 3487.9,
+    "error_percent": 5.63
+   },
+   {
+    "origin": "2026-08-16",
+    "test_start": "2026-08-17",
+    "test_end": "2026-09-11",
+    "test_workdays": 20,
+    "model": "ultimele_4_saptamani",
+    "predicted_per_day": 3421.1,
+    "observed_per_day": 3487.9,
+    "error_percent": 1.953
+   },
+   {
+    "origin": "2026-08-16",
+    "test_start": "2026-08-17",
+    "test_end": "2026-09-11",
+    "test_workdays": 20,
+    "model": "ultimele_8_saptamani",
+    "predicted_per_day": 3580.85,
+    "observed_per_day": 3487.9,
+    "error_percent": -2.596
+   },
+   {
+    "origin": "2026-09-13",
+    "test_start": "2026-09-14",
+    "test_end": "2026-10-09",
+    "test_workdays": 20,
+    "model": "ultimele_12_zile",
+    "predicted_per_day": 3338.833,
+    "observed_per_day": 4138.75,
+    "error_percent": 23.958
+   },
+   {
+    "origin": "2026-09-13",
+    "test_start": "2026-09-14",
+    "test_end": "2026-10-09",
+    "test_workdays": 20,
+    "model": "ultimele_4_saptamani",
+    "predicted_per_day": 3326.3,
+    "observed_per_day": 4138.75,
+    "error_percent": 24.425
+   },
+   {
+    "origin": "2026-09-13",
+    "test_start": "2026-09-14",
+    "test_end": "2026-10-09",
+    "test_workdays": 20,
+    "model": "ultimele_8_saptamani",
+    "predicted_per_day": 3442.4,
+    "observed_per_day": 4138.75,
+    "error_percent": 20.229
+   },
+   {
+    "origin": "2026-10-11",
+    "test_start": "2026-10-12",
+    "test_end": "2026-11-06",
+    "test_workdays": 20,
+    "model": "ultimele_12_zile",
+    "predicted_per_day": 3948.917,
+    "observed_per_day": 4131.5,
+    "error_percent": 4.624
+   },
+   {
+    "origin": "2026-10-11",
+    "test_start": "2026-10-12",
+    "test_end": "2026-11-06",
+    "test_workdays": 20,
+    "model": "ultimele_4_saptamani",
+    "predicted_per_day": 3972.75,
+    "observed_per_day": 4131.5,
+    "error_percent": 3.996
+   },
+   {
+    "origin": "2026-10-11",
+    "test_start": "2026-10-12",
+    "test_end": "2026-11-06",
+    "test_workdays": 20,
+    "model": "ultimele_8_saptamani",
+    "predicted_per_day": 3729.95,
+    "observed_per_day": 4131.5,
+    "error_percent": 10.766
+   }
+  ]
+ },
+ "model_validare_cerere": {
+  "meta": "Verificarea profilului cererii pe lunile mature. Sursă: forecast_demand_check.csv, SHA-256 f3f4c1b9c36d7b1f….",
+  "columns": [
+   "month",
+   "model",
+   "predicted_per_day",
+   "mature_observed_per_day"
+  ],
+  "rows": [
+   {
+    "month": 4,
+    "model": "profil_restrans",
+    "predicted_per_day": 4289.761,
+    "mature_observed_per_day": 3937.35
+   },
+   {
+    "month": 4,
+    "model": "constant",
+    "predicted_per_day": 4669.066,
+    "mature_observed_per_day": 3937.35
+   },
+   {
+    "month": 5,
+    "model": "profil_restrans",
+    "predicted_per_day": 4064.581,
+    "mature_observed_per_day": 4187.55
+   },
+   {
+    "month": 5,
+    "model": "constant",
+    "predicted_per_day": 4443.702,
+    "mature_observed_per_day": 4187.55
+   },
+   {
+    "month": 6,
+    "model": "profil_restrans",
+    "predicted_per_day": 3946.145,
+    "mature_observed_per_day": 4072.0
+   },
+   {
+    "month": 6,
+    "model": "constant",
+    "predicted_per_day": 4229.118,
+    "mature_observed_per_day": 4072.0
+   },
+   {
+    "month": 7,
+    "model": "profil_restrans",
+    "predicted_per_day": 3869.046,
+    "mature_observed_per_day": 4102.478
+   },
+   {
+    "month": 7,
+    "model": "constant",
+    "predicted_per_day": 4065.633,
+    "mature_observed_per_day": 4102.478
+   }
+  ]
+ },
+ "model_sensibilitate": {
+  "meta": "Corelația de rang (Spearman) a fiecărei ipoteze cu vârful așteptării (2.000 de variante). Sursă: forecast_sensitivity.csv, SHA-256 cc3864edf226fd89….",
+  "columns": [
+   "parameter",
+   "spearman_peak"
+  ],
+  "rows": [
+   {
+    "parameter": "flux_zilnic_recurent",
+    "spearman_peak": 0.539
+   },
+   {
+    "parameter": "rezolvari_observate_pe_zi",
+    "spearman_peak": -0.511
+   },
+   {
+    "parameter": "dosare_caen_suplimentare",
+    "spearman_peak": 0.443
+   },
+   {
+    "parameter": "stoc_initial",
+    "spearman_peak": 0.27
+   },
+   {
+    "parameter": "populatie_capital",
+    "spearman_peak": 0.209
+   },
+   {
+    "parameter": "dosare_defensive",
+    "spearman_peak": 0.152
+   },
+   {
+    "parameter": "efort_caen",
+    "spearman_peak": -0.144
+   },
+   {
+    "parameter": "pondere_caen_iesiri",
+    "spearman_peak": 0.117
+   },
+   {
+    "parameter": "efort_capital",
+    "spearman_peak": 0.106
+   },
+   {
+    "parameter": "fractie_anaf_capacitate_comuna",
+    "spearman_peak": 0.08
+   },
+   {
+    "parameter": "conformare_ulterioara",
+    "spearman_peak": 0.069
+   },
+   {
+    "parameter": "crestere_anuala_flux",
+    "spearman_peak": 0.068
+   },
+   {
+    "parameter": "proportie_reducere",
+    "spearman_peak": 0.059
+   },
+   {
+    "parameter": "depuneri_separate_ulterioare",
+    "spearman_peak": 0.045
+   },
+   {
+    "parameter": "cazuri_anaf",
+    "spearman_peak": 0.031
+   },
+   {
+    "parameter": "efort_anaf",
+    "spearman_peak": 0.012
+   }
+  ]
+ },
+ "model_valuri": {
+  "meta": "Zile evitate dacă un val de cereri nu ar exista (la vârf și în iunie 2028). Sursă: forecast_wave_sensitivity.csv, SHA-256 4465f46fd427dc29….",
+  "columns": [
+   "wave_removed",
+   "peak_days_saved_p10",
+   "peak_days_saved_p50",
+   "peak_days_saved_p90",
+   "june_days_saved_p10",
+   "june_days_saved_p50",
+   "june_days_saved_p90"
+  ],
+  "rows": [
+   {
+    "wave_removed": "fara_caen_suplimentar",
+    "peak_days_saved_p10": 47.0,
+    "peak_days_saved_p50": 69.0,
+    "peak_days_saved_p90": 96.0,
+    "june_days_saved_p10": 50.0,
+    "june_days_saved_p50": 71.0,
+    "june_days_saved_p90": 99.1
+   },
+   {
+    "wave_removed": "fara_capital_suplimentar",
+    "peak_days_saved_p10": 10.0,
+    "peak_days_saved_p50": 24.0,
+    "peak_days_saved_p90": 55.0,
+    "june_days_saved_p10": 38.0,
+    "june_days_saved_p50": 52.0,
+    "june_days_saved_p90": 69.0
+   },
+   {
+    "wave_removed": "fara_sarcina_fiscala_suplimentara",
+    "peak_days_saved_p10": 7.0,
+    "peak_days_saved_p50": 20.0,
+    "peak_days_saved_p90": 37.0,
+    "june_days_saved_p10": 22.0,
+    "june_days_saved_p50": 33.0,
+    "june_days_saved_p90": 45.0
+   }
+  ]
+ },
+ "model_sezonalitate": {
+  "meta": "Profilul lunar al cererilor, relativ la noiembrie. Sursă: forecast_monthly_profile.csv, SHA-256 f1c5d4e568fccab1….",
+  "columns": [
+   "month",
+   "relative_to_november"
+  ],
+  "rows": [
+   {
+    "month": 1,
+    "relative_to_november": 1.106
+   },
+   {
+    "month": 2,
+    "relative_to_november": 1.13
+   },
+   {
+    "month": 3,
+    "relative_to_november": 1.106
+   },
+   {
+    "month": 4,
+    "relative_to_november": 1.024
+   },
+   {
+    "month": 5,
+    "relative_to_november": 0.995
+   },
+   {
+    "month": 6,
+    "relative_to_november": 0.972
+   },
+   {
+    "month": 7,
+    "relative_to_november": 0.948
+   },
+   {
+    "month": 8,
+    "relative_to_november": 0.943
+   },
+   {
+    "month": 9,
+    "relative_to_november": 0.971
+   },
+   {
+    "month": 10,
+    "relative_to_november": 0.964
+   },
+   {
+    "month": 11,
+    "relative_to_november": 1.0
+   },
+   {
+    "month": 12,
+    "relative_to_november": 0.999
+   }
+  ]
+ },
+ "model_grila_completa": {
+  "meta": "Grila intrări × ieșiri pe motorul auditat (forecast_grid.json, SHA-256 9a747d4bf01702e2…). Valori ≤3 = limita metricii.",
+  "columns": [
+   "d_in",
+   "d_out",
+   "june2028_p10",
+   "june2028_p50",
+   "june2028_p90",
+   "peak_p10",
+   "peak_p50",
+   "peak_p90",
+   "stock_june2028_p50"
+  ],
+  "rows": [
+   {
+    "d_in": -20,
+    "d_out": -10,
+    "june2028_p10": 17.0,
+    "june2028_p50": 73.0,
+    "june2028_p90": 136.0,
+    "peak_p10": 105.0,
+    "peak_p50": 133.0,
+    "peak_p90": 171.0,
+    "stock_june2028_p50": 189552.7
+   },
+   {
+    "d_in": -20,
+    "d_out": 0,
+    "june2028_p10": 3.0,
+    "june2028_p50": 7.0,
+    "june2028_p90": 66.0,
+    "peak_p10": 82.0,
+    "peak_p50": 105.0,
+    "peak_p90": 132.0,
+    "stock_june2028_p50": 19536.3
+   },
+   {
+    "d_in": -20,
+    "d_out": 10,
+    "june2028_p10": 3.0,
+    "june2028_p50": 3.0,
+    "june2028_p90": 7.0,
+    "peak_p10": 66.0,
+    "peak_p50": 84.0,
+    "peak_p90": 109.0,
+    "stock_june2028_p50": 0.0
+   },
+   {
+    "d_in": -20,
+    "d_out": 20,
+    "june2028_p10": 3.0,
+    "june2028_p50": 3.0,
+    "june2028_p90": 3.0,
+    "peak_p10": 56.0,
+    "peak_p50": 69.0,
+    "peak_p90": 89.0,
+    "stock_june2028_p50": 0.0
+   },
+   {
+    "d_in": -20,
+    "d_out": 30,
+    "june2028_p10": 3.0,
+    "june2028_p50": 3.0,
+    "june2028_p90": 3.0,
+    "peak_p10": 53.0,
+    "peak_p50": 62.0,
+    "peak_p90": 75.0,
+    "stock_june2028_p50": 0.0
+   },
+   {
+    "d_in": -20,
+    "d_out": 40,
+    "june2028_p10": 3.0,
+    "june2028_p50": 3.0,
+    "june2028_p90": 3.0,
+    "peak_p10": 46.0,
+    "peak_p50": 56.0,
+    "peak_p90": 69.0,
+    "stock_june2028_p50": 0.0
+   },
+   {
+    "d_in": -10,
+    "d_out": -10,
+    "june2028_p10": 81.0,
+    "june2028_p50": 143.0,
+    "june2028_p90": 222.0,
+    "peak_p10": 131.0,
+    "peak_p50": 172.0,
+    "peak_p90": 229.0,
+    "stock_june2028_p50": 377023.2
+   },
+   {
+    "d_in": -10,
+    "d_out": 0,
+    "june2028_p10": 14.0,
+    "june2028_p50": 73.0,
+    "june2028_p90": 136.0,
+    "peak_p10": 102.0,
+    "peak_p50": 130.0,
+    "peak_p90": 166.0,
+    "stock_june2028_p50": 207709.4
+   },
+   {
+    "d_in": -10,
+    "d_out": 10,
+    "june2028_p10": 3.0,
+    "june2028_p50": 13.0,
+    "june2028_p90": 73.0,
+    "peak_p10": 81.0,
+    "peak_p50": 104.0,
+    "peak_p90": 131.0,
+    "stock_june2028_p50": 38752.5
+   },
+   {
+    "d_in": -10,
+    "d_out": 20,
+    "june2028_p10": 3.0,
+    "june2028_p50": 3.0,
+    "june2028_p90": 18.0,
+    "peak_p10": 63.0,
+    "peak_p50": 84.0,
+    "peak_p90": 108.0,
+    "stock_june2028_p50": 0.0
+   },
+   {
+    "d_in": -10,
+    "d_out": 30,
+    "june2028_p10": 3.0,
+    "june2028_p50": 3.0,
+    "june2028_p90": 3.0,
+    "peak_p10": 54.0,
+    "peak_p50": 69.0,
+    "peak_p90": 89.0,
+    "stock_june2028_p50": 0.0
+   },
+   {
+    "d_in": -10,
+    "d_out": 40,
+    "june2028_p10": 3.0,
+    "june2028_p50": 3.0,
+    "june2028_p90": 3.0,
+    "peak_p10": 48.0,
+    "peak_p50": 60.0,
+    "peak_p90": 75.0,
+    "stock_june2028_p50": 0.0
+   },
+   {
+    "d_in": 0,
+    "d_out": -10,
+    "june2028_p10": 144.0,
+    "june2028_p50": 222.0,
+    "june2028_p90": 301.0,
+    "peak_p10": 173.0,
+    "peak_p50": 228.0,
+    "peak_p90": 306.0,
+    "stock_june2028_p50": 564010.8
+   },
+   {
+    "d_in": 0,
+    "d_out": 0,
+    "june2028_p10": 74.0,
+    "june2028_p50": 136.0,
+    "june2028_p90": 214.1,
+    "peak_p10": 124.0,
+    "peak_p50": 165.0,
+    "peak_p90": 220.0,
+    "stock_june2028_p50": 395446.5
+   },
+   {
+    "d_in": 0,
+    "d_out": 10,
+    "june2028_p10": 14.0,
+    "june2028_p50": 73.0,
+    "june2028_p90": 136.0,
+    "peak_p10": 97.0,
+    "peak_p50": 125.0,
+    "peak_p90": 164.1,
+    "stock_june2028_p50": 225789.9
+   },
+   {
+    "d_in": 0,
+    "d_out": 20,
+    "june2028_p10": 3.0,
+    "june2028_p50": 18.0,
+    "june2028_p90": 76.1,
+    "peak_p10": 77.0,
+    "peak_p50": 103.0,
+    "peak_p90": 130.0,
+    "stock_june2028_p50": 57673.9
+   },
+   {
+    "d_in": 0,
+    "d_out": 30,
+    "june2028_p10": 3.0,
+    "june2028_p50": 3.0,
+    "june2028_p90": 26.1,
+    "peak_p10": 62.0,
+    "peak_p50": 84.0,
+    "peak_p90": 108.0,
+    "stock_june2028_p50": 0.0
+   },
+   {
+    "d_in": 0,
+    "d_out": 40,
+    "june2028_p10": 3.0,
+    "june2028_p50": 3.0,
+    "june2028_p90": 3.0,
+    "peak_p10": 53.0,
+    "peak_p50": 69.0,
+    "peak_p90": 90.0,
+    "stock_june2028_p50": 0.0
+   },
+   {
+    "d_in": 10,
+    "d_out": -10,
+    "june2028_p10": 216.0,
+    "june2028_p50": 294.0,
+    "june2028_p90": 382.1,
+    "peak_p10": 224.0,
+    "peak_p50": 298.0,
+    "peak_p90": 383.0,
+    "stock_june2028_p50": 752517.9
+   },
+   {
+    "d_in": 10,
+    "d_out": 0,
+    "june2028_p10": 130.9,
+    "june2028_p50": 206.5,
+    "june2028_p90": 285.1,
+    "peak_p10": 161.0,
+    "peak_p50": 213.0,
+    "peak_p90": 288.2,
+    "stock_june2028_p50": 583614.9
+   },
+   {
+    "d_in": 10,
+    "d_out": 10,
+    "june2028_p10": 68.0,
+    "june2028_p50": 129.0,
+    "june2028_p90": 206.1,
+    "peak_p10": 118.0,
+    "peak_p50": 158.0,
+    "peak_p90": 213.1,
+    "stock_june2028_p50": 414124.6
+   },
+   {
+    "d_in": 10,
+    "d_out": 20,
+    "june2028_p10": 13.0,
+    "june2028_p50": 70.0,
+    "june2028_p90": 133.0,
+    "peak_p10": 95.0,
+    "peak_p50": 123.0,
+    "peak_p90": 161.0,
+    "stock_june2028_p50": 244877.4
+   },
+   {
+    "d_in": 10,
+    "d_out": 30,
+    "june2028_p10": 3.0,
+    "june2028_p50": 21.0,
+    "june2028_p90": 81.0,
+    "peak_p10": 77.0,
+    "peak_p50": 101.0,
+    "peak_p90": 129.0,
+    "stock_june2028_p50": 77289.3
+   },
+   {
+    "d_in": 10,
+    "d_out": 40,
+    "june2028_p10": 3.0,
+    "june2028_p50": 3.0,
+    "june2028_p90": 33.1,
+    "peak_p10": 61.9,
+    "peak_p50": 83.0,
+    "peak_p90": 108.0,
+    "stock_june2028_p50": 0.0
+   },
+   {
+    "d_in": 20,
+    "d_out": -10,
+    "june2028_p10": 279.0,
+    "june2028_p50": 368.0,
+    "june2028_p90": 460.0,
+    "peak_p10": 286.9,
+    "peak_p50": 369.0,
+    "peak_p90": 460.0,
+    "stock_june2028_p50": 938610.2
+   },
+   {
+    "d_in": 20,
+    "d_out": 0,
+    "june2028_p10": 195.0,
+    "june2028_p50": 270.0,
+    "june2028_p90": 357.3,
+    "peak_p10": 204.0,
+    "peak_p50": 275.5,
+    "peak_p90": 357.3,
+    "stock_june2028_p50": 771079.5
+   },
+   {
+    "d_in": 20,
+    "d_out": 10,
+    "june2028_p10": 118.0,
+    "june2028_p50": 194.0,
+    "june2028_p90": 270.0,
+    "peak_p10": 150.0,
+    "peak_p50": 201.0,
+    "peak_p90": 276.0,
+    "stock_june2028_p50": 602796.7
+   },
+   {
+    "d_in": 20,
+    "d_out": 20,
+    "june2028_p10": 62.0,
+    "june2028_p50": 124.0,
+    "june2028_p90": 200.0,
+    "peak_p10": 113.0,
+    "peak_p50": 153.0,
+    "peak_p90": 208.0,
+    "stock_june2028_p50": 431947.7
+   },
+   {
+    "d_in": 20,
+    "d_out": 30,
+    "june2028_p10": 13.0,
+    "june2028_p50": 70.0,
+    "june2028_p90": 133.0,
+    "peak_p10": 91.0,
+    "peak_p50": 119.0,
+    "peak_p90": 160.0,
+    "stock_june2028_p50": 263907.1
+   },
+   {
+    "d_in": 20,
+    "d_out": 40,
+    "june2028_p10": 3.0,
+    "june2028_p50": 25.0,
+    "june2028_p90": 83.1,
+    "peak_p10": 76.0,
+    "peak_p50": 98.0,
+    "peak_p90": 129.0,
+    "stock_june2028_p50": 96096.5
+   },
+   {
+    "d_in": 30,
+    "d_out": -10,
+    "june2028_p10": 349.0,
+    "june2028_p50": 439.0,
+    "june2028_p90": 538.0,
+    "peak_p10": 349.0,
+    "peak_p50": 439.0,
+    "peak_p90": 538.0,
+    "stock_june2028_p50": 1127876.0
+   },
+   {
+    "d_in": 30,
+    "d_out": 0,
+    "june2028_p10": 252.0,
+    "june2028_p50": 340.0,
+    "june2028_p90": 430.0,
+    "peak_p10": 258.0,
+    "peak_p50": 340.0,
+    "peak_p90": 430.0,
+    "stock_june2028_p50": 958433.4
+   },
+   {
+    "d_in": 30,
+    "d_out": 10,
+    "june2028_p10": 173.0,
+    "june2028_p50": 252.0,
+    "june2028_p90": 340.0,
+    "peak_p10": 189.0,
+    "peak_p50": 257.0,
+    "peak_p90": 340.0,
+    "stock_june2028_p50": 790414.3
+   },
+   {
+    "d_in": 30,
+    "d_out": 20,
+    "june2028_p10": 110.0,
+    "june2028_p50": 181.0,
+    "june2028_p90": 258.0,
+    "peak_p10": 140.0,
+    "peak_p50": 193.0,
+    "peak_p90": 265.0,
+    "stock_june2028_p50": 621470.6
+   },
+   {
+    "d_in": 30,
+    "d_out": 30,
+    "june2028_p10": 59.0,
+    "june2028_p50": 119.0,
+    "june2028_p90": 195.0,
+    "peak_p10": 110.0,
+    "peak_p50": 146.0,
+    "peak_p90": 202.0,
+    "stock_june2028_p50": 450606.5
+   },
+   {
+    "d_in": 30,
+    "d_out": 40,
+    "june2028_p10": 12.0,
+    "june2028_p50": 70.0,
+    "june2028_p90": 133.0,
+    "peak_p10": 90.0,
+    "peak_p50": 117.0,
+    "peak_p90": 160.0,
+    "stock_june2028_p50": 282953.6
+   }
+  ]
+ },
+ "regimuri_LOCKED": {
+  "meta": "Regimuri pe data deciziei, din LOCKED_CONSTANTS.json (sursa unică).",
+  "columns": [
+   "perioada",
+   "days",
+   "finals_per_day",
+   "adjourn_share",
+   "median_wait",
+   "p90_wait"
+  ],
+  "rows": [
+   {
+    "perioada": "platforma_veche_2023_iul2024",
+    "days": 327,
+    "finals_per_day": 2983,
+    "adjourn_share": 0.204,
+    "median_wait": 1.6,
+    "p90_wait": 9.5
+   },
+   {
+    "perioada": "colaps_portal_nou_2024",
+    "days": 92,
+    "finals_per_day": 2570,
+    "adjourn_share": 0.19,
+    "median_wait": 12.1,
+    "p90_wait": 27.4
+   },
+   {
+    "perioada": "stabil_2025",
+    "days": 252,
+    "finals_per_day": 4011,
+    "adjourn_share": 0.201,
+    "median_wait": 3.0,
+    "p90_wait": 16.7
+   },
+   {
+    "perioada": "2026_inainte_de_val",
+    "days": 148,
+    "finals_per_day": 4089,
+    "adjourn_share": 0.21,
+    "median_wait": 5.8,
+    "p90_wait": 18.9
+   },
+   {
+    "perioada": "aug_2026",
+    "days": 21,
+    "finals_per_day": 3467,
+    "adjourn_share": 0.2,
+    "median_wait": 11.9,
+    "p90_wait": 21.9
+   },
+   {
+    "perioada": "sep_2026",
+    "days": 23,
+    "finals_per_day": 3791,
+    "adjourn_share": 0.185,
+    "median_wait": 21.8,
+    "p90_wait": 28.7
+   },
+   {
+    "perioada": "oct_2026",
+    "days": 22,
+    "finals_per_day": 4139,
+    "adjourn_share": 0.184,
+    "median_wait": 35.0,
+    "p90_wait": 44.1
+   },
+   {
+    "perioada": "nov_1_21_2026",
+    "days": 15,
+    "finals_per_day": 4218,
+    "adjourn_share": 0.211,
+    "median_wait": 50.0,
+    "p90_wait": 58.0
+   }
+  ]
+ },
+ "stocuri_oficiale_MJ": {
+  "meta": "Stocuri oficiale, Nota de fundamentare MJ (nivel C, citate).",
+  "columns": [
+   "data",
+   "neprelucrate_operare",
+   "la_registrator",
+   "total"
+  ],
+  "rows": [
+   {
+    "data": "30.10.2026",
+    "neprelucrate_operare": 114360,
+    "la_registrator": 93958,
+    "total": 208318
+   },
+   {
+    "data": "06.11.2026",
+    "neprelucrate_operare": 106060,
+    "la_registrator": 98354,
+    "total": 204414
+   }
+  ]
+ },
+ "lista_verificari_sigure": {
+  "meta": "Rezultatul validation_checklist.py (verificări sigure, fără supra-ajustare).",
+  "columns": [
+   "stare",
+   "verificare",
+   "detaliu"
+  ],
+  "rows": [
+   {
+    "stare": "WARN",
+    "verificare": "B2 measured peak intake vs report 26k/day",
+    "detaliu": "measured peak ≈ 34,520 reqNr/day (report cites >26k/day; same order)"
+   },
+   {
+    "stare": "PASS",
+    "verificare": "A1 reqNumber↔date monotonic",
+    "detaliu": "Spearman ρ=0.9999 (counter rises with time; <0.98 would flag bad timestamps)"
+   },
+   {
+    "stare": "PASS",
+    "verificare": "A2 settled months ~fully resolved",
+    "detaliu": "resolved share May-Aug = {'2026-05': 0.98, '2026-06': 0.97, '2026-07': 0.98, '2026-08': 0.99} (old cohorts should be ~1.0)"
+   },
+   {
+    "stare": "PASS",
+    "verificare": "A3 county coverage",
+    "detaliu": "99.9% of live-queue have a county"
+   },
+   {
+    "stare": "PASS",
+    "verificare": "B1 Iași S1-share vs report 16%",
+    "detaliu": "our IS sample 1/15=7% S1 vs report 1141/7082=16% (both registrar-bound)"
+   },
+   {
+    "stare": "PASS",
+    "verificare": "B3 Sep handling-time vs report 30-45d",
+    "detaliu": "our Sep median W=39d vs report '>30d, 40-45d incorporations'"
+   },
+   {
+    "stare": "PASS",
+    "verificare": "B4 DIRECT solved/day (measured)",
+    "detaliu": "measured ~3,097/day = 19 files/day/registrator (vs 40 norm) -> quantifies the slowdown; model cap2 anchored here, NOT fitted to backlog"
+   },
+   {
+    "stare": "PASS",
+    "verificare": "B4b throughput×age ≈ visible backlog",
+    "detaliu": "3,097/day × 40.6d ⇒ ~125,741 visible judged backlog (+ ~84k unseen înmatriculări ≈ report 210k total)"
+   },
+   {
+    "stare": "PASS",
+    "verificare": "C1 odd/even split stability",
+    "detaliu": "max |ΔW| between halves = 4d across months (large ⇒ sampling-fragile)"
+   },
+   {
+    "stare": "PASS",
+    "verificare": "C2 May vs Sep W bootstrap-distinct",
+    "detaliu": "May 95%CI=(5, 6) vs Sep=(36, 43) (non-overlapping ⇒ real climb)"
+   },
+   {
+    "stare": "PASS",
+    "verificare": "C3 monthly n for W-medians",
+    "detaliu": "resolved n/month={'2026-05': 135, '2026-06': 159, '2026-07': 184, '2026-08': 212, '2026-09': 303, '2026-10': 75, '2026-11': 20} (0 months with n<15)"
+   },
+   {
+    "stare": "PASS",
+    "verificare": "D1 parsimony (params vs targets)",
+    "detaliu": "model: 6 free params (cap2, cap1·mult, base, wave size, k, W0) vs 7 targets (5 monthly W + backlog + split). Measured intake now fixes the wave SHAPE, freeing a param."
+   },
+   {
+    "stare": "PASS",
+    "verificare": "D2 forecast reported as ranges",
+    "detaliu": "scenarios shown as overhang 500k-900k ranges, not point forecasts; Oct/Nov W flagged censored."
+   }
+  ]
+ },
+ "_meta": {
+  "generated": "2026-11-22",
+  "berc_sha256": "a63e6824311efd5c5d092a3b0aa35f5c369c8038ab6e1d666369bdc77e0cabda",
+  "berc_last_decision": "2026-11-20 17:21",
+  "portal_n": 1819,
+  "definitions": {
+   "strict": [
+    "Admis",
+    "Respins",
+    "Renunțat"
+   ],
+   "broad": [
+    "Admis",
+    "Respins",
+    "Renunțat",
+    "Certificare înscriere în registrul comerțului",
+    "certificare inscriere mentiuni",
+    "Renunțat din oficiu"
+   ]
+  },
+  "holidays_n": 67
+ },
+ "oldest_pending": {
+  "date": "2026-09-16",
+  "n_pending": 731,
+  "harvest": "21–22.11.2026"
+ }
+}

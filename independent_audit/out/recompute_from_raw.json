@@ -1,0 +1,249 @@
+{
+  "holidays_2023_2026": {
+    "pipeline_only": [],
+    "independent_only": []
+  },
+  "archive": {
+    "rows": 4077510,
+    "exact_duplicates": 3501,
+    "max_res": "2026-11-20 17:21:10",
+    "max_app": "2026-11-19 15:31:58",
+    "negative_wait_rows": 13659
+  },
+  "coverage": {
+    "returned": 4093329,
+    "short": 15627,
+    "manski_pp_published_def": 0.3803,
+    "archive_minus_returned": -15819,
+    "missing_category_days_by_year": {
+      "2023": 317
+    },
+    "missing_on_working_days_by_year": {
+      "2023": 217
+    },
+    "partial_category_days": 0,
+    "note": "Manski bound uses only records_short; 'missing' category-days contribute an UNKNOWN count and are not in the bound.",
+    "manski_pp_2026": 0.3184,
+    "returned_2026": 1165867,
+    "short_2026": 3724,
+    "missing_2026": 0,
+    "manski_pp_nov2026_INMATRIC265": 0.258,
+    "worst_category_day_2026": [
+      {
+        "publication_day": "2026-03-31",
+        "category": "CERERE265",
+        "records": 3309.0,
+        "records_short": 439.0,
+        "slice_pp": 11.71
+      },
+      {
+        "publication_day": "2026-03-23",
+        "category": "CERERE265",
+        "records": 3783.0,
+        "records_short": 468.0,
+        "slice_pp": 11.01
+      },
+      {
+        "publication_day": "2026-05-27",
+        "category": "CERERE_HJ265",
+        "records": 21.0,
+        "records_short": 1.0,
+        "slice_pp": 4.55
+      }
+    ]
+  },
+  "live_nov18_20": {
+    "2026-11-18": {
+      "n_final": 4670,
+      "cer_med": 57.96,
+      "inm_med": 41.02,
+      "cer_med_admis_only": 57.94,
+      "inm_med_floor_days": 41.0
+    },
+    "2026-11-19": {
+      "n_final": 4079,
+      "cer_med": 58.22,
+      "inm_med": 37.23,
+      "cer_med_admis_only": 56.74,
+      "inm_med_floor_days": 37.0
+    },
+    "2026-11-20": {
+      "n_final": 883,
+      "cer_med": 56.93,
+      "inm_med": 38.9,
+      "cer_med_admis_only": 55.93,
+      "inm_med_floor_days": 38.0
+    }
+  },
+  "windows": {
+    "v1": {
+      "n": 967476,
+      "finals_per_wd": 3013.9,
+      "med_wait_cal_d": 1.64,
+      "le1wd_pct": 74.923,
+      "le3wd_pct": 83.441,
+      "rej_pct": 5.728,
+      "n_rej": 55421,
+      "aman_share_of_all_decisions_pct": 20.274,
+      "aman_per_final_pct": 25.626,
+      "by_cat_le1wd": {
+        "CERERE265": 75.956,
+        "INMATRIC265": 70.679
+      }
+    },
+    "v1_q1_2024": {
+      "n": 216060,
+      "finals_per_wd": 3484.8,
+      "med_wait_cal_d": 1.64,
+      "le1wd_pct": 75.069,
+      "le3wd_pct": 83.503,
+      "rej_pct": 5.593,
+      "n_rej": 12085,
+      "aman_share_of_all_decisions_pct": 20.271,
+      "aman_per_final_pct": 25.608,
+      "by_cat_le1wd": {
+        "CERERE265": 76.035,
+        "INMATRIC265": 70.596
+      }
+    },
+    "post_apr27": {
+      "n": 266852,
+      "finals_per_wd": 3924.3,
+      "med_wait_cal_d": 5.96,
+      "le1wd_pct": 1.131,
+      "le3wd_pct": 40.702,
+      "rej_pct": 8.393,
+      "n_rej": 22397,
+      "aman_share_of_all_decisions_pct": 20.515,
+      "aman_per_final_pct": 26.137,
+      "by_cat_le1wd": {
+        "CERERE265": 1.29,
+        "INMATRIC265": 0.25
+      }
+    },
+    "h2_2025": {
+      "n": 474607,
+      "finals_per_wd": 3707.9,
+      "med_wait_cal_d": 1.58,
+      "le1wd_pct": 59.377,
+      "le3wd_pct": 77.883,
+      "rej_pct": 8.132,
+      "n_rej": 38597,
+      "aman_share_of_all_decisions_pct": 21.791,
+      "aman_per_final_pct": 28.18,
+      "by_cat_le1wd": {
+        "CERERE265": 60.456,
+        "INMATRIC265": 54.838
+      }
+    },
+    "oct_nov_2023": {
+      "n": 127649,
+      "finals_per_wd": 2968.6,
+      "med_wait_cal_d": 1.63,
+      "le1wd_pct": 75.986,
+      "le3wd_pct": 84.05,
+      "rej_pct": 5.408,
+      "n_rej": 6903,
+      "aman_share_of_all_decisions_pct": 20.033,
+      "aman_per_final_pct": 25.26,
+      "by_cat_le1wd": {
+        "CERERE265": 76.921,
+        "INMATRIC265": 72.476
+      }
+    },
+    "oct_nov_2025": {
+      "n": 163658,
+      "finals_per_wd": 3806.0,
+      "med_wait_cal_d": 1.21,
+      "le1wd_pct": 63.747,
+      "le3wd_pct": 78.9,
+      "rej_pct": 7.923,
+      "n_rej": 12967,
+      "aman_share_of_all_decisions_pct": 21.668,
+      "aman_per_final_pct": 27.978,
+      "by_cat_le1wd": {
+        "CERERE265": 65.008,
+        "INMATRIC265": 58.918
+      }
+    },
+    "oct_nov_2026": {
+      "n": 152133,
+      "finals_per_wd": 4225.9,
+      "med_wait_cal_d": 39.02,
+      "le1wd_pct": 0.644,
+      "le3wd_pct": 2.983,
+      "rej_pct": 8.644,
+      "n_rej": 13150,
+      "aman_share_of_all_decisions_pct": 19.191,
+      "aman_per_final_pct": 23.955,
+      "by_cat_le1wd": {
+        "CERERE265": 0.724,
+        "INMATRIC265": 0.0
+      }
+    },
+    "crisis": {
+      "n": 311325,
+      "finals_per_wd": 3891.6,
+      "med_wait_cal_d": 25.87,
+      "le1wd_pct": 0.661,
+      "le3wd_pct": 2.528,
+      "rej_pct": 8.183,
+      "n_rej": 25475,
+      "aman_share_of_all_decisions_pct": 19.382,
+      "aman_per_final_pct": 24.277,
+      "by_cat_le1wd": {
+        "CERERE265": 0.742,
+        "INMATRIC265": 0.0
+      }
+    }
+  },
+  "eu_directive": {
+    "published_def_J_admis_firstpass": {
+      "n": 3548,
+      "c15": 2645,
+      "c10": 2883,
+      "gt5": 91.065,
+      "gt10": 81.257,
+      "gt12": 78.129,
+      "gt15": 74.549,
+      "med_wd": 29.0
+    },
+    "incl_postponed": {
+      "n": 4671,
+      "c15": 3488,
+      "c10": 3853,
+      "gt5": 92.593,
+      "gt10": 82.488,
+      "gt12": 78.891,
+      "gt15": 74.674,
+      "med_wd": 30.0
+    },
+    "J_all_solutions_firstpass": {
+      "n": 3548,
+      "c15": 2645,
+      "c10": 2883,
+      "gt5": 91.065,
+      "gt10": 81.257,
+      "gt12": 78.129,
+      "gt15": 74.549,
+      "med_wd": 29.0
+    },
+    "postponed_share_of_J_admis_pct": 24.042,
+    "oct1_20_filing_cohort": {
+      "filed_with_any_decision": 2393,
+      "final_decided": 2392,
+      "gt15wd_among_decided": 62.96
+    }
+  },
+  "lean_constant_links": {
+    "T11b_returned_hardcoded": 4093329,
+    "T11b_short_hardcoded": 15627,
+    "T11b_returned_recomputed": 4093329,
+    "T11b_short_recomputed": 15627,
+    "T11b_match": true,
+    "T5c_rej_v1_permille_hardcoded": 57,
+    "T5c_rej_crisis_permille_hardcoded": 82,
+    "T5c_rej_v1_recomputed_permille": 57.3,
+    "T5c_rej_crisis_recomputed_permille": 81.8
+  }
+}

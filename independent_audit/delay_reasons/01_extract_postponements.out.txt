@@ -1,0 +1,5 @@
+bulletins 545 unreadable 1 with>=1 notice 290
+{'notices': 3232, 'with_reason': 2941, 'with_app': 2941, 'with_din_data': 2941, 'sol_None': 291, 'with_region': 2942, 'sol_Amânat': 2941}
+notice months (din_data): [('', 291), ('02.2026', 16), ('10.2026', 922), ('11.2026', 2003)]
+bulletin months with notices: [('02.2026', 1), ('10.2026', 102), ('11.2026', 187)]
+reason length quantiles [0, 153, 523, 1389, 2756, 3936]

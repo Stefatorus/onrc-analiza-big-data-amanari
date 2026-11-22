@@ -1,0 +1,282 @@
+"""08 · Matricea de soluții pentru motivele de amânare + cadrul legal (AI Act, GDPR, dreptul român).
+
+Citește ../out/delay_reasons.json (ponderile măsurate) și scrie ../out/postponement_solutions.json.
+Ponderile NU se tastează: se iau din delay_reasons.json. Matricea calitativă (soluții, nivel de
+automatizare, complexitate, dependențe) e evaluarea auditorului (asistată de AI), nu o clasificare ONRC.
+Nu vedem sistemele interne ONRC: fiecare soluție e o recomandare „de verificat dacă nu există deja”.
+
+    ..\\..\\venv\\Scripts\\python.exe -X utf8 08_solutions.py
+
+Agregate numai; fără date personale.
+"""
+from __future__ import annotations
+import json, hashlib
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+OUT = HERE.parent / "out"
+DR_F = OUT / "delay_reasons.json"
+SPX_F = OUT / "stat_pack_ext.json"
+DST = OUT / "postponement_solutions.json"
+
+# Claim ids used by patch_claims.py and analysis/policy_paper_ro/postponement_section.py.
+# If the registry already has these ids when you integrate, renumber HERE only and re-run 08 (one edit).
+CLAIM_IDS = {
+    "coverage": "C126",
+    "CAEN": "C127", "SEDIU": "C128", "CERERE": "C129", "ACT": "C130", "SOLICITANT": "C131", "ASOC_ID": "C132",
+    "INSTIT": "C133", "CAPITAL": "C134", "SEMN": "C135", "BEN_REAL": "C136", "DENUM": "C137", "TARIF": "C138",
+    "avoidable": "C139", "validation": "C140", "capacity": "C141", "legal": "C142", "levels": "C143",
+}
+
+LEVELS = ["Standard", "Doar cu AI", "Doar cu AI avansat", "Nu se poate automatiza"]
+LEVEL_DEF = {
+    "Standard": "reguli deterministe, validări de formular, interogări prin interoperabilitate; fără AI",
+    "Doar cu AI": "necesită ML/NLP/OCR (de ex. citirea documentelor scanate, potrivirea descrierii activității cu un cod CAEN)",
+    "Doar cu AI avansat": "necesită modele avansate/generative care raționează pe documente juridice (de ex. concordanța actului constitutiv actualizat cu hotărârea)",
+    "Nu se poate automatiza": "cere judecata juridică a registratorului (control de legalitate, art. 28 Legea 265/2022)",
+}
+WHERE = ["la depunere", "la operare", "la soluționare"]
+
+# ---------------------------------------------------------------- matrix (qualitative; auditor's assessment)
+# 'headline' = nivelul soluției principale (culoarea din figură); 'solutions' = toate soluțiile, fiecare cu un singur nivel.
+MATRIX = [
+ dict(code="CAEN", short="Obiect de activitate / CAEN și declarația de autorizare",
+      causes=["cod CAEN care nu mai există în CAEN Rev.3 sau obiect neactualizat", "text suplimentar atașat codului (precizări în afara nomenclatorului)",
+              "declarația-tip privind autorizarea activităților lipsă sau incompletă (sediu secundar, activități la terți)",
+              "limita de clase CAEN pentru PFA/II depășită", "cod condiționat de o lege specială sau incompatibil cu forma de organizare",
+              "descrierea activității nu corespunde codului ales"],
+      headline="Standard", complexity="medie", where=["la depunere"],
+      solutions=[
+        dict(level="Standard", text="Selectarea codurilor numai din nomenclatorul CAEN Rev.3 (fără text liber), cu tabelul oficial de corespondență pentru codurile vechi; blocarea codurilor Rev.2 fără corespondent."),
+        dict(level="Standard", text="Generarea automată a declarației-tip de autorizare din codurile și sediile alese; verificarea limitei de clase pentru PFA/II; listă de coduri condiționate cu actul cerut."),
+        dict(level="Doar cu AI", text="Sugestie de cod CAEN din descrierea liberă a activității (clasificare de text), arătată solicitantului, cu alegerea finală a omului."),
+        dict(level="Nu se poate automatiza", text="Dacă o activitate condiționată e permisă formei de organizare și ce autorizație îi trebuie rămâne control de legalitate."),
+      ],
+      dependencies=["nomenclatorul CAEN Rev.3 și tabelul de corespondență (INS)", "HG 656/1997, art. 5^1", "OUG 44/2008 (limitele PFA/II)", "lista activităților condiționate (legi speciale)"],
+      legal=["GDPR art. 6 alin. (1) lit. e), art. 25", "Legea 265/2022, art. 28 alin. (2) (decizia rămâne la registrator)"]),
+ dict(code="SEDIU", short="Sediu: dovada folosinței, valabilitate, acorduri, adresă",
+      causes=["dovada folosinței spațiului expirată sau fără durată suficientă", "lipsește acordul asociației de proprietari / al vecinilor (sediu în locuință)",
+              "adresa diferă între contract și cerere", "dovadă lipsă pentru sediul secundar", "act adițional care nu prelungește durata"],
+      headline="Standard", complexity="medie", where=["la depunere"],
+      solutions=[
+        dict(level="Standard", text="Câmp obligatoriu pentru data de expirare a dovezii de sediu, cu verificare automată față de data depunerii; avertisment dacă dovada expiră în perioada de soluționare."),
+        dict(level="Standard", text="Adresa aleasă din nomenclatorul stradal național, preluată identic în toate documentele generate; dacă spațiul e locuință, se cere automat acordul vecinilor/asociației."),
+        dict(level="Doar cu AI", text="Extragerea (OCR) a datelor și a adresei din contractul încărcat și compararea lor cu formularul; neconcordanțele sunt semnalate, nu respinse."),
+        dict(level="Nu se poate automatiza", text="Valabilitatea titlului juridic (de ex. dreptul de a subînchiria, clauzele contractului) rămâne la registrator."),
+      ],
+      dependencies=["nomenclatorul stradal / adrese (ANCPI)", "cartea funciară (ANCPI), opțional", "Codul de procedură fiscală, art. 92 (inactivare pentru sediu expirat)"],
+      legal=["GDPR art. 6 alin. (1) lit. e), art. 25", "Legea 242/2022, art. 11"]),
+ dict(code="CERERE", short="Cererea de înregistrare, anexa fiscală, formulare",
+      causes=["anexa privind înregistrarea fiscală completată greșit", "câmpuri obligatorii necompletate", "formular vechi / altă versiune",
+              "obiectul cererii neclar sau o altă cerere în curs cu același obiect"],
+      headline="Standard", complexity="scăzută", where=["la depunere"],
+      solutions=[
+        dict(level="Standard", text="Formular online structurat: câmpuri obligatorii, validări între câmpuri, regulile anexei fiscale (vectorul fiscal) aplicate direct în formular, o singură versiune activă."),
+        dict(level="Standard", text="Semnalarea la depunere a unei alte cereri în curs pentru aceeași firmă și același obiect."),
+      ],
+      dependencies=["regulile ANAF pentru anexa fiscală", "portalul ONRC"],
+      legal=["GDPR art. 25", "Directiva 2017/1132, art. 13h (formulare-tip), introdus prin Directiva 2019/1151"],
+      note="Categoria e supra-atribuită de clasificator (precizie 0,37); ponderea ajustată e de circa 13%."),
+ dict(code="ACT", short="Act constitutiv, hotărâri, act modificator, mandat",
+      causes=["actul constitutiv actualizat nu corespunde actului modificator", "durata mandatului administratorului lipsă sau nedeterminată",
+              "act nelizibil, nesemnat sau incomplet; act modificator neatașat", "societate în dizolvare/lichidare"],
+      headline="Doar cu AI avansat", complexity="ridicată", where=["la operare", "la soluționare"],
+      solutions=[
+        dict(level="Standard", text="Listă de verificare pe tipul cererii (ce acte trebuie atașate); verificarea stării firmei în registru (de ex. în dizolvare) înainte de depunere; câmp structurat pentru durata mandatului în actele-tip."),
+        dict(level="Doar cu AI avansat", text="Asistent care compară actul constitutiv actualizat cu hotărârea/actul modificator și semnalează registratorului neconcordanțele (date, mandat, capital), cu trimitere la pasajul din document."),
+        dict(level="Nu se poate automatiza", text="Legalitatea clauzelor (Legea 31/1990) și efectul juridic al neconcordanțelor: control de legalitate al registratorului."),
+      ],
+      dependencies=["acte-tip actualizate", "model rulat în infrastructura statului sau în UE, cu contract de prelucrare", "set de test etichetat de registratori"],
+      legal=["AI Act art. 4, art. 6 alin. (3)-(4)", "GDPR art. 22, art. 35", "Legea 265/2022, art. 28"]),
+ dict(code="SOLICITANT", short="Solicitant: identitate, împuternicire, calitatea semnatarului",
+      causes=["lipsește împuternicirea deponentului", "cerere semnată de o persoană fără calitate în societate", "lipsește copia actului de identitate sau a cardului de avocat"],
+      headline="Standard", complexity="medie", where=["la depunere"],
+      solutions=[
+        dict(level="Standard", text="La autentificare (semnătură calificată / identitate electronică), compararea semnatarului cu rolurile din registru; dacă nu are calitate, se cere obligatoriu împuternicirea."),
+        dict(level="Standard", text="Verificarea calității de avocat sau notar prin interogarea registrelor profesiei, în loc de copii încărcate."),
+      ],
+      dependencies=["identificarea electronică (eIDAS)", "registrul național de evidență a persoanelor, prin PNI", "registrele profesiilor (avocați, notari)"],
+      legal=["Directiva 2017/1132, art. 13g alin. (3) lit. a) și alin. (8), art. 13b alin. (4)", "Legea 242/2022, art. 11, art. 17 alin. (2)", "GDPR art. 6 alin. (1) lit. e)"]),
+ dict(code="ASOC_ID", short="Date de identificare asociați/administratori",
+      causes=["asociatul se identifică cu alt act de identitate decât cel din registru", "datele noi de identificare nu sunt preluate în decizie și în actul constitutiv"],
+      headline="Standard", complexity="medie", where=["la depunere"],
+      solutions=[
+        dict(level="Standard", text="Precompletarea datelor din registru și din evidența persoanelor; diferențele sunt arătate la depunere, împreună cu mențiunea care trebuie cerută."),
+      ],
+      dependencies=["registrul național de evidență a persoanelor, prin PNI (Legea 242/2022, art. 7 alin. (1) lit. a))"],
+      legal=["Legea 242/2022, art. 11, art. 13 alin. (8)", "Directiva 2017/1132, art. 13g alin. (3) lit. f)", "GDPR art. 5 alin. (1) lit. c), art. 6 alin. (1) lit. e)"]),
+ dict(code="INSTIT", short="Avize ale altor instituții (cazier fiscal, ANAF, autorizații)",
+      causes=["la cesiunea părților sociale lipsește certificatul de atestare fiscală / dovada notificării organului fiscal",
+              "asociatul/administratorul are fapte înscrise în cazierul fiscal", "activități care cer autorizație profesională (de ex. medicale)"],
+      headline="Standard", complexity="ridicată", where=["la depunere"],
+      solutions=[
+        dict(level="Standard", text="Interogarea ANAF prin interoperabilitate (cazier fiscal, atestare fiscală), cu rezultatul arătat solicitantului înainte de depunere; nu înlătură impedimentul, dar îl face vizibil mai devreme."),
+        dict(level="Standard", text="Pentru activitățile reglementate, verificarea autorizației în registrul instituției emitente, unde există; altfel, cerință explicită în lista de verificare."),
+        dict(level="Nu se poate automatiza", text="Efectul juridic al faptelor înscrise în cazierul fiscal asupra cererii rămâne la registrator."),
+      ],
+      dependencies=["ANAF (cazier fiscal, certificat de atestare fiscală)", "Platforma națională de interoperabilitate (ADR)", "registrele profesiilor reglementate"],
+      legal=["Legea 242/2022, art. 11, art. 17 alin. (2)", "GDPR art. 6 alin. (1) lit. e), art. 35"]),
+ dict(code="CAPITAL", short="Capital social: vărsăminte, părți sociale, aport",
+      causes=["lipsește dovada vărsării sau a majorării capitalului", "nu se arată structura capitalului după majorare", "capital subscris nevărsat la înmatriculare"],
+      headline="Standard", complexity="scăzută", where=["la depunere"],
+      solutions=[
+        dict(level="Standard", text="Încărcare obligatorie a dovezii de vărsământ și calcule automate (suma părților × valoarea nominală = capitalul; structura după majorare calculată de formular)."),
+        dict(level="Doar cu AI", text="Citirea (OCR) sumei din extrasul bancar încărcat și compararea cu capitalul declarat."),
+      ],
+      dependencies=["niciuna obligatorie; opțional, confirmarea electronică a băncii"],
+      legal=["GDPR art. 25"]),
+ dict(code="SEMN", short="Semnătura și forma înscrisurilor",
+      causes=["semnătura olografă reprodusă ca imagine", "documente fără semnătură electronică calificată validă"],
+      headline="Standard", complexity="scăzută", where=["la depunere"],
+      solutions=[
+        dict(level="Standard", text="Validarea automată a semnăturii electronice calificate la încărcare (lista de încredere UE); documentul fără semnătură validă e semnalat imediat."),
+      ],
+      dependencies=["serviciu de validare a semnăturilor calificate (eIDAS)", "Legea 265/2022, art. 83"],
+      legal=["Regulamentul (UE) 910/2014 (eIDAS), art. 32-33 [neverificat în această sesiune]", "GDPR art. 25"]),
+ dict(code="BEN_REAL", short="Declarația privind beneficiarii reali",
+      causes=["declarația nedepusă", "beneficiarul real indicat nu este o persoană fizică", "beneficiar menționat în actul constitutiv fără declarație distinctă"],
+      headline="Standard", complexity="scăzută", where=["la depunere"],
+      solutions=[
+        dict(level="Standard", text="Regula „dacă se schimbă structura asociaților, se cere declarația” aplicată automat; validarea că beneficiarul real e persoană fizică identificată."),
+      ],
+      dependencies=["registrul beneficiarilor reali (ONRC)", "Legea 129/2019 [articolul neverificat în această sesiune]"],
+      legal=["GDPR art. 5 alin. (1) lit. c), art. 6 alin. (1) lit. c)"]),
+ dict(code="DENUM", short="Denumire: rezervare, formă legală",
+      causes=["denumirea PFA/II nu conține numele titularului", "rezervarea nu respectă regulile de formare"],
+      headline="Standard", complexity="scăzută", where=["la depunere"],
+      solutions=[dict(level="Standard", text="Generator și validator de denumire la rezervare (de ex. PFA = numele titularului + forma), cu potrivire automată între rezervare și cerere.")],
+      dependencies=["niciuna"], legal=["GDPR art. 25"]),
+ dict(code="TARIF", short="Tarife: contor de caractere, tarif de publicare",
+      causes=["lipsește contorul de caractere pentru publicarea în Monitorul Oficial"],
+      headline="Standard", complexity="scăzută", where=["la depunere"],
+      solutions=[dict(level="Standard", text="Calculul automat al tarifului de publicare din textul încărcat, la depunere.")],
+      dependencies=["regulile de tarifare ale Monitorului Oficial"], legal=["—"]),
+]
+
+# ---------------------------------------------------------------- legal framework (verified 22.11.2026)
+SRC = {
+ "AIA": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689",
+ "OMNI": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202601744",
+ "GDPR": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679",
+ "DIR": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019L1151",
+ "L265": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/257835",
+ "L242": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/257856",
+ "AIA_MIRROR": "https://artificialintelligenceact.eu/annex/3/",
+}
+LEGAL = {
+ "verified_on": "2026-11-22",
+ "sources": SRC,
+ "provisions": [
+  dict(id="AIA.dates.original", cite="Regulamentul (UE) 2024/1689, art. 113", status="verificat pe sursă secundară (artificialintelligenceact.eu); EUR-Lex nu a putut fi citit până la art. 113",
+       text="Aplicare generală de la 2.08.2026; cap. I-II (inclusiv art. 4 și art. 5) de la 2.02.2025; GPAI (cap. V) și sancțiunile de la 2.08.2025; art. 6 alin. (1) de la 2.08.2027.", url=SRC["AIA_MIRROR"]),
+  dict(id="AIA.omnibus", cite="Regulamentul (UE) 2026/1744 („Digital Omnibus on AI”), 8.07.2026, JO L 24.07.2026, în vigoare de la 27.07.2026", status="verificat EUR-Lex",
+       text="Art. 113 modificat: cap. III secț. 1-3 se aplică de la 2.12.2027 pentru sistemele cu risc ridicat din anexa III și de la 2.08.2028 pentru cele din anexa I; art. 4 (alfabetizare AI) înlocuit: furnizorii și implementatorii „iau măsuri pentru a sprijini” alfabetizarea, fără un nivel garantat; art. 27 alin. (4)-(5) modificate (FRIA poate trimite la DPIA); art. 111 alin. (2): sistemele cu risc ridicat folosite de autorități publice, introduse înainte de data din cap. III, se conformează până la 2.08.2030; art. 50 nu e amânat (se aplică de la 2.08.2026).", url=SRC["OMNI"]),
+  dict(id="AIA.annexIII", cite="Regulamentul (UE) 2024/1689, anexa III pct. 5 lit. a) și pct. 8 lit. a)", status="formulare verificată pe sursă secundară; nemodificate de 2026/1744 (verificat EUR-Lex)",
+       text="Pct. 5 lit. a): sisteme folosite de autorități publice pentru a evalua eligibilitatea persoanelor fizice pentru prestații și servicii publice de asistență esențiale. Pct. 8 lit. a): sisteme folosite de o autoritate judiciară sau în numele ei pentru cercetarea și interpretarea faptelor și a legii. Nicio rubrică nu vizează înregistrarea firmelor sau registrele.", url=SRC["AIA_MIRROR"]),
+  dict(id="AIA.art6_3", cite="Regulamentul (UE) 2024/1689, art. 6 alin. (3)-(4)", status="verificat EUR-Lex",
+       text="Un sistem din anexa III nu e cu risc ridicat dacă îndeplinește o sarcină procedurală restrânsă, îmbunătățește o activitate umană încheiată, detectează abateri fără a înlocui evaluarea umană sau îndeplinește o sarcină pregătitoare; e întotdeauna cu risc ridicat dacă face profilarea persoanelor fizice; furnizorul documentează evaluarea.", url=SRC["AIA"]),
+  dict(id="AIA.art3_4", cite="Regulamentul (UE) 2024/1689, art. 3 pct. 4", status="verificat EUR-Lex", text="ONRC ar fi „implementator” (autoritate publică care folosește un sistem AI sub autoritatea sa).", url=SRC["AIA"]),
+  dict(id="AIA.art14", cite="Regulamentul (UE) 2024/1689, art. 14 alin. (1), (4)", status="verificat EUR-Lex",
+       text="Supraveghere umană efectivă: înțelegerea limitelor, conștientizarea tendinței de a se baza automat pe rezultat, posibilitatea de a ignora sau anula rezultatul, oprire.", url=SRC["AIA"]),
+  dict(id="AIA.art26", cite="Regulamentul (UE) 2024/1689, art. 26 alin. (1), (2), (5), (6), (7), (11)", status="verificat EUR-Lex",
+       text="Implementatorii sistemelor cu risc ridicat: utilizare conform instrucțiunilor, supraveghere de persoane competente, monitorizare, jurnale păstrate cel puțin 6 luni, informarea lucrătorilor și a persoanelor fizice vizate.", url=SRC["AIA"]),
+  dict(id="AIA.art27", cite="Regulamentul (UE) 2024/1689, art. 27 alin. (1)", status="verificat EUR-Lex",
+       text="Organismele de drept public care implementează sisteme cu risc ridicat din anexa III fac evaluarea impactului asupra drepturilor fundamentale (FRIA) înainte de utilizare.", url=SRC["AIA"]),
+  dict(id="AIA.art50", cite="Regulamentul (UE) 2024/1689, art. 50 alin. (1), (4)", status="verificat EUR-Lex",
+       text="Furnizorul proiectează sistemele care interacționează direct cu persoane fizice astfel încât acestea să fie informate (de ex. un asistent conversațional pe portal); textul generat publicat pentru informarea publicului se marchează, cu excepția celui revizuit editorial de un om.", url=SRC["AIA"]),
+  dict(id="AIA.art86", cite="Regulamentul (UE) 2024/1689, art. 86 alin. (1)", status="verificat EUR-Lex",
+       text="Dreptul la explicații privind rolul sistemului cu risc ridicat din anexa III în decizie.", url=SRC["AIA"]),
+  dict(id="GDPR.art22", cite="Regulamentul (UE) 2016/679, art. 22 alin. (1), (2) lit. b), (3)", status="verificat EUR-Lex",
+       text="Dreptul de a nu face obiectul unei decizii bazate exclusiv pe prelucrare automată cu efecte juridice; excepție dacă dreptul UE sau național o autorizează și prevede garanții. Protejează persoane fizice (de ex. titularii PFA/II, asociați, administratori).", url=SRC["GDPR"]),
+  dict(id="GDPR.art35", cite="Regulamentul (UE) 2016/679, art. 35 alin. (1), (3) lit. a)", status="verificat EUR-Lex",
+       text="Evaluare de impact (DPIA) pentru prelucrări cu tehnologii noi susceptibile de risc ridicat; obligatorie pentru evaluări automate sistematice cu efecte juridice.", url=SRC["GDPR"]),
+  dict(id="GDPR.art25", cite="Regulamentul (UE) 2016/679, art. 25 alin. (1)", status="verificat EUR-Lex", text="Protecția datelor încă din faza de proiectare (minimizare).", url=SRC["GDPR"]),
+  dict(id="L265.art28", cite="Legea 265/2022, art. 28 alin. (1)-(2); art. 30 lit. a)-b); art. 105 alin. (1); art. 106 alin. (1)-(2)", status="verificat legislatie.just.ro (forma afișată la 22.11.2026)",
+       text="Registratorul este specialistul în drept care asigură controlul de legalitate prealabil și soluționează cererile prin încheiere (art. 28); verifică cererea, actele și datele de identitate (art. 30); cererea se soluționează de registrator (art. 105); la dosar incomplet, termen de cel mult 15 zile calendaristice, iar termenul și motivele amânării se afișează pe portal (art. 106).", url=SRC["L265"]),
+  dict(id="L242.art11_13_17", cite="Legea 242/2022, art. 7 alin. (1) lit. a), e); art. 11 alin. (1)-(3); art. 13 alin. (9); art. 17 alin. (2)", status="verificat legislatie.just.ro (forma afișată la 22.11.2026)",
+       text="Registrul comerțului și evidența persoanelor sunt registre de bază; instituțiile folosesc PNI și nu mai cer acte cu date disponibile prin platformă; „Nicio persoană vizată nu va fi afectată de o decizie … bazată exclusiv pe prelucrarea automată a datelor sale … cu excepția cazului în care o astfel de decizie este autorizată” de lege. Cazierul judiciar nu e în lista art. 7 alin. (1).", url=SRC["L242"]),
+  dict(id="DIR.2019_1151", cite="Directiva 2017/1132, art. 13b alin. (4), art. 13g alin. (3) lit. a), f), alin. (7), (8), art. 13h, art. 13i (introduse prin Directiva (UE) 2019/1151)", status="verificat EUR-Lex",
+       text="Statele asigură verificarea capacității juridice și a puterii de reprezentare, a numirii administratorilor; prezența fizică doar caz cu caz, la suspiciune de fraudă; formulare-tip; reguli privind administratorii decăzuți; constituire online în 5/10 zile lucrătoare.", url=SRC["DIR"]),
+ ],
+ "assessment": {
+  "annex_III": "Evaluarea noastră: niciun caz de utilizare ONRC din matrice nu intră în anexa III. Pct. 5 lit. a) privește eligibilitatea persoanelor fizice pentru prestații de asistență publică, nu înregistrarea firmelor; pct. 8 lit. a) cere o autoritate judiciară, iar registratorul este un specialist în drept al ONRC (instituție în subordinea MJ), nu o instanță. Chiar dacă s-ar susține contrariul, asistența la verificare ar fi o sarcină pregătitoare (art. 6 alin. (3) lit. d)) — cu condiția să nu facă profilarea persoanelor fizice. Rezervă: interpretare a auditorului, nu aviz juridic; o încadrare oficială o pot da MJ/ONRC și autoritatea națională de supraveghere.",
+  "standard_is_not_ai": "Regulile deterministe (validări, calcule, interogări) nu sunt „sisteme AI” în sensul art. 3 pct. 1 (sistem care deduce din datele de intrare cum să genereze rezultate); AI Act nu li se aplică. [interpretare; ghidul Comisiei privind definiția sistemului AI nu a fost recitit în această sesiune]",
+ },
+ "by_level": {
+  "Standard": dict(required=["GDPR: temei legal (art. 6 alin. (1) lit. c)/e)), minimizare și protecție din proiectare (art. 25)", "Legea 242/2022: interogări prin PNI, fără a cere din nou acte cu date disponibile (art. 11, art. 17 alin. (2))"],
+                   recommended=["Verificările semnalează, nu decid: solicitantul poate depune și cu avertisment, iar amânarea sau respingerea o dă registratorul", "DPIA pentru interogările la scară mare prin interoperabilitate (art. 35)"],
+                   ai_act="nu se aplică (nu e sistem AI)"),
+  "Doar cu AI": dict(required=["AI Act art. 4: măsuri de alfabetizare AI pentru personal (în vigoare; forma nouă din 27.07.2026)", "AI Act art. 50 alin. (1): un asistent AI pe portal trebuie proiectat astfel încât utilizatorii să afle că vorbesc cu un sistem AI (obligația furnizorului; ONRC devine furnizor dacă îl pune în funcțiune sub numele său) (din 2.08.2026)",
+                                "GDPR: DPIA (art. 35) pentru citirea automată a documentelor de identitate la scară mare; art. 25", "decizia rămâne umană (GDPR art. 22; Legea 242/2022, art. 13 alin. (9); Legea 265/2022, art. 28)"],
+                     recommended=["Supraveghere umană, jurnalizare și monitorizare după modelul art. 14 și 26 (obligatorii doar pentru risc ridicat)", "documentarea evaluării că sistemul nu e cu risc ridicat (art. 6 alin. (4), pentru furnizor)", "rezultatele AI arătate ca sugestii, cu sursa din document"],
+                     ai_act="risc minim/limitat după evaluarea noastră; art. 4 și, pentru chatbot, art. 50"),
+  "Doar cu AI avansat": dict(required=["tot ce se cere la „Doar cu AI”", "contract de prelucrare și găzduire în UE/infrastructura statului pentru modelul generativ (GDPR art. 28) [art. 28 GDPR neverificat în această sesiune]"],
+                             recommended=["din prudență, tratat ca un sistem cu risc ridicat: supraveghere conform art. 14, jurnale ≥ 6 luni (art. 26 alin. (6)), informarea personalului (art. 26 alin. (7)), evaluare de tip FRIA (art. 27), explicații (art. 86)",
+                                          "măsurarea pe un set de test a ratelor de semnalări false și ratate înainte de utilizare; protecție contra încrederii oarbe în rezultat", "dacă ar fi încadrat ca risc ridicat: obligațiile se aplică din 2.12.2027, iar pentru sistemele deja folosite de autorități, până la 2.08.2030 (Reg. 2026/1744)"],
+                             ai_act="risc minim după evaluarea noastră, dar aproape de pct. 8 din anexa III prin natura sarcinii; prudență"),
+  "Nu se poate automatiza": dict(required=["decizia (admitere, amânare, respingere) o dă registratorul prin încheiere (Legea 265/2022, art. 28 alin. (2), art. 105 alin. (1))",
+                                           "o decizie bazată exclusiv pe prelucrare automată ar cere o autorizare expresă în lege, cu garanții (GDPR art. 22 alin. (2) lit. b); Legea 242/2022, art. 13 alin. (9))"],
+                                 recommended=["orice regim fără registrator (de ex. conversia automată CAEN 1-la-1) cere mai întâi temei legal"],
+                                 ai_act="nu e cazul: nu se automatizează"),
+ },
+ "unverified": ["art. 113 original din AI Act (citit pe sursă secundară)", "formularea exactă a anexei III (sursă secundară)", "eIDAS art. 32-33", "Legea 129/2019, articolul despre declarația de beneficiar real",
+                "GDPR art. 28", "ghidul Comisiei privind definiția sistemului AI", "forma consolidată a Legii 242/2022 (s-a citit forma afișată)", "dacă ONRC are deja oricare dintre verificări (nu vedem sistemele interne)"],
+}
+
+
+def sha(p: Path) -> str:
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def main():
+    D = json.loads(DR_F.read_text(encoding="utf-8"))
+    F = {x["id"]: x for x in D["findings"]}
+    SPX = json.loads(SPX_F.read_text(encoding="utf-8"))
+    eap = {r["an"]: r for r in SPX["efort_aceeasi_perioada"]["rows"]}[2026]
+    import csv
+    TAX = {r["categorie"]: r["evitabil_la_depunere"] for r in csv.DictReader(open(HERE / "taxonomy.csv", encoding="utf-8")) if r["categorie"] not in ("GENERIC",)}
+    assert all(TAX[m["code"]] in ("da", "parțial") for m in MATRIX), TAX
+    rows = []
+    for m in MATRIX:
+        f = F[f"DR.category.{m['code']}"]
+        levels = sorted({s["level"] for s in m["solutions"]}, key=LEVELS.index)
+        assert m["headline"] in levels and all(w in WHERE for w in m["where"]) and m["complexity"] in ("scăzută", "medie", "ridicată")
+        avoid = TAX[m["code"]]
+        rows.append(dict(m, share=f["value"], ci95=f["ci95"], n=f["n"], avoidable_at_filing=avoid, levels_involved=levels,
+                         effect=("contribuie la limita strictă (amânări care n-ar mai avea loc) și la limita de sus" if avoid == "da"
+                                 else "reduce frecvența, dar nu intră în intervalul măsurat: o parte a motivului cere judecată juridică")))
+    rows.sort(key=lambda r: -r["share"])
+    st, an = F["DR.avoidable.strict"], F["DR.avoidable.any"]
+    per_wd = eap["amanari_pe_zi_lucr"]
+    out = dict(
+        _meta="Matricea de soluții pentru motivele de amânare ONRC + cadrul legal. Evaluarea auditorului (asistată de AI, Claude Opus 5.5), nu o clasificare ONRC; "
+              "nu vedem sistemele interne ONRC: fiecare soluție e de verificat «dacă nu există deja». Agregate numai. Generat de independent_audit/delay_reasons/08_solutions.py.",
+        inputs={"delay_reasons.json": sha(DR_F), "stat_pack_ext.json": sha(SPX_F)},
+        claim_ids=CLAIM_IDS, levels=LEVELS, level_definitions=LEVEL_DEF,
+        matrix=rows,
+        levels_headline_count={lv: sum(1 for r in rows if r["headline"] == lv) for lv in LEVELS},
+        levels_involved_count={lv: sum(1 for r in rows if lv in r["levels_involved"]) for lv in LEVELS},
+        effect=dict(
+            postponements_per_working_day=per_wd, window_rate="1 oct.–19 nov. 2026 (stat_pack_ext efort_aceeasi_perioada, 2026)",
+            window_shares=D["findings"][0]["window"],
+            strict_share=st["value"], strict_ci95=st["ci95"], any_share=an["value"], any_ci95=an["ci95"],
+            avoided_per_wd_strict=per_wd * st["value"], with_one_reason_less_per_wd_any=per_wd * an["value"],
+            avoided_per_wd_strict_ci=[per_wd * x for x in st["ci95"]], any_per_wd_ci=[per_wd * x for x in an["ci95"]],
+            interpretation=("Limita strictă = amânări în care toate motivele ar fi fost prinse la depunere: n-ar mai avea loc. "
+                            "Limita de sus = amânări în care cel puțin un motiv ar fi prins; cele cu alte motive rămân amânări, dar mai simple. "
+                            "O amânare evitată scoate o decizie de amânare și o a doua analiză a dosarului, nu o decizie finală. "
+                            "Intervalul se sprijină pe categoriile „da”; soluțiile pentru categoriile „parțial” (CAEN, sediu, act) ar adăuga, dar efectul lor nu se poate măsura din date. "
+                            "Ponderile sunt din fereastra 19.10–18.11.2026 și nu se extind la restul anului."),
+        ),
+        legal=LEGAL,
+    )
+    DST.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"wrote {DST}")
+    for r in rows:
+        print(f"  {r['code']:10} {100*r['share']:5.1f}%  {r['headline']:24} {r['complexity']:8} levels={r['levels_involved']}")
+    print("headline count:", out["levels_headline_count"]); print("involved count:", out["levels_involved_count"])
+    e = out["effect"]; print(f"per wd {per_wd}: strict {e['avoided_per_wd_strict']:.0f}, any {e['with_one_reason_less_per_wd_any']:.0f}")
+
+
+if __name__ == "__main__":
+    main()

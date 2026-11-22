@@ -1,0 +1,73 @@
+{
+ "build_ok": true,
+ "lean_toolchain": "leanprover/lean4:v4.16.0",
+ "theorems": [
+  {
+   "theorem": "OnrcProofs.RegistryV3.mj_stock_totals",
+   "claims": "C28",
+   "meaning": "Stocul oficial total este suma exactă a celor două etape, la ambele date (30.10 și 6.11.2026).",
+   "status": "VERIFICAT (lake build, 0 sorry)"
+  },
+  {
+   "theorem": "OnrcProofs.RegistryV3.mj_weekly_deltas",
+   "claims": "C33",
+   "meaning": "Într-o săptămână, operarea a scăzut exact cu 8.300 de cereri, iar etapa registratorului a crescut exact cu 4.396.",
+   "status": "VERIFICAT (lake build, 0 sorry)"
+  },
+  {
+   "theorem": "OnrcProofs.RegistryV3.mj_stage1_share_between_51_and_52pct",
+   "claims": "C29",
+   "meaning": "La 6.11.2026, cererile încă la operare reprezintă între 51% și 52% din stocul oficial: cele două etape sunt aproape egale.",
+   "status": "VERIFICAT (lake build, 0 sorry)"
+  },
+  {
+   "theorem": "OnrcProofs.RegistryV3.funded_vacancies_134",
+   "claims": "C51",
+   "meaning": "Diferența dintre posturile finanțate și cele ocupate este exact 134; ocupate < finanțate < aprobate.",
+   "status": "VERIFICAT (lake build, 0 sorry)"
+  },
+  {
+   "theorem": "OnrcProofs.RegistryV3.little_implied_two_thirds",
+   "claims": "C76",
+   "meaning": "Cu ritmul de 4.220 decizii pe zi lucrătoare și un timp mediu între 32 și 33 zile lucrătoare, stocul implicat de legea lui Little este între 66% și 69% din stocul oficial: același ordin de mărime, dar mai mic.",
+   "status": "VERIFICAT (lake build, 0 sorry)"
+  },
+  {
+   "theorem": "OnrcProofs.RegistryV3.load_ratio_2027_between_118_and_120",
+   "claims": "C67",
+   "meaning": "În model, în 2027, munca intrată pe zi este între 1,18 și 1,20 ori capacitatea: intră mai mult decât iese.",
+   "status": "VERIFICAT (lake build, 0 sorry)"
+  },
+  {
+   "theorem": "OnrcProofs.RegistryV3.grid_more_capacity_never_longer",
+   "claims": "C63, C65",
+   "meaning": "În toate cele 36 de celule ale grilei, mai multă capacitate nu dă niciodată o așteptare mai lungă (pe fiecare rând).",
+   "status": "VERIFICAT (lake build, 0 sorry)"
+  },
+  {
+   "theorem": "OnrcProofs.RegistryV3.grid_more_inflow_never_shorter",
+   "claims": "C63, C66",
+   "meaning": "În toate celulele grilei, mai multe cereri nu dau niciodată o așteptare mai scurtă (pe fiecare coloană).",
+   "status": "VERIFICAT (lake build, 0 sorry)"
+  },
+  {
+   "theorem": "OnrcProofs.RegistryV3.grid_baseline_reproduces_audit",
+   "claims": "C42, C63",
+   "meaning": "Celula fără schimbări a grilei reproduce exact prognoza verificată fără măsuri: 136 de zile în iunie 2028.",
+   "status": "VERIFICAT (lake build, 0 sorry)"
+  },
+  {
+   "theorem": "OnrcProofs.RegistryV3.backtest_errors_mostly_nonnegative",
+   "claims": "C70",
+   "meaning": "În 7 din 9 ferestre de test, ritmul observat a fost cel puțin cel prognozat (abatere ≥ 0).",
+   "status": "VERIFICAT (lake build, 0 sorry)"
+  },
+  {
+   "theorem": "OnrcProofs.RegistryV3.adjournment_mostly_single",
+   "claims": "C74",
+   "meaning": "Dintre deciziile finale cu amânare anterioară, amânările multiple sunt sub 2% din cele unice: aproape niciun dosar nu e amânat de mai multe ori.",
+   "status": "VERIFICAT (lake build, 0 sorry)"
+  }
+ ],
+ "build_tail": "n axioms: [propext, Quot.sound]\ninfo: .\\.\\.\\.\\OnrcProofs\\VerifyAxioms.lean:23:0: 'OnrcProofs.additive_dominates_multiplicative' depends on axioms: [propext, Quot.sound]\ninfo: .\\.\\.\\.\\OnrcProofs\\VerifyAxioms.lean:24:0: 'OnrcProofs.right_censoring_truncated_mean_le' depends on axioms: [propext, Quot.sound]\ninfo: .\\.\\.\\.\\OnrcProofs\\VerifyAxioms.lean:25:0: 'OnrcProofs.right_censoring_truncated_median_le' depends on axioms: [propext, Quot.sound]\ninfo: .\\.\\.\\.\\OnrcProofs\\VerifyAxioms.lean:26:0: 'OnrcProofs.timestamp_gap_attenuation' depends on axioms: [propext, Quot.sound]\ninfo: .\\.\\.\\.\\OnrcProofs\\VerifyAxioms.lean:27:0: 'OnrcProofs.eu_directive_lower_bound' depends on axioms: [propext, Quot.sound]\ninfo: .\\.\\.\\.\\OnrcProofs\\VerifyAxioms.lean:28:0: 'OnrcProofs.cost_channels_no_double_count' depends on axioms: [propext, Quot.sound]\ninfo: .\\.\\.\\.\\OnrcProofs\\VerifyAxioms.lean:29:0: 'OnrcProofs.cost_monotone_in_backlog' depends on axioms: [propext, Quot.sound]\ninfo: .\\.\\.\\.\\OnrcProofs\\VerifyAxioms.lean:30:0: 'OnrcProofs.macro_substitution_floor_gt_oug_budget' does not depend on any axioms\ninfo: .\\.\\.\\.\\OnrcProofs\\VerifyAxioms.lean:31:0: 'OnrcProofs.manski_short_record_bound' depends on axioms: [propext, Quot.sound]\ninfo: .\\.\\.\\.\\OnrcProofs\\VerifyAxioms.lean:32:0: 'OnrcProofs.manski_berc_archive_under_39bps' does not depend on any axioms\ninfo: .\\.\\.\\.\\OnrcProofs\\VerifyAxioms.lean:33:0: 'OnrcProofs.cluster_deff_ge_one' depends on axioms: [propext, Quot.sound]\nBuild completed successfully.\n"
+}

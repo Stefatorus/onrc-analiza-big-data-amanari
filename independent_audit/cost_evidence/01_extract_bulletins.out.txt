@@ -1,0 +1,4 @@
+bulletins 545 with date 543 unreadable/empty 13
+{'decisions': 11504, 'src_avand': 10131, 'verb_admite': 10422, 'has_app': 11499, 'has_cui': 11392, 'registration': 1482, 'verb_none': 101, 'verb_respinge': 981, 'src_none': 1362, 'src_referitoare': 11}
+bnr==stem 540
+[('', 2), ('01.2026', 60), ('02.2026', 1), ('10.2026', 154), ('11.2026', 328)]

@@ -1,0 +1,47 @@
+  wdr = c.groupby('dd').apply(lambda g: spearmanr(g.nr.astype(float), g.res.astype('int64')).correlation if len(g) > 50 else np.nan)
+rows 4094202
+
+(A) finals 1-20 Nov 2026: 63306  with >=1 adjournment (by applicationIdSource): 0.2136  (by nr+date): 0.2136  agreement: 1.0
+   distribution of #adjournments (id link): {0.0: 0.7864, 1.0: 0.2111, 2.0: 0.0024, 3.0: 0.0001}
+   median wait with / without adjournment: 54.7 / 49.8
+   filing->first adj (median d): 41.9  last adj->final (median d): 14.0
+   all 2026 filings with final: share adjourned 0.2422  mean #adj among adjourned 1.013  share with >=2 adj 0.003
+   outcome of adjourned (True) vs not (False), 2026 filings:
+sol    Admis  Respins  Renunțat
+n_adj                          
+False  0.986    0.004     0.005
+True   0.667    0.305     0.028
+   adjourned requests (first adj in 2026) without any final yet: 0.0481 of 233997
+
+(B) rejections filed Jan-Sep 2025: 48238  refiled (later final-decided request, same firm & category, <=365d): 0.8441
+    CERERE265 48237 0.8441
+    INMATRIC265 0 nan
+
+(C) Nov 2-20 finals (mentiuni): 53600  Spearman(filing, decision)= 0.514  Kendall tau= 0.429  => discordant pairs ~ 0.286
+   per decision day, filing date p10/p50/p90 (first 6 days):
+                               0.1                 0.5                     0.9
+dd                                                                            
+2026-11-02 2026-09-10 11:28:22.000 2026-09-15 17:12:34 2026-10-06 14:09:56.000
+2026-11-03 2026-09-15 12:09:30.400 2026-09-16 10:47:56 2026-10-13 01:50:14.600
+2026-11-04 2026-09-11 09:37:37.800 2026-09-16 13:03:23 2026-10-19 12:14:28.000
+2026-11-05 2026-09-11 12:37:20.600 2026-09-16 16:36:19 2026-10-20 11:43:58.200
+2026-11-06 2026-09-13 12:07:03.800 2026-09-17 10:15:17 2026-10-13 11:57:55.500
+2026-11-09 2026-09-14 10:39:35.000 2026-09-17 12:06:19 2026-10-20 16:53:33.000
+   share decided within 14 days of filing: 0.0876
+   mean within-day Spearman(app_nr, decision time): 0.142
+   fast (<14d) finals: share Respins 0.009  vs all 0.09  share jtype F 0.129  vs all 0.206
+
+(D) weekly around 27.04.2026:
+                           n  within2d  wait_p05_h  wait_med_d  created_lag_med_h  pub_lag_med_h  res_hour_med  share_resp  adjourn
+wk                                                                                                                                 
+2026-03-30/2026-04-05  22237     0.252      22.918       4.882             17.773         18.764        12.283       0.074     6494
+2026-04-06/2026-04-12  16046     0.160      23.587       5.750             16.743         17.689        12.150       0.088     3653
+2026-04-13/2026-04-19  16435     0.160      24.554       8.009             18.363         19.729        12.250       0.119     4364
+2026-04-20/2026-04-26  21588     0.154      24.535       6.981             19.120         20.634        12.267       0.079     5883
+2026-04-27/2026-05-03  15555     0.015      72.360       5.916             21.188         22.121        12.267       0.051     4618
+2026-05-04/2026-05-10  22027     0.018      71.227       6.169             21.806         23.674        12.183       0.089     5717
+2026-05-11/2026-05-17  21402     0.015      68.924       5.078             20.499         21.534        12.217       0.084     5591
+2026-05-18/2026-05-24  20916     0.020      68.569       5.045             19.554         20.799        12.183       0.068     5780
+2026-05-25/2026-05-31  21219     0.018      68.952       5.058             18.072         19.246        12.150       0.089     5363
+
+(E) finals filed 2025-H1 2026 on non-working days: 0.0203

@@ -1,0 +1,100 @@
+{
+  "anchors": {
+    "C2": 4176,
+    "C1": 4802,
+    "FPD_REG": 25.3,
+    "REG": 165,
+    "OP_FPD": 45,
+    "backlog": 210000,
+    "horizon_wd": 85
+  },
+  "scenarios": [
+    {
+      "key": "S0",
+      "label": "Fără măsuri (status quo)",
+      "note": "Coada crește necontrolat până la termen.",
+      "backlog_lo": 710000,
+      "backlog_hi": 1110000
+    },
+    {
+      "key": "OUG_net",
+      "label": "OUG: +50 registratori NOI",
+      "note": "Personal net nou la etapa 2 — nu golește operarea.",
+      "backlog_lo": 602475,
+      "backlog_hi": 1002475
+    },
+    {
+      "key": "OUG_cann",
+      "label": "OUG: +50 LUAȚI din operare",
+      "note": "Dacă delegații vin din operare, prima coadă se adâncește.",
+      "backlog_lo": 739856,
+      "backlog_hi": 1139856
+    },
+    {
+      "key": "OUG_big",
+      "label": "OUG: +100 registratori NOI",
+      "note": "Capacitate mare nouă la etapa 2.",
+      "backlog_lo": 548606,
+      "backlog_hi": 948606
+    },
+    {
+      "key": "AUTO",
+      "label": "Automatizare CAEN 1-la-1 (−60%)",
+      "note": "Scoate dosarele simple din ambele cozi.",
+      "backlog_lo": 410000,
+      "backlog_hi": 570000
+    },
+    {
+      "key": "DEADLINE",
+      "label": "Doar prelungire termen (+3 luni)",
+      "note": "Mută vârful, nu-l elimină.",
+      "backlog_lo": 710000,
+      "backlog_hi": 1110000
+    },
+    {
+      "key": "COMBO",
+      "label": "Combinat: +100 noi + automatizare + IT",
+      "note": "Singura care normalizează coada.",
+      "backlog_lo": 109449,
+      "backlog_hi": 269448
+    }
+  ],
+  "cannibalisation_sweep": [
+    {
+      "from_operare": 0,
+      "backlog_mid": 802475
+    },
+    {
+      "from_operare": 10,
+      "backlog_mid": 786856
+    },
+    {
+      "from_operare": 20,
+      "backlog_mid": 825106
+    },
+    {
+      "from_operare": 30,
+      "backlog_mid": 863356
+    },
+    {
+      "from_operare": 40,
+      "backlog_mid": 901606
+    },
+    {
+      "from_operare": 50,
+      "backlog_mid": 939856
+    },
+    {
+      "from_operare": 60,
+      "backlog_mid": 978106
+    },
+    {
+      "from_operare": 70,
+      "backlog_mid": 1016356
+    },
+    {
+      "from_operare": 80,
+      "backlog_mid": 1054606
+    }
+  ]
+}

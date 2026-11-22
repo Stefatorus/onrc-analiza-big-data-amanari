@@ -1,0 +1,25 @@
+id,module,theorem,axioms,status,claim_proved
+T1a,QueueTheory.lean,OnrcProofs.lindley_mono,"[propext, Quot.sound]",VERIFICAT (0 sorry),"Monotonia recurenței Lindley (stoc coadă crescător în intrări, descrescător în capacitate)"
+T1b,QueueTheory.lean,OnrcProofs.skorokhod_reflection_exact,"[propext, Classical.choice, Quot.sound]",VERIFICAT (0 sorry),Echivalența exactă dintre recurența zilnică Lindley și reflexia Skorokhod din audit_oug.py
+T1c,QueueTheory.lean,OnrcProofs.cal_wait_le3_iff,"[propext, Classical.choice, Quot.sound]",VERIFICAT (0 sorry),Condiția necesară și suficientă pentru serviciu ≤3 zile calendaristice + distincția vineri = 1 zi lucrătoare
+T1d,QueueTheory.lean,OnrcProofs.friday_3cal_is_1wd,"[propext, Classical.choice, Quot.sound]",VERIFICAT (0 sorry),Demonstrație exactă pe frontiera de weekend (3 zile cal. de vineri = 1 zi lucrătoare luni)
+T1e,QueueTheory.lean,OnrcProofs.wait_mono,"[propext, Quot.sound]",VERIFICAT (0 sorry),Monotonia timpului de așteptare FIFO la scăderea stocului și creșterea capacității
+T2,QueueTheory.lean,OnrcProofs.kleinrock_two_class_conservation,"[propext, Classical.choice, Quot.sound]",VERIFICAT (0 sorry),Identitate de conservare pe un pas (regim saturat) pentru două cozi cuplate (nu legea Kleinrock M/G/1)
+T3a,CapacityAndMix.lean,OnrcProofs.simpson_mix_inflation,"[propext, Quot.sound]",VERIFICAT (0 sorry),Identitatea paradoxului Simpson: creșterea ponderii simple crește brutul N₁ > N₀ la muncă egală T₁ = T₀
+T3b,CapacityAndMix.lean,OnrcProofs.capacity_loss_masking_onrc,[] (decide constructiv),VERIFICAT (0 sorry),"Certificat numeric ONRC: la mix 27,7%→42,0% (0,54×), o pierdere de −7,5% capacitate apare drept creștere brută"
+T4,CapacityAndMix.lean,OnrcProofs.weight_misestimation_bias_sign,"[propext, Quot.sound]",VERIFICAT (0 sorry),Identitate algebrică: ponderile conservatoare (w_est > w_true) subestimează pierderea reală de eficiență
+T5a,CapacityAndMix.lean,OnrcProofs.demand_censoring_mu_max_strict,"[propext, Quot.sound]",VERIFICAT (0 sorry),Proba că ieșirile constrânse de cerere pe v1.0 sunt strict sub plafonul maxim μ_max al v1.0
+T5b,CapacityAndMix.lean,OnrcProofs.rework_multiplier_monotone,"[propext, Quot.sound]",VERIFICAT (0 sorry),Capacitatea utilă μ(1 − r·ρ) descrește strict în rata respingerilor r și rata redepunerilor ρ
+T5c,CapacityAndMix.lean,OnrcProofs.rework_supercritical_onrc_witness,[] (decide constructiv),VERIFICAT (0 sorry),"Certificat numeric pentru pragul λ = μ(1 − rρ) la μ și λ ipotetici; incompatibil cu datele S2 2025 (retras ca dovadă)"
+T6a,EconometricsAndBias.lean,OnrcProofs.multiplicative_inflow_bias_exact,"[propext, Quot.sound]",VERIFICAT (0 sorry),Formula exactă a biasului multiplicativ: șterge fracția (1 − s) ≈ 81% din valul CAEN la ΔU = 0
+T6b,EconometricsAndBias.lean,OnrcProofs.additive_dominates_multiplicative,"[propext, Quot.sound]",VERIFICAT (0 sorry),Condiția exactă sub care estimatorul DiD aditiv are eroare strict mai mică decât cel multiplicativ
+T7a,EconometricsAndBias.lean,OnrcProofs.right_censoring_truncated_mean_le,"[propext, Quot.sound]",VERIFICAT (0 sorry),Cenzurarea la dreapta FIFO subestimează sistematic media de așteptare a cohortelor recente
+T7b,EconometricsAndBias.lean,OnrcProofs.right_censoring_truncated_median_le,"[propext, Quot.sound]",VERIFICAT (0 sorry),Cenzurarea la dreapta FIFO subestimează sistematic mediana de așteptare a cohortelor recente
+T8,EconometricsAndBias.lean,OnrcProofs.timestamp_gap_attenuation,"[propext, Quot.sound]",VERIFICAT (0 sorry),"Atenuarea spre 1,0 a raportului timpilor din timestamp sub zgomot aditiv (semnare în lot / amânări)"
+T9,LegalEconomicsSampling.lean,OnrcProofs.eu_directive_lower_bound,"[propext, Quot.sound]",VERIFICAT (0 sorry),Margine inferioară slabă (≤) pentru depășirile termenului art. 13g alin. (7) și condiționată de lag de plată ≤ B
+T10a,LegalEconomicsSampling.lean,OnrcProofs.cost_channels_no_double_count,"[propext, Quot.sound]",VERIFICAT (0 sorry),Lipsa dublei contabilizări între Canalul B și Canalul C (s_B + s_C ≤ 1) și monotonia în stoc
+T10b,LegalEconomicsSampling.lean,OnrcProofs.cost_monotone_in_backlog,"[propext, Quot.sound]",VERIFICAT (0 sorry),Costul economic total crește strict monoton cu stocul nerezolvat L
+T10c,LegalEconomicsSampling.lean,OnrcProofs.macro_substitution_floor_gt_oug_budget,[] (decide constructiv),VERIFICAT (0 sorry),"Chiar la substituție macroeconomică de 95%, pierderea ireductibilă > 5,76 mil. RON (bugetul OUG)"
+T11a,LegalEconomicsSampling.lean,OnrcProofs.manski_short_record_bound,"[propext, Quot.sound]",VERIFICAT (0 sorry),Marginea neparametrică Manski fără ipoteze distributive pentru răspunsurile API incomplete
+T11b,LegalEconomicsSampling.lean,OnrcProofs.manski_berc_archive_under_39bps,[] (decide constructiv),VERIFICAT (0 sorry),"Certificat numeric BERC: 15.627 nereturnate din 4,11 mil. garantează eroare < 0,39 pp"
+T11c,LegalEconomicsSampling.lean,OnrcProofs.cluster_deff_ge_one,"[propext, Quot.sound]",VERIFICAT (0 sorry),Efectul de design cluster DEFF = 1 + (m̄ − 1)ρ ≥ 1 pentru cele 545 de buletine PDF

@@ -1,0 +1,20 @@
+{
+  "rows": 1932755,
+  "empty_id_share_of_rejections_pct": 17.1,
+  "published_def": {
+    "rejections": 124658,
+    "refiled_365d_pct": 81.7
+  },
+  "no_empty_ids": {
+    "rejections": 102054,
+    "refiled_365d_pct": 77.6
+  },
+  "no_empty_ids_same_category": {
+    "rejections": 102054,
+    "refiled_365d_pct": 77.6
+  },
+  "no_empty_ids_same_category_full_followup": {
+    "rejections": 56230,
+    "refiled_365d_pct": 80.4
+  }
+}

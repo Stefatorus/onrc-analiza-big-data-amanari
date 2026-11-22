@@ -1,0 +1,65 @@
+== C99 stratum-weighted inflow (judged requests) per wd; calibration: weighted in-BERC share vs BERC/counter
+   2026-05 n 563 weighted judged share 0.243 est/wd 5043 (95% 4310 - 5776 )  weighted inBERC 0.238  BERC/counter 0.202  BERC dossiers/wd 4191
+   2026-06 n 782 weighted judged share 0.21 est/wd 4151 (95% 3586 - 4715 )  weighted inBERC 0.207  BERC/counter 0.206  BERC dossiers/wd 4075
+   2026-07 n 784 weighted judged share 0.238 est/wd 4325 (95% 3784 - 4866 )  weighted inBERC 0.24  BERC/counter 0.226  BERC dossiers/wd 4105
+   2026-08 n 805 weighted judged share 0.267 est/wd 5450 (95% 4827 - 6074 )  weighted inBERC 0.262  BERC/counter 0.275  BERC dossiers/wd 5611
+   2026-09 n 1521 weighted judged share 0.392 est/wd 10953 (95% 10239 - 11667 )  weighted inBERC 0.25  BERC/counter 0.247  BERC dossiers/wd 6897
+   2026-10 n 1767 weighted judged share 0.205 est/wd 4130 (95% 3751 - 4508 )  weighted inBERC 0.044  BERC/counter 0.048  BERC dossiers/wd 962
+   2026-11 n 1247 weighted judged share 0.146 est/wd 2866 (95% 2481 - 3251 )  weighted inBERC 0.014  BERC/counter 0.021  BERC dossiers/wd 403
+   Aug-Oct weighted 6866
+   May-Jul weighted 4492
+== C71 BERC filings per wd by filing month:
+2023-04    2886.0
+2023-05    3156.0
+2023-06    2795.0
+2023-07    2547.0
+2023-08    2504.0
+2023-09    2700.0
+2023-10    2854.0
+2023-11    3213.0
+2023-12    3699.0
+2024-01    3685.0
+2024-02    3512.0
+2024-03    3440.0
+2024-04    3203.0
+2024-05    2951.0
+2024-06    2821.0
+2024-07    1541.0
+2024-08    2599.0
+2024-09    2738.0
+2024-10    2817.0
+2024-11    2944.0
+2024-12    2868.0
+2025-01    4740.0
+2025-02    5321.0
+2025-03    5037.0
+2025-04    4036.0
+2025-05    3922.0
+2025-06    3739.0
+2025-07    3578.0
+2025-08    3545.0
+2025-09    3766.0
+2025-10    3716.0
+2025-11    4000.0
+2025-12    4107.0
+2026-01    4605.0
+2026-02    4824.0
+2026-03    4560.0
+2026-04    3923.0
+2026-05    4174.0
+2026-06    4063.0
+2026-07    4092.0
+2026-08    5600.0
+Freq: M
+    2024 Jan/Feb/Mar vs Nov 2023 : [0.147, 0.093, 0.071]
+    2025 Jan/Feb/Mar vs Nov 2024 : [0.61, 0.807, 0.711]
+    2026 Jan/Feb/Mar vs Nov 2025 : [0.151, 0.206, 0.14]
+    2023 Jul/Aug vs Nov same year: [-0.208, -0.221]
+    2025 Jul/Aug vs Nov same year: [-0.105, -0.114]
+== P05 robust: max of next-day-q01 minus q01: 50142 2026-01-13  top3 {'2026-01-13': 50142, '2026-09-15': 36547, '2026-09-22': 33000}
+   q99-q01 within day max: 40177 2026-01-13  around 12-14 Jan: {'2026-01-09': 15598, '2026-01-10': 1092, '2026-01-11': 1208, '2026-01-12': 23299, '2026-01-13': 50142, '2026-01-14': 27311, '2026-01-15': 23574}
+   Sept max (q01 diff): 36547 2026-09-15
+== C87 all decisions/wd 1.10-19.11 2025 4861.2
+== C87 all decisions/wd 1.10-19.11 2026 5279.2
+== filing time of day 2025: mean fraction 0.532  median 0.513
+== C99 Nov 1-19 with portal end-of-counter 4805875 est/wd 3036 (95% 2617 - 3455 ) n 1169

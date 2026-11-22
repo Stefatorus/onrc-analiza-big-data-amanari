@@ -1,0 +1,12 @@
+rejection docs 980 with reason 979 after dedup (request nr, day) 977 outside Oct-Nov 2026 8 in window 969
+decision days 21 2026-10-19 2026-11-18 bulletins 275
+section {'ALTE_CERERI': 884, 'INMATRICULARE': 83, nan: 2} | archive cat {'CERERE265': 886, 'INMATRIC265': 83}
+crosstab section x cat {'CERERE265': {'ALTE_CERERI': 884, 'INMATRICULARE': 0, 'NA': 2}, 'INMATRIC265': {'ALTE_CERERI': 0, 'INMATRICULARE': 83, 'NA': 0}}
+linked to archive Respins 969 | with prior AUTO_AMANARI (same request, same filing day) 954
+formulas {'F_NEREMEDIAT': 608, 'F_NEPRECIZARI': 93, 'F_NEINDEPLINIT': 185, 'S_POSTP': 845, 'S_NEREM': 847, 'S_PARTIAL': 74, 'S_INTERES': 9, 'S_RENUNT': 45}
+mechanism {'M_NEREMEDIAT': 751, 'M_DIRECT': 124, 'M_PARTIAL': 69, 'M_AMANARE_ALT': 25}
+mech x prior postponement {False: {'M_AMANARE_ALT': 2, 'M_DIRECT': 12, 'M_NEREMEDIAT': 1, 'M_PARTIAL': 0}, True: {'M_AMANARE_ALT': 23, 'M_DIRECT': 112, 'M_NEREMEDIAT': 750, 'M_PARTIAL': 69}}
+grounds quoted {'G_conditii_legale': 136, 'G_incompleta': 61, 'G_neconcordante': 19, 'G_forma': 13}
+segments 2203 per entry {0: 1, 1: 446, 2: 224, 3: 130, 4: 62, 5: 47, 6: 25, 7: 12, 8: 7, 9: 7, 10: 6, 11: 1, 12: 1}
+vocab kept 1155 of 4992 ; share of tokens masked 0.0522
+paired bulletin postponement notices 61

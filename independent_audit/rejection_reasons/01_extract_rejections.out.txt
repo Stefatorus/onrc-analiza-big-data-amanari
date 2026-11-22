@@ -1,0 +1,6 @@
+bulletins 545 unreadable/empty 1 decision documents 11475
+{'rejection_docs': 980, 'with_urmeaza': 979, 'with_reason': 979, 'reason_closed_by_DISPUNE': 979, 'dispune_word_Respinge': 980}
+index entries (section, solution, month) top: [(('ALTE_CERERI', 'Admis', '11.2026'), 5423), (('ALTE_CERERI', 'Admis', '10.2026'), 3701), (('INMATRICULARE', 'Admis', '11.2026'), 995), (('ALTE_CERERI', 'Respins', '11.2026'), 497), (('ALTE_CERERI', 'Respins', '10.2026'), 417), (('INMATRICULARE', 'Admis', '10.2026'), 375), (('ALTE_CERERI', 'Admis', '12.2025'), 56), (('INMATRICULARE', 'Respins', '11.2026'), 53), (('ALTE_CERERI', 'Renunțat', '11.2026'), 35), (('INMATRICULARE', 'Respins', '10.2026'), 32), (('ALTE_CERERI', 'Renunțat', '10.2026'), 30), (('ALTE_CERERI', 'Admis', '02.2026'), 29), (('INMATRICULARE', 'Renunțat', '11.2026'), 16), (('INMATRICULARE', 'Renunțat', '10.2026'), 8)]
+rejection docs by decision month: [('02.2026', 4), ('09.2026', 1), ('10.2026', 432), ('11.2026', 540), ('12.2025', 3)]
+postponement notices for rejected requests: 61
+reason length quantiles [0, 345, 823, 2117, 4171, 6778]

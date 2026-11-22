@@ -1,0 +1,10 @@
+indicator,valoare,observație
+Înregistrări în arhivă,4077510,
+Fără dată de depunere sau de decizie,0,excluse
+Decizii înainte de 2023-04-01,47757,în afara ferestrei analizate
+Așteptare negativă (decizie înainte de depunere),13811,excluse din statisticile de timp
+Așteptare peste 400 de zile,42,excluse din statisticile de timp (dosare istorice)
+"Soluții cu grafie atipică (ADMIS, certificări cu ţ etc.)",5,nu intră în nicio definiție de «finală»
+"Decizii finale stricte (admis, respins, renunțat)",3241580,
+Amânări (AUTO_AMANARI),821246,
+Ultima decizie din arhivă,2026-11-20 17:21,

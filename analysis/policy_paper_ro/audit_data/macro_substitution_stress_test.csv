@@ -1,0 +1,8 @@
+regime,macro_subst_a_pct,discount_c_pct,prudent_net_priv_mron,prudent_net_all_mron,prudent_ratio_vs_oug_budget,central_net_priv_mron,central_net_all_mron,central_ratio_vs_oug_budget,tensionat_net_priv_mron,tensionat_net_all_mron,tensionat_ratio_vs_oug_budget
+"M0: Echilibru parțial (0% subst. A, 0% disc. C)",0.0000,0.0000,66.8700,67.3100,11.6900,291.4100,292.7300,50.8200,994.7900,998.0900,173.2800
+"M1: Substituție moderată (50% subst. A, 25% disc. C)",50.0000,25.0000,48.6700,49.1100,8.5300,202.4300,203.7500,35.3700,653.3000,656.6000,113.9900
+"M2: Substituție severă (75% subst. A, 50% disc. C)",75.0000,50.0000,32.5600,33.0000,5.7300,132.4800,133.8000,23.2300,415.6700,418.9700,72.7400
+"M3: Substituție extremă (90% subst. A, 75% disc. C)",90.0000,75.0000,17.2800,17.7200,3.0800,70.1600,71.4800,12.4100,219.5900,222.8900,38.7000
+"M4: Certificat formal Lean T10b (95% subst. VA brut A, 100% disc. C)",95.0000,100.0000,5.2000,5.6400,0.9800,22.5200,23.8400,4.1400,82.0500,85.3500,14.8200
+M5: Substituție 95% pe VA net permanent A + 100% disc. C,95.0000,100.0000,2.8400,3.2800,0.5700,15.4500,16.7700,2.9100,65.0600,68.3600,11.8700
+"M6: Prag absolut B + D (100% subst. A, 100% disc. C)",100.0000,100.0000,2.4200,2.8600,0.5000,11.6400,12.9600,2.2500,44.2900,47.5800,8.2600

@@ -1,0 +1,10 @@
+scenario,net_fte,units_per_fte,peak_daily_net,shared_anaf_share_transferred,digital,stagger,net_units_2027
+referinta,0,0,0,0.0000,False,False,0.0000
+oug_redus,5,20,100,0.0000,False,False,24200.0000
+oug_central,15,25,375,0.2500,False,False,90750.0000
+oug_ridicat,30,30,900,0.5000,False,False,217800.0000
+doar_art_iii,0,0,0,0.2500,False,False,0.0000
+oug_digital,15,25,375,0.2500,True,False,90750.0000
+oug_esalonare,15,25,375,0.2500,False,True,90750.0000
+pachet,15,25,375,0.2500,True,True,90750.0000
+pachet_dupa_caen,15,25,375,0.2500,True,True,90750.0000

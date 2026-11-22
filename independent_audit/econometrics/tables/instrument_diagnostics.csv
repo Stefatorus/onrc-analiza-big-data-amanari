@@ -1,0 +1,2 @@
+sd_wait,sd_z,sd_z_resid,sd_wait_resid,corr_resid,wait_mean,wait_p99,wait_max,n_main,n_dropped_decided_next_year,first_stage_coef,first_stage_F_office,first_stage_F_twoway
+8.20713,7.36396,2.62708,5.48923,0.365811,6.673,35,93,90004,451,0.764853,792.352,394.44

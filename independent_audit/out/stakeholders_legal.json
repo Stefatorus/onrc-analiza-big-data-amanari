@@ -1,0 +1,904 @@
+[
+  {
+    "key": "CADRU_COMUN",
+    "official_name": "Fapte juridice comune (nu este o instituție)",
+    "legal_basis_org": "Textul a fost citit pe legislatie.just.ro (forma consolidată afișată la 22.11.2026) sau pe portalul Oficiului pentru Publicații al UE. 'verified': false = necitit în sesiune. Data verificării: 2026-11-22.",
+    "competences": [
+      {
+        "text": "Termenul de soluționare: 1 zi lucrătoare de la înregistrarea cererii (și pentru alte cereri, prin art. 109); remedierea/completarea: cel mult 15 zile CALENDARISTICE.",
+        "citation": "Legea nr. 265/2022, art. 105 alin. (1), art. 106 alin. (1), art. 109",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257835",
+        "verified": true
+      },
+      {
+        "text": "Directiva cere ca o constituire ONLINE să fie finalizată în 5 zile lucrătoare (doar persoane fizice, formulare-tip) sau 10 zile lucrătoare în celelalte cazuri, socotite de la completarea formalităților/plății; dacă termenul nu e respectat, solicitantul trebuie informat de motive. Legea 265/2022 transpune Directiva 2019/1151, iar termenul național de 1 zi este mai strict.",
+        "citation": "Directiva (UE) 2017/1132, art. 13g alin. (7), introdus prin Directiva (UE) 2019/1151, art. 1; termen de transpunere: 1.08.2021, cu prelungire de cel mult un an (art. 2 alin. 1 și 3)",
+        "url": "https://eur-lex.europa.eu/eli/dir/2019/1151/oj",
+        "verified": true
+      },
+      {
+        "text": "CAEN Rev. 3: HG 656/1997 stabilește o perioadă de implementare, în care ambele versiuni sunt valabile pentru scopuri nestatistice. 18 luni de la 25.03.2025 (până la 25.09.2026), apoi o nouă perioadă de 6 luni de la intrarea în vigoare a HG 788/2026 (MO nr. 835/01.10.2026), adică până la 01.04.2027 (calcul după Codul civil, art. 2.552 alin. 1; data nu apare expres în text). Data de 25.03.2027 din presă nu decurge din text.",
+        "citation": "HG nr. 656/1997, art. 5^1 alin. (2), (2^1), (3); HG 284/2025, art. II; HG 788/2026, art. I-II; Legea 24/2000, art. 12 alin. (3); Codul civil, art. 2.552",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/13379",
+        "verified": true
+      },
+      {
+        "text": "Nu am găsit în textele citite o calificare a termenului CAEN drept termen de decădere pentru firme (presa citează ONRC că nu este; comunicatul ONRC nu a fost citit).",
+        "citation": "—",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/13379",
+        "verified": false
+      },
+      {
+        "text": "Nu am găsit în textele oficiale citite (HG 656/1997, Ordinul INS 377/2024, Legea 265/2022) o obligație expresă, cu sancțiune, ca firmele să depună actualizarea CAEN la ONRC.",
+        "citation": "—",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/282063",
+        "verified": false
+      },
+      {
+        "text": "Inactivarea fiscală când a expirat dreptul de folosință asupra sediului social: la 30 de zile după notificare; dacă firma nu se reactivează într-un an, urmează dizolvarea (Legea 239/2025).",
+        "citation": "Codul de procedură fiscală, art. 92 alin. (1) lit. g), (3), (4^1)-(4^2)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/170007",
+        "verified": true
+      },
+      {
+        "text": "Proiectul de OUG din 18.11.2026: textul oficial de pe just.ro nu a putut fi citit (blocare Cloudflare). După rezumatul din proiect (sursă secundară), art. I vizează consilieri juridici din ONRC desemnați temporar pentru controlul de legalitate, nu avocați din afară.",
+        "citation": "just.ro, Proiecte în dezbatere",
+        "url": "https://www.just.ro/transparenta-decizionala/acte-normative/proiecte-in-dezbatere/",
+        "verified": false
+      }
+    ],
+    "asks": [],
+    "co_decision": "",
+    "notes": "Intrarea este folosită de toate fișele; nu se adresează unei instituții."
+  },
+  {
+    "key": "MJ",
+    "official_name": "Ministerul Justiției",
+    "legal_basis_org": "HG nr. 592/2024 privind organizarea și funcționarea Ministerului Justiției (MO nr. 522/05.06.2024; consolidată 04.04.2025; acțiuni: HG 1328/2024, HG 324/2025). HG nr. 652/2009 este ABROGATĂ (art. 47 din HG 592/2024). Ministerul există și în Guvernul învestit la 20.10.2026 (Hotărârea Parlamentului nr. 4/2026, anexa nr. 1).",
+    "competences": [
+      {
+        "text": "ONRC este instituție publică în subordinea Ministerului Justiției, finanțată integral de la bugetul de stat prin bugetul MJ.",
+        "citation": "Legea nr. 265/2022, art. 19 alin. (1); HG nr. 592/2024, art. 40",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257835",
+        "verified": true
+      },
+      {
+        "text": "Directorul general, cei 3 directori generali adjuncți și directorii oficiilor registrului comerțului sunt numiți prin ordin al ministrului justiției (mandat 4 ani, după concurs/examen).",
+        "citation": "Legea nr. 265/2022, art. 21 alin. (1), (3), (4), (6)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257835",
+        "verified": true
+      },
+      {
+        "text": "Regulamentul de organizare și funcționare (ROF) al ONRC și statele de funcții se aprobă prin ordin al ministrului justiției; numărul maxim de posturi se stabilește prin HG.",
+        "citation": "Legea nr. 265/2022, art. 22 alin. (1)-(2); ROF aprobat prin OMJ nr. 1.520/C/2024, art. 6 alin. (1)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257835",
+        "verified": true
+      },
+      {
+        "text": "Numărul maxim de posturi ONRC + 42 oficii este 1.792; poate fi majorat prin HG.",
+        "citation": "HG nr. 592/2024, anexa nr. 2, pct. III.1 (modif. HG 1328/2024); ROF ONRC (OMJ 1.520/C/2024), art. 6 alin. (3) și (8)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/283774",
+        "verified": true
+      },
+      {
+        "text": "MJ coordonează activitatea ONRC și a oficiilor registrului comerțului.",
+        "citation": "HG nr. 592/2024, art. 6 pct. V.6",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/283774",
+        "verified": true
+      },
+      {
+        "text": "MJ elaborează proiectele de acte normative din domeniul său și le susține în comisiile parlamentare și în plen; formulează propuneri pentru programul legislativ al Guvernului.",
+        "citation": "HG nr. 592/2024, art. 6 pct. II.3 și pct. I.1",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/283774",
+        "verified": true
+      },
+      {
+        "text": "MJ fundamentează și elaborează proiectul de buget pentru instituțiile subordonate (inclusiv ONRC) și repartizează creditele bugetare.",
+        "citation": "HG nr. 592/2024, art. 6 pct. VI.5",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/283774",
+        "verified": true
+      },
+      {
+        "text": "Ca inițiator, MJ trebuie să publice anunțul, nota de fundamentare și textul complet cu cel puțin 30 de zile lucrătoare înainte de avizare, să acorde minimum 10 zile pentru propuneri, să organizeze dezbatere publică dacă o cere în scris o asociație legal constituită; excepție pentru situații urgente.",
+        "citation": "Legea nr. 52/2003 (rep.), art. 7 alin. (2), (3), (4), (9), (13)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/153210",
+        "verified": true
+      },
+      {
+        "text": "Limită: personalul ONRC și registratorii nu pot fi supuși niciunei influențe/presiuni din partea vreunei autorități; cererile adresate MJ trebuie să fie organizatorice, nu despre soluția unor dosare.",
+        "citation": "Legea nr. 265/2022, art. 22 alin. (7) și art. 28 alin. (4)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257835",
+        "verified": true
+      },
+      {
+        "text": "În 2026 este suspendată ocuparea prin concurs/examen a posturilor vacante din instituțiile publice; prin excepție, ordonatorul principal de credite poate aproba, în cazuri temeinic justificate, ocuparea a cel mult 15% din posturile vacantate după 01.01.2026, în limita cheltuielilor de personal aprobate; posturile unice și cele condiționate de fonduri UE/PNRR sunt exceptate.",
+        "citation": "Legea nr. 141/2025, art. XXII alin. (1), (2), (4), (6) (consolidată 12.11.2026)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/300022",
+        "verified": true
+      },
+      {
+        "text": "Obligația instituțiilor publice de a publica din oficiu informații de interes public și un raport anual de activitate.",
+        "citation": "Legea nr. 544/2001, art. 5 alin. (1)-(3)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/31413",
+        "verified": true
+      },
+      {
+        "text": "Programul de guvernare 2026-2028 (cap. Justiție) include: reorganizarea instituțională a ONRC (M3), îmbunătățirea cadrului legal al registrului comerțului și publicarea informațiilor necesare (Profesii juridice, M2), platforme digitale ONRC 'registru-platformă online' (M16), plan în cinci puncte de debirocratizare a ONRC (M17).",
+        "citation": "Hotărârea Parlamentului nr. 4/2026, anexa nr. 2 (Program de guvernare)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/315319",
+        "verified": true
+      }
+    ],
+    "asks": [
+      {
+        "ask": "Publicarea integrală pe just.ro a proiectului de OUG din 18.11.2026, cu nota de fundamentare și fișa financiară, și organizarea unei dezbateri publice (la cerere scrisă a unei asociații); includerea în nota de fundamentare a cuantificării stocului, a timpilor de așteptare și a scenariilor 2027.",
+        "competence_citation": "Legea nr. 52/2003, art. 7 alin. (2), (9); HG 592/2024, art. 6 pct. II.3"
+      },
+      {
+        "ask": "Aprobarea prin ordin a modificării statului de funcții/ROF pentru a muta posturi (în limita celor 1.792) către etapele-gâtuire (operare/registratori).",
+        "competence_citation": "Legea nr. 265/2022, art. 22 alin. (1)-(2); ROF ONRC art. 6 alin. (7)-(8)"
+      },
+      {
+        "ask": "Aprobarea, ca ordonator principal de credite, a excepției de la suspendarea concursurilor din 2026 pentru posturile vacante ONRC (maximum 15% din posturile vacantate după 01.01.2026 sau posturi unice), motivată de blocaj; concursurile le organizează apoi directorul general al ONRC.",
+        "competence_citation": "Legea nr. 141/2025, art. XXII alin. (2), (4), (6); Legea nr. 265/2022, art. 22 alin. (5)"
+      },
+      {
+        "ask": "Fundamentarea către MF a unei suplimentări pentru ONRC (personal + IT) la rectificare sau în bugetul 2027, pe baza costului economic și a veniturilor bugetare la risc din analiză.",
+        "competence_citation": "HG nr. 592/2024, art. 6 pct. VI.5"
+      },
+      {
+        "ask": "Inițierea modificării Legii nr. 265/2022 / a proiectului OUG pentru un regim simplificat al actualizării CAEN (fără modificarea actului constitutiv, în linie cu măsura din Programul de guvernare de eliminare a codurilor CAEN din actele constitutive) și pentru un mecanism de capacitate temporară.",
+        "competence_citation": "HG nr. 592/2024, art. 6 pct. II.3 și I.1; HP nr. 4/2026, anexa 2"
+      },
+      {
+        "ask": "Includerea în ROF a obligației ONRC de a publica lunar indicatori ai stocului (pe etape, oficii, tipuri de cereri) și ai timpilor de soluționare.",
+        "competence_citation": "Legea nr. 265/2022, art. 22 alin. (1); HG 592/2024, art. 6 pct. V.6; Legea nr. 544/2001, art. 5"
+      }
+    ],
+    "co_decision": "Bugetul: MF (aviz/fișă financiară) + Guvern (rectificare prin OUG/proiect de lege) + Parlament (legea bugetului). Ocuparea posturilor vacante în 2026: doar în excepțiile Legii 141/2025, art. XXII (peste aceste limite sau dacă suspendarea se prelungește în 2027 este nevoie de o derogare prin lege/OUG). Numărul maxim de posturi: HG (Guvern, la propunerea MJ, cu avizul MF). OUG: adoptată de Guvern, aprobată/respinsă de Parlament prin lege. ROF/state de funcții: ordin MJ (singur), în limita bugetului.",
+    "notes": "Legea nr. 265/2022 nu a suferit modificări după OUG 109/2024 (Acțiuni suferite: doar Legea 222/2023 și OUG 109/2024, verificat 22.11.2026). Diferența dintre 1.792 posturi maxime (HG 592/2024) și 1.384 posturi finanțate (raport) nu a fost reconciliată pe surse oficiale în această sesiune."
+  },
+  {
+    "key": "ONRC",
+    "official_name": "Oficiul Național al Registrului Comerțului (ONRC) și cele 42 de oficii ale registrului comerțului de pe lângă tribunale",
+    "legal_basis_org": "Legea nr. 265/2022 privind registrul comerțului (MO nr. 750/26.07.2022), cap. II (art. 19-27) și III (art. 28-40), consolidată 12.09.2024 (nemodificată ulterior); Regulamentul de organizare și funcționare aprobat prin Ordinul ministrului justiției nr. 1.520/C/2024 (MO nr. 622 bis/01.07.2024, fără modificări). Nu există o HG distinctă de organizare a ONRC; numărul maxim de posturi este în HG nr. 592/2024, anexa 2.",
+    "competences": [
+      {
+        "text": "Directorul general asigură conducerea, coordonarea și controlul ONRC și ale oficiilor; este ordonator terțiar de credite; dispune încheierea/modificarea raporturilor de muncă.",
+        "citation": "Legea nr. 265/2022, art. 21 alin. (2), art. 22 alin. (5); ROF art. 7 alin. (2) lit. a), b), d)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257835",
+        "verified": true
+      },
+      {
+        "text": "ONRC stabilește structurile funcționale și numărul de personal pentru fiecare oficiu, în limita ROF.",
+        "citation": "ROF ONRC (OMJ 1.520/C/2024), art. 6 alin. (7)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/285061",
+        "verified": true
+      },
+      {
+        "text": "Atribuții: proiectarea și dezvoltarea sistemului informatic integrat; organizarea și coordonarea activității registratorilor; îndrumarea metodologică unitară și controlul oficiilor; colaborarea cu alte autorități; propuneri de acte normative.",
+        "citation": "Legea nr. 265/2022, art. 24 alin. (1) lit. g), h), i), n), o)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257835",
+        "verified": true
+      },
+      {
+        "text": "Dacă niciun registrator al oficiului sesizat nu poate soluționa cererea 'din alte motive obiective', ONRC desemnează un registrator de la alt oficiu sau din ONRC; documentele circulă electronic.",
+        "citation": "Legea nr. 265/2022, art. 32 alin. (3)-(4)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257835",
+        "verified": true
+      },
+      {
+        "text": "Termene: cererea se soluționează în 1 zi lucrătoare de la înregistrare; termenul de remediere/completare este de cel mult 15 zile calendaristice, iar termenul și motivele amânării se afișează pe portal; aceleași reguli se aplică și altor cereri (mențiuni).",
+        "citation": "Legea nr. 265/2022, art. 105 alin. (1), art. 106 alin. (1)-(2), art. 107 alin. (1), art. 109",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257835",
+        "verified": true
+      },
+      {
+        "text": "Direcția Registrul Comerțului Central prelucrează datele registrului pentru situații și publicații statistice.",
+        "citation": "ROF ONRC, art. 16 alin. (3) lit. d)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/285061",
+        "verified": true
+      },
+      {
+        "text": "Obligația de a publica din oficiu informații de interes public și un raport de activitate cel puțin anual.",
+        "citation": "Legea nr. 544/2001, art. 5 alin. (1)-(3)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/31413",
+        "verified": true
+      },
+      {
+        "text": "Registrul central al comerțului este registru de bază în sensul legii interoperabilității.",
+        "citation": "Legea nr. 242/2022, art. 7 alin. (1) lit. e)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257856",
+        "verified": true
+      },
+      {
+        "text": "Autoritățile și instituțiile administrației publice pot stabili, prin act al conducătorului, măsuri și proceduri pentru punerea în aplicare a CAEN actualizate.",
+        "citation": "HG nr. 656/1997, art. 5^1 alin. (1)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/13379",
+        "verified": true
+      },
+      {
+        "text": "Schimbul de informații cu autoritățile publice se face în baza unor protocoale de colaborare, pentru îndeplinirea unei obligații legale exprese.",
+        "citation": "Legea nr. 265/2022, art. 27 alin. (4)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257835",
+        "verified": true
+      },
+      {
+        "text": "Instituțiile publice sunt obligate să folosească Platforma națională de interoperabilitate și nu pot cere documente cu date disponibile prin PNI.",
+        "citation": "Legea nr. 242/2022, art. 11 alin. (1)-(3)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257856",
+        "verified": true
+      },
+      {
+        "text": "Limită: registratorul nu poate fi supus niciunei influențe; încheierile sunt acte de autoritate publică.",
+        "citation": "Legea nr. 265/2022, art. 28 alin. (3)-(4)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257835",
+        "verified": true
+      }
+    ],
+    "asks": [
+      {
+        "ask": "Echilibrarea cozii naționale prin repartizarea dosarelor între oficii (oficiul de depunere nu este neapărat cel care soluționează), cu o regulă de repartizare publicată. Art. 32 alin. (3) permite expres desemnarea unui registrator de la alt oficiu doar când niciun registrator al oficiului sesizat nu poate soluționa cererea 'din motive obiective'; folosirea lui pentru încărcare este o interpretare.",
+        "competence_citation": "Legea nr. 265/2022, art. 21 alin. (2), art. 24 alin. (1) lit. h)-i); art. 32 alin. (3)-(4) (interpretare)"
+      },
+      {
+        "ask": "Publicarea lunară, ca date deschise, a stocului pe etape, a intrărilor, soluționărilor, amânărilor și respingerilor, pe oficii și tipuri de cereri (fără date personale).",
+        "competence_citation": "Legea nr. 544/2001, art. 5; ROF art. 16 alin. (3) lit. d)"
+      },
+      {
+        "ask": "O procedură internă simplificată pentru actualizările CAEN (formulare-tip, verificări automate pentru corespondențe 1:1), aprobată prin decizia directorului general.",
+        "competence_citation": "HG nr. 656/1997, art. 5^1 alin. (1); Legea nr. 265/2022, art. 24 alin. (1) lit. g), i)"
+      },
+      {
+        "ask": "Optimizarea fluxului myportal (pre-validare la depunere, reducerea amânărilor pentru lipsuri formale) și conectarea la Platforma națională de interoperabilitate.",
+        "competence_citation": "Legea nr. 265/2022, art. 24 alin. (1) lit. g), n); Legea nr. 242/2022, art. 11"
+      },
+      {
+        "ask": "Organizarea concursurilor pentru posturile vacante deblocate prin excepția aprobată de MJ și redistribuirea internă a personalului către etapele-gâtuire.",
+        "competence_citation": "Legea nr. 265/2022, art. 22 alin. (5); ROF art. 6 alin. (7), art. 7 alin. (2) lit. b)"
+      },
+      {
+        "ask": "Transmiterea către MJ a unor propuneri de modificare a Legii 265/2022 (regim CAEN, capacitate temporară, termene realiste pe tipuri de cereri).",
+        "competence_citation": "Legea nr. 265/2022, art. 24 alin. (1) lit. o)"
+      },
+      {
+        "ask": "Un protocol cu ANAF pentru transmiterea zilnică a cererilor în curs privind sediul social, ca ANAF să nu inactiveze firme a căror cerere așteaptă la ONRC.",
+        "competence_citation": "Legea nr. 265/2022, art. 24 alin. (1) lit. n), art. 27 alin. (4); Legea nr. 242/2022, art. 11"
+      }
+    ],
+    "co_decision": "Modificarea ROF/statelor de funcții: ordin MJ. Posturi noi: HG + buget (MF, Guvern, Parlament). Protocoale de date: ANAF (și ADR pentru PNI). Desemnările și procedurile interne: decizie a directorului general, fără altă aprobare.",
+    "notes": "Termenul de 1 zi lucrătoare (art. 105 alin. 1) este mai strict decât Directiva (art. 13g alin. 7: 5/10 zile lucrătoare, doar pentru constituirea online, de la completarea dosarului). Mecanismul OUG 109/2024 art. 2 (conducători desemnați ca registratori) a fost limitat la 1 an de la 12.09.2024. Art. 132 (raportarea către Comisie) privea doar 2 ani; nu e temei pentru cererile de date."
+  },
+  {
+    "key": "MF",
+    "official_name": "Ministerul Finanțelor",
+    "legal_basis_org": "HG nr. 34/2009 privind organizarea și funcționarea Ministerului Finanțelor (consolidată 07.04.2025); Legea nr. 500/2002 privind finanțele publice; Legea responsabilității fiscal-bugetare nr. 69/2010 (rep.), modificată prin Legea nr. 45/2026 (consolidată 02.04.2026). Ministerul există în Guvernul învestit la 20.10.2026 (HP nr. 4/2026, anexa 1).",
+    "competences": [
+      {
+        "text": "Coordonează pregătirea proiectelor legilor bugetare anuale și ale legilor de rectificare; elaborează previziuni bugetare; poate solicita rapoarte oricărei instituții care gestionează fonduri publice.",
+        "citation": "Legea nr. 500/2002, art. 19 lit. a), b^1), e)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/37954",
+        "verified": true
+      },
+      {
+        "text": "Elaborează proiectul bugetului de stat și al legii de rectificare; inițiază și avizează proiecte de acte normative; monitorizează numărul de posturi și cheltuielile de personal; propune strategia fiscală.",
+        "citation": "HG nr. 34/2009, art. 3 alin. (1) pct. 3, 4, 6, 13, 29",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/101725",
+        "verified": true
+      },
+      {
+        "text": "Orice măsură care crește cheltuielile/reduce veniturile trebuie însoțită de fișă financiară (impact pe anul curent + 4 ani și sursa de acoperire); MF verifică fișa.",
+        "citation": "Legea nr. 500/2002, art. 15 alin. (1); Legea nr. 69/2010, art. 15 alin. (1)-(2)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/37954",
+        "verified": true
+      },
+      {
+        "text": "Nicio cheltuială bugetară nu poate fi aprobată fără stabilirea sursei de finanțare.",
+        "citation": "Constituția României, art. 138 alin. (5)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/47355",
+        "verified": true
+      },
+      {
+        "text": "Strategia fiscal-bugetară (înaintată Guvernului până la 31 iulie) cuprinde analiza riscurilor fiscale.",
+        "citation": "Legea nr. 69/2010, art. 26 alin. (1), art. 29 alin. (2) lit. d)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/167959",
+        "verified": true
+      },
+      {
+        "text": "Fondul de rezervă bugetară la dispoziția Guvernului se repartizează prin HG pentru cheltuieli urgente sau neprevăzute.",
+        "citation": "Legea nr. 500/2002, art. 30 alin. (1)-(2)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/37954",
+        "verified": true
+      },
+      {
+        "text": "Cheltuielile de personal aprobate nu pot fi majorate prin virări; ordonatorii se încadrează în numărul maxim de posturi aprobat prin legea bugetară.",
+        "citation": "Legea nr. 500/2002, art. 47 alin. (3), (5)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/37954",
+        "verified": true
+      },
+      {
+        "text": "ANAF funcționează în subordinea ministerului.",
+        "citation": "HG nr. 520/2013, art. 1",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/150246",
+        "verified": true
+      },
+      {
+        "text": "Obiectul modificării propuse: regimul inactivării pentru sediu expirat și al dizolvării după un an.",
+        "citation": "Codul de procedură fiscală, art. 92 alin. (1) lit. g), (4^1)-(4^2)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/170007",
+        "verified": true
+      }
+    ],
+    "asks": [
+      {
+        "ask": "La avizarea proiectului OUG: confirmarea sursei pentru cei ~5,76 mil. lei și verificarea fișei financiare, inclusiv a costului de a nu acționa (scenariile de cost economic din analiză).",
+        "competence_citation": "Legea nr. 500/2002, art. 15; Legea nr. 69/2010, art. 15 alin. (2); Constituția, art. 138 alin. (5)"
+      },
+      {
+        "ask": "Prevederea în bugetul 2027 (sau la rectificare) a creditelor pentru ocuparea posturilor vacante ONRC și pentru IT, la cererea fundamentată a MJ.",
+        "competence_citation": "HG nr. 34/2009, art. 3 alin. (1) pct. 6; Legea nr. 500/2002, art. 19 lit. a)"
+      },
+      {
+        "ask": "Includerea riscului de venituri bugetare legat de întârzierile ONRC (înmatriculări amânate, inactivări fiscale) în analiza riscurilor fiscale din strategia fiscal-bugetară și în previziunea veniturilor.",
+        "competence_citation": "Legea nr. 69/2010, art. 29 alin. (2) lit. d); Legea nr. 500/2002, art. 19 lit. b^1)"
+      },
+      {
+        "ask": "Inițierea modificării art. 92 din Codul de procedură fiscală: o firmă cu cerere privind sediul social aflată în curs la ONRC să nu fie inactivată în temeiul art. 92 alin. (1) lit. g), iar termenul de un an până la dizolvare (alin. 4^1-4^2) să nu curgă cât timp cererea așteaptă.",
+        "competence_citation": "HG nr. 34/2009, art. 3 alin. (1) pct. 3; Codul de procedură fiscală, art. 92"
+      },
+      {
+        "ask": "Solicitarea de rapoarte periodice de la MJ/ONRC despre stoc și capacitate, pentru monitorizarea execuției.",
+        "competence_citation": "Legea nr. 500/2002, art. 19 lit. e)"
+      }
+    ],
+    "co_decision": "Rectificarea și bugetul anual: Guvern (adoptă proiectul) + Parlament (lege). O eventuală prelungire în 2027 a suspendării concursurilor (Legea 141/2025, art. XXII, în vigoare pentru 2026) ar cere o derogare pentru ONRC; regimul pentru 2027 nu a fost verificat. Repartizarea din Fondul de rezervă: HG. Modificarea Codului de procedură fiscală: lege sau OUG (Guvern + Parlament). Fișa financiară se întocmește de inițiator (MJ) și se verifică de MF.",
+    "notes": "Legea nr. 500/2002 afișa ca ultimă consolidare 05.10.2023, dar textul conține note până în decembrie 2025 (OUG 77/2025); s-a citat textul afișat la 22.11.2026."
+  },
+  {
+    "key": "ANAF",
+    "official_name": "Agenția Națională de Administrare Fiscală (ANAF)",
+    "legal_basis_org": "HG nr. 520/2013 privind organizarea și funcționarea ANAF (consolidată 06.12.2024), în subordinea Ministerului Finanțelor; Codul de procedură fiscală (Legea nr. 207/2015), consolidat 08.08.2026.",
+    "competences": [
+      {
+        "text": "Persoana juridică este declarată inactivă dacă durata deținerii spațiului cu destinația de sediu social este expirată; declararea se face după 30 de zile de la notificarea contribuabilului.",
+        "citation": "Codul de procedură fiscală, art. 92 alin. (1) lit. g) și alin. (3)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/170007",
+        "verified": true
+      },
+      {
+        "text": "Inactivarea/reactivarea se face prin decizie, după competențele și procedura stabilite prin ordin al președintelui ANAF; procedura de aplicare a art. 92 se aprobă prin ordin al președintelui ANAF.",
+        "citation": "Codul de procedură fiscală, art. 92 alin. (4) și (14)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/170007",
+        "verified": true
+      },
+      {
+        "text": "Dacă firma nu se reactivează în 1 an de la inactivare, se dizolvă; organul fiscal are obligația de a cere dizolvarea (introdus prin Legea nr. 239/2025).",
+        "citation": "Codul de procedură fiscală, art. 92 alin. (4^1)-(4^2)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/170007",
+        "verified": true
+      },
+      {
+        "text": "Reactivarea pentru cazurile de la lit. d)-g) cere ca firma să nu se mai afle în situația respectivă 'conform mențiunilor înscrise în registrele în care a fost înregistrat'; decizia emisă din eroare se anulează cu efect retroactiv.",
+        "citation": "Codul de procedură fiscală, art. 92 alin. (6), (9)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/170007",
+        "verified": true
+      },
+      {
+        "text": "Registrul contribuabililor se completează și cu informațiile comunicate de oficiul registrului comerțului; modificările datelor firmelor înregistrate la registrul comerțului se fac potrivit legii speciale.",
+        "citation": "Codul de procedură fiscală, art. 91 alin. (2), art. 89 alin. (1)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/170007",
+        "verified": true
+      },
+      {
+        "text": "Registrul contribuabililor inactivi este public, pe site-ul ANAF.",
+        "citation": "Codul de procedură fiscală, art. 92 alin. (10)-(11)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/170007",
+        "verified": true
+      },
+      {
+        "text": "Obligația de a publica din oficiu informații de interes public.",
+        "citation": "Legea nr. 544/2001, art. 5 alin. (1)-(3)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/31413",
+        "verified": true
+      },
+      {
+        "text": "Instituțiile publice sunt obligate să folosească Platforma națională de interoperabilitate pentru datele din registrele altor instituții.",
+        "citation": "Legea nr. 242/2022, art. 11 alin. (1)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257856",
+        "verified": true
+      },
+      {
+        "text": "ANAF elaborează proiecte de acte administrative normative, propune soluții de reformă și asigură cooperarea administrativă și schimbul de informații cu alte instituții.",
+        "citation": "HG nr. 520/2013, art. 7 lit. A pct. 9, 21, 41",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/150246",
+        "verified": true
+      }
+    ],
+    "asks": [
+      {
+        "ask": "Modificarea ordinului președintelui ANAF de aplicare a art. 92: înainte de inactivarea pe lit. g), organul fiscal verifică dacă la ONRC există o cerere în curs privind sediul social.",
+        "competence_citation": "Codul de procedură fiscală, art. 92 alin. (4), (14); HG 520/2013, art. 7 lit. A pct. 9"
+      },
+      {
+        "ask": "Un protocol de date cu ONRC (flux zilnic al cererilor în curs privind sediul), integrat, după caz, prin Platforma națională de interoperabilitate.",
+        "competence_citation": "Codul de procedură fiscală, art. 91 alin. (2); HG 520/2013, art. 7 lit. A pct. 41; Legea nr. 242/2022, art. 11"
+      },
+      {
+        "ask": "Publicarea lunară a numărului de inactivări pe art. 92 alin. (1) lit. g) și a reactivărilor (agregat, pe județe).",
+        "competence_citation": "Codul de procedură fiscală, art. 92 alin. (10)-(11); Legea nr. 544/2001, art. 5"
+      },
+      {
+        "ask": "Propunerea către MF a modificării legislative de la art. 92 (suspendarea inactivării și a termenului de dizolvare cât timp cererea așteaptă la ONRC).",
+        "competence_citation": "HG nr. 520/2013, art. 7 lit. A pct. 21"
+      }
+    ],
+    "co_decision": "Ordinul președintelui ANAF: ANAF singură. Modificarea art. 92: MF (inițiator) + Guvern + Parlament. Protocolul de date: ANAF + ONRC (+ ADR pentru PNI).",
+    "notes": "Termenul de 30 de zile din art. 92 alin. (3) este un minim ('după împlinirea'); legea nu interzice o verificare suplimentară înainte de decizie, dar nu permite nici ignorarea situației (se cere reglementare prin ordin)."
+  },
+  {
+    "key": "MEDAT",
+    "official_name": "Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului (MEDAT) — cu un ministru delegat pentru digitalizare și inteligență artificială",
+    "legal_basis_org": "HG nr. 189/2025 privind organizarea și funcționarea MEDAT (consolidată 25.09.2026); OUG nr. 40/2026 (MO nr. 879/20.10.2026), art. 2 (ministrul delegat pentru digitalizare și IA; ADR în coordonarea acestuia). Denumirea apare identic în HG nr. 788/2026 (contrasemnare) și în HP nr. 4/2026, anexa 1. Denumirea 'Ministerul Economiei, Antreprenoriatului și Digitalizării' NU este cea oficială.",
+    "competences": [
+      {
+        "text": "Domenii: digitalizare, antreprenoriat, întreprinderi mici și mijlocii, mediu de afaceri, politică comercială, turism.",
+        "citation": "HG nr. 189/2025, art. 1",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/295125",
+        "verified": true
+      },
+      {
+        "text": "Elaborează și monitorizează programe pentru înființarea și dezvoltarea IMM-urilor; inițiază și aprobă procedurile programelor de stimulare a întreprinderilor.",
+        "citation": "HG nr. 189/2025, art. 4 lit. F lit. a), e)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/295125",
+        "verified": true
+      },
+      {
+        "text": "Coordonează interinstituțional strategiile de transformare digitală elaborate de ADR (aflată în subordinea ministerului), politicile și investițiile IT și alinierea la cadrul național de interoperabilitate; sprijină interconectarea obligatorie a instituțiilor la Platforma națională de interoperabilitate.",
+        "citation": "HG nr. 189/2025, art. 4 lit. I lit. a), b), d)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/295125",
+        "verified": true
+      },
+      {
+        "text": "Coordonator PNRR, componenta 9, reforma 1 'Transparentizare legislativă, debirocratizare și simplificare procedurală destinate mediului de afaceri'.",
+        "citation": "HG nr. 189/2025, art. 2 lit. k)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/295125",
+        "verified": true
+      },
+      {
+        "text": "Ministrul contrasemnează HG privind CAEN: HG nr. 788/2026 a stabilit o nouă perioadă de implementare CAEN Rev. 3 de 6 luni.",
+        "citation": "HG nr. 788/2026; Constituția, art. 108 alin. (4)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/314970",
+        "verified": true
+      },
+      {
+        "text": "Perioada de implementare CAEN se stabilește prin HG; în această perioadă ambele versiuni sunt valabile pentru scopuri nestatistice.",
+        "citation": "HG nr. 656/1997, art. 5^1 alin. (2), (2^1), (3)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/13379",
+        "verified": true
+      },
+      {
+        "text": "Anunțul privind un proiect cu relevanță pentru mediul de afaceri se transmite de inițiator asociațiilor de afaceri.",
+        "citation": "Legea nr. 52/2003, art. 7 alin. (3)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/153210",
+        "verified": true
+      },
+      {
+        "text": "ADR este în subordinea MEDAT și în coordonarea ministrului delegat pentru digitalizare și IA.",
+        "citation": "OUG nr. 40/2026, art. 2 alin. (5)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/315356",
+        "verified": true
+      },
+      {
+        "text": "Programul de guvernare: 'Eliminăm codurile CAEN din actele constitutive și din certificatul de înregistrare; ele rămân declarate la registrul comerțului'; termen minim de 6 luni între anunțarea și aplicarea măsurilor cu impact asupra firmelor.",
+        "citation": "HP nr. 4/2026, anexa nr. 2 (cap. economie)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/315319",
+        "verified": true
+      }
+    ],
+    "asks": [
+      {
+        "ask": "Inițierea, împreună cu INS, a regimului CAEN de după 01.04.2027, corelat cu capacitatea reală a ONRC (de ex. valabilitate paralelă prelungită pentru scopuri nestatistice până la golirea cozii).",
+        "competence_citation": "HG nr. 656/1997, art. 5^1 alin. (2^1), (3); HG 788/2026 (contrasemnare); HG 189/2025, art. 1"
+      },
+      {
+        "ask": "Promovarea, cu MJ, a măsurii din Programul de guvernare de eliminare a codurilor CAEN din actele constitutive, ca actualizarea să nu mai ceară modificarea actului constitutiv.",
+        "competence_citation": "HP nr. 4/2026, anexa 2; HG nr. 189/2025, art. 4 lit. F"
+      },
+      {
+        "ask": "Includerea costului întârzierilor ONRC pentru IMM-uri (scenariile de cost din analiză) în evaluarea de impact și consultarea asociațiilor de afaceri asupra proiectului OUG.",
+        "competence_citation": "HG nr. 189/2025, art. 4 lit. F lit. a); Legea nr. 52/2003, art. 7 alin. (3)"
+      },
+      {
+        "ask": "Prin ministrul delegat pentru digitalizare: prioritizarea conectării registrului comerțului la Platforma națională de interoperabilitate și sprijin pentru optimizarea myportal.",
+        "competence_citation": "HG nr. 189/2025, art. 4 lit. I lit. b), d); OUG 40/2026, art. 2 alin. (5)"
+      }
+    ],
+    "co_decision": "Modificarea HG 656/1997: Guvern (HG), cu INS și MEDAT. Modificarea Legii societăților / Legii 265/2022: Guvern (proiect de lege/OUG) cu MJ + Parlament. Investiții IT: buget (MF).",
+    "notes": "Delimitarea atribuțiilor dintre ministrul economiei și ministrul delegat se face prin HG (OUG 40/2026, art. 4 alin. 3, art. 5: în 30 de zile); nu am verificat dacă HG a fost deja adoptată. Articolul din Legea nr. 346/2004 privind evaluarea impactului asupra IMM-urilor nu a fost verificat."
+  },
+  {
+    "key": "ADR",
+    "official_name": "Autoritatea pentru Digitalizarea României (ADR)",
+    "legal_basis_org": "HG nr. 89/2020 privind organizarea și funcționarea ADR (consolidată 01.07.2024; textul consolidat încă indică subordonarea față de fostul Minister al Cercetării, Inovării și Digitalizării); subordonarea actuală față de MEDAT rezultă din HG nr. 189/2025 (art. 4 lit. I lit. a) și anexă) și OUG nr. 40/2026, art. 2 alin. (5); Legea nr. 242/2022 privind interoperabilitatea (nemodificată).",
+    "competences": [
+      {
+        "text": "ADR este unicul administrator al Platformei naționale de interoperabilitate (PNI).",
+        "citation": "Legea nr. 242/2022, art. 9 alin. (1)-(2)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257856",
+        "verified": true
+      },
+      {
+        "text": "ADR înființează și administrează Registrul național al registrelor.",
+        "citation": "Legea nr. 242/2022, art. 8 alin. (1), (4)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257856",
+        "verified": true
+      },
+      {
+        "text": "Instituțiile publice sunt obligate să folosească PNI pentru datele din registrele altor instituții și nu pot cere documente cu informații disponibile prin PNI.",
+        "citation": "Legea nr. 242/2022, art. 11 alin. (1)-(3)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257856",
+        "verified": true
+      },
+      {
+        "text": "Registrul central al comerțului (ONRC) este registru de bază.",
+        "citation": "Legea nr. 242/2022, art. 7 alin. (1) lit. e)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257856",
+        "verified": true
+      },
+      {
+        "text": "Principiile NRRI: reutilizarea soluțiilor și a datelor; eficacitatea soluțiilor de interoperabilitate se măsoară anual și se publică prin rapoarte publice.",
+        "citation": "Legea nr. 242/2022, art. 5 alin. (1) lit. a), lit. b) pct. (ii)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257856",
+        "verified": true
+      },
+      {
+        "text": "Funcții de reglementare a interoperabilității, de monitorizare, control și evaluare a politicilor de interoperabilitate; realizează guvernarea electronică.",
+        "citation": "HG nr. 89/2020, art. 2 lit. b), g), m), art. 3 lit. b)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/223055",
+        "verified": true
+      }
+    ],
+    "asks": [
+      {
+        "ask": "Un calendar public pentru conectarea registrului comerțului la PNI și pentru consumul acestor date de către ANAF și alte instituții, ca firmele să nu mai depună documente deja deținute de stat.",
+        "competence_citation": "Legea nr. 242/2022, art. 7 alin. (1) lit. e), art. 9, art. 11"
+      },
+      {
+        "ask": "Includerea fluxului ONRC–ANAF (cereri în curs privind sediul) în raportarea anuală despre eficacitatea interoperabilității.",
+        "competence_citation": "Legea nr. 242/2022, art. 5 alin. (1) lit. b) pct. (ii); HG 89/2020, art. 2 lit. m)"
+      },
+      {
+        "ask": "Sprijin tehnic pentru ONRC la optimizarea fluxului informatic cerută de proiectul OUG (standarde, componente reutilizabile).",
+        "competence_citation": "HG nr. 89/2020, art. 3 lit. b); Legea nr. 242/2022, art. 5 alin. (1) lit. a)"
+      }
+    ],
+    "co_decision": "MEDAT / ministrul delegat pentru digitalizare (coordonare); ONRC și ANAF ca administratori de date; buget prin MF.",
+    "notes": "Legea nr. 242/2022 trimite la 'MCID' pentru aprobarea conținutului Registrului național al registrelor (art. 8 alin. 4-5); succesiunea către MEDAT reiese din HG 189/2025 art. 16 (preluare patrimoniu) și art. 4 lit. I lit. j), dar o normă generală de succesiune nu a fost citită în această sesiune."
+  },
+  {
+    "key": "GUVERN",
+    "official_name": "Guvernul României (prim-ministrul; Secretariatul General al Guvernului)",
+    "legal_basis_org": "Constituția României, art. 102-108, 115; OUG nr. 57/2019 privind Codul administrativ, partea a II-a, titlul I (consolidat 12.11.2026; art. 20 modificat prin OUG 40/2026). Guvernul în funcție a primit încrederea Parlamentului la 20.10.2026 (HP nr. 4/2026).",
+    "competences": [
+      {
+        "text": "Guvernul adoptă hotărâri (pentru executarea legilor) și ordonanțe; ordonanțele de urgență se adoptă numai în situații extraordinare, cu motivarea urgenței, și intră în vigoare după depunerea la Camera competentă și publicare.",
+        "citation": "Constituția, art. 108 alin. (1)-(2), art. 115 alin. (4)-(5); Legea nr. 24/2000, art. 12 alin. (2)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/47355",
+        "verified": true
+      },
+      {
+        "text": "Inițiază proiecte de lege, elaborează proiectele legilor bugetare, aprobă prin HG strategii și programe, controlează ministerele.",
+        "citation": "Codul administrativ, art. 25 lit. a), d), e), l)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/215925",
+        "verified": true
+      },
+      {
+        "text": "Prim-ministrul poate constitui, prin decizie, consilii, comisii și comitete interministeriale.",
+        "citation": "Codul administrativ, art. 34 alin. (1)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/215925",
+        "verified": true
+      },
+      {
+        "text": "SGG asigură operațiunile tehnice ale actelor de guvernare și poate iniția proiecte de acte normative.",
+        "citation": "Codul administrativ, art. 20 alin. (3), (6)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/215925",
+        "verified": true
+      },
+      {
+        "text": "Numărul maxim de posturi ONRC se stabilește prin HG.",
+        "citation": "Legea nr. 265/2022, art. 22 alin. (1)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/257835",
+        "verified": true
+      },
+      {
+        "text": "Repartizarea din Fondul de rezervă bugetară se face prin HG.",
+        "citation": "Legea nr. 500/2002, art. 30 alin. (2)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/37954",
+        "verified": true
+      },
+      {
+        "text": "Perioada de implementare CAEN Rev. 3 se stabilește prin HG: 18 luni de la 25.03.2025 (deci până la 25.09.2026), apoi încă 6 luni de la 01.10.2026; în această perioadă codurile ambelor versiuni sunt valabile pentru scopuri nestatistice.",
+        "citation": "HG nr. 656/1997, art. 5^1 alin. (2), (2^1), (3); HG 284/2025, art. II; HG 788/2026, art. I-II",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/13379",
+        "verified": true
+      },
+      {
+        "text": "Proiectele de acte normative se publică pentru consultare cu cel puțin 30 de zile lucrătoare înainte de avizare (cu excepție pentru situații urgente).",
+        "citation": "Legea nr. 52/2003, art. 7 alin. (2), (13)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/153210",
+        "verified": true
+      },
+      {
+        "text": "Proiectele care țin de politicile economice și fiscale se supun obligatoriu avizului CES.",
+        "citation": "Legea nr. 248/2013 (rep.), art. 2 alin. (1)-(2)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/171764",
+        "verified": true
+      }
+    ],
+    "asks": [
+      {
+        "ask": "Adoptarea OUG privind ONRC doar cu fundamentare completă (stoc, timpi, prognoză 2027, fișă financiară), după consultarea publică și avizul CES, și cu indicatori de rezultat publicați lunar.",
+        "competence_citation": "Constituția, art. 115 alin. (4); Legea nr. 52/2003, art. 7; Legea nr. 248/2013, art. 2 alin. (1)"
+      },
+      {
+        "ask": "Un comitet interministerial (MJ, MF, ANAF, MEDAT, ADR, INS) pentru coada ONRC, CAEN și inactivarea fiscală, cu un plan cu termene.",
+        "competence_citation": "Codul administrativ, art. 34 alin. (1)"
+      },
+      {
+        "ask": "O HG de alocare din Fondul de rezervă pentru capacitatea urgentă a ONRC (personal temporar, IT), dacă rectificarea nu e disponibilă.",
+        "competence_citation": "Legea nr. 500/2002, art. 30 alin. (2)"
+      },
+      {
+        "ask": "Corelarea perioadei de implementare CAEN de după 01.04.2027 cu capacitatea ONRC, prin HG.",
+        "competence_citation": "HG nr. 656/1997, art. 5^1; Constituția, art. 108 alin. (2)"
+      },
+      {
+        "ask": "Includerea măsurilor M16/M17 (ONRC 'registru-platformă online', debirocratizare) într-un calendar al programului legislativ.",
+        "competence_citation": "HP nr. 4/2026, anexa 2; Codul administrativ, art. 25 lit. e)"
+      }
+    ],
+    "co_decision": "OUG: aprobare/respingere prin lege de Parlament. HG: inițiator minister (MJ/MEDAT/INS), avize MF și MJ (legalitate), contrasemnarea miniștrilor care o pun în executare. Bugetul: Parlament.",
+    "notes": "Regulamentul Guvernului privind procedura de elaborare și avizare a proiectelor (HG 561/2009) nu a fost citit în această sesiune."
+  },
+  {
+    "key": "PARLAMENT",
+    "official_name": "Parlamentul României (Camera Deputaților și Senatul)",
+    "legal_basis_org": "Constituția României, titlul III, cap. I (art. 61-79) și art. 111-115, 138, 140; regulamentele celor două Camere (nu au fost citite în această sesiune).",
+    "competences": [
+      {
+        "text": "Fiecare Cameră își constituie comisii permanente și poate institui comisii de anchetă sau speciale.",
+        "citation": "Constituția, art. 64 alin. (4)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/47355",
+        "verified": true
+      },
+      {
+        "text": "Deputații și senatorii au inițiativă legislativă.",
+        "citation": "Constituția, art. 74 alin. (1), (4)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/47355",
+        "verified": true
+      },
+      {
+        "text": "Guvernul și administrația publică sunt obligate să prezinte informațiile și documentele cerute de Camere sau de comisii; membrii Guvernului participă obligatoriu când li se cere prezența.",
+        "citation": "Constituția, art. 111 alin. (1)-(2)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/47355",
+        "verified": true
+      },
+      {
+        "text": "Întrebări și interpelări la care Guvernul trebuie să răspundă; moțiune simplă.",
+        "citation": "Constituția, art. 112",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/47355",
+        "verified": true
+      },
+      {
+        "text": "OUG se depune la Camera competentă, care se pronunță în procedură de urgență; se aprobă sau se respinge prin lege, care poate reglementa efectele.",
+        "citation": "Constituția, art. 115 alin. (5), (7), (8)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/47355",
+        "verified": true
+      },
+      {
+        "text": "Parlamentul aprobă bugetul de stat.",
+        "citation": "Constituția, art. 138 alin. (2)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/47355",
+        "verified": true
+      },
+      {
+        "text": "La cererea Camerelor, Curtea de Conturi controlează gestionarea resurselor publice și raportează.",
+        "citation": "Constituția, art. 140 alin. (3); Legea nr. 94/1992, art. 4 alin. (2)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/47355",
+        "verified": true
+      },
+      {
+        "text": "Curtea de Conturi poate exercita auditul performanței asupra oricăror fonduri publice.",
+        "citation": "Legea nr. 94/1992, art. 21 alin. (2)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/157056",
+        "verified": true
+      },
+      {
+        "text": "Nicio cheltuială bugetară nu poate fi aprobată fără stabilirea sursei de finanțare.",
+        "citation": "Constituția, art. 138 alin. (5)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/47355",
+        "verified": true
+      },
+      {
+        "text": "Pentru propunerile legislative, Guvernul transmite fișa financiară în 45 de zile de la solicitare.",
+        "citation": "Legea nr. 500/2002, art. 15 alin. (2)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/37954",
+        "verified": true
+      },
+      {
+        "text": "Competențele exacte ale comisiilor juridice și de buget-finanțe ale celor două Camere (după regulamente).",
+        "citation": "Regulamentul Camerei Deputaților; Regulamentul Senatului (neverificate)",
+        "url": "https://www.cdep.ro",
+        "verified": false
+      }
+    ],
+    "asks": [
+      {
+        "ask": "La aprobarea OUG privind ONRC: comisiile cer MJ/ONRC date despre stoc, timpi și capacitate și pot amenda OUG (de ex. un raport public lunar, un termen de evaluare).",
+        "competence_citation": "Constituția, art. 111 alin. (1), art. 115 alin. (5), (7)"
+      },
+      {
+        "ask": "Audierea conducerii MJ și ONRC în comisiile de specialitate.",
+        "competence_citation": "Constituția, art. 111 alin. (2), art. 64 alin. (4)"
+      },
+      {
+        "ask": "Solicitarea către Curtea de Conturi a unui audit al performanței pentru ONRC (personal, IT, platforma myportal).",
+        "competence_citation": "Constituția, art. 140 alin. (3); Legea nr. 94/1992, art. 4 alin. (2), art. 21 alin. (2)"
+      },
+      {
+        "ask": "Amendamente la legea bugetului pe 2027 pentru capacitatea ONRC, cu sursă de finanțare.",
+        "competence_citation": "Constituția, art. 138 alin. (2), (5)"
+      },
+      {
+        "ask": "Propuneri legislative de modificare a Legii 265/2022 și a art. 92 din Codul de procedură fiscală, cu fișa financiară cerută Guvernului.",
+        "competence_citation": "Constituția, art. 74 alin. (1); Legea nr. 500/2002, art. 15 alin. (2)"
+      }
+    ],
+    "co_decision": "Legile: ambele Camere + promulgare. Termenul CAEN este stabilit prin HG, nu prin lege: Parlamentul nu îl modifică direct (poate doar legifera în materie sau cere Guvernului informații).",
+    "notes": "Denumirile comisiilor (de ex. comisiile juridice și de buget-finanțe) nu au fost verificate pe cdep.ro/senat.ro în această sesiune."
+  },
+  {
+    "key": "CES",
+    "official_name": "Consiliul Economic și Social (CES)",
+    "legal_basis_org": "Legea nr. 248/2013 privind organizarea și funcționarea CES, republicată (consolidată 11.01.2024).",
+    "competences": [
+      {
+        "text": "Este consultat obligatoriu asupra proiectelor de acte normative ale Guvernului și propunerilor legislative; emite avize.",
+        "citation": "Legea nr. 248/2013, art. 2 alin. (1), art. 5 lit. a)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/171764",
+        "verified": true
+      },
+      {
+        "text": "Domenii: politici economice; politici financiare și fiscale; profesii liberale și activități independente.",
+        "citation": "Legea nr. 248/2013, art. 2 alin. (2) lit. a), b), f)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/171764",
+        "verified": true
+      },
+      {
+        "text": "Se poate autosesiza sau poate fi sesizat de reprezentanții societății civile; emite puncte de vedere și recomandări; elaborează analize; semnalează fenomene care cer acte normative noi.",
+        "citation": "Legea nr. 248/2013, art. 2 alin. (3)-(4), art. 5 lit. b)-c)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/171764",
+        "verified": true
+      }
+    ],
+    "asks": [
+      {
+        "ask": "Un aviz pe proiectul OUG privind ONRC care să ia în calcul costul pentru firme și pentru buget (cu analiza noastră anexată).",
+        "competence_citation": "Legea nr. 248/2013, art. 2 alin. (1), art. 5 lit. a)"
+      },
+      {
+        "ask": "Autosesizarea (sau sesizarea de către societatea civilă) asupra blocajului ONRC și emiterea de recomandări către Guvern.",
+        "competence_citation": "Legea nr. 248/2013, art. 2 alin. (3)-(4)"
+      },
+      {
+        "ask": "Semnalarea către Guvern și Parlament a nevoii de modificare a regimului CAEN și a art. 92 din Codul de procedură fiscală.",
+        "competence_citation": "Legea nr. 248/2013, art. 5 lit. c)"
+      }
+    ],
+    "co_decision": "Avizele CES sunt consultative; decizia rămâne la Guvern sau Parlament.",
+    "notes": ""
+  },
+  {
+    "key": "AVP",
+    "official_name": "Avocatul Poporului",
+    "legal_basis_org": "Constituția, art. 58-60; Legea nr. 35/1997 privind organizarea și funcționarea instituției Avocatul Poporului, republicată.",
+    "competences": [
+      {
+        "text": "Apără drepturile și libertățile persoanelor fizice în raporturile cu autoritățile publice.",
+        "citation": "Legea nr. 35/1997, art. 1 alin. (1); Constituția, art. 58 alin. (1)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/157430",
+        "verified": true
+      },
+      {
+        "text": "Poate fi sesizat de persoane fizice, de societăți reglementate de Legea nr. 31/1990, de asociații sau de alte persoane juridice, ori se autosesizează.",
+        "citation": "Legea nr. 35/1997, art. 16 alin. (1); Constituția, art. 59 alin. (1)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/157430",
+        "verified": true
+      },
+      {
+        "text": "Emite recomandări prin care sesizează autoritățile asupra ilegalității actelor sau faptelor administrative; tăcerea administrației și emiterea tardivă a actelor sunt asimilate actelor administrative.",
+        "citation": "Legea nr. 35/1997, art. 24 alin. (1)-(2)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/157430",
+        "verified": true
+      },
+      {
+        "text": "Prezintă Camerelor rapoarte anuale sau la cerere, care pot conține recomandări de modificare a legislației.",
+        "citation": "Legea nr. 35/1997, art. 5 alin. (1)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/157430",
+        "verified": true
+      },
+      {
+        "text": "Solicită autorităților încetarea încălcării drepturilor și repunerea în drepturi.",
+        "citation": "Legea nr. 35/1997, art. 15 alin. (1) lit. f)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/157430",
+        "verified": true
+      }
+    ],
+    "asks": [
+      {
+        "ask": "Examinarea petițiilor privind depășirea sistematică a termenului legal de 1 zi lucrătoare (Legea 265/2022, art. 105 alin. 1; art. 109) ca 'emitere tardivă a actelor' și emiterea unei recomandări generale către MJ/ONRC privind măsurile organizatorice.",
+        "competence_citation": "Legea nr. 35/1997, art. 16 alin. (1), art. 24 alin. (1)-(2)"
+      },
+      {
+        "ask": "Includerea temei în raportul anual către Parlament, cu recomandări de modificare legislativă.",
+        "competence_citation": "Legea nr. 35/1997, art. 5 alin. (1)"
+      }
+    ],
+    "co_decision": "Recomandările nu sunt obligatorii; eventuale măsuri: MJ/ONRC, Guvern sau Parlament.",
+    "notes": "Cererea vizează doar întârzierea administrativă în ansamblu, nu soluția unor dosare individuale (art. 28 alin. 4 din Legea 265/2022). Istoricul consolidărilor Legii 35/1997 afișat pe portal se oprește în 2018."
+  },
+  {
+    "key": "CURTEA_DE_CONTURI",
+    "official_name": "Curtea de Conturi a României",
+    "legal_basis_org": "Constituția, art. 140; Legea nr. 94/1992, republicată (consolidată 01.01.2024).",
+    "competences": [
+      {
+        "text": "Auditul performanței: evaluarea independentă a eficienței, economicității și eficacității unei entități sau a unui program; poate fi exercitat asupra oricăror fonduri publice, cu recomandări pentru costuri mai mici și eficiență mai mare.",
+        "citation": "Legea nr. 94/1992, art. 2 lit. d), art. 21 alin. (2), (4)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/157056",
+        "verified": true
+      },
+      {
+        "text": "La cererea Camerei Deputaților sau a Senatului, controlează gestionarea resurselor publice și raportează.",
+        "citation": "Legea nr. 94/1992, art. 4 alin. (2); Constituția, art. 140 alin. (3)",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/157056",
+        "verified": true
+      }
+    ],
+    "asks": [
+      {
+        "ask": "Includerea ONRC (resursa umană pe etape, investițiile IT, platforma myportal) în programul de audit al performanței.",
+        "competence_citation": "Legea nr. 94/1992, art. 21 alin. (2), (4)"
+      }
+    ],
+    "co_decision": "Programul de audit îl stabilește Curtea; Parlamentul poate cere un control (art. 4 alin. 2).",
+    "notes": "Doar audit al performanței; nu se cer și nu se sugerează verificări privind persoane."
+  },
+  {
+    "key": "INS",
+    "official_name": "Institutul Național de Statistică (INS)",
+    "legal_basis_org": "HG nr. 957/2005 privind organizarea și funcționarea INS, republicată, și Legea nr. 226/2009 a statisticii oficiale. Aceste acte nu au fost citite în sesiune; sunt cunoscute doar din preambulul HG 788/2026.",
+    "competences": [
+      {
+        "text": "Actualizarea CAEN revine, după text, 'Comisiei Naționale pentru Statistică' (în prezent INS, prin succesiune; actul de succesiune nu a fost citit), iar modificările se pun în aplicare prin ordin al președintelui; CAEN Rev. 3 a fost aprobată prin Ordinul nr. 377/2024, în vigoare de la 01.01.2025.",
+        "citation": "HG nr. 656/1997, art. 5 alin. (1)-(2); Ordinul INS nr. 377/2024, art. 1-2",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/13379",
+        "verified": true
+      },
+      {
+        "text": "HG 788/2026 a fost emisă în temeiul HG 957/2005, art. 2 alin. (1) lit. a), c), g) și art. 3 alin. (1) lit. e), și al Legii 226/2009, art. 15 alin. (1) lit. b), c).",
+        "citation": "HG nr. 788/2026, preambul",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/314970",
+        "verified": true
+      }
+    ],
+    "asks": [
+      {
+        "ask": "Propunerea, cu MEDAT, a regimului de după 01.04.2027 pentru CAEN Rev. 3, corelat cu datele ONRC despre actualizările rămase.",
+        "competence_citation": "HG nr. 656/1997, art. 5 și 5^1; HG 788/2026, preambul"
+      }
+    ],
+    "co_decision": "HG: Guvernul, cu contrasemnarea ministrului de resort.",
+    "notes": "Presa atribuie inițierea HG 284/2025 INS-ului; nu am verificat pe sursă oficială."
+  }
+]

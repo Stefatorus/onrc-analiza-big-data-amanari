@@ -1,0 +1,33 @@
+judged 1859  stage counts {'rezolvat': 1128, 'registrator': 376, 'operare': 355}
+   pending with BERC final (inconsistent): 0  resolved without BERC final: 68
+   resolved w/o BERC final by type: {'Procedura de insolvență': 40, 'Menţiune': 25, 'Cerere îndreptare eroare': 2, 'Înmatriculare': 1}
+== C06 share at operare among pending (unweighted) 48.6  n 731
+   by type {'Cerere îndreptare eroare': 0.0, 'Menţiune': 0.502, 'Procedura de insolvență': 0.0, 'Radiere firma': 0.343} {'Menţiune': 659, 'Radiere firma': 70, 'Procedura de insolvență': 1, 'Cerere îndreptare eroare': 1}
+== C13 oldest pending filing date 2026-09-16  | if in inscriere counted pending: 2026-09-15
+   weights: median 530  range 245 583  strata sampled 28
+== C06 weighted share at operare 46.2
+== C100 stock at 2026-10-31 est 215705  n sampled pending 715  (if non-BERC-resolved counted pending: 236876 )
+== C100 stock at 2026-11-07 est 205090  n sampled pending 716  (if non-BERC-resolved counted pending: 227250 )
+== C100 stock at 2026-11-21 est 196362  n sampled pending 731  (if non-BERC-resolved counted pending: 220980 )
+   bootstrap 95% (stratified) for 7 Nov: [191572. 218621.]
+== C73/C09 KM sample size 1791
+   2026-05 n 133 resolved% 100.0  median resolved-only 5.0  KM median 5.0
+   2026-06 n 159 resolved% 100.0  median resolved-only 5.0  KM median 5.0
+   2026-07 n 183 resolved% 100.0  median resolved-only 7.0  KM median 7.0
+   2026-08 n 208 resolved% 100.0  median resolved-only 18.5  KM median 18.0
+   2026-09 n 597 resolved% 49.4  median resolved-only 39.0  KM median 57.0
+   2026-10 n 343 resolved% 19.8  median resolved-only 12.0  KM median nan
+   2026-11 n 168 resolved% 8.3  median resolved-only 6.0  KM median nan
+   Sep week 2026-08-31/2026-09-06 n 57 resolved% 100.0 KM median 28.0
+   Sep week 2026-09-07/2026-09-13 n 88 resolved% 100.0 KM median 35.0
+   Sep week 2026-09-14/2026-09-20 n 116 resolved% 92.2 KM median 50.0
+   Sep week 2026-09-21/2026-09-27 n 232 resolved% 14.2 KM median nan
+   Sep week 2026-09-28/2026-10-04 n 104 resolved% 9.6 KM median nan
+== C100 stock by date, all judged vs excluding Inmatriculare (pending registrations are invisible in portal)
+   2026-10-30 all 218120  no-inmatric 211920  inmatric part 6200
+   2026-10-31 all 215705  no-inmatric 209317  inmatric part 6388
+   2026-11-06 all 209957  no-inmatric 204884  inmatric part 5073
+   2026-11-07 all 205090  no-inmatric 200266  inmatric part 4824
+   2026-11-20 all 194711  no-inmatric 194711  inmatric part 0
+   2026-11-21 all 196362  no-inmatric 196362  inmatric part 0
+== C13 phases of 4 oldest pending (dates only): [('2026-09-16', 'Cerere in solutionare'), ('2026-09-17', 'Cerere in solutionare'), ('2026-09-17', 'Cerere in solutionare'), ('2026-09-17', 'Cerere in solutionare')]

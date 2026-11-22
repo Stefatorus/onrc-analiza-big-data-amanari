@@ -1,0 +1,14 @@
+records 793388 res range 2006-04-21 00:00:00 2026-11-20 15:30:09
+sol
+Admis                                            722144
+Respins                                           61981
+Renunțat                                           8816
+Certificare înscriere în registrul comerțului       446
+Renunțat din oficiu                                   1
+Name: count, dtype: int64
+jtype
+J    654591
+F    135169
+C      3596
+Name: count, dtype: int64
+window admitted (0-365d wait) 251587 excess days 6081804 cui present 0.9999801261591418

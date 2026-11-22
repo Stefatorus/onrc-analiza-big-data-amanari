@@ -1,0 +1,4 @@
+scenario,pending,pending_new_j_share,pending_new_excess_days,pending_changes_excess_days,net_turnover_per_day,lost_turnover_fraction,tax_share,value_added_share,seat_share,inactivation_increment,seat_private_cost,seat_fiscal_cost,disjoint_blocked_changes_share,blocked_change_cost,blocked_change_tax_share,preventable_post_share,private_cost_per_post,admin_cost_per_post
+prudent,145000,0.07,26,40,250,0.15,0.08,0.38,0.025,0.02,4000,500,0.15,35,0.08,0.08,350,75
+central,204414,0.105,38,54,425,0.35,0.13,0.45,0.05,0.06,7000,1400,0.2,70,0.13,0.15,650,120
+tensionat,260000,0.14,55,70,650,0.55,0.18,0.5,0.085,0.12,11000,2600,0.25,110,0.18,0.25,950,180

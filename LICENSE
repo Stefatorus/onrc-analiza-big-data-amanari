@@ -1,0 +1,41 @@
+MIT License
+
+Copyright (c) 2026 Ștefan-Lucian Deleanu
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-------------------------------------------------------------------------------
+Scope of this licence
+
+The MIT licence above covers the source code and the documentation written for
+this repository. It does NOT cover:
+
+* Fonts in analysis/policy_paper_ro/fonts/ (IBM Plex Sans, IBM Plex Mono,
+  Source Serif 4). They remain under the SIL Open Font License 1.1; see
+  OFL-IBM-Plex.txt and OFL-Source-Serif-4.txt in that folder.
+
+* Data. Third-party data keep the terms of their sources (see docs/DATA.md):
+  - Ministry of Finance balance sheets (data.gov.ro, "situatii_financiare_2024"
+    and "situatii_financiare_2025"): Creative Commons Attribution 4.0.
+  - BERC / ONRC publications and the myportal sample: terms set by ONRC and
+    the applicable Romanian law; they are NOT relicensed here.
+  - Official figures quoted from public documents (Ministry of Justice notes,
+    legislation, Eurostat, BNR, World Bank): terms of each source.
+  Aggregated outputs produced by the scripts in this repository may be reused
+  with attribution to the author and to the original data sources.

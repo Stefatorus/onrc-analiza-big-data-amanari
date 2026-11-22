@@ -1,0 +1,50 @@
+{
+  "net_gap_by_category": {
+    "AUTO_AMANARI": 15944,
+    "CERERE265": -100,
+    "CERERE_HJ265": 13,
+    "INMATRIC265": -38
+  },
+  "aman_category_days_short_by_exactly_499": 7,
+  "worst_days": [
+    {
+      "publication_day": "2026-07-15",
+      "records": 953.0,
+      "archive": 1,
+      "gap": 952.0
+    },
+    {
+      "publication_day": "2026-09-30",
+      "records": 638.0,
+      "archive": 1,
+      "gap": 637.0
+    },
+    {
+      "publication_day": "2024-11-21",
+      "records": 2342.0,
+      "archive": 1771,
+      "gap": 571.0
+    }
+  ],
+  "aman_share_v1": {
+    "published_def": 20.27,
+    "if_missing_restored": 20.42,
+    "missing": 2303
+  },
+  "aman_share_crisis": {
+    "published_def": 19.38,
+    "if_missing_restored": 19.52,
+    "missing": 689
+  },
+  "eu_first_pass": {
+    "n": 3548,
+    "missing_aman_aug_nov_2026": 689,
+    "share_of_aman_on_INM_J": 0.0621,
+    "gt10": 81.26,
+    "gt15": 74.55,
+    "realistic_worst_gt10": 81.03,
+    "realistic_worst_gt15": 74.24,
+    "absolute_worst_gt10": 76.74,
+    "absolute_worst_gt15": 68.42
+  }
+}

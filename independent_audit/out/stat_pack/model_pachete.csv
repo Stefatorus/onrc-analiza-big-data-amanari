@@ -1,0 +1,9 @@
+id,package,time_to_effect_days,wait_jun28_p10,wait_jun28_p50,wait_jun28_p90,days_saved_jun28_med
+P0,P0: Status Quo (Fără măsuri noi),—,74.0,136.0,214.1,0.0
+P1,"P1: Doar amânare termene (+6 luni CAEN & capital, 0 capacitate)",1–7 zile,74.0,136.0,214.1,0.0
+P2,"P2: Proiect OUG MJ neamendat (central +375 u/zi, Art. III 25%, expiră 8.01.2028)",30–45 zile,41.0,102.5,172.0,34.0
+P3,P3: OUG extins + ocupare 40% din cele 134 posturi finanțate (+750 u/zi),60–120 zile,3.0,38.0,94.0,98.0
+P4,P4: Decongestionare legislativă Zero-IT (OUG conversie CAEN 1-la-1 [-75%] + eșalonare CUI),1–15 zile,20.0,81.0,147.0,55.0
+P5,P5: Pachet Minim Realist 0–60 zile (OUG prelungit + CAEN 1-la-1 [-75%] + Eșalonare + Triaj),15–45 zile,3.0,21.0,81.0,111.0
+P6,P6: Pachet Realist Extins 30–120 zile (P5 + 60% vacante finanțate + patch validare Nivel A),45–120 zile,3.0,3.0,24.0,133.0
+P7,P7: Pachet Structural Complet 6–18 luni (P6 + API ANAF-ONRC + auto-mențiuni 60%),180–540 zile,3.0,3.0,3.0,133.0

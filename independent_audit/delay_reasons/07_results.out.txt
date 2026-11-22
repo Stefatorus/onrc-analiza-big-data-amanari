@@ -1,0 +1,180 @@
+{
+ "coverage": {
+  "parsed": 2914,
+  "archive_window": 23308,
+  "share": 0.125,
+  "archive_on_parsed_days": 17991,
+  "share_on_parsed_days": 0.162,
+  "decision_days_parsed": 17,
+  "decision_days_window": 23,
+  "bulletins": 289,
+  "by_week": [
+   {
+    "week": "2026-10-19/2026-10-25",
+    "archive": 4580,
+    "parsed": 260,
+    "decision_days_parsed": 2,
+    "coverage": 0.0568
+   },
+   {
+    "week": "2026-10-26/2026-11-01",
+    "archive": 4214,
+    "parsed": 660,
+    "decision_days_parsed": 4,
+    "coverage": 0.1566
+   },
+   {
+    "week": "2026-11-02/2026-11-08",
+    "archive": 5108,
+    "parsed": 523,
+    "decision_days_parsed": 3,
+    "coverage": 0.1024
+   },
+   {
+    "week": "2026-11-09/2026-11-15",
+    "archive": 5901,
+    "parsed": 917,
+    "decision_days_parsed": 5,
+    "coverage": 0.1554
+   },
+   {
+    "week": "2026-11-16/2026-11-22",
+    "archive": 3505,
+    "parsed": 554,
+    "decision_days_parsed": 3,
+    "coverage": 0.1581
+   }
+  ],
+  "county_coverage_min_max": [
+   0.087,
+   0.174
+  ],
+  "county_coverage_cv": 0.154,
+  "jtype_parsed": {
+   "J": 0.635,
+   "nan": 0.22,
+   "F": 0.14,
+   "C": 0.004
+  },
+  "jtype_archive": {
+   "J": 0.636,
+   "nan": 0.2,
+   "F": 0.159,
+   "C": 0.004
+  }
+ },
+ "weights_summary": {
+  "min": 0.482,
+  "max": 2.974,
+  "deff_kish": 1.185
+ },
+ "avoidable": {
+  "strict": {
+   "value": 0.2289,
+   "ci95": [
+    0.2146,
+    0.2432
+   ],
+   "n": 2914,
+   "bulletins": 289,
+   "weighted": 0.2235
+  },
+  "any": {
+   "value": 0.4506,
+   "ci95": [
+    0.4328,
+    0.4684
+   ],
+   "n": 2914,
+   "bulletins": 289,
+   "weighted": 0.4467
+  },
+  "da_or_partial_all": {
+   "value": 0.9547,
+   "ci95": [
+    0.9476,
+    0.9618
+   ],
+   "n": 2914,
+   "bulletins": 289,
+   "weighted": 0.9531
+  },
+  "manual_sample_strict": 0.27,
+  "strict_excluding_unclassified": {
+   "value": 0.2398,
+   "ci95": [
+    0.2248,
+    0.2547
+   ],
+   "n": 2782,
+   "bulletins": 289
+  },
+  "sample_like_for_like": {
+   "strict": {
+    "manual": 0.27,
+    "predicted": 0.26,
+    "agreement": 0.89,
+    "table": {
+     "both": 21,
+     "manual_only": 6,
+     "pred_only": 5,
+     "neither": 68
+    }
+   },
+   "any": {
+    "manual": 0.47,
+    "predicted": 0.46,
+    "agreement": 0.79,
+    "table": {
+     "both": 36,
+     "manual_only": 11,
+     "pred_only": 10,
+     "neither": 43
+    }
+   }
+  },
+  "manual_sample_any": 0.47
+ },
+ "n_categories_per_entry": {
+  "0": 132,
+  "1": 1802,
+  "2": 661,
+  "3": 216,
+  "4": 75,
+  "5": 17,
+  "6": 10,
+  "7": 1
+ }
+}
+CAEN 0.3167 [0.2999, 0.3336] w 0.3251 mention 0.2427 C 0.3174 R 0.4111 adj 0.3894 sample pred/manual [0.26, 0.32]
+SEDIU 0.2193 [0.2043, 0.2342] w 0.219 mention 0.144 C 0.2045 R 0.3068 adj 0.2193 sample pred/manual [0.14, 0.14]
+ACT 0.1767 [0.1627, 0.1908] w 0.1754 mention 0.1276 C 0.1537 R 0.372 adj 0.1612 sample pred/manual [0.23, 0.21]
+ASOC_ID 0.1095 [0.098, 0.121] w 0.1111 mention 0.0668 C 0.0937 R 0.2042 adj 0.1233 sample pred/manual [0.16, 0.18]
+SOLICITANT 0.1132 [0.1019, 0.1246] w 0.1124 mention 0.0785 C 0.1599 R 0.1438 adj 0.1132 sample pred/manual [0.11, 0.11]
+SEMN 0.048 [0.0404, 0.0557] w 0.0482 mention 0.0283 C 0.0388 R 0.1273 adj 0.0576 sample pred/manual [0.05, 0.06]
+CERERE 0.2073 [0.192, 0.2226] w 0.205 mention 0.1385 C 0.2529 R 0.3795 adj 0.1309 sample pred/manual [0.19, 0.12]
+BEN_REAL 0.0364 [0.0293, 0.0435] w 0.0374 mention 0.0226 C 0.0309 R 0.046 adj 0.0273 sample pred/manual [0.04, 0.03]
+CAPITAL 0.0851 [0.0749, 0.0953] w 0.0871 mention 0.0577 C 0.0827 R 0.1218 adj 0.0922 sample pred/manual [0.12, 0.13]
+INSTIT 0.0954 [0.0846, 0.1062] w 0.091 mention 0.0684 C 0.0995 R 0.1005 adj 0.15 sample pred/manual [0.07, 0.11]
+DENUM 0.0247 [0.0193, 0.0301] w 0.0231 mention 0.0157 C 0.0134 R 0.0453 adj None sample pred/manual None
+TARIF 0.0172 [0.0119, 0.0224] w 0.0165 mention 0.0093 C 0.0165 R 0.0281 adj 0.0344 sample pred/manual [0.01, 0.02]
+NESPEC 0.0453 [0.0382, 0.0524] w 0.0469 mention None C 0.0453 R 0.035 adj None sample pred/manual [0.0, 0.0]
+WAIT CAEN {'n': 923, 'term_granted_median': 16.0, 'filing_to_postponement_median': 45.0, 'filing_to_postponement_p25_p75': [41.0, 54.0], 'resolved_by_archive_end': 0.583, 'km_median_filing_to_final': 59.40601851851852, 'km_median_postponement_to_final': 16.346539351851852, 'admitted_share_of_resolved': 0.632, 'repostponed_share': 0.0}
+WAIT SEDIU {'n': 639, 'term_granted_median': 16.0, 'filing_to_postponement_median': 43.0, 'filing_to_postponement_p25_p75': [39.0, 54.0], 'resolved_by_archive_end': 0.57, 'km_median_filing_to_final': 59.36145833333333, 'km_median_postponement_to_final': 16.302546296296295, 'admitted_share_of_resolved': 0.692, 'repostponed_share': 0.002}
+WAIT ACT {'n': 515, 'term_granted_median': 16.0, 'filing_to_postponement_median': 43.0, 'filing_to_postponement_p25_p75': [35.0, 54.0], 'resolved_by_archive_end': 0.577, 'km_median_filing_to_final': 59.35666666666667, 'km_median_postponement_to_final': 15.460844907407408, 'admitted_share_of_resolved': 0.737, 'repostponed_share': 0.002}
+WAIT ASOC_ID {'n': 319, 'term_granted_median': 16.0, 'filing_to_postponement_median': 44.0, 'filing_to_postponement_p25_p75': [39.0, 54.0], 'resolved_by_archive_end': 0.545, 'km_median_filing_to_final': 59.515277777777776, 'km_median_postponement_to_final': 16.315752314814816, 'admitted_share_of_resolved': 0.701, 'repostponed_share': 0.0}
+WAIT SOLICITANT {'n': 330, 'term_granted_median': 16.0, 'filing_to_postponement_median': 48.5, 'filing_to_postponement_p25_p75': [42.0, 56.0], 'resolved_by_archive_end': 0.515, 'km_median_filing_to_final': 63.38950231481481, 'km_median_postponement_to_final': 16.363761574074076, 'admitted_share_of_resolved': 0.624, 'repostponed_share': 0.0}
+WAIT SEMN {'n': 140, 'term_granted_median': 16.0, 'filing_to_postponement_median': 43.0, 'filing_to_postponement_p25_p75': [33.0, 54.0], 'resolved_by_archive_end': 0.557, 'km_median_filing_to_final': 58.47898148148148, 'km_median_postponement_to_final': 14.384525462962962, 'admitted_share_of_resolved': 0.769, 'repostponed_share': 0.0}
+WAIT CERERE {'n': 604, 'term_granted_median': 16.0, 'filing_to_postponement_median': 43.0, 'filing_to_postponement_p25_p75': [39.0, 54.0], 'resolved_by_archive_end': 0.553, 'km_median_filing_to_final': 59.37605324074074, 'km_median_postponement_to_final': 16.341608796296295, 'admitted_share_of_resolved': 0.632, 'repostponed_share': 0.002}
+WAIT BEN_REAL {'n': 106, 'term_granted_median': 16.0, 'filing_to_postponement_median': 43.0, 'filing_to_postponement_p25_p75': [39.0, 50.0], 'resolved_by_archive_end': 0.538, 'km_median_filing_to_final': 59.39482638888889, 'km_median_postponement_to_final': 15.36619212962963, 'admitted_share_of_resolved': 0.877, 'repostponed_share': 0.0}
+WAIT CAPITAL {'n': 248, 'term_granted_median': 16.0, 'filing_to_postponement_median': 43.0, 'filing_to_postponement_p25_p75': [39.0, 54.0], 'resolved_by_archive_end': 0.621, 'km_median_filing_to_final': 57.48719907407408, 'km_median_postponement_to_final': 11.563599537037037, 'admitted_share_of_resolved': 0.779, 'repostponed_share': 0.004}
+WAIT INSTIT {'n': 278, 'term_granted_median': 16.0, 'filing_to_postponement_median': 42.0, 'filing_to_postponement_p25_p75': [22.0, 49.0], 'resolved_by_archive_end': 0.482, 'km_median_filing_to_final': 59.36451388888889, 'km_median_postponement_to_final': 16.365104166666665, 'admitted_share_of_resolved': 0.59, 'repostponed_share': 0.0}
+WAIT DENUM {'n': 72, 'term_granted_median': 16.0, 'filing_to_postponement_median': 43.5, 'filing_to_postponement_p25_p75': [36.5, 48.0], 'resolved_by_archive_end': 0.556, 'km_median_filing_to_final': 58.37586805555556, 'km_median_postponement_to_final': 16.320486111111112, 'admitted_share_of_resolved': 0.7, 'repostponed_share': 0.0}
+WAIT TARIF {'n': 50, 'term_granted_median': 16.0, 'filing_to_postponement_median': 46.5, 'filing_to_postponement_p25_p75': [42.0, 53.75], 'resolved_by_archive_end': 0.5, 'km_median_filing_to_final': 62.902002314814816, 'km_median_postponement_to_final': 16.420474537037038, 'admitted_share_of_resolved': 0.56, 'repostponed_share': 0.0}
+WAIT NESPEC {'n': 132, 'term_granted_median': 16.0, 'filing_to_postponement_median': 46.0, 'filing_to_postponement_p25_p75': [39.0, 54.0], 'resolved_by_archive_end': 0.629, 'km_median_filing_to_final': 59.3615162037037, 'km_median_postponement_to_final': 15.3709375, 'admitted_share_of_resolved': 0.651, 'repostponed_share': 0.0}
+WAIT ALL {'n': 2914, 'term_granted_median': 16.0, 'filing_to_postponement_median': 43.0, 'filing_to_postponement_p25_p75': [39.0, 54.0], 'resolved_by_archive_end': 0.581, 'km_median_filing_to_final': 59.3615162037037, 'km_median_postponement_to_final': 16.31773148148148, 'admitted_share_of_resolved': 0.698, 'repostponed_share': 0.001}
+WEEK 2026-10-19/2026-10-25 260 ['19.10', '20.10'] {'CAEN': 0.3885, 'SEDIU': 0.2231, 'ACT': 0.1538, 'CERERE': 0.1885, 'SOLICITANT': 0.1077} av 0.1885
+WEEK 2026-10-26/2026-11-01 660 ['26.10', '27.10', '28.10', '30.10'] {'CAEN': 0.3288, 'SEDIU': 0.2106, 'ACT': 0.1652, 'CERERE': 0.2167, 'SOLICITANT': 0.1091} av 0.2242
+WEEK 2026-11-02/2026-11-08 523 ['02.11', '04.11', '05.11'] {'CAEN': 0.325, 'SEDIU': 0.2103, 'ACT': 0.1816, 'CERERE': 0.2027, 'SOLICITANT': 0.1128} av 0.218
+WEEK 2026-11-09/2026-11-15 917 ['09.11', '10.11', '11.11', '12.11', '13.11'] {'CAEN': 0.2933, 'SEDIU': 0.2279, 'ACT': 0.1887, 'CERERE': 0.2007, 'SOLICITANT': 0.1025} av 0.2279
+WEEK 2026-11-16/2026-11-22 554 ['16.11', '17.11', '18.11'] {'CAEN': 0.2996, 'SEDIU': 0.222, 'ACT': 0.1769, 'CERERE': 0.2202, 'SOLICITANT': 0.139} av 0.2653

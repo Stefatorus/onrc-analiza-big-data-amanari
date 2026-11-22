@@ -1,0 +1,610 @@
+{
+ "_meta": "Scenariul fundamentat: aceleași formule, parametrii cu bază în date citiți din cost_evidence.json.",
+ "scenarios": {
+  "initial": {
+   "prudent": {
+    "total": 66874301.68966145,
+    "tax": 6292402.668598611,
+    "daily_econ": 761249.9999999999,
+    "daily_tax": 79779.0,
+    "channels": {
+     "A": 8352239.100842015,
+     "B": 366603.0,
+     "C": 56102639.58881944,
+     "D": 2052820.0
+    },
+    "channels_share": {
+     "A": 0.12489459911823264,
+     "B": 0.005481971261565721,
+     "C": 0.8389267352528142,
+     "D": 0.030696694367387454
+    },
+    "d_admin": 439890.0
+   },
+   "central": {
+    "total": 291407793.21714485,
+    "tax": 49369943.756060556,
+    "daily_econ": 3654602.9231249997,
+    "daily_tax": 703375.798125,
+    "channels": {
+     "A": 76163756.82612629,
+     "B": 4494622.387500001,
+     "C": 203601201.50351852,
+     "D": 7148212.5
+    },
+    "channels_share": {
+     "A": 0.2613648591387268,
+     "B": 0.015423823563122066,
+     "C": 0.6986813882214998,
+     "D": 0.024529929076651195
+    },
+    "d_admin": 1319670.0
+   },
+   "tensionat": {
+    "total": 994786442.6116464,
+    "tax": 252223874.1627344,
+    "daily_econ": 11797500.0,
+    "daily_tax": 3294720.0000000005,
+    "channels": {
+     "A": 415454690.03687793,
+     "B": 26873470.8,
+     "C": 535045969.27476853,
+     "D": 17412312.5
+    },
+    "channels_share": {
+     "A": 0.4176320386375298,
+     "B": 0.027014311463119833,
+     "C": 0.5378500815412143,
+     "D": 0.01750356835813611
+    },
+    "d_admin": 3299175.0
+   }
+  },
+  "fundamentat": {
+   "prudent": {
+    "total": 66273137.110483564,
+    "tax": 6247673.64622064,
+    "daily_econ": 685965.4199999999,
+    "daily_tax": 78350.286,
+    "channels": {
+     "A": 4052330.5751158968,
+     "B": 686280.8160000001,
+     "C": 56027836.06936767,
+     "D": 5506689.65
+    },
+    "channels_share": {
+     "A": 0.061145899406576755,
+     "B": 0.010355339220714802,
+     "C": 0.8454079361893491,
+     "D": 0.08309082518335943
+    },
+    "d_admin": 1180004.925
+   },
+   "central": {
+    "total": 248234171.78009796,
+    "tax": 44398769.31649135,
+    "daily_econ": 2869514.263812,
+    "daily_tax": 620449.535433,
+    "channels": {
+     "A": 44067851.89726447,
+     "B": 6148643.4261,
+     "C": 187109504.1817335,
+     "D": 10908172.274999999
+    },
+    "channels_share": {
+     "A": 0.17752532450005576,
+     "B": 0.02476952863502963,
+     "C": 0.7537620740930354,
+     "D": 0.043943072771879164
+    },
+    "d_admin": 2013816.4199999997
+   },
+   "tensionat": {
+    "total": 788313579.208847,
+    "tax": 191212622.68296587,
+    "daily_econ": 8717623.2,
+    "daily_tax": 2404847.016,
+    "channels": {
+     "A": 262311699.67866874,
+     "B": 28485879.048,
+     "C": 466132048.4321783,
+     "D": 31383952.05
+    },
+    "channels_share": {
+     "A": 0.3327504518467451,
+     "B": 0.03613521293973964,
+     "C": 0.5913028276133329,
+     "D": 0.03981150760018239
+    },
+    "d_admin": 5946433.0200000005
+   }
+  }
+ },
+ "substitution": [
+  {
+   "regim": "0% din A, 0% din C",
+   "prudent_mil": 67.45314203548357,
+   "central_mil": 250.24798820009795,
+   "tensionat_mil": 794.260012228847
+  },
+  {
+   "regim": "50% din A, 25% din C",
+   "prudent_mil": 51.420017730583695,
+   "central_mil": 181.43668620603233,
+   "tensionat_mil": 546.571150281468
+  },
+  {
+   "regim": "75% din A, 50% din C",
+   "prudent_mil": 36.39997606946281,
+   "central_mil": 123.64234718628286,
+   "tensionat_mil": 364.46021325375636
+  },
+  {
+   "regim": "90% din A, 75% din C",
+   "prudent_mil": 21.785167465853508,
+   "central_mil": 70.25479335625981,
+   "tensionat_mil": 208.58044619391146
+  },
+  {
+   "regim": "100% din A, 100% din C",
+   "prudent_mil": 7.372975391,
+   "central_mil": 19.070632121099997,
+   "tensionat_mil": 65.816264118
+  }
+ ],
+ "params": [
+  {
+   "parametru": "pending",
+   "initial": [
+    145000.0,
+    204414.0,
+    260000.0
+   ],
+   "fundamentat": [
+    145000.0,
+    204414.0,
+    260000.0
+   ],
+   "sursa": "stoc MJ (central); zile rămase din prognoză",
+   "stare": "sursă oficială + model"
+  },
+  {
+   "parametru": "pending_new_j_share",
+   "initial": [
+    0.07,
+    0.105,
+    0.14
+   ],
+   "fundamentat": [
+    0.07,
+    0.105,
+    0.14
+   ],
+   "sursa": "stoc MJ (central); zile rămase din prognoză",
+   "stare": "sursă oficială + model"
+  },
+  {
+   "parametru": "pending_new_excess_days",
+   "initial": [
+    26.0,
+    38.0,
+    55.0
+   ],
+   "fundamentat": [
+    26.0,
+    38.0,
+    55.0
+   ],
+   "sursa": "stoc MJ (central); zile rămase din prognoză",
+   "stare": "sursă oficială + model"
+  },
+  {
+   "parametru": "pending_changes_excess_days",
+   "initial": [
+    40.0,
+    54.0,
+    70.0
+   ],
+   "fundamentat": [
+    40.0,
+    54.0,
+    70.0
+   ],
+   "sursa": "stoc MJ (central); zile rămase din prognoză",
+   "stare": "sursă oficială + model"
+  },
+  {
+   "parametru": "net_turnover_per_day",
+   "initial": [
+    250.0,
+    425.0,
+    650.0
+   ],
+   "fundamentat": [
+    167.0,
+    364.0,
+    540.0
+   ],
+   "sursa": "bilanțuri MF, cohorta 2025: 44.2% din firmele noi raportează vânzări; × mediana / media plafonată pe zi; tensionat: recomandarea din evidență",
+   "stare": "măsurat"
+  },
+  {
+   "parametru": "lost_turnover_fraction",
+   "initial": [
+    0.15,
+    0.35,
+    0.55
+   ],
+   "fundamentat": [
+    0.15,
+    0.35,
+    0.55
+   ],
+   "sursa": "fără bază în date publice",
+   "stare": "ipoteză"
+  },
+  {
+   "parametru": "tax_share",
+   "initial": [
+    0.08,
+    0.13,
+    0.18
+   ],
+   "fundamentat": [
+    0.1144,
+    0.13,
+    0.1457
+   ],
+   "sursa": "impozit direct măsurat (bilanțuri) + contribuții la salariul minim 2026 pe angajații măsurați + TVA pe valoarea adăugată",
+   "stare": "măsurat + legal"
+  },
+  {
+   "parametru": "value_added_share",
+   "initial": [
+    0.38,
+    0.45,
+    0.5
+   ],
+   "fundamentat": [
+    0.276,
+    0.304,
+    0.38
+   ],
+   "sursa": "Eurostat SBS 2024: economia de afaceri / micro-întreprinderi; tensionat: rezultatul brut al firmelor noi",
+   "stare": "sursă oficială"
+  },
+  {
+   "parametru": "seat_share",
+   "initial": [
+    0.025,
+    0.05,
+    0.085
+   ],
+   "fundamentat": [
+    0.0468,
+    0.0684,
+    0.0901
+   ],
+   "sursa": "buletine BERC PDF, oct.–nov. 2026, dosare peste 30 de zile: documente de sediu / documente + schimbare de sediu",
+   "stare": "măsurat"
+  },
+  {
+   "parametru": "inactivation_increment",
+   "initial": [
+    0.02,
+    0.06,
+    0.12
+   ],
+   "fundamentat": [
+    0.02,
+    0.06,
+    0.12
+   ],
+   "sursa": "fără bază în date publice",
+   "stare": "ipoteză"
+  },
+  {
+   "parametru": "seat_private_cost",
+   "initial": [
+    4000.0,
+    7000.0,
+    11000.0
+   ],
+   "fundamentat": [
+    4000.0,
+    7000.0,
+    11000.0
+   ],
+   "sursa": "fără bază în date publice",
+   "stare": "ipoteză"
+  },
+  {
+   "parametru": "seat_fiscal_cost",
+   "initial": [
+    500.0,
+    1400.0,
+    2600.0
+   ],
+   "fundamentat": [
+    500.0,
+    1400.0,
+    2600.0
+   ],
+   "sursa": "fără bază în date publice",
+   "stare": "ipoteză"
+  },
+  {
+   "parametru": "disjoint_blocked_changes_share",
+   "initial": [
+    0.15,
+    0.2,
+    0.25
+   ],
+   "fundamentat": [
+    0.1498,
+    0.1838,
+    0.2178
+   ],
+   "sursa": "buletine BERC PDF: plafon (modificări care pot bloca activitatea, fără sediu), ponderat pe zile în exces",
+   "stare": "plafon măsurat"
+  },
+  {
+   "parametru": "blocked_change_cost",
+   "initial": [
+    35.0,
+    70.0,
+    110.0
+   ],
+   "fundamentat": [
+    35.0,
+    70.0,
+    110.0
+   ],
+   "sursa": "fără bază; ca ordin de mărime, 2.2% din vânzările zilnice ale firmei mediane cu modificări",
+   "stare": "ipoteză (verificată ca ordin de mărime)"
+  },
+  {
+   "parametru": "blocked_change_tax_share",
+   "initial": [
+    0.08,
+    0.13,
+    0.18
+   ],
+   "fundamentat": [
+    0.08,
+    0.13,
+    0.18
+   ],
+   "sursa": "fără bază în date publice",
+   "stare": "ipoteză"
+  },
+  {
+   "parametru": "preventable_post_share",
+   "initial": [
+    0.08,
+    0.15,
+    0.25
+   ],
+   "fundamentat": [
+    0.2146,
+    0.2289,
+    0.4506
+   ],
+   "sursa": "buletine BERC PDF, motivele amânărilor, 19.10–18.11.2026: toate motivele evitabile la depunere (limita inferioară IC95% / valoarea punctuală) / plafon: cel puțin un motiv evitabil",
+   "stare": "măsurat"
+  },
+  {
+   "parametru": "private_cost_per_post",
+   "initial": [
+    350.0,
+    650.0,
+    950.0
+   ],
+   "fundamentat": [
+    350.0,
+    650.0,
+    950.0
+   ],
+   "sursa": "fără bază în date publice",
+   "stare": "ipoteză"
+  },
+  {
+   "parametru": "admin_cost_per_post",
+   "initial": [
+    75.0,
+    120.0,
+    180.0
+   ],
+   "fundamentat": [
+    75.0,
+    120.0,
+    180.0
+   ],
+   "sursa": "fără bază în date publice",
+   "stare": "ipoteză"
+  }
+ ],
+ "n_params": 18,
+ "n_founded": 10,
+ "floor": {
+  "turnover_basis": 280535,
+  "value_added_basis": 77428,
+  "taxes": 43908,
+  "total_value_added_plus_taxes": 121336
+ },
+ "sensitivity": [
+  {
+   "parameter": "blocked_change_cost",
+   "low": -93554752.09086674,
+   "high": 106919716.67527628,
+   "stare": "ipoteză (verificată ca ordin de mărime)"
+  },
+  {
+   "parameter": "pending",
+   "low": -42164413.82655597,
+   "high": 39447791.88344401,
+   "stare": "sursă oficială + model"
+  },
+  {
+   "parameter": "disjoint_blocked_changes_share",
+   "low": -34612204.25559813,
+   "high": 34612204.25559813,
+   "stare": "plafon măsurat"
+  },
+  {
+   "parameter": "pending_changes_excess_days",
+   "low": -28535397.18539995,
+   "high": 32611882.49760002,
+   "stare": "sursă oficială + model"
+  },
+  {
+   "parameter": "lost_turnover_fraction",
+   "low": -25181629.655579686,
+   "high": 25181629.655579686,
+   "stare": "ipoteză"
+  },
+  {
+   "parameter": "net_turnover_per_day",
+   "low": -23849908.85648653,
+   "high": 21307532.785490513,
+   "stare": "măsurat"
+  },
+  {
+   "parameter": "pending_new_excess_days",
+   "low": -9975259.292543977,
+   "high": 14131617.33110401,
+   "stare": "sursă oficială + model"
+  },
+  {
+   "parameter": "value_added_share",
+   "low": -4058881.095800668,
+   "high": 11016962.97431612,
+   "stare": "sursă oficială"
+  },
+  {
+   "parameter": "preventable_post_share",
+   "low": -681462.9250000119,
+   "high": 10565058.074999988,
+   "stare": "măsurat"
+  },
+  {
+   "parameter": "pending_new_j_share",
+   "low": -5404607.632451981,
+   "high": 5404607.632452011,
+   "stare": "sursă oficială + model"
+  },
+  {
+   "parameter": "inactivation_increment",
+   "low": -4099095.6173999906,
+   "high": 6148643.426100016,
+   "stare": "ipoteză"
+  },
+  {
+   "parameter": "private_cost_per_post",
+   "low": -5034541.050000012,
+   "high": 5034541.049999982,
+   "stare": "ipoteză"
+  },
+  {
+   "parameter": "seat_private_cost",
+   "low": -2635132.896899998,
+   "high": 3513510.5291999876,
+   "stare": "ipoteză"
+  },
+  {
+   "parameter": "seat_share",
+   "low": -1941676.8713999987,
+   "high": 1950666.116174996,
+   "stare": "măsurat"
+  },
+  {
+   "parameter": "tax_share",
+   "low": 0.0,
+   "high": 0.0,
+   "stare": "măsurat + legal"
+  },
+  {
+   "parameter": "seat_fiscal_cost",
+   "low": 0.0,
+   "high": 0.0,
+   "stare": "ipoteză"
+  },
+  {
+   "parameter": "blocked_change_tax_share",
+   "low": 0.0,
+   "high": 0.0,
+   "stare": "ipoteză"
+  },
+  {
+   "parameter": "admin_cost_per_post",
+   "low": 0.0,
+   "high": 0.0,
+   "stare": "ipoteză"
+  }
+ ],
+ "inputs_founded": [
+  {
+   "scenario": "prudent",
+   "pending": 145000,
+   "pending_new_j_share": 0.07,
+   "pending_new_excess_days": 26,
+   "pending_changes_excess_days": 40,
+   "net_turnover_per_day": 167,
+   "lost_turnover_fraction": 0.15,
+   "tax_share": 0.1144,
+   "value_added_share": 0.276,
+   "seat_share": 0.0468,
+   "inactivation_increment": 0.02,
+   "seat_private_cost": 4000,
+   "seat_fiscal_cost": 500,
+   "disjoint_blocked_changes_share": 0.1498,
+   "blocked_change_cost": 35,
+   "blocked_change_tax_share": 0.08,
+   "preventable_post_share": 0.2146,
+   "private_cost_per_post": 350,
+   "admin_cost_per_post": 75
+  },
+  {
+   "scenario": "central",
+   "pending": 204414,
+   "pending_new_j_share": 0.105,
+   "pending_new_excess_days": 38,
+   "pending_changes_excess_days": 54,
+   "net_turnover_per_day": 364,
+   "lost_turnover_fraction": 0.35,
+   "tax_share": 0.13,
+   "value_added_share": 0.304,
+   "seat_share": 0.0684,
+   "inactivation_increment": 0.06,
+   "seat_private_cost": 7000,
+   "seat_fiscal_cost": 1400,
+   "disjoint_blocked_changes_share": 0.1838,
+   "blocked_change_cost": 70,
+   "blocked_change_tax_share": 0.13,
+   "preventable_post_share": 0.2289,
+   "private_cost_per_post": 650,
+   "admin_cost_per_post": 120
+  },
+  {
+   "scenario": "tensionat",
+   "pending": 260000,
+   "pending_new_j_share": 0.14,
+   "pending_new_excess_days": 55,
+   "pending_changes_excess_days": 70,
+   "net_turnover_per_day": 540,
+   "lost_turnover_fraction": 0.55,
+   "tax_share": 0.1457,
+   "value_added_share": 0.38,
+   "seat_share": 0.0901,
+   "inactivation_increment": 0.12,
+   "seat_private_cost": 11000,
+   "seat_fiscal_cost": 2600,
+   "disjoint_blocked_changes_share": 0.2178,
+   "blocked_change_cost": 110,
+   "blocked_change_tax_share": 0.18,
+   "preventable_post_share": 0.4506,
+   "private_cost_per_post": 950,
+   "admin_cost_per_post": 180
+  }
+ ]
+}

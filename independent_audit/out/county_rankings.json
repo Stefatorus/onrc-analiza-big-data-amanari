@@ -1,0 +1,2187 @@
+{
+ "rang_asteptare_nov": {
+  "meta": "Mediana așteptării deciziilor din 1–18 noiembrie 2026, de la cea mai lungă la cea mai scurtă.",
+  "columns": [
+   "loc",
+   "code",
+   "name",
+   "median_nov",
+   "p90_nov",
+   "n_nov"
+  ],
+  "rows": [
+   {
+    "loc": 1,
+    "code": "BN",
+    "name": "Bistrița-Năsăud",
+    "median_nov": 55.8055,
+    "p90_nov": 61.0321,
+    "n_nov": 783
+   },
+   {
+    "loc": 2,
+    "code": "HR",
+    "name": "Harghita",
+    "median_nov": 53.0933,
+    "p90_nov": 57.849,
+    "n_nov": 928
+   },
+   {
+    "loc": 3,
+    "code": "VS",
+    "name": "Vaslui",
+    "median_nov": 53.0587,
+    "p90_nov": 57.8718,
+    "n_nov": 546
+   },
+   {
+    "loc": 4,
+    "code": "VN",
+    "name": "Vrancea",
+    "median_nov": 53.052,
+    "p90_nov": 57.9536,
+    "n_nov": 776
+   },
+   {
+    "loc": 5,
+    "code": "TR",
+    "name": "Teleorman",
+    "median_nov": 53.0514,
+    "p90_nov": 57.8881,
+    "n_nov": 513
+   },
+   {
+    "loc": 6,
+    "code": "BH",
+    "name": "Bihor",
+    "median_nov": 53.0397,
+    "p90_nov": 57.7852,
+    "n_nov": 2064
+   },
+   {
+    "loc": 7,
+    "code": "IL",
+    "name": "Ialomița",
+    "median_nov": 53.0226,
+    "p90_nov": 57.9395,
+    "n_nov": 517
+   },
+   {
+    "loc": 8,
+    "code": "BT",
+    "name": "Botoșani",
+    "median_nov": 52.9978,
+    "p90_nov": 57.2233,
+    "n_nov": 583
+   },
+   {
+    "loc": 9,
+    "code": "AR",
+    "name": "Arad",
+    "median_nov": 52.9864,
+    "p90_nov": 57.4308,
+    "n_nov": 1284
+   },
+   {
+    "loc": 10,
+    "code": "MH",
+    "name": "Mehedinți",
+    "median_nov": 52.9864,
+    "p90_nov": 57.1489,
+    "n_nov": 418
+   },
+   {
+    "loc": 11,
+    "code": "OT",
+    "name": "Olt",
+    "median_nov": 52.9828,
+    "p90_nov": 57.8874,
+    "n_nov": 898
+   },
+   {
+    "loc": 12,
+    "code": "SM",
+    "name": "Satu Mare",
+    "median_nov": 52.9739,
+    "p90_nov": 58.0167,
+    "n_nov": 699
+   },
+   {
+    "loc": 13,
+    "code": "SV",
+    "name": "Suceava",
+    "median_nov": 52.9717,
+    "p90_nov": 57.2253,
+    "n_nov": 1164
+   },
+   {
+    "loc": 14,
+    "code": "SB",
+    "name": "Sibiu",
+    "median_nov": 52.9073,
+    "p90_nov": 57.2064,
+    "n_nov": 1420
+   },
+   {
+    "loc": 15,
+    "code": "CV",
+    "name": "Covasna",
+    "median_nov": 52.8695,
+    "p90_nov": 57.1672,
+    "n_nov": 473
+   },
+   {
+    "loc": 16,
+    "code": "CJ",
+    "name": "Cluj",
+    "median_nov": 52.829,
+    "p90_nov": 57.7203,
+    "n_nov": 3215
+   },
+   {
+    "loc": 17,
+    "code": "DJ",
+    "name": "Dolj",
+    "median_nov": 51.9473,
+    "p90_nov": 61.9404,
+    "n_nov": 1201
+   },
+   {
+    "loc": 18,
+    "code": "PH",
+    "name": "Prahova",
+    "median_nov": 51.9118,
+    "p90_nov": 60.926,
+    "n_nov": 1671
+   },
+   {
+    "loc": 19,
+    "code": "MM",
+    "name": "Maramureș",
+    "median_nov": 51.7784,
+    "p90_nov": 57.7992,
+    "n_nov": 1237
+   },
+   {
+    "loc": 20,
+    "code": "BV",
+    "name": "Brașov",
+    "median_nov": 50.9355,
+    "p90_nov": 57.6344,
+    "n_nov": 1896
+   },
+   {
+    "loc": 21,
+    "code": "NT",
+    "name": "Neamț",
+    "median_nov": 50.2177,
+    "p90_nov": 57.6476,
+    "n_nov": 840
+   },
+   {
+    "loc": 22,
+    "code": "TL",
+    "name": "Tulcea",
+    "median_nov": 50.1791,
+    "p90_nov": 57.8774,
+    "n_nov": 531
+   },
+   {
+    "loc": 23,
+    "code": "IS",
+    "name": "Iași",
+    "median_nov": 50.1549,
+    "p90_nov": 57.5319,
+    "n_nov": 2100
+   },
+   {
+    "loc": 24,
+    "code": "BZ",
+    "name": "Buzău",
+    "median_nov": 50.1414,
+    "p90_nov": 57.1832,
+    "n_nov": 901
+   },
+   {
+    "loc": 25,
+    "code": "BC",
+    "name": "Bacău",
+    "median_nov": 50.1046,
+    "p90_nov": 57.8535,
+    "n_nov": 986
+   },
+   {
+    "loc": 26,
+    "code": "AG",
+    "name": "Argeș",
+    "median_nov": 50.0999,
+    "p90_nov": 57.1225,
+    "n_nov": 1521
+   },
+   {
+    "loc": 27,
+    "code": "SJ",
+    "name": "Sălaj",
+    "median_nov": 50.0923,
+    "p90_nov": 57.2081,
+    "n_nov": 560
+   },
+   {
+    "loc": 28,
+    "code": "CL",
+    "name": "Călărași",
+    "median_nov": 50.0688,
+    "p90_nov": 57.231,
+    "n_nov": 572
+   },
+   {
+    "loc": 29,
+    "code": "GJ",
+    "name": "Gorj",
+    "median_nov": 50.0671,
+    "p90_nov": 57.7654,
+    "n_nov": 660
+   },
+   {
+    "loc": 30,
+    "code": "VL",
+    "name": "Vâlcea",
+    "median_nov": 50.0193,
+    "p90_nov": 57.0513,
+    "n_nov": 856
+   },
+   {
+    "loc": 31,
+    "code": "GR",
+    "name": "Giurgiu",
+    "median_nov": 49.9997,
+    "p90_nov": 57.5717,
+    "n_nov": 501
+   },
+   {
+    "loc": 32,
+    "code": "AB",
+    "name": "Alba",
+    "median_nov": 49.9938,
+    "p90_nov": 57.1538,
+    "n_nov": 964
+   },
+   {
+    "loc": 33,
+    "code": "MS",
+    "name": "Mureș",
+    "median_nov": 49.9905,
+    "p90_nov": 57.4432,
+    "n_nov": 1414
+   },
+   {
+    "loc": 34,
+    "code": "CS",
+    "name": "Caraș-Severin",
+    "median_nov": 49.9864,
+    "p90_nov": 57.8812,
+    "n_nov": 414
+   },
+   {
+    "loc": 35,
+    "code": "DB",
+    "name": "Dâmbovița",
+    "median_nov": 49.9817,
+    "p90_nov": 57.5459,
+    "n_nov": 1019
+   },
+   {
+    "loc": 36,
+    "code": "HD",
+    "name": "Hunedoara",
+    "median_nov": 49.927,
+    "p90_nov": 57.1999,
+    "n_nov": 968
+   },
+   {
+    "loc": 37,
+    "code": "GL",
+    "name": "Galați",
+    "median_nov": 49.8321,
+    "p90_nov": 56.7205,
+    "n_nov": 1116
+   },
+   {
+    "loc": 38,
+    "code": "TM",
+    "name": "Timiș",
+    "median_nov": 49.7857,
+    "p90_nov": 57.4977,
+    "n_nov": 2739
+   },
+   {
+    "loc": 39,
+    "code": "IF",
+    "name": "Ilfov",
+    "median_nov": 49.1226,
+    "p90_nov": 57.0489,
+    "n_nov": 2865
+   },
+   {
+    "loc": 40,
+    "code": "CT",
+    "name": "Constanța",
+    "median_nov": 49.1068,
+    "p90_nov": 58.093,
+    "n_nov": 1573
+   },
+   {
+    "loc": 41,
+    "code": "BR",
+    "name": "Brăila",
+    "median_nov": 49.0962,
+    "p90_nov": 57.1399,
+    "n_nov": 531
+   },
+   {
+    "loc": 42,
+    "code": "B",
+    "name": "Municipiul București",
+    "median_nov": 47.9493,
+    "p90_nov": 56.8531,
+    "n_nov": 11855
+   }
+  ]
+ },
+ "rang_probleme_locale_2025_2026": {
+  "meta": "Ianuarie 2025 – iulie 2026, înainte de valul național: cât a stat oficiul peste mediana națională, lună de lună (zile). Arată unde au fost probleme locale.",
+  "columns": [
+   "loc",
+   "code",
+   "name",
+   "exces_mediu_zile",
+   "exces_maxim_zile",
+   "luna_excesului_maxim",
+   "luni_peste_national_cu_5_zile"
+  ],
+  "rows": [
+   {
+    "loc": 1,
+    "code": "CT",
+    "name": "Constanța",
+    "exces_mediu_zile": 3.88,
+    "exces_maxim_zile": 19.4,
+    "luna_excesului_maxim": "2025-04",
+    "luni_peste_national_cu_5_zile": 6
+   },
+   {
+    "loc": 2,
+    "code": "BV",
+    "name": "Brașov",
+    "exces_mediu_zile": 2.71,
+    "exces_maxim_zile": 11.8,
+    "luna_excesului_maxim": "2026-04",
+    "luni_peste_national_cu_5_zile": 3
+   },
+   {
+    "loc": 3,
+    "code": "TR",
+    "name": "Teleorman",
+    "exces_mediu_zile": 2.46,
+    "exces_maxim_zile": 22.0,
+    "luna_excesului_maxim": "2026-04",
+    "luni_peste_national_cu_5_zile": 3
+   },
+   {
+    "loc": 4,
+    "code": "GL",
+    "name": "Galați",
+    "exces_mediu_zile": 2.28,
+    "exces_maxim_zile": 16.5,
+    "luna_excesului_maxim": "2026-03",
+    "luni_peste_national_cu_5_zile": 3
+   },
+   {
+    "loc": 5,
+    "code": "TL",
+    "name": "Tulcea",
+    "exces_mediu_zile": 1.54,
+    "exces_maxim_zile": 7.4,
+    "luna_excesului_maxim": "2025-04",
+    "luni_peste_national_cu_5_zile": 2
+   },
+   {
+    "loc": 6,
+    "code": "SM",
+    "name": "Satu Mare",
+    "exces_mediu_zile": 1.35,
+    "exces_maxim_zile": 8.9,
+    "luna_excesului_maxim": "2026-04",
+    "luni_peste_national_cu_5_zile": 2
+   },
+   {
+    "loc": 7,
+    "code": "BN",
+    "name": "Bistrița-Năsăud",
+    "exces_mediu_zile": 1.17,
+    "exces_maxim_zile": 8.7,
+    "luna_excesului_maxim": "2026-03",
+    "luni_peste_national_cu_5_zile": 1
+   },
+   {
+    "loc": 8,
+    "code": "IF",
+    "name": "Ilfov",
+    "exces_mediu_zile": 1.14,
+    "exces_maxim_zile": 7.4,
+    "luna_excesului_maxim": "2025-04",
+    "luni_peste_national_cu_5_zile": 3
+   },
+   {
+    "loc": 9,
+    "code": "B",
+    "name": "Municipiul București",
+    "exces_mediu_zile": 0.95,
+    "exces_maxim_zile": 3.5,
+    "luna_excesului_maxim": "2026-02",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 10,
+    "code": "GR",
+    "name": "Giurgiu",
+    "exces_mediu_zile": 0.92,
+    "exces_maxim_zile": 10.8,
+    "luna_excesului_maxim": "2026-04",
+    "luni_peste_national_cu_5_zile": 2
+   },
+   {
+    "loc": 11,
+    "code": "PH",
+    "name": "Prahova",
+    "exces_mediu_zile": 0.59,
+    "exces_maxim_zile": 10.9,
+    "luna_excesului_maxim": "2026-04",
+    "luni_peste_national_cu_5_zile": 2
+   },
+   {
+    "loc": 12,
+    "code": "MH",
+    "name": "Mehedinți",
+    "exces_mediu_zile": 0.46,
+    "exces_maxim_zile": 2.8,
+    "luna_excesului_maxim": "2025-04",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 13,
+    "code": "DJ",
+    "name": "Dolj",
+    "exces_mediu_zile": 0.42,
+    "exces_maxim_zile": 3.8,
+    "luna_excesului_maxim": "2025-06",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 14,
+    "code": "BH",
+    "name": "Bihor",
+    "exces_mediu_zile": 0.19,
+    "exces_maxim_zile": 2.5,
+    "luna_excesului_maxim": "2025-01",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 15,
+    "code": "VN",
+    "name": "Vrancea",
+    "exces_mediu_zile": 0.14,
+    "exces_maxim_zile": 7.9,
+    "luna_excesului_maxim": "2026-04",
+    "luni_peste_national_cu_5_zile": 2
+   },
+   {
+    "loc": 16,
+    "code": "VS",
+    "name": "Vaslui",
+    "exces_mediu_zile": -0.26,
+    "exces_maxim_zile": 2.7,
+    "luna_excesului_maxim": "2026-02",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 17,
+    "code": "SV",
+    "name": "Suceava",
+    "exces_mediu_zile": -0.32,
+    "exces_maxim_zile": 9.9,
+    "luna_excesului_maxim": "2026-04",
+    "luni_peste_national_cu_5_zile": 1
+   },
+   {
+    "loc": 18,
+    "code": "IL",
+    "name": "Ialomița",
+    "exces_mediu_zile": -0.38,
+    "exces_maxim_zile": 2.9,
+    "luna_excesului_maxim": "2026-03",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 19,
+    "code": "TM",
+    "name": "Timiș",
+    "exces_mediu_zile": -0.42,
+    "exces_maxim_zile": 0.3,
+    "luna_excesului_maxim": "2026-05",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 20,
+    "code": "CS",
+    "name": "Caraș-Severin",
+    "exces_mediu_zile": -0.47,
+    "exces_maxim_zile": 2.2,
+    "luna_excesului_maxim": "2025-03",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 21,
+    "code": "MS",
+    "name": "Mureș",
+    "exces_mediu_zile": -0.48,
+    "exces_maxim_zile": 1.1,
+    "luna_excesului_maxim": "2026-04",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 22,
+    "code": "BT",
+    "name": "Botoșani",
+    "exces_mediu_zile": -0.55,
+    "exces_maxim_zile": 0.9,
+    "luna_excesului_maxim": "2026-02",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 23,
+    "code": "CJ",
+    "name": "Cluj",
+    "exces_mediu_zile": -0.56,
+    "exces_maxim_zile": 1.8,
+    "luna_excesului_maxim": "2026-03",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 24,
+    "code": "DB",
+    "name": "Dâmbovița",
+    "exces_mediu_zile": -0.8,
+    "exces_maxim_zile": 0.9,
+    "luna_excesului_maxim": "2026-04",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 25,
+    "code": "BR",
+    "name": "Brăila",
+    "exces_mediu_zile": -0.86,
+    "exces_maxim_zile": 1.6,
+    "luna_excesului_maxim": "2026-04",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 26,
+    "code": "SJ",
+    "name": "Sălaj",
+    "exces_mediu_zile": -0.96,
+    "exces_maxim_zile": 2.6,
+    "luna_excesului_maxim": "2026-02",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 27,
+    "code": "IS",
+    "name": "Iași",
+    "exces_mediu_zile": -0.99,
+    "exces_maxim_zile": 0.1,
+    "luna_excesului_maxim": "2025-12",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 28,
+    "code": "OT",
+    "name": "Olt",
+    "exces_mediu_zile": -1.12,
+    "exces_maxim_zile": 1.6,
+    "luna_excesului_maxim": "2026-02",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 29,
+    "code": "HR",
+    "name": "Harghita",
+    "exces_mediu_zile": -1.21,
+    "exces_maxim_zile": 2.6,
+    "luna_excesului_maxim": "2026-02",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 30,
+    "code": "HD",
+    "name": "Hunedoara",
+    "exces_mediu_zile": -1.3,
+    "exces_maxim_zile": 0.0,
+    "luna_excesului_maxim": "2025-11",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 31,
+    "code": "BZ",
+    "name": "Buzău",
+    "exces_mediu_zile": -1.3,
+    "exces_maxim_zile": 0.2,
+    "luna_excesului_maxim": "2025-12",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 32,
+    "code": "CV",
+    "name": "Covasna",
+    "exces_mediu_zile": -1.37,
+    "exces_maxim_zile": 0.0,
+    "luna_excesului_maxim": "2026-05",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 33,
+    "code": "SB",
+    "name": "Sibiu",
+    "exces_mediu_zile": -1.54,
+    "exces_maxim_zile": 0.0,
+    "luna_excesului_maxim": "2025-10",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 34,
+    "code": "MM",
+    "name": "Maramureș",
+    "exces_mediu_zile": -1.55,
+    "exces_maxim_zile": 0.0,
+    "luna_excesului_maxim": "2026-05",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 35,
+    "code": "CL",
+    "name": "Călărași",
+    "exces_mediu_zile": -1.61,
+    "exces_maxim_zile": 0.0,
+    "luna_excesului_maxim": "2025-07",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 36,
+    "code": "AR",
+    "name": "Arad",
+    "exces_mediu_zile": -1.66,
+    "exces_maxim_zile": 0.0,
+    "luna_excesului_maxim": "2026-05",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 37,
+    "code": "AB",
+    "name": "Alba",
+    "exces_mediu_zile": -1.76,
+    "exces_maxim_zile": 0.0,
+    "luna_excesului_maxim": "2026-05",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 38,
+    "code": "GJ",
+    "name": "Gorj",
+    "exces_mediu_zile": -1.81,
+    "exces_maxim_zile": -0.1,
+    "luna_excesului_maxim": "2026-05",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 39,
+    "code": "NT",
+    "name": "Neamț",
+    "exces_mediu_zile": -1.82,
+    "exces_maxim_zile": 0.0,
+    "luna_excesului_maxim": "2026-05",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 40,
+    "code": "BC",
+    "name": "Bacău",
+    "exces_mediu_zile": -1.82,
+    "exces_maxim_zile": 0.0,
+    "luna_excesului_maxim": "2025-10",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 41,
+    "code": "VL",
+    "name": "Vâlcea",
+    "exces_mediu_zile": -1.82,
+    "exces_maxim_zile": 0.0,
+    "luna_excesului_maxim": "2025-10",
+    "luni_peste_national_cu_5_zile": 0
+   },
+   {
+    "loc": 42,
+    "code": "AG",
+    "name": "Argeș",
+    "exces_mediu_zile": -1.86,
+    "exces_maxim_zile": 0.0,
+    "luna_excesului_maxim": "2025-11",
+    "luni_peste_national_cu_5_zile": 0
+   }
+  ]
+ },
+ "rang_respingeri": {
+  "meta": "Ponderea respingerilor în deciziile finale, august–noiembrie 2026.",
+  "columns": [
+   "loc",
+   "code",
+   "name",
+   "rejection_pct_crisis",
+   "n_nov"
+  ],
+  "rows": [
+   {
+    "loc": 1,
+    "code": "BC",
+    "name": "Bacău",
+    "rejection_pct_crisis": 11.9282,
+    "n_nov": 986
+   },
+   {
+    "loc": 2,
+    "code": "BV",
+    "name": "Brașov",
+    "rejection_pct_crisis": 11.0904,
+    "n_nov": 1896
+   },
+   {
+    "loc": 3,
+    "code": "IL",
+    "name": "Ialomița",
+    "rejection_pct_crisis": 10.4071,
+    "n_nov": 517
+   },
+   {
+    "loc": 4,
+    "code": "TR",
+    "name": "Teleorman",
+    "rejection_pct_crisis": 9.7494,
+    "n_nov": 513
+   },
+   {
+    "loc": 5,
+    "code": "TL",
+    "name": "Tulcea",
+    "rejection_pct_crisis": 9.5594,
+    "n_nov": 531
+   },
+   {
+    "loc": 6,
+    "code": "TM",
+    "name": "Timiș",
+    "rejection_pct_crisis": 9.4997,
+    "n_nov": 2739
+   },
+   {
+    "loc": 7,
+    "code": "IF",
+    "name": "Ilfov",
+    "rejection_pct_crisis": 9.3517,
+    "n_nov": 2865
+   },
+   {
+    "loc": 8,
+    "code": "IS",
+    "name": "Iași",
+    "rejection_pct_crisis": 9.1031,
+    "n_nov": 2100
+   },
+   {
+    "loc": 9,
+    "code": "SM",
+    "name": "Satu Mare",
+    "rejection_pct_crisis": 9.0311,
+    "n_nov": 699
+   },
+   {
+    "loc": 10,
+    "code": "DB",
+    "name": "Dâmbovița",
+    "rejection_pct_crisis": 9.0051,
+    "n_nov": 1019
+   },
+   {
+    "loc": 11,
+    "code": "GR",
+    "name": "Giurgiu",
+    "rejection_pct_crisis": 8.9411,
+    "n_nov": 501
+   },
+   {
+    "loc": 12,
+    "code": "CJ",
+    "name": "Cluj",
+    "rejection_pct_crisis": 8.8781,
+    "n_nov": 3215
+   },
+   {
+    "loc": 13,
+    "code": "B",
+    "name": "Municipiul București",
+    "rejection_pct_crisis": 8.8113,
+    "n_nov": 11855
+   },
+   {
+    "loc": 14,
+    "code": "PH",
+    "name": "Prahova",
+    "rejection_pct_crisis": 8.786,
+    "n_nov": 1671
+   },
+   {
+    "loc": 15,
+    "code": "DJ",
+    "name": "Dolj",
+    "rejection_pct_crisis": 8.6441,
+    "n_nov": 1201
+   },
+   {
+    "loc": 16,
+    "code": "MM",
+    "name": "Maramureș",
+    "rejection_pct_crisis": 8.6298,
+    "n_nov": 1237
+   },
+   {
+    "loc": 17,
+    "code": "SJ",
+    "name": "Sălaj",
+    "rejection_pct_crisis": 8.5595,
+    "n_nov": 560
+   },
+   {
+    "loc": 18,
+    "code": "VN",
+    "name": "Vrancea",
+    "rejection_pct_crisis": 8.3477,
+    "n_nov": 776
+   },
+   {
+    "loc": 19,
+    "code": "SB",
+    "name": "Sibiu",
+    "rejection_pct_crisis": 8.33,
+    "n_nov": 1420
+   },
+   {
+    "loc": 20,
+    "code": "HD",
+    "name": "Hunedoara",
+    "rejection_pct_crisis": 8.2664,
+    "n_nov": 968
+   },
+   {
+    "loc": 21,
+    "code": "AB",
+    "name": "Alba",
+    "rejection_pct_crisis": 8.0642,
+    "n_nov": 964
+   },
+   {
+    "loc": 22,
+    "code": "BH",
+    "name": "Bihor",
+    "rejection_pct_crisis": 7.886,
+    "n_nov": 2064
+   },
+   {
+    "loc": 23,
+    "code": "NT",
+    "name": "Neamț",
+    "rejection_pct_crisis": 7.5335,
+    "n_nov": 840
+   },
+   {
+    "loc": 24,
+    "code": "BN",
+    "name": "Bistrița-Năsăud",
+    "rejection_pct_crisis": 7.4528,
+    "n_nov": 783
+   },
+   {
+    "loc": 25,
+    "code": "BZ",
+    "name": "Buzău",
+    "rejection_pct_crisis": 7.0284,
+    "n_nov": 901
+   },
+   {
+    "loc": 26,
+    "code": "CT",
+    "name": "Constanța",
+    "rejection_pct_crisis": 6.9004,
+    "n_nov": 1573
+   },
+   {
+    "loc": 27,
+    "code": "VL",
+    "name": "Vâlcea",
+    "rejection_pct_crisis": 6.7293,
+    "n_nov": 856
+   },
+   {
+    "loc": 28,
+    "code": "MH",
+    "name": "Mehedinți",
+    "rejection_pct_crisis": 6.5853,
+    "n_nov": 418
+   },
+   {
+    "loc": 29,
+    "code": "SV",
+    "name": "Suceava",
+    "rejection_pct_crisis": 6.4946,
+    "n_nov": 1164
+   },
+   {
+    "loc": 30,
+    "code": "CS",
+    "name": "Caraș-Severin",
+    "rejection_pct_crisis": 6.4935,
+    "n_nov": 414
+   },
+   {
+    "loc": 31,
+    "code": "AR",
+    "name": "Arad",
+    "rejection_pct_crisis": 6.3758,
+    "n_nov": 1284
+   },
+   {
+    "loc": 32,
+    "code": "AG",
+    "name": "Argeș",
+    "rejection_pct_crisis": 6.3623,
+    "n_nov": 1521
+   },
+   {
+    "loc": 33,
+    "code": "MS",
+    "name": "Mureș",
+    "rejection_pct_crisis": 6.3413,
+    "n_nov": 1414
+   },
+   {
+    "loc": 34,
+    "code": "CV",
+    "name": "Covasna",
+    "rejection_pct_crisis": 6.1838,
+    "n_nov": 473
+   },
+   {
+    "loc": 35,
+    "code": "BT",
+    "name": "Botoșani",
+    "rejection_pct_crisis": 6.1175,
+    "n_nov": 583
+   },
+   {
+    "loc": 36,
+    "code": "CL",
+    "name": "Călărași",
+    "rejection_pct_crisis": 5.8699,
+    "n_nov": 572
+   },
+   {
+    "loc": 37,
+    "code": "VS",
+    "name": "Vaslui",
+    "rejection_pct_crisis": 5.7252,
+    "n_nov": 546
+   },
+   {
+    "loc": 38,
+    "code": "GL",
+    "name": "Galați",
+    "rejection_pct_crisis": 5.6014,
+    "n_nov": 1116
+   },
+   {
+    "loc": 39,
+    "code": "HR",
+    "name": "Harghita",
+    "rejection_pct_crisis": 5.2567,
+    "n_nov": 928
+   },
+   {
+    "loc": 40,
+    "code": "OT",
+    "name": "Olt",
+    "rejection_pct_crisis": 4.9045,
+    "n_nov": 898
+   },
+   {
+    "loc": 41,
+    "code": "BR",
+    "name": "Brăila",
+    "rejection_pct_crisis": 4.124,
+    "n_nov": 531
+   },
+   {
+    "loc": 42,
+    "code": "GJ",
+    "name": "Gorj",
+    "rejection_pct_crisis": 3.1941,
+    "n_nov": 660
+   }
+  ]
+ },
+ "rang_amanari": {
+  "meta": "Ponderea dosarelor amânate, august–noiembrie 2026.",
+  "columns": [
+   "loc",
+   "code",
+   "name",
+   "postponement_action_pct"
+  ],
+  "rows": [
+   {
+    "loc": 1,
+    "code": "BC",
+    "name": "Bacău",
+    "postponement_action_pct": 23.1373
+   },
+   {
+    "loc": 2,
+    "code": "BV",
+    "name": "Brașov",
+    "postponement_action_pct": 22.7354
+   },
+   {
+    "loc": 3,
+    "code": "IF",
+    "name": "Ilfov",
+    "postponement_action_pct": 22.3992
+   },
+   {
+    "loc": 4,
+    "code": "TM",
+    "name": "Timiș",
+    "postponement_action_pct": 22.247
+   },
+   {
+    "loc": 5,
+    "code": "B",
+    "name": "Municipiul București",
+    "postponement_action_pct": 21.8617
+   },
+   {
+    "loc": 6,
+    "code": "IL",
+    "name": "Ialomița",
+    "postponement_action_pct": 20.6461
+   },
+   {
+    "loc": 7,
+    "code": "PH",
+    "name": "Prahova",
+    "postponement_action_pct": 20.583
+   },
+   {
+    "loc": 8,
+    "code": "IS",
+    "name": "Iași",
+    "postponement_action_pct": 20.0774
+   },
+   {
+    "loc": 9,
+    "code": "CJ",
+    "name": "Cluj",
+    "postponement_action_pct": 19.9467
+   },
+   {
+    "loc": 10,
+    "code": "DB",
+    "name": "Dâmbovița",
+    "postponement_action_pct": 19.5187
+   },
+   {
+    "loc": 11,
+    "code": "DJ",
+    "name": "Dolj",
+    "postponement_action_pct": 19.4406
+   },
+   {
+    "loc": 12,
+    "code": "GR",
+    "name": "Giurgiu",
+    "postponement_action_pct": 19.3439
+   },
+   {
+    "loc": 13,
+    "code": "SM",
+    "name": "Satu Mare",
+    "postponement_action_pct": 19.343
+   },
+   {
+    "loc": 14,
+    "code": "SB",
+    "name": "Sibiu",
+    "postponement_action_pct": 19.0732
+   },
+   {
+    "loc": 15,
+    "code": "AR",
+    "name": "Arad",
+    "postponement_action_pct": 19.0617
+   },
+   {
+    "loc": 16,
+    "code": "TR",
+    "name": "Teleorman",
+    "postponement_action_pct": 19.0609
+   },
+   {
+    "loc": 17,
+    "code": "MM",
+    "name": "Maramureș",
+    "postponement_action_pct": 18.6739
+   },
+   {
+    "loc": 18,
+    "code": "BH",
+    "name": "Bihor",
+    "postponement_action_pct": 18.6432
+   },
+   {
+    "loc": 19,
+    "code": "AB",
+    "name": "Alba",
+    "postponement_action_pct": 18.5427
+   },
+   {
+    "loc": 20,
+    "code": "NT",
+    "name": "Neamț",
+    "postponement_action_pct": 18.4945
+   },
+   {
+    "loc": 21,
+    "code": "CT",
+    "name": "Constanța",
+    "postponement_action_pct": 18.1328
+   },
+   {
+    "loc": 22,
+    "code": "BN",
+    "name": "Bistrița-Năsăud",
+    "postponement_action_pct": 18.0678
+   },
+   {
+    "loc": 23,
+    "code": "SJ",
+    "name": "Sălaj",
+    "postponement_action_pct": 18.0029
+   },
+   {
+    "loc": 24,
+    "code": "TL",
+    "name": "Tulcea",
+    "postponement_action_pct": 17.7266
+   },
+   {
+    "loc": 25,
+    "code": "HD",
+    "name": "Hunedoara",
+    "postponement_action_pct": 17.5934
+   },
+   {
+    "loc": 26,
+    "code": "SV",
+    "name": "Suceava",
+    "postponement_action_pct": 17.4116
+   },
+   {
+    "loc": 27,
+    "code": "VN",
+    "name": "Vrancea",
+    "postponement_action_pct": 16.5198
+   },
+   {
+    "loc": 28,
+    "code": "BZ",
+    "name": "Buzău",
+    "postponement_action_pct": 16.2462
+   },
+   {
+    "loc": 29,
+    "code": "MS",
+    "name": "Mureș",
+    "postponement_action_pct": 15.8849
+   },
+   {
+    "loc": 30,
+    "code": "MH",
+    "name": "Mehedinți",
+    "postponement_action_pct": 15.5744
+   },
+   {
+    "loc": 31,
+    "code": "VL",
+    "name": "Vâlcea",
+    "postponement_action_pct": 15.556
+   },
+   {
+    "loc": 32,
+    "code": "VS",
+    "name": "Vaslui",
+    "postponement_action_pct": 15.1355
+   },
+   {
+    "loc": 33,
+    "code": "CS",
+    "name": "Caraș-Severin",
+    "postponement_action_pct": 15.0177
+   },
+   {
+    "loc": 34,
+    "code": "GL",
+    "name": "Galați",
+    "postponement_action_pct": 14.8967
+   },
+   {
+    "loc": 35,
+    "code": "HR",
+    "name": "Harghita",
+    "postponement_action_pct": 14.5287
+   },
+   {
+    "loc": 36,
+    "code": "CV",
+    "name": "Covasna",
+    "postponement_action_pct": 13.895
+   },
+   {
+    "loc": 37,
+    "code": "BR",
+    "name": "Brăila",
+    "postponement_action_pct": 13.8055
+   },
+   {
+    "loc": 38,
+    "code": "BT",
+    "name": "Botoșani",
+    "postponement_action_pct": 13.6555
+   },
+   {
+    "loc": 39,
+    "code": "AG",
+    "name": "Argeș",
+    "postponement_action_pct": 13.5691
+   },
+   {
+    "loc": 40,
+    "code": "GJ",
+    "name": "Gorj",
+    "postponement_action_pct": 13.3428
+   },
+   {
+    "loc": 41,
+    "code": "CL",
+    "name": "Călărași",
+    "postponement_action_pct": 13.2357
+   },
+   {
+    "loc": 42,
+    "code": "OT",
+    "name": "Olt",
+    "postponement_action_pct": 12.9634
+   }
+  ]
+ },
+ "rang_inmatriculari_peste_10_zile": {
+  "meta": "Înmatriculări admise fără amânare care au depășit 10 zile lucrătoare, august–noiembrie 2026.",
+  "columns": [
+   "loc",
+   "code",
+   "name",
+   "formation_gt10_pct"
+  ],
+  "rows": [
+   {
+    "loc": 1,
+    "code": "BN",
+    "name": "Bistrița-Năsăud",
+    "formation_gt10_pct": 78.6624
+   },
+   {
+    "loc": 2,
+    "code": "BV",
+    "name": "Brașov",
+    "formation_gt10_pct": 78.3784
+   },
+   {
+    "loc": 3,
+    "code": "PH",
+    "name": "Prahova",
+    "formation_gt10_pct": 75.4717
+   },
+   {
+    "loc": 4,
+    "code": "SM",
+    "name": "Satu Mare",
+    "formation_gt10_pct": 74.8521
+   },
+   {
+    "loc": 5,
+    "code": "BH",
+    "name": "Bihor",
+    "formation_gt10_pct": 74.1031
+   },
+   {
+    "loc": 6,
+    "code": "IS",
+    "name": "Iași",
+    "formation_gt10_pct": 74.0913
+   },
+   {
+    "loc": 7,
+    "code": "CT",
+    "name": "Constanța",
+    "formation_gt10_pct": 74.0842
+   },
+   {
+    "loc": 8,
+    "code": "CL",
+    "name": "Călărași",
+    "formation_gt10_pct": 73.9837
+   },
+   {
+    "loc": 9,
+    "code": "GR",
+    "name": "Giurgiu",
+    "formation_gt10_pct": 73.1544
+   },
+   {
+    "loc": 10,
+    "code": "TR",
+    "name": "Teleorman",
+    "formation_gt10_pct": 72.973
+   },
+   {
+    "loc": 11,
+    "code": "AR",
+    "name": "Arad",
+    "formation_gt10_pct": 72.6103
+   },
+   {
+    "loc": 12,
+    "code": "IF",
+    "name": "Ilfov",
+    "formation_gt10_pct": 72.067
+   },
+   {
+    "loc": 13,
+    "code": "AG",
+    "name": "Argeș",
+    "formation_gt10_pct": 71.3555
+   },
+   {
+    "loc": 14,
+    "code": "CS",
+    "name": "Caraș-Severin",
+    "formation_gt10_pct": 71.0638
+   },
+   {
+    "loc": 15,
+    "code": "MM",
+    "name": "Maramureș",
+    "formation_gt10_pct": 70.1413
+   },
+   {
+    "loc": 16,
+    "code": "BZ",
+    "name": "Buzău",
+    "formation_gt10_pct": 69.7561
+   },
+   {
+    "loc": 17,
+    "code": "B",
+    "name": "Municipiul București",
+    "formation_gt10_pct": 69.7186
+   },
+   {
+    "loc": 18,
+    "code": "BC",
+    "name": "Bacău",
+    "formation_gt10_pct": 69.2552
+   },
+   {
+    "loc": 19,
+    "code": "OT",
+    "name": "Olt",
+    "formation_gt10_pct": 69.2547
+   },
+   {
+    "loc": 20,
+    "code": "IL",
+    "name": "Ialomița",
+    "formation_gt10_pct": 69.2308
+   },
+   {
+    "loc": 21,
+    "code": "GL",
+    "name": "Galați",
+    "formation_gt10_pct": 69.0756
+   },
+   {
+    "loc": 22,
+    "code": "VN",
+    "name": "Vrancea",
+    "formation_gt10_pct": 68.9796
+   },
+   {
+    "loc": 23,
+    "code": "MH",
+    "name": "Mehedinți",
+    "formation_gt10_pct": 68.5083
+   },
+   {
+    "loc": 24,
+    "code": "CJ",
+    "name": "Cluj",
+    "formation_gt10_pct": 68.4444
+   },
+   {
+    "loc": 25,
+    "code": "HR",
+    "name": "Harghita",
+    "formation_gt10_pct": 67.6349
+   },
+   {
+    "loc": 26,
+    "code": "HD",
+    "name": "Hunedoara",
+    "formation_gt10_pct": 67.4468
+   },
+   {
+    "loc": 27,
+    "code": "VS",
+    "name": "Vaslui",
+    "formation_gt10_pct": 66.7925
+   },
+   {
+    "loc": 28,
+    "code": "TM",
+    "name": "Timiș",
+    "formation_gt10_pct": 66.7067
+   },
+   {
+    "loc": 29,
+    "code": "SV",
+    "name": "Suceava",
+    "formation_gt10_pct": 66.56
+   },
+   {
+    "loc": 30,
+    "code": "CV",
+    "name": "Covasna",
+    "formation_gt10_pct": 66.1538
+   },
+   {
+    "loc": 31,
+    "code": "TL",
+    "name": "Tulcea",
+    "formation_gt10_pct": 65.7459
+   },
+   {
+    "loc": 32,
+    "code": "NT",
+    "name": "Neamț",
+    "formation_gt10_pct": 64.6919
+   },
+   {
+    "loc": 33,
+    "code": "DJ",
+    "name": "Dolj",
+    "formation_gt10_pct": 64.199
+   },
+   {
+    "loc": 34,
+    "code": "BT",
+    "name": "Botoșani",
+    "formation_gt10_pct": 63.8783
+   },
+   {
+    "loc": 35,
+    "code": "VL",
+    "name": "Vâlcea",
+    "formation_gt10_pct": 63.5036
+   },
+   {
+    "loc": 36,
+    "code": "SB",
+    "name": "Sibiu",
+    "formation_gt10_pct": 63.4318
+   },
+   {
+    "loc": 37,
+    "code": "SJ",
+    "name": "Sălaj",
+    "formation_gt10_pct": 62.406
+   },
+   {
+    "loc": 38,
+    "code": "DB",
+    "name": "Dâmbovița",
+    "formation_gt10_pct": 61.8959
+   },
+   {
+    "loc": 39,
+    "code": "MS",
+    "name": "Mureș",
+    "formation_gt10_pct": 60.4106
+   },
+   {
+    "loc": 40,
+    "code": "GJ",
+    "name": "Gorj",
+    "formation_gt10_pct": 59.4306
+   },
+   {
+    "loc": 41,
+    "code": "BR",
+    "name": "Brăila",
+    "formation_gt10_pct": 57.5931
+   },
+   {
+    "loc": 42,
+    "code": "AB",
+    "name": "Alba",
+    "formation_gt10_pct": 57.1429
+   }
+  ]
+ },
+ "rang_schimbare_fata_de_2025": {
+  "meta": "Cu câte zile a crescut mediana față de anul stabil 2025.",
+  "columns": [
+   "loc",
+   "code",
+   "name",
+   "median_y25",
+   "median_nov",
+   "schimbare_fata_de_2025_zile"
+  ],
+  "rows": [
+   {
+    "loc": 1,
+    "code": "BN",
+    "name": "Bistrița-Năsăud",
+    "median_y25": 3.0091,
+    "median_nov": 55.8055,
+    "schimbare_fata_de_2025_zile": 52.8
+   },
+   {
+    "loc": 2,
+    "code": "HR",
+    "name": "Harghita",
+    "median_y25": 1.0739,
+    "median_nov": 53.0933,
+    "schimbare_fata_de_2025_zile": 52.0
+   },
+   {
+    "loc": 3,
+    "code": "AR",
+    "name": "Arad",
+    "median_y25": 1.1083,
+    "median_nov": 52.9864,
+    "schimbare_fata_de_2025_zile": 51.9
+   },
+   {
+    "loc": 4,
+    "code": "OT",
+    "name": "Olt",
+    "median_y25": 1.1532,
+    "median_nov": 52.9828,
+    "schimbare_fata_de_2025_zile": 51.8
+   },
+   {
+    "loc": 5,
+    "code": "VN",
+    "name": "Vrancea",
+    "median_y25": 1.3238,
+    "median_nov": 53.052,
+    "schimbare_fata_de_2025_zile": 51.7
+   },
+   {
+    "loc": 6,
+    "code": "CV",
+    "name": "Covasna",
+    "median_y25": 1.1271,
+    "median_nov": 52.8695,
+    "schimbare_fata_de_2025_zile": 51.7
+   },
+   {
+    "loc": 7,
+    "code": "SB",
+    "name": "Sibiu",
+    "median_y25": 1.2112,
+    "median_nov": 52.9073,
+    "schimbare_fata_de_2025_zile": 51.7
+   },
+   {
+    "loc": 8,
+    "code": "VS",
+    "name": "Vaslui",
+    "median_y25": 1.852,
+    "median_nov": 53.0587,
+    "schimbare_fata_de_2025_zile": 51.2
+   },
+   {
+    "loc": 9,
+    "code": "SV",
+    "name": "Suceava",
+    "median_y25": 1.8046,
+    "median_nov": 52.9717,
+    "schimbare_fata_de_2025_zile": 51.2
+   },
+   {
+    "loc": 10,
+    "code": "IL",
+    "name": "Ialomița",
+    "median_y25": 2.0923,
+    "median_nov": 53.0226,
+    "schimbare_fata_de_2025_zile": 50.9
+   },
+   {
+    "loc": 11,
+    "code": "BT",
+    "name": "Botoșani",
+    "median_y25": 2.1446,
+    "median_nov": 52.9978,
+    "schimbare_fata_de_2025_zile": 50.9
+   },
+   {
+    "loc": 12,
+    "code": "CJ",
+    "name": "Cluj",
+    "median_y25": 2.1541,
+    "median_nov": 52.829,
+    "schimbare_fata_de_2025_zile": 50.7
+   },
+   {
+    "loc": 13,
+    "code": "MM",
+    "name": "Maramureș",
+    "median_y25": 1.1363,
+    "median_nov": 51.7784,
+    "schimbare_fata_de_2025_zile": 50.6
+   },
+   {
+    "loc": 14,
+    "code": "TR",
+    "name": "Teleorman",
+    "median_y25": 2.9429,
+    "median_nov": 53.0514,
+    "schimbare_fata_de_2025_zile": 50.1
+   },
+   {
+    "loc": 15,
+    "code": "PH",
+    "name": "Prahova",
+    "median_y25": 1.8602,
+    "median_nov": 51.9118,
+    "schimbare_fata_de_2025_zile": 50.1
+   },
+   {
+    "loc": 16,
+    "code": "BH",
+    "name": "Bihor",
+    "median_y25": 3.3297,
+    "median_nov": 53.0397,
+    "schimbare_fata_de_2025_zile": 49.7
+   },
+   {
+    "loc": 17,
+    "code": "NT",
+    "name": "Neamț",
+    "median_y25": 1.0889,
+    "median_nov": 50.2177,
+    "schimbare_fata_de_2025_zile": 49.1
+   },
+   {
+    "loc": 18,
+    "code": "SM",
+    "name": "Satu Mare",
+    "median_y25": 3.897,
+    "median_nov": 52.9739,
+    "schimbare_fata_de_2025_zile": 49.1
+   },
+   {
+    "loc": 19,
+    "code": "SJ",
+    "name": "Sălaj",
+    "median_y25": 0.972,
+    "median_nov": 50.0923,
+    "schimbare_fata_de_2025_zile": 49.1
+   },
+   {
+    "loc": 20,
+    "code": "MH",
+    "name": "Mehedinți",
+    "median_y25": 3.9219,
+    "median_nov": 52.9864,
+    "schimbare_fata_de_2025_zile": 49.1
+   },
+   {
+    "loc": 21,
+    "code": "GJ",
+    "name": "Gorj",
+    "median_y25": 1.0994,
+    "median_nov": 50.0671,
+    "schimbare_fata_de_2025_zile": 49.0
+   },
+   {
+    "loc": 22,
+    "code": "AG",
+    "name": "Argeș",
+    "median_y25": 1.1478,
+    "median_nov": 50.0999,
+    "schimbare_fata_de_2025_zile": 49.0
+   },
+   {
+    "loc": 23,
+    "code": "BC",
+    "name": "Bacău",
+    "median_y25": 1.1124,
+    "median_nov": 50.1046,
+    "schimbare_fata_de_2025_zile": 49.0
+   },
+   {
+    "loc": 24,
+    "code": "VL",
+    "name": "Vâlcea",
+    "median_y25": 1.1587,
+    "median_nov": 50.0193,
+    "schimbare_fata_de_2025_zile": 48.9
+   },
+   {
+    "loc": 25,
+    "code": "AB",
+    "name": "Alba",
+    "median_y25": 1.0569,
+    "median_nov": 49.9938,
+    "schimbare_fata_de_2025_zile": 48.9
+   },
+   {
+    "loc": 26,
+    "code": "BZ",
+    "name": "Buzău",
+    "median_y25": 1.245,
+    "median_nov": 50.1414,
+    "schimbare_fata_de_2025_zile": 48.9
+   },
+   {
+    "loc": 27,
+    "code": "DJ",
+    "name": "Dolj",
+    "median_y25": 3.1523,
+    "median_nov": 51.9473,
+    "schimbare_fata_de_2025_zile": 48.8
+   },
+   {
+    "loc": 28,
+    "code": "CL",
+    "name": "Călărași",
+    "median_y25": 1.2384,
+    "median_nov": 50.0688,
+    "schimbare_fata_de_2025_zile": 48.8
+   },
+   {
+    "loc": 29,
+    "code": "HD",
+    "name": "Hunedoara",
+    "median_y25": 1.2079,
+    "median_nov": 49.927,
+    "schimbare_fata_de_2025_zile": 48.7
+   },
+   {
+    "loc": 30,
+    "code": "DB",
+    "name": "Dâmbovița",
+    "median_y25": 1.7337,
+    "median_nov": 49.9817,
+    "schimbare_fata_de_2025_zile": 48.2
+   },
+   {
+    "loc": 31,
+    "code": "IS",
+    "name": "Iași",
+    "median_y25": 1.9678,
+    "median_nov": 50.1549,
+    "schimbare_fata_de_2025_zile": 48.2
+   },
+   {
+    "loc": 32,
+    "code": "CS",
+    "name": "Caraș-Severin",
+    "median_y25": 1.9224,
+    "median_nov": 49.9864,
+    "schimbare_fata_de_2025_zile": 48.1
+   },
+   {
+    "loc": 33,
+    "code": "BR",
+    "name": "Brăila",
+    "median_y25": 1.2856,
+    "median_nov": 49.0962,
+    "schimbare_fata_de_2025_zile": 47.8
+   },
+   {
+    "loc": 34,
+    "code": "GR",
+    "name": "Giurgiu",
+    "median_y25": 2.7144,
+    "median_nov": 49.9997,
+    "schimbare_fata_de_2025_zile": 47.3
+   },
+   {
+    "loc": 35,
+    "code": "MS",
+    "name": "Mureș",
+    "median_y25": 2.8923,
+    "median_nov": 49.9905,
+    "schimbare_fata_de_2025_zile": 47.1
+   },
+   {
+    "loc": 36,
+    "code": "GL",
+    "name": "Galați",
+    "median_y25": 3.0587,
+    "median_nov": 49.8321,
+    "schimbare_fata_de_2025_zile": 46.8
+   },
+   {
+    "loc": 37,
+    "code": "TM",
+    "name": "Timiș",
+    "median_y25": 3.0554,
+    "median_nov": 49.7857,
+    "schimbare_fata_de_2025_zile": 46.7
+   },
+   {
+    "loc": 38,
+    "code": "TL",
+    "name": "Tulcea",
+    "median_y25": 4.2215,
+    "median_nov": 50.1791,
+    "schimbare_fata_de_2025_zile": 46.0
+   },
+   {
+    "loc": 39,
+    "code": "IF",
+    "name": "Ilfov",
+    "median_y25": 3.9345,
+    "median_nov": 49.1226,
+    "schimbare_fata_de_2025_zile": 45.2
+   },
+   {
+    "loc": 40,
+    "code": "BV",
+    "name": "Brașov",
+    "median_y25": 5.698,
+    "median_nov": 50.9355,
+    "schimbare_fata_de_2025_zile": 45.2
+   },
+   {
+    "loc": 41,
+    "code": "CT",
+    "name": "Constanța",
+    "median_y25": 5.1296,
+    "median_nov": 49.1068,
+    "schimbare_fata_de_2025_zile": 44.0
+   },
+   {
+    "loc": 42,
+    "code": "B",
+    "name": "Municipiul București",
+    "median_y25": 4.6858,
+    "median_nov": 47.9493,
+    "schimbare_fata_de_2025_zile": 43.3
+   }
+  ]
+ },
+ "rang_volum_2026": {
+  "meta": "Ponderea oficiului în toate deciziile din 2026.",
+  "columns": [
+   "loc",
+   "code",
+   "name",
+   "pondere_decizii_2026_pct"
+  ],
+  "rows": [
+   {
+    "loc": 1,
+    "code": "B",
+    "name": "Municipiul București",
+    "pondere_decizii_2026_pct": 23.24
+   },
+   {
+    "loc": 2,
+    "code": "IF",
+    "name": "Ilfov",
+    "pondere_decizii_2026_pct": 5.6
+   },
+   {
+    "loc": 3,
+    "code": "CJ",
+    "name": "Cluj",
+    "pondere_decizii_2026_pct": 5.08
+   },
+   {
+    "loc": 4,
+    "code": "TM",
+    "name": "Timiș",
+    "pondere_decizii_2026_pct": 4.62
+   },
+   {
+    "loc": 5,
+    "code": "CT",
+    "name": "Constanța",
+    "pondere_decizii_2026_pct": 3.86
+   },
+   {
+    "loc": 6,
+    "code": "IS",
+    "name": "Iași",
+    "pondere_decizii_2026_pct": 3.71
+   },
+   {
+    "loc": 7,
+    "code": "BV",
+    "name": "Brașov",
+    "pondere_decizii_2026_pct": 3.58
+   },
+   {
+    "loc": 8,
+    "code": "BH",
+    "name": "Bihor",
+    "pondere_decizii_2026_pct": 3.4
+   },
+   {
+    "loc": 9,
+    "code": "PH",
+    "name": "Prahova",
+    "pondere_decizii_2026_pct": 2.94
+   },
+   {
+    "loc": 10,
+    "code": "AG",
+    "name": "Argeș",
+    "pondere_decizii_2026_pct": 2.54
+   },
+   {
+    "loc": 11,
+    "code": "DJ",
+    "name": "Dolj",
+    "pondere_decizii_2026_pct": 2.51
+   },
+   {
+    "loc": 12,
+    "code": "SB",
+    "name": "Sibiu",
+    "pondere_decizii_2026_pct": 2.37
+   },
+   {
+    "loc": 13,
+    "code": "GL",
+    "name": "Galați",
+    "pondere_decizii_2026_pct": 2.07
+   },
+   {
+    "loc": 14,
+    "code": "MS",
+    "name": "Mureș",
+    "pondere_decizii_2026_pct": 2.06
+   },
+   {
+    "loc": 15,
+    "code": "MM",
+    "name": "Maramureș",
+    "pondere_decizii_2026_pct": 1.97
+   },
+   {
+    "loc": 16,
+    "code": "AR",
+    "name": "Arad",
+    "pondere_decizii_2026_pct": 1.94
+   },
+   {
+    "loc": 17,
+    "code": "SV",
+    "name": "Suceava",
+    "pondere_decizii_2026_pct": 1.92
+   },
+   {
+    "loc": 18,
+    "code": "BC",
+    "name": "Bacău",
+    "pondere_decizii_2026_pct": 1.88
+   },
+   {
+    "loc": 19,
+    "code": "DB",
+    "name": "Dâmbovița",
+    "pondere_decizii_2026_pct": 1.65
+   },
+   {
+    "loc": 20,
+    "code": "AB",
+    "name": "Alba",
+    "pondere_decizii_2026_pct": 1.46
+   },
+   {
+    "loc": 21,
+    "code": "HD",
+    "name": "Hunedoara",
+    "pondere_decizii_2026_pct": 1.45
+   },
+   {
+    "loc": 22,
+    "code": "BZ",
+    "name": "Buzău",
+    "pondere_decizii_2026_pct": 1.36
+   },
+   {
+    "loc": 23,
+    "code": "NT",
+    "name": "Neamț",
+    "pondere_decizii_2026_pct": 1.33
+   },
+   {
+    "loc": 24,
+    "code": "VL",
+    "name": "Vâlcea",
+    "pondere_decizii_2026_pct": 1.27
+   },
+   {
+    "loc": 25,
+    "code": "SM",
+    "name": "Satu Mare",
+    "pondere_decizii_2026_pct": 1.16
+   },
+   {
+    "loc": 26,
+    "code": "BN",
+    "name": "Bistrița-Năsăud",
+    "pondere_decizii_2026_pct": 1.12
+   },
+   {
+    "loc": 27,
+    "code": "VN",
+    "name": "Vrancea",
+    "pondere_decizii_2026_pct": 1.1
+   },
+   {
+    "loc": 28,
+    "code": "HR",
+    "name": "Harghita",
+    "pondere_decizii_2026_pct": 1.04
+   },
+   {
+    "loc": 29,
+    "code": "GJ",
+    "name": "Gorj",
+    "pondere_decizii_2026_pct": 1.01
+   },
+   {
+    "loc": 30,
+    "code": "OT",
+    "name": "Olt",
+    "pondere_decizii_2026_pct": 1.01
+   },
+   {
+    "loc": 31,
+    "code": "SJ",
+    "name": "Sălaj",
+    "pondere_decizii_2026_pct": 0.91
+   },
+   {
+    "loc": 32,
+    "code": "BR",
+    "name": "Brăila",
+    "pondere_decizii_2026_pct": 0.91
+   },
+   {
+    "loc": 33,
+    "code": "VS",
+    "name": "Vaslui",
+    "pondere_decizii_2026_pct": 0.9
+   },
+   {
+    "loc": 34,
+    "code": "TL",
+    "name": "Tulcea",
+    "pondere_decizii_2026_pct": 0.89
+   },
+   {
+    "loc": 35,
+    "code": "GR",
+    "name": "Giurgiu",
+    "pondere_decizii_2026_pct": 0.89
+   },
+   {
+    "loc": 36,
+    "code": "BT",
+    "name": "Botoșani",
+    "pondere_decizii_2026_pct": 0.85
+   },
+   {
+    "loc": 37,
+    "code": "TR",
+    "name": "Teleorman",
+    "pondere_decizii_2026_pct": 0.84
+   },
+   {
+    "loc": 38,
+    "code": "CL",
+    "name": "Călărași",
+    "pondere_decizii_2026_pct": 0.82
+   },
+   {
+    "loc": 39,
+    "code": "IL",
+    "name": "Ialomița",
+    "pondere_decizii_2026_pct": 0.77
+   },
+   {
+    "loc": 40,
+    "code": "CS",
+    "name": "Caraș-Severin",
+    "pondere_decizii_2026_pct": 0.69
+   },
+   {
+    "loc": 41,
+    "code": "CV",
+    "name": "Covasna",
+    "pondere_decizii_2026_pct": 0.66
+   },
+   {
+    "loc": 42,
+    "code": "MH",
+    "name": "Mehedinți",
+    "pondere_decizii_2026_pct": 0.63
+   }
+  ]
+ }
+}

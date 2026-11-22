@@ -1,0 +1,348 @@
+{
+ "n_sample": 100,
+ "seed": 20261122,
+ "L_H": {
+  "exact_set_accuracy": 0.55,
+  "exact_ci95": [
+   0.452,
+   0.644
+  ],
+  "any_overlap": 0.82,
+  "any_overlap_ci95": [
+   0.733,
+   0.883
+  ],
+  "mean_jaccard": 0.684,
+  "micro_precision": 0.761,
+  "micro_recall": 0.734,
+  "label_level_accuracy": 0.9408,
+  "per_category": {
+   "ACT": {
+    "n_true": 21,
+    "n_pred": 23,
+    "precision": 0.739,
+    "recall": 0.81
+   },
+   "ASOC_ID": {
+    "n_true": 18,
+    "n_pred": 16,
+    "precision": 0.688,
+    "recall": 0.611
+   },
+   "BEN_REAL": {
+    "n_true": 3,
+    "n_pred": 4,
+    "precision": 0.75,
+    "recall": 1.0
+   },
+   "CAEN": {
+    "n_true": 32,
+    "n_pred": 26,
+    "precision": 0.846,
+    "recall": 0.688
+   },
+   "CAPITAL": {
+    "n_true": 13,
+    "n_pred": 12,
+    "precision": 1.0,
+    "recall": 0.923
+   },
+   "CERERE": {
+    "n_true": 12,
+    "n_pred": 19,
+    "precision": 0.368,
+    "recall": 0.583
+   },
+   "INSTIT": {
+    "n_true": 11,
+    "n_pred": 7,
+    "precision": 0.857,
+    "recall": 0.545
+   },
+   "NESPEC": {
+    "n_true": 0,
+    "n_pred": 0,
+    "precision": null,
+    "recall": null
+   },
+   "SEDIU": {
+    "n_true": 14,
+    "n_pred": 14,
+    "precision": 0.929,
+    "recall": 0.929
+   },
+   "SEMN": {
+    "n_true": 6,
+    "n_pred": 5,
+    "precision": 0.8,
+    "recall": 0.667
+   },
+   "SOLICITANT": {
+    "n_true": 11,
+    "n_pred": 11,
+    "precision": 0.818,
+    "recall": 0.818
+   },
+   "TARIF": {
+    "n_true": 2,
+    "n_pred": 1,
+    "precision": 1.0,
+    "recall": 0.5
+   }
+  }
+ },
+ "L_C": {
+  "exact_set_accuracy": 0.45,
+  "exact_ci95": [
+   0.356,
+   0.548
+  ],
+  "any_overlap": 0.77,
+  "any_overlap_ci95": [
+   0.678,
+   0.842
+  ],
+  "mean_jaccard": 0.607,
+  "micro_precision": 0.679,
+  "micro_recall": 0.65,
+  "label_level_accuracy": 0.9217,
+  "per_category": {
+   "ACT": {
+    "n_true": 21,
+    "n_pred": 16,
+    "precision": 0.812,
+    "recall": 0.619
+   },
+   "ASOC_ID": {
+    "n_true": 18,
+    "n_pred": 16,
+    "precision": 0.562,
+    "recall": 0.5
+   },
+   "BEN_REAL": {
+    "n_true": 3,
+    "n_pred": 3,
+    "precision": 0.667,
+    "recall": 0.667
+   },
+   "CAEN": {
+    "n_true": 32,
+    "n_pred": 30,
+    "precision": 0.7,
+    "recall": 0.656
+   },
+   "CAPITAL": {
+    "n_true": 13,
+    "n_pred": 12,
+    "precision": 1.0,
+    "recall": 0.923
+   },
+   "CERERE": {
+    "n_true": 12,
+    "n_pred": 22,
+    "precision": 0.318,
+    "recall": 0.583
+   },
+   "INSTIT": {
+    "n_true": 11,
+    "n_pred": 9,
+    "precision": 0.667,
+    "recall": 0.545
+   },
+   "NESPEC": {
+    "n_true": 0,
+    "n_pred": 0,
+    "precision": null,
+    "recall": null
+   },
+   "SEDIU": {
+    "n_true": 14,
+    "n_pred": 11,
+    "precision": 1.0,
+    "recall": 0.786
+   },
+   "SEMN": {
+    "n_true": 6,
+    "n_pred": 3,
+    "precision": 1.0,
+    "recall": 0.5
+   },
+   "SOLICITANT": {
+    "n_true": 11,
+    "n_pred": 14,
+    "precision": 0.571,
+    "recall": 0.727
+   },
+   "TARIF": {
+    "n_true": 2,
+    "n_pred": 1,
+    "precision": 1.0,
+    "recall": 0.5
+   }
+  }
+ },
+ "L_R": {
+  "exact_set_accuracy": 0.43,
+  "exact_ci95": [
+   0.337,
+   0.528
+  ],
+  "any_overlap": 0.9,
+  "any_overlap_ci95": [
+   0.826,
+   0.945
+  ],
+  "mean_jaccard": 0.671,
+  "micro_precision": 0.656,
+  "micro_recall": 0.881,
+  "label_level_accuracy": 0.9333,
+  "per_category": {
+   "ACT": {
+    "n_true": 21,
+    "n_pred": 34,
+    "precision": 0.618,
+    "recall": 1.0
+   },
+   "ASOC_ID": {
+    "n_true": 18,
+    "n_pred": 20,
+    "precision": 0.7,
+    "recall": 0.778
+   },
+   "BEN_REAL": {
+    "n_true": 3,
+    "n_pred": 4,
+    "precision": 0.75,
+    "recall": 1.0
+   },
+   "CAEN": {
+    "n_true": 32,
+    "n_pred": 33,
+    "precision": 0.879,
+    "recall": 0.906
+   },
+   "CAPITAL": {
+    "n_true": 13,
+    "n_pred": 15,
+    "precision": 0.867,
+    "recall": 1.0
+   },
+   "CERERE": {
+    "n_true": 12,
+    "n_pred": 29,
+    "precision": 0.31,
+    "recall": 0.75
+   },
+   "INSTIT": {
+    "n_true": 11,
+    "n_pred": 8,
+    "precision": 0.875,
+    "recall": 0.636
+   },
+   "NESPEC": {
+    "n_true": 0,
+    "n_pred": 0,
+    "precision": null,
+    "recall": null
+   },
+   "SEDIU": {
+    "n_true": 14,
+    "n_pred": 18,
+    "precision": 0.778,
+    "recall": 1.0
+   },
+   "SEMN": {
+    "n_true": 6,
+    "n_pred": 14,
+    "precision": 0.357,
+    "recall": 0.833
+   },
+   "SOLICITANT": {
+    "n_true": 11,
+    "n_pred": 12,
+    "precision": 0.75,
+    "recall": 0.818
+   },
+   "TARIF": {
+    "n_true": 2,
+    "n_pred": 2,
+    "precision": 1.0,
+    "recall": 1.0
+   }
+  }
+ },
+ "nespec_predicted_in_sample": 5,
+ "nespec_manual_in_sample": 0,
+ "avoidable_strict_sample": {
+  "manual": 0.27,
+  "predicted": 0.26,
+  "agreement": 0.89,
+  "table": {
+   "both": 21,
+   "manual_only": 6,
+   "pred_only": 5,
+   "neither": 68
+  }
+ },
+ "avoidable_any_sample": {
+  "manual": 0.47,
+  "predicted": 0.46,
+  "agreement": 0.79,
+  "table": {
+   "both": 36,
+   "manual_only": 11,
+   "pred_only": 10,
+   "neither": 43
+  }
+ },
+ "category_share_sample_pred_vs_manual": {
+  "ACT": [
+   0.23,
+   0.21
+  ],
+  "ASOC_ID": [
+   0.16,
+   0.18
+  ],
+  "BEN_REAL": [
+   0.04,
+   0.03
+  ],
+  "CAEN": [
+   0.26,
+   0.32
+  ],
+  "CAPITAL": [
+   0.12,
+   0.13
+  ],
+  "CERERE": [
+   0.19,
+   0.12
+  ],
+  "INSTIT": [
+   0.07,
+   0.11
+  ],
+  "NESPEC": [
+   0.0,
+   0.0
+  ],
+  "SEDIU": [
+   0.14,
+   0.14
+  ],
+  "SEMN": [
+   0.05,
+   0.06
+  ],
+  "SOLICITANT": [
+   0.11,
+   0.11
+  ],
+  "TARIF": [
+   0.01,
+   0.02
+  ]
+ }
+}

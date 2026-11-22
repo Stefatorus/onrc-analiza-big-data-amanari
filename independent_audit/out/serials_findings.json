@@ -1,0 +1,87 @@
+{
+ "_meta": "Analiza contorului numerelor de cerere (reserves_check/), consolidată. Valorile sunt citite din ieșirile analizei.",
+ "counter": {
+  "national_since": "2024-07-26",
+  "resets_yearly": true,
+  "berc_coverage_of_numbers_h1_2026": 0.202,
+  "total_numbers_per_wd_jan_jul_2026": 21057,
+  "portal_same_counter": true
+ },
+ "inflow": {
+  "h1_2026_berc_per_wd": 4369,
+  "may_jul": {
+   "per_wd": 4430
+  },
+  "aug_oct": {
+   "per_wd": 6840,
+   "lo": 6520,
+   "hi": 7168
+  },
+  "sep": {
+   "per_wd": 10881,
+   "lo": 10123,
+   "hi": 11588
+  },
+  "oct": {
+   "per_wd": 4129
+  },
+  "nov": {
+   "per_wd": 3039
+  },
+  "note": "sept.–nov. din eșantion ponderat; exclud înmatriculările în curs (subestimare de circa 400–600/zi)"
+ },
+ "stock": {
+  "2026-10-30": {
+   "central": 214036,
+   "lo": 199648,
+   "hi": 226309,
+   "upper_variant": 234186
+  },
+  "2026-11-06": {
+   "central": 203388,
+   "lo": 191918,
+   "hi": 215616,
+   "upper_variant": 224277
+  },
+  "2026-11-20": {
+   "central": 192670,
+   "lo": 180508,
+   "hi": 204308,
+   "upper_variant": 215047
+  }
+ },
+ "inmatric_pending_little": 18514,
+ "stages_at_harvest": {
+  "stage1": 90002,
+  "stage2": 102667,
+  "share_stage1": 0.467
+ },
+ "april27": {
+  "share_at_3_working_days": {
+   "CERERE265": 0.567,
+   "INMATRIC265": 0.498,
+   "AUTO_AMANARI": 0.725
+  },
+  "p05_wait_hours_before": 23.9,
+  "p05_wait_hours_after": 70.0
+ },
+ "order": {
+  "kendall_tau": 0.429,
+  "fast_rejected": 0.009,
+  "all_rejected": 0.09,
+  "fast_pfa": 0.129,
+  "all_pfa": 0.206
+ },
+ "refiling": {
+  "after_rejection": {
+   "30": 0.4384,
+   "90": 0.6908,
+   "365": 0.8437
+  },
+  "after_admission": {
+   "30": 0.1442,
+   "90": 0.2348,
+   "365": 0.4887
+  }
+ }
+}

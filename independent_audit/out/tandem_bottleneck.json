@@ -1,0 +1,2418 @@
+{
+  "meta": {
+    "archive_path": "W:\\SOLOResearch\\analysis_decisions.pkl",
+    "raw_rows": 4077510,
+    "dedup_rows": 4074009,
+    "max_res": "2026-11-20 17:21:10",
+    "generated_at": "2026-11-21T18:20:39"
+  },
+  "mj_tandem_conservation": {
+    "oct30": {
+      "s1": 114360,
+      "s2": 93958,
+      "total": 208318,
+      "s1_share_pct": 54.9
+    },
+    "nov06": {
+      "s1": 106060,
+      "s2": 98354,
+      "total": 204414,
+      "s1_share_pct": 51.88
+    },
+    "delta": {
+      "s1": -8300,
+      "s2": 4396,
+      "total": -3904,
+      "wd": 5,
+      "d_s1_wd": -1660.0,
+      "d_s2_wd": 879.2,
+      "d_tot_wd": -780.8
+    },
+    "berc_2_6_nov": {
+      "finals": 22048,
+      "auto_amanari": 5161,
+      "distinct_fam": 26386,
+      "all_fam": 27209
+    },
+    "conventions": {
+      "strict_finals": {
+        "label": "BERC strict finals (CERERE265 + INMATRIC265)",
+        "o2_week": 22048,
+        "o1_week": 26444,
+        "i_week": 18144,
+        "o2_wd": 4409.6,
+        "o1_wd": 5288.8,
+        "i_wd": 3628.8,
+        "o1_minus_o2_wd": 879.2,
+        "o1_over_o2": 1.1994,
+        "o1_premium_pct": 19.94,
+        "optimal_shift_delta_wd": 439.6,
+        "cannibalization_breakeven_delta_wd": 879.2,
+        "s1_drain_wd_at_nov_rate": 63.9,
+        "s1_stock_wd_at_o1": 20.1,
+        "s2_stock_wd_at_o2": 22.3
+      },
+      "distinct_dossiers_fam": {
+        "label": "BERC distinct dossiers (finals + postponements)",
+        "o2_week": 26386,
+        "o1_week": 30782,
+        "i_week": 22482,
+        "o2_wd": 5277.2,
+        "o1_wd": 6156.4,
+        "i_wd": 4496.4,
+        "o1_minus_o2_wd": 879.2,
+        "o1_over_o2": 1.1666,
+        "o1_premium_pct": 16.66,
+        "optimal_shift_delta_wd": 439.6,
+        "cannibalization_breakeven_delta_wd": 879.2,
+        "s1_drain_wd_at_nov_rate": 63.9,
+        "s1_stock_wd_at_o1": 17.2,
+        "s2_stock_wd_at_o2": 18.6
+      },
+      "all_decisions_fam": {
+        "label": "BERC all decisions (finals + postponements, MJ CLAIM-24 def.)",
+        "o2_week": 27209,
+        "o1_week": 31605,
+        "i_week": 23305,
+        "o2_wd": 5441.8,
+        "o1_wd": 6321.0,
+        "i_wd": 4661.0,
+        "o1_minus_o2_wd": 879.2,
+        "o1_over_o2": 1.1616,
+        "o1_premium_pct": 16.16,
+        "optimal_shift_delta_wd": 439.6,
+        "cannibalization_breakeven_delta_wd": 879.2,
+        "s1_drain_wd_at_nov_rate": 63.9,
+        "s1_stock_wd_at_o1": 16.8,
+        "s2_stock_wd_at_o2": 18.1
+      }
+    }
+  },
+  "weekly_oct_nov_2026": [
+    {
+      "window": "2026-10-05..09",
+      "wd": 5,
+      "cer": 19419,
+      "inm": 1713,
+      "finals": 21132,
+      "am": 4863,
+      "finals_wd": 4226.4,
+      "inm_wd": 342.6,
+      "fam_wd": 5199.0,
+      "inm_share_pct": 8.11,
+      "cer_med_d": 30.88,
+      "inm_med_d": 30.64
+    },
+    {
+      "window": "2026-10-12..16",
+      "wd": 5,
+      "cer": 20245,
+      "inm": 1693,
+      "finals": 21938,
+      "am": 4852,
+      "finals_wd": 4387.6,
+      "inm_wd": 338.6,
+      "fam_wd": 5358.0,
+      "inm_share_pct": 7.72,
+      "cer_med_d": 34.92,
+      "inm_med_d": 33.96
+    },
+    {
+      "window": "2026-10-19..23",
+      "wd": 5,
+      "cer": 18884,
+      "inm": 1782,
+      "finals": 20666,
+      "am": 4630,
+      "finals_wd": 4133.2,
+      "inm_wd": 356.4,
+      "fam_wd": 5059.2,
+      "inm_share_pct": 8.62,
+      "cer_med_d": 38.98,
+      "inm_med_d": 34.76
+    },
+    {
+      "window": "2026-10-26..30",
+      "wd": 5,
+      "cer": 16966,
+      "inm": 1711,
+      "finals": 18677,
+      "am": 4253,
+      "finals_wd": 3735.4,
+      "inm_wd": 342.2,
+      "fam_wd": 4586.0,
+      "inm_share_pct": 9.16,
+      "cer_med_d": 43.12,
+      "inm_med_d": 30.91
+    },
+    {
+      "window": "2026-11-02..06 (MJ wk)",
+      "wd": 5,
+      "cer": 19744,
+      "inm": 2304,
+      "finals": 22048,
+      "am": 5161,
+      "finals_wd": 4409.6,
+      "inm_wd": 460.8,
+      "fam_wd": 5441.8,
+      "inm_share_pct": 10.45,
+      "cer_med_d": 48.98,
+      "inm_med_d": 37.9
+    },
+    {
+      "window": "2026-11-09..13",
+      "wd": 5,
+      "cer": 18282,
+      "inm": 3897,
+      "finals": 22179,
+      "am": 5983,
+      "finals_wd": 4435.8,
+      "inm_wd": 779.4,
+      "fam_wd": 5632.4,
+      "inm_share_pct": 17.57,
+      "cer_med_d": 54.13,
+      "inm_med_d": 43.62
+    },
+    {
+      "window": "2026-11-16..19 (4 full wd)",
+      "wd": 4,
+      "cer": 14765,
+      "inm": 3390,
+      "finals": 18155,
+      "am": 4697,
+      "finals_wd": 4538.8,
+      "inm_wd": 847.5,
+      "fam_wd": 5713.0,
+      "inm_share_pct": 18.67,
+      "cer_med_d": 57.1,
+      "inm_med_d": 41.06
+    },
+    {
+      "window": "2026-11-20 (partial Fri)",
+      "wd": 1,
+      "cer": 801,
+      "inm": 91,
+      "finals": 892,
+      "am": 1101,
+      "finals_wd": 892.0,
+      "inm_wd": 91.0,
+      "fam_wd": 1993.0,
+      "inm_share_pct": 10.2,
+      "cer_med_d": 56.95,
+      "inm_med_d": 38.89
+    }
+  ],
+  "season_matched_c1_series": [
+    {
+      "window": "Oct-Nov 2023 (1 Oct - 20 Nov)",
+      "finals": 105681,
+      "cal_workdays": 36,
+      "finals_per_wd": 2935.6
+    },
+    {
+      "window": "Oct-Nov 2024 (1 Oct - 20 Nov)",
+      "finals": 128576,
+      "cal_workdays": 37,
+      "finals_per_wd": 3475.0
+    },
+    {
+      "window": "Feb-Mar 2025 (peak, 1 Feb - 31 Mar)",
+      "finals": 205254,
+      "cal_workdays": 41,
+      "finals_per_wd": 5006.2
+    },
+    {
+      "window": "Oct-Nov 2025 (1 Oct - 20 Nov)",
+      "finals": 141172,
+      "cal_workdays": 37,
+      "finals_per_wd": 3815.5
+    },
+    {
+      "window": "Oct-Nov 2026 (1 Oct - 20 Nov)",
+      "finals": 154324,
+      "cal_workdays": 37,
+      "finals_per_wd": 4170.9
+    },
+    {
+      "window": "Oct-Nov 2026 (1 Oct - 19 Nov, full days)",
+      "finals": 153432,
+      "cal_workdays": 36,
+      "finals_per_wd": 4262.0
+    }
+  ],
+  "monthly_county_spread": {
+    "CERERE265": [
+      {
+        "app_ym": "2025-01",
+        "n": 73915,
+        "nat_med_d": 3.05,
+        "ex_min": -0.85,
+        "ex_p10": -0.36,
+        "ex_iqr": 0.29,
+        "ex_p90": 1.15,
+        "ex_max": 4.72,
+        "ex_p90_p10": 1.51,
+        "n_counties_gt_1d": 6,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "AB",
+        "slowest": "CT"
+      },
+      {
+        "app_ym": "2025-02",
+        "n": 92778,
+        "nat_med_d": 4.96,
+        "ex_min": -2.36,
+        "ex_p10": -2.22,
+        "ex_iqr": 1.79,
+        "ex_p90": 3.78,
+        "ex_max": 10.74,
+        "ex_p90_p10": 6.0,
+        "n_counties_gt_1d": 7,
+        "n_counties_lt_neg1d": 26,
+        "fastest": "VL",
+        "slowest": "CT"
+      },
+      {
+        "app_ym": "2025-03",
+        "n": 92080,
+        "nat_med_d": 6.01,
+        "ex_min": -4.81,
+        "ex_p10": -4.24,
+        "ex_iqr": 3.23,
+        "ex_p90": 5.27,
+        "ex_max": 13.98,
+        "ex_p90_p10": 9.51,
+        "n_counties_gt_1d": 9,
+        "n_counties_lt_neg1d": 27,
+        "fastest": "AB",
+        "slowest": "CT"
+      },
+      {
+        "app_ym": "2025-04",
+        "n": 68729,
+        "nat_med_d": 6.1,
+        "ex_min": -4.84,
+        "ex_p10": -4.25,
+        "ex_iqr": 4.14,
+        "ex_p90": 6.48,
+        "ex_max": 13.71,
+        "ex_p90_p10": 10.73,
+        "n_counties_gt_1d": 9,
+        "n_counties_lt_neg1d": 26,
+        "fastest": "AB",
+        "slowest": "CT"
+      },
+      {
+        "app_ym": "2025-05",
+        "n": 69160,
+        "nat_med_d": 2.89,
+        "ex_min": -0.74,
+        "ex_p10": -0.52,
+        "ex_iqr": 0.32,
+        "ex_p90": 1.79,
+        "ex_max": 5.92,
+        "ex_p90_p10": 2.3,
+        "n_counties_gt_1d": 6,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "SJ",
+        "slowest": "CT"
+      },
+      {
+        "app_ym": "2025-06",
+        "n": 62124,
+        "nat_med_d": 1.82,
+        "ex_min": -0.28,
+        "ex_p10": -0.19,
+        "ex_iqr": 0.09,
+        "ex_p90": 0.7,
+        "ex_max": 3.74,
+        "ex_p90_p10": 0.89,
+        "n_counties_gt_1d": 2,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "SJ",
+        "slowest": "DJ"
+      },
+      {
+        "app_ym": "2025-07",
+        "n": 66106,
+        "nat_med_d": 1.22,
+        "ex_min": -0.21,
+        "ex_p10": -0.11,
+        "ex_iqr": 0.1,
+        "ex_p90": 0.06,
+        "ex_max": 0.43,
+        "ex_p90_p10": 0.17,
+        "n_counties_gt_1d": 0,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "SJ",
+        "slowest": "B"
+      },
+      {
+        "app_ym": "2025-08",
+        "n": 57684,
+        "nat_med_d": 2.01,
+        "ex_min": -0.22,
+        "ex_p10": -0.16,
+        "ex_iqr": 0.13,
+        "ex_p90": 0.1,
+        "ex_max": 1.38,
+        "ex_p90_p10": 0.26,
+        "n_counties_gt_1d": 1,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "SJ",
+        "slowest": "MH"
+      },
+      {
+        "app_ym": "2025-09",
+        "n": 66780,
+        "nat_med_d": 1.32,
+        "ex_min": -0.2,
+        "ex_p10": -0.12,
+        "ex_iqr": 0.1,
+        "ex_p90": 0.07,
+        "ex_max": 1.0,
+        "ex_p90_p10": 0.19,
+        "n_counties_gt_1d": 1,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "SJ",
+        "slowest": "TR"
+      },
+      {
+        "app_ym": "2025-10",
+        "n": 67605,
+        "nat_med_d": 1.23,
+        "ex_min": -0.19,
+        "ex_p10": -0.1,
+        "ex_iqr": 0.1,
+        "ex_p90": 0.07,
+        "ex_max": 0.9,
+        "ex_p90_p10": 0.17,
+        "n_counties_gt_1d": 0,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "SJ",
+        "slowest": "MH"
+      },
+      {
+        "app_ym": "2025-11",
+        "n": 62952,
+        "nat_med_d": 1.23,
+        "ex_min": -0.19,
+        "ex_p10": -0.12,
+        "ex_iqr": 0.07,
+        "ex_p90": 0.07,
+        "ex_max": 0.86,
+        "ex_p90_p10": 0.19,
+        "n_counties_gt_1d": 0,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "SJ",
+        "slowest": "TR"
+      },
+      {
+        "app_ym": "2025-12",
+        "n": 69865,
+        "nat_med_d": 2.95,
+        "ex_min": -0.41,
+        "ex_p10": -0.28,
+        "ex_iqr": 0.23,
+        "ex_p90": 1.67,
+        "ex_max": 5.4,
+        "ex_p90_p10": 1.95,
+        "n_counties_gt_1d": 5,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "VL",
+        "slowest": "GL"
+      },
+      {
+        "app_ym": "2026-01",
+        "n": 69360,
+        "nat_med_d": 3.02,
+        "ex_min": -0.66,
+        "ex_p10": -0.6,
+        "ex_iqr": 0.45,
+        "ex_p90": 0.73,
+        "ex_max": 5.74,
+        "ex_p90_p10": 1.33,
+        "n_counties_gt_1d": 2,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "CL",
+        "slowest": "TR"
+      },
+      {
+        "app_ym": "2026-02",
+        "n": 80563,
+        "nat_med_d": 4.97,
+        "ex_min": -2.13,
+        "ex_p10": -2.06,
+        "ex_iqr": 3.17,
+        "ex_p90": 5.0,
+        "ex_max": 8.8,
+        "ex_p90_p10": 7.06,
+        "n_counties_gt_1d": 12,
+        "n_counties_lt_neg1d": 15,
+        "fastest": "VL",
+        "slowest": "GL"
+      },
+      {
+        "app_ym": "2026-03",
+        "n": 83365,
+        "nat_med_d": 5.17,
+        "ex_min": -3.06,
+        "ex_p10": -2.88,
+        "ex_iqr": 7.34,
+        "ex_p90": 11.96,
+        "ex_max": 24.09,
+        "ex_p90_p10": 14.84,
+        "n_counties_gt_1d": 16,
+        "n_counties_lt_neg1d": 19,
+        "fastest": "AG",
+        "slowest": "TR"
+      },
+      {
+        "app_ym": "2026-04",
+        "n": 65001,
+        "nat_med_d": 6.09,
+        "ex_min": -1.92,
+        "ex_p10": -0.76,
+        "ex_iqr": 2.52,
+        "ex_p90": 3.38,
+        "ex_max": 3.86,
+        "ex_p90_p10": 4.14,
+        "n_counties_gt_1d": 14,
+        "n_counties_lt_neg1d": 3,
+        "fastest": "VL",
+        "slowest": "GL"
+      },
+      {
+        "app_ym": "2026-05",
+        "n": 69527,
+        "nat_med_d": 5.11,
+        "ex_min": -0.06,
+        "ex_p10": -0.04,
+        "ex_iqr": 0.03,
+        "ex_p90": 0.03,
+        "ex_max": 1.07,
+        "ex_p90_p10": 0.08,
+        "n_counties_gt_1d": 1,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "BR",
+        "slowest": "DJ"
+      },
+      {
+        "app_ym": "2026-06",
+        "n": 72478,
+        "nat_med_d": 5.13,
+        "ex_min": -0.04,
+        "ex_p10": -0.03,
+        "ex_iqr": 0.02,
+        "ex_p90": 0.08,
+        "ex_max": 1.16,
+        "ex_p90_p10": 0.11,
+        "n_counties_gt_1d": 1,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "GL",
+        "slowest": "CT"
+      },
+      {
+        "app_ym": "2026-07",
+        "n": 80831,
+        "nat_med_d": 7.05,
+        "ex_min": -0.08,
+        "ex_p10": -0.06,
+        "ex_iqr": 0.04,
+        "ex_p90": 0.05,
+        "ex_max": 5.99,
+        "ex_p90_p10": 0.11,
+        "n_counties_gt_1d": 1,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "BT",
+        "slowest": "BN"
+      },
+      {
+        "app_ym": "2026-08",
+        "n": 105941,
+        "nat_med_d": 19.07,
+        "ex_min": -0.64,
+        "ex_p10": -0.17,
+        "ex_iqr": 0.07,
+        "ex_p90": 0.55,
+        "ex_max": 5.21,
+        "ex_p90_p10": 0.72,
+        "n_counties_gt_1d": 4,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "CV",
+        "slowest": "BN"
+      },
+      {
+        "app_ym": "2026-09",
+        "n": 130164,
+        "nat_med_d": 39.09,
+        "ex_min": -0.19,
+        "ex_p10": -0.11,
+        "ex_iqr": 0.09,
+        "ex_p90": 0.07,
+        "ex_max": 6.34,
+        "ex_p90_p10": 0.17,
+        "n_counties_gt_1d": 3,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "CV",
+        "slowest": "PH"
+      }
+    ],
+    "INMATRIC265": [
+      {
+        "app_ym": "2025-01",
+        "n": 10772,
+        "nat_med_d": 3.83,
+        "ex_min": -1.23,
+        "ex_p10": -0.74,
+        "ex_iqr": 0.3,
+        "ex_p90": 1.48,
+        "ex_max": 5.47,
+        "ex_p90_p10": 2.22,
+        "n_counties_gt_1d": 6,
+        "n_counties_lt_neg1d": 2,
+        "fastest": "SJ",
+        "slowest": "CT"
+      },
+      {
+        "app_ym": "2025-02",
+        "n": 13419,
+        "nat_med_d": 5.93,
+        "ex_min": -4.13,
+        "ex_p10": -3.9,
+        "ex_iqr": 2.03,
+        "ex_p90": 4.7,
+        "ex_max": 11.15,
+        "ex_p90_p10": 8.6,
+        "n_counties_gt_1d": 6,
+        "n_counties_lt_neg1d": 31,
+        "fastest": "AR",
+        "slowest": "CT"
+      },
+      {
+        "app_ym": "2025-03",
+        "n": 13563,
+        "nat_med_d": 6.79,
+        "ex_min": -5.29,
+        "ex_p10": -5.05,
+        "ex_iqr": 4.92,
+        "ex_p90": 5.21,
+        "ex_max": 16.08,
+        "ex_p90_p10": 10.26,
+        "n_counties_gt_1d": 10,
+        "n_counties_lt_neg1d": 28,
+        "fastest": "BR",
+        "slowest": "CT"
+      },
+      {
+        "app_ym": "2025-04",
+        "n": 11892,
+        "nat_med_d": 6.85,
+        "ex_min": -5.3,
+        "ex_p10": -5.11,
+        "ex_iqr": 5.4,
+        "ex_p90": 6.95,
+        "ex_max": 14.02,
+        "ex_p90_p10": 12.06,
+        "n_counties_gt_1d": 9,
+        "n_counties_lt_neg1d": 27,
+        "fastest": "VN",
+        "slowest": "CT"
+      },
+      {
+        "app_ym": "2025-05",
+        "n": 13121,
+        "nat_med_d": 3.07,
+        "ex_min": -1.12,
+        "ex_p10": -0.99,
+        "ex_iqr": 0.7,
+        "ex_p90": 1.99,
+        "ex_max": 6.63,
+        "ex_p90_p10": 2.98,
+        "n_counties_gt_1d": 7,
+        "n_counties_lt_neg1d": 4,
+        "fastest": "SJ",
+        "slowest": "CT"
+      },
+      {
+        "app_ym": "2025-06",
+        "n": 12606,
+        "nat_med_d": 2.75,
+        "ex_min": -0.41,
+        "ex_p10": -0.37,
+        "ex_iqr": 0.22,
+        "ex_p90": 0.42,
+        "ex_max": 2.9,
+        "ex_p90_p10": 0.79,
+        "n_counties_gt_1d": 2,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "SJ",
+        "slowest": "DJ"
+      },
+      {
+        "app_ym": "2025-07",
+        "n": 16111,
+        "nat_med_d": 1.69,
+        "ex_min": -0.24,
+        "ex_p10": -0.14,
+        "ex_iqr": 0.14,
+        "ex_p90": 0.52,
+        "ex_max": 0.94,
+        "ex_p90_p10": 0.66,
+        "n_counties_gt_1d": 0,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "SJ",
+        "slowest": "TL"
+      },
+      {
+        "app_ym": "2025-08",
+        "n": 13164,
+        "nat_med_d": 2.94,
+        "ex_min": -0.32,
+        "ex_p10": -0.28,
+        "ex_iqr": 0.2,
+        "ex_p90": 0.76,
+        "ex_max": 2.89,
+        "ex_p90_p10": 1.04,
+        "n_counties_gt_1d": 3,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "CS",
+        "slowest": "MH"
+      },
+      {
+        "app_ym": "2025-09",
+        "n": 16011,
+        "nat_med_d": 1.93,
+        "ex_min": -0.26,
+        "ex_p10": -0.18,
+        "ex_iqr": 0.17,
+        "ex_p90": 0.56,
+        "ex_max": 2.77,
+        "ex_p90_p10": 0.74,
+        "n_counties_gt_1d": 2,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "SJ",
+        "slowest": "TR"
+      },
+      {
+        "app_ym": "2025-10",
+        "n": 17754,
+        "nat_med_d": 1.67,
+        "ex_min": -0.19,
+        "ex_p10": -0.15,
+        "ex_iqr": 0.19,
+        "ex_p90": 0.15,
+        "ex_max": 0.96,
+        "ex_p90_p10": 0.3,
+        "n_counties_gt_1d": 0,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "SJ",
+        "slowest": "MH"
+      },
+      {
+        "app_ym": "2025-11",
+        "n": 16953,
+        "nat_med_d": 1.75,
+        "ex_min": -0.22,
+        "ex_p10": -0.18,
+        "ex_iqr": 0.15,
+        "ex_p90": 0.4,
+        "ex_max": 1.86,
+        "ex_p90_p10": 0.57,
+        "n_counties_gt_1d": 1,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "SJ",
+        "slowest": "TR"
+      },
+      {
+        "app_ym": "2025-12",
+        "n": 12143,
+        "nat_med_d": 3.04,
+        "ex_min": -0.42,
+        "ex_p10": -0.29,
+        "ex_iqr": 0.44,
+        "ex_p90": 0.73,
+        "ex_max": 4.55,
+        "ex_p90_p10": 1.01,
+        "n_counties_gt_1d": 3,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "AB",
+        "slowest": "GL"
+      },
+      {
+        "app_ym": "2026-01",
+        "n": 13415,
+        "nat_med_d": 3.12,
+        "ex_min": -0.88,
+        "ex_p10": -0.84,
+        "ex_iqr": 0.88,
+        "ex_p90": 0.98,
+        "ex_max": 6.26,
+        "ex_p90_p10": 1.82,
+        "n_counties_gt_1d": 3,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "AG",
+        "slowest": "TR"
+      },
+      {
+        "app_ym": "2026-02",
+        "n": 15778,
+        "nat_med_d": 5.83,
+        "ex_min": -4.12,
+        "ex_p10": -2.77,
+        "ex_iqr": 2.97,
+        "ex_p90": 3.91,
+        "ex_max": 13.88,
+        "ex_p90_p10": 6.68,
+        "n_counties_gt_1d": 10,
+        "n_counties_lt_neg1d": 22,
+        "fastest": "AG",
+        "slowest": "GL"
+      },
+      {
+        "app_ym": "2026-03",
+        "n": 16647,
+        "nat_med_d": 5.96,
+        "ex_min": -3.97,
+        "ex_p10": -2.99,
+        "ex_iqr": 6.49,
+        "ex_p90": 10.99,
+        "ex_max": 23.11,
+        "ex_p90_p10": 13.98,
+        "n_counties_gt_1d": 14,
+        "n_counties_lt_neg1d": 21,
+        "fastest": "AB",
+        "slowest": "TR"
+      },
+      {
+        "app_ym": "2026-04",
+        "n": 13353,
+        "nat_med_d": 6.08,
+        "ex_min": -2.75,
+        "ex_p10": -1.08,
+        "ex_iqr": 2.94,
+        "ex_p90": 5.15,
+        "ex_max": 6.83,
+        "ex_p90_p10": 6.23,
+        "n_counties_gt_1d": 13,
+        "n_counties_lt_neg1d": 6,
+        "fastest": "VL",
+        "slowest": "VN"
+      },
+      {
+        "app_ym": "2026-05",
+        "n": 13852,
+        "nat_med_d": 5.44,
+        "ex_min": -0.13,
+        "ex_p10": -0.09,
+        "ex_iqr": 0.1,
+        "ex_p90": 0.11,
+        "ex_max": 0.69,
+        "ex_p90_p10": 0.2,
+        "n_counties_gt_1d": 0,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "BT",
+        "slowest": "DJ"
+      },
+      {
+        "app_ym": "2026-06",
+        "n": 12748,
+        "nat_med_d": 5.72,
+        "ex_min": -0.15,
+        "ex_p10": -0.08,
+        "ex_iqr": 0.05,
+        "ex_p90": 0.07,
+        "ex_max": 2.97,
+        "ex_p90_p10": 0.15,
+        "n_counties_gt_1d": 3,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "CV",
+        "slowest": "CT"
+      },
+      {
+        "app_ym": "2026-07",
+        "n": 13200,
+        "nat_med_d": 7.8,
+        "ex_min": -0.24,
+        "ex_p10": -0.19,
+        "ex_iqr": 0.11,
+        "ex_p90": 0.01,
+        "ex_max": 6.11,
+        "ex_p90_p10": 0.2,
+        "n_counties_gt_1d": 1,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "CL",
+        "slowest": "BN"
+      },
+      {
+        "app_ym": "2026-08",
+        "n": 11547,
+        "nat_med_d": 17.99,
+        "ex_min": -0.72,
+        "ex_p10": -0.26,
+        "ex_iqr": 0.11,
+        "ex_p90": 0.15,
+        "ex_max": 5.98,
+        "ex_p90_p10": 0.41,
+        "n_counties_gt_1d": 3,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "CV",
+        "slowest": "BN"
+      },
+      {
+        "app_ym": "2026-09",
+        "n": 9713,
+        "nat_med_d": 37.83,
+        "ex_min": -0.55,
+        "ex_p10": -0.14,
+        "ex_iqr": 0.16,
+        "ex_p90": 0.22,
+        "ex_max": 3.07,
+        "ex_p90_p10": 0.36,
+        "n_counties_gt_1d": 2,
+        "n_counties_lt_neg1d": 0,
+        "fastest": "BT",
+        "slowest": "BN"
+      }
+    ]
+  },
+  "april_2026_synchronization": {
+    "counties_with_le2d_drop": 41,
+    "total_counties": 42,
+    "pre_le2d_county_median_pct": 13.45,
+    "post_le2d_county_median_pct": 0.96,
+    "mar26_cer_ex_iqr": 7.34,
+    "may26_cer_ex_iqr": 0.03,
+    "sep26_cer_ex_iqr": 0.09,
+    "daily_transition": [
+      {
+        "app_date": "2026-04-14",
+        "dow": "Tue",
+        "n": 2244,
+        "med_d": 5.59,
+        "le2d_pct": 24.55,
+        "ex_iqr": 7.04,
+        "ex_min": -4.58,
+        "ex_max": 8.08
+      },
+      {
+        "app_date": "2026-04-15",
+        "dow": "Wed",
+        "n": 2668,
+        "med_d": 5.11,
+        "le2d_pct": 32.98,
+        "ex_iqr": 6.34,
+        "ex_min": -4.08,
+        "ex_max": 4.01
+      },
+      {
+        "app_date": "2026-04-16",
+        "dow": "Thu",
+        "n": 3239,
+        "med_d": 5.1,
+        "le2d_pct": 24.21,
+        "ex_iqr": 3.27,
+        "ex_min": -4.13,
+        "ex_max": 3.0
+      },
+      {
+        "app_date": "2026-04-17",
+        "dow": "Fri",
+        "n": 2735,
+        "med_d": 5.18,
+        "le2d_pct": 0.15,
+        "ex_iqr": 3.82,
+        "ex_min": -2.22,
+        "ex_max": 2.04
+      },
+      {
+        "app_date": "2026-04-20",
+        "dow": "Mon",
+        "n": 3505,
+        "med_d": 3.89,
+        "le2d_pct": 34.04,
+        "ex_iqr": 2.89,
+        "ex_min": -2.93,
+        "ex_max": 3.93
+      },
+      {
+        "app_date": "2026-04-21",
+        "dow": "Tue",
+        "n": 3642,
+        "med_d": 6.05,
+        "le2d_pct": 10.27,
+        "ex_iqr": 0.05,
+        "ex_min": -0.08,
+        "ex_max": 1.03
+      },
+      {
+        "app_date": "2026-04-22",
+        "dow": "Wed",
+        "n": 3427,
+        "med_d": 6.01,
+        "le2d_pct": 11.76,
+        "ex_iqr": 0.05,
+        "ex_min": -0.06,
+        "ex_max": 0.12
+      },
+      {
+        "app_date": "2026-04-23",
+        "dow": "Thu",
+        "n": 3410,
+        "med_d": 5.88,
+        "le2d_pct": 6.72,
+        "ex_iqr": 0.14,
+        "ex_min": -0.71,
+        "ex_max": 4.8
+      },
+      {
+        "app_date": "2026-04-24",
+        "dow": "Fri",
+        "n": 2611,
+        "med_d": 5.17,
+        "le2d_pct": 0.0,
+        "ex_iqr": 0.07,
+        "ex_min": -0.09,
+        "ex_max": 5.05
+      },
+      {
+        "app_date": "2026-04-27",
+        "dow": "Mon",
+        "n": 3260,
+        "med_d": 3.25,
+        "le2d_pct": 2.21,
+        "ex_iqr": 3.51,
+        "ex_min": -0.19,
+        "ex_max": 4.75
+      },
+      {
+        "app_date": "2026-04-28",
+        "dow": "Tue",
+        "n": 3614,
+        "med_d": 6.67,
+        "le2d_pct": 2.27,
+        "ex_iqr": 0.57,
+        "ex_min": -0.55,
+        "ex_max": 0.39
+      },
+      {
+        "app_date": "2026-04-29",
+        "dow": "Wed",
+        "n": 3528,
+        "med_d": 6.25,
+        "le2d_pct": 1.47,
+        "ex_iqr": 0.55,
+        "ex_min": -0.17,
+        "ex_max": 0.76
+      },
+      {
+        "app_date": "2026-04-30",
+        "dow": "Thu",
+        "n": 3326,
+        "med_d": 6.18,
+        "le2d_pct": 0.03,
+        "ex_iqr": 0.09,
+        "ex_min": -0.11,
+        "ex_max": 0.75
+      },
+      {
+        "app_date": "2026-05-04",
+        "dow": "Mon",
+        "n": 3321,
+        "med_d": 3.2,
+        "le2d_pct": 1.87,
+        "ex_iqr": 0.07,
+        "ex_min": -0.15,
+        "ex_max": 0.92
+      },
+      {
+        "app_date": "2026-05-05",
+        "dow": "Tue",
+        "n": 3499,
+        "med_d": 3.18,
+        "le2d_pct": 1.66,
+        "ex_iqr": 0.12,
+        "ex_min": -0.15,
+        "ex_max": 2.64
+      },
+      {
+        "app_date": "2026-05-06",
+        "dow": "Wed",
+        "n": 3384,
+        "med_d": 5.19,
+        "le2d_pct": 2.22,
+        "ex_iqr": 0.09,
+        "ex_min": -0.1,
+        "ex_max": 0.66
+      },
+      {
+        "app_date": "2026-05-07",
+        "dow": "Thu",
+        "n": 3384,
+        "med_d": 5.13,
+        "le2d_pct": 1.65,
+        "ex_iqr": 0.04,
+        "ex_min": -0.07,
+        "ex_max": 0.11
+      },
+      {
+        "app_date": "2026-05-08",
+        "dow": "Fri",
+        "n": 2911,
+        "med_d": 5.1,
+        "le2d_pct": 0.0,
+        "ex_iqr": 0.05,
+        "ex_min": -0.06,
+        "ex_max": 0.19
+      },
+      {
+        "app_date": "2026-05-11",
+        "dow": "Mon",
+        "n": 3629,
+        "med_d": 3.06,
+        "le2d_pct": 1.68,
+        "ex_iqr": 0.03,
+        "ex_min": -0.06,
+        "ex_max": 0.07
+      },
+      {
+        "app_date": "2026-05-12",
+        "dow": "Tue",
+        "n": 3847,
+        "med_d": 3.14,
+        "le2d_pct": 1.74,
+        "ex_iqr": 0.07,
+        "ex_min": -0.12,
+        "ex_max": 2.73
+      },
+      {
+        "app_date": "2026-05-13",
+        "dow": "Wed",
+        "n": 3452,
+        "med_d": 5.13,
+        "le2d_pct": 2.14,
+        "ex_iqr": 0.06,
+        "ex_min": -0.08,
+        "ex_max": 0.94
+      },
+      {
+        "app_date": "2026-05-14",
+        "dow": "Thu",
+        "n": 3519,
+        "med_d": 5.12,
+        "le2d_pct": 1.51,
+        "ex_iqr": 0.04,
+        "ex_min": -0.06,
+        "ex_max": 1.07
+      },
+      {
+        "app_date": "2026-05-15",
+        "dow": "Fri",
+        "n": 2936,
+        "med_d": 5.12,
+        "le2d_pct": 0.0,
+        "ex_iqr": 0.04,
+        "ex_min": -0.11,
+        "ex_max": 5.09
+      }
+    ]
+  },
+  "county_stage1_exposure": {
+    "n_counties": 42,
+    "live_cer_floor_d": 57.22,
+    "live_cer_all_iqr_d": 0.07,
+    "live_cer_gt14_iqr_d": 0.52,
+    "live_inm_floor_d": 41.24,
+    "live_inm_gt14_iqr_d": 1.07,
+    "nov_cer_floor_d": 53.82,
+    "nov_inm_floor_d": 43.43,
+    "cer_exposed_sep_gt1d": [
+      "PH",
+      "DJ",
+      "BN"
+    ],
+    "cer_exposed_live_ge1_5d": [
+      "PH",
+      "DJ",
+      "BN",
+      "CT"
+    ],
+    "inm_exposed_live_ge2d_all": [
+      "PH",
+      "DJ",
+      "BN",
+      "IL",
+      "NT",
+      "CL",
+      "TL",
+      "VN",
+      "BH",
+      "SB"
+    ],
+    "inm_exposed_nov_ge2d_n50": [
+      "NT",
+      "CL",
+      "TL",
+      "BH",
+      "SB"
+    ],
+    "top_lagging_cer_sep": {
+      "PH": {
+        "ex_sep26_cer": 6.63,
+        "live_cer_gt14": 61.09,
+        "sep16_22_rel_comp": 0.76
+      },
+      "DJ": {
+        "ex_sep26_cer": 5.05,
+        "live_cer_gt14": 61.06,
+        "sep16_22_rel_comp": 0.55
+      },
+      "BN": {
+        "ex_sep26_cer": 4.96,
+        "live_cer_gt14": 61.04,
+        "sep16_22_rel_comp": 1.01
+      },
+      "CT": {
+        "ex_sep26_cer": 0.01,
+        "live_cer_gt14": 59.15,
+        "sep16_22_rel_comp": 0.63
+      }
+    },
+    "bucharest_mix_check": {
+      "ex_sep26_cer": 0.01,
+      "live_cer_med_all": 55.8,
+      "live_cer_med_gt14": 56.63,
+      "live_cer_le14_pct": 14.69,
+      "nov_cer_le14_pct": 13.61
+    }
+  },
+  "online_vs_office_hours": [
+    {
+      "period": "H2_2025",
+      "cat": "CERERE265",
+      "matched_cells": 2951,
+      "n_offhours": 25342,
+      "wmean_diff_med_d": 1.879,
+      "wmean_diff_mean_d": 1.793,
+      "median_cell_diff_d": 2.27
+    },
+    {
+      "period": "H2_2025",
+      "cat": "INMATRIC265",
+      "matched_cells": 2143,
+      "n_offhours": 7107,
+      "wmean_diff_med_d": 3.052,
+      "wmean_diff_mean_d": 2.364,
+      "median_cell_diff_d": 2.629
+    },
+    {
+      "period": "MayJul_2026",
+      "cat": "CERERE265",
+      "matched_cells": 1570,
+      "n_offhours": 15061,
+      "wmean_diff_med_d": 1.126,
+      "wmean_diff_mean_d": 1.191,
+      "median_cell_diff_d": 0.615
+    },
+    {
+      "period": "MayJul_2026",
+      "cat": "INMATRIC265",
+      "matched_cells": 942,
+      "n_offhours": 3032,
+      "wmean_diff_med_d": 3.007,
+      "wmean_diff_mean_d": 2.256,
+      "median_cell_diff_d": 2.042
+    },
+    {
+      "period": "Sep2026_1_25",
+      "cat": "CERERE265",
+      "matched_cells": 574,
+      "n_offhours": 12156,
+      "wmean_diff_med_d": 1.733,
+      "wmean_diff_mean_d": 1.719,
+      "median_cell_diff_d": 1.269
+    },
+    {
+      "period": "Sep2026_1_25",
+      "cat": "INMATRIC265",
+      "matched_cells": 309,
+      "n_offhours": 1093,
+      "wmean_diff_med_d": 1.058,
+      "wmean_diff_mean_d": 2.083,
+      "median_cell_diff_d": 0.886
+    }
+  ],
+  "auto_amanari_timing": [
+    {
+      "period": "Q1_2026_preApr27",
+      "n_no_am": 252149,
+      "no_am_med_d": 3.13,
+      "n_had_am": 82613,
+      "had_am_total_med_d": 12.94,
+      "app_to_first_am_med_d": 3.29,
+      "last_am_to_res_med_d": 6.96
+    },
+    {
+      "period": "MayJul_2026_postApr27",
+      "n_no_am": 188614,
+      "no_am_med_d": 5.15,
+      "n_had_am": 66009,
+      "had_am_total_med_d": 13.98,
+      "app_to_first_am_med_d": 5.12,
+      "last_am_to_res_med_d": 8.81
+    },
+    {
+      "period": "SepOct_2026_ramp",
+      "n_no_am": 139686,
+      "no_am_med_d": 26.77,
+      "n_had_am": 38558,
+      "had_am_total_med_d": 33.87,
+      "app_to_first_am_med_d": 21.46,
+      "last_am_to_res_med_d": 13.75
+    },
+    {
+      "period": "Nov_2026_crisis",
+      "n_no_am": 49755,
+      "no_am_med_d": 49.77,
+      "n_had_am": 13509,
+      "had_am_total_med_d": 54.7,
+      "app_to_first_am_med_d": 41.87,
+      "last_am_to_res_med_d": 14.0
+    }
+  ],
+  "variance_decomposition": [
+    {
+      "period": "H2_2025",
+      "cat": "CERERE265",
+      "n": 387734,
+      "r2_county_pct": 0.56,
+      "r2_app_date_pct": 78.96
+    },
+    {
+      "period": "H2_2025",
+      "cat": "INMATRIC265",
+      "n": 92070,
+      "r2_county_pct": 1.51,
+      "r2_app_date_pct": 9.02
+    },
+    {
+      "period": "MayJul_2026",
+      "cat": "CERERE265",
+      "n": 215363,
+      "r2_county_pct": 1.21,
+      "r2_app_date_pct": 25.24
+    },
+    {
+      "period": "MayJul_2026",
+      "cat": "INMATRIC265",
+      "n": 39261,
+      "r2_county_pct": 1.26,
+      "r2_app_date_pct": 23.38
+    },
+    {
+      "period": "Nov_2026",
+      "cat": "CERERE265",
+      "n": 53582,
+      "r2_county_pct": 4.36,
+      "r2_app_date_pct": 93.02
+    },
+    {
+      "period": "Nov_2026",
+      "cat": "INMATRIC265",
+      "n": 9682,
+      "r2_county_pct": 4.64,
+      "r2_app_date_pct": 92.35
+    }
+  ],
+  "stage2_pooling_reference": [
+    {
+      "period": "2024-06 old system (full bulletins)",
+      "decisions": 43875,
+      "registrars": 223,
+      "registrars_with_20plus": 108,
+      "pct_regs_1_county_all": 34.1,
+      "pct_regs_2_3_all": 17.9,
+      "pct_regs_4plus_all": 48.0,
+      "median_counties_in_20_decisions": 2.4,
+      "pct_regs_1_county_in_20": 22.2,
+      "pct_regs_4plus_in_20": 17.6,
+      "pct_decisions_outside_registrar_modal_county": 13.2
+    },
+    {
+      "period": "2024-09 new portal (full bulletins)",
+      "decisions": 34346,
+      "registrars": 242,
+      "registrars_with_20plus": 129,
+      "pct_regs_1_county_all": 26.9,
+      "pct_regs_2_3_all": 16.9,
+      "pct_regs_4plus_all": 56.2,
+      "median_counties_in_20_decisions": 10.4,
+      "pct_regs_1_county_in_20": 0.0,
+      "pct_regs_4plus_in_20": 100.0,
+      "pct_decisions_outside_registrar_modal_county": 66.4
+    },
+    {
+      "period": "2026-10-23/26/27 PDF sample",
+      "decisions": 2147,
+      "registrars": 112,
+      "registrars_with_20plus": 64,
+      "pct_regs_1_county_all": 0.9,
+      "pct_regs_2_3_all": 2.7,
+      "pct_regs_4plus_all": 96.4,
+      "median_counties_in_20_decisions": 13.8,
+      "pct_regs_1_county_in_20": 0.0,
+      "pct_regs_4plus_in_20": 100.0,
+      "pct_decisions_outside_registrar_modal_county": 78.8
+    }
+  ],
+  "tandem_scenarios_distinct_anchor": {
+    "S0_status_quo_baseline_inflow": {
+      "inflow_wd": 4533.0,
+      "c1_wd": 6156.4,
+      "c2_wd": 5277.2,
+      "steady_ceiling_wd": 5277.2,
+      "binding_stage": "Stage 2 (Registrars)",
+      "s1_zero_wd": 66,
+      "s2_zero_wd": null,
+      "s2_peak": 155502.0,
+      "s2_peak_wd": 65,
+      "starved_days": 0,
+      "end_s1": 0.0,
+      "end_s2": 18364.0,
+      "end_total": 18364.0,
+      "cum_f2": 1319300.0,
+      "milestones": [
+        {
+          "wd": 10,
+          "s1": 89826.0,
+          "s2": 107146.0,
+          "total": 196972.0,
+          "f2": 5277.2
+        },
+        {
+          "wd": 20,
+          "s1": 73592.0,
+          "s2": 115938.0,
+          "total": 189530.0,
+          "f2": 5277.2
+        },
+        {
+          "wd": 40,
+          "s1": 41124.0,
+          "s2": 133522.0,
+          "total": 174646.0,
+          "f2": 5277.2
+        },
+        {
+          "wd": 60,
+          "s1": 8656.0,
+          "s2": 151106.0,
+          "total": 159762.0,
+          "f2": 5277.2
+        },
+        {
+          "wd": 120,
+          "s1": 0.0,
+          "s2": 115110.0,
+          "total": 115110.0,
+          "f2": 5277.2
+        },
+        {
+          "wd": 250,
+          "s1": 0.0,
+          "s2": 18364.0,
+          "total": 18364.0,
+          "f2": 5277.2
+        }
+      ]
+    },
+    "S1_status_quo_elevated_inflow_5000": {
+      "inflow_wd": 5000.0,
+      "c1_wd": 6156.4,
+      "c2_wd": 5277.2,
+      "steady_ceiling_wd": 5277.2,
+      "binding_stage": "Stage 2 (Registrars)",
+      "s1_zero_wd": 92,
+      "s2_zero_wd": null,
+      "s2_peak": 178911.6,
+      "s2_peak_wd": 92,
+      "starved_days": 0,
+      "end_s1": 0.0,
+      "end_s2": 135114.0,
+      "end_total": 135114.0,
+      "cum_f2": 1319300.0,
+      "milestones": [
+        {
+          "wd": 10,
+          "s1": 94496.0,
+          "s2": 107146.0,
+          "total": 201642.0,
+          "f2": 5277.2
+        },
+        {
+          "wd": 20,
+          "s1": 82932.0,
+          "s2": 115938.0,
+          "total": 198870.0,
+          "f2": 5277.2
+        },
+        {
+          "wd": 40,
+          "s1": 59804.0,
+          "s2": 133522.0,
+          "total": 193326.0,
+          "f2": 5277.2
+        },
+        {
+          "wd": 60,
+          "s1": 36676.0,
+          "s2": 151106.0,
+          "total": 187782.0,
+          "f2": 5277.2
+        },
+        {
+          "wd": 120,
+          "s1": 0.0,
+          "s2": 171150.0,
+          "total": 171150.0,
+          "f2": 5277.2
+        },
+        {
+          "wd": 250,
+          "s1": 0.0,
+          "s2": 135114.0,
+          "total": 135114.0,
+          "f2": 5277.2
+        }
+      ]
+    },
+    "S2_oug_pure_add_375_to_stage2": {
+      "inflow_wd": 4533.0,
+      "c1_wd": 6156.4,
+      "c2_wd": 5652.2,
+      "steady_ceiling_wd": 5652.2,
+      "binding_stage": "Stage 2 (Registrars)",
+      "s1_zero_wd": 66,
+      "s2_zero_wd": 183,
+      "s2_peak": 131127.0,
+      "s2_peak_wd": 65,
+      "starved_days": 68,
+      "end_s1": 0.0,
+      "end_s2": 0.0,
+      "end_total": 0.0,
+      "cum_f2": 1337664.0,
+      "milestones": [
+        {
+          "wd": 10,
+          "s1": 89826.0,
+          "s2": 103396.0,
+          "total": 193222.0,
+          "f2": 5652.2
+        },
+        {
+          "wd": 20,
+          "s1": 73592.0,
+          "s2": 108438.0,
+          "total": 182030.0,
+          "f2": 5652.2
+        },
+        {
+          "wd": 40,
+          "s1": 41124.0,
+          "s2": 118522.0,
+          "total": 159646.0,
+          "f2": 5652.2
+        },
+        {
+          "wd": 60,
+          "s1": 8656.0,
+          "s2": 128606.0,
+          "total": 137262.0,
+          "f2": 5652.2
+        },
+        {
+          "wd": 120,
+          "s1": 0.0,
+          "s2": 70110.0,
+          "total": 70110.0,
+          "f2": 5652.2
+        },
+        {
+          "wd": 250,
+          "s1": 0.0,
+          "s2": 0.0,
+          "total": 0.0,
+          "f2": 4533.0
+        }
+      ]
+    },
+    "S3_oug_optimal_rebalance_delta_440": {
+      "inflow_wd": 4533.0,
+      "c1_wd": 5716.8,
+      "c2_wd": 5716.8,
+      "steady_ceiling_wd": 5716.8,
+      "binding_stage": "Stage 1 (County Operation)",
+      "s1_zero_wd": 90,
+      "s2_zero_wd": 173,
+      "s2_peak": 98354.0,
+      "s2_peak_wd": 0,
+      "starved_days": 78,
+      "end_s1": 0.0,
+      "end_s2": 0.0,
+      "end_total": 0.0,
+      "cum_f2": 1337664.0,
+      "milestones": [
+        {
+          "wd": 10,
+          "s1": 94222.0,
+          "s2": 98354.0,
+          "total": 192576.0,
+          "f2": 5716.8
+        },
+        {
+          "wd": 20,
+          "s1": 82384.0,
+          "s2": 98354.0,
+          "total": 180738.0,
+          "f2": 5716.8
+        },
+        {
+          "wd": 40,
+          "s1": 58708.0,
+          "s2": 98354.0,
+          "total": 157062.0,
+          "f2": 5716.8
+        },
+        {
+          "wd": 60,
+          "s1": 35032.0,
+          "s2": 98354.0,
+          "total": 133386.0,
+          "f2": 5716.8
+        },
+        {
+          "wd": 120,
+          "s1": 0.0,
+          "s2": 62358.0,
+          "total": 62358.0,
+          "f2": 5716.8
+        },
+        {
+          "wd": 250,
+          "s1": 0.0,
+          "s2": 0.0,
+          "total": 0.0,
+          "f2": 4533.0
+        }
+      ]
+    },
+    "S4_oug_cannibalize_breakeven_880": {
+      "inflow_wd": 4533.0,
+      "c1_wd": 5277.2,
+      "c2_wd": 6156.4,
+      "steady_ceiling_wd": 5277.2,
+      "binding_stage": "Stage 1 (County Operation)",
+      "s1_zero_wd": 143,
+      "s2_zero_wd": 112,
+      "s2_peak": 98354.0,
+      "s2_peak_wd": 0,
+      "starved_days": 139,
+      "end_s1": 0.0,
+      "end_s2": 0.0,
+      "end_total": 0.0,
+      "cum_f2": 1337664.0,
+      "milestones": [
+        {
+          "wd": 10,
+          "s1": 98618.0,
+          "s2": 89562.0,
+          "total": 188180.0,
+          "f2": 6156.4
+        },
+        {
+          "wd": 20,
+          "s1": 91176.0,
+          "s2": 80770.0,
+          "total": 171946.0,
+          "f2": 6156.4
+        },
+        {
+          "wd": 40,
+          "s1": 76292.0,
+          "s2": 63186.0,
+          "total": 139478.0,
+          "f2": 6156.4
+        },
+        {
+          "wd": 60,
+          "s1": 61408.0,
+          "s2": 45602.0,
+          "total": 107010.0,
+          "f2": 6156.4
+        },
+        {
+          "wd": 120,
+          "s1": 16756.0,
+          "s2": 0.0,
+          "total": 16756.0,
+          "f2": 5277.2
+        },
+        {
+          "wd": 250,
+          "s1": 0.0,
+          "s2": 0.0,
+          "total": 0.0,
+          "f2": 4533.0
+        }
+      ]
+    },
+    "S5_oug_over_cannibalize_1100": {
+      "inflow_wd": 4533.0,
+      "c1_wd": 5056.4,
+      "c2_wd": 6377.2,
+      "steady_ceiling_wd": 5056.4,
+      "binding_stage": "Stage 1 (County Operation)",
+      "s1_zero_wd": 203,
+      "s2_zero_wd": 75,
+      "s2_peak": 98354.0,
+      "s2_peak_wd": 0,
+      "starved_days": 176,
+      "end_s1": 0.0,
+      "end_s2": 0.0,
+      "end_total": 0.0,
+      "cum_f2": 1337664.0,
+      "milestones": [
+        {
+          "wd": 10,
+          "s1": 100826.0,
+          "s2": 85146.0,
+          "total": 185972.0,
+          "f2": 6377.2
+        },
+        {
+          "wd": 20,
+          "s1": 95592.0,
+          "s2": 71938.0,
+          "total": 167530.0,
+          "f2": 6377.2
+        },
+        {
+          "wd": 40,
+          "s1": 85124.0,
+          "s2": 45522.0,
+          "total": 130646.0,
+          "f2": 6377.2
+        },
+        {
+          "wd": 60,
+          "s1": 74656.0,
+          "s2": 19106.0,
+          "total": 93762.0,
+          "f2": 6377.2
+        },
+        {
+          "wd": 120,
+          "s1": 43252.0,
+          "s2": 0.0,
+          "total": 43252.0,
+          "f2": 5056.4
+        },
+        {
+          "wd": 250,
+          "s1": 0.0,
+          "s2": 0.0,
+          "total": 0.0,
+          "f2": 4533.0
+        }
+      ]
+    },
+    "S6_stage2_only_plus_2050_baseline": {
+      "inflow_wd": 4533.0,
+      "c1_wd": 6156.4,
+      "c2_wd": 7327.2,
+      "steady_ceiling_wd": 6156.4,
+      "binding_stage": "Stage 1 (County Operation)",
+      "s1_zero_wd": 66,
+      "s2_zero_wd": 74,
+      "s2_peak": 98354.0,
+      "s2_peak_wd": 0,
+      "starved_days": 177,
+      "end_s1": 0.0,
+      "end_s2": 0.0,
+      "end_total": 0.0,
+      "cum_f2": 1337664.0,
+      "milestones": [
+        {
+          "wd": 10,
+          "s1": 89826.0,
+          "s2": 86646.0,
+          "total": 176472.0,
+          "f2": 7327.2
+        },
+        {
+          "wd": 20,
+          "s1": 73592.0,
+          "s2": 74938.0,
+          "total": 148530.0,
+          "f2": 7327.2
+        },
+        {
+          "wd": 40,
+          "s1": 41124.0,
+          "s2": 51522.0,
+          "total": 92646.0,
+          "f2": 7327.2
+        },
+        {
+          "wd": 60,
+          "s1": 8656.0,
+          "s2": 28106.0,
+          "total": 36762.0,
+          "f2": 7327.2
+        },
+        {
+          "wd": 120,
+          "s1": 0.0,
+          "s2": 0.0,
+          "total": 0.0,
+          "f2": 4533.0
+        },
+        {
+          "wd": 250,
+          "s1": 0.0,
+          "s2": 0.0,
+          "total": 0.0,
+          "f2": 4533.0
+        }
+      ]
+    },
+    "S7_balanced_tandem_plus_1170_s1_2050_s2": {
+      "inflow_wd": 4533.0,
+      "c1_wd": 7327.2,
+      "c2_wd": 7327.2,
+      "steady_ceiling_wd": 7327.2,
+      "binding_stage": "Balanced",
+      "s1_zero_wd": 38,
+      "s2_zero_wd": 74,
+      "s2_peak": 98354.0,
+      "s2_peak_wd": 0,
+      "starved_days": 177,
+      "end_s1": 0.0,
+      "end_s2": 0.0,
+      "end_total": 0.0,
+      "cum_f2": 1337664.0,
+      "milestones": [
+        {
+          "wd": 10,
+          "s1": 78118.0,
+          "s2": 98354.0,
+          "total": 176472.0,
+          "f2": 7327.2
+        },
+        {
+          "wd": 20,
+          "s1": 50176.0,
+          "s2": 98354.0,
+          "total": 148530.0,
+          "f2": 7327.2
+        },
+        {
+          "wd": 40,
+          "s1": 0.0,
+          "s2": 92646.0,
+          "total": 92646.0,
+          "f2": 7327.2
+        },
+        {
+          "wd": 60,
+          "s1": 0.0,
+          "s2": 36762.0,
+          "total": 36762.0,
+          "f2": 7327.2
+        },
+        {
+          "wd": 120,
+          "s1": 0.0,
+          "s2": 0.0,
+          "total": 0.0,
+          "f2": 4533.0
+        },
+        {
+          "wd": 250,
+          "s1": 0.0,
+          "s2": 0.0,
+          "total": 0.0,
+          "f2": 4533.0
+        }
+      ]
+    },
+    "W0_wave_6931_status_quo": {
+      "inflow_wd": 6931.0,
+      "c1_wd": 6156.4,
+      "c2_wd": 5277.2,
+      "steady_ceiling_wd": 5277.2,
+      "binding_stage": "Stage 2 (Registrars)",
+      "s1_zero_wd": null,
+      "s2_zero_wd": null,
+      "s2_peak": 203858.0,
+      "s2_peak_wd": 120,
+      "starved_days": 0,
+      "end_s1": 199012.0,
+      "end_s2": 203858.0,
+      "end_total": 402870.0,
+      "cum_f2": 633264.0,
+      "milestones": [
+        {
+          "wd": 10,
+          "s1": 113806.0,
+          "s2": 107146.0,
+          "total": 220952.0,
+          "f2": 5277.2
+        },
+        {
+          "wd": 20,
+          "s1": 121552.0,
+          "s2": 115938.0,
+          "total": 237490.0,
+          "f2": 5277.2
+        },
+        {
+          "wd": 40,
+          "s1": 137044.0,
+          "s2": 133522.0,
+          "total": 270566.0,
+          "f2": 5277.2
+        },
+        {
+          "wd": 60,
+          "s1": 152536.0,
+          "s2": 151106.0,
+          "total": 303642.0,
+          "f2": 5277.2
+        },
+        {
+          "wd": 120,
+          "s1": 199012.0,
+          "s2": 203858.0,
+          "total": 402870.0,
+          "f2": 5277.2
+        }
+      ]
+    },
+    "W1_wave_6931_stage2_only_plus_2050_starves": {
+      "inflow_wd": 6931.0,
+      "c1_wd": 6156.4,
+      "c2_wd": 7327.2,
+      "steady_ceiling_wd": 6156.4,
+      "binding_stage": "Stage 1 (County Operation)",
+      "s1_zero_wd": null,
+      "s2_zero_wd": 85,
+      "s2_peak": 98354.0,
+      "s2_peak_wd": 0,
+      "starved_days": 36,
+      "end_s1": 199012.0,
+      "end_s2": 0.0,
+      "end_total": 199012.0,
+      "cum_f2": 837122.0,
+      "milestones": [
+        {
+          "wd": 10,
+          "s1": 113806.0,
+          "s2": 86646.0,
+          "total": 200452.0,
+          "f2": 7327.2
+        },
+        {
+          "wd": 20,
+          "s1": 121552.0,
+          "s2": 74938.0,
+          "total": 196490.0,
+          "f2": 7327.2
+        },
+        {
+          "wd": 40,
+          "s1": 137044.0,
+          "s2": 51522.0,
+          "total": 188566.0,
+          "f2": 7327.2
+        },
+        {
+          "wd": 60,
+          "s1": 152536.0,
+          "s2": 28106.0,
+          "total": 180642.0,
+          "f2": 7327.2
+        },
+        {
+          "wd": 120,
+          "s1": 199012.0,
+          "s2": 0.0,
+          "total": 199012.0,
+          "f2": 6156.4
+        }
+      ]
+    },
+    "W2_wave_6931_balanced_tandem_7327": {
+      "inflow_wd": 6931.0,
+      "c1_wd": 7327.2,
+      "c2_wd": 7327.2,
+      "steady_ceiling_wd": 7327.2,
+      "binding_stage": "Balanced",
+      "s1_zero_wd": null,
+      "s2_zero_wd": null,
+      "s2_peak": 98354.0,
+      "s2_peak_wd": 0,
+      "starved_days": 0,
+      "end_s1": 58516.0,
+      "end_s2": 98354.0,
+      "end_total": 156870.0,
+      "cum_f2": 879264.0,
+      "milestones": [
+        {
+          "wd": 10,
+          "s1": 102098.0,
+          "s2": 98354.0,
+          "total": 200452.0,
+          "f2": 7327.2
+        },
+        {
+          "wd": 20,
+          "s1": 98136.0,
+          "s2": 98354.0,
+          "total": 196490.0,
+          "f2": 7327.2
+        },
+        {
+          "wd": 40,
+          "s1": 90212.0,
+          "s2": 98354.0,
+          "total": 188566.0,
+          "f2": 7327.2
+        },
+        {
+          "wd": 60,
+          "s1": 82288.0,
+          "s2": 98354.0,
+          "total": 180642.0,
+          "f2": 7327.2
+        },
+        {
+          "wd": 120,
+          "s1": 58516.0,
+          "s2": 98354.0,
+          "total": 156870.0,
+          "f2": 7327.2
+        }
+      ]
+    }
+  },
+  "tandem_scenarios_strict_finals_anchor": {
+    "A0_baseline_3629_sq": {
+      "inflow_wd": 3628.8,
+      "c1_wd": 5288.8,
+      "c2_wd": 4409.6,
+      "steady_ceiling_wd": 4409.6,
+      "binding_stage": "Stage 2 (Registrars)",
+      "s1_zero_wd": 64,
+      "s2_zero_wd": null,
+      "s2_peak": 154442.8,
+      "s2_peak_wd": 64,
+      "starved_days": 0,
+      "end_s1": 0.0,
+      "end_s2": 9214.0,
+      "end_total": 9214.0,
+      "cum_f2": 1102400.0,
+      "milestones": [
+        {
+          "wd": 10,
+          "s1": 89460.0,
+          "s2": 107146.0,
+          "total": 196606.0,
+          "f2": 4409.6
+        },
+        {
+          "wd": 20,
+          "s1": 72860.0,
+          "s2": 115938.0,
+          "total": 188798.0,
+          "f2": 4409.6
+        },
+        {
+          "wd": 40,
+          "s1": 39660.0,
+          "s2": 133522.0,
+          "total": 173182.0,
+          "f2": 4409.6
+        },
+        {
+          "wd": 60,
+          "s1": 6460.0,
+          "s2": 151106.0,
+          "total": 157566.0,
+          "f2": 4409.6
+        },
+        {
+          "wd": 120,
+          "s1": 0.0,
+          "s2": 110718.0,
+          "total": 110718.0,
+          "f2": 4409.6
+        },
+        {
+          "wd": 250,
+          "s1": 0.0,
+          "s2": 9214.0,
+          "total": 9214.0,
+          "f2": 4409.6
+        }
+      ]
+    },
+    "A1_h1_inflow_4209_sq": {
+      "inflow_wd": 4209.0,
+      "c1_wd": 5288.8,
+      "c2_wd": 4409.6,
+      "steady_ceiling_wd": 4409.6,
+      "binding_stage": "Stage 2 (Registrars)",
+      "s1_zero_wd": 99,
+      "s2_zero_wd": null,
+      "s2_peak": 184554.6,
+      "s2_peak_wd": 99,
+      "starved_days": 0,
+      "end_s1": 0.0,
+      "end_s2": 154264.0,
+      "end_total": 154264.0,
+      "cum_f2": 1102400.0,
+      "milestones": [
+        {
+          "wd": 10,
+          "s1": 95262.0,
+          "s2": 107146.0,
+          "total": 202408.0,
+          "f2": 4409.6
+        },
+        {
+          "wd": 20,
+          "s1": 84464.0,
+          "s2": 115938.0,
+          "total": 200402.0,
+          "f2": 4409.6
+        },
+        {
+          "wd": 40,
+          "s1": 62868.0,
+          "s2": 133522.0,
+          "total": 196390.0,
+          "f2": 4409.6
+        },
+        {
+          "wd": 60,
+          "s1": 41272.0,
+          "s2": 151106.0,
+          "total": 192378.0,
+          "f2": 4409.6
+        },
+        {
+          "wd": 120,
+          "s1": 0.0,
+          "s2": 180342.0,
+          "total": 180342.0,
+          "f2": 4409.6
+        },
+        {
+          "wd": 250,
+          "s1": 0.0,
+          "s2": 154264.0,
+          "total": 154264.0,
+          "f2": 4409.6
+        }
+      ]
+    },
+    "A2_h1_inflow_4209_rebalance_440": {
+      "inflow_wd": 4209.0,
+      "c1_wd": 4849.2,
+      "c2_wd": 4849.2,
+      "steady_ceiling_wd": 4849.2,
+      "binding_stage": "Stage 1 (County Operation)",
+      "s1_zero_wd": 166,
+      "s2_zero_wd": null,
+      "s2_peak": 98354.0,
+      "s2_peak_wd": 0,
+      "starved_days": 0,
+      "end_s1": 0.0,
+      "end_s2": 44364.0,
+      "end_total": 44364.0,
+      "cum_f2": 1212300.0,
+      "milestones": [
+        {
+          "wd": 10,
+          "s1": 99658.0,
+          "s2": 98354.0,
+          "total": 198012.0,
+          "f2": 4849.2
+        },
+        {
+          "wd": 20,
+          "s1": 93256.0,
+          "s2": 98354.0,
+          "total": 191610.0,
+          "f2": 4849.2
+        },
+        {
+          "wd": 40,
+          "s1": 80452.0,
+          "s2": 98354.0,
+          "total": 178806.0,
+          "f2": 4849.2
+        },
+        {
+          "wd": 60,
+          "s1": 67648.0,
+          "s2": 98354.0,
+          "total": 166002.0,
+          "f2": 4849.2
+        },
+        {
+          "wd": 120,
+          "s1": 29236.0,
+          "s2": 98354.0,
+          "total": 127590.0,
+          "f2": 4849.2
+        },
+        {
+          "wd": 250,
+          "s1": 0.0,
+          "s2": 44364.0,
+          "total": 44364.0,
+          "f2": 4849.2
+        }
+      ]
+    },
+    "A3_h1_inflow_4209_overcannib_1100": {
+      "inflow_wd": 4209.0,
+      "c1_wd": 4188.8,
+      "c2_wd": 5509.6,
+      "steady_ceiling_wd": 4188.8,
+      "binding_stage": "Stage 1 (County Operation)",
+      "s1_zero_wd": null,
+      "s2_zero_wd": 75,
+      "s2_peak": 98354.0,
+      "s2_peak_wd": 0,
+      "starved_days": 176,
+      "end_s1": 111110.0,
+      "end_s2": 0.0,
+      "end_total": 111110.0,
+      "cum_f2": 1145554.0,
+      "milestones": [
+        {
+          "wd": 10,
+          "s1": 106262.0,
+          "s2": 85146.0,
+          "total": 191408.0,
+          "f2": 5509.6
+        },
+        {
+          "wd": 20,
+          "s1": 106464.0,
+          "s2": 71938.0,
+          "total": 178402.0,
+          "f2": 5509.6
+        },
+        {
+          "wd": 40,
+          "s1": 106868.0,
+          "s2": 45522.0,
+          "total": 152390.0,
+          "f2": 5509.6
+        },
+        {
+          "wd": 60,
+          "s1": 107272.0,
+          "s2": 19106.0,
+          "total": 126378.0,
+          "f2": 5509.6
+        },
+        {
+          "wd": 120,
+          "s1": 108484.0,
+          "s2": 0.0,
+          "total": 108484.0,
+          "f2": 4188.8
+        },
+        {
+          "wd": 250,
+          "s1": 111110.0,
+          "s2": 0.0,
+          "total": 111110.0,
+          "f2": 4188.8
+        }
+      ]
+    }
+  },
+  "cannibalization_sweep_summary": [
+    {
+      "delta_wd": 0,
+      "c1_wd": 6156.4,
+      "c2_wd": 5277.2,
+      "min_cap_wd": 5277.2,
+      "net_gain_vs_base_wd": 0.0,
+      "binding": "Stage 2 (Registrars)",
+      "s1_zero_wd": 66,
+      "s2_zero_wd": null,
+      "end_total_250wd": 18364.0
+    },
+    {
+      "delta_wd": 100,
+      "c1_wd": 6056.4,
+      "c2_wd": 5377.2,
+      "min_cap_wd": 5377.2,
+      "net_gain_vs_base_wd": 100.0,
+      "binding": "Stage 2 (Registrars)",
+      "s1_zero_wd": 70,
+      "s2_zero_wd": 243,
+      "end_total_250wd": 0.0
+    },
+    {
+      "delta_wd": 200,
+      "c1_wd": 5956.4,
+      "c2_wd": 5477.2,
+      "min_cap_wd": 5477.2,
+      "net_gain_vs_base_wd": 200.0,
+      "binding": "Stage 2 (Registrars)",
+      "s1_zero_wd": 75,
+      "s2_zero_wd": 217,
+      "end_total_250wd": 0.0
+    },
+    {
+      "delta_wd": 300,
+      "c1_wd": 5856.4,
+      "c2_wd": 5577.2,
+      "min_cap_wd": 5577.2,
+      "net_gain_vs_base_wd": 300.0,
+      "binding": "Stage 2 (Registrars)",
+      "s1_zero_wd": 81,
+      "s2_zero_wd": 196,
+      "end_total_250wd": 0.0
+    },
+    {
+      "delta_wd": 400,
+      "c1_wd": 5756.4,
+      "c2_wd": 5677.2,
+      "min_cap_wd": 5677.2,
+      "net_gain_vs_base_wd": 400.0,
+      "binding": "Stage 2 (Registrars)",
+      "s1_zero_wd": 87,
+      "s2_zero_wd": 179,
+      "end_total_250wd": 0.0
+    },
+    {
+      "delta_wd": 500,
+      "c1_wd": 5656.4,
+      "c2_wd": 5777.2,
+      "min_cap_wd": 5656.4,
+      "net_gain_vs_base_wd": 379.2,
+      "binding": "Stage 1 (County Operation)",
+      "s1_zero_wd": 95,
+      "s2_zero_wd": 165,
+      "end_total_250wd": 0.0
+    },
+    {
+      "delta_wd": 600,
+      "c1_wd": 5556.4,
+      "c2_wd": 5877.2,
+      "min_cap_wd": 5556.4,
+      "net_gain_vs_base_wd": 279.2,
+      "binding": "Stage 1 (County Operation)",
+      "s1_zero_wd": 104,
+      "s2_zero_wd": 153,
+      "end_total_250wd": 0.0
+    },
+    {
+      "delta_wd": 700,
+      "c1_wd": 5456.4,
+      "c2_wd": 5977.2,
+      "min_cap_wd": 5456.4,
+      "net_gain_vs_base_wd": 179.2,
+      "binding": "Stage 1 (County Operation)",
+      "s1_zero_wd": 115,
+      "s2_zero_wd": 142,
+      "end_total_250wd": 0.0
+    },
+    {
+      "delta_wd": 800,
+      "c1_wd": 5356.4,
+      "c2_wd": 6077.2,
+      "min_cap_wd": 5356.4,
+      "net_gain_vs_base_wd": 79.2,
+      "binding": "Stage 1 (County Operation)",
+      "s1_zero_wd": 129,
+      "s2_zero_wd": 133,
+      "end_total_250wd": 0.0
+    },
+    {
+      "delta_wd": 900,
+      "c1_wd": 5256.4,
+      "c2_wd": 6177.2,
+      "min_cap_wd": 5256.4,
+      "net_gain_vs_base_wd": -20.8,
+      "binding": "Stage 1 (County Operation)",
+      "s1_zero_wd": 147,
+      "s2_zero_wd": 107,
+      "end_total_250wd": 0.0
+    },
+    {
+      "delta_wd": 1000,
+      "c1_wd": 5156.4,
+      "c2_wd": 6277.2,
+      "min_cap_wd": 5156.4,
+      "net_gain_vs_base_wd": -120.8,
+      "binding": "Stage 1 (County Operation)",
+      "s1_zero_wd": 171,
+      "s2_zero_wd": 88,
+      "end_total_250wd": 0.0
+    },
+    {
+      "delta_wd": 1100,
+      "c1_wd": 5056.4,
+      "c2_wd": 6377.2,
+      "min_cap_wd": 5056.4,
+      "net_gain_vs_base_wd": -220.8,
+      "binding": "Stage 1 (County Operation)",
+      "s1_zero_wd": 203,
+      "s2_zero_wd": 75,
+      "end_total_250wd": 0.0
+    },
+    {
+      "delta_wd": 1200,
+      "c1_wd": 4956.4,
+      "c2_wd": 6477.2,
+      "min_cap_wd": 4956.4,
+      "net_gain_vs_base_wd": -320.8,
+      "binding": "Stage 1 (County Operation)",
+      "s1_zero_wd": null,
+      "s2_zero_wd": 65,
+      "end_total_250wd": 210.0
+    },
+    {
+      "delta_wd": 1300,
+      "c1_wd": 4856.4,
+      "c2_wd": 6577.2,
+      "min_cap_wd": 4856.4,
+      "net_gain_vs_base_wd": -420.8,
+      "binding": "Stage 1 (County Operation)",
+      "s1_zero_wd": null,
+      "s2_zero_wd": 58,
+      "end_total_250wd": 25210.0
+    },
+    {
+      "delta_wd": 1400,
+      "c1_wd": 4756.4,
+      "c2_wd": 6677.2,
+      "min_cap_wd": 4756.4,
+      "net_gain_vs_base_wd": -520.8,
+      "binding": "Stage 1 (County Operation)",
+      "s1_zero_wd": null,
+      "s2_zero_wd": 52,
+      "end_total_250wd": 50210.0
+    }
+  ]
+}

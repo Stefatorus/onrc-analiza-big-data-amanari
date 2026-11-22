@@ -1,0 +1,5 @@
+C101 27.04-28.06 modificari: exactly 3rd wd 56.9%  n=148070
+C101 27.04-28.06 inmatriculari: exactly 3rd wd 49.9%  n=27918
+C101 27.04-28.06 amanari: exactly 3rd wd 72.9%  n=46863
+C41 INMATRIC Admis fara amanare 1-20.11 jtype=J: >10 wd 81.3%  n=3548
+C41 INMATRIC Admis fara amanare 1-20.11 jtype=F: >10 wd 82.8%  n=3572

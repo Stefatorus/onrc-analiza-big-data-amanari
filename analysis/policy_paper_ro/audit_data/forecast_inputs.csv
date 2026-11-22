@@ -1,0 +1,17 @@
+,low,mode,high
+stoc_initial,145000.0,200000.0,300000.0
+flux_zilnic_recurent,2900.0,3350.0,4000.0
+crestere_anuala_flux,-0.04,0.01,0.07
+pondere_caen_iesiri,0.15,0.265,0.4
+dosare_caen_suplimentare,140000.0,245000.0,390000.0
+efort_caen,0.5,0.8,1.25
+populatie_capital,100000.0,158477.0,220000.0
+proportie_reducere,0.1,0.17,0.27
+conformare_ulterioara,0.65,0.8,0.95
+depuneri_separate_ulterioare,0.65,0.8,0.95
+efort_capital,1.1,1.35,1.6
+dosare_defensive,30000.0,75000.0,110000.0
+cazuri_anaf,45000.0,165000.0,260000.0
+fractie_anaf_capacitate_comuna,0.0,0.25,0.7
+efort_anaf,0.35,0.5,0.75
+rezolvari_observate_pe_zi,3982.5,4425.0,4779.0

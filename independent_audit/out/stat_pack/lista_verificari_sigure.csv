@@ -1,0 +1,14 @@
+stare,verificare,detaliu
+WARN,B2 measured peak intake vs report 26k/day,"measured peak ≈ 34,520 reqNr/day (report cites >26k/day; same order)"
+PASS,A1 reqNumber↔date monotonic,Spearman ρ=0.9999 (counter rises with time; <0.98 would flag bad timestamps)
+PASS,A2 settled months ~fully resolved,"resolved share May-Aug = {'2026-05': 0.98, '2026-06': 0.97, '2026-07': 0.98, '2026-08': 0.99} (old cohorts should be ~1.0)"
+PASS,A3 county coverage,99.9% of live-queue have a county
+PASS,B1 Iași S1-share vs report 16%,our IS sample 1/15=7% S1 vs report 1141/7082=16% (both registrar-bound)
+PASS,B3 Sep handling-time vs report 30-45d,"our Sep median W=39d vs report '>30d, 40-45d incorporations'"
+PASS,B4 DIRECT solved/day (measured),"measured ~3,097/day = 19 files/day/registrator (vs 40 norm) -> quantifies the slowdown; model cap2 anchored here, NOT fitted to backlog"
+PASS,B4b throughput×age ≈ visible backlog,"3,097/day × 40.6d ⇒ ~125,741 visible judged backlog (+ ~84k unseen înmatriculări ≈ report 210k total)"
+PASS,C1 odd/even split stability,max |ΔW| between halves = 4d across months (large ⇒ sampling-fragile)
+PASS,C2 May vs Sep W bootstrap-distinct,"May 95%CI=(5, 6) vs Sep=(36, 43) (non-overlapping ⇒ real climb)"
+PASS,C3 monthly n for W-medians,"resolved n/month={'2026-05': 135, '2026-06': 159, '2026-07': 184, '2026-08': 212, '2026-09': 303, '2026-10': 75, '2026-11': 20} (0 months with n<15)"
+PASS,D1 parsimony (params vs targets),"model: 6 free params (cap2, cap1·mult, base, wave size, k, W0) vs 7 targets (5 monthly W + backlog + split). Measured intake now fixes the wave SHAPE, freeing a param."
+PASS,D2 forecast reported as ranges,"scenarios shown as overhang 500k-900k ranges, not point forecasts; Oct/Nov W flagged censored."

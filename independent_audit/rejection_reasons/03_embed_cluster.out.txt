@@ -1,0 +1,1 @@
+{"embedder": "multilingual-e5-small", "segments": 2203, "clusters": 61, "noise_raw": 0.253, "noise_after_attach": 0.073, "attach_threshold": 0.942, "kmeans_best_k": 8, "silhouette_best": 0.465, "ari_hdbscan_kmeans": 0.043}

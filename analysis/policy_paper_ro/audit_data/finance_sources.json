@@ -1,0 +1,20 @@
+[
+  {
+    "year": 2024,
+    "url": "https://data.gov.ro/dataset/d3caacb6-2c08-445e-94e6-8d36d00ab250/resource/25098618-f6a5-4610-8c7f-c0bdb801635f/download/web_uu_an2024.txt",
+    "unique_balance_rows": 822292,
+    "duplicate_conflict_rows": 0,
+    "above_turnover": 193685,
+    "above_turnover_capital_below_5000": 164426,
+    "above_turnover_capital_missing": 3127
+  },
+  {
+    "year": 2025,
+    "url": "https://data.gov.ro/dataset/e2266fdc-0a6b-43b8-9c9f-7a6943d85b28/resource/eeecc692-d914-4d3b-b7f5-d1a8a9791979/download/web_uu_an2025.txt",
+    "unique_balance_rows": 844207,
+    "duplicate_conflict_rows": 0,
+    "above_turnover": 199952,
+    "above_turnover_capital_below_5000": 168576,
+    "above_turnover_capital_missing": 3424
+  }
+]

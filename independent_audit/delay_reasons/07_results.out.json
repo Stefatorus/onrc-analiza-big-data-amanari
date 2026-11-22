@@ -1,0 +1,1562 @@
+{
+ "coverage": {
+  "parsed": 2914,
+  "archive_window": 23308,
+  "share": 0.125,
+  "archive_on_parsed_days": 17991,
+  "share_on_parsed_days": 0.162,
+  "decision_days_parsed": 17,
+  "decision_days_window": 23,
+  "bulletins": 289,
+  "by_week": [
+   {
+    "week": "2026-10-19/2026-10-25",
+    "archive": 4580,
+    "parsed": 260,
+    "decision_days_parsed": 2,
+    "coverage": 0.0568
+   },
+   {
+    "week": "2026-10-26/2026-11-01",
+    "archive": 4214,
+    "parsed": 660,
+    "decision_days_parsed": 4,
+    "coverage": 0.1566
+   },
+   {
+    "week": "2026-11-02/2026-11-08",
+    "archive": 5108,
+    "parsed": 523,
+    "decision_days_parsed": 3,
+    "coverage": 0.1024
+   },
+   {
+    "week": "2026-11-09/2026-11-15",
+    "archive": 5901,
+    "parsed": 917,
+    "decision_days_parsed": 5,
+    "coverage": 0.1554
+   },
+   {
+    "week": "2026-11-16/2026-11-22",
+    "archive": 3505,
+    "parsed": 554,
+    "decision_days_parsed": 3,
+    "coverage": 0.1581
+   }
+  ],
+  "county_coverage_min_max": [
+   0.087,
+   0.174
+  ],
+  "county_coverage_cv": 0.154,
+  "jtype_parsed": {
+   "J": 0.635,
+   "nan": 0.22,
+   "F": 0.14,
+   "C": 0.004
+  },
+  "jtype_archive": {
+   "J": 0.636,
+   "nan": 0.2,
+   "F": 0.159,
+   "C": 0.004
+  }
+ },
+ "weights_summary": {
+  "min": 0.482,
+  "max": 2.974,
+  "deff_kish": 1.185
+ },
+ "grounds": {
+  "G_conditii_legale": {
+   "value": 0.5594,
+   "ci95": [
+    0.5419,
+    0.5769
+   ],
+   "n": 2914,
+   "bulletins": 289
+  },
+  "G_incompleta": {
+   "value": 0.3188,
+   "ci95": [
+    0.3036,
+    0.334
+   ],
+   "n": 2914,
+   "bulletins": 289
+  },
+  "G_neconcordante": {
+   "value": 0.1026,
+   "ci95": [
+    0.0917,
+    0.1135
+   ],
+   "n": 2914,
+   "bulletins": 289
+  },
+  "G_forma": {
+   "value": 0.058,
+   "ci95": [
+    0.0492,
+    0.0668
+   ],
+   "n": 2914,
+   "bulletins": 289
+  }
+ },
+ "categories": [
+  {
+   "code": "CAEN",
+   "label": "Obiect de activitate / coduri CAEN și declarația de autorizare a activităților",
+   "avoidable": "parțial",
+   "any_of": {
+    "value": 0.3167,
+    "ci95": [
+     0.2999,
+     0.3336
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "any_of_weighted": {
+    "value": 0.3251,
+    "ci95": [
+     0.3056,
+     0.3447
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "mention_share": {
+    "value": 0.2427,
+    "ci95": [
+     0.2274,
+     0.258
+    ],
+    "n": 2782,
+    "bulletins": 289
+   },
+   "cluster_only": 0.3174,
+   "rules_only": 0.4111,
+   "precision_recall_adjusted": 0.3894,
+   "sample_pred_vs_manual": [
+    0.26,
+    0.32
+   ]
+  },
+  {
+   "code": "SEDIU",
+   "label": "Sediu: dovada folosinței, valabilitate, acordul vecinilor/asociației, adresă",
+   "avoidable": "parțial",
+   "any_of": {
+    "value": 0.2193,
+    "ci95": [
+     0.2043,
+     0.2342
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "any_of_weighted": {
+    "value": 0.219,
+    "ci95": [
+     0.2015,
+     0.2365
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "mention_share": {
+    "value": 0.144,
+    "ci95": [
+     0.1331,
+     0.1549
+    ],
+    "n": 2782,
+    "bulletins": 289
+   },
+   "cluster_only": 0.2045,
+   "rules_only": 0.3068,
+   "precision_recall_adjusted": 0.2193,
+   "sample_pred_vs_manual": [
+    0.14,
+    0.14
+   ]
+  },
+  {
+   "code": "ACT",
+   "label": "Act constitutiv, hotărâri/decizii, act modificator, mandat administrator",
+   "avoidable": "parțial",
+   "any_of": {
+    "value": 0.1767,
+    "ci95": [
+     0.1627,
+     0.1908
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "any_of_weighted": {
+    "value": 0.1754,
+    "ci95": [
+     0.1609,
+     0.1898
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "mention_share": {
+    "value": 0.1276,
+    "ci95": [
+     0.1163,
+     0.1388
+    ],
+    "n": 2782,
+    "bulletins": 289
+   },
+   "cluster_only": 0.1537,
+   "rules_only": 0.372,
+   "precision_recall_adjusted": 0.1612,
+   "sample_pred_vs_manual": [
+    0.23,
+    0.21
+   ]
+  },
+  {
+   "code": "ASOC_ID",
+   "label": "Date de identificare asociați/administratori (neconcordanțe cu registrul)",
+   "avoidable": "da",
+   "any_of": {
+    "value": 0.1095,
+    "ci95": [
+     0.098,
+     0.121
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "any_of_weighted": {
+    "value": 0.1111,
+    "ci95": [
+     0.0973,
+     0.1249
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "mention_share": {
+    "value": 0.0668,
+    "ci95": [
+     0.0598,
+     0.0738
+    ],
+    "n": 2782,
+    "bulletins": 289
+   },
+   "cluster_only": 0.0937,
+   "rules_only": 0.2042,
+   "precision_recall_adjusted": 0.1233,
+   "sample_pred_vs_manual": [
+    0.16,
+    0.18
+   ]
+  },
+  {
+   "code": "SOLICITANT",
+   "label": "Solicitant/deponent: identitate, împuternicire, calitatea semnatarului",
+   "avoidable": "da",
+   "any_of": {
+    "value": 0.1132,
+    "ci95": [
+     0.1019,
+     0.1246
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "any_of_weighted": {
+    "value": 0.1124,
+    "ci95": [
+     0.1001,
+     0.1247
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "mention_share": {
+    "value": 0.0785,
+    "ci95": [
+     0.0702,
+     0.0868
+    ],
+    "n": 2782,
+    "bulletins": 289
+   },
+   "cluster_only": 0.1599,
+   "rules_only": 0.1438,
+   "precision_recall_adjusted": 0.1132,
+   "sample_pred_vs_manual": [
+    0.11,
+    0.11
+   ]
+  },
+  {
+   "code": "SEMN",
+   "label": "Semnătură (electronică/olografă) și forma înscrisurilor",
+   "avoidable": "da",
+   "any_of": {
+    "value": 0.048,
+    "ci95": [
+     0.0404,
+     0.0557
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "any_of_weighted": {
+    "value": 0.0482,
+    "ci95": [
+     0.04,
+     0.0564
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "mention_share": {
+    "value": 0.0283,
+    "ci95": [
+     0.0235,
+     0.0331
+    ],
+    "n": 2782,
+    "bulletins": 289
+   },
+   "cluster_only": 0.0388,
+   "rules_only": 0.1273,
+   "precision_recall_adjusted": 0.0576,
+   "sample_pred_vs_manual": [
+    0.05,
+    0.06
+   ]
+  },
+  {
+   "code": "CERERE",
+   "label": "Cererea de înregistrare, anexa fiscală, formulare completate greșit",
+   "avoidable": "da",
+   "any_of": {
+    "value": 0.2073,
+    "ci95": [
+     0.192,
+     0.2226
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "any_of_weighted": {
+    "value": 0.205,
+    "ci95": [
+     0.1885,
+     0.2214
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "mention_share": {
+    "value": 0.1385,
+    "ci95": [
+     0.1278,
+     0.1492
+    ],
+    "n": 2782,
+    "bulletins": 289
+   },
+   "cluster_only": 0.2529,
+   "rules_only": 0.3795,
+   "precision_recall_adjusted": 0.1309,
+   "sample_pred_vs_manual": [
+    0.19,
+    0.12
+   ]
+  },
+  {
+   "code": "BEN_REAL",
+   "label": "Declarația privind beneficiarii reali",
+   "avoidable": "da",
+   "any_of": {
+    "value": 0.0364,
+    "ci95": [
+     0.0293,
+     0.0435
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "any_of_weighted": {
+    "value": 0.0374,
+    "ci95": [
+     0.0295,
+     0.0452
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "mention_share": {
+    "value": 0.0226,
+    "ci95": [
+     0.0179,
+     0.0274
+    ],
+    "n": 2782,
+    "bulletins": 289
+   },
+   "cluster_only": 0.0309,
+   "rules_only": 0.046,
+   "precision_recall_adjusted": 0.0273,
+   "sample_pred_vs_manual": [
+    0.04,
+    0.03
+   ]
+  },
+  {
+   "code": "CAPITAL",
+   "label": "Capital social: vărsăminte, părți sociale, aport",
+   "avoidable": "parțial",
+   "any_of": {
+    "value": 0.0851,
+    "ci95": [
+     0.0749,
+     0.0953
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "any_of_weighted": {
+    "value": 0.0871,
+    "ci95": [
+     0.075,
+     0.0991
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "mention_share": {
+    "value": 0.0577,
+    "ci95": [
+     0.0504,
+     0.065
+    ],
+    "n": 2782,
+    "bulletins": 289
+   },
+   "cluster_only": 0.0827,
+   "rules_only": 0.1218,
+   "precision_recall_adjusted": 0.0922,
+   "sample_pred_vs_manual": [
+    0.12,
+    0.13
+   ]
+  },
+  {
+   "code": "INSTIT",
+   "label": "Avize/atestări ale altor instituții (cazier fiscal, ANAF, autorizații profesionale)",
+   "avoidable": "parțial",
+   "any_of": {
+    "value": 0.0954,
+    "ci95": [
+     0.0846,
+     0.1062
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "any_of_weighted": {
+    "value": 0.091,
+    "ci95": [
+     0.0795,
+     0.1026
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "mention_share": {
+    "value": 0.0684,
+    "ci95": [
+     0.0601,
+     0.0767
+    ],
+    "n": 2782,
+    "bulletins": 289
+   },
+   "cluster_only": 0.0995,
+   "rules_only": 0.1005,
+   "precision_recall_adjusted": 0.15,
+   "sample_pred_vs_manual": [
+    0.07,
+    0.11
+   ]
+  },
+  {
+   "code": "DENUM",
+   "label": "Denumire: rezervare, formă legală a denumirii",
+   "avoidable": "da",
+   "any_of": {
+    "value": 0.0247,
+    "ci95": [
+     0.0193,
+     0.0301
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "any_of_weighted": {
+    "value": 0.0231,
+    "ci95": [
+     0.0178,
+     0.0284
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "mention_share": {
+    "value": 0.0157,
+    "ci95": [
+     0.0119,
+     0.0195
+    ],
+    "n": 2782,
+    "bulletins": 289
+   },
+   "cluster_only": 0.0134,
+   "rules_only": 0.0453,
+   "precision_recall_adjusted": null,
+   "sample_pred_vs_manual": null
+  },
+  {
+   "code": "TARIF",
+   "label": "Tarife: contor de caractere / tarif de publicare",
+   "avoidable": "da",
+   "any_of": {
+    "value": 0.0172,
+    "ci95": [
+     0.0119,
+     0.0224
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "any_of_weighted": {
+    "value": 0.0165,
+    "ci95": [
+     0.0113,
+     0.0217
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "mention_share": {
+    "value": 0.0093,
+    "ci95": [
+     0.0065,
+     0.0121
+    ],
+    "n": 2782,
+    "bulletins": 289
+   },
+   "cluster_only": 0.0165,
+   "rules_only": 0.0281,
+   "precision_recall_adjusted": 0.0344,
+   "sample_pred_vs_manual": [
+    0.01,
+    0.02
+   ]
+  },
+  {
+   "code": "NESPEC",
+   "label": "Neclasificat (nicio categorie găsită de clasificator; manual 0/100 fără motiv concret)",
+   "avoidable": "n/a",
+   "any_of": {
+    "value": 0.0453,
+    "ci95": [
+     0.0382,
+     0.0524
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "any_of_weighted": {
+    "value": 0.0469,
+    "ci95": [
+     0.0389,
+     0.055
+    ],
+    "n": 2914,
+    "bulletins": 289
+   },
+   "mention_share": null,
+   "cluster_only": 0.0453,
+   "rules_only": 0.035,
+   "precision_recall_adjusted": null,
+   "sample_pred_vs_manual": [
+    0.0,
+    0.0
+   ]
+  }
+ ],
+ "n_categories_per_entry": {
+  "0": 132,
+  "1": 1802,
+  "2": 661,
+  "3": 216,
+  "4": 75,
+  "5": 17,
+  "6": 10,
+  "7": 1
+ },
+ "avoidable": {
+  "strict": {
+   "value": 0.2289,
+   "ci95": [
+    0.2146,
+    0.2432
+   ],
+   "n": 2914,
+   "bulletins": 289,
+   "weighted": 0.2235
+  },
+  "any": {
+   "value": 0.4506,
+   "ci95": [
+    0.4328,
+    0.4684
+   ],
+   "n": 2914,
+   "bulletins": 289,
+   "weighted": 0.4467
+  },
+  "da_or_partial_all": {
+   "value": 0.9547,
+   "ci95": [
+    0.9476,
+    0.9618
+   ],
+   "n": 2914,
+   "bulletins": 289,
+   "weighted": 0.9531
+  },
+  "manual_sample_strict": 0.27,
+  "strict_excluding_unclassified": {
+   "value": 0.2398,
+   "ci95": [
+    0.2248,
+    0.2547
+   ],
+   "n": 2782,
+   "bulletins": 289
+  },
+  "sample_like_for_like": {
+   "strict": {
+    "manual": 0.27,
+    "predicted": 0.26,
+    "agreement": 0.89,
+    "table": {
+     "both": 21,
+     "manual_only": 6,
+     "pred_only": 5,
+     "neither": 68
+    }
+   },
+   "any": {
+    "manual": 0.47,
+    "predicted": 0.46,
+    "agreement": 0.79,
+    "table": {
+     "both": 36,
+     "manual_only": 11,
+     "pred_only": 10,
+     "neither": 43
+    }
+   }
+  },
+  "manual_sample_any": 0.47
+ },
+ "weekly": {
+  "2026-10-19/2026-10-25": {
+   "CAEN": {
+    "value": 0.3885,
+    "ci95": [
+     0.3238,
+     0.4531
+    ],
+    "n": 260,
+    "bulletins": 26
+   },
+   "SEDIU": {
+    "value": 0.2231,
+    "ci95": [
+     0.1587,
+     0.2875
+    ],
+    "n": 260,
+    "bulletins": 26
+   },
+   "ACT": {
+    "value": 0.1538,
+    "ci95": [
+     0.117,
+     0.1907
+    ],
+    "n": 260,
+    "bulletins": 26
+   },
+   "ASOC_ID": {
+    "value": 0.1231,
+    "ci95": [
+     0.0722,
+     0.1739
+    ],
+    "n": 260,
+    "bulletins": 26
+   },
+   "SOLICITANT": {
+    "value": 0.1077,
+    "ci95": [
+     0.0691,
+     0.1463
+    ],
+    "n": 260,
+    "bulletins": 26
+   },
+   "SEMN": {
+    "value": 0.05,
+    "ci95": [
+     0.0249,
+     0.0751
+    ],
+    "n": 260,
+    "bulletins": 26
+   },
+   "CERERE": {
+    "value": 0.1885,
+    "ci95": [
+     0.1415,
+     0.2354
+    ],
+    "n": 260,
+    "bulletins": 26
+   },
+   "BEN_REAL": {
+    "value": 0.0423,
+    "ci95": [
+     0.0169,
+     0.0677
+    ],
+    "n": 260,
+    "bulletins": 26
+   },
+   "CAPITAL": {
+    "value": 0.1077,
+    "ci95": [
+     0.0602,
+     0.1552
+    ],
+    "n": 260,
+    "bulletins": 26
+   },
+   "INSTIT": {
+    "value": 0.05,
+    "ci95": [
+     0.023,
+     0.077
+    ],
+    "n": 260,
+    "bulletins": 26
+   },
+   "DENUM": {
+    "value": 0.0154,
+    "ci95": [
+     0.0014,
+     0.0294
+    ],
+    "n": 260,
+    "bulletins": 26
+   },
+   "TARIF": {
+    "value": 0.0115,
+    "ci95": [
+     0.0,
+     0.0244
+    ],
+    "n": 260,
+    "bulletins": 26
+   },
+   "NESPEC": {
+    "value": 0.0577,
+    "ci95": [
+     0.0287,
+     0.0867
+    ],
+    "n": 260,
+    "bulletins": 26
+   },
+   "avoidable_strict": {
+    "value": 0.1885,
+    "ci95": [
+     0.1448,
+     0.2321
+    ],
+    "n": 260,
+    "bulletins": 26
+   },
+   "n": 260,
+   "days": [
+    "19.10",
+    "20.10"
+   ]
+  },
+  "2026-10-26/2026-11-01": {
+   "CAEN": {
+    "value": 0.3288,
+    "ci95": [
+     0.2984,
+     0.3592
+    ],
+    "n": 660,
+    "bulletins": 77
+   },
+   "SEDIU": {
+    "value": 0.2106,
+    "ci95": [
+     0.1774,
+     0.2439
+    ],
+    "n": 660,
+    "bulletins": 77
+   },
+   "ACT": {
+    "value": 0.1652,
+    "ci95": [
+     0.137,
+     0.1933
+    ],
+    "n": 660,
+    "bulletins": 77
+   },
+   "ASOC_ID": {
+    "value": 0.1152,
+    "ci95": [
+     0.0926,
+     0.1377
+    ],
+    "n": 660,
+    "bulletins": 77
+   },
+   "SOLICITANT": {
+    "value": 0.1091,
+    "ci95": [
+     0.0859,
+     0.1323
+    ],
+    "n": 660,
+    "bulletins": 77
+   },
+   "SEMN": {
+    "value": 0.0348,
+    "ci95": [
+     0.022,
+     0.0477
+    ],
+    "n": 660,
+    "bulletins": 77
+   },
+   "CERERE": {
+    "value": 0.2167,
+    "ci95": [
+     0.1839,
+     0.2494
+    ],
+    "n": 660,
+    "bulletins": 77
+   },
+   "BEN_REAL": {
+    "value": 0.0258,
+    "ci95": [
+     0.0138,
+     0.0377
+    ],
+    "n": 660,
+    "bulletins": 77
+   },
+   "CAPITAL": {
+    "value": 0.0864,
+    "ci95": [
+     0.0652,
+     0.1075
+    ],
+    "n": 660,
+    "bulletins": 77
+   },
+   "INSTIT": {
+    "value": 0.0894,
+    "ci95": [
+     0.0706,
+     0.1082
+    ],
+    "n": 660,
+    "bulletins": 77
+   },
+   "DENUM": {
+    "value": 0.0227,
+    "ci95": [
+     0.0124,
+     0.0331
+    ],
+    "n": 660,
+    "bulletins": 77
+   },
+   "TARIF": {
+    "value": 0.0242,
+    "ci95": [
+     0.0082,
+     0.0402
+    ],
+    "n": 660,
+    "bulletins": 77
+   },
+   "NESPEC": {
+    "value": 0.0455,
+    "ci95": [
+     0.0296,
+     0.0614
+    ],
+    "n": 660,
+    "bulletins": 77
+   },
+   "avoidable_strict": {
+    "value": 0.2242,
+    "ci95": [
+     0.1963,
+     0.2522
+    ],
+    "n": 660,
+    "bulletins": 77
+   },
+   "n": 660,
+   "days": [
+    "26.10",
+    "27.10",
+    "28.10",
+    "30.10"
+   ]
+  },
+  "2026-11-02/2026-11-08": {
+   "CAEN": {
+    "value": 0.325,
+    "ci95": [
+     0.2823,
+     0.3678
+    ],
+    "n": 523,
+    "bulletins": 53
+   },
+   "SEDIU": {
+    "value": 0.2103,
+    "ci95": [
+     0.1792,
+     0.2415
+    ],
+    "n": 523,
+    "bulletins": 53
+   },
+   "ACT": {
+    "value": 0.1816,
+    "ci95": [
+     0.1463,
+     0.217
+    ],
+    "n": 523,
+    "bulletins": 53
+   },
+   "ASOC_ID": {
+    "value": 0.0956,
+    "ci95": [
+     0.0736,
+     0.1176
+    ],
+    "n": 523,
+    "bulletins": 53
+   },
+   "SOLICITANT": {
+    "value": 0.1128,
+    "ci95": [
+     0.0879,
+     0.1377
+    ],
+    "n": 523,
+    "bulletins": 53
+   },
+   "SEMN": {
+    "value": 0.0402,
+    "ci95": [
+     0.0236,
+     0.0567
+    ],
+    "n": 523,
+    "bulletins": 53
+   },
+   "CERERE": {
+    "value": 0.2027,
+    "ci95": [
+     0.1631,
+     0.2422
+    ],
+    "n": 523,
+    "bulletins": 53
+   },
+   "BEN_REAL": {
+    "value": 0.0363,
+    "ci95": [
+     0.0195,
+     0.0531
+    ],
+    "n": 523,
+    "bulletins": 53
+   },
+   "CAPITAL": {
+    "value": 0.0899,
+    "ci95": [
+     0.0686,
+     0.1111
+    ],
+    "n": 523,
+    "bulletins": 53
+   },
+   "INSTIT": {
+    "value": 0.1109,
+    "ci95": [
+     0.0823,
+     0.1395
+    ],
+    "n": 523,
+    "bulletins": 53
+   },
+   "DENUM": {
+    "value": 0.0306,
+    "ci95": [
+     0.0173,
+     0.0439
+    ],
+    "n": 523,
+    "bulletins": 53
+   },
+   "TARIF": {
+    "value": 0.0191,
+    "ci95": [
+     0.0076,
+     0.0306
+    ],
+    "n": 523,
+    "bulletins": 53
+   },
+   "NESPEC": {
+    "value": 0.0497,
+    "ci95": [
+     0.0328,
+     0.0667
+    ],
+    "n": 523,
+    "bulletins": 53
+   },
+   "avoidable_strict": {
+    "value": 0.218,
+    "ci95": [
+     0.1843,
+     0.2516
+    ],
+    "n": 523,
+    "bulletins": 53
+   },
+   "n": 523,
+   "days": [
+    "02.11",
+    "04.11",
+    "05.11"
+   ]
+  },
+  "2026-11-09/2026-11-15": {
+   "CAEN": {
+    "value": 0.2933,
+    "ci95": [
+     0.2638,
+     0.3229
+    ],
+    "n": 917,
+    "bulletins": 75
+   },
+   "SEDIU": {
+    "value": 0.2279,
+    "ci95": [
+     0.2,
+     0.2558
+    ],
+    "n": 917,
+    "bulletins": 75
+   },
+   "ACT": {
+    "value": 0.1887,
+    "ci95": [
+     0.1611,
+     0.2162
+    ],
+    "n": 917,
+    "bulletins": 75
+   },
+   "ASOC_ID": {
+    "value": 0.1058,
+    "ci95": [
+     0.0857,
+     0.1258
+    ],
+    "n": 917,
+    "bulletins": 75
+   },
+   "SOLICITANT": {
+    "value": 0.1025,
+    "ci95": [
+     0.0824,
+     0.1226
+    ],
+    "n": 917,
+    "bulletins": 75
+   },
+   "SEMN": {
+    "value": 0.0632,
+    "ci95": [
+     0.0474,
+     0.0791
+    ],
+    "n": 917,
+    "bulletins": 75
+   },
+   "CERERE": {
+    "value": 0.2007,
+    "ci95": [
+     0.1762,
+     0.2251
+    ],
+    "n": 917,
+    "bulletins": 75
+   },
+   "BEN_REAL": {
+    "value": 0.0469,
+    "ci95": [
+     0.0331,
+     0.0607
+    ],
+    "n": 917,
+    "bulletins": 75
+   },
+   "CAPITAL": {
+    "value": 0.0763,
+    "ci95": [
+     0.0574,
+     0.0953
+    ],
+    "n": 917,
+    "bulletins": 75
+   },
+   "INSTIT": {
+    "value": 0.1156,
+    "ci95": [
+     0.0962,
+     0.135
+    ],
+    "n": 917,
+    "bulletins": 75
+   },
+   "DENUM": {
+    "value": 0.0229,
+    "ci95": [
+     0.0129,
+     0.0329
+    ],
+    "n": 917,
+    "bulletins": 75
+   },
+   "TARIF": {
+    "value": 0.0131,
+    "ci95": [
+     0.0055,
+     0.0207
+    ],
+    "n": 917,
+    "bulletins": 75
+   },
+   "NESPEC": {
+    "value": 0.0403,
+    "ci95": [
+     0.0294,
+     0.0513
+    ],
+    "n": 917,
+    "bulletins": 75
+   },
+   "avoidable_strict": {
+    "value": 0.2279,
+    "ci95": [
+     0.201,
+     0.2549
+    ],
+    "n": 917,
+    "bulletins": 75
+   },
+   "n": 917,
+   "days": [
+    "09.11",
+    "10.11",
+    "11.11",
+    "12.11",
+    "13.11"
+   ]
+  },
+  "2026-11-16/2026-11-22": {
+   "CAEN": {
+    "value": 0.2996,
+    "ci95": [
+     0.2623,
+     0.337
+    ],
+    "n": 554,
+    "bulletins": 58
+   },
+   "SEDIU": {
+    "value": 0.222,
+    "ci95": [
+     0.1938,
+     0.2502
+    ],
+    "n": 554,
+    "bulletins": 58
+   },
+   "ACT": {
+    "value": 0.1769,
+    "ci95": [
+     0.1482,
+     0.2056
+    ],
+    "n": 554,
+    "bulletins": 58
+   },
+   "ASOC_ID": {
+    "value": 0.1155,
+    "ci95": [
+     0.086,
+     0.145
+    ],
+    "n": 554,
+    "bulletins": 58
+   },
+   "SOLICITANT": {
+    "value": 0.139,
+    "ci95": [
+     0.1105,
+     0.1674
+    ],
+    "n": 554,
+    "bulletins": 58
+   },
+   "SEMN": {
+    "value": 0.0451,
+    "ci95": [
+     0.029,
+     0.0613
+    ],
+    "n": 554,
+    "bulletins": 58
+   },
+   "CERERE": {
+    "value": 0.2202,
+    "ci95": [
+     0.1818,
+     0.2586
+    ],
+    "n": 554,
+    "bulletins": 58
+   },
+   "BEN_REAL": {
+    "value": 0.0289,
+    "ci95": [
+     0.0125,
+     0.0453
+    ],
+    "n": 554,
+    "bulletins": 58
+   },
+   "CAPITAL": {
+    "value": 0.083,
+    "ci95": [
+     0.0631,
+     0.1029
+    ],
+    "n": 554,
+    "bulletins": 58
+   },
+   "INSTIT": {
+    "value": 0.0758,
+    "ci95": [
+     0.0511,
+     0.1005
+    ],
+    "n": 554,
+    "bulletins": 58
+   },
+   "DENUM": {
+    "value": 0.0289,
+    "ci95": [
+     0.0149,
+     0.0429
+    ],
+    "n": 554,
+    "bulletins": 58
+   },
+   "TARIF": {
+    "value": 0.0162,
+    "ci95": [
+     0.0065,
+     0.026
+    ],
+    "n": 554,
+    "bulletins": 58
+   },
+   "NESPEC": {
+    "value": 0.0433,
+    "ci95": [
+     0.0265,
+     0.0601
+    ],
+    "n": 554,
+    "bulletins": 58
+   },
+   "avoidable_strict": {
+    "value": 0.2653,
+    "ci95": [
+     0.2322,
+     0.2984
+    ],
+    "n": 554,
+    "bulletins": 58
+   },
+   "n": 554,
+   "days": [
+    "16.11",
+    "17.11",
+    "18.11"
+   ]
+  }
+ },
+ "waits": {
+  "CAEN": {
+   "n": 923,
+   "term_granted_median": 16.0,
+   "filing_to_postponement_median": 45.0,
+   "filing_to_postponement_p25_p75": [
+    41.0,
+    54.0
+   ],
+   "resolved_by_archive_end": 0.583,
+   "km_median_filing_to_final": 59.40601851851852,
+   "km_median_postponement_to_final": 16.346539351851852,
+   "admitted_share_of_resolved": 0.632,
+   "repostponed_share": 0.0
+  },
+  "SEDIU": {
+   "n": 639,
+   "term_granted_median": 16.0,
+   "filing_to_postponement_median": 43.0,
+   "filing_to_postponement_p25_p75": [
+    39.0,
+    54.0
+   ],
+   "resolved_by_archive_end": 0.57,
+   "km_median_filing_to_final": 59.36145833333333,
+   "km_median_postponement_to_final": 16.302546296296295,
+   "admitted_share_of_resolved": 0.692,
+   "repostponed_share": 0.002
+  },
+  "ACT": {
+   "n": 515,
+   "term_granted_median": 16.0,
+   "filing_to_postponement_median": 43.0,
+   "filing_to_postponement_p25_p75": [
+    35.0,
+    54.0
+   ],
+   "resolved_by_archive_end": 0.577,
+   "km_median_filing_to_final": 59.35666666666667,
+   "km_median_postponement_to_final": 15.460844907407408,
+   "admitted_share_of_resolved": 0.737,
+   "repostponed_share": 0.002
+  },
+  "ASOC_ID": {
+   "n": 319,
+   "term_granted_median": 16.0,
+   "filing_to_postponement_median": 44.0,
+   "filing_to_postponement_p25_p75": [
+    39.0,
+    54.0
+   ],
+   "resolved_by_archive_end": 0.545,
+   "km_median_filing_to_final": 59.515277777777776,
+   "km_median_postponement_to_final": 16.315752314814816,
+   "admitted_share_of_resolved": 0.701,
+   "repostponed_share": 0.0
+  },
+  "SOLICITANT": {
+   "n": 330,
+   "term_granted_median": 16.0,
+   "filing_to_postponement_median": 48.5,
+   "filing_to_postponement_p25_p75": [
+    42.0,
+    56.0
+   ],
+   "resolved_by_archive_end": 0.515,
+   "km_median_filing_to_final": 63.38950231481481,
+   "km_median_postponement_to_final": 16.363761574074076,
+   "admitted_share_of_resolved": 0.624,
+   "repostponed_share": 0.0
+  },
+  "SEMN": {
+   "n": 140,
+   "term_granted_median": 16.0,
+   "filing_to_postponement_median": 43.0,
+   "filing_to_postponement_p25_p75": [
+    33.0,
+    54.0
+   ],
+   "resolved_by_archive_end": 0.557,
+   "km_median_filing_to_final": 58.47898148148148,
+   "km_median_postponement_to_final": 14.384525462962962,
+   "admitted_share_of_resolved": 0.769,
+   "repostponed_share": 0.0
+  },
+  "CERERE": {
+   "n": 604,
+   "term_granted_median": 16.0,
+   "filing_to_postponement_median": 43.0,
+   "filing_to_postponement_p25_p75": [
+    39.0,
+    54.0
+   ],
+   "resolved_by_archive_end": 0.553,
+   "km_median_filing_to_final": 59.37605324074074,
+   "km_median_postponement_to_final": 16.341608796296295,
+   "admitted_share_of_resolved": 0.632,
+   "repostponed_share": 0.002
+  },
+  "BEN_REAL": {
+   "n": 106,
+   "term_granted_median": 16.0,
+   "filing_to_postponement_median": 43.0,
+   "filing_to_postponement_p25_p75": [
+    39.0,
+    50.0
+   ],
+   "resolved_by_archive_end": 0.538,
+   "km_median_filing_to_final": 59.39482638888889,
+   "km_median_postponement_to_final": 15.36619212962963,
+   "admitted_share_of_resolved": 0.877,
+   "repostponed_share": 0.0
+  },
+  "CAPITAL": {
+   "n": 248,
+   "term_granted_median": 16.0,
+   "filing_to_postponement_median": 43.0,
+   "filing_to_postponement_p25_p75": [
+    39.0,
+    54.0
+   ],
+   "resolved_by_archive_end": 0.621,
+   "km_median_filing_to_final": 57.48719907407408,
+   "km_median_postponement_to_final": 11.563599537037037,
+   "admitted_share_of_resolved": 0.779,
+   "repostponed_share": 0.004
+  },
+  "INSTIT": {
+   "n": 278,
+   "term_granted_median": 16.0,
+   "filing_to_postponement_median": 42.0,
+   "filing_to_postponement_p25_p75": [
+    22.0,
+    49.0
+   ],
+   "resolved_by_archive_end": 0.482,
+   "km_median_filing_to_final": 59.36451388888889,
+   "km_median_postponement_to_final": 16.365104166666665,
+   "admitted_share_of_resolved": 0.59,
+   "repostponed_share": 0.0
+  },
+  "DENUM": {
+   "n": 72,
+   "term_granted_median": 16.0,
+   "filing_to_postponement_median": 43.5,
+   "filing_to_postponement_p25_p75": [
+    36.5,
+    48.0
+   ],
+   "resolved_by_archive_end": 0.556,
+   "km_median_filing_to_final": 58.37586805555556,
+   "km_median_postponement_to_final": 16.320486111111112,
+   "admitted_share_of_resolved": 0.7,
+   "repostponed_share": 0.0
+  },
+  "TARIF": {
+   "n": 50,
+   "term_granted_median": 16.0,
+   "filing_to_postponement_median": 46.5,
+   "filing_to_postponement_p25_p75": [
+    42.0,
+    53.75
+   ],
+   "resolved_by_archive_end": 0.5,
+   "km_median_filing_to_final": 62.902002314814816,
+   "km_median_postponement_to_final": 16.420474537037038,
+   "admitted_share_of_resolved": 0.56,
+   "repostponed_share": 0.0
+  },
+  "NESPEC": {
+   "n": 132,
+   "term_granted_median": 16.0,
+   "filing_to_postponement_median": 46.0,
+   "filing_to_postponement_p25_p75": [
+    39.0,
+    54.0
+   ],
+   "resolved_by_archive_end": 0.629,
+   "km_median_filing_to_final": 59.3615162037037,
+   "km_median_postponement_to_final": 15.3709375,
+   "admitted_share_of_resolved": 0.651,
+   "repostponed_share": 0.0
+  },
+  "ALL": {
+   "n": 2914,
+   "term_granted_median": 16.0,
+   "filing_to_postponement_median": 43.0,
+   "filing_to_postponement_p25_p75": [
+    39.0,
+    54.0
+   ],
+   "resolved_by_archive_end": 0.581,
+   "km_median_filing_to_final": 59.3615162037037,
+   "km_median_postponement_to_final": 16.31773148148148,
+   "admitted_share_of_resolved": 0.698,
+   "repostponed_share": 0.001
+  }
+ },
+ "archive_filing_to_postponement_median": 43.0,
+ "archive_filing_to_postponement_p25_p75": [
+  38.0,
+  50.0
+ ],
+ "archive_end": "2026-11-20 17:21:10"
+}

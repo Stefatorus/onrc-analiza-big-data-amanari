@@ -1,0 +1,229 @@
+<svg class="fig" xmlns:xlink="http://www.w3.org/1999/xlink"   viewBox="0 0 282.330709 136.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-22T23:30:12.894999</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.8.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 136.8 
+L 282.330709 136.8 
+L 282.330709 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 29.802 105.848 
+L 274.338709 105.848 
+L 274.338709 7.992 
+L 29.802 7.992 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m1c1453734f" d="M 0 0 
+L 0 2.5 
+" style="stroke: #46505c; stroke-width: 0.5"/>
+      </defs>
+      <g>
+       <use xlink:href="#m1c1453734f" x="55.415529" y="105.848" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="55.415529" y="116.858469" transform="rotate(-0 55.415529 116.858469)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m1c1453734f" x="103.742942" y="105.848" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="103.742942" y="116.858469" transform="rotate(-0 103.742942 116.858469)">1</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m1c1453734f" x="152.070354" y="105.848" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="152.070354" y="116.858469" transform="rotate(-0 152.070354 116.858469)">2</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m1c1453734f" x="200.397767" y="105.848" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="200.397767" y="116.858469" transform="rotate(-0 200.397767 116.858469)">3</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m1c1453734f" x="248.72518" y="105.848" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="248.72518" y="116.858469" transform="rotate(-0 248.72518 116.858469)">4+</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="font: 6.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="152.070354" y="126.855719" transform="rotate(-0 152.070354 126.855719)">amânări anterioare ale aceluiași dosar</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <path d="M 29.802 105.848 
+L 274.338709 105.848 
+" clip-path="url(#p014114a4c0)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7"/>
+     <g id="text_7">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="26.302" y="108.353234" transform="rotate(-0 26.302 108.353234)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <path d="M 29.802 85.246737 
+L 274.338709 85.246737 
+" clip-path="url(#p014114a4c0)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_9"/>
+     <g id="text_8">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="26.302" y="87.751971" transform="rotate(-0 26.302 87.751971)">20</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_10">
+      <path d="M 29.802 64.645474 
+L 274.338709 64.645474 
+" clip-path="url(#p014114a4c0)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11"/>
+     <g id="text_9">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="26.302" y="67.150708" transform="rotate(-0 26.302 67.150708)">40</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_12">
+      <path d="M 29.802 44.044211 
+L 274.338709 44.044211 
+" clip-path="url(#p014114a4c0)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_13"/>
+     <g id="text_10">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="26.302" y="46.549445" transform="rotate(-0 26.302 46.549445)">60</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_14">
+      <path d="M 29.802 23.442947 
+L 274.338709 23.442947 
+" clip-path="url(#p014114a4c0)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_15"/>
+     <g id="text_11">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="26.302" y="25.948182" transform="rotate(-0 26.302 25.948182)">80</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="font: 6.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="13.244688" y="56.92" transform="rotate(-90 13.244688 56.92)">% din deciziile finale</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 40.917305 105.848 
+L 69.913753 105.848 
+L 69.913753 24.854134 
+L 40.917305 24.854134 
+z
+" clip-path="url(#p014114a4c0)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 89.244718 105.848 
+L 118.241165 105.848 
+L 118.241165 84.093066 
+L 89.244718 84.093066 
+z
+" clip-path="url(#p014114a4c0)" style="fill: #b86e14"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 137.57213 105.848 
+L 166.568578 105.848 
+L 166.568578 105.600785 
+L 137.57213 105.600785 
+z
+" clip-path="url(#p014114a4c0)" style="fill: #a63228"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 185.899543 105.848 
+L 214.895991 105.848 
+L 214.895991 105.837699 
+L 185.899543 105.837699 
+z
+" clip-path="url(#p014114a4c0)" style="fill: #a63228"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 234.226956 105.848 
+L 263.223404 105.848 
+L 263.223404 105.848 
+L 234.226956 105.848 
+z
+" clip-path="url(#p014114a4c0)" style="fill: #a63228"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 29.802 105.848 
+L 29.802 7.992 
+" style="fill: none; stroke: #c2beb4; stroke-width: 0.55; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 29.802 105.848 
+L 274.338709 105.848 
+" style="fill: none; stroke: #14324d; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_13">
+    <text style="fill: #1b2128; font: 6.3px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="55.415529" y="23.309039" transform="rotate(-0 55.415529 23.309039)">78,6%</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #1b2128; font: 6.3px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="103.742942" y="82.547971" transform="rotate(-0 103.742942 82.547971)">21,1%</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #1b2128; font: 6.3px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="152.070354" y="104.05569" transform="rotate(-0 152.070354 104.05569)">0,2%</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #1b2128; font: 6.3px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="200.397767" y="104.292605" transform="rotate(-0 200.397767 104.292605)">0,0%</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #1b2128; font: 6.3px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="248.72518" y="104.302905" transform="rotate(-0 248.72518 104.302905)">0,0%</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p014114a4c0">
+   <rect x="29.802" y="7.992" width="244.536709" height="97.856"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,302 @@
+[
+ {
+  "id": "T4.a.va_share_BN_exclK",
+  "value": 0.253,
+  "unit": "value added / net turnover",
+  "window": "2024",
+  "n": null,
+  "ci": null,
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sbs_ovw_act?geo=RO&lastTimePeriod=1&indic_sbs=NETTUR_MEUR&indic_sbs=AV_MEUR",
+  "method": "VA 130,584.9 / net turnover 515,689.7 million EUR; sections B-J + L-N summed (code B-N_X_K returned nothing)",
+  "caveat": "Eurostat label \"Value added\" (SBS factor-cost concept; the response does not repeat \"at factor cost\").",
+  "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+ },
+ {
+  "id": "T4.a.va_share_BS_exclO_S94",
+  "value": 0.276,
+  "unit": "value added / net turnover",
+  "window": "2024",
+  "n": null,
+  "ci": null,
+  "source": "same API as T4.a.va_share_BN_exclK",
+  "method": "151,721.83 / 549,585.53 million EUR (published aggregate)",
+  "caveat": "",
+  "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+ },
+ {
+  "id": "T4.a.va_share_micro_0_9",
+  "value": {
+   "B-N_excl_K": 0.289,
+   "B-S_excl_O_S94": 0.304
+  },
+  "unit": "value added / net turnover",
+  "window": "2024",
+  "n": null,
+  "ci": null,
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sbs_sc_ovw?geo=RO&lastTimePeriod=1",
+  "method": "25,846.6 / 89,425.5 and 29,412.51 / 96,850.35 million EUR, size class 0-9 persons employed",
+  "caveat": "B-N figure summed by section.",
+  "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+ },
+ {
+  "id": "T4.a.labour_productivity",
+  "value": {
+   "total_BS": 31.82,
+   "micro_BS": 19.27,
+   "total_BN": 29.97,
+   "micro_BN": 19.74
+  },
+  "unit": "thousand EUR VA per person employed",
+  "window": "2024",
+  "n": null,
+  "ci": null,
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sbs_sc_ovw?geo=RO&lastTimePeriod=1",
+  "method": "Apparent labour productivity",
+  "caveat": "",
+  "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+ },
+ {
+  "id": "T4.a.INS_crosscheck",
+  "value": null,
+  "unit": "",
+  "window": "",
+  "n": null,
+  "ci": null,
+  "source": "INS \"Rezultate si performante ale intreprinderilor\"",
+  "method": "not attempted",
+  "caveat": "",
+  "status": "NOT CONFIRMED"
+ },
+ {
+  "id": "T4.b.min_wage",
+  "value": {
+   "2026-01-01_to_2026-06-30": 4050,
+   "from_2026-07-01": 4325,
+   "hourly_from_2026-07-01": 25.949
+  },
+  "unit": "lei gross per month",
+  "window": "2026",
+  "n": null,
+  "ci": null,
+  "source": "https://legislatie.just.ro/Public/DetaliiDocument/308231 (HG 146/2026); https://legislatie.just.ro/Public/DetaliiDocument/291450 (HG 1506/2024) + OUG 89/2025 preamble",
+  "method": "legal text",
+  "caveat": "Aug-Nov 2026 window -> 4,325 lei. HG 146/2026 art. 1 re-read by the auditor.",
+  "status": "CONFIRMED - re-read by the auditor on 2026-11-22"
+ },
+ {
+  "id": "T4.b.min_wage_exempt_amount",
+  "value": {
+   "2026-01_to_06": 300,
+   "2026-07_to_12": 200
+  },
+  "unit": "lei/month free of income tax and social contributions",
+  "window": "2026",
+  "n": null,
+  "ci": null,
+  "source": "https://static.anaf.ro/static/10/Anaf/legislatie/OUG_89_2025.pdf (art. III)",
+  "method": "legal text",
+  "caveat": "Only if base salary = minimum wage and gross <= 4,300 lei (H1) / 4,600 lei (H2).",
+  "status": "CONFIRMED - re-read by the auditor on 2026-11-22"
+ },
+ {
+  "id": "T4.b.contribution_rates",
+  "value": {
+   "CAS_employee": 0.25,
+   "CASS": 0.1,
+   "income_tax": 0.1,
+   "CAM_employer": 0.0225
+  },
+  "unit": "rate",
+  "window": "2026 (consolidated Fiscal Code, version 25.10.2026)",
+  "n": null,
+  "ci": null,
+  "source": "https://legislatie.just.ro/Public/DetaliiDocument/171282 (art. 138a, 156, 64(1), 220^3(1))",
+  "method": "legal text",
+  "caveat": "The 2026 personal deduction at the minimum wage was not verified, so income tax is left out of the floor.",
+  "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+ },
+ {
+  "id": "T4.c.micro_tax",
+  "value": {
+   "rate": 0.01,
+   "turnover_ceiling_eur": 100000
+  },
+  "unit": "rate / EUR",
+  "window": "from 1 Jan 2026",
+  "n": null,
+  "ci": null,
+  "source": "https://legislatie.just.ro/Public/DetaliiDocument/171282 (art. 51(1), 47(1)(c))",
+  "method": "legal text",
+  "caveat": "The 3% rate was abrogated by OUG 89/2025.",
+  "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+ },
+ {
+  "id": "T4.c.profit_and_dividend_tax",
+  "value": {
+   "profit_tax": 0.16,
+   "dividend_tax_from_2026": 0.16
+  },
+  "unit": "rate",
+  "window": "2026",
+  "n": null,
+  "ci": null,
+  "source": "https://legislatie.just.ro/Public/DetaliiDocument/171282 (art. 17, 97(7)); https://static.anaf.ro/static/10/Anaf/legislatie/L_141_2025.pdf",
+  "method": "legal text",
+  "caveat": "",
+  "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+ },
+ {
+  "id": "T4.c.vat",
+  "value": {
+   "standard_rate_from_2025-08-01": 0.21,
+   "exemption_threshold_lei_from_2025-09-01": 395000
+  },
+  "unit": "rate / lei",
+  "window": "2026",
+  "n": null,
+  "ci": null,
+  "source": "https://legislatie.just.ro/Public/DetaliiDocument/171282 (art. 291(1), 310(1))",
+  "method": "legal text",
+  "caveat": "",
+  "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+ },
+ {
+  "id": "T4.d.nbr_policy_rate",
+  "value": {
+   "policy": 0.065,
+   "lending_facility": 0.075,
+   "deposit_facility": 0.055,
+   "in_force_since": "2024-08-08",
+   "last_board_meeting": "2026-11-12"
+  },
+  "unit": "rate",
+  "window": "Nov 2026",
+  "n": null,
+  "ci": null,
+  "source": "https://www.bnr.ro/1970-rata-dobanzii-de-politica-monetara",
+  "method": "official table",
+  "caveat": "",
+  "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+ },
+ {
+  "id": "T4.d.yield_1y",
+  "value": 0.0616,
+  "unit": "weighted average yield, T-bill ROZOAXICMLV1 (maturity 28-10-2027)",
+  "window": "auction 5 Nov 2026",
+  "n": null,
+  "ci": null,
+  "source": "https://mfinante.gov.ro/static/10/Mfp/emisiuni/comof_05112026.pdf",
+  "method": "MF auction communique (cut-off 6.19%, 966.6m lei allotted)",
+  "caveat": "Image PDF; read from the rendered page.",
+  "status": "CONFIRMED - re-read by the auditor on 2026-11-22"
+ },
+ {
+  "id": "T4.d.yield_10y",
+  "value": {
+   "2026-10": 0.0677,
+   "2026-09": 0.0671,
+   "2026-08": 0.0643,
+   "2026-07": 0.0609
+  },
+  "unit": "EMU convergence long-term interest rate",
+  "window": "Jul-Oct 2026",
+  "n": null,
+  "ci": null,
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/irt_lt_mcby_m?geo=RO&lastTimePeriod=4",
+  "method": "Eurostat irt_lt_mcby_m (updated 2026-11-12)",
+  "caveat": "November 2026 not yet published.",
+  "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+ },
+ {
+  "id": "T4.e.worldbank_bready_2024",
+  "value": {
+   "llc_days": 6.5,
+   "cost_pct_income_per_capita": 0.3,
+   "onrc_registration_step_days": 3,
+   "onrc_fee_ron": 128
+  },
+  "unit": "days / % / RON",
+  "window": "Subnational B-READY 2024, 9 Romanian cities",
+  "n": null,
+  "ci": null,
+  "source": "https://openknowledge.worldbank.org/server/api/core/bitstreams/7fc14323-86f3-471c-8a06-c1cebb477a1d/content (p.53-54)",
+  "method": "report",
+  "caveat": "Supports the 3-day benchmark of the model; does not price delay.",
+  "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+ },
+ {
+  "id": "T4.e.worldbank_doing_business_2020",
+  "value": {
+   "procedures": 6,
+   "days": 20,
+   "onrc_step_days": 3,
+   "onrc_fee_ron": 122
+  },
+  "unit": "count / days / RON",
+  "window": "DB2020 Bucharest",
+  "n": null,
+  "ci": null,
+  "source": "https://documents1.worldbank.org/curated/en/639751575291022268/text/Doing-Business-2020-Comparing-Business-Regulation-in-190-Economies-Economy-Profile-of-Romania.txt",
+  "method": "report",
+  "caveat": "Discontinued series.",
+  "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+ },
+ {
+  "id": "T4.e.ec_digital_company_law_IA",
+  "value": {
+   "admin_burden_reduction_eur_per_year": 437000000.0,
+   "one_off_companies_eur": 311000000.0
+  },
+  "unit": "EUR, EU-wide",
+  "window": "SWD(2023) 179",
+  "n": null,
+  "ci": null,
+  "source": "https://data.consilium.europa.eu/doc/document/ST-7953-2023-ADD-5/en/pdf",
+  "method": "impact assessment",
+  "caveat": "EU-wide, not Romania; not a per-day delay cost.",
+  "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+ },
+ {
+  "id": "T4.e.ec_eu_inc_IA",
+  "value": {
+   "registration_deadline_hours": 48,
+   "cost_ceiling_eur": 100,
+   "burden_reduction_eur_10y": [
+    328000000.0,
+    440000000.0
+   ]
+  },
+  "unit": "EUR, EU-wide",
+  "window": "SWD(2026) 322 (18.3.2026)",
+  "n": null,
+  "ci": null,
+  "source": "https://www.cdep.ro/afaceri_europene/CE/2026/SWD(2026)%20322_EN_resume_impact_assessment_part1_v4.pdf",
+  "method": "impact assessment",
+  "caveat": "EU-wide.",
+  "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+ },
+ {
+  "id": "T4.e.directive_2019_1151_deadline",
+  "value": null,
+  "unit": "",
+  "window": "",
+  "n": null,
+  "ci": null,
+  "source": "EUR-Lex (empty response)",
+  "method": "not retrieved",
+  "caveat": "",
+  "status": "NOT CONFIRMED"
+ },
+ {
+  "id": "T4.e.cost_per_day_of_delay",
+  "value": null,
+  "unit": "",
+  "window": "",
+  "n": null,
+  "ci": null,
+  "source": "World Bank / OECD / EC pages searched",
+  "method": "no official per-day cost of registration delay found",
+  "caveat": "",
+  "status": "NOT CONFIRMED"
+ }
+]

@@ -1,0 +1,353 @@
+{
+ "_meta": "Backtest pe BERC (sursa de referință): (1) mecanismul cozii cu intrări și capacitate reale; (2) prognoza doar cu ce se știa la origine. Comparat cu mediana observată a așteptării pe ziua depunerii, pentru cohortele aproape complet decise (până la 13.09.2026). Zile calendaristice.",
+ "origini": {
+  "2026-03-02": {
+   "origin": "2026-03-02",
+   "stoc_initial": 23266,
+   "zile_evaluate": 137,
+   "mecanism": {
+    "mae": 2.5,
+    "bias": 2.5,
+    "corelatie": 0.984
+   },
+   "prognoza": {
+    "capacitate_presupusa": 4516,
+    "intrari_presupuse": 4390,
+    "mae": 4.8,
+    "bias": -2.5
+   },
+   "saptamanal": [
+    {
+     "sapt": "2026-03-02",
+     "observat": 6.0,
+     "mecanism": 7.0,
+     "prognoza": 7.0
+    },
+    {
+     "sapt": "2026-03-09",
+     "observat": 6.0,
+     "mecanism": 7.0,
+     "prognoza": 7.0
+    },
+    {
+     "sapt": "2026-03-16",
+     "observat": 5.2,
+     "mecanism": 8.0,
+     "prognoza": 7.0
+    },
+    {
+     "sapt": "2026-03-23",
+     "observat": 5.0,
+     "mecanism": 8.0,
+     "prognoza": 7.0
+    },
+    {
+     "sapt": "2026-03-30",
+     "observat": 5.1,
+     "mecanism": 8.0,
+     "prognoza": 7.0
+    },
+    {
+     "sapt": "2026-04-06",
+     "observat": 7.8,
+     "mecanism": 11.0,
+     "prognoza": 7.0
+    },
+    {
+     "sapt": "2026-04-13",
+     "observat": 5.1,
+     "mecanism": 7.0,
+     "prognoza": 7.0
+    },
+    {
+     "sapt": "2026-04-20",
+     "observat": 5.9,
+     "mecanism": 7.0,
+     "prognoza": 7.0
+    },
+    {
+     "sapt": "2026-04-27",
+     "observat": 6.2,
+     "mecanism": 8.0,
+     "prognoza": 7.0
+    },
+    {
+     "sapt": "2026-05-04",
+     "observat": 5.1,
+     "mecanism": 7.0,
+     "prognoza": 7.0
+    },
+    {
+     "sapt": "2026-05-11",
+     "observat": 5.1,
+     "mecanism": 7.0,
+     "prognoza": 7.0
+    },
+    {
+     "sapt": "2026-05-18",
+     "observat": 5.1,
+     "mecanism": 7.0,
+     "prognoza": 7.0
+    },
+    {
+     "sapt": "2026-05-25",
+     "observat": 6.1,
+     "mecanism": 8.0,
+     "prognoza": 7.0
+    },
+    {
+     "sapt": "2026-06-01",
+     "observat": 5.1,
+     "mecanism": 7.0,
+     "prognoza": 7.0
+    },
+    {
+     "sapt": "2026-06-08",
+     "observat": 5.0,
+     "mecanism": 7.0,
+     "prognoza": 6.0
+    },
+    {
+     "sapt": "2026-06-15",
+     "observat": 5.1,
+     "mecanism": 7.0,
+     "prognoza": 6.0
+    },
+    {
+     "sapt": "2026-06-22",
+     "observat": 6.0,
+     "mecanism": 8.0,
+     "prognoza": 6.0
+    },
+    {
+     "sapt": "2026-06-29",
+     "observat": 6.1,
+     "mecanism": 8.0,
+     "prognoza": 6.0
+    },
+    {
+     "sapt": "2026-07-06",
+     "observat": 6.0,
+     "mecanism": 8.0,
+     "prognoza": 6.0
+    },
+    {
+     "sapt": "2026-07-13",
+     "observat": 6.8,
+     "mecanism": 8.0,
+     "prognoza": 6.0
+    },
+    {
+     "sapt": "2026-07-20",
+     "observat": 7.2,
+     "mecanism": 9.0,
+     "prognoza": 6.0
+    },
+    {
+     "sapt": "2026-07-27",
+     "observat": 8.1,
+     "mecanism": 12.0,
+     "prognoza": 6.0
+    },
+    {
+     "sapt": "2026-08-03",
+     "observat": 11.7,
+     "mecanism": 13.0,
+     "prognoza": 6.0
+    },
+    {
+     "sapt": "2026-08-10",
+     "observat": 13.9,
+     "mecanism": 15.0,
+     "prognoza": 6.0
+    },
+    {
+     "sapt": "2026-08-17",
+     "observat": 19.0,
+     "mecanism": 20.0,
+     "prognoza": 6.0
+    },
+    {
+     "sapt": "2026-08-24",
+     "observat": 21.7,
+     "mecanism": 23.0,
+     "prognoza": 6.0
+    },
+    {
+     "sapt": "2026-08-31",
+     "observat": 27.2,
+     "mecanism": 28.0,
+     "prognoza": 6.0
+    },
+    {
+     "sapt": "2026-09-07",
+     "observat": 34.8,
+     "mecanism": 35.0,
+     "prognoza": 6.0
+    }
+   ]
+  },
+  "2026-06-01": {
+   "origin": "2026-06-01",
+   "stoc_initial": 19767,
+   "zile_evaluate": 75,
+   "mecanism": {
+    "mae": 2.1,
+    "bias": 2.1,
+    "corelatie": 0.994
+   },
+   "prognoza": {
+    "capacitate_presupusa": 4174,
+    "intrari_presupuse": 3660,
+    "mae": 11.5,
+    "bias": -11.0
+   },
+   "saptamanal": [
+    {
+     "sapt": "2026-06-01",
+     "observat": 5.1,
+     "mecanism": 7.0,
+     "prognoza": 6.0
+    },
+    {
+     "sapt": "2026-06-08",
+     "observat": 5.0,
+     "mecanism": 7.0,
+     "prognoza": 6.0
+    },
+    {
+     "sapt": "2026-06-15",
+     "observat": 5.1,
+     "mecanism": 7.0,
+     "prognoza": 5.0
+    },
+    {
+     "sapt": "2026-06-22",
+     "observat": 6.0,
+     "mecanism": 8.0,
+     "prognoza": 5.0
+    },
+    {
+     "sapt": "2026-06-29",
+     "observat": 6.1,
+     "mecanism": 8.0,
+     "prognoza": 3.0
+    },
+    {
+     "sapt": "2026-07-06",
+     "observat": 6.0,
+     "mecanism": 8.0,
+     "prognoza": 2.0
+    },
+    {
+     "sapt": "2026-07-13",
+     "observat": 6.8,
+     "mecanism": 8.0,
+     "prognoza": 1.0
+    },
+    {
+     "sapt": "2026-07-20",
+     "observat": 7.2,
+     "mecanism": 9.0,
+     "prognoza": 1.0
+    },
+    {
+     "sapt": "2026-07-27",
+     "observat": 8.1,
+     "mecanism": 12.0,
+     "prognoza": 0.0
+    },
+    {
+     "sapt": "2026-08-03",
+     "observat": 11.7,
+     "mecanism": 13.0,
+     "prognoza": 0.0
+    },
+    {
+     "sapt": "2026-08-10",
+     "observat": 13.9,
+     "mecanism": 15.0,
+     "prognoza": -1.0
+    },
+    {
+     "sapt": "2026-08-17",
+     "observat": 19.0,
+     "mecanism": 20.0,
+     "prognoza": -2.0
+    },
+    {
+     "sapt": "2026-08-24",
+     "observat": 21.7,
+     "mecanism": 23.0,
+     "prognoza": -2.0
+    },
+    {
+     "sapt": "2026-08-31",
+     "observat": 27.2,
+     "mecanism": 28.0,
+     "prognoza": -4.0
+    },
+    {
+     "sapt": "2026-09-07",
+     "observat": 34.8,
+     "mecanism": 35.0,
+     "prognoza": -5.0
+    }
+   ]
+  },
+  "2026-08-03": {
+   "origin": "2026-08-03",
+   "stoc_initial": 29955,
+   "zile_evaluate": 30,
+   "mecanism": {
+    "mae": 1.4,
+    "bias": 1.4,
+    "corelatie": 0.994
+   },
+   "prognoza": {
+    "capacitate_presupusa": 3635,
+    "intrari_presupuse": 4015,
+    "mae": 7.3,
+    "bias": -6.9
+   },
+   "saptamanal": [
+    {
+     "sapt": "2026-08-03",
+     "observat": 11.7,
+     "mecanism": 13.0,
+     "prognoza": 13.0
+    },
+    {
+     "sapt": "2026-08-10",
+     "observat": 13.9,
+     "mecanism": 15.0,
+     "prognoza": 13.0
+    },
+    {
+     "sapt": "2026-08-17",
+     "observat": 19.0,
+     "mecanism": 20.0,
+     "prognoza": 14.0
+    },
+    {
+     "sapt": "2026-08-24",
+     "observat": 21.7,
+     "mecanism": 23.0,
+     "prognoza": 14.0
+    },
+    {
+     "sapt": "2026-08-31",
+     "observat": 27.2,
+     "mecanism": 28.0,
+     "prognoza": 15.0
+    },
+    {
+     "sapt": "2026-09-07",
+     "observat": 34.8,
+     "mecanism": 35.0,
+     "prognoza": 16.0
+    }
+   ]
+  }
+ }
+}

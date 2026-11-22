@@ -1,0 +1,3 @@
+cohort,beta_turnover_per_day,ci_lo,ci_hi,daily_rate_after_decision,share_of_waiting_day_turnover_lost,share_ci,n,mature_daily_turnover_next_FY,F
+2024,-1433.58,-2102.02,-765.144,467.588,3.06591,"(1.6363643088030422, 4.49545361749119)",78210,553.368,1022.49
+2025,-602.004,-1735.84,531.829,426.552,1.41133,"(-1.24681130427944, 4.069466979118381)",82903,,603.228

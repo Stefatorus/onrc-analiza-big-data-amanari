@@ -1,0 +1,28 @@
+== C88 mean monthly excess over national median (days), top 6
+        mean    max     peak  months>5
+county                                
+CT      3.87  19.43  2025-04         6
+BV      2.71  11.81  2026-04         4
+TR      2.46  22.00  2026-04         3
+GL      2.29  16.43  2026-03         3
+TL      1.54   7.40  2025-04         2
+SM      1.36   8.96  2026-04         2
+   bottom 3
+        mean   max     peak  months>5
+county                               
+BC     -1.82  0.02  2026-06         0
+VL     -1.83 -0.02  2025-10         0
+AG     -1.87 -0.07  2025-10         0
+== model input check: mean strict finals last 12 wd to 2026-11-18 4497  (min 4004 )
+== model input check: mean strict finals last 12 wd to 2026-11-19 4504  (min 4004 )
+== model input check: mean strict finals last 12 wd to 2026-11-20 4212  (min 892 )
+   mean strict finals/wd 2-19 Nov 4456
+== C48 window 2026-01-01 2026-06-30 all decisions/wd 5462  strict/wd 4283  strict+amanari/wd 5445
+== C48 window 2026-08-01 2026-10-31 all decisions/wd 4770  strict/wd 3863  strict+amanari/wd 4765
+== C48 window 2026-10-01 2026-10-31 all decisions/wd 5082  strict/wd 4139  strict+amanari/wd 5076
+== C48 window 2026-10-27 2026-11-06 all decisions/wd 5039  strict/wd 4080  strict+amanari/wd 5035
+== C48 window 2026-10-30 2026-11-06 all decisions/wd 5305  strict/wd 4301  strict+amanari/wd 5301
+== C48 window 2026-11-02 2026-11-06 all decisions/wd 5445  strict/wd 4409  strict+amanari/wd 5441
+== C48 window 2026-10-01 2026-11-06 all decisions/wd 5149  strict/wd 4189  strict+amanari/wd 5143
+== P05 counter max numbers/day 2026 45152 2026-01-13  top3 {Timestamp('2026-01-13 00:00:00'): 45152, Timestamp('2026-09-15 00:00:00'): 36637, Timestamp('2026-09-22 00:00:00'): 33083}
+== C05 ratio Sep/May medians (decided only) 7.63  rounded 39/5 = 7.8  KM 57-58 / 5 = 11.4 11.6

@@ -1,0 +1,21 @@
+{
+  "recent_daily_min": 3974,
+  "recent_daily_max": 4808,
+  "historical_5day_means_p10_p50_p90": [
+    3533.88,
+    4166.4,
+    4455.58
+  ],
+  "current_legal_role_pdf_coverage": "Only selected three October 2026 decision dates in paired panel",
+  "workdays_2027": 252,
+  "effective_support_days_2027": 242.0,
+  "policy_start": "2027-01-04",
+  "admin_start": "2027-01-19",
+  "policy_end": "2028-01-08",
+  "previous_backlog": 208318,
+  "current_backlog": 204414,
+  "prior_unprocessed": 114360,
+  "prior_processed": 93958,
+  "current_unprocessed": 106060,
+  "current_processed": 98354
+}

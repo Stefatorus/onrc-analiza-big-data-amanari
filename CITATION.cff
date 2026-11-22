@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "Dacă folosiți acest cod sau aceste rezultate, vă rugăm să citați raportul. / If you use this code or these results, please cite the report."
+title: "Coada de la Registrul Comerțului: analiză independentă din date deschise (noiembrie 2026) — cod de reproducere"
+type: software
+authors:
+  - family-names: Deleanu
+    given-names: Ștefan-Lucian
+    website: "https://stefandeleanu.ro"
+version: "2026.11"
+date-released: "2026-11-22"   # PHASE 2: set to the actual release date
+license: MIT
+keywords:
+  - ONRC
+  - Registrul Comerțului
+  - BERC
+  - queue analysis
+  - forecasting
+  - reproducibility
+  - Lean 4
+abstract: >-
+  Scripts that rebuild, from public data, every number, figure and volume of the report
+  "Coada de la Registrul Comerțului" (Romanian Trade Registry queue, November 2026):
+  BERC decision archive, a myportal sample, Ministry of Justice notes and Ministry of Finance
+  balance sheets. Every published number is traceable through a claims registry; selected
+  statements are machine-checked in Lean 4. Produced with AI assistance (Claude Opus 5.5,
+  Gemini 4 Neon) under the author's guidance and verification.
+# repository-code: PHASE 2 (no remote exists yet; do not invent a URL)
+preferred-citation:
+  type: report
+  title: "Coada de la Registrul Comerțului — raport complet (noiembrie 2026)"
+  authors:
+    - family-names: Deleanu
+      given-names: Ștefan-Lucian
+  year: 2026
+  month: 11
+  languages:
+    - ro

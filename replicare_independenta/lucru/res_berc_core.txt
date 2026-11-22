@@ -1,0 +1,59 @@
+== C01 broad finals/wd 1.10-20.11.2026 (4175.7, 154500) strict (4171.3, 154337)
+   excluding 20.11 (partial): broad/wd 1.10-19.11 (4266.9, 153608)
+   peak Feb-Mar 2025 broad (5023.2, 205950) strict (5006.5, 205265)
+== C03 amanari/wd: 1.10-20.11.2026 (1014.8, 37546)  2026 YTD (1058.1, 237025)
+== C07 Aug/JunJul strict per legal wd 3467.1 3853.0 0.9
+   C07 per day-with-decisions 0.9
+== C14 CERERE265 16-20 Nov median (57.09, 15568)  16-19 Nov (57.1, 14767)
+== C15 INMATRIC265 16-20 Nov median (41.06, 3481)  16-19 Nov (41.06, 3390)
+== C84 all strict 1-20 Nov median (50.02, 63273) CERERE only (52.94, 53590)
+   P02 Oct median all strict (35.01, 91055)
+== C16 weekly medians (by decision week Mon-Sun)
+cat                    CERERE265  INMATRIC265  N_all
+res                                                 
+2026-09-28/2026-10-04      27.91        27.64  21671
+2026-10-05/2026-10-11      30.88        30.64  21129
+2026-10-12/2026-10-18      34.92        33.96  21935
+2026-10-19/2026-10-25      38.98        34.75  20658
+2026-10-26/2026-11-01      43.12        30.91  18673
+2026-11-02/2026-11-08      48.98        37.90  22043
+2026-11-09/2026-11-15      54.13        43.62  22180
+2026-11-16/2026-11-22      57.09        41.06  19050
+   monotone CERERE: True  INMATRIC: False
+== C17 old platform median W 1.64 N 975366 strict finals/day-with-decisions 3077 per legal wd 3039 p90 9.5
+== C18 launch median W 12.11 N 236467 strict finals/day-with-decisions 2687 per legal wd 2657 p90 27.4
+== C19 2025 median W 2.97 N 1010770 strict finals/day-with-decisions 4092 per legal wd 4076 p90 16.7
+== 2026 Jan-Jul median W 5.76 N 605114 strict finals/day-with-decisions 4202 per legal wd 4202 p90 18.9
+== C21 amanari share of all decisions old 20.38  of (strict+amanari) 20.47  n 1231677
+== C21 amanari share of all decisions launch 19.0  of (strict+amanari) 19.13  n 294384
+== C21 amanari share of all decisions 2025 20.09  of (strict+amanari) 20.13  n 1268622
+== C21 amanari share of all decisions 2026 to Jul 21.0  of (strict+amanari) 21.06  n 768898
+== C21 amanari share of all decisions Aug-Nov26 19.36  of (strict+amanari) 19.38  n 390321
+== C21 amanari share of all decisions 2026 all 20.45  of (strict+amanari) 20.5  n 1159219
+== C80/C82 year 2023 all decisions 677840 amanari 138115 20.38
+== C80/C82 year 2024 all decisions 924072 amanari 183471 19.85
+== C80/C82 year 2025 all decisions 1268622 amanari 254829 20.09
+== C80/C82 year 2026 all decisions 1159219 amanari 237025 20.45
+== C30/C79/C87 2023 strict/wd 2936.9 broad/wd 2957.2 all decisions/wd 3706.9  wd 36
+== C30/C79/C87 2024 strict/wd 3474.6 broad/wd 3502.5 all decisions/wd 4234.1  wd 37
+== C30/C79/C87 2025 strict/wd 3815.8 broad/wd 3826.6 all decisions/wd 4881.0  wd 37
+== C30/C79/C87 2026 strict/wd 4171.3 broad/wd 4175.7 all decisions/wd 5190.4  wd 37
+== C86 2024 all decisions/wd H1 4112.5 Aug-Oct 3113.7 chg -24.3 % | strict 3257.1 2475.9 -24.0
+== C86 2025 all decisions/wd H1 5447.9 Aug-Oct 4713.9 chg -13.5 % | strict 4424.4 3675.7 -16.9
+== C86 2026 all decisions/wd H1 5462.3 Aug-Oct 4770.4 chg -12.7 % | strict 4283.4 3862.5 -9.8
+== C31 old <=1 wd 74.53  same day(<=0wd) 0.31  W<=24h 0.31  W<=1.5d 23.24
+== C31 old to Jul31 <=1 wd 74.44  same day(<=0wd) 0.31  W<=24h 0.33  W<=1.5d 23.27
+== C31 crisis <=1 wd 0.66  same day(<=0wd) 0.01  W<=24h 0.4  W<=1.5d 0.57
+== C32 1.03-26.04 W<=2d 20.8  <=2 wd 33.68  N 164350
+   county-median share W<=2d 16.72
+== C32 27.04-31.07 W<=2d 1.18  <=2 wd 2.97  N 270204
+   county-median share W<=2d 0.87
+   counties with after<0.03: 42 of 42  after max 0.021
+== C101 strict 2026-03-01 2026-04-26 exactly 3rd wd 12.9  <3 wd 33.7  p5 hours 23.3
+== C101 strict 2026-04-27 2026-07-31 exactly 3rd wd 37.4  <3 wd 3.0  p5 hours 69.6
+== C101 amanari 2026-03-01 2026-04-26 exactly 3rd wd 18.3  <3 wd 41.1  p5 hours 23.6
+== C101 amanari 2026-04-27 2026-07-31 exactly 3rd wd 50.3  <3 wd 2.8  p5 hours 69.0
+== C101 inmatric 2026-03-01 2026-04-26 exactly 3rd wd 12.7  <3 wd 31.6  p5 hours 23.2
+== C101 inmatric 2026-04-27 2026-07-31 exactly 3rd wd 34.4  <3 wd 2.1  p5 hours 69.5
+== C101 cerere 2026-03-01 2026-04-26 exactly 3rd wd 13.0  <3 wd 34.1  p5 hours 23.3
+== C101 cerere 2026-04-27 2026-07-31 exactly 3rd wd 37.9  <3 wd 3.1  p5 hours 69.6

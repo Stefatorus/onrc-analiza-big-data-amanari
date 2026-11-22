@@ -1,0 +1,1735 @@
+{
+ "_meta": "Why ONRC applications are rejected: reasons from BERC rejection decisions, compared with postponement reasons. Aggregates only; no identifiers. Built by independent_audit/rejection_reasons/07_results.py. AI-assisted analysis (see README).",
+ "findings": [
+  {
+   "id": "RR.coverage",
+   "value": {
+    "parsed": 969,
+    "bulletin_index_rejections": 999,
+    "archive_rejections_window": 8710,
+    "share": 0.1113,
+    "share_on_parsed_days": 0.1172,
+    "by_type": {
+     "parsed": {
+      "MENTIUNI": 886,
+      "INMATRICULARE": 83
+     },
+     "archive": {
+      "MENTIUNI": 7926,
+      "INMATRICULARE": 784
+     },
+     "coverage": {
+      "MENTIUNI": 0.1118,
+      "INMATRICULARE": 0.1059
+     }
+    },
+    "bulletins": 275,
+    "decision_days": 21,
+    "county_coverage_min_max": [
+     0.026,
+     0.204
+    ],
+    "county_coverage_cv": 0.389,
+    "jtype_parsed": {
+     "J": 0.667,
+     "F": 0.245,
+     "nan": 0.086,
+     "C": 0.003
+    },
+    "jtype_archive": {
+     "J": 0.673,
+     "F": 0.233,
+     "nan": 0.09,
+     "C": 0.004
+    }
+   },
+   "ci95": null,
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Full rejection decisions (\"ÎNCHEIERE ... urmează a respinge prezenta cerere, pe motiv ... DISPUNE Respinge\") parsed with PyMuPDF from all 545 bulletins; deduplicated on request nr + decision day; 100% linked to the archive Respins decision; type from the bulletin index section.",
+   "caveat": "Denominators are archive counts (sol == Respins, deduplicated on request nr + day)."
+  },
+  {
+   "id": "RR.archive_context",
+   "value": {
+    "rejections": 8710,
+    "rejections_by_type": {
+     "MENTIUNI": 7926,
+     "INMATRICULARE": 784
+    },
+    "waivers_renuntat": 809,
+    "postponements": 23308,
+    "admitted": 88069,
+    "rejection_to_postponement_ratio": 0.3737
+   },
+   "ci95": null,
+   "n": 8710,
+   "window": "archive decisions 19 Oct-18 Nov 2026",
+   "method": "Archive counts: Respins, Renunțat (applicant waived, a separate outcome, not a rejection), AUTO_AMANARI, Admis.",
+   "caveat": "Archive misses some postponements on a few days."
+  },
+  {
+   "id": "RR.archive_prior_postponement.ALL",
+   "value": 0.9762,
+   "ci95": [
+    0.973,
+    0.9794
+   ],
+   "n": 8710,
+   "window": "all archive rejections 19 Oct-18 Nov 2026 (census)",
+   "method": "Share of archive rejections with an earlier AUTO_AMANARI decision of the same request (same request nr and filing day). Median days last postponement -> rejection 16.0; filing -> rejection 51.0.",
+   "caveat": "Binomial CI; lower bound because the archive misses some postponements."
+  },
+  {
+   "id": "RR.archive_prior_postponement.INMATRICULARE",
+   "value": 0.9452,
+   "ci95": [
+    0.9292,
+    0.9611
+   ],
+   "n": 784,
+   "window": "all archive rejections 19 Oct-18 Nov 2026 (census)",
+   "method": "Share of archive rejections with an earlier AUTO_AMANARI decision of the same request (same request nr and filing day). Median days last postponement -> rejection 16.0; filing -> rejection 47.0.",
+   "caveat": "Binomial CI; lower bound because the archive misses some postponements."
+  },
+  {
+   "id": "RR.archive_prior_postponement.MENTIUNI",
+   "value": 0.9793,
+   "ci95": [
+    0.9762,
+    0.9824
+   ],
+   "n": 7926,
+   "window": "all archive rejections 19 Oct-18 Nov 2026 (census)",
+   "method": "Share of archive rejections with an earlier AUTO_AMANARI decision of the same request (same request nr and filing day). Median days last postponement -> rejection 16.0; filing -> rejection 52.0.",
+   "caveat": "Binomial CI; lower bound because the archive misses some postponements."
+  },
+  {
+   "id": "RR.postponement_outcomes",
+   "value": {
+    "rejected_share_of_resolved": 0.3606,
+    "rejected_share_of_all_postponed": 0.3593,
+    "outcome_counts": {
+     "Admis": 18826,
+     "Respins": 10905,
+     "Renuntat": 513
+    }
+   },
+   "ci95": null,
+   "n": 30354,
+   "window": "postponements decided 2026-09-01..2026-10-15, follow-up to 2026-11-20 17:21:10",
+   "method": "First later non-postponement decision of the same request (request nr + filing day) after its last postponement in the window.",
+   "caveat": "Unresolved requests at archive end are excluded from \"of resolved\"."
+  },
+  {
+   "id": "RR.mechanism.unfulfilled.ALL",
+   "value": 0.8462,
+   "ci95": [
+    0.8211,
+    0.8714
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of parsed rejections where the text states the postponement was not (or only partly) complied with (M_NEREMEDIAT + M_PARTIAL); regex on the procedural layer (step 2). Mechanism accuracy on the manual sample 0.927 (binary after-postponement 0.953).",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Text-based \"direct\" rejections mostly do have an archived prior postponement (see RR.archive_prior_postponement)."
+  },
+  {
+   "id": "RR.mechanism.after_post_text.ALL",
+   "value": 0.872,
+   "ci95": [
+    0.8485,
+    0.8956
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of parsed rejections where the text references an earlier postponement; regex on the procedural layer (step 2). Mechanism accuracy on the manual sample 0.927 (binary after-postponement 0.953).",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Text-based \"direct\" rejections mostly do have an archived prior postponement (see RR.archive_prior_postponement)."
+  },
+  {
+   "id": "RR.mechanism.m_M_PARTIAL.ALL",
+   "value": 0.0712,
+   "ci95": [
+    0.054,
+    0.0884
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of parsed rejections where the partly remedied / completion documents defective; regex on the procedural layer (step 2). Mechanism accuracy on the manual sample 0.927 (binary after-postponement 0.953).",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Text-based \"direct\" rejections mostly do have an archived prior postponement (see RR.archive_prior_postponement)."
+  },
+  {
+   "id": "RR.mechanism.m_M_DIRECT.ALL",
+   "value": 0.128,
+   "ci95": [
+    0.1044,
+    0.1515
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of parsed rejections where the no postponement referenced in the text; regex on the procedural layer (step 2). Mechanism accuracy on the manual sample 0.927 (binary after-postponement 0.953).",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Text-based \"direct\" rejections mostly do have an archived prior postponement (see RR.archive_prior_postponement)."
+  },
+  {
+   "id": "RR.mechanism.after_post_any.ALL",
+   "value": 0.9876,
+   "ci95": [
+    0.9809,
+    0.9943
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of parsed rejections where the text reference OR archive linkage; regex on the procedural layer (step 2). Mechanism accuracy on the manual sample 0.927 (binary after-postponement 0.953).",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Text-based \"direct\" rejections mostly do have an archived prior postponement (see RR.archive_prior_postponement)."
+  },
+  {
+   "id": "RR.mechanism.unfulfilled.MENTIUNI",
+   "value": 0.8567,
+   "ci95": [
+    0.8322,
+    0.8811
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of parsed rejections where the text states the postponement was not (or only partly) complied with (M_NEREMEDIAT + M_PARTIAL); regex on the procedural layer (step 2). Mechanism accuracy on the manual sample 0.927 (binary after-postponement 0.953).",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Text-based \"direct\" rejections mostly do have an archived prior postponement (see RR.archive_prior_postponement)."
+  },
+  {
+   "id": "RR.mechanism.after_post_text.MENTIUNI",
+   "value": 0.8837,
+   "ci95": [
+    0.8615,
+    0.906
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of parsed rejections where the text references an earlier postponement; regex on the procedural layer (step 2). Mechanism accuracy on the manual sample 0.927 (binary after-postponement 0.953).",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Text-based \"direct\" rejections mostly do have an archived prior postponement (see RR.archive_prior_postponement)."
+  },
+  {
+   "id": "RR.mechanism.m_M_PARTIAL.MENTIUNI",
+   "value": 0.0722,
+   "ci95": [
+    0.0539,
+    0.0906
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of parsed rejections where the partly remedied / completion documents defective; regex on the procedural layer (step 2). Mechanism accuracy on the manual sample 0.927 (binary after-postponement 0.953).",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Text-based \"direct\" rejections mostly do have an archived prior postponement (see RR.archive_prior_postponement)."
+  },
+  {
+   "id": "RR.mechanism.m_M_DIRECT.MENTIUNI",
+   "value": 0.1163,
+   "ci95": [
+    0.094,
+    0.1385
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of parsed rejections where the no postponement referenced in the text; regex on the procedural layer (step 2). Mechanism accuracy on the manual sample 0.927 (binary after-postponement 0.953).",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Text-based \"direct\" rejections mostly do have an archived prior postponement (see RR.archive_prior_postponement)."
+  },
+  {
+   "id": "RR.mechanism.after_post_any.MENTIUNI",
+   "value": 0.9921,
+   "ci95": [
+    0.9864,
+    0.9978
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of parsed rejections where the text reference OR archive linkage; regex on the procedural layer (step 2). Mechanism accuracy on the manual sample 0.927 (binary after-postponement 0.953).",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Text-based \"direct\" rejections mostly do have an archived prior postponement (see RR.archive_prior_postponement)."
+  },
+  {
+   "id": "RR.mechanism.unfulfilled.INMATRICULARE",
+   "value": 0.7349,
+   "ci95": [
+    0.6311,
+    0.818
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of parsed rejections where the text states the postponement was not (or only partly) complied with (M_NEREMEDIAT + M_PARTIAL); regex on the procedural layer (step 2). Mechanism accuracy on the manual sample 0.927 (binary after-postponement 0.953).",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Text-based \"direct\" rejections mostly do have an archived prior postponement (see RR.archive_prior_postponement)."
+  },
+  {
+   "id": "RR.mechanism.after_post_text.INMATRICULARE",
+   "value": 0.747,
+   "ci95": [
+    0.644,
+    0.8281
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of parsed rejections where the text references an earlier postponement; regex on the procedural layer (step 2). Mechanism accuracy on the manual sample 0.927 (binary after-postponement 0.953).",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Text-based \"direct\" rejections mostly do have an archived prior postponement (see RR.archive_prior_postponement)."
+  },
+  {
+   "id": "RR.mechanism.m_M_PARTIAL.INMATRICULARE",
+   "value": 0.0602,
+   "ci95": [
+    0.026,
+    0.1334
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of parsed rejections where the partly remedied / completion documents defective; regex on the procedural layer (step 2). Mechanism accuracy on the manual sample 0.927 (binary after-postponement 0.953).",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Text-based \"direct\" rejections mostly do have an archived prior postponement (see RR.archive_prior_postponement)."
+  },
+  {
+   "id": "RR.mechanism.m_M_DIRECT.INMATRICULARE",
+   "value": 0.253,
+   "ci95": [
+    0.1719,
+    0.356
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of parsed rejections where the no postponement referenced in the text; regex on the procedural layer (step 2). Mechanism accuracy on the manual sample 0.927 (binary after-postponement 0.953).",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Text-based \"direct\" rejections mostly do have an archived prior postponement (see RR.archive_prior_postponement)."
+  },
+  {
+   "id": "RR.mechanism.after_post_any.INMATRICULARE",
+   "value": 0.9398,
+   "ci95": [
+    0.8666,
+    0.974
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of parsed rejections where the text reference OR archive linkage; regex on the procedural layer (step 2). Mechanism accuracy on the manual sample 0.927 (binary after-postponement 0.953).",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Text-based \"direct\" rejections mostly do have an archived prior postponement (see RR.archive_prior_postponement)."
+  },
+  {
+   "id": "RR.category.CAEN.all",
+   "value": 0.3622,
+   "ci95": [
+    0.3285,
+    0.3959
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Obiect de activitate / coduri CAEN și declarația de autorizare a activităților; avoidable at filing: parțial. Raked 0.3593; among restated 0.4344; cluster-only 0.3674; rules-only 0.4716; precision/recall-adjusted 0.4077; sample predicted vs manual [0.32, 0.36].",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.CAEN.amendments",
+   "value": 0.3792,
+   "ci95": [
+    0.344,
+    0.4144
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Obiect de activitate / coduri CAEN și declarația de autorizare a activităților; avoidable at filing: parțial. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.CAEN.registrations",
+   "value": 0.1807,
+   "ci95": [
+    0.1127,
+    0.277
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Obiect de activitate / coduri CAEN și declarația de autorizare a activităților; avoidable at filing: parțial. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.SEDIU.all",
+   "value": 0.1507,
+   "ci95": [
+    0.1294,
+    0.172
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Sediu: dovada folosinței, valabilitate, acordul vecinilor/asociației, adresă; avoidable at filing: parțial. Raked 0.1358; among restated 0.1807; cluster-only 0.1063; rules-only 0.2869; precision/recall-adjusted 0.2028; sample predicted vs manual [0.1733, 0.2333].",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.SEDIU.amendments",
+   "value": 0.1433,
+   "ci95": [
+    0.1219,
+    0.1648
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Sediu: dovada folosinței, valabilitate, acordul vecinilor/asociației, adresă; avoidable at filing: parțial. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.SEDIU.registrations",
+   "value": 0.2289,
+   "ci95": [
+    0.1517,
+    0.3301
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Sediu: dovada folosinței, valabilitate, acordul vecinilor/asociației, adresă; avoidable at filing: parțial. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.ACT.all",
+   "value": 0.162,
+   "ci95": [
+    0.138,
+    0.186
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Act constitutiv, hotărâri/decizii, act modificator, mandat administrator; avoidable at filing: parțial. Raked 0.1644; among restated 0.1943; cluster-only 0.1579; rules-only 0.3168; precision/recall-adjusted 0.132; sample predicted vs manual [0.18, 0.1467].",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.ACT.amendments",
+   "value": 0.1693,
+   "ci95": [
+    0.1445,
+    0.1941
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Act constitutiv, hotărâri/decizii, act modificator, mandat administrator; avoidable at filing: parțial. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.ACT.registrations",
+   "value": 0.0843,
+   "ci95": [
+    0.0415,
+    0.164
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Act constitutiv, hotărâri/decizii, act modificator, mandat administrator; avoidable at filing: parțial. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.ASOC_ID.all",
+   "value": 0.0898,
+   "ci95": [
+    0.07,
+    0.1096
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Date de identificare asociați/administratori (neconcordanțe cu registrul); avoidable at filing: da. Raked 0.0854; among restated 0.1077; cluster-only 0.0248; rules-only 0.2126; precision/recall-adjusted 0.1555; sample predicted vs manual [0.1, 0.1733].",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.ASOC_ID.amendments",
+   "value": 0.0914,
+   "ci95": [
+    0.0713,
+    0.1115
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Date de identificare asociați/administratori (neconcordanțe cu registrul); avoidable at filing: da. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.ASOC_ID.registrations",
+   "value": 0.0723,
+   "ci95": [
+    0.0335,
+    0.1489
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Date de identificare asociați/administratori (neconcordanțe cu registrul); avoidable at filing: da. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.SOLICITANT.all",
+   "value": 0.1207,
+   "ci95": [
+    0.1002,
+    0.1413
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Solicitant/deponent: identitate, împuternicire, calitatea semnatarului; avoidable at filing: da. Raked 0.1345; among restated 0.1448; cluster-only 0.1517; rules-only 0.1507; precision/recall-adjusted 0.1207; sample predicted vs manual [0.1467, 0.1467].",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.SOLICITANT.amendments",
+   "value": 0.1287,
+   "ci95": [
+    0.1067,
+    0.1507
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Solicitant/deponent: identitate, împuternicire, calitatea semnatarului; avoidable at filing: da. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.SOLICITANT.registrations",
+   "value": 0.0361,
+   "ci95": [
+    0.0124,
+    0.101
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Solicitant/deponent: identitate, împuternicire, calitatea semnatarului; avoidable at filing: da. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.SEMN.all",
+   "value": 0.0227,
+   "ci95": [
+    0.014,
+    0.0314
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Semnătură (electronică/olografă) și forma înscrisurilor; avoidable at filing: da. Raked 0.0259; among restated 0.0272; cluster-only 0.0; rules-only 0.1022; precision/recall-adjusted 0.0378; sample predicted vs manual [0.04, 0.0667].",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.SEMN.amendments",
+   "value": 0.0226,
+   "ci95": [
+    0.0136,
+    0.0315
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Semnătură (electronică/olografă) și forma înscrisurilor; avoidable at filing: da. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.SEMN.registrations",
+   "value": 0.0241,
+   "ci95": [
+    0.0066,
+    0.0837
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Semnătură (electronică/olografă) și forma înscrisurilor; avoidable at filing: da. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.CERERE.all",
+   "value": 0.0681,
+   "ci95": [
+    0.0522,
+    0.084
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Cererea de înregistrare, anexa fiscală, formulare completate greșit; avoidable at filing: da. Raked 0.0662; among restated 0.0817; cluster-only 0.0464; rules-only 0.4107; precision/recall-adjusted 0.0817; sample predicted vs manual [0.1, 0.12].",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.CERERE.amendments",
+   "value": 0.0632,
+   "ci95": [
+    0.0471,
+    0.0793
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Cererea de înregistrare, anexa fiscală, formulare completate greșit; avoidable at filing: da. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.CERERE.registrations",
+   "value": 0.1205,
+   "ci95": [
+    0.0668,
+    0.2078
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Cererea de înregistrare, anexa fiscală, formulare completate greșit; avoidable at filing: da. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.BEN_REAL.all",
+   "value": 0.0072,
+   "ci95": [
+    0.002,
+    0.0125
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Declarația privind beneficiarii reali; avoidable at filing: da. Raked 0.0079; among restated 0.0087; cluster-only 0.0; rules-only 0.0186; precision/recall-adjusted 0.0168; sample predicted vs manual [0.02, 0.0467].",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.BEN_REAL.amendments",
+   "value": 0.0045,
+   "ci95": [
+    0.0001,
+    0.0089
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Declarația privind beneficiarii reali; avoidable at filing: da. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.BEN_REAL.registrations",
+   "value": 0.0361,
+   "ci95": [
+    0.0124,
+    0.101
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Declarația privind beneficiarii reali; avoidable at filing: da. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.CAPITAL.all",
+   "value": 0.0495,
+   "ci95": [
+    0.0349,
+    0.0642
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Capital social: vărsăminte, părți sociale, aport; avoidable at filing: parțial. Raked 0.0575; among restated 0.0594; cluster-only 0.0361; rules-only 0.0857; precision/recall-adjusted 0.0445; sample predicted vs manual [0.0667, 0.06].",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.CAPITAL.amendments",
+   "value": 0.053,
+   "ci95": [
+    0.0375,
+    0.0686
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Capital social: vărsăminte, părți sociale, aport; avoidable at filing: parțial. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.CAPITAL.registrations",
+   "value": 0.012,
+   "ci95": [
+    0.0021,
+    0.0651
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Capital social: vărsăminte, părți sociale, aport; avoidable at filing: parțial. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.INSTIT.all",
+   "value": 0.0898,
+   "ci95": [
+    0.0707,
+    0.1088
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Avize/atestări ale altor instituții (cazier fiscal, ANAF, autorizații profesionale); avoidable at filing: parțial. Raked 0.0876; among restated 0.1077; cluster-only 0.1042; rules-only 0.096; precision/recall-adjusted 0.1451; sample predicted vs manual [0.0867, 0.14].",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.INSTIT.amendments",
+   "value": 0.0643,
+   "ci95": [
+    0.047,
+    0.0817
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Avize/atestări ale altor instituții (cazier fiscal, ANAF, autorizații profesionale); avoidable at filing: parțial. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.INSTIT.registrations",
+   "value": 0.3614,
+   "ci95": [
+    0.2663,
+    0.4688
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Avize/atestări ale altor instituții (cazier fiscal, ANAF, autorizații profesionale); avoidable at filing: parțial. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.DENUM.all",
+   "value": 0.0144,
+   "ci95": [
+    0.0068,
+    0.0221
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Denumire: rezervare, formă legală a denumirii; avoidable at filing: da. Raked 0.0136; among restated 0.0173; cluster-only 0.0; rules-only 0.0258; precision/recall-adjusted 0.0096; sample predicted vs manual [0.02, 0.0133].",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.DENUM.amendments",
+   "value": 0.0056,
+   "ci95": [
+    0.0009,
+    0.0104
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Denumire: rezervare, formă legală a denumirii; avoidable at filing: da. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.DENUM.registrations",
+   "value": 0.1084,
+   "ci95": [
+    0.0581,
+    0.1934
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Denumire: rezervare, formă legală a denumirii; avoidable at filing: da. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.TARIF.all",
+   "value": 0.0083,
+   "ci95": [
+    0.0028,
+    0.0137
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Tarife: contor de caractere / tarif de publicare; avoidable at filing: da. Raked 0.0076; among restated 0.0099; cluster-only 0.0; rules-only 0.0227; precision/recall-adjusted None; sample predicted vs manual [0.0, 0.0333].",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.TARIF.amendments",
+   "value": 0.009,
+   "ci95": [
+    0.003,
+    0.015
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Tarife: contor de caractere / tarif de publicare; avoidable at filing: da. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.TARIF.registrations",
+   "value": 0.0,
+   "ci95": [
+    0.0,
+    0.0442
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Tarife: contor de caractere / tarif de publicare; avoidable at filing: da. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.FARA_OBIECT.all",
+   "value": 0.0258,
+   "ci95": [
+    0.0157,
+    0.0359
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Cerere rămasă fără obiect: mențiunea (ex. actualizarea CAEN Rev.3) era deja înregistrată; avoidable at filing: da. Raked 0.026; among restated 0.0309; cluster-only 0.0; rules-only 0.0258; precision/recall-adjusted 0.043; sample predicted vs manual [0.04, 0.0667].",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.FARA_OBIECT.amendments",
+   "value": 0.0248,
+   "ci95": [
+    0.0143,
+    0.0354
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Cerere rămasă fără obiect: mențiunea (ex. actualizarea CAEN Rev.3) era deja înregistrată; avoidable at filing: da. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.FARA_OBIECT.registrations",
+   "value": 0.0361,
+   "ci95": [
+    0.0124,
+    0.101
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Cerere rămasă fără obiect: mențiunea (ex. actualizarea CAEN Rev.3) era deja înregistrată; avoidable at filing: da. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.IMPOSIBIL.all",
+   "value": 0.0103,
+   "ci95": [
+    0.0039,
+    0.0167
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Impediment legal: o singură formă PFA/II/IF, termene legale (dizolvare), opoziție/litigiu în curs; avoidable at filing: parțial. Raked 0.0097; among restated 0.0124; cluster-only 0.0; rules-only 0.0103; precision/recall-adjusted 0.0077; sample predicted vs manual [0.0267, 0.02].",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.IMPOSIBIL.amendments",
+   "value": 0.0079,
+   "ci95": [
+    0.0021,
+    0.0137
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Impediment legal: o singură formă PFA/II/IF, termene legale (dizolvare), opoziție/litigiu în curs; avoidable at filing: parțial. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.IMPOSIBIL.registrations",
+   "value": 0.0361,
+   "ci95": [
+    0.0124,
+    0.101
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Impediment legal: o singură formă PFA/II/IF, termene legale (dizolvare), opoziție/litigiu în curs; avoidable at filing: parțial. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.NERESTATAT.all",
+   "value": 0.1662,
+   "ci95": [
+    0.1427,
+    0.1896
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Neclasificat: clasificatorul nu a găsit nicio cauză (manual doar 4% din eșantion nu reiau cauza); avoidable at filing: n/a. Raked 0.1629; among restated None; cluster-only 0.2632; rules-only 0.066; precision/recall-adjusted 0.0453; sample predicted vs manual [0.1467, 0.04].",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.NERESTATAT.amendments",
+   "value": 0.1704,
+   "ci95": [
+    0.145,
+    0.1958
+   ],
+   "n": 886,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Neclasificat: clasificatorul nu a găsit nicio cauză (manual doar 4% din eșantion nu reiau cauza); avoidable at filing: n/a. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.category.NERESTATAT.registrations",
+   "value": 0.1205,
+   "ci95": [
+    0.0668,
+    0.2078
+   ],
+   "n": 83,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections citing the category (any-of). Hybrid label (HDBSCAN clusters on local multilingual-e5-small embeddings + keyword rules reused from delay_reasons). Neclasificat: clasificatorul nu a găsit nicio cauză (manual doar 4% din eșantion nu reiau cauza); avoidable at filing: n/a. ",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs)."
+  },
+  {
+   "id": "RR.vs_postponement.CAEN",
+   "value": {
+    "rejection": 0.3622,
+    "postponement": 0.3167,
+    "ratio": 1.144,
+    "ratio_restated": 1.372,
+    "postponement_not_admitted_share_of_resolved": 0.368,
+    "ratio_adjusted": 1.047,
+    "ratio_manual": 1.125,
+    "direction_consistent": "neconcludent",
+    "rejection_manual": 0.36,
+    "postponement_manual": 0.32
+   },
+   "ci95": {
+    "rejection": [
+     0.3285,
+     0.3959
+    ],
+    "postponement": [
+     0.2999,
+     0.3336
+    ]
+   },
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Same taxonomy; keyword rules shared with delay_reasons plus a procedural pre-clean and two rejection-specific rules; postponement shares from out/delay_reasons.json; ratio = rejection share / postponement share (>1: over-represented among rejections). value also in 07_results.out.json with ratio_adjusted, ratio_manual and direction_consistent.",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Classifier recall ~0.65 on rejections biases raw rejection shares down; compare ratio_adjusted and ratio_manual (manual samples: 150 rejections, 100 postponements) and use direction_consistent."
+  },
+  {
+   "id": "RR.vs_postponement.SEDIU",
+   "value": {
+    "rejection": 0.1507,
+    "postponement": 0.2193,
+    "ratio": 0.687,
+    "ratio_restated": 0.824,
+    "postponement_not_admitted_share_of_resolved": 0.308,
+    "ratio_adjusted": 0.925,
+    "ratio_manual": 1.666,
+    "direction_consistent": "neconcludent",
+    "rejection_manual": 0.2333,
+    "postponement_manual": 0.14
+   },
+   "ci95": {
+    "rejection": [
+     0.1294,
+     0.172
+    ],
+    "postponement": [
+     0.2043,
+     0.2342
+    ]
+   },
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Same taxonomy; keyword rules shared with delay_reasons plus a procedural pre-clean and two rejection-specific rules; postponement shares from out/delay_reasons.json; ratio = rejection share / postponement share (>1: over-represented among rejections). value also in 07_results.out.json with ratio_adjusted, ratio_manual and direction_consistent.",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Classifier recall ~0.65 on rejections biases raw rejection shares down; compare ratio_adjusted and ratio_manual (manual samples: 150 rejections, 100 postponements) and use direction_consistent."
+  },
+  {
+   "id": "RR.vs_postponement.ACT",
+   "value": {
+    "rejection": 0.162,
+    "postponement": 0.1767,
+    "ratio": 0.917,
+    "ratio_restated": 1.1,
+    "postponement_not_admitted_share_of_resolved": 0.263,
+    "ratio_adjusted": 0.819,
+    "ratio_manual": 0.699,
+    "direction_consistent": "neconcludent",
+    "rejection_manual": 0.1467,
+    "postponement_manual": 0.21
+   },
+   "ci95": {
+    "rejection": [
+     0.138,
+     0.186
+    ],
+    "postponement": [
+     0.1627,
+     0.1908
+    ]
+   },
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Same taxonomy; keyword rules shared with delay_reasons plus a procedural pre-clean and two rejection-specific rules; postponement shares from out/delay_reasons.json; ratio = rejection share / postponement share (>1: over-represented among rejections). value also in 07_results.out.json with ratio_adjusted, ratio_manual and direction_consistent.",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Classifier recall ~0.65 on rejections biases raw rejection shares down; compare ratio_adjusted and ratio_manual (manual samples: 150 rejections, 100 postponements) and use direction_consistent."
+  },
+  {
+   "id": "RR.vs_postponement.ASOC_ID",
+   "value": {
+    "rejection": 0.0898,
+    "postponement": 0.1095,
+    "ratio": 0.82,
+    "ratio_restated": 0.984,
+    "postponement_not_admitted_share_of_resolved": 0.299,
+    "ratio_adjusted": 1.261,
+    "ratio_manual": 0.963,
+    "direction_consistent": "neconcludent",
+    "rejection_manual": 0.1733,
+    "postponement_manual": 0.18
+   },
+   "ci95": {
+    "rejection": [
+     0.07,
+     0.1096
+    ],
+    "postponement": [
+     0.098,
+     0.121
+    ]
+   },
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Same taxonomy; keyword rules shared with delay_reasons plus a procedural pre-clean and two rejection-specific rules; postponement shares from out/delay_reasons.json; ratio = rejection share / postponement share (>1: over-represented among rejections). value also in 07_results.out.json with ratio_adjusted, ratio_manual and direction_consistent.",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Classifier recall ~0.65 on rejections biases raw rejection shares down; compare ratio_adjusted and ratio_manual (manual samples: 150 rejections, 100 postponements) and use direction_consistent."
+  },
+  {
+   "id": "RR.vs_postponement.SOLICITANT",
+   "value": {
+    "rejection": 0.1207,
+    "postponement": 0.1132,
+    "ratio": 1.066,
+    "ratio_restated": 1.279,
+    "postponement_not_admitted_share_of_resolved": 0.376,
+    "ratio_adjusted": 1.066,
+    "ratio_manual": 1.334,
+    "direction_consistent": "neconcludent",
+    "rejection_manual": 0.1467,
+    "postponement_manual": 0.11
+   },
+   "ci95": {
+    "rejection": [
+     0.1002,
+     0.1413
+    ],
+    "postponement": [
+     0.1019,
+     0.1246
+    ]
+   },
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Same taxonomy; keyword rules shared with delay_reasons plus a procedural pre-clean and two rejection-specific rules; postponement shares from out/delay_reasons.json; ratio = rejection share / postponement share (>1: over-represented among rejections). value also in 07_results.out.json with ratio_adjusted, ratio_manual and direction_consistent.",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Classifier recall ~0.65 on rejections biases raw rejection shares down; compare ratio_adjusted and ratio_manual (manual samples: 150 rejections, 100 postponements) and use direction_consistent."
+  },
+  {
+   "id": "RR.vs_postponement.SEMN",
+   "value": {
+    "rejection": 0.0227,
+    "postponement": 0.048,
+    "ratio": 0.473,
+    "ratio_restated": 0.567,
+    "postponement_not_admitted_share_of_resolved": 0.231,
+    "ratio_adjusted": 0.656,
+    "ratio_manual": 1.112,
+    "direction_consistent": "neconcludent",
+    "rejection_manual": 0.0667,
+    "postponement_manual": 0.06
+   },
+   "ci95": {
+    "rejection": [
+     0.014,
+     0.0314
+    ],
+    "postponement": [
+     0.0404,
+     0.0557
+    ]
+   },
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Same taxonomy; keyword rules shared with delay_reasons plus a procedural pre-clean and two rejection-specific rules; postponement shares from out/delay_reasons.json; ratio = rejection share / postponement share (>1: over-represented among rejections). value also in 07_results.out.json with ratio_adjusted, ratio_manual and direction_consistent.",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Classifier recall ~0.65 on rejections biases raw rejection shares down; compare ratio_adjusted and ratio_manual (manual samples: 150 rejections, 100 postponements) and use direction_consistent."
+  },
+  {
+   "id": "RR.vs_postponement.CERERE",
+   "value": {
+    "rejection": 0.0681,
+    "postponement": 0.2073,
+    "ratio": 0.329,
+    "ratio_restated": 0.394,
+    "postponement_not_admitted_share_of_resolved": 0.368,
+    "ratio_adjusted": 0.624,
+    "ratio_manual": 1.0,
+    "direction_consistent": "neconcludent",
+    "rejection_manual": 0.12,
+    "postponement_manual": 0.12
+   },
+   "ci95": {
+    "rejection": [
+     0.0522,
+     0.084
+    ],
+    "postponement": [
+     0.192,
+     0.2226
+    ]
+   },
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Same taxonomy; keyword rules shared with delay_reasons plus a procedural pre-clean and two rejection-specific rules; postponement shares from out/delay_reasons.json; ratio = rejection share / postponement share (>1: over-represented among rejections). value also in 07_results.out.json with ratio_adjusted, ratio_manual and direction_consistent.",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Classifier recall ~0.65 on rejections biases raw rejection shares down; compare ratio_adjusted and ratio_manual (manual samples: 150 rejections, 100 postponements) and use direction_consistent."
+  },
+  {
+   "id": "RR.vs_postponement.BEN_REAL",
+   "value": {
+    "rejection": 0.0072,
+    "postponement": 0.0364,
+    "ratio": 0.198,
+    "ratio_restated": 0.239,
+    "postponement_not_admitted_share_of_resolved": 0.123,
+    "ratio_adjusted": 0.615,
+    "ratio_manual": 1.557,
+    "direction_consistent": "neconcludent",
+    "rejection_manual": 0.0467,
+    "postponement_manual": 0.03
+   },
+   "ci95": {
+    "rejection": [
+     0.002,
+     0.0125
+    ],
+    "postponement": [
+     0.0293,
+     0.0435
+    ]
+   },
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Same taxonomy; keyword rules shared with delay_reasons plus a procedural pre-clean and two rejection-specific rules; postponement shares from out/delay_reasons.json; ratio = rejection share / postponement share (>1: over-represented among rejections). value also in 07_results.out.json with ratio_adjusted, ratio_manual and direction_consistent.",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Classifier recall ~0.65 on rejections biases raw rejection shares down; compare ratio_adjusted and ratio_manual (manual samples: 150 rejections, 100 postponements) and use direction_consistent."
+  },
+  {
+   "id": "RR.vs_postponement.CAPITAL",
+   "value": {
+    "rejection": 0.0495,
+    "postponement": 0.0851,
+    "ratio": 0.582,
+    "ratio_restated": 0.698,
+    "postponement_not_admitted_share_of_resolved": 0.221,
+    "ratio_adjusted": 0.483,
+    "ratio_manual": 0.462,
+    "direction_consistent": "mai rar la respingeri",
+    "rejection_manual": 0.06,
+    "postponement_manual": 0.13
+   },
+   "ci95": {
+    "rejection": [
+     0.0349,
+     0.0642
+    ],
+    "postponement": [
+     0.0749,
+     0.0953
+    ]
+   },
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Same taxonomy; keyword rules shared with delay_reasons plus a procedural pre-clean and two rejection-specific rules; postponement shares from out/delay_reasons.json; ratio = rejection share / postponement share (>1: over-represented among rejections). value also in 07_results.out.json with ratio_adjusted, ratio_manual and direction_consistent.",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Classifier recall ~0.65 on rejections biases raw rejection shares down; compare ratio_adjusted and ratio_manual (manual samples: 150 rejections, 100 postponements) and use direction_consistent."
+  },
+  {
+   "id": "RR.vs_postponement.INSTIT",
+   "value": {
+    "rejection": 0.0898,
+    "postponement": 0.0954,
+    "ratio": 0.941,
+    "ratio_restated": 1.129,
+    "postponement_not_admitted_share_of_resolved": 0.41,
+    "ratio_adjusted": 0.967,
+    "ratio_manual": 1.273,
+    "direction_consistent": "neconcludent",
+    "rejection_manual": 0.14,
+    "postponement_manual": 0.11
+   },
+   "ci95": {
+    "rejection": [
+     0.0707,
+     0.1088
+    ],
+    "postponement": [
+     0.0846,
+     0.1062
+    ]
+   },
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Same taxonomy; keyword rules shared with delay_reasons plus a procedural pre-clean and two rejection-specific rules; postponement shares from out/delay_reasons.json; ratio = rejection share / postponement share (>1: over-represented among rejections). value also in 07_results.out.json with ratio_adjusted, ratio_manual and direction_consistent.",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Classifier recall ~0.65 on rejections biases raw rejection shares down; compare ratio_adjusted and ratio_manual (manual samples: 150 rejections, 100 postponements) and use direction_consistent."
+  },
+  {
+   "id": "RR.vs_postponement.DENUM",
+   "value": {
+    "rejection": 0.0144,
+    "postponement": 0.0247,
+    "ratio": 0.583,
+    "ratio_restated": 0.7,
+    "postponement_not_admitted_share_of_resolved": 0.3,
+    "ratio_adjusted": null,
+    "ratio_manual": null,
+    "direction_consistent": "neconcludent",
+    "rejection_manual": 0.0133,
+    "postponement_manual": 0.0
+   },
+   "ci95": {
+    "rejection": [
+     0.0068,
+     0.0221
+    ],
+    "postponement": [
+     0.0193,
+     0.0301
+    ]
+   },
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Same taxonomy; keyword rules shared with delay_reasons plus a procedural pre-clean and two rejection-specific rules; postponement shares from out/delay_reasons.json; ratio = rejection share / postponement share (>1: over-represented among rejections). value also in 07_results.out.json with ratio_adjusted, ratio_manual and direction_consistent.",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Classifier recall ~0.65 on rejections biases raw rejection shares down; compare ratio_adjusted and ratio_manual (manual samples: 150 rejections, 100 postponements) and use direction_consistent."
+  },
+  {
+   "id": "RR.vs_postponement.TARIF",
+   "value": {
+    "rejection": 0.0083,
+    "postponement": 0.0172,
+    "ratio": 0.483,
+    "ratio_restated": 0.576,
+    "postponement_not_admitted_share_of_resolved": 0.44,
+    "ratio_adjusted": null,
+    "ratio_manual": 1.665,
+    "direction_consistent": "neconcludent",
+    "rejection_manual": 0.0333,
+    "postponement_manual": 0.02
+   },
+   "ci95": {
+    "rejection": [
+     0.0028,
+     0.0137
+    ],
+    "postponement": [
+     0.0119,
+     0.0224
+    ]
+   },
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Same taxonomy; keyword rules shared with delay_reasons plus a procedural pre-clean and two rejection-specific rules; postponement shares from out/delay_reasons.json; ratio = rejection share / postponement share (>1: over-represented among rejections). value also in 07_results.out.json with ratio_adjusted, ratio_manual and direction_consistent.",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). Classifier recall ~0.65 on rejections biases raw rejection shares down; compare ratio_adjusted and ratio_manual (manual samples: 150 rejections, 100 postponements) and use direction_consistent."
+  },
+  {
+   "id": "RR.pairs",
+   "value": {
+    "n_pairs": 61,
+    "hybrid_vs_rules": {
+     "n": 47,
+     "any_overlap": 0.957,
+     "rejection_subset_of_postponement": 0.851,
+     "mean_jaccard": 0.56,
+     "new_category_in_rejection": 0.149
+    },
+    "rules_vs_rules": {
+     "n": 53,
+     "any_overlap": 0.981,
+     "rejection_subset_of_postponement": 0.83,
+     "mean_jaccard": 0.854,
+     "new_category_in_rejection": 0.17
+    }
+   },
+   "ci95": null,
+   "n": 61,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Rejections whose own earlier postponement notice is also in the collected bulletins; keyword classifier on the postponement text vs the rejection label.",
+   "caveat": "Small n; keyword classifier only on the postponement side."
+  },
+  {
+   "id": "RR.avoidable.strict.manual",
+   "value": 0.28,
+   "ci95": [
+    0.214,
+    0.357
+   ],
+   "n": 150,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "HEADLINE. Pooled manual sample (150 rejections), Wilson CI: share where all causes are avoidable at filing (strict). Classifier on the same 150: 0.207 (agreement 0.86).",
+   "caveat": "\"Avoidable\" is an assessment of the auditor (AI-assisted), not an ONRC classification; single AI reviewer."
+  },
+  {
+   "id": "RR.avoidable.any.manual",
+   "value": 0.547,
+   "ci95": [
+    0.467,
+    0.624
+   ],
+   "n": 150,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "HEADLINE. Pooled manual sample (150 rejections), Wilson CI: share where at least one cause is avoidable at filing (upper bound). Classifier on the same 150: 0.387 (agreement 0.773).",
+   "caveat": "\"Avoidable\" is an assessment of the auditor (AI-assisted), not an ONRC classification; single AI reviewer."
+  },
+  {
+   "id": "RR.avoidable.strict",
+   "value": 0.1662,
+   "ci95": [
+    0.1428,
+    0.1895
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections where all cited categories avoidable (classifier; lower estimate); flags per category in taxonomy.csv (NERESTATAT counts as not avoidable). Raked 0.1782; amendments 0.1704; registrations 0.1205; excluding NERESTATAT 0.1993 [0.1715, 0.227]; manual sample (n=150) 0.28 Wilson [0.214, 0.357]. Classifier figures are LOWER estimates (recall ~0.65).",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). \"Avoidable\" is an assessment of the auditor (AI-assisted), not an ONRC classification."
+  },
+  {
+   "id": "RR.avoidable.any",
+   "value": 0.3055,
+   "ci95": [
+    0.2769,
+    0.3341
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections where at least one avoidable category (upper bound); flags per category in taxonomy.csv (NERESTATAT counts as not avoidable). Raked 0.3174; amendments 0.3047; registrations 0.3133; excluding NERESTATAT 0.3663 [0.3327, 0.4]; manual sample (n=150) 0.547 Wilson [0.467, 0.624]. Classifier figures are LOWER estimates (recall ~0.65).",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). \"Avoidable\" is an assessment of the auditor (AI-assisted), not an ONRC classification."
+  },
+  {
+   "id": "RR.avoidable.da_or_partial_all",
+   "value": 0.8338,
+   "ci95": [
+    0.8104,
+    0.8573
+   ],
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share of rejections where all cited categories avoidable or partly avoidable; flags per category in taxonomy.csv (NERESTATAT counts as not avoidable). Raked 0.8371; amendments 0.8296; registrations 0.8795; excluding NERESTATAT None None; manual sample (n=150) 0.96 Wilson None. Classifier figures are LOWER estimates (recall ~0.65).",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). \"Avoidable\" is an assessment of the auditor (AI-assisted), not an ONRC classification."
+  },
+  {
+   "id": "RR.weekly.2026-10-19/2026-10-25",
+   "value": {
+    "n": 166,
+    "archive": 1892,
+    "CAEN": 0.2952,
+    "SEDIU": 0.1265,
+    "ACT": 0.1747,
+    "SOLICITANT": 0.1867,
+    "INSTIT": 0.0783,
+    "NERESTATAT": 0.1988,
+    "unfulfilled": 0.8313,
+    "avoidable_strict": 0.2229,
+    "archive_with_prior_postponement": 0.981
+   },
+   "ci95": {
+    "CAEN": [
+     0.2424,
+     0.3479
+    ],
+    "SEDIU": [
+     0.0893,
+     0.1637
+    ],
+    "ACT": [
+     0.1216,
+     0.2278
+    ],
+    "SOLICITANT": [
+     0.1296,
+     0.2439
+    ],
+    "INSTIT": [
+     0.0402,
+     0.1165
+    ],
+    "NERESTATAT": [
+     0.131,
+     0.2666
+    ],
+    "unfulfilled": [
+     0.7732,
+     0.8895
+    ],
+    "avoidable_strict": [
+     0.1682,
+     0.2776
+    ]
+   },
+   "n": 166,
+   "window": "week 2026-10-19/2026-10-25, decision days 19.10,20.10,22.10,23.10",
+   "method": "Shares per decision week; archive = archive rejections in the week.",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). No trend is claimed."
+  },
+  {
+   "id": "RR.weekly.2026-10-26/2026-11-01",
+   "value": {
+    "n": 265,
+    "archive": 1962,
+    "CAEN": 0.3811,
+    "SEDIU": 0.1547,
+    "ACT": 0.1736,
+    "SOLICITANT": 0.0981,
+    "INSTIT": 0.1019,
+    "NERESTATAT": 0.1849,
+    "unfulfilled": 0.8679,
+    "avoidable_strict": 0.1283,
+    "archive_with_prior_postponement": 0.9781
+   },
+   "ci95": {
+    "CAEN": [
+     0.3179,
+     0.4444
+    ],
+    "SEDIU": [
+     0.1147,
+     0.1947
+    ],
+    "ACT": [
+     0.1306,
+     0.2165
+    ],
+    "SOLICITANT": [
+     0.0617,
+     0.1345
+    ],
+    "INSTIT": [
+     0.0658,
+     0.138
+    ],
+    "NERESTATAT": [
+     0.1438,
+     0.226
+    ],
+    "unfulfilled": [
+     0.8279,
+     0.908
+    ],
+    "avoidable_strict": [
+     0.0877,
+     0.1689
+    ]
+   },
+   "n": 265,
+   "window": "week 2026-10-26/2026-11-01, decision days 26.10,27.10,28.10,29.10,30.10",
+   "method": "Shares per decision week; archive = archive rejections in the week.",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). No trend is claimed."
+  },
+  {
+   "id": "RR.weekly.2026-11-02/2026-11-08",
+   "value": {
+    "n": 175,
+    "archive": 1932,
+    "CAEN": 0.4229,
+    "SEDIU": 0.1257,
+    "ACT": 0.1657,
+    "SOLICITANT": 0.1257,
+    "INSTIT": 0.0743,
+    "NERESTATAT": 0.1086,
+    "unfulfilled": 0.8286,
+    "avoidable_strict": 0.1829,
+    "archive_with_prior_postponement": 0.9762
+   },
+   "ci95": {
+    "CAEN": [
+     0.3316,
+     0.5141
+    ],
+    "SEDIU": [
+     0.0722,
+     0.1792
+    ],
+    "ACT": [
+     0.1035,
+     0.228
+    ],
+    "SOLICITANT": [
+     0.0776,
+     0.1739
+    ],
+    "INSTIT": [
+     0.0322,
+     0.1164
+    ],
+    "NERESTATAT": [
+     0.0763,
+     0.1409
+    ],
+    "unfulfilled": [
+     0.7749,
+     0.8823
+    ],
+    "avoidable_strict": [
+     0.1301,
+     0.2356
+    ]
+   },
+   "n": 175,
+   "window": "week 2026-11-02/2026-11-08, decision days 02.11,04.11,05.11,06.11",
+   "method": "Shares per decision week; archive = archive rejections in the week.",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). No trend is claimed."
+  },
+  {
+   "id": "RR.weekly.2026-11-09/2026-11-15",
+   "value": {
+    "n": 280,
+    "archive": 1755,
+    "CAEN": 0.3393,
+    "SEDIU": 0.1964,
+    "ACT": 0.1464,
+    "SOLICITANT": 0.0893,
+    "INSTIT": 0.0929,
+    "NERESTATAT": 0.1571,
+    "unfulfilled": 0.8321,
+    "avoidable_strict": 0.1571,
+    "archive_with_prior_postponement": 0.9709
+   },
+   "ci95": {
+    "CAEN": [
+     0.2762,
+     0.4023
+    ],
+    "SEDIU": [
+     0.1511,
+     0.2418
+    ],
+    "ACT": [
+     0.0984,
+     0.1944
+    ],
+    "SOLICITANT": [
+     0.0582,
+     0.1204
+    ],
+    "INSTIT": [
+     0.0538,
+     0.1319
+    ],
+    "NERESTATAT": [
+     0.1091,
+     0.2051
+    ],
+    "unfulfilled": [
+     0.7763,
+     0.888
+    ],
+    "avoidable_strict": [
+     0.1132,
+     0.2011
+    ]
+   },
+   "n": 280,
+   "window": "week 2026-11-09/2026-11-15, decision days 09.11,10.11,11.11,12.11,13.11",
+   "method": "Shares per decision week; archive = archive rejections in the week.",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). No trend is claimed."
+  },
+  {
+   "id": "RR.weekly.2026-11-16/2026-11-22",
+   "value": {
+    "n": 83,
+    "archive": 1169,
+    "CAEN": 0.3855,
+    "SEDIU": 0.0843,
+    "ACT": 0.1446,
+    "SOLICITANT": 0.1566,
+    "INSTIT": 0.0964,
+    "NERESTATAT": 0.1928,
+    "unfulfilled": 0.8916,
+    "avoidable_strict": 0.1687,
+    "archive_with_prior_postponement": 0.9735
+   },
+   "ci95": {
+    "CAEN": [
+     0.2718,
+     0.4993
+    ],
+    "SEDIU": [
+     0.0237,
+     0.1449
+    ],
+    "ACT": [
+     0.0501,
+     0.239
+    ],
+    "SOLICITANT": [
+     0.0738,
+     0.2395
+    ],
+    "INSTIT": [
+     0.0318,
+     0.161
+    ],
+    "NERESTATAT": [
+     0.1074,
+     0.2781
+    ],
+    "unfulfilled": [
+     0.8224,
+     0.9607
+    ],
+    "avoidable_strict": [
+     0.0836,
+     0.2538
+    ]
+   },
+   "n": 83,
+   "window": "week 2026-11-16/2026-11-22, decision days 16.11,17.11,18.11",
+   "method": "Shares per decision week; archive = archive rejections in the week.",
+   "caveat": "PDFs cover only the collected bulletins (~11% of archive rejections in the window); CIs reflect sampling among collected bulletins only; one rejection can cite several categories (shares sum to >100%); registrations have small n (wide CIs). No trend is claimed."
+  },
+  {
+   "id": "RR.validation",
+   "value": {
+    "exact_set_accuracy": 0.44,
+    "any_overlap": 0.807,
+    "mean_jaccard": 0.619,
+    "micro_precision": 0.798,
+    "micro_recall": 0.648,
+    "cluster_only_exact": 0.287,
+    "rules_only_exact": 0.28,
+    "mechanism_accuracy": 0.927,
+    "nerestatat_pred_vs_manual": [
+     22,
+     6
+    ],
+    "batch2_out_of_sample_exact": 0.38,
+    "batch2_precision_recall": [
+     0.788,
+     0.591
+    ]
+   },
+   "ci95": [
+    0.363,
+    0.52
+   ],
+   "n": 150,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Two seeded random samples labelled from de-identified text: batch 1 (100, seed 20261122) before any classifier existed; batch 2 (50, seed 20261123, disjoint) after the classifier was fixed but before joining predictions (out-of-sample). Values pooled over 150; Wilson CI on exact-set accuracy.",
+   "caveat": "Single reviewer (AI model), no second coder. NERESTATAT is over-predicted (22 vs 6 of 150): the classifier misses causes embedded in procedural sentences. FARA_OBIECT/IMPOSIBIL rules were written after reading batch 1 (FARA_OBIECT recall on batch 2: 1 of 4)."
+  },
+  {
+   "id": "RR.category.FARA_OBIECT.manual",
+   "value": 0.0667,
+   "ci95": [
+    0.037,
+    0.118
+   ],
+   "n": 150,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share in the pooled manual sample (150 rejections, two seeded batches), Wilson CI. Least biased estimate; reference value for FARA_OBIECT, IMPOSIBIL and NERESTATAT (manual NERESTATAT = rejections that restate no cause at all).",
+   "caveat": "Single AI reviewer; n=150."
+  },
+  {
+   "id": "RR.category.IMPOSIBIL.manual",
+   "value": 0.02,
+   "ci95": [
+    0.007,
+    0.057
+   ],
+   "n": 150,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share in the pooled manual sample (150 rejections, two seeded batches), Wilson CI. Least biased estimate; reference value for FARA_OBIECT, IMPOSIBIL and NERESTATAT (manual NERESTATAT = rejections that restate no cause at all).",
+   "caveat": "Single AI reviewer; n=150."
+  },
+  {
+   "id": "RR.category.NERESTATAT.manual",
+   "value": 0.04,
+   "ci95": [
+    0.018,
+    0.085
+   ],
+   "n": 150,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share in the pooled manual sample (150 rejections, two seeded batches), Wilson CI. Least biased estimate; reference value for FARA_OBIECT, IMPOSIBIL and NERESTATAT (manual NERESTATAT = rejections that restate no cause at all).",
+   "caveat": "Single AI reviewer; n=150."
+  },
+  {
+   "id": "RR.category.CAEN.manual",
+   "value": 0.36,
+   "ci95": [
+    0.288,
+    0.439
+   ],
+   "n": 150,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share in the pooled manual sample (150 rejections, two seeded batches), Wilson CI. Least biased estimate; reference value for FARA_OBIECT, IMPOSIBIL and NERESTATAT (manual NERESTATAT = rejections that restate no cause at all).",
+   "caveat": "Single AI reviewer; n=150."
+  },
+  {
+   "id": "RR.category.SEDIU.manual",
+   "value": 0.2333,
+   "ci95": [
+    0.173,
+    0.307
+   ],
+   "n": 150,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share in the pooled manual sample (150 rejections, two seeded batches), Wilson CI. Least biased estimate; reference value for FARA_OBIECT, IMPOSIBIL and NERESTATAT (manual NERESTATAT = rejections that restate no cause at all).",
+   "caveat": "Single AI reviewer; n=150."
+  },
+  {
+   "id": "RR.category.ACT.manual",
+   "value": 0.1467,
+   "ci95": [
+    0.099,
+    0.212
+   ],
+   "n": 150,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share in the pooled manual sample (150 rejections, two seeded batches), Wilson CI. Least biased estimate; reference value for FARA_OBIECT, IMPOSIBIL and NERESTATAT (manual NERESTATAT = rejections that restate no cause at all).",
+   "caveat": "Single AI reviewer; n=150."
+  },
+  {
+   "id": "RR.category.SOLICITANT.manual",
+   "value": 0.1467,
+   "ci95": [
+    0.099,
+    0.212
+   ],
+   "n": 150,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share in the pooled manual sample (150 rejections, two seeded batches), Wilson CI. Least biased estimate; reference value for FARA_OBIECT, IMPOSIBIL and NERESTATAT (manual NERESTATAT = rejections that restate no cause at all).",
+   "caveat": "Single AI reviewer; n=150."
+  },
+  {
+   "id": "RR.category.INSTIT.manual",
+   "value": 0.14,
+   "ci95": [
+    0.093,
+    0.205
+   ],
+   "n": 150,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share in the pooled manual sample (150 rejections, two seeded batches), Wilson CI. Least biased estimate; reference value for FARA_OBIECT, IMPOSIBIL and NERESTATAT (manual NERESTATAT = rejections that restate no cause at all).",
+   "caveat": "Single AI reviewer; n=150."
+  },
+  {
+   "id": "RR.category.ASOC_ID.manual",
+   "value": 0.1733,
+   "ci95": [
+    0.121,
+    0.242
+   ],
+   "n": 150,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share in the pooled manual sample (150 rejections, two seeded batches), Wilson CI. Least biased estimate; reference value for FARA_OBIECT, IMPOSIBIL and NERESTATAT (manual NERESTATAT = rejections that restate no cause at all).",
+   "caveat": "Single AI reviewer; n=150."
+  },
+  {
+   "id": "RR.category.CERERE.manual",
+   "value": 0.12,
+   "ci95": [
+    0.077,
+    0.182
+   ],
+   "n": 150,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share in the pooled manual sample (150 rejections, two seeded batches), Wilson CI. Least biased estimate; reference value for FARA_OBIECT, IMPOSIBIL and NERESTATAT (manual NERESTATAT = rejections that restate no cause at all).",
+   "caveat": "Single AI reviewer; n=150."
+  },
+  {
+   "id": "RR.category.CAPITAL.manual",
+   "value": 0.06,
+   "ci95": [
+    0.032,
+    0.11
+   ],
+   "n": 150,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Share in the pooled manual sample (150 rejections, two seeded batches), Wilson CI. Least biased estimate; reference value for FARA_OBIECT, IMPOSIBIL and NERESTATAT (manual NERESTATAT = rejections that restate no cause at all).",
+   "caveat": "Single AI reviewer; n=150."
+  },
+  {
+   "id": "RR.agreement_cluster_vs_rules",
+   "value": {
+    "CAEN": 0.646,
+    "SEDIU": 0.419,
+    "ACT": 0.422,
+    "ASOC_ID": 0.172,
+    "SOLICITANT": 0.586,
+    "SEMN": 0.0,
+    "CERERE": 0.057,
+    "BEN_REAL": 0.0,
+    "CAPITAL": 0.536,
+    "INSTIT": 0.805,
+    "DENUM": 0.0,
+    "TARIF": 0.0,
+    "FARA_OBIECT": 0.0,
+    "IMPOSIBIL": 0.0,
+    "NERESTATAT": 0.232
+   },
+   "ci95": null,
+   "n": 969,
+   "window": "rejection decisions 19 Oct-18 Nov 2026 (21 decision days with collected BERC bulletins)",
+   "method": "Cohen kappa per category, entry level, cluster-only vs keyword-only classifier.",
+   "caveat": "Both classifiers read the same de-identified text."
+  }
+ ]
+}

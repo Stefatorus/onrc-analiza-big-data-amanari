@@ -1,0 +1,36 @@
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  i['m'] = i.app.dt.to_period('M')
+2026-10-30 BERC-only lower bound (filed<=D, not final by D, but has a BERC row by 20.11): 70449  of which inmatric: 8646
+2026-11-06 BERC-only lower bound (filed<=D, not final by D, but has a BERC row by 20.11): 51407  of which inmatric: 6981
+INMATRIC distinct by filing month 2025-2026:
+m
+2025-01    10775
+2025-02    13428
+2025-03    13572
+2025-04    11893
+2025-05    13121
+2025-06    12607
+2025-07    16112
+2025-08    13164
+2025-09    16012
+2025-10    17757
+2025-11    16954
+2025-12    12146
+2026-01    13416
+2026-02    15777
+2026-03    16647
+2026-04    13354
+2026-05    13851
+2026-06    12748
+2026-07    13199
+2026-08    11549
+2026-09    11337
+2026-10     6105
+2026-11     1031
+Freq: M
+inmatric finals 2-20 Nov per working day 645  mean wait (cal days) 36.3  median 42.0
+Little estimate of pending inmatric (calendar-rate x mean wait): 18514
+H1 2026 inmatric with decision per wd: 709

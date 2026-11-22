@@ -1,0 +1,89 @@
+probed 7469  in BERC (2026 filings) 1102
+inB                           False  True   All
+details_found has_company_id                   
+False         False            5105    18  5123
+              True               47     0    47
+True          True             1215  1084  2299
+All                            6367  1102  7469
+same-counter test: n 1084  |request_date - app| <= 1 min: 1.0  same day: 1.0
+spearman req_nr vs request_date (details): 1.0
+
+BY TYPE: share found in BERC; BERC category mix
+              n    inB
+type_code             
+001         131  0.992
+002        1531  0.569
+003         127  0.449
+008          26  0.885
+017         403  0.000
+019          19  0.000
+033          41  0.000
+036           2  1.000
+060          18  0.000
+063           1  1.000
+cats         -  AUTO_AMANARI  AUTO_AMANARI+CERERE265  AUTO_AMANARI+INMATRIC265  CERERE265  CERERE_HJ265  INMATRIC265
+type_code                                                                                                           
+001          1             0                       0                        31          0             0           99
+002        660            17                     181                         0        666             7            0
+003         70             0                      14                         0         43             0            0
+008          3             0                       3                         0         20             0            0
+017        403             0                       0                         0          0             0            0
+019         19             0                       0                         0          0             0            0
+033         41             0                       0                         0          0             0            0
+036          0             0                       0                         0          2             0            0
+060         18             0                       0                         0          0             0            0
+063          0             0                       0                         0          1             0            0
+
+BY PHASE (details, judged): in BERC with a FINAL decision?
+inB        False True       
+has_fin    False False True 
+phase_code                  
+03             3     0     0
+04           352     2     0
+05             1     0     0
+08           364    12     0
+12             9     0    16
+13             3     0   965
+14             0     0    68
+15             3     0    15
+24            34     0     3
+27             6     3     0
+
+NO companyId numbers (no details): in BERC by category
+cats
+-                           5152
+AUTO_AMANARI+INMATRIC265      15
+AUTO_AMANARI                   2
+INMATRIC265                    1
+no-company numbers found in BERC as INMATRIC: 16 of 5170
+
+resolved-phase judged dossiers found in BERC with final: 0.9779 n 1088
+           size   mean
+type_code             
+001         131  0.992
+002         862  0.987
+003          57  1.000
+008          24  0.958
+033          11  0.000
+036           2  1.000
+063           1  1.000
+live (04/05/08) judged with a final BERC decision (should be ~0): 0.0 n 731  with any BERC row (adjournment): 0.0192
+              n  any_berc  fin
+phase_code                    
+04          354     0.006  0.0
+05            1     0.000  0.0
+08          376     0.032  0.0
+
+solution_term non-empty by phase:
+phase_code
+03    1.0
+04    1.0
+05    1.0
+08    1.0
+12    1.0
+13    1.0
+14    1.0
+15    1.0
+24    1.0
+27    1.0
+last_update_date range 2008-02-18 00:00:00 2026-11-20 13:45:32  share before request_date: 0.365

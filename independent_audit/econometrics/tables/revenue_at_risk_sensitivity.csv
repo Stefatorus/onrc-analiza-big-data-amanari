@@ -1,0 +1,12 @@
+sensitivity,note,A_numerar_p50,A_numerar_p90,A_numerar_p95,B_nerecuperat_p50,B_nerecuperat_p90,B_nerecuperat_p95,valoare_timp_p50,pierdut_p50,pierdut_p90,pierdut_p95
+central,,307.784,724.130,822.090,740.559,1146.532,1270.792,12.857,26.089,388.601,497.697
+"randament 12 luni 6,02%",,307.784,724.130,822.090,740.559,1146.532,1270.792,11.486,26.089,388.601,497.697
+kappa=1 (înmatriculări = coada generală),,455.330,872.604,1012.500,874.111,1290.239,1406.731,18.548,27.429,411.347,515.080
+"kappa=0,65 (prioritate maximă observată)",,228.223,597.875,720.719,648.751,1028.441,1150.826,9.847,25.047,364.868,460.937
+"rată estimată IV an parțial (limită superioară, > o zi matură per zi de așteptare)",,330.266,839.529,1018.443,854.419,1617.361,1852.004,14.188,26.089,388.601,497.697
+efect persistent plafonat la suportul observat (35 zile),,300.904,534.932,592.167,739.541,960.181,1012.646,12.857,12.368,180.524,230.834
+"efect persistent = OLS (limită superioară a daunei, endogen)",,633.927,867.764,939.061,1076.117,1296.028,1360.441,12.857,354.954,487.547,530.257
+efect persistent trunchiat la >=0 pierdere,trunchiere: extragerile cu semn de câștig puse la 0,372.085,724.969,822.090,810.341,1146.532,1270.792,12.857,26.089,388.601,497.697
+substituție 50% (firmele existente preiau jumătate),,153.892,362.065,411.045,370.280,573.266,635.396,6.429,13.044,194.301,248.849
+fără TVA (doar impozit direct + contribuții salariale),,103.518,390.862,470.069,427.074,707.015,781.456,9.682,-105.132,145.662,217.713
+"fără mențiuni (doar înmatriculări, estimat)",,248.820,653.752,756.728,617.604,1014.197,1140.650,10.152,26.089,388.601,497.697

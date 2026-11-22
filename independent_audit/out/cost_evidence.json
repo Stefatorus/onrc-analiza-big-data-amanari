@@ -1,0 +1,2218 @@
+{
+ "_meta": "Evidence base for the four-channel cost model (audit_costs.py). Aggregates only; no identifiers. Built by independent_audit/cost_evidence/07_build_evidence_json.py.",
+ "findings": [
+  {
+   "id": "T1.linkage",
+   "value": {
+    "pdf_decisions": 11499,
+    "linked_same_bulletin": 9941,
+    "linked_app_cui_other_bulletin": 69,
+    "linked_total": 10010,
+    "linked_sol_counts": {
+     "Admis": 9050,
+     "Respins": 894,
+     "Renunțat": 66
+    },
+    "linked_admitted_amendments": 9037,
+    "pdf_registration_decisions_not_in_scope": 1482
+   },
+   "unit": "counts",
+   "window": "all 2026 bulletins",
+   "n": 11499,
+   "ci": null,
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Split each bulletin on the registrar-office header; parse request nr, CUI, verb and the \"având ca obiect\" text; strict join to JSON.",
+   "caveat": "13 bulletins carry no attached decision text (index-only or corrupt). Registrations (1,482) excluded."
+  },
+  {
+   "id": "T1.coverage",
+   "value": {
+    "sample_n": 8953,
+    "population_n": 120415,
+    "sample_fraction": 0.0744,
+    "wait_quantiles_sample": [
+     16.7,
+     39.0,
+     45.9,
+     54.2,
+     56.6
+    ],
+    "wait_quantiles_population": [
+     18.9,
+     30.9,
+     38.8,
+     48.9,
+     55.1
+    ],
+    "mean_excess_sample": 40.2,
+    "mean_excess_population": 35.0,
+    "share_wait_over_30_sample": 0.8537,
+    "share_wait_over_30_population": 0.7823,
+    "bulletins_sampled": 455,
+    "distinct_pub_nr_population": 6300
+   },
+   "unit": "mixed",
+   "window": "1 Oct-18 Nov 2026",
+   "n": 8953,
+   "ci": null,
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Compare sampled decisions with all admitted CERERE265 decisions in the JSON for the same dates.",
+   "caveat": "All window entries come from decisions of 1 Oct-18 Nov 2026 (the bulletin archive holds 60 Jan, 1 Feb and 482 Oct-Nov bulletins); Aug-Sep 2026 and Jan-Sep monthly shares cannot be established from it. CIs cover sampling among collected bulletins only."
+  },
+  {
+   "id": "T1.any_of.caen_rev3",
+   "value": 0.3005,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.2886,
+    0.3125
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.activity_codes",
+   "value": 0.4529,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.4409,
+    0.465
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.caen_only",
+   "value": 0.4013,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.3892,
+    0.4133
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.office_change",
+   "value": 0.0535,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.0486,
+    0.0583
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.office_docs",
+   "value": 0.0658,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.0592,
+    0.0723
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.seat_related",
+   "value": 0.1192,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.1108,
+    0.1277
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.secondary",
+   "value": 0.1236,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.1162,
+    0.1309
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.capital_shares",
+   "value": 0.3577,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.3467,
+    0.3687
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.capital",
+   "value": 0.1259,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.1183,
+    0.1336
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.share_transfer",
+   "value": 0.0242,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.0209,
+    0.0276
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.shareholder_data",
+   "value": 0.3242,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.3138,
+    0.3347
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.admins",
+   "value": 0.2442,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.2341,
+    0.2542
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.admin_change",
+   "value": 0.0566,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.0517,
+    0.0615
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.admin_data",
+   "value": 0.1987,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.1898,
+    0.2076
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.dissolution",
+   "value": 0.0658,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.0603,
+    0.0712
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.resumption",
+   "value": 0.004,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.0027,
+    0.0053
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.name_change",
+   "value": 0.0082,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.0063,
+    0.01
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.blocking_strict",
+   "value": 0.3023,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.2909,
+    0.3137
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.blocking_core",
+   "value": 0.473,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.4615,
+    0.4846
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.blocking_upper",
+   "value": 0.5951,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.5832,
+    0.6069
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.shdata_with_caen_only_else",
+   "value": 0.1486,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.1401,
+    0.1571
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.any_of.unparsed",
+   "value": 0.0001,
+   "unit": "share of admitted amendments (any-of; entries can have several objects)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.0,
+    0.0003
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Regex flags on de-spaced, diacritic-free object text; cluster-robust (bulletin) ratio CI.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.primary.activity_codes_change_only",
+   "value": 0.1166,
+   "unit": "share of admitted amendments (mutually exclusive)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.1098,
+    0.1233
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Priority: dissolution/deregistration/suspension > registered office change > secondary offices/work points > capital/shareholders/transfers > administrators/representatives > office-document prolongation/proof > other (name change, resumption) > CAEN Rev.3-only > other activity-code change.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.primary.administrators_representatives",
+   "value": 0.0296,
+   "unit": "share of admitted amendments (mutually exclusive)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.0258,
+    0.0333
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Priority: dissolution/deregistration/suspension > registered office change > secondary offices/work points > capital/shareholders/transfers > administrators/representatives > office-document prolongation/proof > other (name change, resumption) > CAEN Rev.3-only > other activity-code change.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.primary.caen_rev3_update_only",
+   "value": 0.2847,
+   "unit": "share of admitted amendments (mutually exclusive)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.2728,
+    0.2966
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Priority: dissolution/deregistration/suspension > registered office change > secondary offices/work points > capital/shareholders/transfers > administrators/representatives > office-document prolongation/proof > other (name change, resumption) > CAEN Rev.3-only > other activity-code change.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.primary.capital_shareholders_transfers",
+   "value": 0.2755,
+   "unit": "share of admitted amendments (mutually exclusive)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.2651,
+    0.286
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Priority: dissolution/deregistration/suspension > registered office change > secondary offices/work points > capital/shareholders/transfers > administrators/representatives > office-document prolongation/proof > other (name change, resumption) > CAEN Rev.3-only > other activity-code change.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.primary.dissolution_deregistration_suspension",
+   "value": 0.0658,
+   "unit": "share of admitted amendments (mutually exclusive)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.0603,
+    0.0712
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Priority: dissolution/deregistration/suspension > registered office change > secondary offices/work points > capital/shareholders/transfers > administrators/representatives > office-document prolongation/proof > other (name change, resumption) > CAEN Rev.3-only > other activity-code change.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.primary.office_document_prolongation_or_proof",
+   "value": 0.0457,
+   "unit": "share of admitted amendments (mutually exclusive)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.04,
+    0.0513
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Priority: dissolution/deregistration/suspension > registered office change > secondary offices/work points > capital/shareholders/transfers > administrators/representatives > office-document prolongation/proof > other (name change, resumption) > CAEN Rev.3-only > other activity-code change.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.primary.other",
+   "value": 0.0164,
+   "unit": "share of admitted amendments (mutually exclusive)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.0137,
+    0.0191
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Priority: dissolution/deregistration/suspension > registered office change > secondary offices/work points > capital/shareholders/transfers > administrators/representatives > office-document prolongation/proof > other (name change, resumption) > CAEN Rev.3-only > other activity-code change.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.primary.registered_office_change",
+   "value": 0.0531,
+   "unit": "share of admitted amendments (mutually exclusive)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.0483,
+    0.058
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Priority: dissolution/deregistration/suspension > registered office change > secondary offices/work points > capital/shareholders/transfers > administrators/representatives > office-document prolongation/proof > other (name change, resumption) > CAEN Rev.3-only > other activity-code change.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.primary.secondary_offices_work_points",
+   "value": 0.1126,
+   "unit": "share of admitted amendments (mutually exclusive)",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.1058,
+    0.1195
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Priority: dissolution/deregistration/suspension > registered office change > secondary offices/work points > capital/shareholders/transfers > administrators/representatives > office-document prolongation/proof > other (name change, resumption) > CAEN Rev.3-only > other activity-code change.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.excess_day_weighted.blocking_strict",
+   "value": 0.2732,
+   "unit": "share of excess (wait-3) days of admitted amendments",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.262,
+    0.2843
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Same flags, weighted by each entry's excess days (the base channel C multiplies).",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.excess_day_weighted.blocking_core",
+   "value": 0.4488,
+   "unit": "share of excess (wait-3) days of admitted amendments",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.4365,
+    0.4611
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Same flags, weighted by each entry's excess days (the base channel C multiplies).",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.excess_day_weighted.blocking_upper",
+   "value": 0.5752,
+   "unit": "share of excess (wait-3) days of admitted amendments",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.5624,
+    0.5881
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Same flags, weighted by each entry's excess days (the base channel C multiplies).",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.excess_day_weighted.caen_only",
+   "value": 0.4456,
+   "unit": "share of excess (wait-3) days of admitted amendments",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.4329,
+    0.4582
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Same flags, weighted by each entry's excess days (the base channel C multiplies).",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.excess_day_weighted.seat_related",
+   "value": 0.0948,
+   "unit": "share of excess (wait-3) days of admitted amendments",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.0869,
+    0.1027
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Same flags, weighted by each entry's excess days (the base channel C multiplies).",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.excess_day_weighted.office_docs",
+   "value": 0.0497,
+   "unit": "share of excess (wait-3) days of admitted amendments",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.0434,
+    0.0559
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Same flags, weighted by each entry's excess days (the base channel C multiplies).",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.excess_day_weighted.office_change",
+   "value": 0.0451,
+   "unit": "share of excess (wait-3) days of admitted amendments",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.0406,
+    0.0497
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Same flags, weighted by each entry's excess days (the base channel C multiplies).",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.excess_day_weighted.secondary",
+   "value": 0.1034,
+   "unit": "share of excess (wait-3) days of admitted amendments",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.0966,
+    0.1102
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Same flags, weighted by each entry's excess days (the base channel C multiplies).",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.excess_day_weighted.capital_shares",
+   "value": 0.3613,
+   "unit": "share of excess (wait-3) days of admitted amendments",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.3494,
+    0.3731
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Same flags, weighted by each entry's excess days (the base channel C multiplies).",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.excess_day_weighted.admins",
+   "value": 0.2448,
+   "unit": "share of excess (wait-3) days of admitted amendments",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": [
+    0.2342,
+    0.2554
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Same flags, weighted by each entry's excess days (the base channel C multiplies).",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.seat_excl_blocking_strict",
+   "value": {
+    "count_share": 0.2379,
+    "excess_day_share": 0.2178
+   },
+   "unit": "share",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": {
+    "count": [
+     0.228,
+     0.2478
+    ],
+    "excess_day": [
+     0.2079,
+     0.2277
+    ]
+   },
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Blocking tier excluding entries that touch the registered office (address change or seat documents), i.e. disjoint from channel B.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.seat_excl_blocking_core",
+   "value": {
+    "count_share": 0.4002,
+    "excess_day_share": 0.3859
+   },
+   "unit": "share",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": {
+    "count": [
+     0.3894,
+     0.4111
+    ],
+    "excess_day": [
+     0.3742,
+     0.3977
+    ]
+   },
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Blocking tier excluding entries that touch the registered office (address change or seat documents), i.e. disjoint from channel B.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.blocking_strict_excl_capital_with_caen",
+   "value": {
+    "count_share": 0.2374,
+    "excess_day_share": 0.2023
+   },
+   "unit": "share",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": {
+    "count": [
+     0.2268,
+     0.2479
+    ],
+    "excess_day": [
+     0.1927,
+     0.212
+    ]
+   },
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Blocking tier excluding entries that touch the registered office (address change or seat documents), i.e. disjoint from channel B.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.seat_excl_blocking_strict_excl_capital_with_caen",
+   "value": {
+    "count_share": 0.1757,
+    "excess_day_share": 0.1498
+   },
+   "unit": "share",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": {
+    "count": [
+     0.1669,
+     0.1846
+    ],
+    "excess_day": [
+     0.1416,
+     0.158
+    ]
+   },
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Blocking tier excluding entries that touch the registered office (address change or seat documents), i.e. disjoint from channel B.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.wait_over_30.office_docs",
+   "value": 0.0468,
+   "unit": "share of admitted amendments with wait > 30 days",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 7643,
+   "ci": [
+    0.0406,
+    0.0531
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Denominator of channel B (changes waiting > 30 days).",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.wait_over_30.office_change",
+   "value": 0.0433,
+   "unit": "share of admitted amendments with wait > 30 days",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 7643,
+   "ci": [
+    0.0387,
+    0.0479
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Denominator of channel B (changes waiting > 30 days).",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.wait_over_30.seat_related",
+   "value": 0.0901,
+   "unit": "share of admitted amendments with wait > 30 days",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 7643,
+   "ci": [
+    0.0822,
+    0.0981
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Denominator of channel B (changes waiting > 30 days).",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.wait_over_30.blocking_strict",
+   "value": 0.2665,
+   "unit": "share of admitted amendments with wait > 30 days",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 7643,
+   "ci": [
+    0.2552,
+    0.2778
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Denominator of channel B (changes waiting > 30 days).",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.wait_over_30.blocking_core",
+   "value": 0.4433,
+   "unit": "share of admitted amendments with wait > 30 days",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 7643,
+   "ci": [
+    0.4309,
+    0.4557
+   ],
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Denominator of channel B (changes waiting > 30 days).",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.poststratified_application_month",
+   "value": {
+    "population_share_covered": 1.0,
+    "blocking_strict": 0.2876,
+    "blocking_core": 0.4714,
+    "blocking_upper": 0.5936,
+    "caen_only": 0.4117,
+    "seat_related": 0.1088,
+    "office_docs": 0.0594,
+    "office_change": 0.0494
+   },
+   "unit": "share",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8953,
+   "ci": null,
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Shares re-weighted to the population mix of application months (corrects the long-wait over-representation).",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.poststratified_county",
+   "value": {
+    "counties_covered": 42,
+    "population_share_covered": 1.0,
+    "blocking_strict": 0.3042,
+    "blocking_core": 0.4734,
+    "blocking_upper": 0.5951,
+    "caen_only": 0.3998,
+    "seat_related": 0.1202,
+    "office_docs": 0.0663
+   },
+   "unit": "share",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": null,
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Shares re-weighted to the population county mix.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.by_decision_month.2026-10",
+   "value": {
+    "caen_only": 0.4072,
+    "caen_rev3": 0.3061,
+    "office_change": 0.0507,
+    "office_docs": 0.0591,
+    "secondary": 0.1187,
+    "capital_shares": 0.3618,
+    "admins": 0.2451,
+    "dissolution": 0.0632,
+    "blocking_strict": 0.2978,
+    "blocking_core": 0.473,
+    "blocking_upper": 0.5964
+   },
+   "unit": "share of admitted amendments (any-of)",
+   "window": "decisions of 2026-10",
+   "n": 3590,
+   "ci": {
+    "caen_only": [
+     0.3881,
+     0.4263
+    ],
+    "caen_rev3": [
+     0.287,
+     0.3253
+    ],
+    "office_change": [
+     0.0431,
+     0.0583
+    ],
+    "office_docs": [
+     0.0504,
+     0.0677
+    ],
+    "secondary": [
+     0.1077,
+     0.1296
+    ],
+    "capital_shares": [
+     0.3446,
+     0.3791
+    ],
+    "admins": [
+     0.2285,
+     0.2618
+    ],
+    "dissolution": [
+     0.0541,
+     0.0723
+    ],
+    "blocking_strict": [
+     0.2795,
+     0.3161
+    ],
+    "blocking_core": [
+     0.4549,
+     0.4911
+    ],
+    "blocking_upper": [
+     0.5774,
+     0.6154
+    ]
+   },
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Any-of shares by decision month; cluster-robust (bulletin) 95% CI per share.",
+   "caveat": "Only Oct and Nov 2026 can be estimated; Jan-Sep 2026 monthly shares cannot be established (no bulletins with amendment decisions in those months)."
+  },
+  {
+   "id": "T1.by_decision_month.2026-11",
+   "value": {
+    "caen_only": 0.3975,
+    "caen_rev3": 0.297,
+    "office_change": 0.0554,
+    "office_docs": 0.0703,
+    "secondary": 0.127,
+    "capital_shares": 0.3548,
+    "admins": 0.2437,
+    "dissolution": 0.0669,
+    "blocking_strict": 0.3056,
+    "blocking_core": 0.4734,
+    "blocking_upper": 0.5946
+   },
+   "unit": "share of admitted amendments (any-of)",
+   "window": "decisions of 2026-11",
+   "n": 5363,
+   "ci": {
+    "caen_only": [
+     0.382,
+     0.4131
+    ],
+    "caen_rev3": [
+     0.2817,
+     0.3124
+    ],
+    "office_change": [
+     0.0491,
+     0.0616
+    ],
+    "office_docs": [
+     0.061,
+     0.0795
+    ],
+    "secondary": [
+     0.1171,
+     0.1369
+    ],
+    "capital_shares": [
+     0.3406,
+     0.3691
+    ],
+    "admins": [
+     0.2312,
+     0.2562
+    ],
+    "dissolution": [
+     0.0602,
+     0.0737
+    ],
+    "blocking_strict": [
+     0.2909,
+     0.3203
+    ],
+    "blocking_core": [
+     0.4583,
+     0.4886
+    ],
+    "blocking_upper": [
+     0.5794,
+     0.6098
+    ]
+   },
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Any-of shares by decision month; cluster-robust (bulletin) 95% CI per share.",
+   "caveat": "Only Oct and Nov 2026 can be estimated; Jan-Sep 2026 monthly shares cannot be established (no bulletins with amendment decisions in those months)."
+  },
+  {
+   "id": "T1.by_application_month",
+   "value": {
+    "2026-09": {
+     "n": 7503,
+     "blocking_strict": 0.2595,
+     "blocking_core": 0.4386,
+     "caen_only": 0.4621,
+     "caen_rev3": 0.3549,
+     "seat_related": 0.0829
+    },
+    "2026-10": {
+     "n": 1075,
+     "blocking_strict": 0.5349,
+     "blocking_core": 0.6586,
+     "caen_only": 0.0819,
+     "caen_rev3": 0.0214,
+     "seat_related": 0.3284
+    },
+    "2026-11": {
+     "n": 374,
+     "blocking_strict": 0.4973,
+     "blocking_core": 0.6337,
+     "caen_only": 0.1043,
+     "caen_rev3": 0.016,
+     "seat_related": 0.2487
+    }
+   },
+   "unit": "share",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": null,
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Any-of shares by application month.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T1.blocking_definition",
+   "value": {
+    "strict": "office change | secondary offices/work points | capital | share transfer | appointment/revocation of administrators | resumption; not dissolution",
+    "core": "strict + \"modificare date asociați/administratori\" (ONRC uses these for real shareholding/management changes and for personal-data updates)",
+    "upper": "core + activity-code changes (non-Rev.3) + name change",
+    "not_blocking": "CAEN Rev.3-only update, seat-document prolongation with no change, dissolution/deregistration/suspension"
+   },
+   "unit": "definition",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": null,
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Classification rule.",
+   "caveat": "A blocking-type share is a CEILING for the share with separate economic impact, not an estimate of it."
+  },
+  {
+   "id": "T1.median_wait_by_primary",
+   "value": {
+    "activity_codes_change_only": 48.1,
+    "administrators_representatives": 42.3,
+    "caen_rev3_update_only": 49.2,
+    "capital_shareholders_transfers": 47.2,
+    "dissolution_deregistration_suspension": 45.8,
+    "office_document_prolongation_or_proof": 32.8,
+    "other": 21.1,
+    "registered_office_change": 42.0,
+    "secondary_offices_work_points": 42.0
+   },
+   "unit": "days",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 8957,
+   "ci": null,
+   "source": "BERC bulletin PDFs 2026 (W:/SOLOResearch/bulletins/2026, 545 files, all parsed) linked to raw CERERE265 JSON by request nr + CUI + bulletin nr",
+   "method": "Median wait by primary category.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T2.overall_firm_level",
+   "value": {
+    "n": 238278,
+    "matched": 134129,
+    "match_rate": 0.5629,
+    "median_daily_turnover": 633.8,
+    "p25_daily": 200.3,
+    "p75_daily": 1642.4,
+    "mean_daily_capped_p99": 1725.9,
+    "p99_cap": 19703.5,
+    "share_zero_turnover": 0.0208,
+    "share_ge1_employee": 0.7199,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 1.87,
+    "J_match_rate": 0.7064,
+    "J_median_daily_unmatched_as_zero": 256.5,
+    "J_mean_daily_capped_unmatched_as_zero": 1215.0
+   },
+   "unit": "lei per calendar day (I13/365) and employees (I20)",
+   "window": "1 Aug-18 Nov 2026 admitted CERERE265, wait 0-365",
+   "n": 238278,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro",
+   "method": "Join by CUI; daily turnover = I13 / days in financial year; capped mean at p99; weighted variants by excess days.",
+   "caveat": "F (PFA/II) entities file no balance sheets (match 0%); J match ~70%. Turnover of the last filed year, not of 2026."
+  },
+  {
+   "id": "T2.overall_excess_day_weighted",
+   "value": {
+    "n": 251582,
+    "matched": 139551,
+    "match_rate": 0.5547,
+    "median_daily_turnover": 619.0,
+    "p25_daily": 197.1,
+    "p75_daily": 1564.1,
+    "mean_daily_capped_p99": 1686.3,
+    "p99_cap": 21603.2,
+    "share_zero_turnover": 0.0197,
+    "share_ge1_employee": 0.717,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 1.84,
+    "J_match_rate": 0.6897,
+    "J_median_daily_unmatched_as_zero": 266.0,
+    "J_mean_daily_capped_unmatched_as_zero": 1205.4
+   },
+   "unit": "lei per calendar day (I13/365) and employees (I20)",
+   "window": "1 Aug-18 Nov 2026 admitted CERERE265, wait 0-365",
+   "n": 251582,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro",
+   "method": "Join by CUI; daily turnover = I13 / days in financial year; capped mean at p99; weighted variants by excess days.",
+   "caveat": "F (PFA/II) entities file no balance sheets (match 0%); J match ~70%. Turnover of the last filed year, not of 2026."
+  },
+  {
+   "id": "T2.overall_decision_level",
+   "value": {
+    "n": 251582,
+    "matched": 139551,
+    "match_rate": 0.5547,
+    "median_daily_turnover": 642.6,
+    "p25_daily": 202.1,
+    "p75_daily": 1690.2,
+    "mean_daily_capped_p99": 1800.5,
+    "p99_cap": 21603.2,
+    "share_zero_turnover": 0.0212,
+    "share_ge1_employee": 0.7207,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 1.91,
+    "J_match_rate": 0.6897,
+    "J_median_daily_unmatched_as_zero": 235.2,
+    "J_mean_daily_capped_unmatched_as_zero": 1237.2
+   },
+   "unit": "lei per calendar day (I13/365) and employees (I20)",
+   "window": "1 Aug-18 Nov 2026 admitted CERERE265, wait 0-365",
+   "n": 251582,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro",
+   "method": "Join by CUI; daily turnover = I13 / days in financial year; capped mean at p99; weighted variants by excess days.",
+   "caveat": "F (PFA/II) entities file no balance sheets (match 0%); J match ~70%. Turnover of the last filed year, not of 2026."
+  },
+  {
+   "id": "T2.match_rate_by_jtype",
+   "value": {
+    "C": 0.6877,
+    "F": 0.0,
+    "J": 0.6897
+   },
+   "unit": "share",
+   "window": "1 Aug-18 Nov 2026",
+   "n": 251582,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro",
+   "method": "Share of decisions whose CUI has a balance sheet with turnover.",
+   "caveat": ""
+  },
+  {
+   "id": "T2.by_primary.activity_codes_change_only",
+   "value": {
+    "n": 1044,
+    "matched": 393,
+    "match_rate": 0.3764,
+    "median_daily_turnover": 539.9,
+    "p25_daily": 186.8,
+    "p75_daily": 1087.3,
+    "mean_daily_capped_p99": 1318.4,
+    "p99_cap": 12935.1,
+    "share_zero_turnover": 0.0178,
+    "share_ge1_employee": 0.715,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 1.81,
+    "J_match_rate": 0.7238,
+    "J_median_daily_unmatched_as_zero": 244.7,
+    "J_mean_daily_capped_unmatched_as_zero": 954.2
+   },
+   "unit": "lei/day, employees",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 1044,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro; categories from T1 linked sample",
+   "method": "As T2 overall, within the bulletin-linked sample.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T2.by_primary.administrators_representatives",
+   "value": {
+    "n": 265,
+    "matched": 140,
+    "match_rate": 0.5283,
+    "median_daily_turnover": 685.6,
+    "p25_daily": 225.7,
+    "p75_daily": 1497.4,
+    "mean_daily_capped_p99": 2099.8,
+    "p99_cap": 23642.9,
+    "share_zero_turnover": 0.0214,
+    "share_ge1_employee": 0.7929,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 2.35,
+    "J_match_rate": 0.5287,
+    "J_median_daily_unmatched_as_zero": 44.5,
+    "J_mean_daily_capped_unmatched_as_zero": 1108.1
+   },
+   "unit": "lei/day, employees",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 265,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro; categories from T1 linked sample",
+   "method": "As T2 overall, within the bulletin-linked sample.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T2.by_primary.caen_rev3_update_only",
+   "value": {
+    "n": 2550,
+    "matched": 1739,
+    "match_rate": 0.682,
+    "median_daily_turnover": 489.7,
+    "p25_daily": 162.3,
+    "p75_daily": 1079.2,
+    "mean_daily_capped_p99": 1115.3,
+    "p99_cap": 11466.7,
+    "share_zero_turnover": 0.0115,
+    "share_ge1_employee": 0.6809,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 1.47,
+    "J_match_rate": 0.7521,
+    "J_median_daily_unmatched_as_zero": 242.7,
+    "J_mean_daily_capped_unmatched_as_zero": 831.3
+   },
+   "unit": "lei/day, employees",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 2550,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro; categories from T1 linked sample",
+   "method": "As T2 overall, within the bulletin-linked sample.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T2.by_primary.capital_shareholders_transfers",
+   "value": {
+    "n": 2468,
+    "matched": 1417,
+    "match_rate": 0.5741,
+    "median_daily_turnover": 882.4,
+    "p25_daily": 275.3,
+    "p75_daily": 2230.0,
+    "mean_daily_capped_p99": 2010.0,
+    "p99_cap": 19669.2,
+    "share_zero_turnover": 0.0134,
+    "share_ge1_employee": 0.7516,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 2.09,
+    "J_match_rate": 0.7574,
+    "J_median_daily_unmatched_as_zero": 477.3,
+    "J_mean_daily_capped_unmatched_as_zero": 1511.2
+   },
+   "unit": "lei/day, employees",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 2468,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro; categories from T1 linked sample",
+   "method": "As T2 overall, within the bulletin-linked sample.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T2.by_primary.dissolution_deregistration_suspension",
+   "value": {
+    "n": 589,
+    "matched": 174,
+    "match_rate": 0.2954,
+    "median_daily_turnover": 146.9,
+    "p25_daily": 28.4,
+    "p75_daily": 758.0,
+    "mean_daily_capped_p99": 568.8,
+    "p99_cap": 3635.0,
+    "share_zero_turnover": 0.0862,
+    "share_ge1_employee": 0.5057,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 0.69,
+    "J_match_rate": 0.3893,
+    "J_median_daily_unmatched_as_zero": 0.0,
+    "J_mean_daily_capped_unmatched_as_zero": 221.4
+   },
+   "unit": "lei/day, employees",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 589,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro; categories from T1 linked sample",
+   "method": "As T2 overall, within the bulletin-linked sample.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T2.by_primary.office_document_prolongation_or_proof",
+   "value": {
+    "n": 409,
+    "matched": 265,
+    "match_rate": 0.6479,
+    "median_daily_turnover": 703.3,
+    "p25_daily": 178.9,
+    "p75_daily": 1971.3,
+    "mean_daily_capped_p99": 2726.5,
+    "p99_cap": 44464.8,
+    "share_zero_turnover": 0.0453,
+    "share_ge1_employee": 0.6717,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 1.82,
+    "J_match_rate": 0.6867,
+    "J_median_daily_unmatched_as_zero": 215.3,
+    "J_mean_daily_capped_unmatched_as_zero": 1843.8
+   },
+   "unit": "lei/day, employees",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 409,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro; categories from T1 linked sample",
+   "method": "As T2 overall, within the bulletin-linked sample.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T2.by_primary.other",
+   "value": {
+    "n": 147,
+    "matched": 55,
+    "match_rate": 0.3741,
+    "median_daily_turnover": 542.8,
+    "p25_daily": 131.2,
+    "p75_daily": 2214.3,
+    "mean_daily_capped_p99": 2431.2,
+    "p99_cap": 21086.4,
+    "share_zero_turnover": 0.0545,
+    "share_ge1_employee": 0.7273,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 2.4,
+    "J_match_rate": 0.4737,
+    "J_median_daily_unmatched_as_zero": 0.0,
+    "J_mean_daily_capped_unmatched_as_zero": 1168.3
+   },
+   "unit": "lei/day, employees",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 147,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro; categories from T1 linked sample",
+   "method": "As T2 overall, within the bulletin-linked sample.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T2.by_primary.registered_office_change",
+   "value": {
+    "n": 476,
+    "matched": 251,
+    "match_rate": 0.5273,
+    "median_daily_turnover": 925.3,
+    "p25_daily": 244.6,
+    "p75_daily": 2342.5,
+    "mean_daily_capped_p99": 2457.3,
+    "p99_cap": 27634.9,
+    "share_zero_turnover": 0.012,
+    "share_ge1_employee": 0.761,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 2.23,
+    "J_match_rate": 0.6275,
+    "J_median_daily_unmatched_as_zero": 168.5,
+    "J_mean_daily_capped_unmatched_as_zero": 1541.9
+   },
+   "unit": "lei/day, employees",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 476,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro; categories from T1 linked sample",
+   "method": "As T2 overall, within the bulletin-linked sample.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T2.by_primary.secondary_offices_work_points",
+   "value": {
+    "n": 1009,
+    "matched": 494,
+    "match_rate": 0.4896,
+    "median_daily_turnover": 999.9,
+    "p25_daily": 311.7,
+    "p75_daily": 3097.4,
+    "mean_daily_capped_p99": 3278.2,
+    "p99_cap": 38407.7,
+    "share_zero_turnover": 0.0182,
+    "share_ge1_employee": 0.7976,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 2.95,
+    "J_match_rate": 0.5881,
+    "J_median_daily_unmatched_as_zero": 155.5,
+    "J_mean_daily_capped_unmatched_as_zero": 1927.9
+   },
+   "unit": "lei/day, employees",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 1009,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro; categories from T1 linked sample",
+   "method": "As T2 overall, within the bulletin-linked sample.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T2.linked.blocking_strict",
+   "value": {
+    "n": 2708,
+    "matched": 1647,
+    "match_rate": 0.6082,
+    "median_daily_turnover": 1151.9,
+    "p25_daily": 379.7,
+    "p75_daily": 2941.4,
+    "mean_daily_capped_p99": 2808.3,
+    "p99_cap": 31654.6,
+    "share_zero_turnover": 0.0121,
+    "share_ge1_employee": 0.796,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 2.66,
+    "J_match_rate": 0.6726,
+    "J_median_daily_unmatched_as_zero": 393.7,
+    "J_mean_daily_capped_unmatched_as_zero": 1879.5
+   },
+   "unit": "lei/day, employees",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 2708,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro; categories from T1",
+   "method": "Firms with at least one entry of that tier.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T2.linked.blocking_strict_excess_weighted",
+   "value": {
+    "n": 2708,
+    "matched": 1647,
+    "match_rate": 0.6082,
+    "median_daily_turnover": 1122.9,
+    "p25_daily": 378.4,
+    "p75_daily": 2847.5,
+    "mean_daily_capped_p99": 2664.4,
+    "p99_cap": 31654.6,
+    "share_zero_turnover": 0.0078,
+    "share_ge1_employee": 0.7933,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 2.6,
+    "J_match_rate": 0.6726,
+    "J_median_daily_unmatched_as_zero": 541.6,
+    "J_mean_daily_capped_unmatched_as_zero": 1912.1
+   },
+   "unit": "lei/day, employees",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 2708,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro; categories from T1",
+   "method": "Firms with at least one entry of that tier.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T2.linked.blocking_core",
+   "value": {
+    "n": 4237,
+    "matched": 2306,
+    "match_rate": 0.5443,
+    "median_daily_turnover": 885.3,
+    "p25_daily": 275.3,
+    "p75_daily": 2401.8,
+    "mean_daily_capped_p99": 2342.1,
+    "p99_cap": 27582.2,
+    "share_zero_turnover": 0.0147,
+    "share_ge1_employee": 0.7645,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 2.32,
+    "J_match_rate": 0.6814,
+    "J_median_daily_unmatched_as_zero": 307.0,
+    "J_mean_daily_capped_unmatched_as_zero": 1588.3
+   },
+   "unit": "lei/day, employees",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 4237,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro; categories from T1",
+   "method": "Firms with at least one entry of that tier.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T2.linked.blocking_core_excess_weighted",
+   "value": {
+    "n": 4237,
+    "matched": 2306,
+    "match_rate": 0.5443,
+    "median_daily_turnover": 852.4,
+    "p25_daily": 269.4,
+    "p75_daily": 2234.6,
+    "mean_daily_capped_p99": 2180.1,
+    "p99_cap": 27582.2,
+    "share_zero_turnover": 0.0109,
+    "share_ge1_employee": 0.7645,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 2.25,
+    "J_match_rate": 0.6814,
+    "J_median_daily_unmatched_as_zero": 381.4,
+    "J_mean_daily_capped_unmatched_as_zero": 1579.3
+   },
+   "unit": "lei/day, employees",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 4237,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro; categories from T1",
+   "method": "Firms with at least one entry of that tier.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T2.linked.caen_only",
+   "value": {
+    "n": 3594,
+    "matched": 2132,
+    "match_rate": 0.5932,
+    "median_daily_turnover": 499.4,
+    "p25_daily": 165.2,
+    "p75_daily": 1079.2,
+    "mean_daily_capped_p99": 1157.2,
+    "p99_cap": 12210.2,
+    "share_zero_turnover": 0.0127,
+    "share_ge1_employee": 0.6871,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 1.53,
+    "J_match_rate": 0.7467,
+    "J_median_daily_unmatched_as_zero": 243.2,
+    "J_mean_daily_capped_unmatched_as_zero": 857.8
+   },
+   "unit": "lei/day, employees",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 3594,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro; categories from T1",
+   "method": "Firms with at least one entry of that tier.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T2.linked.caen_only_excess_weighted",
+   "value": {
+    "n": 3594,
+    "matched": 2132,
+    "match_rate": 0.5932,
+    "median_daily_turnover": 493.9,
+    "p25_daily": 164.6,
+    "p75_daily": 1076.7,
+    "mean_daily_capped_p99": 1138.4,
+    "p99_cap": 12210.2,
+    "share_zero_turnover": 0.0122,
+    "share_ge1_employee": 0.6842,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 1.5,
+    "J_match_rate": 0.7467,
+    "J_median_daily_unmatched_as_zero": 244.9,
+    "J_mean_daily_capped_unmatched_as_zero": 847.8
+   },
+   "unit": "lei/day, employees",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 3594,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro; categories from T1",
+   "method": "Firms with at least one entry of that tier.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T2.linked.seat_related",
+   "value": {
+    "n": 1068,
+    "matched": 612,
+    "match_rate": 0.573,
+    "median_daily_turnover": 780.0,
+    "p25_daily": 206.7,
+    "p75_daily": 2052.8,
+    "mean_daily_capped_p99": 2357.1,
+    "p99_cap": 29339.7,
+    "share_zero_turnover": 0.031,
+    "share_ge1_employee": 0.719,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 2.02,
+    "J_match_rate": 0.658,
+    "J_median_daily_unmatched_as_zero": 194.3,
+    "J_mean_daily_capped_unmatched_as_zero": 1538.5
+   },
+   "unit": "lei/day, employees",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 1068,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro; categories from T1",
+   "method": "Firms with at least one entry of that tier.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T2.linked.seat_related_excess_weighted",
+   "value": {
+    "n": 1068,
+    "matched": 612,
+    "match_rate": 0.573,
+    "median_daily_turnover": 719.0,
+    "p25_daily": 190.3,
+    "p75_daily": 1931.8,
+    "mean_daily_capped_p99": 2117.4,
+    "p99_cap": 29339.7,
+    "share_zero_turnover": 0.0296,
+    "share_ge1_employee": 0.7113,
+    "median_employees": 1.0,
+    "mean_employees_capped_p99": 1.9,
+    "J_match_rate": 0.658,
+    "J_median_daily_unmatched_as_zero": 205.8,
+    "J_mean_daily_capped_unmatched_as_zero": 1418.7
+   },
+   "unit": "lei/day, employees",
+   "window": "admitted amendments decided 1 Oct-18 Nov 2026 (only months the bulletin archive covers; used as proxy for 1 Aug-18 Nov)",
+   "n": 1068,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro; categories from T1",
+   "method": "Firms with at least one entry of that tier.",
+   "caveat": "Bulletin archive = 455 of ~6,300 bulletins published 1 Oct-18 Nov (7.4% of decisions); CI covers sampling among collected bulletins only, not how they were collected. Sample over-represents long waits (mean excess 40.2 vs 35.0 d). Mix is time-varying (CAEN Rev.3 campaign): Sept-filed requests 46% CAEN-only, Oct/Nov-filed 8-10%. Aug-Sep 2026 decisions not observed."
+  },
+  {
+   "id": "T2.model_C_vs_turnover",
+   "value": {
+    "prudent": {
+     "lei_per_change_day": 5.25,
+     "pct_of_median_firm": 0.8,
+     "pct_of_capped_mean_firm": 0.3,
+     "pct_of_median_excess_weighted": 0.8,
+     "pct_of_capped_mean_excess_weighted": 0.31,
+     "blocked_day_cost_pct_of_median_strict_blocking_firm": 3.1,
+     "pct_of_J_median_unmatched_as_zero": 2.0
+    },
+    "central": {
+     "lei_per_change_day": 14.0,
+     "pct_of_median_firm": 2.2,
+     "pct_of_capped_mean_firm": 0.81,
+     "pct_of_median_excess_weighted": 2.3,
+     "pct_of_capped_mean_excess_weighted": 0.83,
+     "blocked_day_cost_pct_of_median_strict_blocking_firm": 6.2,
+     "pct_of_J_median_unmatched_as_zero": 5.5
+    },
+    "tensionat": {
+     "lei_per_change_day": 27.5,
+     "pct_of_median_firm": 4.3,
+     "pct_of_capped_mean_firm": 1.59,
+     "pct_of_median_excess_weighted": 4.4,
+     "pct_of_capped_mean_excess_weighted": 1.63,
+     "blocked_day_cost_pct_of_median_strict_blocking_firm": 9.8,
+     "pct_of_J_median_unmatched_as_zero": 10.7
+    }
+   },
+   "unit": "% of daily net turnover",
+   "window": "1 Aug-18 Nov 2026",
+   "n": 238278,
+   "ci": null,
+   "source": "Raw CERERE265 JSON (cui) x Ministry of Finance balance sheets WEB_UU_AN2025 (2024 if missing), data.gov.ro",
+   "method": "Model cost per change-day (share x lei per blocked day; central 0.20 x 70 = 14 lei) divided by measured median and p99-capped mean daily turnover.",
+   "caveat": "Scale check only: turnover is not value added and not a cost; it does not found the 70 lei."
+  },
+  {
+   "id": "T3.cohort2024_fy2024",
+   "value": {
+    "cohort_year": 2024,
+    "financial_year": 2024,
+    "onrc_n": 90371,
+    "matched_with_turnover_field": 47332,
+    "match_rate": 0.5238,
+    "positive_turnover_n": 45497,
+    "eff_direct_tax_simple_median": 0.0099,
+    "eff_direct_tax_simple_aggregate": 0.0229,
+    "eff_direct_tax_full_median": 0.01,
+    "eff_direct_tax_full_aggregate": 0.0239,
+    "eff_direct_tax_full_aggregate_excl_top1pct_turnover": 0.0264,
+    "share_tax_full_between_0_5_and_1_5pct": 0.4246,
+    "share_tax_full_between_2_5_and_3_5pct": 0.1687,
+    "share_loss_makers_paying_tax": 0.5486,
+    "share_ge1_employee": 0.6387,
+    "mean_employees": 1.01,
+    "mean_employees_capped_p99": 0.933,
+    "median_employees": 1.0,
+    "profit_margin_aggregate_I18_over_I13": 0.3524,
+    "net_result_margin_aggregate": 0.3068,
+    "net_result_margin_aggregate_excl_top1pct": 0.3594,
+    "net_result_margin_median": 0.2315,
+    "net_result_over_total_revenue_aggregate": 0.301,
+    "total_revenue_over_turnover_aggregate": 1.019,
+    "eff_direct_tax_full_over_total_revenue_aggregate": 0.0234,
+    "share_profitable": 0.7109,
+    "share_turnover_over_395k": 0.1029,
+    "share_turnover_over_300k": 0.1328,
+    "median_turnover_all_matched": 65299.0,
+    "median_turnover_positive": 71153.0,
+    "daily_n": 31079,
+    "daily_turnover_median": 358.3,
+    "daily_turnover_mean_capped_p99": 793.3,
+    "daily_turnover_p25": 105.8,
+    "daily_turnover_p75": 856.9,
+    "direct_tax_per_day_mean_capped": 20.16,
+    "direct_tax_per_day_median": 5.85
+   },
+   "unit": "ratios / lei / employees",
+   "window": "cohort 2024, financial year 2024",
+   "n": 90371,
+   "ci": null,
+   "source": "BERC INMATRIC265 JSON J registrations (audit_finance.py rule) x MF balance sheets 2024/2025",
+   "method": "eff_direct_tax_simple = (I16-I18)/I13 (I13>0); eff_direct_tax_full = ((I16-I17)-(I18-I19))/I13 (includes micro tax paid by loss-makers); profit margin = I18/I13; employees I20 (unfiled = excluded unless stated); daily turnover over days since registration (>=180 d) or full year.",
+   "caveat": "Only ~47-57% of a cohort files a balance sheet with turnover. Direct tax is mostly the 1%/3% micro-enterprise tax. Aggregate margins are pulled up by firms with small turnover and large profit; medians are more representative."
+  },
+  {
+   "id": "T3.cohort2024_fy2025",
+   "value": {
+    "cohort_year": 2024,
+    "financial_year": 2025,
+    "onrc_n": 90371,
+    "matched_with_turnover_field": 51651,
+    "match_rate": 0.5715,
+    "positive_turnover_n": 50620,
+    "eff_direct_tax_simple_median": 0.0117,
+    "eff_direct_tax_simple_aggregate": 0.0215,
+    "eff_direct_tax_full_median": 0.0147,
+    "eff_direct_tax_full_aggregate": 0.0224,
+    "eff_direct_tax_full_aggregate_excl_top1pct_turnover": 0.0258,
+    "share_tax_full_between_0_5_and_1_5pct": 0.3182,
+    "share_tax_full_between_2_5_and_3_5pct": 0.157,
+    "share_loss_makers_paying_tax": 0.4766,
+    "share_ge1_employee": 0.6525,
+    "mean_employees": 1.22,
+    "mean_employees_capped_p99": 1.11,
+    "median_employees": 1.0,
+    "profit_margin_aggregate_I18_over_I13": 0.2205,
+    "net_result_margin_aggregate": 0.177,
+    "net_result_margin_aggregate_excl_top1pct": 0.2232,
+    "net_result_margin_median": 0.1479,
+    "net_result_over_total_revenue_aggregate": 0.1705,
+    "total_revenue_over_turnover_aggregate": 1.038,
+    "eff_direct_tax_full_over_total_revenue_aggregate": 0.0216,
+    "share_profitable": 0.7251,
+    "share_turnover_over_395k": 0.2116,
+    "share_turnover_over_300k": 0.3105,
+    "median_turnover_all_matched": 162064.0,
+    "median_turnover_positive": 167601.0,
+    "daily_n": 51651,
+    "daily_turnover_median": 444.0,
+    "daily_turnover_mean_capped_p99": 966.9,
+    "daily_turnover_p25": 134.3,
+    "daily_turnover_p75": 990.9,
+    "direct_tax_per_day_mean_capped": 23.1,
+    "direct_tax_per_day_median": 6.49
+   },
+   "unit": "ratios / lei / employees",
+   "window": "cohort 2024, financial year 2025",
+   "n": 90371,
+   "ci": null,
+   "source": "BERC INMATRIC265 JSON J registrations (audit_finance.py rule) x MF balance sheets 2024/2025",
+   "method": "eff_direct_tax_simple = (I16-I18)/I13 (I13>0); eff_direct_tax_full = ((I16-I17)-(I18-I19))/I13 (includes micro tax paid by loss-makers); profit margin = I18/I13; employees I20 (unfiled = excluded unless stated); daily turnover over days since registration (>=180 d) or full year.",
+   "caveat": "Only ~47-57% of a cohort files a balance sheet with turnover. Direct tax is mostly the 1%/3% micro-enterprise tax. Aggregate margins are pulled up by firms with small turnover and large profit; medians are more representative."
+  },
+  {
+   "id": "T3.cohort2025_fy2025",
+   "value": {
+    "cohort_year": 2025,
+    "financial_year": 2025,
+    "onrc_n": 99392,
+    "matched_with_turnover_field": 46227,
+    "match_rate": 0.4651,
+    "positive_turnover_n": 43923,
+    "eff_direct_tax_simple_median": 0.0099,
+    "eff_direct_tax_simple_aggregate": 0.0252,
+    "eff_direct_tax_full_median": 0.01,
+    "eff_direct_tax_full_aggregate": 0.0261,
+    "eff_direct_tax_full_aggregate_excl_top1pct_turnover": 0.0271,
+    "share_tax_full_between_0_5_and_1_5pct": 0.3886,
+    "share_tax_full_between_2_5_and_3_5pct": 0.1402,
+    "share_loss_makers_paying_tax": 0.4682,
+    "share_ge1_employee": 0.603,
+    "mean_employees": 1.004,
+    "mean_employees_capped_p99": 0.922,
+    "median_employees": 1.0,
+    "profit_margin_aggregate_I18_over_I13": 0.3382,
+    "net_result_margin_aggregate": 0.2836,
+    "net_result_margin_aggregate_excl_top1pct": 0.3377,
+    "net_result_margin_median": 0.192,
+    "net_result_over_total_revenue_aggregate": 0.2777,
+    "total_revenue_over_turnover_aggregate": 1.021,
+    "eff_direct_tax_full_over_total_revenue_aggregate": 0.0256,
+    "share_profitable": 0.7044,
+    "share_turnover_over_395k": 0.0988,
+    "share_turnover_over_300k": 0.1532,
+    "median_turnover_all_matched": 63495.0,
+    "median_turnover_positive": 71361.0,
+    "daily_n": 27564,
+    "daily_turnover_median": 379.0,
+    "daily_turnover_mean_capped_p99": 822.6,
+    "daily_turnover_p25": 108.6,
+    "daily_turnover_p75": 929.5,
+    "direct_tax_per_day_mean_capped": 20.99,
+    "direct_tax_per_day_median": 5.94
+   },
+   "unit": "ratios / lei / employees",
+   "window": "cohort 2025, financial year 2025",
+   "n": 99392,
+   "ci": null,
+   "source": "BERC INMATRIC265 JSON J registrations (audit_finance.py rule) x MF balance sheets 2024/2025",
+   "method": "eff_direct_tax_simple = (I16-I18)/I13 (I13>0); eff_direct_tax_full = ((I16-I17)-(I18-I19))/I13 (includes micro tax paid by loss-makers); profit margin = I18/I13; employees I20 (unfiled = excluded unless stated); daily turnover over days since registration (>=180 d) or full year.",
+   "caveat": "Only ~47-57% of a cohort files a balance sheet with turnover. Direct tax is mostly the 1%/3% micro-enterprise tax. Aggregate margins are pulled up by firms with small turnover and large profit; medians are more representative."
+  },
+  {
+   "id": "T3.composite_tax_share",
+   "value": {
+    "direct": 0.0261,
+    "payroll": 0.0617,
+    "vat_low": 0.0267,
+    "vat_high": 0.058,
+    "total_low": 0.1144,
+    "total_high": 0.1457
+   },
+   "unit": "share of turnover",
+   "window": "cohort 2025, FY2025 balance sheets, 2026 statutory rates",
+   "n": 99392,
+   "ci": null,
+   "source": "BERC INMATRIC265 JSON J registrations (audit_finance.py rule) x MF balance sheets 2024/2025 + Eurostat VA share + Fiscal Code rates",
+   "method": "direct = aggregate loss-inclusive direct tax / turnover; payroll = mean employees x (4,325-200) x 37.25% x 12/365 / capped mean daily turnover; VAT = 21% x VA share 27.6% (Eurostat 2024) x share of turnover in firms above the 395k lei threshold (46% excl. top 1%) .. 100%.",
+   "caveat": "Payroll proportional to lost sales is an assumption; voluntary VAT registration unknown; income tax excluded. Direct tax is measured on FY2025 when a 3% micro rate still existed; from 2026 only 1% applies, so 2.6% is an upper reference for 2026."
+  },
+  {
+   "id": "T3.measured_VA_floor.cohort2024_fy2024",
+   "value": {
+    "net_result_plus_direct_tax_aggregate": 0.3307,
+    "net_result_plus_direct_tax_median": 0.2415
+   },
+   "unit": "share of turnover (lower bound of value added: excludes wages, social contributions, depreciation)",
+   "window": "cohort 2024, FY 2024",
+   "n": 45497,
+   "ci": null,
+   "source": "BERC INMATRIC265 JSON J registrations (audit_finance.py rule) x MF balance sheets 2024/2025",
+   "method": "(I18-I19)/I13 + ((I16-I17)-(I18-I19))/I13 = gross result / turnover; aggregate and median over firms with I13>0.",
+   "caveat": "New J firms are service-heavy micro-firms where owners take income as profit; Eurostat 27.6% is economy-wide and trade-heavy. Gross result alone already reaches 20-31% of turnover, before any wages."
+  },
+  {
+   "id": "T3.measured_VA_floor.cohort2024_fy2025",
+   "value": {
+    "net_result_plus_direct_tax_aggregate": 0.1994,
+    "net_result_plus_direct_tax_median": 0.1626
+   },
+   "unit": "share of turnover (lower bound of value added: excludes wages, social contributions, depreciation)",
+   "window": "cohort 2024, FY 2025",
+   "n": 50620,
+   "ci": null,
+   "source": "BERC INMATRIC265 JSON J registrations (audit_finance.py rule) x MF balance sheets 2024/2025",
+   "method": "(I18-I19)/I13 + ((I16-I17)-(I18-I19))/I13 = gross result / turnover; aggregate and median over firms with I13>0.",
+   "caveat": "New J firms are service-heavy micro-firms where owners take income as profit; Eurostat 27.6% is economy-wide and trade-heavy. Gross result alone already reaches 20-31% of turnover, before any wages."
+  },
+  {
+   "id": "T3.measured_VA_floor.cohort2025_fy2025",
+   "value": {
+    "net_result_plus_direct_tax_aggregate": 0.3097,
+    "net_result_plus_direct_tax_median": 0.202
+   },
+   "unit": "share of turnover (lower bound of value added: excludes wages, social contributions, depreciation)",
+   "window": "cohort 2025, FY 2025",
+   "n": 43923,
+   "ci": null,
+   "source": "BERC INMATRIC265 JSON J registrations (audit_finance.py rule) x MF balance sheets 2024/2025",
+   "method": "(I18-I19)/I13 + ((I16-I17)-(I18-I19))/I13 = gross result / turnover; aggregate and median over firms with I13>0.",
+   "caveat": "New J firms are service-heavy micro-firms where owners take income as profit; Eurostat 27.6% is economy-wide and trade-heavy. Gross result alone already reaches 20-31% of turnover, before any wages."
+  },
+  {
+   "id": "T4.a.va_share_BN_exclK",
+   "value": 0.253,
+   "unit": "value added / net turnover",
+   "window": "2024",
+   "n": null,
+   "ci": null,
+   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sbs_ovw_act?geo=RO&lastTimePeriod=1&indic_sbs=NETTUR_MEUR&indic_sbs=AV_MEUR",
+   "method": "VA 130,584.9 / net turnover 515,689.7 million EUR; sections B-J + L-N summed (code B-N_X_K returned nothing)",
+   "caveat": "Eurostat label \"Value added\" (SBS factor-cost concept; the response does not repeat \"at factor cost\").",
+   "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+  },
+  {
+   "id": "T4.a.va_share_BS_exclO_S94",
+   "value": 0.276,
+   "unit": "value added / net turnover",
+   "window": "2024",
+   "n": null,
+   "ci": null,
+   "source": "same API as T4.a.va_share_BN_exclK",
+   "method": "151,721.83 / 549,585.53 million EUR (published aggregate)",
+   "caveat": "",
+   "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+  },
+  {
+   "id": "T4.a.va_share_micro_0_9",
+   "value": {
+    "B-N_excl_K": 0.289,
+    "B-S_excl_O_S94": 0.304
+   },
+   "unit": "value added / net turnover",
+   "window": "2024",
+   "n": null,
+   "ci": null,
+   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sbs_sc_ovw?geo=RO&lastTimePeriod=1",
+   "method": "25,846.6 / 89,425.5 and 29,412.51 / 96,850.35 million EUR, size class 0-9 persons employed",
+   "caveat": "B-N figure summed by section.",
+   "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+  },
+  {
+   "id": "T4.a.labour_productivity",
+   "value": {
+    "total_BS": 31.82,
+    "micro_BS": 19.27,
+    "total_BN": 29.97,
+    "micro_BN": 19.74
+   },
+   "unit": "thousand EUR VA per person employed",
+   "window": "2024",
+   "n": null,
+   "ci": null,
+   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sbs_sc_ovw?geo=RO&lastTimePeriod=1",
+   "method": "Apparent labour productivity",
+   "caveat": "",
+   "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+  },
+  {
+   "id": "T4.a.INS_crosscheck",
+   "value": null,
+   "unit": "",
+   "window": "",
+   "n": null,
+   "ci": null,
+   "source": "INS \"Rezultate si performante ale intreprinderilor\"",
+   "method": "not attempted",
+   "caveat": "",
+   "status": "NOT CONFIRMED"
+  },
+  {
+   "id": "T4.b.min_wage",
+   "value": {
+    "2026-01-01_to_2026-06-30": 4050,
+    "from_2026-07-01": 4325,
+    "hourly_from_2026-07-01": 25.949
+   },
+   "unit": "lei gross per month",
+   "window": "2026",
+   "n": null,
+   "ci": null,
+   "source": "https://legislatie.just.ro/Public/DetaliiDocument/308231 (HG 146/2026); https://legislatie.just.ro/Public/DetaliiDocument/291450 (HG 1506/2024) + OUG 89/2025 preamble",
+   "method": "legal text",
+   "caveat": "Aug-Nov 2026 window -> 4,325 lei. HG 146/2026 art. 1 re-read by the auditor.",
+   "status": "CONFIRMED - re-read by the auditor on 2026-11-22"
+  },
+  {
+   "id": "T4.b.min_wage_exempt_amount",
+   "value": {
+    "2026-01_to_06": 300,
+    "2026-07_to_12": 200
+   },
+   "unit": "lei/month free of income tax and social contributions",
+   "window": "2026",
+   "n": null,
+   "ci": null,
+   "source": "https://static.anaf.ro/static/10/Anaf/legislatie/OUG_89_2025.pdf (art. III)",
+   "method": "legal text",
+   "caveat": "Only if base salary = minimum wage and gross <= 4,300 lei (H1) / 4,600 lei (H2).",
+   "status": "CONFIRMED - re-read by the auditor on 2026-11-22"
+  },
+  {
+   "id": "T4.b.contribution_rates",
+   "value": {
+    "CAS_employee": 0.25,
+    "CASS": 0.1,
+    "income_tax": 0.1,
+    "CAM_employer": 0.0225
+   },
+   "unit": "rate",
+   "window": "2026 (consolidated Fiscal Code, version 25.10.2026)",
+   "n": null,
+   "ci": null,
+   "source": "https://legislatie.just.ro/Public/DetaliiDocument/171282 (art. 138a, 156, 64(1), 220^3(1))",
+   "method": "legal text",
+   "caveat": "The 2026 personal deduction at the minimum wage was not verified, so income tax is left out of the floor.",
+   "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+  },
+  {
+   "id": "T4.c.micro_tax",
+   "value": {
+    "rate": 0.01,
+    "turnover_ceiling_eur": 100000
+   },
+   "unit": "rate / EUR",
+   "window": "from 1 Jan 2026",
+   "n": null,
+   "ci": null,
+   "source": "https://legislatie.just.ro/Public/DetaliiDocument/171282 (art. 51(1), 47(1)(c))",
+   "method": "legal text",
+   "caveat": "The 3% rate was abrogated by OUG 89/2025.",
+   "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+  },
+  {
+   "id": "T4.c.profit_and_dividend_tax",
+   "value": {
+    "profit_tax": 0.16,
+    "dividend_tax_from_2026": 0.16
+   },
+   "unit": "rate",
+   "window": "2026",
+   "n": null,
+   "ci": null,
+   "source": "https://legislatie.just.ro/Public/DetaliiDocument/171282 (art. 17, 97(7)); https://static.anaf.ro/static/10/Anaf/legislatie/L_141_2025.pdf",
+   "method": "legal text",
+   "caveat": "",
+   "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+  },
+  {
+   "id": "T4.c.vat",
+   "value": {
+    "standard_rate_from_2025-08-01": 0.21,
+    "exemption_threshold_lei_from_2025-09-01": 395000
+   },
+   "unit": "rate / lei",
+   "window": "2026",
+   "n": null,
+   "ci": null,
+   "source": "https://legislatie.just.ro/Public/DetaliiDocument/171282 (art. 291(1), 310(1))",
+   "method": "legal text",
+   "caveat": "",
+   "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+  },
+  {
+   "id": "T4.d.nbr_policy_rate",
+   "value": {
+    "policy": 0.065,
+    "lending_facility": 0.075,
+    "deposit_facility": 0.055,
+    "in_force_since": "2024-08-08",
+    "last_board_meeting": "2026-11-12"
+   },
+   "unit": "rate",
+   "window": "Nov 2026",
+   "n": null,
+   "ci": null,
+   "source": "https://www.bnr.ro/1970-rata-dobanzii-de-politica-monetara",
+   "method": "official table",
+   "caveat": "",
+   "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+  },
+  {
+   "id": "T4.d.yield_1y",
+   "value": 0.0616,
+   "unit": "weighted average yield, T-bill ROZOAXICMLV1 (maturity 28-10-2027)",
+   "window": "auction 5 Nov 2026",
+   "n": null,
+   "ci": null,
+   "source": "https://mfinante.gov.ro/static/10/Mfp/emisiuni/comof_05112026.pdf",
+   "method": "MF auction communique (cut-off 6.19%, 966.6m lei allotted)",
+   "caveat": "Image PDF; read from the rendered page.",
+   "status": "CONFIRMED - re-read by the auditor on 2026-11-22"
+  },
+  {
+   "id": "T4.d.yield_10y",
+   "value": {
+    "2026-10": 0.0677,
+    "2026-09": 0.0671,
+    "2026-08": 0.0643,
+    "2026-07": 0.0609
+   },
+   "unit": "EMU convergence long-term interest rate",
+   "window": "Jul-Oct 2026",
+   "n": null,
+   "ci": null,
+   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/irt_lt_mcby_m?geo=RO&lastTimePeriod=4",
+   "method": "Eurostat irt_lt_mcby_m (updated 2026-11-12)",
+   "caveat": "November 2026 not yet published.",
+   "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+  },
+  {
+   "id": "T4.e.worldbank_bready_2024",
+   "value": {
+    "llc_days": 6.5,
+    "cost_pct_income_per_capita": 0.3,
+    "onrc_registration_step_days": 3,
+    "onrc_fee_ron": 128
+   },
+   "unit": "days / % / RON",
+   "window": "Subnational B-READY 2024, 9 Romanian cities",
+   "n": null,
+   "ci": null,
+   "source": "https://openknowledge.worldbank.org/server/api/core/bitstreams/7fc14323-86f3-471c-8a06-c1cebb477a1d/content (p.53-54)",
+   "method": "report",
+   "caveat": "Supports the 3-day benchmark of the model; does not price delay.",
+   "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+  },
+  {
+   "id": "T4.e.worldbank_doing_business_2020",
+   "value": {
+    "procedures": 6,
+    "days": 20,
+    "onrc_step_days": 3,
+    "onrc_fee_ron": 122
+   },
+   "unit": "count / days / RON",
+   "window": "DB2020 Bucharest",
+   "n": null,
+   "ci": null,
+   "source": "https://documents1.worldbank.org/curated/en/639751575291022268/text/Doing-Business-2020-Comparing-Business-Regulation-in-190-Economies-Economy-Profile-of-Romania.txt",
+   "method": "report",
+   "caveat": "Discontinued series.",
+   "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+  },
+  {
+   "id": "T4.e.ec_digital_company_law_IA",
+   "value": {
+    "admin_burden_reduction_eur_per_year": 437000000.0,
+    "one_off_companies_eur": 311000000.0
+   },
+   "unit": "EUR, EU-wide",
+   "window": "SWD(2023) 179",
+   "n": null,
+   "ci": null,
+   "source": "https://data.consilium.europa.eu/doc/document/ST-7953-2023-ADD-5/en/pdf",
+   "method": "impact assessment",
+   "caveat": "EU-wide, not Romania; not a per-day delay cost.",
+   "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+  },
+  {
+   "id": "T4.e.ec_eu_inc_IA",
+   "value": {
+    "registration_deadline_hours": 48,
+    "cost_ceiling_eur": 100,
+    "burden_reduction_eur_10y": [
+     328000000.0,
+     440000000.0
+    ]
+   },
+   "unit": "EUR, EU-wide",
+   "window": "SWD(2026) 322 (18.3.2026)",
+   "n": null,
+   "ci": null,
+   "source": "https://www.cdep.ro/afaceri_europene/CE/2026/SWD(2026)%20322_EN_resume_impact_assessment_part1_v4.pdf",
+   "method": "impact assessment",
+   "caveat": "EU-wide.",
+   "status": "CONFIRMED by delegated research run (official page fetched 2026-11-22; not re-fetched by the auditor)"
+  },
+  {
+   "id": "T4.e.directive_2019_1151_deadline",
+   "value": null,
+   "unit": "",
+   "window": "",
+   "n": null,
+   "ci": null,
+   "source": "EUR-Lex (empty response)",
+   "method": "not retrieved",
+   "caveat": "",
+   "status": "NOT CONFIRMED"
+  },
+  {
+   "id": "T4.e.cost_per_day_of_delay",
+   "value": null,
+   "unit": "",
+   "window": "",
+   "n": null,
+   "ci": null,
+   "source": "World Bank / OECD / EC pages searched",
+   "method": "no official per-day cost of registration delay found",
+   "caveat": "",
+   "status": "NOT CONFIRMED"
+  },
+  {
+   "id": "T5.floor_headline",
+   "value": {
+    "turnover_basis": 280535,
+    "value_added_basis": 77428,
+    "taxes": 43908,
+    "total_value_added_plus_taxes": 121336
+   },
+   "unit": "lei",
+   "window": "admitted J registrations decided 1 Aug-18 Nov 2026, wait 0-365 days (analysis_decisions.pkl)",
+   "n": 16364,
+   "ci": null,
+   "source": "analysis_decisions.pkl (exposure) + T3 cohort 2025 aggregates + official rates (T4)",
+   "method": "F1 = p_active*q*(r/365)*sum e_i^2 ; F1_VA = F1 * VA share 27.6% ; F2 = (t_direct+t_payroll)*(r/365)*sum e_i^2 ; r = 1y T-bill 6.16%",
+   "caveat": "Counts only realised J registrations in the window (no pending stock, no amendments, no B/D). Only maintained assumption: cash flows are shifted, not lost. Current pkl has 16364 births / 334727 excess days vs published exposure 15994 / 322222.",
+   "inputs": {
+    "q_median_daily_turnover": 379.0,
+    "p_active": 0.4419,
+    "t_direct_per_firm_day": 2.625,
+    "employees_per_new_firm": 0.467,
+    "payroll_taxes_per_employee_month": 1536.6,
+    "t_payroll_per_firm_day": 23.589
+   },
+   "sums": {
+    "sum_e": 334727,
+    "sum_e2": 9924734
+   }
+  },
+  {
+   "id": "T5.floor_variants",
+   "value": {
+    "F1_turnover_deferral_quadratic_1y": 280535,
+    "F1b_turnover_one_year_shift_1y": 3453430,
+    "F2_tax_deferral_quadratic_1y": 43908,
+    "F2b_tax_one_year_shift_1y": 540518,
+    "F1_value_added_deferral_quadratic_1y": 77428,
+    "F1b_value_added_one_year_shift_1y": 953147,
+    "F1_turnover_deferral_quadratic_10y": 308315,
+    "F1b_turnover_one_year_shift_10y": 3795409,
+    "F2_tax_deferral_quadratic_10y": 48256,
+    "F2b_tax_one_year_shift_10y": 594043,
+    "F1_value_added_deferral_quadratic_10y": 85095,
+    "F1b_value_added_one_year_shift_10y": 1047533,
+    "F1_turnover_deferral_quadratic_policy": 296019,
+    "F1b_turnover_one_year_shift_policy": 3644041,
+    "F2_tax_deferral_quadratic_policy": 46332,
+    "F2b_tax_one_year_shift_policy": 570352,
+    "F1_value_added_deferral_quadratic_policy": 81701,
+    "F1b_value_added_one_year_shift_policy": 1005755
+   },
+   "unit": "lei",
+   "window": "admitted J registrations decided 1 Aug-18 Nov 2026, wait 0-365 days (analysis_decisions.pkl)",
+   "n": 16364,
+   "ci": null,
+   "source": "analysis_decisions.pkl (exposure) + T3 cohort 2025 aggregates + official rates (T4)",
+   "method": "{\"F1\": \"p_active * q * (r/365) * sum_i e_i^2\", \"F1b\": \"p_active * q * r * sum_i e_i  (= 365*q*(r*e_i/365) summed: whole first year shifted by e_i)\", \"F2\": \"(t_direct + t_payroll) * (r/365) * sum_i e_i^2\", \"F2b\": \"(t_direct + t_payroll) * r * sum_i e_i\", \"t_payroll\": \"employees_per_new_firm * (MW-untaxed)*(CAS+CASS+CAM) * 12/365  (income tax excluded)\"}",
+   "caveat": "Rates 1y / 10y / policy. The \"one_year_shift\" variants (F1b/F2b) need an extra assumption (the whole first year of activity shifts by e_i) and are alternatives, not the floor. Counts only realised J registrations in the window (no pending stock, no amendments, no B/D). Only maintained assumption: cash flows are shifted, not lost. Current pkl has 16364 births / 334727 excess days vs published exposure 15994 / 322222."
+  },
+  {
+   "id": "T5.reference_not_a_floor",
+   "value": 8774645,
+   "unit": "lei",
+   "window": "admitted J registrations decided 1 Aug-18 Nov 2026, wait 0-365 days (analysis_decisions.pkl)",
+   "n": 16364,
+   "ci": null,
+   "source": "analysis_decisions.pkl (exposure) + T3 cohort 2025 aggregates + official rates (T4)",
+   "method": "(t_direct + t_payroll) * sum e_i",
+   "caveat": "Taxes of the excess days if LOST rather than deferred - a behavioural assumption, shown for scale only; NOT a floor."
+  }
+ ]
+}

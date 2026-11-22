@@ -1,0 +1,103 @@
+{
+ "segments": 5882,
+ "noise_segments_knn_assigned": 393,
+ "segments_generic_C": 402,
+ "segments_no_rule": 783,
+ "segments_H_from_rule": 5099,
+ "entry_level": {
+  "CAEN": {
+   "share_C": 0.317,
+   "share_R": 0.411,
+   "share_H": 0.317,
+   "agree_CR": 0.836,
+   "kappa_CR": 0.648
+  },
+  "SEDIU": {
+   "share_C": 0.205,
+   "share_R": 0.307,
+   "share_H": 0.219,
+   "agree_CR": 0.875,
+   "kappa_CR": 0.676
+  },
+  "ACT": {
+   "share_C": 0.154,
+   "share_R": 0.372,
+   "share_H": 0.177,
+   "agree_CR": 0.749,
+   "kappa_CR": 0.391
+  },
+  "ASOC_ID": {
+   "share_C": 0.094,
+   "share_R": 0.204,
+   "share_H": 0.109,
+   "agree_CR": 0.828,
+   "kappa_CR": 0.336
+  },
+  "SOLICITANT": {
+   "share_C": 0.16,
+   "share_R": 0.144,
+   "share_H": 0.113,
+   "agree_CR": 0.887,
+   "kappa_CR": 0.562
+  },
+  "SEMN": {
+   "share_C": 0.039,
+   "share_R": 0.127,
+   "share_H": 0.048,
+   "agree_CR": 0.905,
+   "kappa_CR": 0.389
+  },
+  "CERERE": {
+   "share_C": 0.253,
+   "share_R": 0.38,
+   "share_H": 0.207,
+   "agree_CR": 0.679,
+   "kappa_CR": 0.272
+  },
+  "BEN_REAL": {
+   "share_C": 0.031,
+   "share_R": 0.046,
+   "share_H": 0.036,
+   "agree_CR": 0.985,
+   "kappa_CR": 0.796
+  },
+  "CAPITAL": {
+   "share_C": 0.083,
+   "share_R": 0.122,
+   "share_H": 0.085,
+   "agree_CR": 0.953,
+   "kappa_CR": 0.743
+  },
+  "INSTIT": {
+   "share_C": 0.1,
+   "share_R": 0.101,
+   "share_H": 0.095,
+   "agree_CR": 0.966,
+   "kappa_CR": 0.811
+  },
+  "DENUM": {
+   "share_C": 0.013,
+   "share_R": 0.045,
+   "share_H": 0.025,
+   "agree_CR": 0.963,
+   "kappa_CR": 0.361
+  },
+  "TARIF": {
+   "share_C": 0.016,
+   "share_R": 0.028,
+   "share_H": 0.017,
+   "agree_CR": 0.982,
+   "kappa_CR": 0.592
+  },
+  "NESPEC": {
+   "share_C": 0.045,
+   "share_R": 0.035,
+   "share_H": 0.045,
+   "agree_CR": 0.931,
+   "kappa_CR": 0.101
+  }
+ },
+ "exact_set_agreement_C_vs_R": 0.254,
+ "segment_C_in_R": 0.834,
+ "segment_C_eq_firstR": 0.666
+}

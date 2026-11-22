@@ -1,0 +1,459 @@
+<svg class="fig" xmlns:xlink="http://www.w3.org/1999/xlink"   viewBox="0 0 470.551181 151.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-22T23:30:13.051204</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.8.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 151.2 
+L 470.551181 151.2 
+L 470.551181 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 21.302 126.75 
+L 154.186394 126.75 
+L 154.186394 26.52 
+L 21.302 26.52 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m63b0fde405" d="M 0 0 
+L 0 2.5 
+" style="stroke: #46505c; stroke-width: 0.5"/>
+      </defs>
+      <g>
+       <use xlink:href="#m63b0fde405" x="48.775166" y="126.75" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #46505c; font: 5.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(29.111807 136.901531)">pe zi cu decizii,</text>
+      <text style="fill: #46505c; font: 5.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(35.55751 143.120944)">finale largi</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m63b0fde405" x="126.713227" y="126.75" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #46505c; font: 5.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(106.887649 136.901531)">pe zi lucrătoare</text>
+      <text style="fill: #46505c; font: 5.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(109.628602 143.036119)">legală, stricte</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_3">
+      <path d="M 21.302 126.75 
+L 154.186394 126.75 
+" clip-path="url(#pc26ff52ba4)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_3">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="17.802" y="129.255234" transform="rotate(-0 17.802 129.255234)">0.0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_5">
+      <path d="M 21.302 109.280719 
+L 154.186394 109.280719 
+" clip-path="url(#pc26ff52ba4)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_4">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="17.802" y="111.785953" transform="rotate(-0 17.802 111.785953)">0.2</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_7">
+      <path d="M 21.302 91.811438 
+L 154.186394 91.811438 
+" clip-path="url(#pc26ff52ba4)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_5">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="17.802" y="94.316672" transform="rotate(-0 17.802 94.316672)">0.4</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_9">
+      <path d="M 21.302 74.342157 
+L 154.186394 74.342157 
+" clip-path="url(#pc26ff52ba4)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_6">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="17.802" y="76.847391" transform="rotate(-0 17.802 76.847391)">0.6</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_11">
+      <path d="M 21.302 56.872876 
+L 154.186394 56.872876 
+" clip-path="url(#pc26ff52ba4)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_7">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="17.802" y="59.37811" transform="rotate(-0 17.802 59.37811)">0.8</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_13">
+      <path d="M 21.302 39.403595 
+L 154.186394 39.403595 
+" clip-path="url(#pc26ff52ba4)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14"/>
+     <g id="text_8">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="17.802" y="41.908829" transform="rotate(-0 17.802 41.908829)">1.0</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 27.3422 126.75 
+L 70.208133 126.75 
+L 70.208133 46.566 
+L 27.3422 46.566 
+z
+" clip-path="url(#pc26ff52ba4)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 105.280261 126.75 
+L 148.146194 126.75 
+L 148.146194 48.138235 
+L 105.280261 48.138235 
+z
+" clip-path="url(#pc26ff52ba4)" style="fill: #14324d"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 21.302 126.75 
+L 21.302 26.52 
+" style="fill: none; stroke: #c2beb4; stroke-width: 0.55; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 21.302 126.75 
+L 154.186394 126.75 
+" style="fill: none; stroke: #14324d; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_9">
+    <text style="fill: #1b2128; font: 6.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="48.775166" y="44.96232" transform="rotate(-0 48.775166 44.96232)">0,918</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #1b2128; font: 6.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="126.713227" y="46.566" transform="rotate(-0 126.713227 46.566)">0,900</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #1b2128; font: 6.6px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(21.302 13.039519)">August față de iun.–iul.</text>
+    <text style="fill: #1b2128; font: 6.6px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(21.302 20.52)">(raport)</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_7">
+    <path d="M 175.488394 126.75 
+L 308.372787 126.75 
+L 308.372787 26.52 
+L 175.488394 26.52 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_3">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m63b0fde405" x="202.96156" y="126.75" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="fill: #46505c; font: 5.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(187.807248 136.901531)">mediana pe</text>
+      <text style="fill: #46505c; font: 5.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(195.060873 143.036119)">județe</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m63b0fde405" x="280.899621" y="126.75" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="fill: #46505c; font: 5.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(262.52359 136.901531)">toate deciziile,</text>
+      <text style="fill: #46505c; font: 5.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(270.741918 143.036119)">național</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_7">
+     <g id="line2d_17">
+      <path d="M 175.488394 126.75 
+L 308.372787 126.75 
+" clip-path="url(#p2415d131f0)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18"/>
+     <g id="text_14">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="171.988394" y="129.255234" transform="rotate(-0 171.988394 129.255234)">0</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_19">
+      <path d="M 175.488394 107.475 
+L 308.372787 107.475 
+" clip-path="url(#p2415d131f0)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20"/>
+     <g id="text_15">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="171.988394" y="109.980234" transform="rotate(-0 171.988394 109.980234)">5</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_21">
+      <path d="M 175.488394 88.2 
+L 308.372787 88.2 
+" clip-path="url(#p2415d131f0)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22"/>
+     <g id="text_16">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="171.988394" y="90.705234" transform="rotate(-0 171.988394 90.705234)">10</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_23">
+      <path d="M 175.488394 68.925 
+L 308.372787 68.925 
+" clip-path="url(#p2415d131f0)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_24"/>
+     <g id="text_17">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="171.988394" y="71.430234" transform="rotate(-0 171.988394 71.430234)">15</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_25">
+      <path d="M 175.488394 49.65 
+L 308.372787 49.65 
+" clip-path="url(#p2415d131f0)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_26"/>
+     <g id="text_18">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="171.988394" y="52.155234" transform="rotate(-0 171.988394 52.155234)">20</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_27">
+      <path d="M 175.488394 30.375 
+L 308.372787 30.375 
+" clip-path="url(#p2415d131f0)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_28"/>
+     <g id="text_19">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="171.988394" y="32.880234" transform="rotate(-0 171.988394 32.880234)">25</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_8">
+    <path d="M 181.528593 126.75 
+L 224.394527 126.75 
+L 224.394527 74.90025 
+L 181.528593 74.90025 
+z
+" clip-path="url(#p2415d131f0)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 259.466654 126.75 
+L 302.332588 126.75 
+L 302.332588 46.566 
+L 259.466654 46.566 
+z
+" clip-path="url(#p2415d131f0)" style="fill: #14324d"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 175.488394 126.75 
+L 175.488394 26.52 
+" style="fill: none; stroke: #c2beb4; stroke-width: 0.55; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 175.488394 126.75 
+L 308.372787 126.75 
+" style="fill: none; stroke: #14324d; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_20">
+    <text style="fill: #1b2128; font: 6.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="202.96156" y="73.863255" transform="rotate(-0 202.96156 73.863255)">13,4</text>
+   </g>
+   <g id="text_21">
+    <text style="fill: #1b2128; font: 6.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="280.899621" y="44.96232" transform="rotate(-0 280.899621 44.96232)">20,8</text>
+   </g>
+   <g id="text_22">
+    <text style="fill: #1b2128; font: 6.6px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(175.488394 13.442738)">Ponderea ≤2 zile înainte</text>
+    <text style="fill: #1b2128; font: 6.6px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(175.488394 20.52)">de 27 aprilie (%)</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_12">
+    <path d="M 329.674787 126.75 
+L 462.559181 126.75 
+L 462.559181 26.52 
+L 329.674787 26.52 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_5">
+    <g id="xtick_5">
+     <g id="line2d_29">
+      <g>
+       <use xlink:href="#m63b0fde405" x="357.147954" y="126.75" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <text style="fill: #46505c; font: 5.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(341.993641 136.901531)">mediana pe</text>
+      <text style="fill: #46505c; font: 5.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(349.247266 143.036119)">județe</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#m63b0fde405" x="435.086015" y="126.75" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_24">
+      <text style="fill: #46505c; font: 5.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(416.709983 136.901531)">toate deciziile,</text>
+      <text style="fill: #46505c; font: 5.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(424.928312 143.036119)">național</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_6">
+    <g id="ytick_13">
+     <g id="line2d_31">
+      <path d="M 329.674787 126.75 
+L 462.559181 126.75 
+" clip-path="url(#p90001fd584)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_32"/>
+     <g id="text_25">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="326.174787" y="129.255234" transform="rotate(-0 326.174787 129.255234)">0.00</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_33">
+      <path d="M 329.674787 109.761864 
+L 462.559181 109.761864 
+" clip-path="url(#p90001fd584)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_34"/>
+     <g id="text_26">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="326.174787" y="112.267099" transform="rotate(-0 326.174787 112.267099)">0.25</text>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_35">
+      <path d="M 329.674787 92.773729 
+L 462.559181 92.773729 
+" clip-path="url(#p90001fd584)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_36"/>
+     <g id="text_27">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="326.174787" y="95.278963" transform="rotate(-0 326.174787 95.278963)">0.50</text>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_37">
+      <path d="M 329.674787 75.785593 
+L 462.559181 75.785593 
+" clip-path="url(#p90001fd584)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_38"/>
+     <g id="text_28">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="326.174787" y="78.290828" transform="rotate(-0 326.174787 78.290828)">0.75</text>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_39">
+      <path d="M 329.674787 58.797458 
+L 462.559181 58.797458 
+" clip-path="url(#p90001fd584)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_40"/>
+     <g id="text_29">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="326.174787" y="61.302692" transform="rotate(-0 326.174787 61.302692)">1.00</text>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_41">
+      <path d="M 329.674787 41.809322 
+L 462.559181 41.809322 
+" clip-path="url(#p90001fd584)" style="fill: none; stroke: #e6e3dc; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_42"/>
+     <g id="text_30">
+      <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: end" x="326.174787" y="44.314556" transform="rotate(-0 326.174787 44.314556)">1.25</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_13">
+    <path d="M 335.714987 126.75 
+L 378.580921 126.75 
+L 378.580921 61.515559 
+L 335.714987 61.515559 
+z
+" clip-path="url(#p90001fd584)" style="fill: #dce6f0"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 413.653048 126.75 
+L 456.518981 126.75 
+L 456.518981 46.566 
+L 413.653048 46.566 
+z
+" clip-path="url(#p90001fd584)" style="fill: #14324d"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 329.674787 126.75 
+L 329.674787 26.52 
+" style="fill: none; stroke: #c2beb4; stroke-width: 0.55; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 329.674787 126.75 
+L 462.559181 126.75 
+" style="fill: none; stroke: #14324d; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_31">
+    <text style="fill: #1b2128; font: 6.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="357.147954" y="60.210871" transform="rotate(-0 357.147954 60.210871)">0,96</text>
+   </g>
+   <g id="text_32">
+    <text style="fill: #1b2128; font: 6.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="435.086015" y="44.96232" transform="rotate(-0 435.086015 44.96232)">1,18</text>
+   </g>
+   <g id="text_33">
+    <text style="fill: #1b2128; font: 6.6px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(329.674787 13.442738)">Ponderea ≤2 zile după</text>
+    <text style="fill: #1b2128; font: 6.6px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(329.674787 20.52)">27 aprilie (%)</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pc26ff52ba4">
+   <rect x="21.302" y="26.52" width="132.884394" height="100.23"/>
+  </clipPath>
+  <clipPath id="p2415d131f0">
+   <rect x="175.488394" y="26.52" width="132.884394" height="100.23"/>
+  </clipPath>
+  <clipPath id="p90001fd584">
+   <rect x="329.674787" y="26.52" width="132.884394" height="100.23"/>
+  </clipPath>
+ </defs>
+</svg>

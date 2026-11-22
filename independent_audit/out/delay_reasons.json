@@ -1,0 +1,1034 @@
+{
+ "_meta": "Why ONRC files are postponed: reasons from BERC postponement notices. Aggregates only; no identifiers. Built by independent_audit/delay_reasons/07_results.py. AI-assisted analysis (see README).",
+ "findings": [
+  {
+   "id": "DR.coverage",
+   "value": {
+    "parsed": 2914,
+    "archive_postponements_window": 23308,
+    "share": 0.125,
+    "share_on_parsed_days": 0.162,
+    "decision_days": 17,
+    "bulletins": 289,
+    "county_coverage_min_max": [
+     0.087,
+     0.174
+    ],
+    "jtype_parsed": {
+     "J": 0.635,
+     "nan": 0.22,
+     "F": 0.14,
+     "C": 0.004
+    },
+    "jtype_archive": {
+     "J": 0.636,
+     "nan": 0.2,
+     "F": 0.159,
+     "C": 0.004
+    }
+   },
+   "ci95": null,
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Postponement notices (\"Comunicare încheiere de amânare ... Motivul amânării\") parsed with PyMuPDF from all 545 bulletins; deduplicated on request nr + decision day; 100% linked to AUTO_AMANARI in the archive.",
+   "caveat": "The archive itself misses some postponements on a few days (see missing_postponements_sensitivity.json); denominators are archive counts."
+  },
+  {
+   "id": "DR.ground.G_conditii_legale",
+   "value": 0.5594,
+   "ci95": [
+    0.5419,
+    0.5769
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Standard ground printed by the registrar software before the free text; ratio estimator, CI clustered by bulletin.",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%)."
+  },
+  {
+   "id": "DR.ground.G_incompleta",
+   "value": 0.3188,
+   "ci95": [
+    0.3036,
+    0.334
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Standard ground printed by the registrar software before the free text; ratio estimator, CI clustered by bulletin.",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%)."
+  },
+  {
+   "id": "DR.ground.G_neconcordante",
+   "value": 0.1026,
+   "ci95": [
+    0.0917,
+    0.1135
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Standard ground printed by the registrar software before the free text; ratio estimator, CI clustered by bulletin.",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%)."
+  },
+  {
+   "id": "DR.ground.G_forma",
+   "value": 0.058,
+   "ci95": [
+    0.0492,
+    0.0668
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Standard ground printed by the registrar software before the free text; ratio estimator, CI clustered by bulletin.",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%)."
+  },
+  {
+   "id": "DR.category.CAEN",
+   "value": 0.3167,
+   "ci95": [
+    0.2999,
+    0.3336
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Share of postponements citing the category (any-of). Final label = hybrid of HDBSCAN clusters on local multilingual-e5-small embeddings and a separate keyword classifier (written after reading the clusters). Label: Obiect de activitate / coduri CAEN și declarația de autorizare a activităților; avoidable at filing: parțial. Raked (county x week) 0.3251; mention share 0.2427; cluster-only 0.3174; rules-only 0.4111; precision/recall-adjusted 0.3894; same 100-entry sample predicted vs manual share [0.26, 0.32].",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%)."
+  },
+  {
+   "id": "DR.category.SEDIU",
+   "value": 0.2193,
+   "ci95": [
+    0.2043,
+    0.2342
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Share of postponements citing the category (any-of). Final label = hybrid of HDBSCAN clusters on local multilingual-e5-small embeddings and a separate keyword classifier (written after reading the clusters). Label: Sediu: dovada folosinței, valabilitate, acordul vecinilor/asociației, adresă; avoidable at filing: parțial. Raked (county x week) 0.219; mention share 0.144; cluster-only 0.2045; rules-only 0.3068; precision/recall-adjusted 0.2193; same 100-entry sample predicted vs manual share [0.14, 0.14].",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%)."
+  },
+  {
+   "id": "DR.category.ACT",
+   "value": 0.1767,
+   "ci95": [
+    0.1627,
+    0.1908
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Share of postponements citing the category (any-of). Final label = hybrid of HDBSCAN clusters on local multilingual-e5-small embeddings and a separate keyword classifier (written after reading the clusters). Label: Act constitutiv, hotărâri/decizii, act modificator, mandat administrator; avoidable at filing: parțial. Raked (county x week) 0.1754; mention share 0.1276; cluster-only 0.1537; rules-only 0.372; precision/recall-adjusted 0.1612; same 100-entry sample predicted vs manual share [0.23, 0.21].",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%)."
+  },
+  {
+   "id": "DR.category.ASOC_ID",
+   "value": 0.1095,
+   "ci95": [
+    0.098,
+    0.121
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Share of postponements citing the category (any-of). Final label = hybrid of HDBSCAN clusters on local multilingual-e5-small embeddings and a separate keyword classifier (written after reading the clusters). Label: Date de identificare asociați/administratori (neconcordanțe cu registrul); avoidable at filing: da. Raked (county x week) 0.1111; mention share 0.0668; cluster-only 0.0937; rules-only 0.2042; precision/recall-adjusted 0.1233; same 100-entry sample predicted vs manual share [0.16, 0.18].",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%)."
+  },
+  {
+   "id": "DR.category.SOLICITANT",
+   "value": 0.1132,
+   "ci95": [
+    0.1019,
+    0.1246
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Share of postponements citing the category (any-of). Final label = hybrid of HDBSCAN clusters on local multilingual-e5-small embeddings and a separate keyword classifier (written after reading the clusters). Label: Solicitant/deponent: identitate, împuternicire, calitatea semnatarului; avoidable at filing: da. Raked (county x week) 0.1124; mention share 0.0785; cluster-only 0.1599; rules-only 0.1438; precision/recall-adjusted 0.1132; same 100-entry sample predicted vs manual share [0.11, 0.11].",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%)."
+  },
+  {
+   "id": "DR.category.SEMN",
+   "value": 0.048,
+   "ci95": [
+    0.0404,
+    0.0557
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Share of postponements citing the category (any-of). Final label = hybrid of HDBSCAN clusters on local multilingual-e5-small embeddings and a separate keyword classifier (written after reading the clusters). Label: Semnătură (electronică/olografă) și forma înscrisurilor; avoidable at filing: da. Raked (county x week) 0.0482; mention share 0.0283; cluster-only 0.0388; rules-only 0.1273; precision/recall-adjusted 0.0576; same 100-entry sample predicted vs manual share [0.05, 0.06].",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%)."
+  },
+  {
+   "id": "DR.category.CERERE",
+   "value": 0.2073,
+   "ci95": [
+    0.192,
+    0.2226
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Share of postponements citing the category (any-of). Final label = hybrid of HDBSCAN clusters on local multilingual-e5-small embeddings and a separate keyword classifier (written after reading the clusters). Label: Cererea de înregistrare, anexa fiscală, formulare completate greșit; avoidable at filing: da. Raked (county x week) 0.205; mention share 0.1385; cluster-only 0.2529; rules-only 0.3795; precision/recall-adjusted 0.1309; same 100-entry sample predicted vs manual share [0.19, 0.12].",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%)."
+  },
+  {
+   "id": "DR.category.BEN_REAL",
+   "value": 0.0364,
+   "ci95": [
+    0.0293,
+    0.0435
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Share of postponements citing the category (any-of). Final label = hybrid of HDBSCAN clusters on local multilingual-e5-small embeddings and a separate keyword classifier (written after reading the clusters). Label: Declarația privind beneficiarii reali; avoidable at filing: da. Raked (county x week) 0.0374; mention share 0.0226; cluster-only 0.0309; rules-only 0.046; precision/recall-adjusted 0.0273; same 100-entry sample predicted vs manual share [0.04, 0.03].",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%)."
+  },
+  {
+   "id": "DR.category.CAPITAL",
+   "value": 0.0851,
+   "ci95": [
+    0.0749,
+    0.0953
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Share of postponements citing the category (any-of). Final label = hybrid of HDBSCAN clusters on local multilingual-e5-small embeddings and a separate keyword classifier (written after reading the clusters). Label: Capital social: vărsăminte, părți sociale, aport; avoidable at filing: parțial. Raked (county x week) 0.0871; mention share 0.0577; cluster-only 0.0827; rules-only 0.1218; precision/recall-adjusted 0.0922; same 100-entry sample predicted vs manual share [0.12, 0.13].",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%)."
+  },
+  {
+   "id": "DR.category.INSTIT",
+   "value": 0.0954,
+   "ci95": [
+    0.0846,
+    0.1062
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Share of postponements citing the category (any-of). Final label = hybrid of HDBSCAN clusters on local multilingual-e5-small embeddings and a separate keyword classifier (written after reading the clusters). Label: Avize/atestări ale altor instituții (cazier fiscal, ANAF, autorizații profesionale); avoidable at filing: parțial. Raked (county x week) 0.091; mention share 0.0684; cluster-only 0.0995; rules-only 0.1005; precision/recall-adjusted 0.15; same 100-entry sample predicted vs manual share [0.07, 0.11].",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%)."
+  },
+  {
+   "id": "DR.category.DENUM",
+   "value": 0.0247,
+   "ci95": [
+    0.0193,
+    0.0301
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Share of postponements citing the category (any-of). Final label = hybrid of HDBSCAN clusters on local multilingual-e5-small embeddings and a separate keyword classifier (written after reading the clusters). Label: Denumire: rezervare, formă legală a denumirii; avoidable at filing: da. Raked (county x week) 0.0231; mention share 0.0157; cluster-only 0.0134; rules-only 0.0453; precision/recall-adjusted None; same 100-entry sample predicted vs manual share None.",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%)."
+  },
+  {
+   "id": "DR.category.TARIF",
+   "value": 0.0172,
+   "ci95": [
+    0.0119,
+    0.0224
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Share of postponements citing the category (any-of). Final label = hybrid of HDBSCAN clusters on local multilingual-e5-small embeddings and a separate keyword classifier (written after reading the clusters). Label: Tarife: contor de caractere / tarif de publicare; avoidable at filing: da. Raked (county x week) 0.0165; mention share 0.0093; cluster-only 0.0165; rules-only 0.0281; precision/recall-adjusted 0.0344; same 100-entry sample predicted vs manual share [0.01, 0.02].",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%)."
+  },
+  {
+   "id": "DR.category.NESPEC",
+   "value": 0.0453,
+   "ci95": [
+    0.0382,
+    0.0524
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Share of postponements citing the category (any-of). Final label = hybrid of HDBSCAN clusters on local multilingual-e5-small embeddings and a separate keyword classifier (written after reading the clusters). Label: Neclasificat (nicio categorie găsită de clasificator; manual 0/100 fără motiv concret); avoidable at filing: n/a. Raked (county x week) 0.0469; mention share None; cluster-only 0.0453; rules-only 0.035; precision/recall-adjusted None; same 100-entry sample predicted vs manual share [0.0, 0.0].",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%)."
+  },
+  {
+   "id": "DR.avoidable.strict",
+   "value": 0.2289,
+   "ci95": [
+    0.2146,
+    0.2432
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Share of postponements where all cited categories avoidable (headline); flags per category in taxonomy.csv. Raked: 0.2235. Manual sample: strict 0.27, any 0.47.",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%). \"Avoidable\" is an assessment of the auditor (AI-assisted), not an ONRC classification."
+  },
+  {
+   "id": "DR.avoidable.any",
+   "value": 0.4506,
+   "ci95": [
+    0.4328,
+    0.4684
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Share of postponements where at least one avoidable category (upper bound); flags per category in taxonomy.csv. Raked: 0.4467. Manual sample: strict 0.27, any 0.47.",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%). \"Avoidable\" is an assessment of the auditor (AI-assisted), not an ONRC classification."
+  },
+  {
+   "id": "DR.avoidable.da_or_partial_all",
+   "value": 0.9547,
+   "ci95": [
+    0.9476,
+    0.9618
+   ],
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Share of postponements where all cited categories avoidable or partly avoidable; flags per category in taxonomy.csv. Raked: 0.9531. Manual sample: strict 0.27, any 0.47.",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%). \"Avoidable\" is an assessment of the auditor (AI-assisted), not an ONRC classification."
+  },
+  {
+   "id": "DR.weekly.2026-10-19/2026-10-25",
+   "value": {
+    "CAEN": 0.3885,
+    "SEDIU": 0.2231,
+    "ACT": 0.1538,
+    "ASOC_ID": 0.1231,
+    "SOLICITANT": 0.1077,
+    "SEMN": 0.05,
+    "CERERE": 0.1885,
+    "BEN_REAL": 0.0423,
+    "CAPITAL": 0.1077,
+    "INSTIT": 0.05,
+    "DENUM": 0.0154,
+    "TARIF": 0.0115,
+    "NESPEC": 0.0577,
+    "avoidable_strict": 0.1885
+   },
+   "ci95": {
+    "CAEN": [
+     0.3238,
+     0.4531
+    ],
+    "SEDIU": [
+     0.1587,
+     0.2875
+    ],
+    "ACT": [
+     0.117,
+     0.1907
+    ],
+    "ASOC_ID": [
+     0.0722,
+     0.1739
+    ],
+    "SOLICITANT": [
+     0.0691,
+     0.1463
+    ],
+    "SEMN": [
+     0.0249,
+     0.0751
+    ],
+    "CERERE": [
+     0.1415,
+     0.2354
+    ],
+    "BEN_REAL": [
+     0.0169,
+     0.0677
+    ],
+    "CAPITAL": [
+     0.0602,
+     0.1552
+    ],
+    "INSTIT": [
+     0.023,
+     0.077
+    ],
+    "DENUM": [
+     0.0014,
+     0.0294
+    ],
+    "TARIF": [
+     0.0,
+     0.0244
+    ],
+    "NESPEC": [
+     0.0287,
+     0.0867
+    ],
+    "avoidable_strict": [
+     0.1448,
+     0.2321
+    ]
+   },
+   "n": 260,
+   "window": "week 2026-10-19/2026-10-25, decision days 19.10,20.10",
+   "method": "Any-of category shares per decision week.",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%). Week of 19-25 Oct is effectively one decision day (20 Oct); bulletin-clustered CIs understate day-to-day variance; no trend is claimed."
+  },
+  {
+   "id": "DR.weekly.2026-10-26/2026-11-01",
+   "value": {
+    "CAEN": 0.3288,
+    "SEDIU": 0.2106,
+    "ACT": 0.1652,
+    "ASOC_ID": 0.1152,
+    "SOLICITANT": 0.1091,
+    "SEMN": 0.0348,
+    "CERERE": 0.2167,
+    "BEN_REAL": 0.0258,
+    "CAPITAL": 0.0864,
+    "INSTIT": 0.0894,
+    "DENUM": 0.0227,
+    "TARIF": 0.0242,
+    "NESPEC": 0.0455,
+    "avoidable_strict": 0.2242
+   },
+   "ci95": {
+    "CAEN": [
+     0.2984,
+     0.3592
+    ],
+    "SEDIU": [
+     0.1774,
+     0.2439
+    ],
+    "ACT": [
+     0.137,
+     0.1933
+    ],
+    "ASOC_ID": [
+     0.0926,
+     0.1377
+    ],
+    "SOLICITANT": [
+     0.0859,
+     0.1323
+    ],
+    "SEMN": [
+     0.022,
+     0.0477
+    ],
+    "CERERE": [
+     0.1839,
+     0.2494
+    ],
+    "BEN_REAL": [
+     0.0138,
+     0.0377
+    ],
+    "CAPITAL": [
+     0.0652,
+     0.1075
+    ],
+    "INSTIT": [
+     0.0706,
+     0.1082
+    ],
+    "DENUM": [
+     0.0124,
+     0.0331
+    ],
+    "TARIF": [
+     0.0082,
+     0.0402
+    ],
+    "NESPEC": [
+     0.0296,
+     0.0614
+    ],
+    "avoidable_strict": [
+     0.1963,
+     0.2522
+    ]
+   },
+   "n": 660,
+   "window": "week 2026-10-26/2026-11-01, decision days 26.10,27.10,28.10,30.10",
+   "method": "Any-of category shares per decision week.",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%). Week of 19-25 Oct is effectively one decision day (20 Oct); bulletin-clustered CIs understate day-to-day variance; no trend is claimed."
+  },
+  {
+   "id": "DR.weekly.2026-11-02/2026-11-08",
+   "value": {
+    "CAEN": 0.325,
+    "SEDIU": 0.2103,
+    "ACT": 0.1816,
+    "ASOC_ID": 0.0956,
+    "SOLICITANT": 0.1128,
+    "SEMN": 0.0402,
+    "CERERE": 0.2027,
+    "BEN_REAL": 0.0363,
+    "CAPITAL": 0.0899,
+    "INSTIT": 0.1109,
+    "DENUM": 0.0306,
+    "TARIF": 0.0191,
+    "NESPEC": 0.0497,
+    "avoidable_strict": 0.218
+   },
+   "ci95": {
+    "CAEN": [
+     0.2823,
+     0.3678
+    ],
+    "SEDIU": [
+     0.1792,
+     0.2415
+    ],
+    "ACT": [
+     0.1463,
+     0.217
+    ],
+    "ASOC_ID": [
+     0.0736,
+     0.1176
+    ],
+    "SOLICITANT": [
+     0.0879,
+     0.1377
+    ],
+    "SEMN": [
+     0.0236,
+     0.0567
+    ],
+    "CERERE": [
+     0.1631,
+     0.2422
+    ],
+    "BEN_REAL": [
+     0.0195,
+     0.0531
+    ],
+    "CAPITAL": [
+     0.0686,
+     0.1111
+    ],
+    "INSTIT": [
+     0.0823,
+     0.1395
+    ],
+    "DENUM": [
+     0.0173,
+     0.0439
+    ],
+    "TARIF": [
+     0.0076,
+     0.0306
+    ],
+    "NESPEC": [
+     0.0328,
+     0.0667
+    ],
+    "avoidable_strict": [
+     0.1843,
+     0.2516
+    ]
+   },
+   "n": 523,
+   "window": "week 2026-11-02/2026-11-08, decision days 02.11,04.11,05.11",
+   "method": "Any-of category shares per decision week.",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%). Week of 19-25 Oct is effectively one decision day (20 Oct); bulletin-clustered CIs understate day-to-day variance; no trend is claimed."
+  },
+  {
+   "id": "DR.weekly.2026-11-09/2026-11-15",
+   "value": {
+    "CAEN": 0.2933,
+    "SEDIU": 0.2279,
+    "ACT": 0.1887,
+    "ASOC_ID": 0.1058,
+    "SOLICITANT": 0.1025,
+    "SEMN": 0.0632,
+    "CERERE": 0.2007,
+    "BEN_REAL": 0.0469,
+    "CAPITAL": 0.0763,
+    "INSTIT": 0.1156,
+    "DENUM": 0.0229,
+    "TARIF": 0.0131,
+    "NESPEC": 0.0403,
+    "avoidable_strict": 0.2279
+   },
+   "ci95": {
+    "CAEN": [
+     0.2638,
+     0.3229
+    ],
+    "SEDIU": [
+     0.2,
+     0.2558
+    ],
+    "ACT": [
+     0.1611,
+     0.2162
+    ],
+    "ASOC_ID": [
+     0.0857,
+     0.1258
+    ],
+    "SOLICITANT": [
+     0.0824,
+     0.1226
+    ],
+    "SEMN": [
+     0.0474,
+     0.0791
+    ],
+    "CERERE": [
+     0.1762,
+     0.2251
+    ],
+    "BEN_REAL": [
+     0.0331,
+     0.0607
+    ],
+    "CAPITAL": [
+     0.0574,
+     0.0953
+    ],
+    "INSTIT": [
+     0.0962,
+     0.135
+    ],
+    "DENUM": [
+     0.0129,
+     0.0329
+    ],
+    "TARIF": [
+     0.0055,
+     0.0207
+    ],
+    "NESPEC": [
+     0.0294,
+     0.0513
+    ],
+    "avoidable_strict": [
+     0.201,
+     0.2549
+    ]
+   },
+   "n": 917,
+   "window": "week 2026-11-09/2026-11-15, decision days 09.11,10.11,11.11,12.11,13.11",
+   "method": "Any-of category shares per decision week.",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%). Week of 19-25 Oct is effectively one decision day (20 Oct); bulletin-clustered CIs understate day-to-day variance; no trend is claimed."
+  },
+  {
+   "id": "DR.weekly.2026-11-16/2026-11-22",
+   "value": {
+    "CAEN": 0.2996,
+    "SEDIU": 0.222,
+    "ACT": 0.1769,
+    "ASOC_ID": 0.1155,
+    "SOLICITANT": 0.139,
+    "SEMN": 0.0451,
+    "CERERE": 0.2202,
+    "BEN_REAL": 0.0289,
+    "CAPITAL": 0.083,
+    "INSTIT": 0.0758,
+    "DENUM": 0.0289,
+    "TARIF": 0.0162,
+    "NESPEC": 0.0433,
+    "avoidable_strict": 0.2653
+   },
+   "ci95": {
+    "CAEN": [
+     0.2623,
+     0.337
+    ],
+    "SEDIU": [
+     0.1938,
+     0.2502
+    ],
+    "ACT": [
+     0.1482,
+     0.2056
+    ],
+    "ASOC_ID": [
+     0.086,
+     0.145
+    ],
+    "SOLICITANT": [
+     0.1105,
+     0.1674
+    ],
+    "SEMN": [
+     0.029,
+     0.0613
+    ],
+    "CERERE": [
+     0.1818,
+     0.2586
+    ],
+    "BEN_REAL": [
+     0.0125,
+     0.0453
+    ],
+    "CAPITAL": [
+     0.0631,
+     0.1029
+    ],
+    "INSTIT": [
+     0.0511,
+     0.1005
+    ],
+    "DENUM": [
+     0.0149,
+     0.0429
+    ],
+    "TARIF": [
+     0.0065,
+     0.026
+    ],
+    "NESPEC": [
+     0.0265,
+     0.0601
+    ],
+    "avoidable_strict": [
+     0.2322,
+     0.2984
+    ]
+   },
+   "n": 554,
+   "window": "week 2026-11-16/2026-11-22, decision days 16.11,17.11,18.11",
+   "method": "Any-of category shares per decision week.",
+   "caveat": "PDFs cover only the bulletins collected (about one in four postponements on covered days, none on other days); CIs reflect sampling among collected bulletins only; one postponement can cite several categories (shares sum to >100%). Week of 19-25 Oct is effectively one decision day (20 Oct); bulletin-clustered CIs understate day-to-day variance; no trend is claimed."
+  },
+  {
+   "id": "DR.wait.CAEN",
+   "value": {
+    "n": 923,
+    "term_granted_median": 16.0,
+    "filing_to_postponement_median": 45.0,
+    "filing_to_postponement_p25_p75": [
+     41.0,
+     54.0
+    ],
+    "resolved_by_archive_end": 0.583,
+    "km_median_filing_to_final": 59.40601851851852,
+    "km_median_postponement_to_final": 16.346539351851852,
+    "admitted_share_of_resolved": 0.632,
+    "repostponed_share": 0.0
+   },
+   "ci95": null,
+   "n": 923,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Term granted = term date - postponement date; filing->postponement from the notice; final decision = first non-postponement decision in the archive for the same request nr + filing date; Kaplan-Meier with censoring at archive end.",
+   "caveat": "Archive ends 2026-11-20 17:21:10; most terms fall after it, so final-decision medians are censored (null = not reached). Filing->postponement median: sample 43.0 d vs archive window 43.0 d."
+  },
+  {
+   "id": "DR.wait.SEDIU",
+   "value": {
+    "n": 639,
+    "term_granted_median": 16.0,
+    "filing_to_postponement_median": 43.0,
+    "filing_to_postponement_p25_p75": [
+     39.0,
+     54.0
+    ],
+    "resolved_by_archive_end": 0.57,
+    "km_median_filing_to_final": 59.36145833333333,
+    "km_median_postponement_to_final": 16.302546296296295,
+    "admitted_share_of_resolved": 0.692,
+    "repostponed_share": 0.002
+   },
+   "ci95": null,
+   "n": 639,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Term granted = term date - postponement date; filing->postponement from the notice; final decision = first non-postponement decision in the archive for the same request nr + filing date; Kaplan-Meier with censoring at archive end.",
+   "caveat": "Archive ends 2026-11-20 17:21:10; most terms fall after it, so final-decision medians are censored (null = not reached). Filing->postponement median: sample 43.0 d vs archive window 43.0 d."
+  },
+  {
+   "id": "DR.wait.ACT",
+   "value": {
+    "n": 515,
+    "term_granted_median": 16.0,
+    "filing_to_postponement_median": 43.0,
+    "filing_to_postponement_p25_p75": [
+     35.0,
+     54.0
+    ],
+    "resolved_by_archive_end": 0.577,
+    "km_median_filing_to_final": 59.35666666666667,
+    "km_median_postponement_to_final": 15.460844907407408,
+    "admitted_share_of_resolved": 0.737,
+    "repostponed_share": 0.002
+   },
+   "ci95": null,
+   "n": 515,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Term granted = term date - postponement date; filing->postponement from the notice; final decision = first non-postponement decision in the archive for the same request nr + filing date; Kaplan-Meier with censoring at archive end.",
+   "caveat": "Archive ends 2026-11-20 17:21:10; most terms fall after it, so final-decision medians are censored (null = not reached). Filing->postponement median: sample 43.0 d vs archive window 43.0 d."
+  },
+  {
+   "id": "DR.wait.ASOC_ID",
+   "value": {
+    "n": 319,
+    "term_granted_median": 16.0,
+    "filing_to_postponement_median": 44.0,
+    "filing_to_postponement_p25_p75": [
+     39.0,
+     54.0
+    ],
+    "resolved_by_archive_end": 0.545,
+    "km_median_filing_to_final": 59.515277777777776,
+    "km_median_postponement_to_final": 16.315752314814816,
+    "admitted_share_of_resolved": 0.701,
+    "repostponed_share": 0.0
+   },
+   "ci95": null,
+   "n": 319,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Term granted = term date - postponement date; filing->postponement from the notice; final decision = first non-postponement decision in the archive for the same request nr + filing date; Kaplan-Meier with censoring at archive end.",
+   "caveat": "Archive ends 2026-11-20 17:21:10; most terms fall after it, so final-decision medians are censored (null = not reached). Filing->postponement median: sample 43.0 d vs archive window 43.0 d."
+  },
+  {
+   "id": "DR.wait.SOLICITANT",
+   "value": {
+    "n": 330,
+    "term_granted_median": 16.0,
+    "filing_to_postponement_median": 48.5,
+    "filing_to_postponement_p25_p75": [
+     42.0,
+     56.0
+    ],
+    "resolved_by_archive_end": 0.515,
+    "km_median_filing_to_final": 63.38950231481481,
+    "km_median_postponement_to_final": 16.363761574074076,
+    "admitted_share_of_resolved": 0.624,
+    "repostponed_share": 0.0
+   },
+   "ci95": null,
+   "n": 330,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Term granted = term date - postponement date; filing->postponement from the notice; final decision = first non-postponement decision in the archive for the same request nr + filing date; Kaplan-Meier with censoring at archive end.",
+   "caveat": "Archive ends 2026-11-20 17:21:10; most terms fall after it, so final-decision medians are censored (null = not reached). Filing->postponement median: sample 43.0 d vs archive window 43.0 d."
+  },
+  {
+   "id": "DR.wait.SEMN",
+   "value": {
+    "n": 140,
+    "term_granted_median": 16.0,
+    "filing_to_postponement_median": 43.0,
+    "filing_to_postponement_p25_p75": [
+     33.0,
+     54.0
+    ],
+    "resolved_by_archive_end": 0.557,
+    "km_median_filing_to_final": 58.47898148148148,
+    "km_median_postponement_to_final": 14.384525462962962,
+    "admitted_share_of_resolved": 0.769,
+    "repostponed_share": 0.0
+   },
+   "ci95": null,
+   "n": 140,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Term granted = term date - postponement date; filing->postponement from the notice; final decision = first non-postponement decision in the archive for the same request nr + filing date; Kaplan-Meier with censoring at archive end.",
+   "caveat": "Archive ends 2026-11-20 17:21:10; most terms fall after it, so final-decision medians are censored (null = not reached). Filing->postponement median: sample 43.0 d vs archive window 43.0 d."
+  },
+  {
+   "id": "DR.wait.CERERE",
+   "value": {
+    "n": 604,
+    "term_granted_median": 16.0,
+    "filing_to_postponement_median": 43.0,
+    "filing_to_postponement_p25_p75": [
+     39.0,
+     54.0
+    ],
+    "resolved_by_archive_end": 0.553,
+    "km_median_filing_to_final": 59.37605324074074,
+    "km_median_postponement_to_final": 16.341608796296295,
+    "admitted_share_of_resolved": 0.632,
+    "repostponed_share": 0.002
+   },
+   "ci95": null,
+   "n": 604,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Term granted = term date - postponement date; filing->postponement from the notice; final decision = first non-postponement decision in the archive for the same request nr + filing date; Kaplan-Meier with censoring at archive end.",
+   "caveat": "Archive ends 2026-11-20 17:21:10; most terms fall after it, so final-decision medians are censored (null = not reached). Filing->postponement median: sample 43.0 d vs archive window 43.0 d."
+  },
+  {
+   "id": "DR.wait.BEN_REAL",
+   "value": {
+    "n": 106,
+    "term_granted_median": 16.0,
+    "filing_to_postponement_median": 43.0,
+    "filing_to_postponement_p25_p75": [
+     39.0,
+     50.0
+    ],
+    "resolved_by_archive_end": 0.538,
+    "km_median_filing_to_final": 59.39482638888889,
+    "km_median_postponement_to_final": 15.36619212962963,
+    "admitted_share_of_resolved": 0.877,
+    "repostponed_share": 0.0
+   },
+   "ci95": null,
+   "n": 106,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Term granted = term date - postponement date; filing->postponement from the notice; final decision = first non-postponement decision in the archive for the same request nr + filing date; Kaplan-Meier with censoring at archive end.",
+   "caveat": "Archive ends 2026-11-20 17:21:10; most terms fall after it, so final-decision medians are censored (null = not reached). Filing->postponement median: sample 43.0 d vs archive window 43.0 d."
+  },
+  {
+   "id": "DR.wait.CAPITAL",
+   "value": {
+    "n": 248,
+    "term_granted_median": 16.0,
+    "filing_to_postponement_median": 43.0,
+    "filing_to_postponement_p25_p75": [
+     39.0,
+     54.0
+    ],
+    "resolved_by_archive_end": 0.621,
+    "km_median_filing_to_final": 57.48719907407408,
+    "km_median_postponement_to_final": 11.563599537037037,
+    "admitted_share_of_resolved": 0.779,
+    "repostponed_share": 0.004
+   },
+   "ci95": null,
+   "n": 248,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Term granted = term date - postponement date; filing->postponement from the notice; final decision = first non-postponement decision in the archive for the same request nr + filing date; Kaplan-Meier with censoring at archive end.",
+   "caveat": "Archive ends 2026-11-20 17:21:10; most terms fall after it, so final-decision medians are censored (null = not reached). Filing->postponement median: sample 43.0 d vs archive window 43.0 d."
+  },
+  {
+   "id": "DR.wait.INSTIT",
+   "value": {
+    "n": 278,
+    "term_granted_median": 16.0,
+    "filing_to_postponement_median": 42.0,
+    "filing_to_postponement_p25_p75": [
+     22.0,
+     49.0
+    ],
+    "resolved_by_archive_end": 0.482,
+    "km_median_filing_to_final": 59.36451388888889,
+    "km_median_postponement_to_final": 16.365104166666665,
+    "admitted_share_of_resolved": 0.59,
+    "repostponed_share": 0.0
+   },
+   "ci95": null,
+   "n": 278,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Term granted = term date - postponement date; filing->postponement from the notice; final decision = first non-postponement decision in the archive for the same request nr + filing date; Kaplan-Meier with censoring at archive end.",
+   "caveat": "Archive ends 2026-11-20 17:21:10; most terms fall after it, so final-decision medians are censored (null = not reached). Filing->postponement median: sample 43.0 d vs archive window 43.0 d."
+  },
+  {
+   "id": "DR.wait.DENUM",
+   "value": {
+    "n": 72,
+    "term_granted_median": 16.0,
+    "filing_to_postponement_median": 43.5,
+    "filing_to_postponement_p25_p75": [
+     36.5,
+     48.0
+    ],
+    "resolved_by_archive_end": 0.556,
+    "km_median_filing_to_final": 58.37586805555556,
+    "km_median_postponement_to_final": 16.320486111111112,
+    "admitted_share_of_resolved": 0.7,
+    "repostponed_share": 0.0
+   },
+   "ci95": null,
+   "n": 72,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Term granted = term date - postponement date; filing->postponement from the notice; final decision = first non-postponement decision in the archive for the same request nr + filing date; Kaplan-Meier with censoring at archive end.",
+   "caveat": "Archive ends 2026-11-20 17:21:10; most terms fall after it, so final-decision medians are censored (null = not reached). Filing->postponement median: sample 43.0 d vs archive window 43.0 d."
+  },
+  {
+   "id": "DR.wait.TARIF",
+   "value": {
+    "n": 50,
+    "term_granted_median": 16.0,
+    "filing_to_postponement_median": 46.5,
+    "filing_to_postponement_p25_p75": [
+     42.0,
+     53.75
+    ],
+    "resolved_by_archive_end": 0.5,
+    "km_median_filing_to_final": 62.902002314814816,
+    "km_median_postponement_to_final": 16.420474537037038,
+    "admitted_share_of_resolved": 0.56,
+    "repostponed_share": 0.0
+   },
+   "ci95": null,
+   "n": 50,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Term granted = term date - postponement date; filing->postponement from the notice; final decision = first non-postponement decision in the archive for the same request nr + filing date; Kaplan-Meier with censoring at archive end.",
+   "caveat": "Archive ends 2026-11-20 17:21:10; most terms fall after it, so final-decision medians are censored (null = not reached). Filing->postponement median: sample 43.0 d vs archive window 43.0 d."
+  },
+  {
+   "id": "DR.wait.NESPEC",
+   "value": {
+    "n": 132,
+    "term_granted_median": 16.0,
+    "filing_to_postponement_median": 46.0,
+    "filing_to_postponement_p25_p75": [
+     39.0,
+     54.0
+    ],
+    "resolved_by_archive_end": 0.629,
+    "km_median_filing_to_final": 59.3615162037037,
+    "km_median_postponement_to_final": 15.3709375,
+    "admitted_share_of_resolved": 0.651,
+    "repostponed_share": 0.0
+   },
+   "ci95": null,
+   "n": 132,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Term granted = term date - postponement date; filing->postponement from the notice; final decision = first non-postponement decision in the archive for the same request nr + filing date; Kaplan-Meier with censoring at archive end.",
+   "caveat": "Archive ends 2026-11-20 17:21:10; most terms fall after it, so final-decision medians are censored (null = not reached). Filing->postponement median: sample 43.0 d vs archive window 43.0 d."
+  },
+  {
+   "id": "DR.wait.ALL",
+   "value": {
+    "n": 2914,
+    "term_granted_median": 16.0,
+    "filing_to_postponement_median": 43.0,
+    "filing_to_postponement_p25_p75": [
+     39.0,
+     54.0
+    ],
+    "resolved_by_archive_end": 0.581,
+    "km_median_filing_to_final": 59.3615162037037,
+    "km_median_postponement_to_final": 16.31773148148148,
+    "admitted_share_of_resolved": 0.698,
+    "repostponed_share": 0.001
+   },
+   "ci95": null,
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Term granted = term date - postponement date; filing->postponement from the notice; final decision = first non-postponement decision in the archive for the same request nr + filing date; Kaplan-Meier with censoring at archive end.",
+   "caveat": "Archive ends 2026-11-20 17:21:10; most terms fall after it, so final-decision medians are censored (null = not reached). Filing->postponement median: sample 43.0 d vs archive window 43.0 d."
+  },
+  {
+   "id": "DR.validation",
+   "value": {
+    "exact_set_accuracy": 0.55,
+    "any_overlap": 0.82,
+    "mean_jaccard": 0.684,
+    "micro_precision": 0.761,
+    "micro_recall": 0.734,
+    "label_level_accuracy": 0.9408,
+    "cluster_only_exact": 0.45,
+    "rules_only_exact": 0.43
+   },
+   "ci95": [
+    0.452,
+    0.644
+   ],
+   "n": 100,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Seeded random sample of 100 postponements labelled from de-identified text before predictions were joined; Wilson CI.",
+   "caveat": "Headline metric is exact-set accuracy (value[\"exact_set_accuracy\"], ci95 Wilson). Label-level accuracy is inflated by true negatives (predicting nothing scores ~0.89). Single reviewer (AI model), no second coder; CERERE is over-assigned (precision ~0.37); 5/100 entries predicted unclassified vs 0/100 manual. Avoidable strict on the same 100: predicted 0.26 vs manual 0.27, agreement 0.89."
+  },
+  {
+   "id": "DR.agreement_cluster_vs_rules",
+   "value": {
+    "CAEN": 0.648,
+    "SEDIU": 0.676,
+    "ACT": 0.391,
+    "ASOC_ID": 0.336,
+    "SOLICITANT": 0.562,
+    "SEMN": 0.389,
+    "CERERE": 0.272,
+    "BEN_REAL": 0.796,
+    "CAPITAL": 0.743,
+    "INSTIT": 0.811,
+    "DENUM": 0.361,
+    "TARIF": 0.592,
+    "NESPEC": 0.101
+   },
+   "ci95": null,
+   "n": 2914,
+   "window": "decisions 19 Oct-18 Nov 2026 (17 decision days with collected BERC bulletins)",
+   "method": "Cohen kappa per category, entry level, cluster-only vs keyword-only classifier.",
+   "caveat": "Both classifiers read the same de-identified text."
+  }
+ ]
+}

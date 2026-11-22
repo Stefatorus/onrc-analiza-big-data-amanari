@@ -1,0 +1,748 @@
+{
+ "cost_lunar": {
+  "columns": [
+   "luna",
+   "zile_exces_inmatriculari",
+   "zile_exces_mentiuni",
+   "economic_prudent_mil",
+   "economic_central_mil",
+   "economic_tensionat_mil",
+   "buget_prudent_mil",
+   "buget_central_mil",
+   "buget_tensionat_mil"
+  ],
+  "rows": [
+   {
+    "luna": "2024-01",
+    "zile_exces_inmatriculari": 10858,
+    "zile_exces_mentiuni": 70569,
+    "economic_prudent_mil": 1.81,
+    "economic_central_mil": 4.03,
+    "economic_tensionat_mil": 10.7,
+    "buget_prudent_mil": 0.06,
+    "buget_central_mil": 0.3,
+    "buget_tensionat_mil": 0.77
+   },
+   {
+    "luna": "2024-02",
+    "zile_exces_inmatriculari": 11973,
+    "zile_exces_mentiuni": 65884,
+    "economic_prudent_mil": 1.87,
+    "economic_central_mil": 4.16,
+    "economic_tensionat_mil": 11.12,
+    "buget_prudent_mil": 0.06,
+    "buget_central_mil": 0.31,
+    "buget_tensionat_mil": 0.8
+   },
+   {
+    "luna": "2024-03",
+    "zile_exces_inmatriculari": 10476,
+    "zile_exces_mentiuni": 60523,
+    "economic_prudent_mil": 1.79,
+    "economic_central_mil": 3.95,
+    "economic_tensionat_mil": 10.6,
+    "buget_prudent_mil": 0.06,
+    "buget_central_mil": 0.27,
+    "buget_tensionat_mil": 0.71
+   },
+   {
+    "luna": "2024-04",
+    "zile_exces_inmatriculari": 10161,
+    "zile_exces_mentiuni": 59597,
+    "economic_prudent_mil": 1.67,
+    "economic_central_mil": 3.71,
+    "economic_tensionat_mil": 9.92,
+    "buget_prudent_mil": 0.05,
+    "buget_central_mil": 0.27,
+    "buget_tensionat_mil": 0.7
+   },
+   {
+    "luna": "2024-05",
+    "zile_exces_inmatriculari": 11199,
+    "zile_exces_mentiuni": 61893,
+    "economic_prudent_mil": 1.52,
+    "economic_central_mil": 3.45,
+    "economic_tensionat_mil": 9.12,
+    "buget_prudent_mil": 0.06,
+    "buget_central_mil": 0.29,
+    "buget_tensionat_mil": 0.75
+   },
+   {
+    "luna": "2024-06",
+    "zile_exces_inmatriculari": 8629,
+    "zile_exces_mentiuni": 49812,
+    "economic_prudent_mil": 1.44,
+    "economic_central_mil": 3.19,
+    "economic_tensionat_mil": 8.53,
+    "buget_prudent_mil": 0.05,
+    "buget_central_mil": 0.23,
+    "buget_tensionat_mil": 0.59
+   },
+   {
+    "luna": "2024-07",
+    "zile_exces_inmatriculari": 7224,
+    "zile_exces_mentiuni": 44055,
+    "economic_prudent_mil": 1.09,
+    "economic_central_mil": 2.45,
+    "economic_tensionat_mil": 6.48,
+    "buget_prudent_mil": 0.04,
+    "buget_central_mil": 0.19,
+    "buget_tensionat_mil": 0.5
+   },
+   {
+    "luna": "2024-08",
+    "zile_exces_inmatriculari": 40239,
+    "zile_exces_mentiuni": 207277,
+    "economic_prudent_mil": 2.09,
+    "economic_central_mil": 5.66,
+    "economic_tensionat_mil": 13.65,
+    "buget_prudent_mil": 0.2,
+    "buget_central_mil": 1.02,
+    "buget_tensionat_mil": 2.64
+   },
+   {
+    "luna": "2024-09",
+    "zile_exces_inmatriculari": 116179,
+    "zile_exces_mentiuni": 560190,
+    "economic_prudent_mil": 4.71,
+    "economic_central_mil": 13.68,
+    "economic_tensionat_mil": 32.29,
+    "buget_prudent_mil": 0.57,
+    "buget_central_mil": 2.88,
+    "buget_tensionat_mil": 7.51
+   },
+   {
+    "luna": "2024-10",
+    "zile_exces_inmatriculari": 122925,
+    "zile_exces_mentiuni": 610955,
+    "economic_prudent_mil": 5.39,
+    "economic_central_mil": 15.32,
+    "economic_tensionat_mil": 36.38,
+    "buget_prudent_mil": 0.61,
+    "buget_central_mil": 3.07,
+    "buget_tensionat_mil": 8.03
+   },
+   {
+    "luna": "2024-11",
+    "zile_exces_inmatriculari": 57614,
+    "zile_exces_mentiuni": 294147,
+    "economic_prudent_mil": 3.09,
+    "economic_central_mil": 8.33,
+    "economic_tensionat_mil": 20.26,
+    "buget_prudent_mil": 0.29,
+    "buget_central_mil": 1.46,
+    "buget_tensionat_mil": 3.81
+   },
+   {
+    "luna": "2024-12",
+    "zile_exces_inmatriculari": 15549,
+    "zile_exces_mentiuni": 92247,
+    "economic_prudent_mil": 1.69,
+    "economic_central_mil": 3.98,
+    "economic_tensionat_mil": 10.27,
+    "buget_prudent_mil": 0.08,
+    "buget_central_mil": 0.41,
+    "buget_tensionat_mil": 1.08
+   },
+   {
+    "luna": "2025-01",
+    "zile_exces_inmatriculari": 13230,
+    "zile_exces_mentiuni": 107924,
+    "economic_prudent_mil": 1.9,
+    "economic_central_mil": 4.37,
+    "economic_tensionat_mil": 11.19,
+    "buget_prudent_mil": 0.08,
+    "buget_central_mil": 0.4,
+    "buget_tensionat_mil": 1.04
+   },
+   {
+    "luna": "2025-02",
+    "zile_exces_inmatriculari": 24754,
+    "zile_exces_mentiuni": 205634,
+    "economic_prudent_mil": 2.78,
+    "economic_central_mil": 6.63,
+    "economic_tensionat_mil": 16.43,
+    "buget_prudent_mil": 0.16,
+    "buget_central_mil": 0.75,
+    "buget_tensionat_mil": 1.96
+   },
+   {
+    "luna": "2025-03",
+    "zile_exces_inmatriculari": 41227,
+    "zile_exces_mentiuni": 342832,
+    "economic_prudent_mil": 3.78,
+    "economic_central_mil": 9.37,
+    "economic_tensionat_mil": 22.56,
+    "buget_prudent_mil": 0.26,
+    "buget_central_mil": 1.26,
+    "buget_tensionat_mil": 3.27
+   },
+   {
+    "luna": "2025-04",
+    "zile_exces_inmatriculari": 39081,
+    "zile_exces_mentiuni": 332051,
+    "economic_prudent_mil": 3.6,
+    "economic_central_mil": 8.94,
+    "economic_tensionat_mil": 21.46,
+    "buget_prudent_mil": 0.25,
+    "buget_central_mil": 1.21,
+    "buget_tensionat_mil": 3.14
+   },
+   {
+    "luna": "2025-05",
+    "zile_exces_inmatriculari": 27450,
+    "zile_exces_mentiuni": 195607,
+    "economic_prudent_mil": 2.8,
+    "economic_central_mil": 6.73,
+    "economic_tensionat_mil": 16.86,
+    "buget_prudent_mil": 0.16,
+    "buget_central_mil": 0.79,
+    "buget_tensionat_mil": 2.05
+   },
+   {
+    "luna": "2025-06",
+    "zile_exces_inmatriculari": 14609,
+    "zile_exces_mentiuni": 95263,
+    "economic_prudent_mil": 2.06,
+    "economic_central_mil": 4.69,
+    "economic_tensionat_mil": 12.28,
+    "buget_prudent_mil": 0.08,
+    "buget_central_mil": 0.4,
+    "buget_tensionat_mil": 1.04
+   },
+   {
+    "luna": "2025-07",
+    "zile_exces_inmatriculari": 14034,
+    "zile_exces_mentiuni": 76264,
+    "economic_prudent_mil": 2.26,
+    "economic_central_mil": 5.02,
+    "economic_tensionat_mil": 13.48,
+    "buget_prudent_mil": 0.07,
+    "buget_central_mil": 0.36,
+    "buget_tensionat_mil": 0.94
+   },
+   {
+    "luna": "2025-08",
+    "zile_exces_inmatriculari": 11523,
+    "zile_exces_mentiuni": 66785,
+    "economic_prudent_mil": 1.84,
+    "economic_central_mil": 4.09,
+    "economic_tensionat_mil": 10.91,
+    "buget_prudent_mil": 0.06,
+    "buget_central_mil": 0.3,
+    "buget_tensionat_mil": 0.79
+   },
+   {
+    "luna": "2025-09",
+    "zile_exces_inmatriculari": 13707,
+    "zile_exces_mentiuni": 74534,
+    "economic_prudent_mil": 2.32,
+    "economic_central_mil": 5.13,
+    "economic_tensionat_mil": 13.8,
+    "buget_prudent_mil": 0.07,
+    "buget_central_mil": 0.35,
+    "buget_tensionat_mil": 0.91
+   },
+   {
+    "luna": "2025-10",
+    "zile_exces_inmatriculari": 12272,
+    "zile_exces_mentiuni": 74540,
+    "economic_prudent_mil": 2.28,
+    "economic_central_mil": 5.0,
+    "economic_tensionat_mil": 13.43,
+    "buget_prudent_mil": 0.07,
+    "buget_central_mil": 0.33,
+    "buget_tensionat_mil": 0.85
+   },
+   {
+    "luna": "2025-11",
+    "zile_exces_inmatriculari": 13036,
+    "zile_exces_mentiuni": 60211,
+    "economic_prudent_mil": 2.04,
+    "economic_central_mil": 4.53,
+    "economic_tensionat_mil": 12.25,
+    "buget_prudent_mil": 0.06,
+    "buget_central_mil": 0.32,
+    "buget_tensionat_mil": 0.82
+   },
+   {
+    "luna": "2025-12",
+    "zile_exces_inmatriculari": 15406,
+    "zile_exces_mentiuni": 97754,
+    "economic_prudent_mil": 2.22,
+    "economic_central_mil": 5.02,
+    "economic_tensionat_mil": 13.19,
+    "buget_prudent_mil": 0.09,
+    "buget_central_mil": 0.42,
+    "buget_tensionat_mil": 1.09
+   },
+   {
+    "luna": "2026-01",
+    "zile_exces_inmatriculari": 19032,
+    "zile_exces_mentiuni": 151722,
+    "economic_prudent_mil": 2.54,
+    "economic_central_mil": 5.88,
+    "economic_tensionat_mil": 14.97,
+    "buget_prudent_mil": 0.12,
+    "buget_central_mil": 0.57,
+    "buget_tensionat_mil": 1.48
+   },
+   {
+    "luna": "2026-02",
+    "zile_exces_inmatriculari": 19502,
+    "zile_exces_mentiuni": 192600,
+    "economic_prudent_mil": 3.08,
+    "economic_central_mil": 7.07,
+    "economic_tensionat_mil": 17.85,
+    "buget_prudent_mil": 0.14,
+    "buget_central_mil": 0.65,
+    "buget_tensionat_mil": 1.67
+   },
+   {
+    "luna": "2026-03",
+    "zile_exces_inmatriculari": 32326,
+    "zile_exces_mentiuni": 275036,
+    "economic_prudent_mil": 3.68,
+    "economic_central_mil": 8.79,
+    "economic_tensionat_mil": 21.75,
+    "buget_prudent_mil": 0.21,
+    "buget_central_mil": 1.0,
+    "buget_tensionat_mil": 2.59
+   },
+   {
+    "luna": "2026-04",
+    "zile_exces_inmatriculari": 39092,
+    "zile_exces_mentiuni": 344358,
+    "economic_prudent_mil": 3.75,
+    "economic_central_mil": 9.28,
+    "economic_tensionat_mil": 22.27,
+    "buget_prudent_mil": 0.26,
+    "buget_central_mil": 1.23,
+    "buget_tensionat_mil": 3.19
+   },
+   {
+    "luna": "2026-05",
+    "zile_exces_inmatriculari": 24663,
+    "zile_exces_mentiuni": 204073,
+    "economic_prudent_mil": 2.93,
+    "economic_central_mil": 6.93,
+    "economic_tensionat_mil": 17.32,
+    "buget_prudent_mil": 0.16,
+    "buget_central_mil": 0.75,
+    "buget_tensionat_mil": 1.96
+   },
+   {
+    "luna": "2026-06",
+    "zile_exces_inmatriculari": 22622,
+    "zile_exces_mentiuni": 195611,
+    "economic_prudent_mil": 2.82,
+    "economic_central_mil": 6.63,
+    "economic_tensionat_mil": 16.55,
+    "buget_prudent_mil": 0.15,
+    "buget_central_mil": 0.7,
+    "buget_tensionat_mil": 1.82
+   },
+   {
+    "luna": "2026-07",
+    "zile_exces_inmatriculari": 29295,
+    "zile_exces_mentiuni": 285499,
+    "economic_prudent_mil": 3.27,
+    "economic_central_mil": 7.92,
+    "economic_tensionat_mil": 19.1,
+    "buget_prudent_mil": 0.2,
+    "buget_central_mil": 0.96,
+    "buget_tensionat_mil": 2.5
+   },
+   {
+    "luna": "2026-08",
+    "zile_exces_inmatriculari": 40141,
+    "zile_exces_mentiuni": 510792,
+    "economic_prudent_mil": 4.33,
+    "economic_central_mil": 10.84,
+    "economic_tensionat_mil": 24.58,
+    "buget_prudent_mil": 0.33,
+    "buget_central_mil": 1.52,
+    "buget_tensionat_mil": 3.94
+   },
+   {
+    "luna": "2026-09",
+    "zile_exces_inmatriculari": 68706,
+    "zile_exces_mentiuni": 1356602,
+    "economic_prudent_mil": 9.08,
+    "economic_central_mil": 23.13,
+    "economic_tensionat_mil": 49.04,
+    "buget_prudent_mil": 0.77,
+    "buget_central_mil": 3.42,
+    "buget_tensionat_mil": 8.9
+   },
+   {
+    "luna": "2026-10",
+    "zile_exces_inmatriculari": 88631,
+    "zile_exces_mentiuni": 2287914,
+    "economic_prudent_mil": 14.37,
+    "economic_central_mil": 37.55,
+    "economic_tensionat_mil": 80.34,
+    "buget_prudent_mil": 1.24,
+    "buget_central_mil": 5.62,
+    "buget_tensionat_mil": 15.29
+   },
+   {
+    "luna": "2026-11",
+    "zile_exces_inmatriculari": 149860,
+    "zile_exces_mentiuni": 2082026,
+    "economic_prudent_mil": 13.38,
+    "economic_central_mil": 36.28,
+    "economic_tensionat_mil": 78.88,
+    "buget_prudent_mil": 1.32,
+    "buget_central_mil": 6.2,
+    "buget_tensionat_mil": 16.6
+   }
+  ],
+  "meta": "Cost REALIZAT al dosarelor decise în lună (zile peste 3 zile calendaristice, dosare admise), cu parametrii scenariului fundamentat; fără expunerea stocului. Noiembrie 2026 este parțial (până la 20.11.2026). Aceiași parametri pentru toți anii: e o măsură comparabilă a întârzierii exprimate în lei, nu o contabilitate."
+ },
+ "cost_lunar_canale": {
+  "columns": [
+   "luna",
+   "canal_A_mil",
+   "canal_B_mil",
+   "canal_C_mil",
+   "canal_D_mil",
+   "economic_central_mil"
+  ],
+  "rows": [
+   {
+    "luna": "2024-01",
+    "canal_A_mil": 0.42,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 0.91,
+    "canal_D_mil": 2.7,
+    "economic_central_mil": 4.03
+   },
+   {
+    "luna": "2024-02",
+    "canal_A_mil": 0.46,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 0.85,
+    "canal_D_mil": 2.85,
+    "economic_central_mil": 4.16
+   },
+   {
+    "luna": "2024-03",
+    "canal_A_mil": 0.41,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 0.78,
+    "canal_D_mil": 2.77,
+    "economic_central_mil": 3.95
+   },
+   {
+    "luna": "2024-04",
+    "canal_A_mil": 0.39,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 0.77,
+    "canal_D_mil": 2.55,
+    "economic_central_mil": 3.71
+   },
+   {
+    "luna": "2024-05",
+    "canal_A_mil": 0.43,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 0.8,
+    "canal_D_mil": 2.21,
+    "economic_central_mil": 3.45
+   },
+   {
+    "luna": "2024-06",
+    "canal_A_mil": 0.33,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 0.64,
+    "canal_D_mil": 2.21,
+    "economic_central_mil": 3.19
+   },
+   {
+    "luna": "2024-07",
+    "canal_A_mil": 0.28,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 0.57,
+    "canal_D_mil": 1.6,
+    "economic_central_mil": 2.45
+   },
+   {
+    "luna": "2024-08",
+    "canal_A_mil": 1.56,
+    "canal_B_mil": 0.01,
+    "canal_C_mil": 2.67,
+    "canal_D_mil": 1.42,
+    "economic_central_mil": 5.66
+   },
+   {
+    "luna": "2024-09",
+    "canal_A_mil": 4.5,
+    "canal_B_mil": 0.07,
+    "canal_C_mil": 7.21,
+    "canal_D_mil": 1.9,
+    "economic_central_mil": 13.68
+   },
+   {
+    "luna": "2024-10",
+    "canal_A_mil": 4.76,
+    "canal_B_mil": 0.08,
+    "canal_C_mil": 7.86,
+    "canal_D_mil": 2.62,
+    "economic_central_mil": 15.32
+   },
+   {
+    "luna": "2024-11",
+    "canal_A_mil": 2.23,
+    "canal_B_mil": 0.04,
+    "canal_C_mil": 3.78,
+    "canal_D_mil": 2.27,
+    "economic_central_mil": 8.33
+   },
+   {
+    "luna": "2024-12",
+    "canal_A_mil": 0.6,
+    "canal_B_mil": 0.01,
+    "canal_C_mil": 1.19,
+    "canal_D_mil": 2.18,
+    "economic_central_mil": 3.98
+   },
+   {
+    "luna": "2025-01",
+    "canal_A_mil": 0.51,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 1.39,
+    "canal_D_mil": 2.47,
+    "economic_central_mil": 4.37
+   },
+   {
+    "luna": "2025-02",
+    "canal_A_mil": 0.96,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 2.65,
+    "canal_D_mil": 3.03,
+    "economic_central_mil": 6.63
+   },
+   {
+    "luna": "2025-03",
+    "canal_A_mil": 1.6,
+    "canal_B_mil": 0.01,
+    "canal_C_mil": 4.41,
+    "canal_D_mil": 3.36,
+    "economic_central_mil": 9.37
+   },
+   {
+    "luna": "2025-04",
+    "canal_A_mil": 1.51,
+    "canal_B_mil": 0.02,
+    "canal_C_mil": 4.27,
+    "canal_D_mil": 3.14,
+    "economic_central_mil": 8.94
+   },
+   {
+    "luna": "2025-05",
+    "canal_A_mil": 1.06,
+    "canal_B_mil": 0.02,
+    "canal_C_mil": 2.52,
+    "canal_D_mil": 3.13,
+    "economic_central_mil": 6.73
+   },
+   {
+    "luna": "2025-06",
+    "canal_A_mil": 0.57,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 1.23,
+    "canal_D_mil": 2.9,
+    "economic_central_mil": 4.69
+   },
+   {
+    "luna": "2025-07",
+    "canal_A_mil": 0.54,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 0.98,
+    "canal_D_mil": 3.5,
+    "economic_central_mil": 5.02
+   },
+   {
+    "luna": "2025-08",
+    "canal_A_mil": 0.45,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 0.86,
+    "canal_D_mil": 2.78,
+    "economic_central_mil": 4.09
+   },
+   {
+    "luna": "2025-09",
+    "canal_A_mil": 0.53,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 0.96,
+    "canal_D_mil": 3.64,
+    "economic_central_mil": 5.13
+   },
+   {
+    "luna": "2025-10",
+    "canal_A_mil": 0.48,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 0.96,
+    "canal_D_mil": 3.57,
+    "economic_central_mil": 5.0
+   },
+   {
+    "luna": "2025-11",
+    "canal_A_mil": 0.5,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 0.77,
+    "canal_D_mil": 3.25,
+    "economic_central_mil": 4.53
+   },
+   {
+    "luna": "2025-12",
+    "canal_A_mil": 0.6,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 1.26,
+    "canal_D_mil": 3.17,
+    "economic_central_mil": 5.02
+   },
+   {
+    "luna": "2026-01",
+    "canal_A_mil": 0.74,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 1.95,
+    "canal_D_mil": 3.19,
+    "economic_central_mil": 5.88
+   },
+   {
+    "luna": "2026-02",
+    "canal_A_mil": 0.76,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 2.48,
+    "canal_D_mil": 3.83,
+    "economic_central_mil": 7.07
+   },
+   {
+    "luna": "2026-03",
+    "canal_A_mil": 1.25,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 3.54,
+    "canal_D_mil": 4.0,
+    "economic_central_mil": 8.79
+   },
+   {
+    "luna": "2026-04",
+    "canal_A_mil": 1.51,
+    "canal_B_mil": 0.02,
+    "canal_C_mil": 4.43,
+    "canal_D_mil": 3.31,
+    "economic_central_mil": 9.28
+   },
+   {
+    "luna": "2026-05",
+    "canal_A_mil": 0.96,
+    "canal_B_mil": 0.01,
+    "canal_C_mil": 2.63,
+    "canal_D_mil": 3.34,
+    "economic_central_mil": 6.93
+   },
+   {
+    "luna": "2026-06",
+    "canal_A_mil": 0.88,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 2.52,
+    "canal_D_mil": 3.24,
+    "economic_central_mil": 6.63
+   },
+   {
+    "luna": "2026-07",
+    "canal_A_mil": 1.13,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 3.67,
+    "canal_D_mil": 3.11,
+    "economic_central_mil": 7.92
+   },
+   {
+    "luna": "2026-08",
+    "canal_A_mil": 1.55,
+    "canal_B_mil": 0.0,
+    "canal_C_mil": 6.57,
+    "canal_D_mil": 2.72,
+    "economic_central_mil": 10.84
+   },
+   {
+    "luna": "2026-09",
+    "canal_A_mil": 2.66,
+    "canal_B_mil": 0.08,
+    "canal_C_mil": 17.45,
+    "canal_D_mil": 2.94,
+    "economic_central_mil": 23.13
+   },
+   {
+    "luna": "2026-10",
+    "canal_A_mil": 3.43,
+    "canal_B_mil": 1.62,
+    "canal_C_mil": 29.44,
+    "canal_D_mil": 3.07,
+    "economic_central_mil": 37.55
+   },
+   {
+    "luna": "2026-11",
+    "canal_A_mil": 5.8,
+    "canal_B_mil": 1.17,
+    "canal_C_mil": 26.79,
+    "canal_D_mil": 2.52,
+    "economic_central_mil": 36.28
+   }
+  ],
+  "meta": "Scenariul central, pe canale: A activitate nouă pierdută, B inactivare după expirarea sediului, C alte modificări blocate, D amânări evitabile."
+ },
+ "cost_anual": {
+  "columns": [
+   "an",
+   "economic_prudent_mil",
+   "economic_central_mil",
+   "economic_tensionat_mil",
+   "buget_prudent_mil",
+   "buget_central_mil",
+   "buget_tensionat_mil"
+  ],
+  "rows": [
+   {
+    "an": "2024",
+    "economic_prudent_mil": 28.1,
+    "economic_central_mil": 71.9,
+    "economic_tensionat_mil": 179.3,
+    "buget_prudent_mil": 2.1,
+    "buget_central_mil": 10.7,
+    "buget_tensionat_mil": 27.9
+   },
+   {
+    "an": "2025",
+    "economic_prudent_mil": 29.9,
+    "economic_central_mil": 69.5,
+    "economic_tensionat_mil": 177.8,
+    "buget_prudent_mil": 1.4,
+    "buget_central_mil": 6.9,
+    "buget_tensionat_mil": 17.9
+   },
+   {
+    "an": "2026",
+    "economic_prudent_mil": 63.2,
+    "economic_central_mil": 160.3,
+    "economic_tensionat_mil": 362.7,
+    "buget_prudent_mil": 4.9,
+    "buget_central_mil": 22.6,
+    "buget_tensionat_mil": 59.9
+   }
+  ],
+  "meta": "Cost REALIZAT al dosarelor decise în lună (zile peste 3 zile calendaristice, dosare admise), cu parametrii scenariului fundamentat; fără expunerea stocului. Noiembrie 2026 este parțial (până la 20.11.2026). Aceiași parametri pentru toți anii: e o măsură comparabilă a întârzierii exprimate în lei, nu o contabilitate."
+ },
+ "window_realized_mil": {
+  "prudent": 40.07096254554216,
+  "central": 104.90434532050016,
+  "tensionat": 226.39291299344703
+ },
+ "last_decision": "2026-11-20 17:21",
+ "peak": {
+  "luna": "2026-10",
+  "economic_central_mil": 37.55398914435697,
+  "buget_central_mil": 5.618582562450405
+ }
+}

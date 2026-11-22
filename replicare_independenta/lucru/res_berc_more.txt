@@ -1,0 +1,69 @@
+== C101 strict 27.04-31.07 wd distribution {0: 0.0, 1: 0.011, 2: 0.019, 3: 0.374, 4: 0.259, 5: 0.094, 6: 0.048, 7: 0.028}
+    amanari {0: 0.0, 1: 0.005, 2: 0.023, 3: 0.503, 4: 0.35, 5: 0.087, 6: 0.024, 7: 0.006}
+    inmatric {1: 0.002, 2: 0.019, 3: 0.344, 4: 0.217, 5: 0.105, 6: 0.07, 7: 0.041, 8: 0.027}
+   strict exactly 3rd wd 2026-04-27 2026-05-31 54.5
+   strict exactly 3rd wd 2026-06-01 2026-06-30 53.5
+   strict exactly 3rd wd 2026-07-01 2026-07-31 2.3
+== C74 Nov 1-20 finals with >=1 prior amanare 21.37  dist {0.0: 0.7863, 1.0: 0.2112, 2.0: 0.0024, 3.0: 0.0001}
+   median W postponed vs not 54.7 49.8
+== C37 finals Nov with amanare: median days last amanare->final 14.0  median days app->first amanare 41.9
+   amanari issued in Nov: median W 49.0  n 16942
+   first amanari issued in Nov: median W 49.0
+== C41 inmatric admis no amanare Nov: >10 wd 82.0  >=10 83.6  n 7123
+   incl. postponed: >10 wd 83.3
+== C38 CERERE265 share W<=14 8.7  median 52.9  n 52789
+== C38 INMATRIC265 share W<=14 15.7  median 42.0  n 9591
+== C102 rejected share fast 0.9  all 8.4  jtype F fast 20.7  all 24.4
+   rejected share in non-fast 9.2  F non-fast 24.8
+   Kendall tau app vs res (2-19 Nov finals) 0.378
+   fast lane composition by sol {'Admis': 0.983, 'Respins': 0.009, 'Renunțat': 0.008, 'ADMIS': 0.0, 'Admis inițial(respins-Hotărâre judecătorească)': 0.0, 'Amânat': 0.0, 'Certificare înscriere în registrul comerţului': 0.0, 'Certificare înscriere în registrul comerțului': 0.0, 'Dosar transmis la tribunal spre soluționare': 0.0, 'Mențiune radiată': 0.0, 'Renunțat din oficiu': 0.0, 'certificare inscriere mentiuni': 0.0}
+== C39 rejection share old (Apr23-17Jul24) (5.68, 975484)  crisis Aug-20Nov26 (8.11, 314338)
+== C57 S2 2025 (8.05, 479854)  2025 (7.51, 1010778)  1.10-20.11.26 (8.56, 154337)  H1 2026 (8.01, 518287)
+   S2 2025 median W 1.63
+   by cat CERERE265 old (5.78, 783998) 2025 (7.44, 844175) crisis (8.0, 280083)
+   by cat INMATRIC265 old (5.3, 190894) 2025 (7.86, 166520) crisis (8.98, 34247)
+== C49 county medians 1-18 Nov: min 47.92 B  max 55.81 BN  median of offices 50.19  n offices 42  min N 420
+   top 6: {'BN': 55.81, 'HR': 53.09, 'VN': 53.06, 'VS': 53.05, 'TR': 53.05, 'BH': 53.04}
+   CV % 3.33  (ddof0) 3.29
+   N per county sample (AB,B,CJ,CS): {'AB': 972, 'B': 12018, 'CJ': 3238, 'CS': 420}
+   distinct medians (1dp): {53.0: 8, 50.1: 7, 50.0: 6, 53.1: 4, 49.1: 3, 52.9: 2, 51.9: 2, 49.8: 2}
+   CERERE-only county medians range 49.0 55.9
+== C75 Spearman 2025 vs Nov -0.076  boot95 [-0.39  0.25]
+== C90 rejection by county crisis: top3 {'IL': 10.38, 'BV': 10.99, 'BC': 11.78}  min {'GJ': 3.25, 'BR': 4.13}  range ratio 3.6
+   Spearman rejection 2025 vs crisis 0.46
+== C88 max monthly excess over national (2025-01..2026-07): top6 {'TR': (22.0, '2026-04'), 'CT': (19.4, '2025-04'), 'GL': (16.4, '2026-03'), 'BV': (11.8, '2026-04'), 'PH': (10.9, '2026-04'), 'GR': (10.8, '2026-04')}
+   same from 2024-12: {'TR': (22.0, '2026-04'), 'CT': (19.4, '2025-04'), 'GL': (16.4, '2026-03'), 'BV': (11.8, '2026-04'), 'PH': (10.9, '2026-04')}
+== C04 BERC cohort medians (decided only)
+           size  median
+app                    
+2026-01   82781    3.03
+2026-02   96360    5.02
+2026-03  100020    5.33
+2026-04   78373    6.09
+2026-05   83398    5.12
+2026-06   85238    5.15
+2026-07   94046    7.07
+2026-08  117498   19.04
+2026-09  143963   39.04
+2026-10   18761   17.90
+2026-11    4585    6.63
+== C78 2023 n 677840 p50 0.87 p90 3.21 p99 119.86
+== C78 2024 n 924072 p50 0.901 p90 3.81 p99 33.05
+== C78 2025 n 1268622 p50 0.762 p90 3.24 p99 22.78
+== C78 2026 n 1159219 p50 0.674 p90 2.87 p99 5.01
+== C81 2023 after 16:00 13.0 after 16:30 8.6 after 17 5.6 before 8 1.4  non-working-day decisions 5
+== C81 2024 after 16:00 14.4 after 16:30 10.0 after 17 6.8 before 8 1.6  non-working-day decisions 18
+== C81 2025 after 16:00 12.3 after 16:30 8.3 after 17 5.5 before 8 2.0  non-working-day decisions 6
+== C81 2026 after 16:00 8.0 after 16:30 4.9 after 17 3.1 before 8 2.6  non-working-day decisions 5
+== C36 out-of-hours minus in-hours median W, same day&county (May-Aug 2026 filings): mean 2.49  weighted 1.61  median 0.63  strata 3311
+   window 2026-05-01 2026-08-01 mean diff 2.62
+   window 2026-08-01 2026-09-01 mean diff 2.12
+== C92/P12 INMATRIC Admis Jan-Sep 2026 100802  2025 109580  chg -8.0
+== P13 INMATRIC Admis Aug-Oct 2026 vs 2025 21568 42163 -48.8
+== P14/P15 month 09 inmatric 6959 14571 -52.2  mentiuni admis 73330 60143 21.9
+== P14/P15 month 10 inmatric 6688 16074 -58.4  mentiuni admis 75677 62988 20.1
+== P17 INMATRIC Admis Apr-Dec 2024 vs 2023 86994 105814 -17.8
+== P16 2024 summer: strict finals/wd Jun 2024 2784  Aug 2024 1448
+== P04/P19 county CJ median 1-18 Nov 52.8
+== P04/P19 county MH median 1-18 Nov 53.0
+== P04/P19 county IS median 1-18 Nov 50.1

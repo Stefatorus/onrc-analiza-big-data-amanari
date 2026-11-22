@@ -1,0 +1,150 @@
+{
+  "_meta": "AUTHORITATIVE — computed once from BERC (flow) + portal (stock). Do not hand-edit.",
+  "as_of": "2026-11-22",
+  "registrators": 165,
+  "recent_window": [
+    "2026-10-01",
+    "2026-11-22"
+  ],
+  "throughput_finals_per_day": 4176,
+  "throughput_mentiuni_per_day": 3706,
+  "throughput_inmatric_per_day": 466,
+  "adjournments_per_day": 1015,
+  "files_per_day_per_registrator_finals": 25.3,
+  "august_capacity_ratio": 0.918,
+  "W_by_filing_month_days": {
+    "2026-01": 3,
+    "2026-02": 5,
+    "2026-03": 5,
+    "2026-04": 6,
+    "2026-05": 5,
+    "2026-06": 5,
+    "2026-07": 7,
+    "2026-08": 19,
+    "2026-09": 39
+  },
+  "backlog_total_report": 210000,
+  "backlog_split_stage1": 0.485,
+  "crosscheck_mentiuni_portal_vs_berc_pct": 0.164,
+  "regimes_by_decision_date": {
+    "platforma_veche_2023_iul2024": {
+      "days": 327,
+      "finals_per_day": 2983,
+      "adjourn_share": 0.204,
+      "median_wait": 1.6,
+      "p90_wait": 9.5
+    },
+    "colaps_portal_nou_2024": {
+      "days": 92,
+      "finals_per_day": 2570,
+      "adjourn_share": 0.19,
+      "median_wait": 12.1,
+      "p90_wait": 27.4
+    },
+    "stabil_2025": {
+      "days": 252,
+      "finals_per_day": 4011,
+      "adjourn_share": 0.201,
+      "median_wait": 3.0,
+      "p90_wait": 16.7
+    },
+    "2026_inainte_de_val": {
+      "days": 148,
+      "finals_per_day": 4089,
+      "adjourn_share": 0.21,
+      "median_wait": 5.8,
+      "p90_wait": 18.9
+    },
+    "aug_2026": {
+      "days": 21,
+      "finals_per_day": 3467,
+      "adjourn_share": 0.2,
+      "median_wait": 11.9,
+      "p90_wait": 21.9
+    },
+    "sep_2026": {
+      "days": 23,
+      "finals_per_day": 3791,
+      "adjourn_share": 0.185,
+      "median_wait": 21.8,
+      "p90_wait": 28.7
+    },
+    "oct_2026": {
+      "days": 22,
+      "finals_per_day": 4139,
+      "adjourn_share": 0.184,
+      "median_wait": 35.0,
+      "p90_wait": 44.1
+    },
+    "nov_1_21_2026": {
+      "days": 15,
+      "finals_per_day": 4218,
+      "adjourn_share": 0.211,
+      "median_wait": 50.0,
+      "p90_wait": 58.0
+    }
+  },
+  "wait_of_dossiers_decided_by_week": {
+    "CERERE265": {
+      "2026-09-28": 27.9,
+      "2026-10-05": 30.9,
+      "2026-10-12": 34.9,
+      "2026-10-19": 39.0,
+      "2026-10-26": 43.1,
+      "2026-11-02": 49.0,
+      "2026-11-09": 54.1,
+      "2026-11-16": 57.1
+    },
+    "INMATRIC265": {
+      "2026-09-28": 27.6,
+      "2026-10-05": 30.6,
+      "2026-10-12": 34.0,
+      "2026-10-19": 34.7,
+      "2026-10-26": 30.9,
+      "2026-11-02": 37.9,
+      "2026-11-09": 43.6,
+      "2026-11-16": 41.1
+    }
+  },
+  "berc_last_decision": "2026-11-20 17:21",
+  "two_speed_2_19_nov": {
+    "CERERE265": {
+      "share_le14d_pct": 8.7,
+      "median_wait": 52.9,
+      "n": 52789
+    },
+    "INMATRIC265": {
+      "share_le14d_pct": 15.7,
+      "median_wait": 42.0,
+      "n": 9591
+    }
+  },
+  "august_ratio_strict_finals_per_legal_wd": 0.9,
+  "le2d_share_27apr_by_decision_date": {
+    "pre_1mar_26apr_pct": 20.8,
+    "post_27apr_31jul_pct": 1.18,
+    "n_pre": 164352,
+    "n_post": 270204
+  },
+  "rejection_share_strict_finals": {
+    "H2_2025": {
+      "respins_pct": 8.05,
+      "median_wait": 1.63,
+      "n": 479805
+    },
+    "year_2025": {
+      "respins_pct": 7.51,
+      "median_wait": 2.97,
+      "n": 1010693
+    },
+    "oct_1_nov_20_2026": {
+      "respins_pct": 8.56,
+      "median_wait": 39.03,
+      "n": 154336
+    }
+  },
+  "sources": {
+    "BERC": "analysis_decisions.pkl (4,077,510 decisions)",
+    "portal": "myportal harvest (~7,469 dossiers)"
+  }
+}

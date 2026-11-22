@@ -1,0 +1,118 @@
+{
+ "segments": 2203,
+ "clusters": 61,
+ "clusters_generic": 27,
+ "clusters_mixed": 9,
+ "segments_noise_or_mixed_knn": 549,
+ "segments_generic_H": 672,
+ "segments_no_rule": 505,
+ "entry_level": {
+  "CAEN": {
+   "share_C": 0.367,
+   "share_R": 0.472,
+   "share_H": 0.362,
+   "agree_CR": 0.826,
+   "kappa_CR": 0.646
+  },
+  "SEDIU": {
+   "share_C": 0.106,
+   "share_R": 0.287,
+   "share_H": 0.151,
+   "agree_CR": 0.807,
+   "kappa_CR": 0.419
+  },
+  "ACT": {
+   "share_C": 0.158,
+   "share_R": 0.317,
+   "share_H": 0.162,
+   "agree_CR": 0.783,
+   "kappa_CR": 0.422
+  },
+  "ASOC_ID": {
+   "share_C": 0.025,
+   "share_R": 0.213,
+   "share_H": 0.09,
+   "agree_CR": 0.812,
+   "kappa_CR": 0.172
+  },
+  "SOLICITANT": {
+   "share_C": 0.152,
+   "share_R": 0.151,
+   "share_H": 0.121,
+   "agree_CR": 0.894,
+   "kappa_CR": 0.586
+  },
+  "SEMN": {
+   "share_C": 0.0,
+   "share_R": 0.102,
+   "share_H": 0.023,
+   "agree_CR": 0.898,
+   "kappa_CR": 0.0
+  },
+  "CERERE": {
+   "share_C": 0.046,
+   "share_R": 0.411,
+   "share_H": 0.068,
+   "agree_CR": 0.605,
+   "kappa_CR": 0.057
+  },
+  "BEN_REAL": {
+   "share_C": 0.0,
+   "share_R": 0.019,
+   "share_H": 0.007,
+   "agree_CR": 0.981,
+   "kappa_CR": 0.0
+  },
+  "CAPITAL": {
+   "share_C": 0.036,
+   "share_R": 0.086,
+   "share_H": 0.05,
+   "agree_CR": 0.946,
+   "kappa_CR": 0.536
+  },
+  "INSTIT": {
+   "share_C": 0.104,
+   "share_R": 0.096,
+   "share_H": 0.09,
+   "agree_CR": 0.965,
+   "kappa_CR": 0.805
+  },
+  "DENUM": {
+   "share_C": 0.0,
+   "share_R": 0.026,
+   "share_H": 0.014,
+   "agree_CR": 0.974,
+   "kappa_CR": 0.0
+  },
+  "TARIF": {
+   "share_C": 0.0,
+   "share_R": 0.023,
+   "share_H": 0.008,
+   "agree_CR": 0.977,
+   "kappa_CR": 0.0
+  },
+  "FARA_OBIECT": {
+   "share_C": 0.0,
+   "share_R": 0.026,
+   "share_H": 0.026,
+   "agree_CR": 0.974,
+   "kappa_CR": 0.0
+  },
+  "IMPOSIBIL": {
+   "share_C": 0.0,
+   "share_R": 0.01,
+   "share_H": 0.01,
+   "agree_CR": 0.99,
+   "kappa_CR": 0.0
+  },
+  "NERESTATAT": {
+   "share_C": 0.263,
+   "share_R": 0.066,
+   "share_H": 0.166,
+   "agree_CR": 0.774,
+   "kappa_CR": 0.232
+  }
+ },
+ "exact_set_agreement_C_vs_R": 0.22,
+ "segment_C_in_R": 0.847
+}

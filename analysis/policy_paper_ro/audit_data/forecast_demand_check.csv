@@ -1,0 +1,9 @@
+month,model,predicted_per_day,mature_observed_per_day
+4,profil_restrans,4289.7610,3937.3500
+4,constant,4669.0663,3937.3500
+5,profil_restrans,4064.5809,4187.5500
+5,constant,4443.7015,4187.5500
+6,profil_restrans,3946.1451,4072.0000
+6,constant,4229.1182,4072.0000
+7,profil_restrans,3869.0456,4102.4783
+7,constant,4065.6333,4102.4783

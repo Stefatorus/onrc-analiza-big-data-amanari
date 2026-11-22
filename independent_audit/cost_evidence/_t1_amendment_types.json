@@ -1,0 +1,939 @@
+{
+ "linkage": {
+  "pdf_decisions": 11499,
+  "linked_same_bulletin": 9941,
+  "linked_app_cui_other_bulletin": 69,
+  "linked_total": 10010,
+  "linked_sol_counts": {
+   "Admis": 9050,
+   "Respins": 894,
+   "Renunțat": 66
+  },
+  "linked_admitted_amendments": 9037,
+  "pdf_registration_decisions_not_in_scope": 1482
+ },
+ "months_available": {
+  "2025-12": 47,
+  "2026-02": 27,
+  "2026-05": 2,
+  "2026-06": 1,
+  "2026-07": 3,
+  "2026-08": 3,
+  "2026-09": 1,
+  "2026-10": 3590,
+  "2026-11": 5363
+ },
+ "window_aug1_nov18": {
+  "n": 8957,
+  "any_of": {
+   "caen_rev3": {
+    "share": 0.3005,
+    "ci95": [
+     0.2886,
+     0.3125
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "activity_codes": {
+    "share": 0.4529,
+    "ci95": [
+     0.4409,
+     0.465
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "caen_only": {
+    "share": 0.4013,
+    "ci95": [
+     0.3892,
+     0.4133
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "office_change": {
+    "share": 0.0535,
+    "ci95": [
+     0.0486,
+     0.0583
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "office_docs": {
+    "share": 0.0658,
+    "ci95": [
+     0.0592,
+     0.0723
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "seat_related": {
+    "share": 0.1192,
+    "ci95": [
+     0.1108,
+     0.1277
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "secondary": {
+    "share": 0.1236,
+    "ci95": [
+     0.1162,
+     0.1309
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "capital_shares": {
+    "share": 0.3577,
+    "ci95": [
+     0.3467,
+     0.3687
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "capital": {
+    "share": 0.1259,
+    "ci95": [
+     0.1183,
+     0.1336
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "share_transfer": {
+    "share": 0.0242,
+    "ci95": [
+     0.0209,
+     0.0276
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "shareholder_data": {
+    "share": 0.3242,
+    "ci95": [
+     0.3138,
+     0.3347
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "admins": {
+    "share": 0.2442,
+    "ci95": [
+     0.2341,
+     0.2542
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "admin_change": {
+    "share": 0.0566,
+    "ci95": [
+     0.0517,
+     0.0615
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "admin_data": {
+    "share": 0.1987,
+    "ci95": [
+     0.1898,
+     0.2076
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "dissolution": {
+    "share": 0.0658,
+    "ci95": [
+     0.0603,
+     0.0712
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "resumption": {
+    "share": 0.004,
+    "ci95": [
+     0.0027,
+     0.0053
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "name_change": {
+    "share": 0.0082,
+    "ci95": [
+     0.0063,
+     0.01
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "blocking_strict": {
+    "share": 0.3023,
+    "ci95": [
+     0.2909,
+     0.3137
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "blocking_core": {
+    "share": 0.473,
+    "ci95": [
+     0.4615,
+     0.4846
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "blocking_upper": {
+    "share": 0.5951,
+    "ci95": [
+     0.5832,
+     0.6069
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "shdata_with_caen_only_else": {
+    "share": 0.1486,
+    "ci95": [
+     0.1401,
+     0.1571
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "unparsed": {
+    "share": 0.0001,
+    "ci95": [
+     0.0,
+     0.0003
+    ],
+    "n": 8957,
+    "bulletins": 455
+   }
+  },
+  "primary": {
+   "activity_codes_change_only": {
+    "share": 0.1166,
+    "ci95": [
+     0.1098,
+     0.1233
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "administrators_representatives": {
+    "share": 0.0296,
+    "ci95": [
+     0.0258,
+     0.0333
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "caen_rev3_update_only": {
+    "share": 0.2847,
+    "ci95": [
+     0.2728,
+     0.2966
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "capital_shareholders_transfers": {
+    "share": 0.2755,
+    "ci95": [
+     0.2651,
+     0.286
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "dissolution_deregistration_suspension": {
+    "share": 0.0658,
+    "ci95": [
+     0.0603,
+     0.0712
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "office_document_prolongation_or_proof": {
+    "share": 0.0457,
+    "ci95": [
+     0.04,
+     0.0513
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "other": {
+    "share": 0.0164,
+    "ci95": [
+     0.0137,
+     0.0191
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "registered_office_change": {
+    "share": 0.0531,
+    "ci95": [
+     0.0483,
+     0.058
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "secondary_offices_work_points": {
+    "share": 0.1126,
+    "ci95": [
+     0.1058,
+     0.1195
+    ],
+    "n": 8957,
+    "bulletins": 455
+   }
+  },
+  "excess_day_weighted": {
+   "blocking_strict": {
+    "share": 0.2732,
+    "ci95": [
+     0.262,
+     0.2843
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "blocking_core": {
+    "share": 0.4488,
+    "ci95": [
+     0.4365,
+     0.4611
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "blocking_upper": {
+    "share": 0.5752,
+    "ci95": [
+     0.5624,
+     0.5881
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "caen_only": {
+    "share": 0.4456,
+    "ci95": [
+     0.4329,
+     0.4582
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "seat_related": {
+    "share": 0.0948,
+    "ci95": [
+     0.0869,
+     0.1027
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "office_docs": {
+    "share": 0.0497,
+    "ci95": [
+     0.0434,
+     0.0559
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "office_change": {
+    "share": 0.0451,
+    "ci95": [
+     0.0406,
+     0.0497
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "secondary": {
+    "share": 0.1034,
+    "ci95": [
+     0.0966,
+     0.1102
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "capital_shares": {
+    "share": 0.3613,
+    "ci95": [
+     0.3494,
+     0.3731
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "admins": {
+    "share": 0.2448,
+    "ci95": [
+     0.2342,
+     0.2554
+    ],
+    "n": 8957,
+    "bulletins": 455
+   }
+  }
+ },
+ "by_month": {
+  "2026-10": {
+   "n": 3590,
+   "any_of": {
+    "caen_only": {
+     "share": 0.4072,
+     "ci95": [
+      0.3881,
+      0.4263
+     ],
+     "n": 3590,
+     "bulletins": 179
+    },
+    "caen_rev3": {
+     "share": 0.3061,
+     "ci95": [
+      0.287,
+      0.3253
+     ],
+     "n": 3590,
+     "bulletins": 179
+    },
+    "office_change": {
+     "share": 0.0507,
+     "ci95": [
+      0.0431,
+      0.0583
+     ],
+     "n": 3590,
+     "bulletins": 179
+    },
+    "office_docs": {
+     "share": 0.0591,
+     "ci95": [
+      0.0504,
+      0.0677
+     ],
+     "n": 3590,
+     "bulletins": 179
+    },
+    "secondary": {
+     "share": 0.1187,
+     "ci95": [
+      0.1077,
+      0.1296
+     ],
+     "n": 3590,
+     "bulletins": 179
+    },
+    "capital_shares": {
+     "share": 0.3618,
+     "ci95": [
+      0.3446,
+      0.3791
+     ],
+     "n": 3590,
+     "bulletins": 179
+    },
+    "admins": {
+     "share": 0.2451,
+     "ci95": [
+      0.2285,
+      0.2618
+     ],
+     "n": 3590,
+     "bulletins": 179
+    },
+    "dissolution": {
+     "share": 0.0632,
+     "ci95": [
+      0.0541,
+      0.0723
+     ],
+     "n": 3590,
+     "bulletins": 179
+    },
+    "blocking_strict": {
+     "share": 0.2978,
+     "ci95": [
+      0.2795,
+      0.3161
+     ],
+     "n": 3590,
+     "bulletins": 179
+    },
+    "blocking_core": {
+     "share": 0.473,
+     "ci95": [
+      0.4549,
+      0.4911
+     ],
+     "n": 3590,
+     "bulletins": 179
+    },
+    "blocking_upper": {
+     "share": 0.5964,
+     "ci95": [
+      0.5774,
+      0.6154
+     ],
+     "n": 3590,
+     "bulletins": 179
+    }
+   },
+   "primary": {
+    "activity_codes_change_only": 0.1187,
+    "administrators_representatives": 0.0312,
+    "caen_rev3_update_only": 0.2886,
+    "capital_shareholders_transfers": 0.2797,
+    "dissolution_deregistration_suspension": 0.0632,
+    "office_document_prolongation_or_proof": 0.0398,
+    "other": 0.0189,
+    "registered_office_change": 0.0504,
+    "secondary_offices_work_points": 0.1095
+   }
+  },
+  "2026-11": {
+   "n": 5363,
+   "any_of": {
+    "caen_only": {
+     "share": 0.3975,
+     "ci95": [
+      0.382,
+      0.4131
+     ],
+     "n": 5363,
+     "bulletins": 296
+    },
+    "caen_rev3": {
+     "share": 0.297,
+     "ci95": [
+      0.2817,
+      0.3124
+     ],
+     "n": 5363,
+     "bulletins": 296
+    },
+    "office_change": {
+     "share": 0.0554,
+     "ci95": [
+      0.0491,
+      0.0616
+     ],
+     "n": 5363,
+     "bulletins": 296
+    },
+    "office_docs": {
+     "share": 0.0703,
+     "ci95": [
+      0.061,
+      0.0795
+     ],
+     "n": 5363,
+     "bulletins": 296
+    },
+    "secondary": {
+     "share": 0.127,
+     "ci95": [
+      0.1171,
+      0.1369
+     ],
+     "n": 5363,
+     "bulletins": 296
+    },
+    "capital_shares": {
+     "share": 0.3548,
+     "ci95": [
+      0.3406,
+      0.3691
+     ],
+     "n": 5363,
+     "bulletins": 296
+    },
+    "admins": {
+     "share": 0.2437,
+     "ci95": [
+      0.2312,
+      0.2562
+     ],
+     "n": 5363,
+     "bulletins": 296
+    },
+    "dissolution": {
+     "share": 0.0669,
+     "ci95": [
+      0.0602,
+      0.0737
+     ],
+     "n": 5363,
+     "bulletins": 296
+    },
+    "blocking_strict": {
+     "share": 0.3056,
+     "ci95": [
+      0.2909,
+      0.3203
+     ],
+     "n": 5363,
+     "bulletins": 296
+    },
+    "blocking_core": {
+     "share": 0.4734,
+     "ci95": [
+      0.4583,
+      0.4886
+     ],
+     "n": 5363,
+     "bulletins": 296
+    },
+    "blocking_upper": {
+     "share": 0.5946,
+     "ci95": [
+      0.5794,
+      0.6098
+     ],
+     "n": 5363,
+     "bulletins": 296
+    }
+   },
+   "primary": {
+    "activity_codes_change_only": 0.1152,
+    "administrators_representatives": 0.0285,
+    "caen_rev3_update_only": 0.2823,
+    "capital_shareholders_transfers": 0.273,
+    "dissolution_deregistration_suspension": 0.0669,
+    "office_document_prolongation_or_proof": 0.0496,
+    "other": 0.0145,
+    "registered_office_change": 0.055,
+    "secondary_offices_work_points": 0.1149
+   }
+  }
+ },
+ "window_county_poststratified": {
+  "counties_covered": 42,
+  "population_share_covered": 1.0,
+  "blocking_strict": 0.3042,
+  "blocking_core": 0.4734,
+  "blocking_upper": 0.5951,
+  "caen_only": 0.3998,
+  "seat_related": 0.1202,
+  "office_docs": 0.0663
+ },
+ "window_jtype_mix_sample_vs_population": {
+  "sample": {
+   "J": 0.798,
+   "F": 0.198,
+   "C": 0.004
+  },
+  "population": {
+   "J": 0.801,
+   "F": 0.196,
+   "C": 0.003
+  }
+ },
+ "window_J_only": {
+  "blocking_strict": {
+   "share": 0.3404,
+   "ci95": [
+    0.3276,
+    0.3532
+   ],
+   "n": 7150,
+   "bulletins": 442
+  },
+  "blocking_core": {
+   "share": 0.471,
+   "ci95": [
+    0.4571,
+    0.485
+   ],
+   "n": 7150,
+   "bulletins": 442
+  },
+  "blocking_upper": {
+   "share": 0.5515,
+   "ci95": [
+    0.5374,
+    0.5656
+   ],
+   "n": 7150,
+   "bulletins": 442
+  },
+  "caen_only": {
+   "share": 0.398,
+   "ci95": [
+    0.3835,
+    0.4126
+   ],
+   "n": 7150,
+   "bulletins": 442
+  },
+  "seat_related": {
+   "share": 0.1297,
+   "ci95": [
+    0.1198,
+    0.1395
+   ],
+   "n": 7150,
+   "bulletins": 442
+  },
+  "office_docs": {
+   "share": 0.0733,
+   "ci95": [
+    0.0655,
+    0.0811
+   ],
+   "n": 7150,
+   "bulletins": 442
+  }
+ },
+ "window_median_wait_by_primary": {
+  "activity_codes_change_only": 48.1,
+  "administrators_representatives": 42.3,
+  "caen_rev3_update_only": 49.2,
+  "capital_shareholders_transfers": 47.2,
+  "dissolution_deregistration_suspension": 45.8,
+  "office_document_prolongation_or_proof": 32.8,
+  "other": 21.1,
+  "registered_office_change": 42.0,
+  "secondary_offices_work_points": 42.0
+ },
+ "window_n_by_primary": {
+  "caen_rev3_update_only": 2550,
+  "capital_shareholders_transfers": 2468,
+  "activity_codes_change_only": 1044,
+  "secondary_offices_work_points": 1009,
+  "dissolution_deregistration_suspension": 589,
+  "registered_office_change": 476,
+  "office_document_prolongation_or_proof": 409,
+  "administrators_representatives": 265,
+  "other": 147
+ },
+ "other_residual_top_min5": {
+  "înregistrarea datelor din declaraţia pe propria": 52,
+  "": 39,
+  "îndreptare erori materiale conform actului cerere": 10,
+  "hotărâre a adunării generale cf art": 5
+ },
+ "window_excl_seat_related": {
+  "seat_excl_blocking_strict": {
+   "count_share": {
+    "share": 0.2379,
+    "ci95": [
+     0.228,
+     0.2478
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "excess_day_share": {
+    "share": 0.2178,
+    "ci95": [
+     0.2079,
+     0.2277
+    ],
+    "n": 8957,
+    "bulletins": 455
+   }
+  },
+  "seat_excl_blocking_core": {
+   "count_share": {
+    "share": 0.4002,
+    "ci95": [
+     0.3894,
+     0.4111
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "excess_day_share": {
+    "share": 0.3859,
+    "ci95": [
+     0.3742,
+     0.3977
+    ],
+    "n": 8957,
+    "bulletins": 455
+   }
+  },
+  "blocking_strict_excl_capital_with_caen": {
+   "count_share": {
+    "share": 0.2374,
+    "ci95": [
+     0.2268,
+     0.2479
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "excess_day_share": {
+    "share": 0.2023,
+    "ci95": [
+     0.1927,
+     0.212
+    ],
+    "n": 8957,
+    "bulletins": 455
+   }
+  },
+  "seat_excl_blocking_strict_excl_capital_with_caen": {
+   "count_share": {
+    "share": 0.1757,
+    "ci95": [
+     0.1669,
+     0.1846
+    ],
+    "n": 8957,
+    "bulletins": 455
+   },
+   "excess_day_share": {
+    "share": 0.1498,
+    "ci95": [
+     0.1416,
+     0.158
+    ],
+    "n": 8957,
+    "bulletins": 455
+   }
+  }
+ },
+ "window_wait_over_30": {
+  "office_docs": {
+   "share": 0.0468,
+   "ci95": [
+    0.0406,
+    0.0531
+   ],
+   "n": 7643,
+   "bulletins": 361
+  },
+  "office_change": {
+   "share": 0.0433,
+   "ci95": [
+    0.0387,
+    0.0479
+   ],
+   "n": 7643,
+   "bulletins": 361
+  },
+  "seat_related": {
+   "share": 0.0901,
+   "ci95": [
+    0.0822,
+    0.0981
+   ],
+   "n": 7643,
+   "bulletins": 361
+  },
+  "blocking_strict": {
+   "share": 0.2665,
+   "ci95": [
+    0.2552,
+    0.2778
+   ],
+   "n": 7643,
+   "bulletins": 361
+  },
+  "blocking_core": {
+   "share": 0.4433,
+   "ci95": [
+    0.4309,
+    0.4557
+   ],
+   "n": 7643,
+   "bulletins": 361
+  }
+ },
+ "dissolution_crosstab": {
+  "dissolution": 589,
+  "with_secondary": 11,
+  "with_admins": 36,
+  "with_office_change": 3
+ },
+ "window_by_application_month": {
+  "2026-09": {
+   "n": 7503,
+   "blocking_strict": 0.2595,
+   "blocking_core": 0.4386,
+   "caen_only": 0.4621,
+   "caen_rev3": 0.3549,
+   "seat_related": 0.0829
+  },
+  "2026-10": {
+   "n": 1075,
+   "blocking_strict": 0.5349,
+   "blocking_core": 0.6586,
+   "caen_only": 0.0819,
+   "caen_rev3": 0.0214,
+   "seat_related": 0.3284
+  },
+  "2026-11": {
+   "n": 374,
+   "blocking_strict": 0.4973,
+   "blocking_core": 0.6337,
+   "caen_only": 0.1043,
+   "caen_rev3": 0.016,
+   "seat_related": 0.2487
+  }
+ },
+ "sample_vs_population_oct1_nov18": {
+  "sample_n": 8953,
+  "population_n": 120415,
+  "sample_fraction": 0.0744,
+  "wait_quantiles_sample": [
+   16.7,
+   39.0,
+   45.9,
+   54.2,
+   56.6
+  ],
+  "wait_quantiles_population": [
+   18.9,
+   30.9,
+   38.8,
+   48.9,
+   55.1
+  ],
+  "mean_excess_sample": 40.2,
+  "mean_excess_population": 35.0,
+  "share_wait_over_30_sample": 0.8537,
+  "share_wait_over_30_population": 0.7823,
+  "bulletins_sampled": 455,
+  "distinct_pub_nr_population": 6300
+ },
+ "oct_nov_poststratified_by_application_month": {
+  "population_share_covered": 1.0,
+  "blocking_strict": 0.2876,
+  "blocking_core": 0.4714,
+  "blocking_upper": 0.5936,
+  "caen_only": 0.4117,
+  "seat_related": 0.1088,
+  "office_docs": 0.0594,
+  "office_change": 0.0494
+ },
+ "window_note": "All window entries come from decisions of 1 Oct-18 Nov 2026 (the bulletin archive holds 60 Jan, 1 Feb and 482 Oct-Nov bulletins); Aug-Sep 2026 and Jan-Sep monthly shares cannot be established from it. CIs cover sampling among collected bulletins only."
+}

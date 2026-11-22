@@ -1,0 +1,310 @@
+{
+ "_meta": "Verificarea analizei de impact economic și fiscal (audit_costs.py, 21.11.2026). Reimplementare independentă + renumărare pe arhiva curentă.",
+ "window": "decizii 1.08.2026–18.11.2026; zile în exces = așteptare peste 3 zile calendaristice",
+ "reproduced": true,
+ "scenarios": {
+  "prudent": {
+   "total": 66874301.68966145,
+   "tax": 6292402.668598611,
+   "daily_econ": 761249.9999999999,
+   "daily_tax": 79779.0,
+   "published_total": 66874301.69,
+   "published_tax": 6292402.67,
+   "published_daily_econ": 761250.0,
+   "published_daily_tax": 79779.0,
+   "channels_share": {
+    "A": 0.12489459911823264,
+    "B": 0.005481971261565721,
+    "C": 0.8389267352528142,
+    "D": 0.030696694367387454
+   },
+   "channels": {
+    "A": 8352239.100842015,
+    "B": 366603.0,
+    "C": 56102639.58881944,
+    "D": 2052820.0
+   },
+   "turnover_at_risk": 146530510.54108799,
+   "lost_sales": 21979576.581163198
+  },
+  "central": {
+   "total": 291407793.21714485,
+   "tax": 49369943.756060556,
+   "daily_econ": 3654602.9231249997,
+   "daily_tax": 703375.798125,
+   "published_total": 291407793.22,
+   "published_tax": 49369943.76,
+   "published_daily_econ": 3654602.92,
+   "published_daily_tax": 703375.8,
+   "channels_share": {
+    "A": 0.2613648591387268,
+    "B": 0.015423823563122066,
+    "C": 0.6986813882214998,
+    "D": 0.024529929076651195
+   },
+   "channels": {
+    "A": 76163756.82612629,
+    "B": 4494622.387500001,
+    "C": 203601201.50351852,
+    "D": 7148212.5
+   },
+   "turnover_at_risk": 483579408.41984946,
+   "lost_sales": 169252792.9469473
+  },
+  "tensionat": {
+   "total": 994786442.6116464,
+   "tax": 252223874.1627344,
+   "daily_econ": 11797500.0,
+   "daily_tax": 3294720.0000000005,
+   "published_total": 994786442.61,
+   "published_tax": 252223874.16,
+   "published_daily_econ": 11797500.0,
+   "published_daily_tax": 3294720.0,
+   "channels_share": {
+    "A": 0.4176320386375298,
+    "B": 0.027014311463119833,
+    "C": 0.5378500815412143,
+    "D": 0.01750356835813611
+   },
+   "channels": {
+    "A": 415454690.03687793,
+    "B": 26873470.8,
+    "C": 535045969.27476853,
+    "D": 17412312.5
+   },
+   "turnover_at_risk": 1510744327.4068286,
+   "lost_sales": 830909380.0737559
+  }
+ },
+ "exposure_published": {
+  "approved_new_j": 15994.0,
+  "approved_changes": 249479.0,
+  "postpone_actions": 73315.0,
+  "observed_new_j_excess_days": 322222.04216435185,
+  "observed_changes_excess_days": 5988217.064537036,
+  "observed_changes_over_30": 95214.0
+ },
+ "exposure_recount": {
+  "approved_new_j": 16364,
+  "approved_changes": 251587,
+  "postpone_actions": 73321,
+  "observed_new_j_excess_days": 334726.5390625,
+  "observed_changes_excess_days": 6081803.810370369,
+  "observed_changes_over_30": 96873
+ },
+ "exposure_change_pct": {
+  "approved_new_j": 2.3133675128172992,
+  "approved_changes": 0.8449608985124923,
+  "postpone_actions": 0.008183864147848219,
+  "observed_new_j_excess_days": 3.880708102448849,
+  "observed_changes_excess_days": 1.5628482539079114,
+  "observed_changes_over_30": 1.7423908248787034
+ },
+ "recount_totals": {
+  "prudent": {
+   "total": 67547307.18608505,
+   "tax": 6369637.342543054,
+   "total_change_pct": 1.0063738677179135,
+   "tax_change_pct": 1.2274273916046852
+  },
+  "central": {
+   "total": 293590451.4199313,
+   "tax": 49789045.14224517,
+   "total_change_pct": 0.7490047464722371,
+   "tax_change_pct": 0.848899865585051
+  },
+  "tensionat": {
+   "total": 999782821.7426071,
+   "tax": 253535789.61000523,
+   "total_change_pct": 0.5022564559528542,
+   "tax_change_pct": 0.5201392816702066
+  }
+ },
+ "sensitivity_top": [
+  {
+   "parameter": "blocked_change_cost",
+   "prudent": 35.0,
+   "central": 70.0,
+   "tense": 110.0,
+   "economic_low": -101800600.75176,
+   "economic_high": 116343543.7163
+  },
+  {
+   "parameter": "disjoint_blocked_changes_share",
+   "prudent": 0.15,
+   "central": 0.2,
+   "tense": 0.25,
+   "economic_low": -50900300.37588,
+   "economic_high": 50900300.37588
+  },
+  {
+   "parameter": "pending",
+   "prudent": 145000.0,
+   "central": 204414.0,
+   "tense": 260000.0,
+   "economic_low": -51404212.99125,
+   "economic_high": 48092277.63375
+  },
+  {
+   "parameter": "lost_turnover_fraction",
+   "prudent": 0.15,
+   "central": 0.35,
+   "tense": 0.55,
+   "economic_low": -43522146.75779,
+   "economic_high": 43522146.75779
+  },
+  {
+   "parameter": "net_turnover_per_day",
+   "prudent": 250.0,
+   "central": 425.0,
+   "tense": 650.0,
+   "economic_low": -31361546.9284,
+   "economic_high": 40321988.90795
+  }
+ ],
+ "macro": [
+  {
+   "regime": "M0: Echilibru parțial (0% subst. A, 0% disc. C)",
+   "macro_subst_a_pct": 0.0,
+   "discount_c_pct": 0.0,
+   "prudent_net_priv_mron": 66.87,
+   "prudent_net_all_mron": 67.31,
+   "prudent_ratio_vs_oug_budget": 11.69,
+   "central_net_priv_mron": 291.41,
+   "central_net_all_mron": 292.73,
+   "central_ratio_vs_oug_budget": 50.82,
+   "tensionat_net_priv_mron": 994.79,
+   "tensionat_net_all_mron": 998.09,
+   "tensionat_ratio_vs_oug_budget": 173.28
+  },
+  {
+   "regime": "M1: Substituție moderată (50% subst. A, 25% disc. C)",
+   "macro_subst_a_pct": 50.0,
+   "discount_c_pct": 25.0,
+   "prudent_net_priv_mron": 48.67,
+   "prudent_net_all_mron": 49.11,
+   "prudent_ratio_vs_oug_budget": 8.53,
+   "central_net_priv_mron": 202.43,
+   "central_net_all_mron": 203.75,
+   "central_ratio_vs_oug_budget": 35.37,
+   "tensionat_net_priv_mron": 653.3,
+   "tensionat_net_all_mron": 656.6,
+   "tensionat_ratio_vs_oug_budget": 113.99
+  },
+  {
+   "regime": "M2: Substituție severă (75% subst. A, 50% disc. C)",
+   "macro_subst_a_pct": 75.0,
+   "discount_c_pct": 50.0,
+   "prudent_net_priv_mron": 32.56,
+   "prudent_net_all_mron": 33.0,
+   "prudent_ratio_vs_oug_budget": 5.73,
+   "central_net_priv_mron": 132.48,
+   "central_net_all_mron": 133.8,
+   "central_ratio_vs_oug_budget": 23.23,
+   "tensionat_net_priv_mron": 415.67,
+   "tensionat_net_all_mron": 418.97,
+   "tensionat_ratio_vs_oug_budget": 72.74
+  },
+  {
+   "regime": "M3: Substituție extremă (90% subst. A, 75% disc. C)",
+   "macro_subst_a_pct": 90.0,
+   "discount_c_pct": 75.0,
+   "prudent_net_priv_mron": 17.28,
+   "prudent_net_all_mron": 17.72,
+   "prudent_ratio_vs_oug_budget": 3.08,
+   "central_net_priv_mron": 70.16,
+   "central_net_all_mron": 71.48,
+   "central_ratio_vs_oug_budget": 12.41,
+   "tensionat_net_priv_mron": 219.59,
+   "tensionat_net_all_mron": 222.89,
+   "tensionat_ratio_vs_oug_budget": 38.7
+  },
+  {
+   "regime": "M4: Certificat formal Lean T10b (95% subst. VA brut A, 100% disc. C)",
+   "macro_subst_a_pct": 95.0,
+   "discount_c_pct": 100.0,
+   "prudent_net_priv_mron": 5.2,
+   "prudent_net_all_mron": 5.64,
+   "prudent_ratio_vs_oug_budget": 0.98,
+   "central_net_priv_mron": 22.52,
+   "central_net_all_mron": 23.84,
+   "central_ratio_vs_oug_budget": 4.14,
+   "tensionat_net_priv_mron": 82.05,
+   "tensionat_net_all_mron": 85.35,
+   "tensionat_ratio_vs_oug_budget": 14.82
+  },
+  {
+   "regime": "M5: Substituție 95% pe VA net permanent A + 100% disc. C",
+   "macro_subst_a_pct": 95.0,
+   "discount_c_pct": 100.0,
+   "prudent_net_priv_mron": 2.84,
+   "prudent_net_all_mron": 3.28,
+   "prudent_ratio_vs_oug_budget": 0.57,
+   "central_net_priv_mron": 15.45,
+   "central_net_all_mron": 16.77,
+   "central_ratio_vs_oug_budget": 2.91,
+   "tensionat_net_priv_mron": 65.06,
+   "tensionat_net_all_mron": 68.36,
+   "tensionat_ratio_vs_oug_budget": 11.87
+  },
+  {
+   "regime": "M6: Prag absolut B + D (100% subst. A, 100% disc. C)",
+   "macro_subst_a_pct": 100.0,
+   "discount_c_pct": 100.0,
+   "prudent_net_priv_mron": 2.42,
+   "prudent_net_all_mron": 2.86,
+   "prudent_ratio_vs_oug_budget": 0.5,
+   "central_net_priv_mron": 11.64,
+   "central_net_all_mron": 12.96,
+   "central_ratio_vs_oug_budget": 2.25,
+   "tensionat_net_priv_mron": 44.29,
+   "tensionat_net_all_mron": 47.58,
+   "tensionat_ratio_vs_oug_budget": 8.26
+  }
+ ],
+ "oug_budget_mil_lei": 5.760000000000001,
+ "formation": [
+  {
+   "cohort_year": 2024,
+   "financial_year": 2024,
+   "onrc_n": 90371,
+   "matched_n": 47332,
+   "positive_n": 45497,
+   "median_turnover": 65299.0,
+   "median_positive": 71153.0,
+   "mean_turnover": 208062.18,
+   "mean_positive": 216453.82,
+   "mean_all_cap_at_positive_p99": 173353.82,
+   "mean_daily_at_least_180d_capped_p99": 793.33,
+   "n_daily_at_least_180d": 31079
+  },
+  {
+   "cohort_year": 2024,
+   "financial_year": 2025,
+   "onrc_n": 90371,
+   "matched_n": 51651,
+   "positive_n": 50620,
+   "median_turnover": 162064.0,
+   "median_positive": 167601.0,
+   "mean_turnover": 439418.83,
+   "mean_positive": 448400.3,
+   "mean_all_cap_at_positive_p99": 353320.09,
+   "mean_daily_at_least_180d_capped_p99": NaN,
+   "n_daily_at_least_180d": 0
+  },
+  {
+   "cohort_year": 2025,
+   "financial_year": 2025,
+   "onrc_n": 99392,
+   "matched_n": 46227,
+   "positive_n": 43923,
+   "median_turnover": 63495.0,
+   "median_positive": 71361.0,
+   "mean_turnover": 196819.6,
+   "mean_positive": 207143.86,
+   "mean_all_cap_at_positive_p99": 169788.19,
+   "mean_daily_at_least_180d_capped_p99": 822.58,
+   "n_daily_at_least_180d": 27564
+  }
+ ]
+}

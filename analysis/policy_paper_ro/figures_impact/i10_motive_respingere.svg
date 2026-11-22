@@ -1,0 +1,223 @@
+<svg class="fig" xmlns:xlink="http://www.w3.org/1999/xlink"   viewBox="0 0 470.551181 140.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-22T22:42:38.167711</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.8.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 140.4 
+L 470.551181 140.4 
+L 470.551181 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 127.048819 123.552 
+L 465.845669 123.552 
+L 465.845669 19.656 
+L 127.048819 19.656 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m7311337285" d="M 0 0 
+L 0 2.5 
+" style="stroke: #46505c; stroke-width: 0.5"/>
+      </defs>
+      <g>
+       <use xlink:href="#m7311337285" x="127.048819" y="123.552" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #46505c; font: 6px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="127.048819" y="133.846688" transform="rotate(-0 127.048819 133.846688)">0%</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m7311337285" x="196.474403" y="123.552" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #46505c; font: 6px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="196.474403" y="133.846688" transform="rotate(-0 196.474403 133.846688)">25%</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m7311337285" x="265.899987" y="123.552" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="fill: #46505c; font: 6px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="265.899987" y="133.846688" transform="rotate(-0 265.899987 133.846688)">50%</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m7311337285" x="335.325571" y="123.552" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="fill: #46505c; font: 6px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="335.325571" y="133.846688" transform="rotate(-0 335.325571 133.846688)">75%</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m7311337285" x="404.751155" y="123.552" style="fill: #46505c; stroke: #46505c; stroke-width: 0.5"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="fill: #46505c; font: 6px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="404.751155" y="133.846688" transform="rotate(-0 404.751155 133.846688)">100%</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6"/>
+     <g id="text_6">
+      <text style="fill: #46505c; font: 6.2px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(42.659163 34.028082)">Respingeri 19.10–18.11.2026</text>
+      <text style="fill: #46505c; font: 6.2px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(49.114913 40.749076)">(toată arhiva, 8.710 decizii)</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_7"/>
+     <g id="text_7">
+      <text style="fill: #46505c; font: 6.2px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(23.6116 70.951547)">Ce scrie în încheierea de respingere</text>
+      <text style="fill: #46505c; font: 6.2px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(67.374881 77.672541)">(969 texte publicate)</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8"/>
+     <g id="text_8">
+      <text style="fill: #46505c; font: 6.2px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(30.835569 107.84498)">Cereri amânate 1.09–15.10.2026,</text>
+      <text style="fill: #46505c; font: 6.2px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(29.909444 114.493318)">soluționate până la 20.11 (30.244)</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 127.048819 24.378545 
+L 398.14184 24.378545 
+L 398.14184 45.039682 
+L 127.048819 45.039682 
+z
+" clip-path="url(#p5c5d031882)" style="fill: #a63228; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 398.14184 24.378545 
+L 404.751155 24.378545 
+L 404.751155 45.039682 
+L 398.14184 45.039682 
+z
+" clip-path="url(#p5c5d031882)" style="fill: #dce6f0; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 127.048819 61.273432 
+L 342.26813 61.273432 
+L 342.26813 81.934568 
+L 127.048819 81.934568 
+z
+" clip-path="url(#p5c5d031882)" style="fill: #a63228; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 342.26813 61.273432 
+L 362.040536 61.273432 
+L 362.040536 81.934568 
+L 342.26813 81.934568 
+z
+" clip-path="url(#p5c5d031882)" style="fill: #b86e14; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 362.040536 61.273432 
+L 404.751155 61.273432 
+L 404.751155 81.934568 
+L 362.040536 81.934568 
+z
+" clip-path="url(#p5c5d031882)" style="fill: #dce6f0; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 127.048819 98.168318 
+L 299.910351 98.168318 
+L 299.910351 118.829455 
+L 127.048819 118.829455 
+z
+" clip-path="url(#p5c5d031882)" style="fill: #16665c; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 299.910351 98.168318 
+L 400.040757 98.168318 
+L 400.040757 118.829455 
+L 299.910351 118.829455 
+z
+" clip-path="url(#p5c5d031882)" style="fill: #a63228; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 400.040757 98.168318 
+L 404.751155 98.168318 
+L 404.751155 118.829455 
+L 400.040757 118.829455 
+z
+" clip-path="url(#p5c5d031882)" style="fill: #dce6f0; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 127.048819 123.552 
+L 127.048819 19.656 
+" style="fill: none; stroke: #c2beb4; stroke-width: 0.55; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 127.048819 123.552 
+L 465.845669 123.552 
+" style="fill: none; stroke: #14324d; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_9">
+    <text style="fill: #ffffff; font: 6.2px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: start" x="130.381247" y="36.131723" transform="rotate(-0 130.381247 36.131723)">97,6% · cu amânare anterioară a aceleiași cereri</text>
+   </g>
+   <g id="text_10">
+    <text style="fill: #ffffff; font: 6.2px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: start" x="130.381247" y="73.244578" transform="rotate(-0 130.381247 73.244578)">77,5% · lipsurile de la amânare nerezolvate</text>
+   </g>
+   <g id="text_11">
+    <text style="fill: #ffffff; font: 6.2px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: start" x="130.381247" y="110.101683" transform="rotate(-0 130.381247 110.101683)">62,2% · admise</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #ffffff; font: 6.2px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: start" x="303.242779" y="110.139464" transform="rotate(-0 303.242779 110.139464)">36,1% · respinse</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #46505c; font: 5.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: start" x="407.528179" y="36.208504" transform="rotate(-0 407.528179 36.208504)">2,4% fără</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #46505c; font: 5.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(407.528179 69.894269)">7,1% parțial ·</text>
+    <text style="fill: #46505c; font: 5.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(407.528179 76.3832)">15,4% altă formulare</text>
+   </g>
+   <g id="text_15">
+    <text style="fill: #46505c; font: 5.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: start" x="407.528179" y="109.856449" transform="rotate(-0 407.528179 109.856449)">1,7% renunțate</text>
+   </g>
+   <g id="text_16">
+    <text style="fill: #46505c; font: 6.1px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: start" x="127.048819" y="14.239913" transform="rotate(-0 127.048819 14.239913)">Respingerea vine, la mijloc, la 16 zile după amânare: imediat după expirarea termenului de completare.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p5c5d031882">
+   <rect x="127.048819" y="19.656" width="338.79685" height="103.896"/>
+  </clipPath>
+ </defs>
+</svg>

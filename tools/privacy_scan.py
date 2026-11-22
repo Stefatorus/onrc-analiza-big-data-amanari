@@ -36,7 +36,7 @@ PAT = {
   "confidential": re.compile(r"(?i)confiden[tț]ial|nu se trimite|internal only"),
 }
 NAME = re.compile(r"\b([A-ZĂÂÎȘȚ][a-zăâîșț]{2,}(?:-[A-ZĂÂÎȘȚ][a-zăâîșț]+)?)\s+([A-ZĂÂÎȘȚ][a-zăâîșț]{2,}|[A-ZĂÂÎȘȚ]{3,})\b")
-# BERC writes firm and sole-trader names in capitals ("POPESCU ION PFA"): catch runs of 2+ all-caps words too.
+# BERC writes firm and sole-trader names in capitals ("NUME PRENUME PFA"): catch runs of 2+ all-caps words too.
 CAPS = re.compile(r"\b[A-ZĂÂÎȘȚŞŢ]{3,}(?:\s+[A-ZĂÂÎȘȚŞŢ]{3,})+\b")
 CAPS_STOP = set("""ONRC BERC ORCT OUG CAEN MJ PFA SRL SNC IMM ANAF BNR TVA FTE CSV JSON PDF SVG HTML XLSX UTF API URL HTTP GET POST
 PASS WARN FAIL TODO NOTE AND THE FOR NOT NULL NAN TRUE FALSE NONE ALL REG LOCKED CERERE INMATRIC AUTO AMANARI CERERE_HJ RAPORT

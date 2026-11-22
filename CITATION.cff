@@ -6,8 +6,8 @@ authors:
   - family-names: Deleanu
     given-names: Ștefan-Lucian
     website: "https://stefandeleanu.ro"
-version: "2026.11"
-date-released: "2026-11-22"   # PHASE 2: set to the actual release date
+version: "1.0.0"
+date-released: "2026-11-23"
 license: MIT
 keywords:
   - ONRC
@@ -24,7 +24,7 @@ abstract: >-
   balance sheets. Every published number is traceable through a claims registry; selected
   statements are machine-checked in Lean 4. Produced with AI assistance (Claude Opus 5.5,
   Gemini 4 Neon) under the author's guidance and verification.
-# repository-code: PHASE 2 (no remote exists yet; do not invent a URL)
+repository-code: "https://github.com/Stefatorus/onrc-analiza-big-data-amanari"
 preferred-citation:
   type: report
   title: "Coada de la Registrul Comerțului — raport complet (noiembrie 2026)"

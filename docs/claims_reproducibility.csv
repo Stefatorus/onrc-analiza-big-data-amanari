@@ -1,0 +1,152 @@
+id,status,tier,script,source
+C01,PASS,R,stat_pack_ext.py (efort_aceeasi_perioada),"BERC (finale: admis, respins, renunțat, certificări)"
+C02,FAIL,D,—,aritmetică 4.176/165
+C03,PASS,P,reconcile_sources.py:main,BERC (sol = Amânat) + art. 106 Legea 265/2022
+C04,WARN,P,reconcile_sources.py:main,"BERC și portal, pe luna depunerii"
+C05,WARN,P,reconcile_sources.py:main,BERC
+C06,PASS,P,analyze_portal_snapshot.py,"portal, eșantion de mențiuni/radieri"
+C07,PASS,P,reconcile_sources.py:main (august_ratio_strict_finals_per_legal_wd),"BERC; finale = admis, respins, renunțat; zile lucrătoare cu calendarul legal 2026"
+C08,WARN,D,—,sindicate/presă
+C09,WARN,P,reconcile_sources.py:main,BERC + portal
+C10,FAIL,D,—,—
+C11,WARN,F,analyze_6month_trend.py,BERC (puține dosare decise)
+C12,FAIL,D,—,—
+C13,PASS,P,stat_pack.py (oldest_pending),portal
+C14,PASS,P,reconcile_sources.py:main,"BERC (CERERE265 finale, după data deciziei)"
+C15,PASS,P,reconcile_sources.py:main,BERC (INMATRIC265 finale)
+C16,PASS,P,reconcile_sources.py:main,BERC
+C17,PASS,P,reconcile_sources.py:main,BERC
+C18,PASS,P,reconcile_sources.py:main,BERC (29 iul.–30 nov. 2024)
+C19,PASS,P,reconcile_sources.py:main,BERC
+C20,FAIL,D,—,—
+C21,PASS,F,recompute_from_raw.py:windows,BERC
+C22,WARN,F,onrc_queue_model.py / model_inputs_v2.json,portal (creșterea numărului de înregistrare)
+C23,PASS,D,verificare manuală pe text,"Legea 265/2022 art. 105 alin. (1) și art. 109 — forma consolidată, legislatie.just.ro (citită la 22.11.2026)"
+C24,FAIL,D,—,—
+C25,FAIL,D,—,—
+C26,FAIL,D,—,—
+C27,FAIL,D,—,—
+C28,PASS,F,tandem_bottleneck_analysis.py:mj_tandem_conservation,"Nota Ministerului Justiției, 6.11.2026"
+C29,PASS,F,tandem_bottleneck_analysis.py:mj_tandem_conservation,"Nota MJ, 6.11.2026"
+C30,PASS,R,stat_pack_ext.py (efort_aceeasi_perioada),"BERC, ferestre comparabile ale anului (20.11.2026, zi parțială, exclusă)"
+C31,PASS,F,recompute_from_raw.py:windows,"BERC, calendar legal RO"
+C32,PASS,P,reconcile_sources.py:main (le2d_share_27apr_by_decision_date),BERC; ferestre 1.03–26.04 vs 27.04–31.07.2026
+C33,PASS,F,tandem_bottleneck_analysis.py:mj_tandem_conservation,Nota MJ (30.10 și 6.11) + identitatea de conservare
+C34,PASS,F,tandem_bottleneck_analysis.py:conventions,Nota MJ + BERC 2–6 nov.
+C35,PASS,F,tandem_bottleneck_analysis.py:conventions,model în tandem verificat (Lean T13c)
+C36,WARN,F,tandem_bottleneck_analysis.py:online_vs_office_hours,"BERC, depuneri în afara programului vs în program"
+C37,PASS,F,tandem_bottleneck_analysis.py:auto_amanari_timing,BERC (AUTO_AMANARI)
+C38,PASS,P,reconcile_sources.py:main (two_speed_2_19_nov),BERC
+C39,PASS,F,recompute_from_raw.py:windows,BERC
+C40,WARN,F,check_refiling_rate.py · ledger RHO-78 (WARN),BERC JSON brut (cu ID-ul firmei)
+C41,PASS,F,recompute_from_raw.py:eu_directive,BERC + Directiva (UE) 2017/1132 art. 13g alin. (7)
+C42,PASS,F,rerun_oug_current.py / audit_forecast.py,model de coadă verificat
+C43,PASS,F,rerun_oug_current.py / audit_forecast.py,model de coadă verificat
+C44,PASS,F,audit_data/oug_2026/scenarios.csv (median_saved),model de coadă verificat
+C47,PASS,F,FAPTE_VERIFICATE_PENTRU_VIDEO_SI_RAPORT.md §3,"Nota MJ, 6.11.2026 (citată în FAPTE_VERIFICATE §3)"
+C48,WARN,F,verify_v2.py → verify_v2_ledger.csv CLAIM-24 (EXT/WARN),Nota MJ vs BERC
+C49,PASS,F,audit_atlas.py → county_indicators.csv,BERC pe oficiul de depunere
+C50,PASS,F,verify_v2.py → ledger CLAIM-16 (corectat),"buletine BERC PDF, eșantion pe clustere"
+C51,PASS,F,build_oug_review.py,"Ministerul Justiției (fundamentarea proiectului OUG), preluat în evaluarea OUG"
+C52,WARN,F,steelman_and_solutions_engine.py → solutions_feasibility_and_simulations.csv,model de coadă verificat · OUG extins + ocupare 40% din cele 134 posturi finanțate
+C53,WARN,F,steelman_and_solutions_engine.py → solutions_feasibility_and_simulations.csv,model de coadă verificat · Decongestionare legislativă Zero-IT (OUG conversie CAEN 1-la-1 [-75%] + eșalonare CUI)
+C54,WARN,F,steelman_and_solutions_engine.py → solutions_feasibility_and_simulations.csv,model de coadă verificat · Pachet Minim Realist 0–60 zile (OUG prelungit + CAEN 1-la-1 [-75%] + Eșalonare + Triaj)
+C55,WARN,F,steelman_and_solutions_engine.py → steelman_counterarguments_matrix.csv,"model verificat (matricea steelman, S11)"
+C56,PASS,F,tandem_bottleneck_analysis.py:tandem_scenarios_distinct_anchor,model în tandem verificat (W0/W1/W2)
+C57,PASS,P,reconcile_sources.py:main (rejection_share_strict_finals),BERC; S2 2025 = 1.07–31.12.2025; acum = 1.10–20.11.2026
+C58,WARN,F,audit_forecast.py / audit_oug.py → oug_2026/trajectory.csv,"model de coadă verificat, scenariul fără măsuri"
+C59,WARN,F,oug_2026/scenarios.csv,model de coadă verificat
+C60,WARN,F,oug_2026/scenarios.csv,model de coadă verificat
+C61,WARN,F,oug_2026/scenarios.csv,model de coadă verificat; livrare OUG: 5 / 30 FTE net (policy_inputs.csv)
+C62,WARN,R,audit_forecast.py → forecast_trajectories.csv,motorul de prognoză verificat
+C63,WARN,R,forecast_grid.py → out/forecast_grid.json,grilă pe motorul verificat (multiplicatori pe intrări și ieșiri totale)
+C64,WARN,R,forecast_grid.py → out/forecast_grid.json,grilă pe motorul verificat
+C65,WARN,R,forecast_grid.py → out/forecast_grid.json,grilă pe motorul verificat
+C66,WARN,R,forecast_grid.py → out/forecast_grid.json,grilă pe motorul verificat
+C67,WARN,R,forecast_grid.py (reference),motorul de prognoză verificat (intrări totale / capacitate pe zi lucrătoare)
+C68,WARN,R,audit_forecast.py → forecast_wave_sensitivity.csv,motorul de prognoză verificat
+C69,PASS,R,audit_forecast.py → forecast_sensitivity.csv,motorul de prognoză verificat (2.000 de simulări)
+C70,PASS,R,audit_forecast.py → forecast_capacity_backtest.csv,"BERC, test pe ferestre succesive"
+C71,PASS,R,audit_forecast.py → forecast_monthly_profile.csv,"BERC, profil lunar estimat"
+C72,WARN,R,forecast_grid.py → out/forecast_grid.json,grilă pe motorul verificat
+C73,WARN,P,stat_pack.py (cohorte_KM_portal),eșantion myportal; cenzurare la 21.11.2026
+C74,WARN,P,stat_pack.py (cicluri_amanare_nov2026),"BERC, legătură prin număr și dată de depunere"
+C75,PASS,P,stat_pack.py (county_dispersion),"BERC, 42 de oficii"
+C76,WARN,P,stat_pack.py (little),BERC + Nota MJ
+C77,WARN,P,stat_pack.py (bootstrap_C14),BERC
+C78,PASS,P,stat_pack.py (intarziere_publicare),BERC
+C79,PASS,R,stat_pack_ext.py (efort_aceeasi_perioada),"BERC, aceeași perioadă a fiecărui an"
+C80,PASS,R,stat_pack_ext.py (efort_anual),BERC
+C81,WARN,R,stat_pack_ext.py (efort_in_afara_programului),"BERC, marca temporală a deciziei"
+C82,PASS,R,stat_pack_ext.py (efort_anual),BERC
+C83,PASS,F,build_oug_review.py (calcul reprodus),"Ministerul Justiției, nota de fundamentare a proiectului OUG (18.11.2026)"
+C84,PASS,P,stat_pack.py (serie_lunara),"BERC, toate categoriile, finale stricte"
+C85,PASS,F,build_oug_review.py / oug_2026/audit.json,Nota MJ (30.10 și 6.11.2026)
+C86,PASS,R,stat_pack_ext.py (efort_sezon_MJ),"BERC, aceleași ferestre ca nota MJ"
+C87,PASS,R,stat_pack_ext.py (efort_aceeasi_perioada),BERC
+C88,PASS,R,county_rankings.py (rang_probleme_locale_2025_2026),"BERC, mediana lunară pe oficiu vs națională"
+C89,PASS,R,county_rankings.py (rang_asteptare_nov),"BERC, 42 de oficii"
+C90,PASS,R,county_rankings.py (rang_respingeri),"BERC, 42 de oficii"
+C91,PASS,R,osint_crosscheck.py,"BERC + eșantion myportal + nota MJ, față de compilația de presă"
+C92,PASS,R,"osint_crosscheck.py (P12, P13)",BERC INMATRIC265 (decizii Admis) vs statistica ONRC citată în presă
+C93,PASS,R,osint_crosscheck.py (P05),Nota MJ (C47) vs compilația de presă
+C94,WARN,R,forecast_caen_compliance.py,motorul verificat; valul CAEN scalat la nota MJ (902.243)
+C95,WARN,R,forecast_caen_compliance.py,motorul verificat; aceeași ipoteză de conversie ca pachetul P4
+C96,PASS,R,backtest_queue_mechanics.py,"BERC: intrări și capacitate reale, cohorte decise până la 13.09.2026"
+C97,PASS,R,backtest_queue_mechanics.py,"BERC; capacitate = media ultimelor 12 zile, intrări = media ultimelor 8 săptămâni"
+C98,PASS,R,reserves_check/11_inflow_counter.py → serials_consolidate.py,contorul național al numerelor de cerere + BERC (cereri distincte cu decizie)
+C99,WARN,P,reserves_check/13_stock_estimate.py → serials_consolidate.py,"eșantion myportal ponderat pe intervale ale contorului, datat cu deciziile din BERC"
+C100,WARN,P,reserves_check/13_stock_estimate.py → serials_consolidate.py,"estimator pe eșantion (stratificat pe intervale ale contorului), cu deciziile din BERC"
+C101,PASS,J,"reserves_check/23_april27_floor.py, 22_task2_measures.py","BERC, zile lucrătoare între depunere și decizie"
+C102,PASS,J,reserves_check/22_task2_measures.py,BERC (numerele de cerere și momentul deciziei)
+C103,PASS,J,reserves_check/26_refiling_baseline.py,BERC JSON brut (identificatorul exact al firmei)
+C104,PASS,J,audit_finance.py,"Ministerul Finanțelor, situații financiare 2024–2025 (date deschise) + BERC înmatriculări"
+C105,PASS,R,audit_costs.py; renumărat în cost_check.py,BERC
+C106,WARN,R,cost_founded.py,"BERC (zile măsurate) + parametri din bilanțuri MF, Eurostat, buletine PDF + ipoteze declarate"
+C107,WARN,R,cost_founded.py,BERC + cota fiscală efectivă construită din bilanțuri și cotele legale 2026
+C108,WARN,R,cost_founded.py,MJ (stocul de referință) + scenariul fundamentat
+C109,WARN,R,cost_founded.py (sensitivity),ipoteză nemăsurată (cost pe zi)
+C110,WARN,R,cost_founded.py (substitution),ipoteze de substituție + MJ (bugetul OUG)
+C111,WARN,R,cost_monthly.py,BERC (zile măsurate) + parametrii scenariului central
+C112,WARN,R,cost_monthly.py; cost_founded.py,BERC + scenariul fundamentat
+C113,WARN,R,cost_monthly.py,BERC + parametrii scenariului central
+C114,PASS,F,replicare_independenta/lucru (scripturile analistului),"BERC, eșantionul myportal, cifrele MJ, raportul"
+C115,PASS,J,cost_evidence/ (T5),BERC + bilanțuri MF + dobânda titlurilor de stat la 1 an (MF)
+C116,WARN,R,cost_founded.py,"cost_evidence.json (bilanțuri MF, Eurostat, buletine PDF, cote legale)"
+C117,PASS,J,cost_evidence/ (T4.a),"Eurostat, statistici structurale ale întreprinderilor"
+C118,PASS,B,cost_evidence/ (T1),"buletine BERC PDF (modificările admise din oct.–nov. 2026, legate după număr de cerere)"
+C119,PASS,J,econometrics/ (02_*),BERC (înmatriculări 2024) legat de bilanțurile MF 2025
+C120,PASS,J,econometrics/ (02_*),"BERC + bilanțuri MF (cohorta 2024, anul 2025)"
+C121,PASS,J,econometrics/ (02_*),"BERC + bilanțuri MF (cohorta 2024, anul 2024)"
+C122,WARN,J,econometrics/ (04_*),motorul de prognoză (2.000 de variante) × volume BERC × efectele estimate × cote legale 2026
+C123,WARN,J,econometrics/ (04_*),ca C122 + randamentul titlurilor de stat la 10 ani (Eurostat)
+C124,WARN,J,econometrics/ (04_*),ca C122
+C125,WARN,J,econometrics/ (04_*),ca C122; scenariul „combinat” al motorului
+C126,PASS,B,delay_reasons/01–07 (07_results.py),"buletine BERC PDF (încheieri de amânare, câmpul «Motivul amânării»); clasificare hibridă clustere + reguli"
+C127,WARN,B,delay_reasons/01–07 (07_results.py),"buletine BERC PDF (încheieri de amânare, câmpul «Motivul amânării»); clasificare hibridă clustere + reguli"
+C128,WARN,B,delay_reasons/01–07 (07_results.py),"buletine BERC PDF (încheieri de amânare, câmpul «Motivul amânării»); clasificare hibridă clustere + reguli"
+C129,WARN,B,delay_reasons/01–07 (07_results.py),"buletine BERC PDF (încheieri de amânare, câmpul «Motivul amânării»); clasificare hibridă clustere + reguli"
+C130,WARN,B,delay_reasons/01–07 (07_results.py),"buletine BERC PDF (încheieri de amânare, câmpul «Motivul amânării»); clasificare hibridă clustere + reguli"
+C131,WARN,B,delay_reasons/01–07 (07_results.py),"buletine BERC PDF (încheieri de amânare, câmpul «Motivul amânării»); clasificare hibridă clustere + reguli"
+C132,WARN,B,delay_reasons/01–07 (07_results.py),"buletine BERC PDF (încheieri de amânare, câmpul «Motivul amânării»); clasificare hibridă clustere + reguli"
+C133,WARN,B,delay_reasons/01–07 (07_results.py),"buletine BERC PDF (încheieri de amânare, câmpul «Motivul amânării»); clasificare hibridă clustere + reguli"
+C134,WARN,B,delay_reasons/01–07 (07_results.py),"buletine BERC PDF (încheieri de amânare, câmpul «Motivul amânării»); clasificare hibridă clustere + reguli"
+C135,WARN,B,delay_reasons/01–07 (07_results.py),"buletine BERC PDF (încheieri de amânare, câmpul «Motivul amânării»); clasificare hibridă clustere + reguli"
+C136,WARN,B,delay_reasons/01–07 (07_results.py),"buletine BERC PDF (încheieri de amânare, câmpul «Motivul amânării»); clasificare hibridă clustere + reguli"
+C137,WARN,B,delay_reasons/01–07 (07_results.py),"buletine BERC PDF (încheieri de amânare, câmpul «Motivul amânării»); clasificare hibridă clustere + reguli"
+C138,WARN,B,delay_reasons/01–07 (07_results.py),"buletine BERC PDF (încheieri de amânare, câmpul «Motivul amânării»); clasificare hibridă clustere + reguli"
+C139,WARN,B,delay_reasons/07_results.py,"buletine BERC PDF (încheieri de amânare, câmpul «Motivul amânării»); clasificare hibridă clustere + reguli; marcajele «e"
+C140,WARN,B,delay_reasons/05–06,"eșantion aleator cu seed fix, etichetat din textul anonimizat înainte de a vedea predicțiile"
+C141,WARN,B,stat_pack_ext.py (efort_aceeasi_perioada) × delay_reasons/07_results.py; calcul în delay_reasons/08_solutions.py,"BERC (amânări pe zi lucrătoare, ca în C79) × ponderile evitabile (C139)"
+C142,PASS,B,delay_reasons/08_solutions.py (legal),"EUR-Lex: Reg. (UE) 2024/1689, 2026/1744, GDPR, Dir. (UE) 2019/1151; legislatie.just.ro: Legea 265/2022, Legea 242/2022 ("
+C143,PASS,B,delay_reasons/08_solutions.py,"matricea de soluții (evaluarea auditorului, asistată de AI)"
+C144,PASS,B,rejection_reasons/01–07 (07_results.py),"BERC (decizii Respins și amânările anterioare ale aceleiași cereri: același număr, aceeași zi de depunere)"
+C145,WARN,B,rejection_reasons/01–07 (07_results.py),"buletine BERC PDF (încheieri de respingere: «urmează a respinge … pe motiv»), legate de arhiva BERC"
+C146,PASS,B,rejection_reasons/01–07 (07_results.py),"BERC (prima decizie care nu e amânare, după ultima amânare din fereastră)"
+C147,WARN,B,rejection_reasons/05–07,"buletine BERC PDF (încheieri de respingere: «urmează a respinge … pe motiv»), legate de arhiva BERC; eșantion aleator cu"
+C148,WARN,B,rejection_reasons/01–07 (07_results.py),"buletine BERC PDF (încheieri de respingere: «urmează a respinge … pe motiv»), legate de arhiva BERC"
+C149,WARN,B,rejection_reasons/01–07 (07_results.py),"buletine BERC PDF (încheieri de respingere: «urmează a respinge … pe motiv»), legate de arhiva BERC; încheierea de amâna"
+C150,WARN,B,rejection_reasons/07_results.py,"buletine BERC PDF (încheieri de respingere: «urmează a respinge … pe motiv»), legate de arhiva BERC; marcajele «evitabil"
+C151,PASS,B,rejection_reasons/01–07 (07_results.py),"buletine BERC PDF (încheieri de respingere: «urmează a respinge … pe motiv»), legate de arhiva BERC"
+C152,PASS,D,stakeholders/LEGAL_BASIS.md,"legislatie.just.ro: HG nr. 656/1997, art. 5^1 alin. (2), (2^1), (3); HG 284/2025, art. II; HG 788/2026 (MO din 01.10.202"
+C153,PASS,D,stakeholders/LEGAL_BASIS.md,"legislatie.just.ro: Legea nr. 141/2025, art. XXII alin. (1), (2), (4), (6), forma consolidată la 12.11.2026 (citită la 2"

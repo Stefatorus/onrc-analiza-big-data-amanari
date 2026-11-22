@@ -369,4 +369,6 @@ def f_cannibal():
 if __name__ == "__main__":
     for fn in (f_history, f_collapse, f_now, f_flow, f_production, f_tandem, f_mix,
                f_counties, f_oug, f_cannibal, f_censoring):
+        if fn is f_collapse and not any(config.PORTAL_DIR.glob("harvest_*.jsonl")):
+            print("skip f_collapse: needs the unpublished myportal sample; committed fi02_colaps_doua_surse.svg kept"); continue
         fn(); print("ok", fn.__name__)

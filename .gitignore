@@ -46,3 +46,7 @@ Thumbs.db
 *token*.txt
 .claude/
 petitii_2026-11/
+
+# rendered reports published in git
+!reports/actuale/*.pdf
+!reports/analize_complementare/*.pdf

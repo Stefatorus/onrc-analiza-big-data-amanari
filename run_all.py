@@ -29,8 +29,9 @@ IA, PP, RC, CE, EC, DR, RR = ("independent_audit", "analysis/policy_paper_ro", "
 RAW = [config.ARTICLES_DIR]; PDFS = [config.BULLETINS_DIR]; PKL = [config.BERC_PKL]; FIN = [config.FIN_CACHE]
 
 
-def S(cwd, script, *args, capture=None, portal=False, needs=(), soft=False):
-    return dict(cwd=cwd, script=script, args=list(args), capture=capture, portal=portal, needs=list(needs), soft=soft)
+def S(cwd, script, *args, capture=None, portal=False, needs=(), soft=False, optional=False):
+    """optional=True: skipped (committed outputs kept) when an input is missing; soft=True: failure recorded, run continues."""
+    return dict(cwd=cwd, script=script, args=list(args), capture=capture, portal=portal, needs=list(needs), soft=soft, optional=optional)
 
 
 # (name, offline?, description, steps) in dependency order
@@ -75,7 +76,7 @@ STAGES = [
     ("registry", True, "Claims registry: every published number, read from the outputs above", [S(IA, "generate_claims_registry.py")]),
     ("lean", True, "Lean 4 data witnesses for the registry + lake build", [S(IA, "gen_lean_v3_witnesses.py")]),
     ("figures", True, "SVG figures for all volumes", [
-        S(PP, "generate_institutii_figures.py", needs=PKL), S(PP, "generate_prognoza_figures.py"), S(PP, "generate_stat_figures.py"),
+        S(PP, "generate_institutii_figures.py", needs=PKL, optional=True), S(PP, "generate_prognoza_figures.py"), S(PP, "generate_stat_figures.py"),
         S(PP, "generate_impact_figures.py"), S(PP, "generate_postponement_figures.py")]),
     ("volumes", True, "Main report, executive edition, volumes 0-7 (HTML -> PDF via Edge headless)", [
         S(PP, "build_all_volumes.py"), S(PP, "build_volume_stat.py", "--vol7")]),
@@ -111,6 +112,8 @@ def run_step(st):
         print(f"  SKIP {st['script']} [portal: committed outputs used]"); return
     for n in st["needs"]:
         if not Path(n).exists():
+            if st["optional"]:
+                print(f"  SKIP {st['script']} (no {Path(n).name}; committed outputs used)"); return
             sys.exit(f"  MISSING input for {st['script']}: {n}  (see docs/DATA.md; or use --offline)")
     env = dict(os.environ, PYTHONPATH=str(REPO) + os.pathsep + os.environ.get("PYTHONPATH", ""), PYTHONIOENCODING="utf-8")
     cmd = [PY, "-X", "utf8", st["script"], *st["args"]]

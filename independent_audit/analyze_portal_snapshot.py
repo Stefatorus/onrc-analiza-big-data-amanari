@@ -5,12 +5,14 @@ CSV + JSON summary. Partial-friendly: runs on whatever rows exist so far.
     .\venv\Scripts\python.exe -X utf8 independent_audit\analyze_portal_snapshot.py --run snap_national
 """
 from __future__ import annotations
+import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1])); import config  # repo config.py
 import argparse, glob, json, collections
 from pathlib import Path
 import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "out"
+PORTAL = config.PORTAL_DIR   # the row-level myportal sample is NOT published; empty -> load() returns an empty frame
 
 # public reference data (ONRC county code -> ORCT 2-letter mnemonic), not PII
 CODE2MN = {"3":"AG","4":"BC","5":"BH","6":"BN","7":"BT","8":"BV","9":"BR","10":"BZ",
@@ -42,8 +44,8 @@ def unify_county(r: dict) -> str:
 
 
 def load(run: str | None) -> pd.DataFrame:
-    files = ([OUT / f"harvest_{run}.jsonl"] if run else
-             [Path(p) for p in glob.glob(str(OUT / "harvest_*.jsonl"))])
+    files = ([PORTAL / f"harvest_{run}.jsonl"] if run else
+             [Path(p) for p in glob.glob(str(PORTAL / "harvest_*.jsonl"))])
     rows = {}
     for f in files:
         if not f.exists():

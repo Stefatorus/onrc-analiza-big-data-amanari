@@ -137,7 +137,7 @@ def i07_risk_2027():
         ax.vlines(x + off, np.maximum(lo, 0), hi, color=INK3, lw=.8)
     ax.set_xticks(x); ax.set_xticklabels(["T1 2027", "T2 2027", "T3 2027", "T4 2027"], fontsize=6.6)
     ax.set_ylabel("milioane lei pe trimestru", fontsize=6.4); ax.legend(fontsize=6, frameon=False, loc="upper left")
-    ax.set_xlabel("venituri bugetare încasate mai târziu din cauza cozii (net de ce se recuperează în același an); bare = mediana, linii = interval 95%", fontsize=6)
+    ax.set_xlabel("venituri bugetare care nu intră în bugetul anului din cauza cozii (net de ce se recuperează în același an); bare = mediana, linii = interval de simulare de 95%", fontsize=6)
     G.style_axes(ax); fig.tight_layout(); G.save_svg_and_png(fig, "i07_risc_venituri_2027")
 
 

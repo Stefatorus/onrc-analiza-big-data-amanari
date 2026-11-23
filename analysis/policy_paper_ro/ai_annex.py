@@ -19,7 +19,7 @@ def body(hl=lambda t: f"<mark class='hl'>{t}</mark>"):
              "<b>Gemini 4 Neon</b> (Google): folosit de autor, alături de Claude, la generarea raportului, la analiza datelor și la producerea rezultatelor. "
              "Contribuțiile celor două modele nu sunt separate componentă cu componentă în acest document."])
     b += h("2. Ce a făcut AI-ul, pas cu pas")
-    b += li(["<b>Date.</b> Scripturi pentru descărcarea buletinului BERC și a unui eșantion din portalul myportal, cu acces autorizat de autor, cu ritm limitat și fără date personale în rezultate.",
+    b += li(["<b>Date.</b> Scripturi pentru descărcarea buletinului BERC și a unui eșantion din portalul myportal, prin contul de utilizator al autorului, cu ritm limitat și fără date personale în rezultate.",
              "<b>Analiză.</b> Calculul așteptărilor, al ritmurilor de lucru, al amânărilor și respingerilor; corectarea cenzurării (Kaplan–Meier); comparații între surse.",
              "<b>Motivele amânărilor și ale respingerilor.</b> Extragerea textului din buletinele PDF, anonimizarea, gruparea (embeddings rulate local) și clasificarea motivelor; " +
              hl("eșantioanele „manuale” (100 de amânări, 150 de respingeri) au fost etichetate de un model AI, nu de o persoană, iar judecata „evitabil la depunere” este tot a AI-ului, neconfirmată de ONRC.") +
@@ -45,7 +45,7 @@ def body(hl=lambda t: f"<mark class='hl'>{t}</mark>"):
              "<b>Portalul myportal.onrc.ro</b>: 7.469 de numere de cerere sondate, recoltate pe 21–22 noiembrie 2026, fără nume, CNP sau date de contact.",
              "<b>Ministerul Justiției</b>: notele din 30 octombrie și 6 noiembrie 2026 (stocuri pe etape, intrări zilnice, buget).",
              "<b>Legea nr. 265/2022</b> (art. 105, art. 106 și art. 109), verificată în forma consolidată pe legislatie.just.ro la 22.11.2026 (o versiune anterioară a raportului folosise extrasul publicat de ONRC); <b>Directiva (UE) 2017/1132</b>, art. 13g alin. (7).",
-             "<b>Proiectul de OUG din 18 noiembrie 2026</b>, după rezumatul pus în consultare.",
+             "<b>Proiectul de OUG din 18 noiembrie 2026</b> și nota de fundamentare, textul integral pus în consultare de Ministerul Justiției.",
              "<b>Compilație de presă</b> din 21 noiembrie 2026 (surse secundare), folosită doar pentru comparație, în capitolul „Sursele noastre și sursele publice”."])
     b += h("6. Surse recomandate și date care ar trebui publicate")
     b += li(["Textul final al OUG și forma consolidată în vigoare a Legii 265/2022 (legislatie.just.ro).",
@@ -65,7 +65,7 @@ def body(hl=lambda t: f"<mark class='hl'>{t}</mark>"):
     b += li(["Prognoza descrie un dosar obișnuit, tratat în ordinea sosirii; coada reală nu e strict cronologică.",
              "Intervalele de prognoză reflectă ipotezele despre valurile de cereri și ritmul de soluționare, nu probabilități măsurate.",
              "Efectul fiecărei măsuri (OUG, conversia CAEN, verificări la depunere) e o ipoteză, nu o măsurătoare.",
-             "Evaluarea OUG folosește rezumatul din consultare; textul final poate schimba rezultatele.",
+             "Evaluarea OUG folosește textul integral pus în consultare; modelul a fost rulat pe măsurile pe care le prevede textul, cu ipotezele de livrare declarate; textul adoptat poate schimba rezultatele.",
              "Aspectele contractuale ale platformei ONRC v2.0 și anchetele în curs nu sunt analizate în acest raport.",
              "Nu se poate spune din date: câți oameni lucrează efectiv la fiecare etapă, de ce unele dosare trec mai repede, ce a cauzat schimbarea din 27 aprilie 2026 și cât de mare va fi exact valul CAEN din 2027."])
     b += h("9. Limitele utilizării AI")
@@ -73,5 +73,7 @@ def body(hl=lambda t: f"<mark class='hl'>{t}</mark>"):
              "Verificările automate și formale (Lean) confirmă aritmetica și logica, nu corectitudinea datelor de intrare.",
              "Revizuirea pe profiluri a fost simulată de AI; nu înlocuiește consultarea reală a instituțiilor, a personalului și a profesioniștilor.",
              "Textele legale au fost verificate pe legislatie.just.ro la 22.11.2026."])
+    import book_style as _BSV
+    b += p(_BSV.VERSION_NOTE)
     b += p("<span class='note'>Declarație de interes: autorul a avut o activitate de înființare de societăți, închisă. În 2024, autorul a semnalat public vulnerabilități ale platformei myportal. Credit: analiză big data pe datele din BERC.</span>")
     return b

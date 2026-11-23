@@ -14,6 +14,7 @@ import build_raport_institutii as BR
 import lab_styles as LS
 from lab_styles import BASE_CSS, badge, hl, prose, pulls, counter_case, quote_box
 import ai_annex
+import book_style as BSV
 
 V, E, REG = BR.V, BR.E, BR.REG
 HERE = BR.HERE
@@ -175,7 +176,7 @@ ROWS = [
  ("NF §2.2", q("evoluție care demonstrează necesitatea consolidării simultane a capacității de prelucrare și de soluționare"),
   "Modelul în tandem confirmă: întărind doar etapa a doua, registratorii rămân fără dosare, iar coada de operare crește; doar întărirea ambelor etape reduce stocul total." + E("C56") +
   " Articolele proiectului întăresc însă doar soluționarea (capitolul 2).",
-  "CONFIRMAT", "model"),
+  "COMPATIBIL", "model"),
  ("Preambul", q("măsurile [...] prevăzute de cadrul normativ în vigoare, inclusiv [...] personalul cu funcții de conducere [...] nu sunt suficiente"),
   "Prognoza fără măsuri noi, care include mecanismul existent: " + V("C59") + " zile în iunie 2027, la vârf " + V("C60") + " zile (scenarii)." + E("C59", "C60"),
   "COMPATIBIL", "model"),
@@ -291,7 +292,7 @@ def ch2():
     b += chart("figures_institutii", "fi10_canibalizare.svg", "Mutarea oamenilor din operare are un optim și un prag de câștig zero", ["C35"],
                "Producția totală a sistemului în funcție de câte dosare pe zi preiau la soluționare oamenii mutați din operare.",
                f"Varianta centrală a proiectului ({U_MID}/zi) cade înaintea optimului ({OPT}/zi); varianta ridicată ({U_HI}/zi) cade după pragul de câștig zero ({ZERO}/zi)." + E("C159", "C35"),
-               "Amendament util: desemnarea din alte activități decât operarea și publicarea activității de proveniență a fiecărui desemnat.")
+               "Amendament util: desemnarea din alte activități decât operarea și publicarea, agregat, a activităților din care provin desemnații.")
     b += P("<b>Art. I și art. III folosesc același personal.</b> Art. III dă mențiunile din oficiu " + q("exclusiv") + " consilierilor juridici specialiști, iar art. I alin. (6) îi scoate din aceste sarcini pe cei desemnați registratori. "
            + hl("Fiecare consilier desemnat registrator lasă mai puțini oameni pentru noul flux din art. III.") +
            " La volumul vizibil azi în BERC, concurența e mică; dacă art. 5^1 aduce și actele altor autorități, ea poate deveni importantă (secțiunea 2.3)." + E("C157"),
@@ -304,7 +305,7 @@ def ch2():
                                           q("Termenul prevăzut de art. 2 din Legea nr. 3/2026 [...] se prelungește până la data de 8 ianuarie 2028.")],
                    "Proiect de OUG, consultare publică, 18.11.2026")
     b += P("<b>Ce schimbă.</b> Fără art. II alin. (2), desemnarea conducerii de specialitate juridică pentru atribuțiile de registrator ar expira la 8 ianuarie 2027, potrivit notei, exact înaintea valului CAEN. "
-           "Aportul acestui mecanism nu e publicat. " + hl(f"În model, dacă el valorează 75 sau 150 de dosare-standard pe zi, prelungirea câștigă în iunie 2028 circa {C160[0].split('câștig ')[1]}, respectiv {C160[1].split('câștig ')[1]} zile.") + E("C160") +
+           "Aportul acestui mecanism nu e publicat. " + hl(f"În model, dacă el valorează 75 sau 150 de dosare-standard pe zi, prelungirea câștigă în iunie 2028 circa {C160[0].split('câștig ')[1].lstrip('≈')}, respectiv {C160[1].split('câștig ')[1].lstrip('≈')} zile.") + E("C160") +
            " Prelungirea e deci utilă, dar efectul ei e mic față de cel al art. I.",
            "Rezervă", W("C160"))
     b += P(f"<b>Durata față de prognoză.</b> Măsurile expiră la 8 ianuarie 2028. Prognoza fără măsuri noi urcă la {V('C59')} zile la mijlocul lui 2027 și la un vârf de {V('C60')} zile." + E("C59", "C60") + " " +
@@ -322,7 +323,7 @@ def ch2():
         q("personalul de specialitate juridică verifică proveniența actului, identificarea profesionistului, individualizarea măsurii și concordanța dintre act și mențiunea de înscris, fără a examina legalitatea măsurii dispuse de emitentul actului")],
         "Proiect de OUG, consultare publică, 18.11.2026")
     b += P("<b>Ce schimbă.</b> Înscrierile făcute în baza unei hotărâri judecătorești sau a actului altei autorități ies din coada registratorului și devin o operațiune administrativă. "
-           "Soluția are logică juridică: controlul de legalitate al măsurii l-a făcut deja emitentul. " +
+           "Logica textului: art. 5^2 alin. (2) cere verificarea provenienței actului și a concordanței cu mențiunea, " + q("fără a examina legalitatea măsurii dispuse de emitentul actului") + ". " +
            hl(f"Volumul e însă mic: în BERC, mențiunile pe hotărâri judecătorești au fost {HJ_H1} în S1 2026, {HJ_AO} în august–octombrie și {HJ_NV} în 2–17 noiembrie, adică {HJ_SH} din toate deciziile.") + E("C157") +
            " Categoria e un reper parțial: poate include și articole de certificare, iar actele altor autorități pot apărea în alte categorii sau deloc în buletin.",
            "Rezervă", REG["C157"]["rezerva_obligatorie"])
@@ -335,8 +336,13 @@ def ch2():
            "Pentru că se renunță la controlul registratorului, merită publicate numărul de acte primite, clarificările cerute și erorile constatate după înscriere (propunerea 6).")
     b += chart("figures_institutii", "fi09_oug.svg", "Proiectul complet ajută; art. III singur aproape deloc", ["C44", "C42", "C43"],
                "Așteptarea estimată în iunie 2028 fără măsuri noi, doar cu art. III și cu proiectul complet. Punctul e mijlocul simulărilor; bara e intervalul p10–p90.",
-               f"Câștigul se măsoară pe aceleași simulări: {V('C44')} pentru art. III, {GAIN_OUG} zile pentru proiectul complet." + E("C44", "C43"),
+               f"Câștigul se măsoară pe aceleași simulări: {V('C44')} pentru art. III, {GAIN_OUG} zile pentru proiectul complet. Punctele din grafic sunt medianele fiecărei variante, calculate separat: diferența dintre ele (de exemplu, între art. III și situația fără măsuri) nu e câștigul." + E("C44", "C43"),
                "Art. III e o simplificare utilă și ieftină, nu o măsură împotriva cozii. Efectul proiectului depinde de art. I.")
+    b += P("<b>IT: ce trebuie construit.</b> Pentru ca efectul art. I–IV să poată fi măsurat și pentru ca art. III să funcționeze: "
+           "(1) momentul trecerii fiecărui dosar de la operare la registrator, înregistrat și exportabil; (2) coduri pentru motivele de amânare și de respingere, publicate în încheiere; "
+           "(3) tabelul de corespondență CAEN Rev. 2 → Rev. 3, cu marcarea codurilor cu un singur corespondent (condiția conversiei automate); "
+           "(4) o etichetă de rutare pentru actele din art. III, cu starea „clarificare cerută” și termenul de răspuns al emitentului.",
+           "De ce", "Fără aceste câmpuri, nici ONRC, nici Ministerul nu pot vedea unde stă un dosar și ce lipsește la depunere.")
     # ---- Art. IV
     b += h3("2.4 Art. IV · Fluxul informatic, în 15 zile")
     b += P("<b>Ce schimbă.</b> ONRC are 15 zile pentru a adapta sistemul informatic la noul flux, iar art. III se aplică " + q("de la data optimizării fluxului în sistemul informatic") + ". "
@@ -353,7 +359,7 @@ def ch2():
                "Art. IV se ocupă doar de fluxul pentru art. III. O completare cu verificări la depunere ar lucra pe o parte mult mai mare a muncii.",
                f"Circa o amânare din cinci avea numai motive evitabile la depunere, iar aproape jumătate cel puțin unul ({C139[0].split(' (')[0]} / {C139[1].split(' (')[0]})." + E("C139"))
     b += concl("Proiectul e util, dar efectul lui depinde de un singur lucru pe care textul nu-l fixează: câți consilieri ajung efectiv la soluționare și din ce activități vin. "
-               "Art. II e necesar, art. III e o simplificare corectă, dar mică, iar art. IV poate deveni mult mai valoros dacă se extinde la verificările de la depunere.")
+               "Art. II e necesar, art. III e o simplificare utilă, dar mică, iar art. IV poate deveni mult mai valoros dacă se extinde la verificările de la depunere.")
     return sect("Capitolul 2", "ao-c2", "Articol cu articol: ce schimbă și ce efect are",
                 "Ce prevede fiecare articol, ce arată datele și modelele noastre despre efectul lui și unde are limite.",
                 "Surse: textul proiectului · model verificat (scenariile OUG, 2.000 de variante) · model în tandem · BERC · motivele amânărilor (buletine PDF)", b)
@@ -366,7 +372,7 @@ def ch3():
     b += h3("3.1 Valul CAEN din 2027")
     b += P(f"Nota dă {NF_CAEN_LEFT} de entități care nu și-au actualizat încă codurile CAEN." + E("C155") +
            f" Prognoza noastră de bază presupune un val de {C162}: deja acest val face din CAEN cea mai mare sursă de risc, cu circa {C68[0].split(' (')[0].lstrip('≈')} de zile la vârf." + E("C162", "C68") + " " +
-           hl(f"Dacă 80% sau toate entitățile rămase ar depune înainte de sfârșitul perioadei de tranziție, așteptarea din iunie 2027 ar urca la {CAEN80}, respectiv {CAEN100} de zile; cu o conversie automată a codurilor simple, la {CONV80}, respectiv {CONV100}.") + E("C94", "C95"),
+           hl(f"Dacă 80% sau toate entitățile rămase ar depune înainte de sfârșitul perioadei de tranziție, așteptarea din iunie 2027 ar urca la {CAEN80}, respectiv {CAEN100} de zile (circa 9–11 luni); cu o conversie automată a codurilor simple, la {CONV80}, respectiv {CONV100}.") + E("C94", "C95"),
            "Rezervă", W("C94").split(". ")[0] + ". " + W("C95").split(". ")[1].rstrip(".") + ".", key=True)
     b += P("Perioada de tranziție este stabilită prin HG nr. 656/1997, art. 5^1, nu prin lege, iar ambele versiuni ale codurilor sunt valabile în această perioadă." + E("C152") +
            " Guvernul o poate corela cu capacitatea ONRC fără o lege nouă. Conversia automată „1-la-1”, fără modificarea actului constitutiv, cere însă o normă de rang legal: proiectul de OUG este vehiculul potrivit (propunerea 1)." + E("C53"))
@@ -377,7 +383,7 @@ def ch3():
     b += h3("3.2 Verificările la depunere")
     b += P(f"Circa o decizie din cinci e o amânare, iar {C139[0].split(' (')[0]} dintre amânări aveau numai motive evitabile la depunere." + E("C21", "C139") +
            f" Aproape toate respingerile ({V('C144').split(' (')[0]}) vin după o amânare a aceleiași cereri, iar după o respingere aproape jumătate din firme depun din nou în 30 de zile: aceeași muncă se face de două ori." + E("C144", "C103") + " " +
-           hl("Verificările la depunere țin de ONRC și ADR, nu cer o lege nouă și pot începe imediat; proiectul le-ar putea da un termen și un temei explicit în art. IV.") + E("C143"),
+           hl("O parte din verificări țin de ONRC și nu cer o lege nouă; cele care interoghează alte registre cer protocoale, Platforma națională de interoperabilitate și o evaluare de impact privind protecția datelor. Proiectul le-ar putea da un termen realist și un temei explicit în art. IV.") + E("C142", "C143"),
            "Rezervă", W("C139").split(". ")[0] + ".")
     b += h3("3.3 Ocuparea posturilor finanțate")
     b += P(f"Nota dă {V('C51').split(' → ')[0].replace(' / ', ', ')} posturi (aprobate, finanțate, ocupate): rezultă {V('C51').split('→ ')[1]}." + E("C51") +
@@ -393,7 +399,7 @@ def ch3():
     b += h3("3.5 Datele și evaluarea")
     b += P("În textul notei analizat de noi nu am găsit conținut la secțiunile 3.1, 6.2 și 8.1 (beneficii și costuri, consultări, monitorizare) și nici indicatori de rezultat sau o dată de evaluare. "
            "Datele care ar permite verificarea efectului există la ONRC: stocul zilnic pe etape și tipuri de cereri, intrările, deciziile, amânările și respingerile pe oficii, "
-           "persoanele desemnate și orele lor nete. Legea nr. 544/2001, art. 5, și ROF-ul ONRC, art. 16, permit publicarea lor fără o normă nouă (propunerea 6).")
+           "numărul persoanelor desemnate și orele lor nete, agregat, fără date personale. Legea nr. 544/2001, art. 5, și ROF-ul ONRC, art. 16, permit publicarea lor fără o normă nouă (propunerea 6).")
     b += concl("Proiectul tratează capacitatea la registrator. Ce lipsește tratează volumul de muncă: CAEN, amânările evitabile și ocuparea posturilor. "
                "Fără aceste completări, câștigul rămâne parțial, iar riscul cel mai mare, valul CAEN, rămâne neacoperit.")
     return sect("Capitolul 3", "ao-c3", "Ce nu tratează proiectul",
@@ -415,10 +421,10 @@ AMEND = [
  ("Derogare de la suspendarea concursurilor pentru ONRC", "Articol nou: ONRC poate ocupa prin concurs posturile vacante finanțate, peste limita excepțiilor din 2026.",
   "Legea nr. 141/2025, art. XXII alin. (1), (2), (4), (6)",
   f"Pachetul P3 (OUG extins + 40% din posturile vacante): {V('C52')} zile în iunie 2028." + E("C52", "C153")),
- ("Desemnați din afara operării", "Art. I alin. (1): desemnarea se face, cu prioritate, din personal care nu lucrează la operare; numărul și activitatea de proveniență se publică.",
+ ("Desemnați din afara operării", "Art. I alin. (1): desemnarea se face, cu prioritate, din personal care nu lucrează la operare, în măsura în care există voluntari (acordul scris rămâne condiția); numărul și activitățile de proveniență se publică agregat.",
   "Legea nr. 265/2022, art. 21 alin. (2), art. 22 alin. (5)",
   f"Fără plafon tandem: varianta ridicată {STRONG} zile e posibilă doar așa (optim {OPT}/zi; zero la {ZERO}/zi)." + E("C61", "C35")),
- ("Indicatori publicați lunar și evaluare la 6 luni", "Articol nou: ONRC publică lunar stocul pe etape și tipuri, intrările, deciziile, amânările, respingerile, persoanele desemnate și orele nete; MJ evaluează efectul la 6 luni.",
+ ("Indicatori publicați lunar și evaluare la 6 luni", "Articol nou: ONRC publică lunar stocul pe etape și tipuri, intrările, deciziile, amânările, respingerile, numărul de persoane desemnate și orele nete, agregat la nivel național, fără date personale; MJ evaluează efectul la 6 luni.",
   "Legea nr. 544/2001, art. 5; ROF ONRC, art. 16 alin. (3) lit. d); Legea nr. 265/2022, art. 22",
   "Nemodelat: permite verificarea efectului." + E("C42", "C43")),
  ("Criteriu de ieșire în loc de dată fixă", "Art. II: măsurile se aplică până la 8.01.2028 și se prelungesc automat, cel mult o dată, dacă așteptarea mediană publicată depășește un prag stabilit.",
@@ -430,7 +436,7 @@ AMEND = [
  ("Fișa financiară completă", "Nota: numărul de persoane, diferențele salariale pe categorie, costul adaptării IT și costul de a nu acționa.",
   "Legea nr. 500/2002, art. 15; Legea nr. 69/2010, art. 15",
   f"O zi în plus cu stocul actual: {C108.split(' / ')[0]} mil. lei în economie." + E("C108")),
- ("Precizări de redactare", "Nota: aceeași trimitere ca în art. II (OUG nr. 109/2024); unitatea seriei de peste opt ori (toate cererile de pe contor sau doar cele de înregistrare); același reper (semestrul I) în preambul și în notă; „persoane învestite” în art. III–IV.",
+ ("Precizări de redactare", "Nota: aceeași trimitere ca în art. II (OUG nr. 109/2024); unitatea seriei de peste opt ori (toate cererile de pe contor sau doar cele de înregistrare); același reper (semestrul I) în preambul și în notă; în art. III–IV, „funcții învestite” (textul proiectului) devine „persoane învestite”, ca în notă.",
   "Legea nr. 24/2000 (tehnica legislativă)",
   "Fără efect asupra cozii; elimină ambiguitățile." + E("C154", "C165")),
 ]
@@ -442,7 +448,7 @@ def ch4():
     b += wide('<div class="tbl-wrap allow-break"><div class="tbl-head"><span class="tnum">Tabelul 2</span> Propuneri de amendamente, cu temei și efect modelat</div>'
               '<table class="am"><thead><tr><th>Nr.</th><th>Propunerea</th><th>Temei legal</th><th>Efect (model)</th></tr></thead>'
               f'<tbody>{trs}</tbody></table>'
-              '<p class="tcap">Temeiurile legale sunt cele verificate pe legislatie.just.ro la 22.11.2026 (LEGAL_BASIS.md). Efectele sunt scenarii, cu ipotezele în registru; nu sunt promisiuni. '
+              '<p class="tcap">Temeiurile legale sunt cele verificate pe legislatie.just.ro la 22.11.2026 (lista, în sursele din capitolul 6). Efectele sunt scenarii, cu ipotezele în registru; nu sunt promisiuni. '
               'Pachetele P3–P5 combină mai multe măsuri și presupun livrarea fiecăreia.</p></div>')
     b += P(hl(f"Un pachet minim realist, cu OUG prelungit, conversia CAEN, eșalonarea depunerilor și triajul la intrare, ar coborî așteptarea din iunie 2028, în model, la {V('C54')} zile.") + E("C54") +
            " Rezultatul e fragil: la o singură schimbare plauzibilă a ipotezelor, câștigul scade mult.",
@@ -453,7 +459,7 @@ def ch4():
                "Propunerile 1–5 transformă un câștig de ordinul unei luni într-unul de ordinul lunilor; fiecare are însă condiția ei de livrare.")
     return sect("Capitolul 4", "ao-c4", "Propuneri pentru consultare",
                 "Amendamente concrete, fiecare cu temei legal și efectul estimat în model.",
-                "Surse: LEGAL_BASIS.md (legislatie.just.ro, 22.11.2026) · model verificat (pachete P3–P5) · model în tandem · motivele amânărilor", b)
+                "Surse: temeiurile legale (legislatie.just.ro, 22.11.2026) · model verificat (pachete P3–P5) · model în tandem · motivele amânărilor", b)
 
 
 # ================================================================== 5. BUDGET
@@ -466,17 +472,17 @@ def ch5():
            " " + hl("Raportul nu e un cost marginal: arată doar că, dacă desemnările livrează capacitate, suma e mică pe dosar.") + E("C163"),
            "Rezervă", W("C163"))
     b += P(f"<b>Costul de a nu acționa.</b> Fiecare zi în plus cu stocul actual costă, în scenariul central, circa {C108.split(' (')[0]} milioane de lei în economie și {C108.split(' / ')[1].split(' (')[0]} la buget." + E("C108") +
-           " Cifra nu se înmulțește cu numărul de zile, pentru că stocul și compoziția lui se schimbă. "
-           f"Pentru 2027, fără măsuri noi, circa {V('C122').split(' (')[0]} de milioane de lei din veniturile bugetare s-ar încasa abia după 2027: un risc de calendar, nu o pierdere; costul de finanțare al amânării e de circa {v0('C123')} de milioane." + E("C122", "C123") +
-           f" Un pachet realist ar evita mutarea a circa {v0('C125')} de milioane." + E("C125"),
-           "Rezervă", W("C108") + " " + W("C122").split(";")[0] + ".")
+           " Cifra nu se înmulțește cu numărul de zile, pentru că stocul și compoziția lui se schimbă. " +
+           REG["C122"]["public_ro"] + " " + REG["C124"]["public_ro"] + E("C122", "C124") +
+           " " + REG["C123"]["public_ro"] + " " + REG["C125"]["public_ro"] + E("C123", "C125"),
+           "Rezervă", W("C108") + " " + W("C122").split(". Reperul")[0] + ".")
     b += P("<b>Cum se citește comparația.</b> " + hl("Chiar dacă aproape toată activitatea pierdută ar fi preluată de alte firme, costul net al întârzierilor rămâne de ordinul milioanelor sau zecilor de milioane de lei.") + E("C110") +
            " " + W("C110"),
            "Onest", "Comparația dintre bugetul OUG și costul întârzierilor sprijină direcția (măsura merită), nu o cifră de randament.")
-    b += chart("figures_impact", "i07_risc_venituri_2027.svg", "Veniturile bugetare mutate în 2027", ["C122", "C125", "C83"],
-               "Pe trimestre ale anului 2027, veniturile care ar intra mai târziu din cauza cozii, fără măsuri (portocaliu) și cu un pachet realist (verde).",
-               f"Proiectul costă {V('C83')}; un pachet realist ar evita mutarea a circa {v0('C125')} de milioane de lei din veniturile anului." + E("C83", "C125"),
-               f"Fără măsuri, circa {V('C122').split(' (')[0]} de milioane de lei s-ar încasa în anul următor; veniturile nu se pierd, dar întârzie." + E("C122"))
+    b += chart("figures_impact", "i07_risc_venituri_2027.svg", "Venituri care nu intră în bugetul anului 2027 din cauza cozii", ["C122", "C125", "C83"],
+               "Pe trimestre ale anului 2027, veniturile care nu intră în bugetul anului din cauza cozii, fără măsuri (portocaliu) și cu un pachet realist (verde); liniile: intervalul de simulare de 95% (percentilele 2,5–97,5 ale variantelor simulate)." + E("C122"),
+               f"Proiectul costă {V('C83')}. " + REG["C125"]["public_ro"] + E("C83", "C125"),
+               REG["C124"]["public_ro"] + E("C124"))
     b += chart("figures_impact", "i01_cost_lunar.svg", "Costul lunar al întârzierilor, din 2024", ["C111", "C106"],
                "Costul economic (sus) și încasările bugetare afectate (jos), lună de lună, în scenariul central; liniile verticale dau intervalul scenariilor.",
                f"În octombrie–noiembrie 2026, întârzierile au costat de circa {BR.ORI} ori mai mult decât într-o lună obișnuită." + E("C111"),
@@ -493,8 +499,8 @@ def ch6():
         "Scenariile de model au intervale largi; câștigurile sunt mediane pe aceleași simulări.",
         "Cifrele notei sunt citate; CAEN, capitalul și lista ANAF nu se pot verifica din datele noastre.",
         "Intrările și stocul sunt estimate din contor și din eșantionul portalului (±10%).",
-        "CERERE_HJ265 e un reper parțial pentru volumul art. III.",
-        "Analizăm textul pus în consultare; nu e consultanță juridică."]) + "</ul>"
+        "Categoria BERC a mențiunilor pe hotărâri judecătorești e un reper parțial pentru volumul art. III.",
+        "Analizăm textul integral pus în consultare; nu e consultanță juridică, iar observațiile despre efectul juridic al unor prevederi sunt ale autorului."]) + "</ul>"
     b += h3("6.2 Surse")
     src = [
         "<b>Proiectul de OUG</b> pentru instituirea unor măsuri privind activitatea de înregistrare în registrul comerțului și <b>Nota de fundamentare</b>, puse în consultare de Ministerul Justiției la 18.11.2026 (text extras: <code>independent_audit/oug_text/</code>).",
@@ -512,10 +518,6 @@ def ch6():
 
 def annex():
     body = ai_annex.body(hl)
-    body = body.replace("<b>Proiectul de OUG din 18 noiembrie 2026</b>, după rezumatul pus în consultare.",
-                        "<b>Proiectul de OUG din 18 noiembrie 2026</b> și nota de fundamentare, textul integral pus în consultare.")
-    body = body.replace("Evaluarea OUG folosește rezumatul din consultare; textul final poate schimba rezultatele.",
-                        "Evaluarea OUG folosește textul pus în consultare; textul adoptat poate schimba rezultatele.")
     return (f'<section class="chapter runon" style="page: ao-body;"><div class="copen"><div class="cnum">Anexă</div><h2>{ai_annex.TITLE}</h2>'
             '<p class="cdek">Transparență: ce a făcut inteligența artificială, ce a făcut autorul, ce cerințe a avut analiza, pe ce surse se bazează și ce nu se poate afla din ele.</p></div>'
             f'<div class="ai-annex">{body}</div></section>')
@@ -537,7 +539,7 @@ def cover():
     <dt>Autor</dt><dd><strong>Ștefan-Lucian Deleanu</strong> · stefandeleanu.ro</dd>
     <dt>Documente analizate</dt><dd>Proiectul de OUG și nota de fundamentare, puse în consultare la 18 noiembrie 2026</dd>
     <dt>Date</dt><dd>BERC până la {REG['C14']['data_date'].replace('BERC până la ', '')} · eșantion myportal 21–22.11.2026 · modelul verificat de prognoză</dd>
-    <dt>Ediție și dată</dt><dd>Analiză pentru consultare · 23.11.2026</dd>
+    <dt>Ediție și dată</dt><dd>Analiză pentru consultare · {BSV.VERSION_HTML} · {BSV.VERSION_DATE}</dd>
     <dt>Declarație de interes</dt><dd>Autorul a avut o activitate de înființare de societăți, închisă. În 2024, autorul a semnalat public vulnerabilități ale platformei myportal.</dd>
     <dt>Utilizarea AI</dt><dd>{ai_annex.DISCLAIMER}</dd>
   </dl>

@@ -17,6 +17,7 @@ sys.path.insert(0, str(HERE))
 import build_raport_institutii as BRI          # V, E, hl, BASE_CSS, EXTRA_CSS, FOOT, compile_pdf, REG, HIRE_40, OCTNOV
 import lab_styles as LS
 import ai_annex
+import book_style as BSV
 from lab_styles import pulls
 
 V, E, hl, REG = BRI.V, BRI.E, BRI.hl, BRI.REG
@@ -47,13 +48,13 @@ CAV = {
     "C66": "scenariu de model", "C67": "unități de muncă, mediană pe simulări", "C68": "contrafactual: arată pârghia, nu ce e realizabil",
     "C72": "scenariu de model", "C94": "scenariu: dacă se confirmă cifrele publice despre CAEN", "C95": "efectul conversiei e o ipoteză de intrare",
     "C99": "estimare din eșantion, fără înmatriculările în curs", "C100": "estimare compatibilă cu cifrele MJ la circa ±10%",
-    "C106": "interval de scenarii, nu măsurătoare", "C107": "interval de scenarii; o parte se încasează mai târziu",
+    "C106": "interval de scenarii, nu măsurătoare", "C107": "interval de scenarii; presupune, fără sursă, că o parte din vânzările amânate se pierd definitiv",
     "C108": "indicator de sensibilitate; nu se înmulțește cu numărul de zile", "C109": "ipoteză fără sursă publică",
     "C110": "comparația cu bugetul nu e robustă", "C111": "scenariu cu parametri declarați; nu e contabilitate",
     "C112": "partea din stoc e o expunere, nu un cost produs", "C113": "scenariul central; 2026 e parțial",
     "C116": "parametrii fără bază rămân ipoteze declarate",
-    "C122": "distribuție de scenarii, interval larg, extrapolată dincolo de așteptările pe care s-a estimat efectul",
-    "C123": "scenariu", "C124": "limită extremă, nu prognoză", "C125": "depinde de scenariul de măsuri",
+    "C122": "interval de simulare de 95%, condiționat de ipoteze; față de o coadă normală, de 3 zile; extrapolat dincolo de așteptările pe care s-a estimat efectul",
+    "C123": "valabil doar dacă veniturile se recuperează", "C124": "limită extremă, nu prognoză; componenta persistentă are un interval foarte larg", "C125": "depinde de scenariul de măsuri",
     "C127": "clasificare automată verificată pe un eșantion; ponderile nu se adună", "C128": "clasificare automată; ponderile nu se adună",
     "C129": "clasificare automată; ponderile nu se adună",
     "C139": "«evitabil» e evaluarea autorului, asistată de AI, neconfirmată de ONRC",
@@ -105,8 +106,8 @@ def card_prognoza():
     return card("figures_institutii", "fi12_prognoza.svg", "Ce prognozăm: fără măsuri noi, așteptarea crește puternic în 2027",
                 W("Câte zile ar aștepta un dosar depus în fiecare săptămână, până în iunie 2028, dacă nu se schimbă nimic. Linia e mijlocul simulărilor; banda cuprinde 8 din 10 variante. "
                   "Vârful, în cazul central: " + V("C60") + " zile." + cite("C60"),
-                  "Cu proiectul, așteptarea din iunie 2028 rămâne de ordinul a trei luni; câștigul median, pe aceleași simulări, e de circa " + G34 + " de zile." + E("C43") +
-                  " Valul de actualizări CAEN de la începutul lui 2027, cea mai mare sursă de risc, nu e tratat direct în rezumatul public al proiectului." + cite("C68"),
+                  "Cu proiectul, așteptarea din iunie 2028 rămâne de ordinul a trei luni; câștigul median, pe aceleași simulări, e de circa " + G34.lstrip("≈") + " de zile." + E("C43") +
+                  " Valul de actualizări CAEN de la începutul lui 2027, cea mai mare sursă de risc, nu e tratat direct în textul proiectului." + cite("C68"),
                   PR("C108") + cite("C108")),
                 H(PR("C59"), ["C59", "C60"]))
 
@@ -156,7 +157,7 @@ def card_grila():
 def card_caen():
     return card("figures_institutii", "fi22_caen.svg", "Riscul valului CAEN și efectul conversiei automate",
                 W("Așteptarea din iunie 2027 dacă firmele depun în masă actualizările CAEN înainte de sfârșitul perioadei de tranziție (roșu) și dacă codurile simple sunt convertite automat (verde).",
-                  "Rezumatul public al proiectului nu tratează direct valul CAEN. Perioada de tranziție se stabilește prin hotărâre a Guvernului (HG nr. 656/1997, art. 5^1); după calculul nostru, se încheie la 1 aprilie 2027." + E("C152"),
+                  "Textul proiectului nu tratează direct valul CAEN. Perioada de tranziție se stabilește prin hotărâre a Guvernului (HG nr. 656/1997, art. 5^1); după calculul nostru, se încheie la 1 aprilie 2027. Conversia automată, fără modificarea actului constitutiv, cere însă o normă de rang legal, pe care o poate cuprinde chiar OUG." + E("C152"),
                   PR("C95") + cite("C95")),
                 H(PR("C94"), ["C94"]))
 
@@ -164,7 +165,7 @@ def card_caen():
 def card_oug():
     return card("figures_institutii", "fi09_oug.svg", "Proiectul de OUG în modelul verificat: iunie 2028",
                 W("Așteptarea estimată în iunie 2028 în trei variante: fără măsuri noi, doar Art. III și proiectul complet. Punctul e mijlocul simulărilor, bara e intervalul p10–p90.",
-                  "Câștigul se măsoară pe aceleași simulări: circa " + G34 + " de zile pentru proiectul complet; Art. III: " + V("C44") + "." + E("C43", "C44"),
+                  "Câștigul se măsoară pe aceleași simulări: circa " + G34.lstrip("≈") + " de zile pentru proiectul complet; Art. III: " + V("C44") + ". Punctele din grafic sunt medianele fiecărei variante, calculate separat: diferența dintre ele nu e câștigul." + E("C43", "C44"),
                   PR("C61") + cite("C61")),
                 H(PR("C43"), ["C42", "C43"]))
 
@@ -178,17 +179,17 @@ def card_cost():
 
 
 def card_venituri():
-    return card("figures_impact", "i07_risc_venituri_2027.svg", "Venituri bugetare încasate mai târziu în 2027",
-                W("Pe trimestre ale anului 2027, veniturile bugetare care ar intra mai târziu din cauza cozii, fără măsuri noi și cu un pachet realist de măsuri.",
+    return card("figures_impact", "i07_risc_venituri_2027.svg", "Venituri care nu intră în bugetul anului 2027 din cauza cozii",
+                W("Pe trimestre ale anului 2027, veniturile bugetare care nu intră în bugetul anului din cauza cozii, fără măsuri noi și cu un pachet realist de măsuri; liniile: intervalul de simulare de 95% (percentilele 2,5–97,5 ale variantelor simulate)." + E("C122"),
                   "Proiectul de OUG costă " + V("C83") + "." + E("C83") + " " + PR("C125") + cite("C125"),
-                  "Fără măsuri, circa " + v0("C122") + " de milioane de lei ar intra în anul următor: un risc de calendar, nu o pierdere. Costul de finanțare al amânării: circa " + v0("C123") + " de milioane." + cite("C122", "C123")),
+                  PR("C123") + cite("C123") + " " + PR("C124") + cite("C124")),
                 H(PR("C122"), ["C122"]))
 
 
 def card_cauzal():
     return card("figures_impact", "i06_efect_cauzal.svg", "Efectul unei zile de așteptare asupra firmelor noi",
                 W(PR("C119") + E("C119"),
-                  "Fiecare zi câștigată mută mai devreme o parte din vânzările și taxele primului an ale firmelor noi." + E("C121"),
+                  "Fiecare zi câștigată adaugă la primul an al firmelor noi o parte din vânzările și taxele lor." + E("C121"),
                   PR("C121") + E("C121")),
                 H(PR("C120"), ["C120"]))
 
@@ -196,7 +197,7 @@ def card_cauzal():
 def card_amanari():
     return card("figures_impact", "i08_motive_amanare.svg", "De ce se amână dosarele și ce se poate automatiza",
                 W("Motivele amânărilor din 19 octombrie–18 noiembrie 2026 și nivelul de automatizare al soluției: reguli fixe, AI, AI avansat, judecata registratorului. " + PR("C82") + E("C82"),
-                  "Rezumatul public al proiectului nu tratează amânările. Verificările la depunere țin de ONRC, cu sprijinul ADR, și nu cer o lege nouă.",
+                  "Textul proiectului nu tratează amânările. Verificările la depunere țin de ONRC, cu sprijinul ADR; cele care interoghează alte registre cer protocoale, Platforma națională de interoperabilitate și o evaluare de impact privind protecția datelor.",
                   PR("C141") + cite("C141")),
                 H(PR("C143"), ["C143"], ' <span class="cav">(nu vedem sistemele interne ONRC: o parte din verificări poate exista deja)</span>'))
 
@@ -216,10 +217,13 @@ def para(*xs):
 
 def MJ():
     asks = [
-        ("Ajustați proiectul de OUG și publicați-l integral",
-         "Ca, potrivit rezumatului public (consilieri juridici ai ONRC desemnați temporar), capacitatea suplimentară să ajungă atât la operare, cât și la soluționare, cu un termen de evaluare a efectelor; publicarea integrală a proiectului, cu nota de fundamentare și fișa financiară, și o dezbatere publică.",
-         "Legea nr. 52/2003, art. 7 alin. (2), (9); HG nr. 592/2024, art. 6 pct. II.3",
-         PR("C56") + E("C56")),
+        ("Amendați proiectul de OUG: capacitate pe ambele etape",
+         "Art. I desemnează consilierii juridici specialiști ai ONRC ca registratori, cu acordul lor scris, până la 8 ianuarie 2028: ca această capacitate să ajungă atât la operare, cât și la soluționare, cu o derogare pentru ocuparea posturilor vacante finanțate ale ONRC și un termen de evaluare a efectelor; nota de fundamentare completată cu fișa financiară detaliată.",
+         "Legea nr. 52/2003, art. 7 alin. (2), (9); HG nr. 592/2024, art. 6 pct. II.3; Legea nr. 141/2025, art. XXII",
+         PR("C56") + E("C56", "C43")),
+        ("Introduceți în proiectul de OUG conversia automată CAEN „1-la-1”",
+         "Actualizarea din oficiu a codurilor CAEN cu un singur corespondent în Rev. 3, fără modificarea actului constitutiv și fără cerere: cere o normă de rang legal, iar OUG e vehiculul potrivit; perioada de tranziție se corelează separat, prin HG.",
+         "HG nr. 592/2024, art. 6 pct. II.3 și I.1; HG nr. 656/1997, art. 5^1; HP nr. 4/2026, anexa 2 (Programul de guvernare)", PR("C95") + cite("C94", "C95")),
         ("Aprobați excepțiile de la suspendarea concursurilor",
          "Ca ordonator principal de credite, aprobați pentru ONRC excepțiile de la suspendarea ocupării posturilor vacante din 2026, pentru etapele în care se formează coada; concursurile le organizează directorul general.",
          "Legea nr. 141/2025, art. XXII alin. (2), (4), (6); Legea nr. 265/2022, art. 22 alin. (5)",
@@ -231,9 +235,6 @@ def MJ():
         ("Fundamentați creditele pentru personal și IT",
          "Cereți Ministerului Finanțelor creditele necesare pentru personal și IT, la rectificare sau în bugetul pe 2027.",
          "HG nr. 592/2024, art. 6 pct. VI.5", PR("C122") + cite("C122")),
-        ("Inițiați regimul simplificat pentru actualizarea CAEN",
-         "Analiza de lege ferenda a unui regim fără modificarea actului constitutiv, cu trecerea automată a codurilor cu corespondență unică, și a eșalonării depunerilor, corelată cu perioada de tranziție stabilită prin HG.",
-         "HG nr. 592/2024, art. 6 pct. II.3 și I.1; HP nr. 4/2026, anexa 2 (Programul de guvernare)", PR("C95") + cite("C95")),
         ("Introduceți în ROF publicarea lunară a indicatorilor",
          "Stocul pe etape, intrările, deciziile finale, amânările, așteptarea mediană pe tipuri de cereri și personalul activ pe etape.",
          "Legea nr. 265/2022, art. 22 alin. (1); HG nr. 592/2024, art. 6 pct. V.6; Legea nr. 544/2001, art. 5", ""),
@@ -253,20 +254,25 @@ def MJ():
               card_schema() + card_tandem() + card_canib())
     an.append('<h2>Personalul: ce poate și ce nu poate face ministerul</h2>' + tiles([
         (V("C51").split("→ ")[1].split(" ")[0], "posturi finanțate, dar neocupate", ["C51"], True),
-        (v0("C52") + " zile", "iunie 2028, OUG extins + 40% din posturile vacante", ["C52"], False),
+        (v0("C52") + " zile", "iunie 2028, OUG extins + 40% din posturile vacante (circa " + re.search(r"circa (\d+) de posturi", PR("C52")).group(1) + ")", ["C52", "C51"], False),
         (v0("C54") + " zile", "iunie 2028, pachetul minim realist", ["C54"], False),
-        (V("C55").split("(")[1].rstrip(")"), "doar prin personal, pentru a reveni la circa trei zile", ["C55"], False)]) +
+        (V("C55").split("(")[1].rstrip(")"), "doar prin personal, pentru a reveni la circa trei zile (estimare de model)", ["C55"], False)]) +
         para(PR("C51") + E("C51") + " " + PR("C52") + cite("C52"),
-             hl(PR("C153")) + E("C153") + " Peste limita excepției ar fi nevoie de o derogare prin lege sau OUG; regimul pentru 2027 nu a fost verificat." + E("C153"),
+             hl(PR("C153")) + E("C153") + " " + REG["C153"]["rezerva_obligatorie"].split("Regimul pentru 2027 nu a fost verificat. ")[1] + " Regimul pentru 2027 nu a fost verificat." + E("C153", "C52"),
              PR("C55") + cite("C55")) + card_grila())
     return dict(
         key="MJ", name="Ministerul Justiției", head="MINISTERUL JUSTIȚIEI", forl="Ministerul Justiției",
+        decide=("<b>Două decizii pentru această săptămână, înainte de adoptarea OUG</b> (consultarea publică se încheie la 24 noiembrie 2026). "
+                "<b>1.</b> Amendarea art. I, astfel încât desemnările să întărească ambele etape, operarea și soluționarea, cu o derogare pentru posturile vacante finanțate (cererea 1): "
+                "proiectul singur câștigă circa " + G34.lstrip("≈") + " de zile în iunie 2028, iar întărirea unei singure etape mută blocajul." + E("C43", "C56") +
+                " <b>2.</b> Conversia automată CAEN „1-la-1” în textul OUG (cererea 2): în scenariile cu val CAEN mare, reduce așteptarea din iunie 2027 la mai puțin de jumătate." + cite("C95") +
+                " Celelalte cereri pot urma după adoptare."),
         verdict="Ministerul aprobă organizarea și statul de funcții ale Registrului, îi fundamentează bugetul și inițiază proiectul de OUG. Datele arată că măsurile au efect doar dacă ajung la ambele etape ale dosarului.",
         why="ONRC funcționează în subordinea Ministerului Justiției, care îi aprobă organizarea și statul de funcții, îi asigură finanțarea și inițiază actele normative din domeniul registrului comerțului, inclusiv proiectul de OUG aflat în consultare (Legea nr. 265/2022, art. 19 alin. (1); HG nr. 592/2024, art. 6 pct. V.6 și art. 40).",
         asks=asks,
         codec="Bugetul: Ministerul Finanțelor, Guvernul și Parlamentul. Numărul maxim de posturi: Guvernul, prin HG. OUG: Guvernul, apoi Parlamentul, prin lege de aprobare. ROF-ul și statele de funcții se aprobă doar prin ordinul ministrului.",
         analysis="".join(an),
-        limit="Textul integral al OUG nu ne-a fost accesibil; regimul concursurilor pentru 2027 nu a fost verificat." + E("C153"),
+        limit="Regimul concursurilor pentru 2027 nu a fost verificat; câte posturi acoperă excepția din 2026 depinde de o cifră pe care o are Ministerul Justiției." + E("C153"),
         details=[("Sinteză executivă", "Toată imaginea, pentru decizie"), ("1 · Pentru ministru", "Fișa pentru ministru și decidenți"),
                  ("Cap. 2", "Cât se așteaptă acum"), ("Cap. 4", "Cele două cozi"), ("Cap. 7", "Prognoza până în 2028"),
                  ("Cap. 9", "Proiectul de OUG, pe articole"), ("Cap. 10", "Ce se poate face: pachete de măsuri"),
@@ -275,7 +281,7 @@ def MJ():
 
 def MF():
     asks = [
-        ("MF · Includeți riscul de calendar al veniturilor din 2027",
+        ("MF · Includeți în previziunea pentru 2027 veniturile ținute în afara anului de coadă",
          "În previziunea veniturilor și în analiza riscurilor fiscale din strategia fiscal-bugetară.",
          "Legea nr. 69/2010, art. 29 alin. (2) lit. d); Legea nr. 500/2002, art. 19 lit. b^1)", PR("C122") + cite("C122")),
         ("MF · Verificați fișa financiară a proiectului de OUG",
@@ -298,20 +304,21 @@ def MF():
     an.append('<h2>Cât costă coada: economia și bugetul</h2>' + tiles([
         (BRI.OCTNOV, "mil. lei pe lună, cost economic în oct.–nov. 2026 (central)", ["C111"], True),
         (V("C106").split(" / ")[1], "mil. lei, cost economic aug.–18 nov. 2026 (central; interval " + V("C106").split(" / ")[0] + "–" + V("C106").split(" / ")[2] + ")", ["C106"], False),
-        (V("C107").split(" / ")[1], "mil. lei, încasări bugetare afectate, aceeași perioadă (central)", ["C107"], False),
+        (V("C107").split(" / ")[1], "mil. lei, încasări bugetare pierdute, aceeași perioadă (central; depinde de ipoteze fără sursă)", ["C107"], False),
         (v0("C108").split(" ")[0], "mil. lei în economie pentru fiecare zi în plus cu stocul actual", ["C108"], False)]) +
         para(hl("Zilele de întârziere sunt măsurate; transformarea lor în lei e un interval de scenarii.") + " " + PR("C105") + E("C105") + " " + PR("C116") + cite("C116"),
              PR("C109") + cite("C109") + " " + PR("C112") + cite("C112"),
              PR("C113") + cite("C113") + " " + PR("C115") + E("C115"),
              hl(PR("C108")) + cite("C108") + " Proiectul de OUG costă " + V("C83") + "." + E("C83")) + card_cost())
     an.append('<h2>Riscul pentru veniturile din 2027</h2>' + tiles([
-        (v0("C122"), "mil. lei venituri mutate după 2027 (interval " + V("C122").split("(")[1].split(")")[0] + ")", ["C122"], True),
-        (v0("C123"), "mil. lei, costul de finanțare al amânării", ["C123"], False),
-        (v0("C125"), "mil. lei mutare evitată de un pachet realist", ["C125"], False),
-        (V("C124").split(" (")[0], "mil. lei în ipoteza extremă că nimic nu se recuperează", ["C124"], False)]) +
-        para(PR("C124") + cite("C124"),
-             "Estimarea vine dintr-un experiment natural pe firmele noi. " + PR("C121") + E("C121") + " " + hl(PR("C120")) + E("C120") +
-             " De aceea, pentru buget, coada e mai ales un risc de calendar al încasărilor.") + card_venituri() + card_cauzal())
+        (v0("C122"), "mil. lei care nu intră în bugetul anului 2027 din cauza cozii (interval de simulare de 95%: " + V("C122").split("(")[1].split(")")[0] + ")", ["C122"], True),
+        (V("C124").split(" (")[0], "mil. lei dacă nimic nu se recuperează; componenta persistentă: " + V("C124").split(" / ")[1], ["C124"], False),
+        (v0("C123"), "mil. lei, costul de finanțare, doar dacă veniturile se recuperează", ["C123"], False),
+        (v0("C125"), "mil. lei evitate de un pachet realist", ["C125"], False)]) +
+        para(hl(PR("C122")) + cite("C122") + " " + PR("C124") + cite("C124"),
+             "Cifra presupune deja că o parte din ce se pierde în zilele de așteptare se recuperează în același an; veniturile amânate din cererile depuse înainte de decembrie 2026 nu sunt scăzute. "
+             "Din bilanțurile firmelor noi vin impozitul direct și angajații; TVA și toată partea modificărilor sunt ipoteze." + cite("C122"),
+             PR("C119") + E("C119") + " " + PR("C121") + E("C121") + " " + hl(PR("C120")) + E("C120")) + card_venituri() + card_cauzal())
     an.append('<h2>Inactivarea fiscală: legătura cu ANAF</h2>' +
               para("Codul de procedură fiscală declară inactivă firma al cărei drept de folosință asupra sediului a expirat (art. 92 alin. (1) lit. g) și alin. (3)); fără reactivare într-un an, urmează dizolvarea (alin. (4^1)–(4^2)). " +
                    hl("Când prelungirea sau schimbarea sediului așteaptă la Registru, firma poate ajunge inactivă pentru o întârziere care nu îi aparține."),
@@ -320,7 +327,7 @@ def MF():
                    " Ce le-ar măsura: o legare controlată, pseudonimizată, ONRC–ANAF, cu data notificării, a inactivării și a reactivării pentru firmele cu cereri de sediu în așteptare."))
     return dict(
         key="MF_ANAF", name="Ministerul Finanțelor și ANAF", head="MINISTERUL FINANȚELOR ȘI ANAF", forl="Ministerul Finanțelor și ANAF",
-        verdict="Coada are un preț în bani: în economie și la buget. Pentru 2027, riscul principal e de calendar: venituri încasate mai târziu. Pentru ANAF, riscul e ca o firmă să devină inactivă pentru o cerere de sediu care încă așteaptă.",
+        verdict="Coada are un preț în bani: în economie și la buget. Pentru 2027, coada ține în afara bugetului anului venituri de ordinul sutelor de milioane de lei; o parte se poate recupera ulterior, dar datele nu exclud o pierdere durabilă. Pentru ANAF, riscul e ca o firmă să devină inactivă pentru o cerere de sediu care încă așteaptă.",
         why="Ministerul Finanțelor elaborează previziunile de venituri, legile bugetare și de rectificare, verifică fișele financiare și analizează riscurile fiscale (Legea nr. 500/2002, art. 15 și art. 19; Legea nr. 69/2010, art. 29). ANAF aplică procedura de inactivare fiscală, inclusiv pentru sediul expirat (Codul de procedură fiscală, art. 92).",
         asks=asks,
         codec="Bugetul și rectificarea: Guvernul (adoptă proiectul) și Parlamentul (lege). Ordinul de aplicare a art. 92: ANAF singură. Modificarea art. 92: MF (inițiator), Guvernul și Parlamentul. Protocolul de date: ANAF și ONRC (și ADR, pentru platforma de interoperabilitate).",
@@ -357,7 +364,7 @@ def MEDAT():
     an.append('<h2>Ce înseamnă coada pentru antreprenori</h2>' + tiles([
         (V("C15") + " zile", "așteptarea firmelor noi aprobate în 16–20 noiembrie", ["C15"], True),
         (V("C41").split(" ")[0], "firme noi admise fără amânare care au așteptat peste 10 zile lucrătoare", ["C41"], False),
-        (V("C121").split(" (")[0].lstrip("-"), "vânzări din primul an mutate mai târziu, pe fiecare zi de așteptare", ["C121"], False),
+        (V("C121").split(" (")[0].lstrip("-"), "lei vânzări mai puțin în primul an, pe fiecare zi de așteptare", ["C121"], False),
         (V("C118").split(": ")[1].split(" ")[0], "din modificări sunt doar actualizări CAEN", ["C118"], False)]) +
         para(PR("C15") + E("C15") + " " + PR("C104") + E("C104") + " " + hl(PR("C121")) + E("C121"),
              PR("C120") + E("C120") + " " + PR("C118") + E("C118"),
@@ -415,7 +422,7 @@ def GUV():
          "HP nr. 4/2026, anexa 2; Codul administrativ, art. 25 lit. e)", ""),
     ]
     rows = [
-        ("Capacitate suplimentară (proiectul de OUG)", "Guvernul, prin OUG, la inițiativa MJ; aprobare prin lege", "Câștig median pe aceleași simulări: circa " + G34 + " de zile în iunie 2028." + E("C43")),
+        ("Capacitate suplimentară (proiectul de OUG)", "Guvernul, prin OUG, la inițiativa MJ; aprobare prin lege", "Câștig median pe aceleași simulări: circa " + G34.lstrip("≈") + " de zile în iunie 2028." + E("C43")),
         ("Conversia automată CAEN 1-la-1, regim simplificat", "Lege sau OUG (MJ, cu MEDAT); procedura internă: ONRC", PR("C95") + cite("C95")),
         ("Perioada de tranziție CAEN", "Guvernul, prin HG (MEDAT, cu INS)", PR("C68") + cite("C68")),
         ("Ocuparea posturilor vacante", "MJ (excepții); peste limită: derogare prin lege sau OUG", PR("C52") + cite("C52", "C153")),
@@ -445,7 +452,7 @@ def GUV():
         asks=asks,
         codec="OUG: aprobare sau respingere prin lege de către Parlament. HG: inițiator ministerul de resort (MJ, MEDAT, INS), avize MF și MJ. Bugetul: Parlamentul. Proiectele din domeniul economic și fiscal: avizul CES.",
         analysis="".join(an),
-        limit="Data de 1 aprilie 2027 e calculată de noi; textul integral al OUG nu ne-a fost accesibil." + E("C152"),
+        limit="Data de 1 aprilie 2027 e calculată de noi; evaluarea privește textul OUG pus în consultare, nu pe cel adoptat." + E("C152"),
         details=[("Sinteză executivă", "Toată imaginea, pentru decizie"), ("1 · Pentru ministru", "Fișa pentru decidenți politici"),
                  ("Cap. 8", "Grila de risc: vitezele de intrare și ieșire"), ("Cap. 9", "Proiectul de OUG, pe articole"),
                  ("Cap. 10", "Ce se poate face: pachete de măsuri"), ("12.4", "Dacă se confirmă cifrele publice despre CAEN"),
@@ -479,7 +486,7 @@ def PARL():
         (V("C83"), "costul proiectului; nu creează posturi noi", ["C83"], False),
         (V("C51").split("→ ")[1].split(" ")[0], "posturi finanțate, dar neocupate", ["C51"], False),
         (v0("C54") + " zile", "iunie 2028, pachetul minim realist", ["C54"], False)]) +
-        para("Evaluat pe rezumatul public (textul integral nu ne-a fost accesibil). " + hl(PR("C43")) + E("C43") + " " + PR("C44") + E("C44"),
+        para("Evaluat pe textul integral pus în consultare (art. I–IV), cu ipotezele de livrare declarate. " + hl(PR("C43")) + E("C43") + " " + PR("C44") + E("C44"),
              PR("C35") + E("C35") + " " + PR("C56") + E("C56")) + card_oug())
     an.append('<h2>Ce se poate corecta prin lege</h2>' +
               para("<b>Actualizarea CAEN.</b> " + PR("C50") + E("C50") + " " + hl(PR("C95")) + cite("C95") +
@@ -504,7 +511,7 @@ def PARL():
         asks=asks,
         codec="Legile: ambele Camere și promulgarea. Perioada de tranziție CAEN se stabilește prin HG: Parlamentul nu o modifică direct. Denumirile și competențele exacte ale comisiilor, din regulamentele Camerelor, nu au fost verificate.",
         analysis="".join(an),
-        limit="Textul integral al OUG nu ne-a fost accesibil; competențele exacte ale comisiilor (regulamentele Camerelor) nu au fost verificate.",
+        limit="Competențele exacte ale comisiilor (regulamentele Camerelor) nu au fost verificate; textul adoptat al OUG poate diferi de cel pus în consultare.",
         details=[("Sinteză executivă", "Toată imaginea, pentru decizie"), ("Cap. 1", "De ce contează o zi: ce cere legea"),
                  ("Cap. 9", "Proiectul de OUG, pe articole"), ("Cap. 10", "Ce se poate face: pachete de măsuri"),
                  ("Partea 3", "Impactul economic și bugetar"), ("Cap. 11", "Cât de sigure sunt cifrele"),
@@ -514,28 +521,28 @@ def PARL():
 def ONRC():
     asks = [
         ("Triaj la intrare și procedură simplificată pentru actualizarea CAEN",
-         "Un flux separat pentru cererile simple; procedura aprobată prin act al conducătorului, inclusiv trecerea directă a codurilor cu corespondență unică, în măsura în care legea o permite.",
+         "Un flux separat pentru cererile simple și o procedură simplificată pentru actualizarea CAEN, aprobate prin act al conducătorului. Conversia automată a codurilor cu corespondență unică, fără modificarea actului constitutiv, cere o normă de rang legal; ONRC o poate propune Ministerului Justiției pentru proiectul de OUG.",
          "HG nr. 656/1997, art. 5^1 alin. (1); Legea nr. 265/2022, art. 24 alin. (1) lit. g), i)", PR("C50") + E("C50")),
         ("Verificări automate la depunere, în myportal",
-         "Pentru motivele frecvente de amânare, cu un cod de motiv în fiecare încheiere; conectarea la Platforma națională de interoperabilitate.",
+         "Pentru motivele frecvente de amânare, acolo unde verificarea nu există deja, cu un cod de motiv în fiecare încheiere; cele care interoghează alte registre cer protocoale, conectarea la Platforma națională de interoperabilitate și o evaluare de impact privind protecția datelor.",
          "Legea nr. 265/2022, art. 24 alin. (1) lit. g), n); Legea nr. 242/2022, art. 11", PR("C139") + cite("C139")),
         ("Personal pe ambele etape",
-         "Concursuri pentru posturile deblocate prin excepția aprobată de MJ și mutarea personalului intern spre etapele-gâtuire, pe ambele etape.",
+         "Concursuri pentru posturile deblocate prin excepția aprobată de MJ, în limita ei, și continuarea redistribuirii interne, pe ambele etape.",
          "Legea nr. 265/2022, art. 22 alin. (5); ROF, art. 6 alin. (7), art. 7 alin. (2) lit. b)", PR("C56") + E("C56")),
-        ("Echilibrarea cozii între oficii, cu o regulă publicată",
-         "Repartizarea dosarelor între oficii (oficiul de depunere nu e neapărat cel care soluționează). Art. 32 alin. (3) permite expres desemnarea unui registrator din alt oficiu doar „din motive obiective”: folosirea lui pentru încărcare e o interpretare.",
+        ("Publicarea regulii de repartizare națională a dosarelor",
+         "Repartizarea aleatorie la nivel național e deja aplicată (oficiul de depunere nu e neapărat cel care soluționează); publicarea regulii și a efectului ei pe oficii.",
          "Legea nr. 265/2022, art. 21 alin. (2), art. 24 alin. (1) lit. h)–i), art. 32 alin. (3)–(4)", PR("C49") + E("C49")),
         ("Date deschise lunare și un termen estimat realist pentru solicitanți",
-         "Stocul pe etape, intrările, deciziile, amânările și respingerile, pe oficii și tipuri de cereri, și personalul activ pe etape, fără date personale.",
+         "Stocul pe etape, intrările, deciziile, amânările și respingerile, pe oficii și tipuri de cereri, și personalul activ pe etape, agregat la nivel național, fără date personale.",
          "Legea nr. 544/2001, art. 5; ROF, art. 16 alin. (3) lit. d)", ""),
-        ("Protocol cu ANAF și propuneri legislative către MJ",
-         "Cererile în curs privind sediul social cunoscute organului fiscal înainte de o inactivare; propuneri de modificare a Legii nr. 265/2022.",
+        ("Extinderea schimbului de date cu ANAF și propuneri legislative către MJ",
+         "Extinderea sau verificarea protocolului existent, astfel încât cererile în curs privind sediul social să fie cunoscute organului fiscal înainte de o inactivare; propuneri de modificare a Legii nr. 265/2022.",
          "Legea nr. 265/2022, art. 24 alin. (1) lit. n) și o), art. 27 alin. (4); Legea nr. 242/2022, art. 11", ""),
     ]
     an = []
     an.append('<h2>Operarea și soluționarea</h2>' + tiles([
         (V("C29").split(" (")[0], "cereri încă neprelucrate la 6 noiembrie (din " + V("C28") + ")", ["C29", "C28"], True),
-        (V("C34"), "cât de repede lucra operarea față de soluționare", ["C34"], False),
+        (REG["C34"]["unit"].split("(")[1].split(" ")[0], "cât de repede a lucrat operarea față de soluționare, într-o singură săptămână (30.10–6.11)", ["C34"], False),
         (V("C32").split("→ ")[1], "dosare rezolvate în două zile după 27 aprilie 2026, față de " + V("C32").split(" →")[0], ["C32"], False),
         (V("C21").split("→ ")[1], "din decizii sunt amânări", ["C21"], False)]) +
         para(hl(PR("C34")) + E("C34") + " " + PR("C36") + cite("C36"),
@@ -549,7 +556,8 @@ def ONRC():
         (V("C146").split(" ")[0], "din cererile amânate au ajuns respinse", ["C146"], False)]) +
         para(PR("C126") + E("C126") + " Cele mai dese motive: obiectul de activitate și codurile CAEN (" + v0("C127") + "), sediul (" + v0("C128") + "), cererea și anexa fiscală (" + v0("C129") + ")." + cite("C127", "C128", "C129"),
              hl(PR("C141")) + cite("C141") + " " + PR("C37") + E("C37"),
-             hl("Ce ar ajuta imediat: un cod pentru fiecare motiv de amânare.") + " Azi motivul e text liber; cu un cod în fiecare încheiere, ONRC ar ști ce verificare să construiască întâi și ar putea publica lunar ce lipsește la depunere.") +
+             hl("Ce ar ajuta imediat: un cod pentru fiecare motiv de amânare, publicat în încheiere.") + " În buletinul public, motivul apare ca text liber; nu știm dacă sistemul intern al ONRC are deja o clasificare. Cu un cod publicat, ONRC ar putea raporta lunar ce lipsește la depunere și ar ști ce verificare să construiască întâi, dintre cele care nu există deja.",
+             "<b>IT: ce trebuie construit.</b> (1) momentul trecerii fiecărui dosar de la operare la registrator, înregistrat și exportabil; (2) coduri pentru motivele de amânare și de respingere; (3) tabelul de corespondență CAEN Rev. 2 → Rev. 3, cu marcarea codurilor cu un singur corespondent; (4) o etichetă de rutare pentru actele din art. III, cu starea „clarificare cerută” și termenul de răspuns.") +
         card_amanari() + card_respingeri())
     an.append('<h2>Diferențele între oficii</h2>' +
               para(hl(PR("C49")) + E("C49") + " " + PR("C89") + " (" + V("C89") + ")." + E("C89"),
@@ -558,7 +566,7 @@ def ONRC():
     return dict(
         key="ONRC", name="Oficiul Național al Registrului Comerțului (conducerea)", head="CONDUCEREA ONRC",
         forl="Conducerea Oficiului Național al Registrului Comerțului",
-        verdict="Registrul emite mai multe decizii decât în anii trecuți, dar cererile au crescut mai repede. Mai multe soluții (triaj, verificări la depunere, procedura CAEN, date deschise) țin de atribuțiile proprii ale ONRC și nu cer o lege nouă.",
+        verdict="Registrul emite mai multe decizii decât în anii trecuți, dar cererile au crescut mai repede. Mai multe soluții (triaj, verificări la depunere, procedura CAEN, date deschise) țin de atribuțiile proprii ale ONRC; conversia automată CAEN cere însă o normă de rang legal, iar verificările care interoghează alte registre cer protocoale și interoperabilitate.",
         why="Directorul general conduce, coordonează și controlează activitatea ONRC și a oficiilor (Legea nr. 265/2022, art. 21 alin. (2)); atribuțiile ONRC includ sistemul informatic, organizarea registratorilor, îndrumarea oficiilor, colaborarea cu alte autorități și propunerile de acte normative (art. 24 alin. (1) lit. g), h), i), n), o)). Procedurile pentru CAEN se pot stabili prin act al conducătorului (HG nr. 656/1997, art. 5^1 alin. (1)).",
         asks=asks,
         codec="ROF-ul și statele de funcții: ordin al ministrului justiției. Posturi noi: HG și buget (MF, Guvern, Parlament). Protocoale de date: cu ANAF (și ADR, pentru platforma de interoperabilitate). Procedurile interne și desemnările: decizia directorului general.",
@@ -628,6 +636,7 @@ ol.asks > li::before { content: counter(a); font: 600 13pt/1 var(--sans); color:
 .adata { font: 400 8.6pt/1.4 var(--sans); color: var(--ink-2); margin: .6mm 0 0; }
 .box { background: var(--tint); border-left: 1mm solid var(--accent); padding: 2.2mm 3.5mm; font: 400 9pt/1.45 var(--sans); margin: 2mm 0 0; break-inside: avoid; }
 .box p { margin: 0 0 1mm; }
+.box.decide { margin: 0 0 3mm; font: 400 10pt/1.45 var(--sans); }
 ul.five { list-style: none; padding: 0; margin: 2mm 0 0; }
 ul.five li { padding: 2.2mm 0; border-top: .2mm solid var(--rule-2); font: 400 10.3pt/1.5 var(--serif); }
 ul.five li b { font-family: var(--sans); font-weight: 600; }
@@ -670,7 +679,7 @@ def build(inst, pm, npages):
   <p class="verdict">{I['verdict']}</p>
   <dl class="meta">
     <dt>Autor</dt><dd><strong>Ștefan-Lucian Deleanu</strong> · stefandeleanu.ro</dd>
-    <dt>Data</dt><dd>{DATE}</dd>
+    <dt>Ediție și dată</dt><dd>{BSV.VERSION_HTML} · {DATE}</dd>
     <dt>Bază empirică</dt><dd>4.077.510 decizii BERC (aprilie 2023 – noiembrie 2026) · 7.469 de numere de cerere sondate în myportal · notele Ministerului Justiției</dd>
     <dt>Raport complet</dt><dd>Raport_ONRC_Coada_2026-11_COMPLET.pdf · {GITHUB}</dd>
     <dt>Declarație de interes</dt><dd>Autorul a avut o activitate de înființare de societăți, închisă. În 2024, autorul a semnalat public vulnerabilități ale platformei myportal.</dd>
@@ -687,9 +696,10 @@ def build(inst, pm, npages):
   <div class="eyebrow">Cererile</div>
   <h2>Ce vă cerem și de ce e în competența dumneavoastră</h2>
   <p class="dek"><b>De ce vă privește.</b> {I['why']}</p>
+  {('<div class="box decide"><p>' + I['decide'] + '</p></div>') if I.get('decide') else ''}
   <ol class="asks">{li}</ol>
   <div class="box"><p><b>Cine mai decide.</b> {I['codec']}</p>
-  <p><b>Independența registratorului.</b> Cererile privesc organizarea, resursele, datele și regulile, niciodată soluția unui dosar: registratorul decide independent (Legea nr. 265/2022, art. 28 alin. (4)).</p></div>
+  <p><b>Independența registratorului.</b> Cererile privesc organizarea, resursele, datele și regulile, niciodată soluția unui dosar: registratorul decide independent (Legea nr. 265/2022, art. 28 alin. (4)). Triajul și verificările la depunere privesc pregătirea și ordinea dosarelor, nu soluția.</p></div>
 </section>"""
     key = f"""
 <section class="sz flow" style="page: s-body;">
@@ -698,10 +708,12 @@ def build(inst, pm, npages):
   {card_prognoza()}{card_pachete()}
 </section>"""
     five = [
-        ("Ce se întâmplă.", "Fiecare dosar trece prin două etape: operarea și decizia registratorului. " + hl(PR("C14")) + E("C14") + " " + PR("C16") + E("C16") + " Legea cere o zi lucrătoare." + E("C23")),
+        ("Ce se întâmplă.", "Fiecare dosar trece prin două etape: operarea și decizia registratorului. " + hl(PR("C14")) + E("C14") + " " + PR("C16") + E("C16") +
+         " Durata se măsoară în zile calendaristice, include timpul în care solicitantul completează dosarul după o amânare și privește doar dosarele deja decise; termenul din lege, de o zi lucrătoare, privește cererea completă." + E("C23") +
+         " Pe lângă deciziile finale, registratorii emit circa " + V("C03").lstrip("≈").split(" ")[0] + " de amânări pe zi, tot muncă de analiză; cu ele, Registrul a dat " + V("C48").split(" vs ")[1].split(" pe zi")[0] + " decizii pe zi în septembrie / octombrie." + E("C03", "C48")),
         ("De ce.", hl("Cererile au crescut mult mai repede decât producția.") + " " + PR("C47") + E("C47") + " " + PR("C87") + E("C87")),
         ("Unde se blochează.", PR("C29") + E("C29") + " " + PR("C34") + E("C34")),
-        ("Ce urmează.", PR("C59") + cite("C59") + " " + hl(PR("C43")) + E("C43") + " Câștigul median al proiectului, pe aceleași simulări: circa " + G34 + " de zile." + E("C43")),
+        ("Ce urmează.", PR("C59") + cite("C59") + " " + hl(PR("C43")) + E("C43") + " Câștigul median al proiectului, pe aceleași simulări: circa " + G34.lstrip("≈") + " de zile." + E("C43")),
         ("Ce costă.", PR("C111") + cite("C111") + " " + hl(PR("C122")) + cite("C122")),
     ]
     prob = f"""
@@ -739,7 +751,7 @@ def build(inst, pm, npages):
 <style>{BRI.BASE_CSS}
 {page_css(I['head'])}
 {BRI.EXTRA_CSS}
-{CSS}</style></head><body>{cover}{asks}{key}{prob}{analysis}{end}</body></html>"""
+{CSS}</style></head><body>{cover}{asks}{prob}{key}{analysis}{end}</body></html>"""
     return I, html_
 
 

@@ -13,6 +13,8 @@ from build_volume_stat import V, E, hl, sec, sub, P, cover, toc, IA, REG
 import re
 ORI = re.search(r"de circa (\S+) ori", REG["C111"]["public_ro"]).group(1)      # Oct 2026 vs a normal month (C111)
 NFOUND = V("C116").split(" · ")[1].split(" parametri")[0]                      # e.g. «10 din 18» (C116)
+PR = lambda c: REG[c]["public_ro"]
+C112_C = "În canalul C" + REG["C112"]["rezerva_obligatorie"].split("În canalul C", 1)[1]     # channel-C stock factor, from the registry
 DROP = re.search(r"cu circa (\d+)%", REG["C116"]["public_ro"]).group(1)          # founded vs initial central (C116)
 
 KF = json.loads((IA / "out" / "cost_founded.json").read_text(encoding="utf-8"))
@@ -95,30 +97,32 @@ def econometrics_section(n):
         return ""
     fig = lambda svg, cap, ids: BV.fig(svg, cap, ids, fdir="figures_impact")
     return (sec(n, "Estimarea econometrică și riscul pentru veniturile din 2027") + P(
-        "Întrebarea pentru buget este dacă așteptarea doar amână activitatea și taxele firmelor noi sau le reduce definitiv. Am folosit un experiment natural: "
+        "Întrebarea pentru buget este dacă așteptarea doar amână activitatea și taxele firmelor noi sau le reduce definitiv. Am folosit un experiment natural (ipoteza de identificare, explicată la final: aglomerarea oficiului influențează activitatea firmei doar prin durata așteptării): "
         "în aceeași săptămână, la același oficiu, cât a așteptat o firmă a depins de aglomerarea oficiului, nu de firma însăși. "
         "Așteptarea celorlalte firme depuse acolo atunci (variabilă instrumentală) prezice puternic așteptarea fiecărei firme." + E("C119") +
         " Am legat aproape toate înmatriculările din 2024 de bilanțurile depuse la Ministerul Finanțelor și am verificat rezultatul cu alte două metode (diferențe în diferențe în jurul lansării portalului din 2024 și un instrument național), plus teste placebo.") +
         '<ul class="find">' + "".join(f"<li>{x}</li>" for x in [
-            hl("Așteptarea mută activitatea mai târziu: în primul an, fiecare zi în plus înseamnă mai puține vânzări și mai puține taxe.") + E("C121"),
-            hl("Nu găsim un efect durabil: în anul următor, activitatea și taxele firmelor care au așteptat mai mult nu diferă măsurabil.") + E("C120") +
+            hl("Așteptarea reduce activitatea din primul an: fiecare zi în plus înseamnă mai puține vânzări și mai puține taxe.") + E("C121"),
+            hl("În anul următor, activitatea și taxele firmelor care au așteptat mai mult nu diferă măsurabil: datele nu arată o recuperare a ce s-a pierdut în primul an, dar nici nu exclud o pierdere care continuă.") + E("C120", "C121") +
             " Rezultatul e estimat pe așteptări de până la circa o lună; pentru așteptările de acum, mult mai lungi, nu putem exclude un efect."]) + "</ul>" + P(
-        "Estimarea privește doar firmele noi, adică primul canal al contului de impact. Pentru ele, activitatea pare mai degrabă amânată decât pierdută. "
+        "Estimarea privește doar firmele noi, adică primul canal al contului de impact. Pentru ele, datele nu deosebesc o activitate doar amânată de una pierdută în parte. "
         "Nu spune nimic despre modificările blocate ale firmelor existente, care dau cea mai mare parte din costul pe scenarii." + E("C109") + " Acolo, ipoteza rămâne netestată, iar în cifrele pentru 2027 de mai jos partea modificărilor folosește ipotezele declarate ale analizei inițiale, nu o estimare.") +
         fig("i06_efect_cauzal.svg", "Efectul unei zile în plus de așteptare asupra impozitului direct plătit de o firmă nouă: în primul an (parțial) și în anul următor.", ["C120", "C121"]) +
         sub(f"{n}.1", "Riscul pentru veniturile bugetare din 2027") + P(
         "Combinăm prognoza cozii (2.000 de variante ale motorului verificat), volumele lunare de înmatriculări și modificări, efectele estimate mai sus, cu incertitudinea lor, și cotele legale din 2026. "
-        + hl("Fără măsuri noi, circa " + V("C122").split(" (")[0] + " de milioane de lei din veniturile bugetare ale anului 2027 (valoarea mediană; intervalul de 95%: " + V("C122").split(" (")[1].split(")")[0] + " milioane) s-ar încasa abia după 2027.") + E("C122") +
-        " E un risc de execuție bugetară: veniturile nu dispar, ci intră mai târziu. Costul propriu-zis al amânării, la dobânda titlurilor de stat, e mult mai mic: circa " + V("C123").split(" (")[0] + " milioane de lei." + E("C123") +
-        " Chiar în ipoteza extremă că nimic nu s-ar recupera, riscul ar fi de ordinul sutelor de milioane de lei; o pierdere definitivă, estimată din efectul cauzal, e centrată pe zero." + E("C124")) +
-        fig("i07_risc_venituri_2027.svg", "Venituri bugetare încasate mai târziu din cauza cozii, pe trimestre ale anului 2027, fără măsuri noi și cu un pachet realist de măsuri (mediana și intervalul de 95%).", ["C122", "C125"]) + P(
+        + hl("Fără măsuri noi, circa " + V("C122").split(" (")[0] + " de milioane de lei din veniturile bugetare nu ar intra în bugetul anului 2027 din cauza cozii (valoarea mediană; interval de simulare de 95%, adică percentilele 2,5–97,5 ale variantelor simulate: " + V("C122").split(" (")[1].split(")")[0] + " milioane); o parte se poate recupera ulterior, dar datele nu exclud o pierdere durabilă.") + E("C122") +
+        " Reperul e o coadă normală, de 3 zile, pentru cererile depuse din decembrie 2026; veniturile amânate din cererile depuse înainte, care ar intra în 2027, nu sunt scăzute. "
+        "Cifra presupune deja că o parte din ce se pierde în zilele de așteptare se recuperează în același an." + E("C122") +
+        " " + PR("C123") + E("C123") + " " + hl(PR("C124")) + E("C124") +
+        " Din bilanțuri vin doar impozitul direct și angajații firmelor noi; TVA și toată partea modificărilor sunt ipoteze." + E("C122")) +
+        fig("i07_risc_venituri_2027.svg", "Venituri bugetare care nu intră în bugetul anului 2027 din cauza cozii, pe trimestre, fără măsuri noi și cu un pachet realist de măsuri (mediana și intervalul de simulare de 95%).", ["C122", "C125"]) + P(
         hl("Un pachet realist de măsuri ar evita cea mai mare parte a acestei mutări de venituri.") + E("C125") +
-        " Pentru Ministerul Finanțelor, concluzia practică: riscul merită inclus în evaluarea veniturilor pentru 2027, ca risc de calendar al încasărilor, nu ca pierdere; mărimea lui depinde direct de cât de repede se golește coada.") +
+        " Pentru Ministerul Finanțelor, concluzia practică: riscul merită inclus în evaluarea veniturilor pentru 2027 ca venit care nu intră în bugetul anului din cauza cozii; o parte se poate recupera ulterior, dar datele nu exclud o pierdere durabilă. Mărimea lui depinde direct de cât de repede se golește coada.") +
         P('<span class="note"><b>Specificația.</b> Efecte fixe de săptămână și de oficiu, plus forma juridică; erori standard grupate pe oficiu (ca variantă, pe oficiu și săptămână). Ipoteza de identificare: '
           "aglomerarea unui oficiu într-o săptămână, peste media oficiului și a săptămânii, influențează activitatea firmei doar prin durata așteptării. "
           "Un șoc local de cerere care aglomerează oficiul și schimbă și perspectivele firmelor noi ar încălca această ipoteză; testele placebo o verifică doar parțial. "
           "Cifrele de venituri pentru 2027 și cele din contul pe scenarii pentru 2026 răspund la întrebări diferite și nu se adună.</span>") + P('<span class="note"><b>Limite.</b> Efectul e estimat pe așteptări de până la circa o lună, iar prognoza pentru 2027 are așteptări de două–cinci ori mai lungi. '
-          "Firmele care renunță înainte de decizie nu apar în date. Partea de TVA din veniturile unei firme noi e o ipoteză. Metoda completă, codul și tabelele sunt în dosarul de reproducere.</span>"))
+          "Firmele care renunță înainte de decizie nu apar în date. Partea de TVA din veniturile unei firme noi și toată partea modificărilor din cifra pentru 2027 sunt ipoteze, nu estimări. Contul pe scenarii pentru 2026 presupune, fără o sursă, că o parte din vânzările amânate ale firmelor noi se pierd definitiv; estimarea econometrică nu poate nici confirma, nici exclude această ipoteză. Metoda completă, codul și tabelele sunt în dosarul de reproducere.</span>"))
 
 
 def vol7(pg):
@@ -137,12 +141,12 @@ def vol7(pg):
         hl("Într-o lună obișnuită, întârzierile la Registru costă economia câteva milioane de lei; în octombrie și noiembrie 2026, de circa " + ORI + " ori mai mult.") + E("C111"),
         hl("Pentru august–18 noiembrie 2026, costul economic este estimat între circa " + V("C106").split(" / ")[0] + " și " + V("C106").split(" / ")[2] + " de milioane de lei, cu circa " + V("C106").split(" / ")[1] + " în scenariul central.") + E("C106") +
         " O parte s-a produs deja la dosarele decise; restul depinde de cât vor mai aștepta dosarele din stoc." + E("C112"),
-        hl("Încasările bugetare afectate: între circa " + V("C107").split(" / ")[0] + " și " + V("C107").split(" / ")[2] + " de milioane de lei, cu circa " + V("C107").split(" / ")[1] + " în scenariul central.") + E("C107"),
+        hl(PR("C107")) + E("C107"),
         hl("Fiecare zi în plus cu stocul actual costă, în scenariul central, circa " + V("C108").split(" (")[0] + " milioane de lei în economie și circa " + V("C108").split(" / ")[1].split(" (")[0] + " milioane la buget.") + E("C108"),
         "Parametrii modelului cu o bază în date sau în surse oficiale sunt acum " + NFOUND + "; cel care cântărește cel mai mult, costul unei modificări blocate, nu are." + E("C116", "C109"),
         "Fără nicio ipoteză, doar costul de finanțare al amânării, podeaua măsurată e mică; diferența până la scenarii vine din cât din activitate se pierde, nu doar se amână." + E("C115")] + ([
-        hl("Pentru 2027, fără măsuri noi, circa " + V("C122").split(" (")[0] + " de milioane de lei din veniturile bugetare ale anului s-ar încasa abia după 2027: un risc de calendar, nu o pierdere.") + E("C122") +
-        " Estimarea econometrică nu găsește un efect durabil al așteptării asupra firmelor noi." + E("C120") +
+        hl(PR("C122")) + E("C122") + " " + PR("C124") + E("C124") +
+        " În anul următor, estimarea econometrică nu găsește o diferență măsurabilă la firmele noi, dar nici nu exclude o pierdere care continuă." + E("C120") +
         " Cifra are un interval larg, extrapolează la așteptări mai lungi decât cele pe care a fost măsurat efectul și răspunde la altă întrebare decât contul pe scenarii pentru 2026, deci nu se adună cu el (secțiunea 8)."] if has_ec else [])) + "</ul>"
     b += sec("2", "Trei niveluri de siguranță") + P(
         "Cifrele de cost se citesc pe trei niveluri, de la sigur la incert. ") + '<ul class="find">' + "".join(f"<li>{x}</li>" for x in [
@@ -160,16 +164,17 @@ def vol7(pg):
         " " + hl("Intervalul contează mai mult decât cifra centrală: între scenariul prudent și cel tensionat e " + SPREAD_TXT + ".") + E("C106"))
     b += fig("i03_cont_de_impact.svg", "Contul de impact pe scenarii: cost economic (stânga, împărțit în realizat și expunerea stocului) și încasări bugetare afectate (dreapta).", ["C106", "C107", "C112"])
     b += sec("5", "Ce înseamnă pentru buget") + P(
-        "Încasările afectate nu sunt toate pierdute: o parte se încasează mai târziu, când firma își începe activitatea. Calculul le tratează ca încasări nete, cu o cotă efectivă construită din impozitul direct plătit efectiv de firmele noi, contribuțiile la salariul minim pentru angajații lor și TVA pe valoarea adăugată." + E("C107")) + P(
+        "Calculul impozitează doar partea de activitate presupusă pierdută definitiv, nu venituri amânate: de aceea cifra centrală depinde de ipoteza, fără sursă, a părții pierdute. Cota fiscală efectivă e construită din impozitul direct plătit efectiv de firmele noi, contribuțiile la salariul minim pentru angajații lor și TVA pe valoarea adăugată." + E("C107")) + P(
         hl("Pentru buget, cifra cea mai utilă e cea zilnică: cât costă încă o zi cu stocul actual.") + E("C108") +
         " Comparată cu bugetul proiectului de OUG, în scenariul central economia pierde în circa " + OUG_D_ECON + " de coadă cât costă întreaga măsură, iar bugetul, în circa " + OUG_D_TAX + "." + E("C108", "C83") +
-        " Nu se înmulțește cu numărul de zile, pentru că stocul și compoziția lui se schimbă.")
+        " Nu se înmulțește cu numărul de zile, pentru că stocul și compoziția lui se schimbă; comparația dă doar un ordin de mărime, iar proiectul singur scurtează coada, nu o elimină." + E("C43"))
     b += sec("6", "Pe ce se sprijină fiecare cifră") + P(
         "Tabelul arată, pentru fiecare parametru, valorile din analiza inițială și din scenariul fundamentat, starea (măsurat, sursă oficială, plafon măsurat sau ipoteză) și sursa. " +
         hl("Ponderea valorii adăugate a scăzut de la 45% la circa 30% (Eurostat), vânzările pe zi ale unei firme noi au fost recalculate pe toate firmele înmatriculate, inclusiv cele fără activitate, iar ponderea modificărilor care pot bloca activitatea are acum un plafon măsurat.") + E("C117", "C118", "C104") +
         " Ponderea amânărilor evitabile la depunere (canalul D) nu mai e presupusă (8–25% în analiza inițială): vine din motivele amânărilor citite în buletine, între " +
         V("C139").split(" (")[0] + " (toate motivele evitabile) și " + V("C139").split(" · ")[1].split(" (")[0] + " (cel puțin un motiv evitabil)." +
-        " O amânare e evitată doar dacă toate motivele ei sunt evitabile, așa că scenariul central folosește ponderea strictă, iar cel prudent limita ei inferioară; «cel puțin un motiv» e doar un plafon, folosit numai în scenariul tensionat." + E("C139", "C116")) + \
+        " O amânare e evitată doar dacă toate motivele ei sunt evitabile, așa că scenariul central folosește ponderea strictă, iar cel prudent limita ei inferioară; «cel puțin un motiv» e doar un plafon, folosit numai în scenariul tensionat." + E("C139", "C116") +
+        " " + C112_C + E("C112")) + \
         BV.table("cost_ipoteze", "Parametrii, valorile și sursa lor", small=True)
     b += sec("7", "Ce mișcă cifra") + P(
         "Schimbăm pe rând câte un parametru, de la valoarea prudentă la cea tensionată. " + hl("Cel mai mult contează costul pe zi al unei modificări blocate, o ipoteză fără sursă publică.") + E("C109") +

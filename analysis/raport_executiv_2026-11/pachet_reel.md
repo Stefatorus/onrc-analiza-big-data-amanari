@@ -129,7 +129,7 @@ Credit în reel: „analiză big data pe datele din BERC”. Declarație de inte
 - **Rezervă:** Cifră oficială preluată, nu recalculată.
 
 ### C29 · PASS · nivel C/S
-- **Voce:** Dintre ele, 106.060 (circa jumătate) nu fuseseră încă prelucrate deloc.
+- **Voce:** Dintre cele 204.414 de cereri nesoluționate, 106.060 (circa jumătate) erau încă în etapa de operare.
 - **Ecran:** 106.060 (51,9%) cereri
 - **Grafic:** Fig. 4.1
 - **Cum am calculat:** Partea neprelucrată a stocului oficial, din aceeași notă.
@@ -139,7 +139,7 @@ Credit în reel: „analiză big data pe datele din BERC”. Declarație de inte
 ## Cele două cozi (bilanț 30.10→6.11)
 
 ### C33 · PASS · nivel C/S
-- **Voce:** Într-o săptămână, coada de operare a scăzut cu 8.300, iar coada de la registrator a crescut cu 4.396.
+- **Voce:** În săptămâna 30 octombrie–6 noiembrie, coada de operare a scăzut cu 8.300, iar coada de la registrator a crescut cu 4.396.
 - **Ecran:** -8.300 / +4.396 cereri în 5 zile lucrătoare
 - **Grafic:** Fig. 4.2 bilanț
 - **Cum am calculat:** Diferența dintre cele două fotografii oficiale ale MJ, pe fiecare etapă.
@@ -149,12 +149,12 @@ Credit în reel: „analiză big data pe datele din BERC”. Declarație de inte
 ## Cele două cozi
 
 ### C34 · PASS · nivel B/P
-- **Voce:** Operarea lucra cu circa 16–20% mai repede decât soluționarea. Blocajul principal e la registrator, dar operarea e aproape.
+- **Voce:** În săptămâna 30 octombrie–6 noiembrie, operarea a lucrat cu circa 16–20% mai repede decât soluționarea, iar stocul de la registrator a crescut. E o singură săptămână; stocul acelei etape poate cuprinde și dosare care așteaptă completarea de către solicitant.
 - **Ecran:** ≈20% % (16–20% după convenție)
 - **Grafic:** Fig. 4.2
 - **Cum am calculat:** Raportul dintre debitul operării și al soluționării în 2–6 noiembrie, pe trei convenții de numărare.
 - **Sursă / script:** Nota MJ + BERC 2–6 nov. · `tandem_bottleneck_analysis.py:conventions`
-- **Rezervă:** Diferența variază între 16% și 20% după cum se numără deciziile.
+- **Rezervă:** Diferența variază între 16% și 20% după cum se numără deciziile. O singură săptămână, între două fotografii oficiale; stocul «prelucrate, nesoluționate» poate cuprinde și dosare aflate în termenul de completare după o amânare (timpul solicitantului), iar datele publice nu arată câte.
 
 ## Online nu ocolește operarea
 

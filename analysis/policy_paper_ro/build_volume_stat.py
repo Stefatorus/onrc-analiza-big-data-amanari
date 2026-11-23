@@ -205,12 +205,14 @@ def issue(title, what, effect, done, fix):
             f'<dt>Ce am făcut</dt><dd>{done}</dd><dt>Ce ar rezolva-o</dt><dd>{fix}</dd></dl></div>')
 
 
+import book_style as _BSV
 def cover(title, sub_, vol, extra):
     if BOOK:
         return ""
     return f"""<section class="cover"><div><div class="eyebrow">{vol} · Coada de la Registrul Comerțului · noiembrie 2026</div>
 <h1>{title}</h1><p class="sub">{sub_}</p></div>
 <dl><dt>Autor</dt><dd><strong>Ștefan-Lucian Deleanu</strong> · stefandeleanu.ro</dd>
+<dt>Ediție și dată</dt><dd>{_BSV.VERSION_HTML} · {_BSV.VERSION_DATE}</dd>
 <dt>Date</dt><dd>BERC, 4.077.510 decizii, până la {SP['_meta']['berc_last_decision']} · eșantion myportal de 7.469 de numere de cerere sondate, fără nume, CNP sau date de contact (dintre care {ro(SP['_meta']['portal_n'])} cereri supuse soluționării, cu date complete, folosite pentru Kaplan–Meier) · Nota MJ 30.10 și 6.11.2026</dd>
 <dt>Sursa tabelelor</dt><dd><code>stat_pack.json</code>, SHA-256 <code>{SP_SHA[:32]}…</code></dd>
 {extra}
@@ -576,7 +578,7 @@ def page_html(body, title, vol):
     if BOOK:
         import book_style
         title, vol, body = "COADA DE LA REGISTRUL COMERȚULUI · RAPORT COMPLET", PART["label"] or vol, book_refs(book_style.banner(PART["key"]) + body)
-    css = CSS.replace("%TITLE%", title).replace("%VOL%", vol).replace("%AUTHOR%", "Analiză independentă din date deschise · " + AUTHOR)
+    css = CSS.replace("%TITLE%", title).replace("%VOL%", vol).replace("%AUTHOR%", "Analiză independentă din date deschise · " + AUTHOR + " · " + _BSV.VERSION_FOOT) + "\n" + _BSV.VERSION_CSS
     if BOOK:
         import book_style
         css += book_style.LAB_BOXES + book_style.margins_css() + ("" if PART["key"] == "vol0" else book_style.FLOW_CSS)

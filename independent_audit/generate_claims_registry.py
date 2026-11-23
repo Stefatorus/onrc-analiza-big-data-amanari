@@ -85,6 +85,8 @@ POST = [int(x.replace(".", "")) for x in _re.search(r'"(\d\.\d{3}) / (\d\.\d{3})
 _stm = open(STM_F, encoding="utf-8").read()
 _m3 = _re.search(r"(\d+)[–-](\d+) registratori net suplimentari \((\d+)[–-](\d+) u/zi\)", _stm)
 FTE_LO, FTE_HI, U_LO, U_HI = (int(x) for x in _m3.groups())
+N40 = int(0.4 * (POST[1] - POST[2]) + 0.5)          # posts in the «40% of the funded vacant posts» scenario (C52)
+_DEN = lambda n: "" if 0 < int(round(n)) % 100 < 20 else "de "   # Romanian: «19 posturi», «54 de posturi»
 W0, W1, W2 = TSC["W0_wave_6931_status_quo"], TSC["W1_wave_6931_stage2_only_plus_2050_starves"], TSC["W2_wave_6931_balanced_tandem_7327"]
 AUGR = L["august_ratio_strict_finals_per_legal_wd"]
 _AU = json.loads((PP / 'audit_data' / 'oug_2026' / 'audit.json').read_text(encoding='utf-8')); au_prev, au_cur = _AU['previous_backlog'], _AU['current_backlog']
@@ -144,6 +146,9 @@ BQF = OUT / "backtest_queue_mechanics.json"; SHA["backtest_queue_mechanics.json"
 _mech = [v["mecanism"] for v in BQ.values()]; _fore = [v["prognoza"] for v in BQ.values()]
 def _cc(sh, auto=0.0, k="iun2027"):
     r = next(x for x in CC["scenarios"] if x["pondere"] == sh and x["automatizare_caen"] == auto); return ro(r[k][1])
+def _mo(d):   # days -> months (30,44 days), rounded to the half month: «6½», «9», «11»
+    h = round(float(str(d).replace(".", "")) / 30.44 * 2) / 2
+    return str(int(h)) if h == int(h) else f"{int(h)}½"
 _TIE = [r for r in RK["rang_asteptare_nov"]["rows"][1:] if round(r["median_nov"], 1) == round(RK["rang_asteptare_nov"]["rows"][1]["median_nov"], 1)]
 NOVALL = [r for r in SPK["serie_lunara"]["rows"] if r["luna"] == "2026-11"][0]; LE2 = L["le2d_share_27apr_by_decision_date"]
 
@@ -164,6 +169,11 @@ KFF = OUT / "cost_founded.json"; SHA["cost_founded.json"] = sha(KFF); KF = json.
 KEF = OUT / "cost_evidence.json"; SHA["cost_evidence.json"] = sha(KEF); KE = {x["id"]: x for x in json.loads(KEF.read_text(encoding="utf-8"))["findings"]}
 _SC = KF["scenarios"]["fundamentat"]; _SC0 = KF["scenarios"]["initial"]; _FM = {(r["cohort_year"], r["financial_year"]): r for r in KC["formation"]}
 _SUB = KF["substitution"]; _SENS = KF["sensitivity"][0]
+_INC = next(r for r in KF["inputs_founded"] if r["scenario"] == "central")
+_PCT = lambda x: rd(100 * x, 1).replace(",0", "")
+# channel C counts only amendments in the stock: stock − new firms − a further share outside the channels (cost_check.ledger)
+import inspect as _insp, cost_check as _cck
+_OTH = float(_re.search(r"pending_new_j_share - (\.\d+)\)", _insp.getsource(_cck.ledger)).group(1))
 _MAC = {r["regime"][:2]: r for r in KC["macro"]}
 RPF = HERE.parent / "replicare_independenta" / "lucru" / "RAPORT_REPLICARE.md"; SHA["RAPORT_REPLICARE.md"] = sha(RPF)
 _RPT = RPF.read_text(encoding="utf-8")
@@ -171,6 +181,11 @@ REPL = {k: int(_re.search(rf"\|\s*{k}\s*\|\s*(\d+)\s*\|", _RPT).group(1)) for k 
 ECF = OUT / "econometrics.json"; SHA["econometrics.json"] = sha(ECF); ECR = {x["id"]: x for x in json.loads(ECF.read_text(encoding="utf-8"))["results"]}
 _ec = lambda k: ECR[k]["estimate"]; _eci = lambda k: ECR[k]["ci95"]
 _RK = "B.risc_2027.continuitate."
+_r0 = lambda k: rd(_ec(_RK + k + ".an_2027"), 0).replace("-", "−")
+_ri = lambda k, sep="–": sep.join(rd(x, 0).replace("-", "−") for x in _eci(_RK + k + ".an_2027"))
+_PB = (HERE / "econometrics" / "03_part_b.py").read_text(encoding="utf-8")
+FLOOR_D = int(_re.search(r"^FLOOR = (\d+)", _PB, _re.M).group(1))                       # «normal» wait of the counterfactual
+assert 'win = (dates >= "2026-12-01")' in _PB, "2027 revenue window start changed: update C122 text"
 KMF = OUT / "cost_monthly.json"; SHA["cost_monthly.json"] = sha(KMF); KM = json.loads(KMF.read_text(encoding="utf-8"))
 _KMR = {r["luna"]: r for r in KM["cost_lunar"]["rows"]}; _KMY = {r["an"]: r for r in KM["cost_anual"]["rows"]}
 _norm = sorted(_KMR[m]["economic_central_mil"] for m in ("2025-06", "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12"))
@@ -188,7 +203,7 @@ _DE = lambda n: "" if 0 < int(round(n)) % 100 < 20 else "de "      # Romanian: �
 _y24, _y25, _y26 = (int(round(x)) for x in (_Y24, _Y25, _Y26))  # displayed (rounded) values; margin uses the same numbers
 if _Y26 > _Y24 + _Y25:
     C113_PUB = (f"În 2026, întârzierile au costat deja mai mult decât în 2024 și 2025 la un loc: circa {_y26} {_DE(_y26)}milioane de lei, "
-                f"față de circa {_y24} în 2024 și {_y25} în 2025, deci cu circa {_y26 - _y24 - _y25} {_DE(_y26 - _y24 - _y25)}milioane mai mult (scenariul central).")
+                f"față de circa {_y24} în 2024 și {_y25} în 2025, deci cu circa {int(round(_Y26 - _Y24 - _Y25))} {_DE(_Y26 - _Y24 - _Y25)}milioane mai mult (scenariul central).")
 elif _Y26 >= 0.9 * (_Y24 + _Y25):
     C113_PUB = (f"În 2026, întârzierile au costat deja aproape cât în 2024 și 2025 la un loc: circa {_y26} {_DE(_y26)}milioane de lei, "
                 f"față de circa {_y24} în 2024 și {_y25} în 2025 (scenariul central).")
@@ -279,15 +294,15 @@ CLAIMS = [
    "Cifră oficială preluată, nu recalculată.", f"La 6 noiembrie, Ministerul Justiției raporta {ro(MJ['nov06']['total'])} de cereri nesoluționate."),
  C("C29", "Of which not yet processed (Stage 1, operare)", f"{ro(MJ['nov06']['s1'])} ({rd(MJ['nov06']['s1_share_pct'])}%)", "cereri", "C", "PASS",
    "Nota MJ, 6.11.2026", "tandem_bottleneck_analysis.py:mj_tandem_conservation", TB, DATE_MJ, "Cifră oficială preluată.",
-   f"Dintre ele, {ro(MJ['nov06']['s1'])} (circa jumătate) nu fuseseră încă prelucrate deloc."),
+   f"Dintre cele {ro(MJ['nov06']['total'])} de cereri nesoluționate, {ro(MJ['nov06']['s1'])} (circa jumătate) erau încă în etapa de operare."),
  C("C33", "Stock change 30 Oct→6 Nov: Stage 1 vs Stage 2", f"{ro(MJ['delta']['s1'])} / +{ro(MJ['delta']['s2'])}", "cereri în 5 zile lucrătoare",
    "C", "PASS", "Nota MJ (30.10 și 6.11) + identitatea de conservare", "tandem_bottleneck_analysis.py:mj_tandem_conservation", TB, DATE_MJ,
    "Bilanț pe două fotografii oficiale; nu arată ce s-a întâmplat între ele.",
-   f"Într-o săptămână, coada de operare a scăzut cu {ro(-MJ['delta']['s1'])}, iar coada de la registrator a crescut cu {ro(MJ['delta']['s2'])}."),
+   f"În săptămâna 30 octombrie–6 noiembrie, coada de operare a scăzut cu {ro(-MJ['delta']['s1'])}, iar coada de la registrator a crescut cu {ro(MJ['delta']['s2'])}."),
  C("C34", "Operare outpaced soluționare by", f"≈{ro(CV['o1_premium_pct'])}%", "% (16–20% după convenție)", "B", "PASS",
    "Nota MJ + BERC 2–6 nov.", "tandem_bottleneck_analysis.py:conventions", TB, DATE_MJ,
-   "Diferența variază între 16% și 20% după cum se numără deciziile.",
-   "Operarea lucra cu circa 16–20% mai repede decât soluționarea. Blocajul principal e la registrator, dar operarea e aproape."),
+   "Diferența variază între 16% și 20% după cum se numără deciziile. O singură săptămână, între două fotografii oficiale; stocul «prelucrate, nesoluționate» poate cuprinde și dosare aflate în termenul de completare după o amânare (timpul solicitantului), iar datele publice nu arată câte.",
+   "În săptămâna 30 octombrie–6 noiembrie, operarea a lucrat cu circa 16–20% mai repede decât soluționarea, iar stocul de la registrator a crescut. E o singură săptămână; stocul acelei etape poate cuprinde și dosare care așteaptă completarea de către solicitant."),
  C("C06", "Portal sample: share of live judged dossiers at Stage 1", f"{rd(100*L['backlog_split_stage1'])}%", "% din dosarele în așteptare",
    "A", "PASS", "portal, eșantion de mențiuni/radieri", "analyze_portal_snapshot.py", PO, DATE_PORT,
    "Eșantion fără înmatriculările în curs; confirmă ordinul de mărime al cifrei oficiale (C29).",
@@ -388,8 +403,8 @@ CLAIMS = [
      "steelman_and_solutions_engine.py → solutions_feasibility_and_simulations.csv", "solutions_feasibility_and_simulations.csv", DATE_BERC,
      note + " Efectele măsurilor sunt ipoteze de intrare (literali), nu măsurători.", pub)
    for cid, pid, note, pub in [
-     ("C52", "P3", "Scenariu fragil: depinde de ocuparea a 40% din posturile finanțate.",
-      "Un pachet cu OUG extins și ocuparea a 40% din posturile vacante finanțate ar coborî așteptarea, în model, la ordinul a cinci săptămâni, cu un interval larg."),
+     ("C52", "P3", f"Scenariu fragil: depinde de ocuparea a 40% din posturile vacante finanțate (circa {N40} {_DEN(N40)}posturi).",
+      f"Un pachet cu OUG extins și ocuparea a 40% din posturile vacante finanțate (circa {N40} {_DEN(N40)}posturi) ar coborî așteptarea, în model, la ordinul a cinci săptămâni, cu un interval larg."),
      ("C53", "P4", "Scenariu: conversie CAEN 1-la-1 prin lege (fără IT), ipoteza de −75% din cererile CAEN.",
       "Doar decongestionarea legislativă (conversia CAEN 1-la-1 și eșalonarea) ar reduce așteptarea, în model, la ordinul a două-trei luni."),
      ("C54", "P5", f"Foarte fragil: la o singură schimbare plauzibilă (CAEN −50%, prelungirea OUG, ancoră +5%), câștigul scade la {P5_FRAG[0]}–{P5_FRAG[-1]} de zile. NU se spune «economisește ≥100 de zile».",
@@ -398,12 +413,12 @@ CLAIMS = [
    f"+{ro(U_LO)}–{ro(U_HI)} unități/zi (≈{FTE_LO}–{FTE_HI} FTE)", "unități de capacitate pe zi lucrătoare",
    "B", "WARN", "model verificat (matricea steelman, S11)", "steelman_and_solutions_engine.py → steelman_counterarguments_matrix.csv", "steelman_counterarguments_matrix.csv", DATE_BERC,
    "Ținta: coadă practic goală deja la sfârșitul lui 2027 și menținută în iunie 2028, în majoritatea variantelor (mai strictă decât grila C65, care privește doar iunie 2028). Conversia în FTE presupune circa 25 de dosare pe zi pe post, o ipoteză de model; alte scenarii folosesc alte ipoteze. Nu e o normă și nu măsoară performanța individuală.",
-   f"Doar prin personal, revenirea la circa 3 zile ar cere o capacitate suplimentară de {ro(U_LO)}–{ro(U_HI)} de dosare pe zi, adică ordinul a 80–100 de posturi cu normă întreagă."),
+   f"Doar prin personal, revenirea la circa 3 zile ar cere o capacitate suplimentară de {ro(U_LO)}–{ro(U_HI)} de dosare pe zi, adică circa {FTE_LO}–{FTE_HI} {_DEN(FTE_HI)}posturi cu normă întreagă (estimare de model)."),
  C("C56", "Tandem, wave of 6.931/day: Stage-2-only expansion vs balanced expansion (120 working days)",
    f"doar etapa 2: registratori fără dosare {W1['starved_days']} zile, operare ≈{ro(round(W1['end_s1'], -3))}; echilibrat: total ≈{ro(round(W2['end_total'], -3))} vs ≈{ro(round(W0['end_total'], -3))} fără măsuri",
    "cereri în stoc după 120 de zile lucrătoare", "B", "PASS", "model în tandem verificat (W0/W1/W2)", "tandem_bottleneck_analysis.py:tandem_scenarios_distinct_anchor", TB, DATE_MJ,
    "Scenariu condiționat de valul de 6.931/zi (media MJ aug.–oct.) și de ancora 2–6 nov.",
-   "Dacă se întărește doar etapa registratorilor, aceștia rămân fără dosare, iar coada de operare crește. Doar întărirea ambelor etape reduce stocul total."),
+   "Cu un val de cereri ca în august–octombrie, dacă se întărește doar etapa registratorilor, aceștia rămân fără dosare, iar coada de operare crește. Doar întărirea ambelor etape reduce stocul total."),
  C("C57", "Rejection share of final decisions, H2 2025 (fast regime) vs now",
    f"{rd(L['rejection_share_strict_finals']['H2_2025']['respins_pct'])}% respingeri, mediana {rd(L['rejection_share_strict_finals']['H2_2025']['median_wait'])} zile (S2 2025) · {rd(L['rejection_share_strict_finals']['oct_1_nov_20_2026']['respins_pct'])}% acum",
    "% respinse din deciziile finale (admis, respins, renunțat), CERERE265 + INMATRIC265; mediana așteptării în zile",
@@ -590,7 +605,7 @@ CLAIMS = [
    f"50% → ≈{_cc(0.5)} · 80% → ≈{_cc(0.8)} · 100% → ≈{_cc(1.0)} (față de ≈{_cc('motor (140–390 mii)')} în prognoza de bază)",
    "zile de așteptare în iunie 2027 (mediană), ca pondere din 902.243 de cereri CAEN rămase (nota MJ)", "B", "WARN", "motorul verificat; valul CAEN scalat la nota MJ (902.243)", "forecast_caen_compliance.py", "forecast_caen_compliance.json", DATE_BERC,
    "Scenariu: aceeași formă în timp a valului (ian.–apr. 2027) și același efort pe dosar ca în motor. Arată riscul dacă firmele depun masiv înainte de sfârșitul perioadei de tranziție, cum au făcut înainte de 25 septembrie 2026 (C152).",
-   "Dacă se confirmă cifrele publice despre CAEN și firmele depun în masă înainte de sfârșitul perioadei de tranziție (1 aprilie 2027, după calculul nostru), așteptarea ar putea ajunge la 6–11 luni în 2027."),
+   f"Dacă se confirmă cifrele publice despre CAEN și 80% sau toate entitățile rămase depun în masă înainte de sfârșitul perioadei de tranziție (1 aprilie 2027, după calculul nostru), așteptarea din iunie 2027 ar putea ajunge la circa {_mo(_cc(0.8))}–{_mo(_cc(1.0))} luni; dacă depune doar jumătate dintre ele, la circa {_mo(_cc(0.5))} luni."),
  C("C95", "Same CAEN scenarios with automatic 1-to-1 conversion of 75% of CAEN filings", f"80% + conversie → ≈{_cc(0.8, 0.75)} · 100% + conversie → ≈{_cc(1.0, 0.75)} (iunie 2027)",
    "zile de așteptare în iunie 2027 (mediană)", "B", "WARN", "motorul verificat; aceeași ipoteză de conversie ca pachetul P4", "forecast_caen_compliance.py", "forecast_caen_compliance.json", DATE_BERC,
    "Conservator: conversia se aplică doar valului suplimentar, nu și dosarelor CAEN din fluxul obișnuit. Efectul conversiei e o ipoteză de intrare.",
@@ -655,8 +670,9 @@ CLAIMS = [
  C("C107", "Budget revenues affected (taxes not collected or delayed), same window, founded scenario: prudent / central / stressed",
    f"{mil(_SC['prudent']['tax'])} / {mil(_SC['central']['tax'])} / {mil(_SC['tensionat']['tax'])}", "milioane lei", "B", "WARN",
    "BERC + cota fiscală efectivă construită din bilanțuri și cotele legale 2026", "cost_founded.py", "cost_founded.json", "BERC până la 18.11.2026",
-   "Încasări nete afectate (o parte se încasează mai târziu), nu suma cotelor legale.",
-   f"Încasările bugetare afectate sunt estimate între circa {rd(_SC['prudent']['tax'] / 1e6, 0)} și {rd(_SC['tensionat']['tax'] / 1e6, 0)} de milioane de lei, cu circa {rd(_SC['central']['tax'] / 1e6, 0)} în scenariul central."),
+   "Încasări pierdute în ipotezele scenariului: calculul impozitează doar partea de activitate presupusă pierdută definitiv, nu suma cotelor legale și nici venituri amânate. "
+   f"Cifra centrală depinde de două ipoteze fără sursă: partea din vânzările firmelor noi pierdută definitiv ({_PCT(_INC['lost_turnover_fraction'])}%) și costul unei modificări blocate (C109).",
+   f"Încasările bugetare pierdute sunt estimate între circa {rd(_SC['prudent']['tax'] / 1e6, 0)} și {rd(_SC['tensionat']['tax'] / 1e6, 0)} de milioane de lei, cu circa {rd(_SC['central']['tax'] / 1e6, 0)} în scenariul central; cifra centrală presupune, fără o sursă, că {_PCT(_INC['lost_turnover_fraction'])}% din vânzările amânate ale firmelor noi se pierd definitiv."),
  C("C108", "Exposure of one more day with the reference stock (204.414): economic / fiscal, founded central scenario (prudent–stressed)",
    f"{mil(_SC['central']['daily_econ'])} ({mil(_SC['prudent']['daily_econ'])}–{mil(_SC['tensionat']['daily_econ'])}) / {mil(_SC['central']['daily_tax'])} ({mil(_SC['prudent']['daily_tax'])}–{mil(_SC['tensionat']['daily_tax'])})",
    "milioane lei pe zi", "B", "WARN", "MJ (stocul de referință) + scenariul fundamentat", "cost_founded.py", "cost_founded.json", "BERC până la 18.11.2026",
@@ -701,7 +717,9 @@ CLAIMS = [
  C("C112", "Central economic cost Aug–18 Nov 2026 split into realized (files already decided) and conditional exposure of the stock not yet decided",
    f"{rd(KM['window_realized_mil']['central'], 0)} realizat + {rd(_SC['central']['total'] / 1e6 - KM['window_realized_mil']['central'], 0)} expunere a stocului = {rd(_SC['central']['total'] / 1e6, 0)}",
    "milioane lei, scenariul central", "B", "WARN", "BERC + scenariul fundamentat", "cost_monthly.py; cost_founded.py", "cost_monthly.json", "BERC până la 18.11.2026",
-   "Partea de stoc depinde de câte zile vor mai aștepta dosarele nedecise; e o expunere, nu un cost deja produs.",
+   "Partea de stoc depinde de câte zile vor mai aștepta dosarele nedecise; e o expunere, nu un cost deja produs. "
+   f"În canalul C (alte modificări), partea de stoc numără doar modificările: stocul de referință fără firmele noi ({_PCT(_INC['pending_new_j_share'])}%) și fără încă {_PCT(_OTH)}% "
+   f"(înființări în afara formei J și alte tipuri de cereri, care nu intră în niciun canal), adică {_PCT(1 - _INC['pending_new_j_share'] - _OTH)}% din stoc.",
    f"Din costul central, circa {rd(KM['window_realized_mil']['central'], 0)} {_DE(KM['window_realized_mil']['central'])}milioane de lei s-au produs deja la dosarele decise; restul depinde de cât vor mai aștepta dosarele din stoc."),
  C("C113", "Realized economic cost by calendar year, central scenario (2026 to 20 Nov)",
    f"2024 {rd(_KMY['2024']['economic_central_mil'], 0)} · 2025 {rd(_KMY['2025']['economic_central_mil'], 0)} · 2026 {rd(_KMY['2026']['economic_central_mil'], 0)} (buget: {rd(_KMY['2024']['buget_central_mil'], 0)} / {rd(_KMY['2025']['buget_central_mil'], 0)} / {rd(_KMY['2026']['buget_central_mil'], 0)})",
@@ -716,35 +734,44 @@ CLAIMS = [
    f"{rd(_ec('A.prima_etapa.LOO_oficiu_saptamana'), 2)} · F = 792 (pe oficii) · {ro(ECR['A.prima_etapa.LOO_oficiu_saptamana']['n'])} firme noi",
    "coeficient; statistică F; firme", "A", "PASS", "BERC (înmatriculări 2024) legat de bilanțurile MF 2025", "econometrics/ (02_*)", "econometrics.json", "înmatriculări 2024",
    "Instrument puternic (F mult peste pragul uzual de 10); variația lui după efectele fixe e de câteva zile.",
-   "Folosim faptul că, în aceeași săptămână și la același oficiu, așteptarea a depins de aglomerare, nu de firmă: un experiment natural."),
+   "Folosim faptul că, în aceeași săptămână și la același oficiu, așteptarea a depins de aglomerarea oficiului: un experiment natural (ipoteza de identificare: aglomerarea influențează activitatea firmei doar prin durata așteptării; testele placebo o verifică doar parțial)."),
  C("C120", "Effect of one extra waiting day on new firms in the first full year after registration (IV): probability of activity / direct tax",
    f"{rd(100 * _ec('A.an_urmator.IV.bs'), 2)} p.p. ({rd(100 * _eci('A.an_urmator.IV.bs')[0], 2)}…{rd(100 * _eci('A.an_urmator.IV.bs')[1], 2)}) / {rd(_ec('A.an_urmator.IV.taxA_w'), 0)} lei ({rd(_eci('A.an_urmator.IV.taxA_w')[0], 0)}…{rd(_eci('A.an_urmator.IV.taxA_w')[1], 0)})",
    "per zi de așteptare (IC 95%)", "B", "PASS", "BERC + bilanțuri MF (cohorta 2024, anul 2025)", "econometrics/ (02_*)", "econometrics.json", "cohorta 2024",
-   "Efect nedistins de zero în toate metodele (variabilă instrumentală, diferențe în diferențe, instrument național); estimat pe așteptări de până la circa 35 de zile.",
-   "Nu găsim un efect durabil al așteptării asupra firmelor noi în anul următor: activitatea și taxele lor nu diferă măsurabil."),
+   "Efect nedistins de zero în toate metodele (variabilă instrumentală, diferențe în diferențe, instrument național); estimat pe așteptări de până la circa 35 de zile. "
+   "Nu înseamnă «niciun efect durabil»: intervalul impozitului cuprinde și o pierdere de mărimea celei din primul an (C121).",
+   "În anul următor, activitatea și taxele firmelor noi care au așteptat mai mult nu diferă măsurabil: datele nu arată o recuperare a ce s-a pierdut în primul an, dar nici nu exclud o pierdere care continuă."),
  C("C121", "Effect of one extra waiting day on new firms in their first (partial) year (IV): turnover / direct tax",
    f"{rd(_ec('A.an_partial_2024.IV.turn_w'), 0)} lei ({rd(_eci('A.an_partial_2024.IV.turn_w')[0], 0)}…{rd(_eci('A.an_partial_2024.IV.turn_w')[1], 0)}) / {rd(_ec('A.an_partial_2024.IV.taxB_w'), 0)} lei ({rd(_eci('A.an_partial_2024.IV.taxB_w')[0], 0)}…{rd(_eci('A.an_partial_2024.IV.taxB_w')[1], 0)})",
    "per zi de așteptare (IC 95%)", "B", "PASS", "BERC + bilanțuri MF (cohorta 2024, anul 2024)", "econometrics/ (02_*)", "econometrics.json", "cohorta 2024",
-   "Efect de calendar: activitatea începe la decizie, deci vânzările și taxele primului an se mută mai târziu, nu dispar.",
-   "Fiecare zi de așteptare mută mai târziu circa 1.400 de lei din vânzările primului an ale unei firme noi și circa 40 de lei de taxe."),
+   "Activitatea începe la decizie, deci primul an pierde vânzări și taxe; dacă ele se recuperează mai târziu nu se vede în aceste date (anul următor: C120).",
+   f"Fiecare zi de așteptare reduce vânzările primului an ale unei firme noi cu circa {ro(round(abs(_ec('A.an_partial_2024.IV.turn_w')), -2))} de lei și impozitul ei direct cu circa {rd(abs(_ec('A.an_partial_2024.IV.taxB_w')), 0)} de lei."),
  C("C122", "2027 general-government revenue collected later because of the queue (status quo, net of within-year recovery): full year P50 (95% interval)",
    f"{rd(_ec(_RK + '1c_efect_net_numerar_amanare.an_2027'), 0)} ({rd(_eci(_RK + '1c_efect_net_numerar_amanare.an_2027')[0], 0)}–{rd(_eci(_RK + '1c_efect_net_numerar_amanare.an_2027')[1], 0)}) · brut amânat {rd(_ec(_RK + '1a_amanat_brut_total.an_2027'), 0)}, din care recuperat în 2027 {rd(_ec(_RK + '1b_recuperat_in_perioada.an_2027'), 0)}",
    "milioane lei, 2027", "B", "WARN", "motorul de prognoză (2.000 de variante) × volume BERC × efectele estimate × cote legale 2026", "econometrics/ (04_*)", "econometrics.json", "prognoză 2027",
-   "Distribuție Monte Carlo; așteptările prognozate (55–150 de zile) depășesc intervalul pe care a fost estimat efectul; TVA pe valoarea adăugată e o ipoteză.",
-   "În 2027, coada ar muta în anul următor, la mijloc, circa 270 de milioane de lei din veniturile bugetare, într-un interval de circa 60–550 de milioane."),
+   "Interval de simulare de 95%: percentilele 2,5–97,5 ale celor 2.000 de variante simulate (prognoză × incertitudinea efectelor), condiționat de ipotezele fixe; nu e un interval de încredere. "
+   f"Reperul: o coadă normală, de {FLOOR_D} zile, pentru cererile depuse din decembrie 2026; veniturile amânate din cererile depuse înainte, care ar intra în 2027, nu sunt scăzute. "
+   f"Cifra presupune deja că ce se pierde în zilele de așteptare se recuperează imediat după decizie, cât încape în 2027 (brut {_r0('1a_amanat_brut_total')}, recuperat {_r0('1b_recuperat_in_perioada')}); fără nicio recuperare, minusul e cel din C124. "
+   "Din bilanțurile firmelor noi vin impozitul direct și numărul de angajați; TVA (pe o pondere presupusă a valorii adăugate) și toată partea modificărilor (ipotezele analizei inițiale) sunt ipoteze. Așteptările prognozate (55–150 de zile) depășesc intervalul pe care a fost estimat efectul.",
+   f"Pentru 2027, fără măsuri noi, circa {_r0('1c_efect_net_numerar_amanare')} de milioane de lei din veniturile bugetare nu ar intra în bugetul anului din cauza cozii (interval de simulare de 95%: {_ri('1c_efect_net_numerar_amanare')} de milioane), "
+   f"față de o coadă normală, de {FLOOR_D} zile; o parte se poate recupera ulterior, dar datele nu exclud o pierdere durabilă."),
  C("C123", "Cost of the delay itself for the budget in 2027 (time value of revenue collected later, at the 10-year yield): P50 (95% interval)",
    f"{rd(_ec(_RK + '1d_cost_valoare_in_timp.an_2027'), 0)} ({rd(_eci(_RK + '1d_cost_valoare_in_timp.an_2027')[0], 0)}–{rd(_eci(_RK + '1d_cost_valoare_in_timp.an_2027')[1], 0)})",
    "milioane lei, 2027", "B", "WARN", "ca C122 + randamentul titlurilor de stat la 10 ani (Eurostat)", "econometrics/ (04_*)", "econometrics.json", "prognoză 2027",
-   "Costul real al amânării, dacă veniturile se încasează până la urmă.", "Costul de finanțare al acestei amânări, pentru buget, e de circa 13 milioane de lei în 2027."),
+   "Valabil doar dacă veniturile amânate se încasează până la urmă (dobânda titlurilor de stat la 10 ani); dacă nu se recuperează, costul e chiar venitul pierdut.",
+   f"Dacă veniturile amânate se încasează până la urmă, costul lor de finanțare pentru buget e de circa {_r0('1d_cost_valoare_in_timp')} milioane de lei în 2027; dacă nu se recuperează, costul e chiar venitul pierdut."),
  C("C124", "2027 upper bound if delayed revenue were never recovered / persistent loss estimated from the causal effect: P50 (95% interval)",
    f"{rd(_ec(_RK + 'B_nerecuperat_impact_(1a+2).an_2027'), 0)} ({rd(_eci(_RK + 'B_nerecuperat_impact_(1a+2).an_2027')[0], 0)}–{rd(_eci(_RK + 'B_nerecuperat_impact_(1a+2).an_2027')[1], 0)}) / {rd(_ec(_RK + '2_pierdut_persistent_(PARTEA_A).an_2027'), 0)} ({rd(_eci(_RK + '2_pierdut_persistent_(PARTEA_A).an_2027')[0], 0)}…{rd(_eci(_RK + '2_pierdut_persistent_(PARTEA_A).an_2027')[1], 0)})",
    "milioane lei, 2027", "B", "WARN", "ca C122", "econometrics/ (04_*)", "econometrics.json", "prognoză 2027",
-   "Limita de sus nu e o prognoză: presupune că nimic nu se recuperează. Pierderea persistentă e centrată pe zero; intervalul reflectă incertitudinea statistică.",
-   "Chiar în ipoteza extremă că nimic nu s-ar recupera, riscul pentru 2027 ar fi, la mijloc, de circa 740 de milioane de lei."),
+   "Limita de sus nu e o prognoză: presupune că nimic nu se recuperează (venitul amânat brut plus componenta persistentă, mediana sumei). "
+   "Componenta persistentă e aproape de zero la mijloc, dar intervalul ei cuprinde atât un câștig, cât și o pierdere de sute de milioane: datele nu o pot exclude.",
+   f"Dacă nimic nu s-ar recupera, minusul din 2027 ar fi, la mijloc, de circa {_r0('B_nerecuperat_impact_(1a+2)')} de milioane de lei ({_ri('B_nerecuperat_impact_(1a+2)')}); "
+   f"componenta persistentă, estimată din efectul cauzal, e de circa {_r0('2_pierdut_persistent_(PARTEA_A)')} de milioane, aproape de zero, dar cu un interval foarte larg ({_ri('2_pierdut_persistent_(PARTEA_A)', '…')})."),
  C("C125", "2027 revenue shift avoided by the best realistic package of measures vs status quo: P50 (95% interval)",
    f"{rd(_ec('B.risc_2027.combinat.evitat_vs_continuitate_A_numerar_(1c+2).an_2027'), 0)} ({rd(_eci('B.risc_2027.combinat.evitat_vs_continuitate_A_numerar_(1c+2).an_2027')[0], 0)}–{rd(_eci('B.risc_2027.combinat.evitat_vs_continuitate_A_numerar_(1c+2).an_2027')[1], 0)})",
    "milioane lei, 2027", "B", "WARN", "ca C122; scenariul „combinat” al motorului", "econometrics/ (04_*)", "econometrics.json", "prognoză 2027",
-   "Comparație pe aceleași simulări; depinde de scenariul de măsuri.", "Un pachet realist de măsuri ar evita mutarea a circa 240 de milioane de lei din veniturile din 2027."),
+   "Comparație pe aceleași simulări; depinde de scenariul de măsuri (scenariul „combinat” al motorului). Același reper și aceleași ipoteze ca în C122.",
+   f"Un pachet realist de măsuri ar reduce cu circa {rd(_ec('B.risc_2027.combinat.evitat_vs_continuitate_A_numerar_(1c+2).an_2027'), 0)} de milioane de lei venitul care nu intră în bugetul anului 2027 din cauza cozii."),
  C("C08", "Union/press backlog figure", "≈210k", "cereri", "C", "WARN", "sindicate/presă", "—", LC, DATE_BERC,
    "Înlocuit de cifra oficială MJ (C28).", "[Se folosește C28]"),
  C("C13", "Oldest still-pending filing in the portal sample", ".".join(reversed(SPK["oldest_pending"]["date"].split("-"))), "dată (eșantion myportal, recoltat 21–22.11.2026)", "A", "PASS", "portal", "stat_pack.py (oldest_pending)", "stat_pack.json", DATE_PORT,
@@ -813,7 +840,7 @@ CLAIMS += [
  C(_DID["avoidable"], "Postponements avoidable at filing: all cited reasons avoidable (strict) / at least one avoidable (upper bound) / all avoidable or partly avoidable",
    f"{_pc(_DST['value'])} ({_dci(_DST)}) · {_pc(_DAN['value'])} ({_dci(_DAN)}) · {_pc(_DDP['value'])}",
    "% din amânările cu motiv publicat", "B", "WARN", _DR_SRC + "; marcajele «evitabil» din taxonomy.csv", "delay_reasons/07_results.py", "delay_reasons.json", DATE_DR,
-   "«Evitabil la depunere» e evaluarea auditorului (asistată de AI), neconfirmată de ONRC. Pe cele 100 de cazuri verificate manual: 27% strict, 47% cel puțin un motiv.",
+   "«Evitabil la depunere» e evaluarea autorului (asistată de AI), neconfirmată de ONRC. Pe cele 100 de cazuri verificate manual: 27% strict, 47% cel puțin un motiv.",
    f"Circa una din cinci amânări ({_pc(_DST['value'])}) avea numai motive pe care o verificare la depunere le-ar fi prins; în aproape jumătate ({_pc(_DAN['value'])}), cel puțin unul."),
  C(_DID["validation"], "Validation of the reason classifier on a seeded random sample of 100 postponements: exact set / at least one correct reason / precision / recall",
    f"{_pc0(_VV['exact_set_accuracy'])} set identic ({_dci(_VAL)}) · {_pc0(_VV['any_overlap'])} cel puțin un motiv corect · precizie {rd(_VV['micro_precision'], 2)} / recall {rd(_VV['micro_recall'], 2)}",
@@ -830,7 +857,7 @@ CLAIMS += [
    f"Dacă lipsurile evitabile ar fi prinse la depunere, ar dispărea cel mult circa {_r10(_AMZ * _DST['value'])} de amânări pe zi lucrătoare din circa {ro(round(_AMZ, -3))}; în circa {_r10(_AMZ * _DAN['value'])} de amânări pe zi ar rămâne cel puțin un motiv mai puțin."),
  C(_DID["levels"], "Automation level of the main solution per postponement reason (12 reasons): Standard / AI only / advanced AI only / not automatable; reasons where the registrar's legal judgement remains",
    f"{_LH['Standard']} / {_LH['Doar cu AI']} / {_LH['Doar cu AI avansat']} / {_LH['Nu se poate automatiza']} din {_NM} · judecata registratorului rămâne în {_LI['Nu se poate automatiza']} din {_NM}",
-   "motive de amânare (categorii)", "B", "PASS", "matricea de soluții (evaluarea auditorului, asistată de AI)", "delay_reasons/08_solutions.py", "postponement_solutions.json", "22.11.2026",
+   "motive de amânare (categorii)", "B", "PASS", "matricea de soluții (evaluarea autorului, asistată de AI)", "delay_reasons/08_solutions.py", "postponement_solutions.json", "22.11.2026",
    "Nu vedem sistemele interne ONRC: o parte din verificări poate exista deja. Nivelul e cel al soluției principale; fiecare motiv are și soluții secundare.",
    f"Pentru {_LH['Standard']} din cele {_NM} motive, soluția principală e o verificare la depunere fără AI; doar concordanța actelor cere un model AI avansat, iar în {_LI['Nu se poate automatiza']} motive o parte rămâne la judecata registratorului."),
  C(_DID["legal"], "Legal frame for automating postponement checks: AI Act dates after the Digital Omnibus; who decides; automated-decision limits",
@@ -838,7 +865,7 @@ CLAIMS += [
    "prevederi legale", "C", "PASS",
    "EUR-Lex: Reg. (UE) 2024/1689, 2026/1744, GDPR, Dir. (UE) 2019/1151; legislatie.just.ro: Legea 265/2022, Legea 242/2022 (citite la 22.11.2026)",
    "delay_reasons/08_solutions.py (legal)", "postponement_solutions.json", "22.11.2026",
-   "Încadrarea cazurilor ONRC în afara anexei III e interpretarea auditorului; art. 113 original și formularea anexei III au fost citite pe o sursă secundară.",
+   "Încadrarea cazurilor ONRC în afara anexei III e interpretarea autorului; art. 113 original și formularea anexei III au fost citite pe o sursă secundară.",
    "Legea cere ca registratorul să decidă; un program poate doar pregăti și semnala. Regulile pentru AI cu risc ridicat se aplică din decembrie 2027, iar instruirea personalului și transparența unui asistent AI se cer deja."),
 ]
 # ---------- END delay_reasons claims ----------
@@ -887,7 +914,7 @@ HIRE_ASSUMPTION = (f"Scenariul presupune că Ministerul Justiției aprobă excep
                    f"(cel mult {_HPCT}% din posturile vacantate după {_HDATE} sau posturi unice).")
 for _c in CLAIMS:
     if _c["id"] == "C52":
-        _c["rezerva_obligatorie"] = _c["rezerva_obligatorie"].replace("posturile finanțate.", "posturile finanțate. " + HIRE_ASSUMPTION + " (C153)", 1)
+        _c["rezerva_obligatorie"] = _c["rezerva_obligatorie"].replace("posturi).", "posturi). " + HIRE_ASSUMPTION + " (C153)", 1)
 CLAIMS += [
  C(_RID["after_post"], "Share of archive rejections 19 Oct–18 Nov 2026 with an earlier postponement of the same request (census); by type; median days from the last postponement / from filing to the rejection",
    f"{_rp(_RAP['value'])} ({_rci(_RAP)}) · mențiuni {_rp(_RAPM['value'])} / înmatriculări {_rp(_RAPI['value'])} · mediana: {round(_RMED)} zile de la amânare, {round(_RMED0)} de la depunere",
@@ -926,7 +953,7 @@ CLAIMS += [
    f"{_rp(_RAS['value'])} ({rd(100 * _RAS['ci95'][0])}–{rd(100 * _RAS['ci95'][1])}) · {_rp(_RAA['value'])} ({rd(100 * _RAA['ci95'][0])}–{rd(100 * _RAA['ci95'][1])}) · clasificator {_rp(_RAS_C['value'])} / {_rp(_RAA_C['value'])}",
    "% din respingeri (eșantion manual, IC Wilson)", "B", "WARN", _RR_SRC + "; marcajele «evitabil» din taxonomy.csv (aceleași ca la amânări)", "rejection_reasons/07_results.py",
    "rejection_reasons.json", DATE_RR,
-   "«Evitabil la depunere» e evaluarea auditorului (asistată de AI), neconfirmată de ONRC; un singur evaluator AI. Valorile clasificatorului sunt limite de jos.",
+   "«Evitabil la depunere» e evaluarea autorului (asistată de AI), neconfirmată de ONRC; un singur evaluator AI. Valorile clasificatorului sunt limite de jos.",
    f"Pe {_RAS['n']} de respingeri verificate, circa {_rp0(_RAS['value'])} aveau numai cauze pe care o verificare la depunere le-ar fi prins, iar circa {_rp0(_RAA['value'])}, cel puțin una."),
  C(_RID["coverage"], "Rejection decisions with a published reason, BERC PDF bulletins 19 Oct–18 Nov 2026: count, share of the archive's rejections, bulletins, decision days",
    f"{ro(_RCV['parsed'])} ({_rp(_RCV['share'])} din {ro(_RCV['archive_rejections_window'])}) · {_RCV['bulletins']} buletine · {_RCV['decision_days']} zile de decizie",
@@ -943,7 +970,7 @@ CLAIMS += [
    f"concursuri suspendate în 2026 · excepții: cel mult {_HPCT}% din posturile vacantate după {_HDATE}, plus posturile unice",
    "prevederi legale", "C", "PASS", "legislatie.just.ro: Legea nr. 141/2025, art. XXII alin. (1), (2), (4), (6), forma consolidată la 12.11.2026 (citită la 22.11.2026)",
    "stakeholders/LEGAL_BASIS.md", "stakeholders_legal.json", "22.11.2026",
-   "Regimul pentru 2027 nu a fost verificat. Ocuparea unei părți mari din posturile vacante (de exemplu 40%, ca în scenariul C52) poate depăși excepția și ar cere atunci o derogare prin lege sau OUG.",
+   f"Regimul pentru 2027 nu a fost verificat. Ocuparea unei părți mari din posturile vacante (de exemplu 40%, circa {N40} {_DEN(N40)}posturi, ca în scenariul C52) poate depăși excepția și ar cere atunci o derogare prin lege sau OUG. Câte posturi acoperă excepția depinde de câte s-au vacantat după 1 ianuarie 2026; numărul îl poate comunica Ministerul Justiției.",
    f"În 2026, concursurile pentru posturile vacante din instituțiile publice sunt suspendate; Ministerul Justiției poate aproba excepții pentru ONRC, de cel mult {_HPCT}% din posturile vacantate după 1 ianuarie 2026, plus posturile unice."),
 ]
 # ---------- END rejection_reasons claims ----------

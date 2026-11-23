@@ -1,4 +1,4 @@
-# Coada de la Registrul Comerțului — raport, date și cod (noiembrie 2026)
+# Coada de la Registrul Comerțului — raport, date și cod (noiembrie 2026, versiunea 1.0.1)
 
 O analiză independentă, din date deschise, a cozii de la Registrul Comerțului (ONRC), făcută de **Ștefan-Lucian Deleanu**. Datele
 sunt 4.077.510 decizii BERC până la 20.11.2026, un eșantion myportal, notele Ministerului Justiției și bilanțurile depuse la MF.
@@ -6,11 +6,11 @@ Depozitul conține rapoartele, datele care le susțin și codul care le produce.
 
 ## Ce să citești
 
-1. **[Ediția executivă](reports/actuale/Raport_ONRC_Coada_2026-11_EXECUTIV.pdf)** (11 p.): situația, prognoza, ce schimbă fiecare măsură, cele două cozi, costul, în grafice explicate.
-2. **[Analiza proiectului de OUG](reports/actuale/Analiza_proiectului_OUG_2026-11.pdf)** (24 p.): textul integral al proiectului și nota de fundamentare, verificate față de date; efectul fiecărui articol; propuneri de completare.
-3. **[Raportul complet](reports/actuale/Raport_ONRC_Coada_2026-11_COMPLET.pdf)** (138 p., 23.11.2026): documentul de referință.
+1. **[Ediția executivă](reports/actuale/Raport_ONRC_Coada_2026-11_EXECUTIV.pdf)** (12 p.): situația, prognoza, ce schimbă fiecare măsură, cele două cozi, costul, în grafice explicate.
+2. **[Analiza proiectului de OUG](reports/actuale/Analiza_proiectului_OUG_2026-11.pdf)** (25 p.): textul integral al proiectului și nota de fundamentare, verificate față de date; efectul fiecărui articol; propuneri de completare.
+3. **[Raportul complet](reports/actuale/Raport_ONRC_Coada_2026-11_COMPLET.pdf)** (140 p., versiunea 1.0.1, 23.11.2026): documentul de referință.
    Cuprinsul arată pentru cine e fiecare parte. Fiecare cifră are un cod `[Cxx]`, cu legătură spre registrul afirmațiilor.
-4. **Sinteze pe instituții** (9–10 p. fiecare), în [`reports/sinteze_institutii/`](reports/sinteze_institutii/): ce se cere fiecărei instituții, în limitele competențelor ei.
+4. **Sinteze pe instituții** (9–11 p. fiecare), în [`reports/sinteze_institutii/`](reports/sinteze_institutii/): ce se cere fiecărei instituții, în limitele competențelor ei.
    * [Ministerul Justiției](reports/sinteze_institutii/Sinteza_MJ.pdf) · [Ministerul Finanțelor și ANAF](reports/sinteze_institutii/Sinteza_MF_ANAF.pdf) · [MEDAT și ADR](reports/sinteze_institutii/Sinteza_MEDAT_ADR.pdf)
    * [Guvernul](reports/sinteze_institutii/Sinteza_Guvern.pdf) · [Parlamentul](reports/sinteze_institutii/Sinteza_Parlament.pdf) · [ONRC](reports/sinteze_institutii/Sinteza_ONRC.pdf)
 5. **Analize complementare** (21.11.2026, date până la 18–20.11.2026), în [`reports/analize_complementare/`](reports/analize_complementare/).
@@ -30,6 +30,11 @@ Depozitul conține rapoartele, datele care le susțin și codul care le produce.
      * contorul zilnic al numerelor de cerere;
      * `SHA256SUMS`.
    * Surse, licențe și ce se poate reface din ce: [`docs/DATA.md`](docs/DATA.md).
+
+## Versiuni
+
+* **1.0.1** (23.11.2026): corecturi după revizuirea critică de către patru modele AI (formulări, coerența cifrelor, încadrarea riscului bugetar pentru 2027, definiția intervalelor, textul integral al proiectului de OUG). Valorile din registrul afirmațiilor sunt neschimbate.
+* **1.0.0** (23.11.2026): prima publicare.
 
 ## Cum verificați o cifră `[Cxx]`
 

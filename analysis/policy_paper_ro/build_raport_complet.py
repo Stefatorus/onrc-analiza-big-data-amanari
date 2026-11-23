@@ -129,7 +129,7 @@ def cover_html(p_syn=None, p_min=None):
   <dl class="meta">
     <dt>Autor</dt><dd><strong>Ștefan-Lucian Deleanu</strong> · stefandeleanu.ro</dd>
     <dt>Bază empirică</dt><dd>4.077.510 decizii BERC, până la 20.11.2026 · eșantion myportal de 7.469 de numere de cerere sondate · notele Ministerului Justiției din 30.10 și 6.11.2026 · situațiile financiare depuse la Ministerul Finanțelor. Cifrele din presă sunt comparate cu datele noastre, nu le înlocuiesc.</dd>
-    <dt>Ediție și dată</dt><dd>Raport complet pentru instituții · 22 noiembrie 2026</dd>
+    <dt>Ediție și dată</dt><dd>Raport complet pentru instituții · {BS.VERSION_HTML} · {BS.VERSION_DATE_LONG}</dd>
     <dt>Fișiere atașate</dt><dd>Date_ONRC_Coada_2026-11.xlsx (toate tabelele), claims_registry.csv (registrul afirmațiilor), compilația de presă folosită pentru comparație.</dd>
     <dt>Declarație de interes</dt><dd>Autorul a avut o activitate de înființare de societăți, închisă. În 2024, autorul a semnalat public vulnerabilități ale platformei myportal.</dd>
     <dt>Utilizarea AI</dt><dd>{ai_annex.DISCLAIMER}</dd>
@@ -143,7 +143,7 @@ SHEET_USE = {"1": "Ce se poate decide în următoarele 30 de zile", "2": "Unde e
              "7": "Cât durează acum și cum vă pregătiți", "8": "Costul pentru buget și ce se poate măsura"}
 VOL7_USE = {"1": "Cifrele-cheie, într-o pagină", "2": "Ce e măsurat și ce e presupus", "3": "Graficul lunar, 2024–2026", "4": "Scenariile pentru august–noiembrie 2026",
             "5": "Încasări afectate și costul unei zile în plus", "6": "Ce ipoteză cântărește cel mai mult", "7": "Testul de robustețe și comparația cu bugetul OUG",
-            "8": "Efectul cauzal al așteptării și veniturile din 2027 încasate mai târziu", "9": "Ce date ar face cifra sigură", "10": "Toate tabelele"}
+            "8": "Efectul cauzal al așteptării și veniturile care nu intră în bugetul anului 2027", "9": "Ce date ar face cifra sigură", "10": "Toate tabelele"}
 
 
 def chapter_uses():

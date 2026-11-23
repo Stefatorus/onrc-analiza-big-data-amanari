@@ -92,7 +92,7 @@ def body(hl=lambda t: f"<mark class='hl'>{t}</mark>"):
            "Tipul exact al fiecărei cereri nu apare în datele tabelare, ci doar în textul buletinelor, pe care l-am citit pe un eșantion.")
     b += p("Prognoza descrie un dosar obișnuit, tratat în ordinea sosirii; în realitate, unele dosare trec mai repede, iar cele amânate stau mai mult. "
            "Intervalele de prognoză reflectă ipotezele despre cererile viitoare; cel mai mare risc este valul de actualizări CAEN, pe care îl tratăm într-un scenariu separat. "
-           "Evaluarea proiectului de ordonanță folosește rezumatul pus în consultare, pentru că nu am avut acces la textul integral la data analizei. Textele legale au fost verificate pe legislatie.just.ro (forma consolidată) la 22.11.2026; o versiune anterioară a raportului folosise extrasul publicat de ONRC. "
+           "Evaluarea proiectului de ordonanță folosește textul integral pus în consultare la 18 noiembrie 2026 și nota de fundamentare; modelul a fost rulat pe măsurile pe care le prevede textul, cu ipotezele de livrare declarate (analiza separată a proiectului de OUG). Textele legale au fost verificate pe legislatie.just.ro (forma consolidată) la 22.11.2026; o versiune anterioară a raportului folosise extrasul publicat de ONRC. "
            "Analiza a fost realizată cu ajutorul inteligenței artificiale, sub îndrumarea și verificarea autorului; modelele pot greși, de aceea fiecare cifră trece prin verificările descrise mai sus.")
     b += p(hl("Ce putem spune cu încredere mare: cât au așteptat dosarele decise, cât de repede lucrează Registrul și cum s-a schimbat situația din 2023 până azi. Ce spunem cu prudență: cât vor aștepta dosarele depuse recent și ce se va întâmpla în 2027–2028."))
     return b

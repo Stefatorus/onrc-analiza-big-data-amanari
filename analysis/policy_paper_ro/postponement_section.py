@@ -135,8 +135,8 @@ def section_html(V, E, hl, P, fig):
            " După evaluarea noastră, regulamentul european privind inteligența artificială nu trece înregistrarea firmelor printre utilizările cu risc ridicat; oricum, obligațiile pentru risc ridicat s-ar aplica abia din decembrie 2027, după amânarea adoptată în iulie 2026. "
            "Se aplică însă deja instruirea personalului care folosește AI și informarea celor care vorbesc cu un asistent AI pe portal. Citirea automată a actelor de identitate cere și o evaluare de impact privind protecția datelor." + E(C["legal"]),
            "Rezervă", "Încadrarea juridică este interpretarea noastră, nu un aviz; trimiterile exacte la articole sunt în anexa tehnică a analizei amânărilor." + E(C["legal"]))
-    b += P("Ce ar ajuta imediat: un cod pentru fiecare motiv de amânare. Azi motivul e text liber, iar programul registrului tipărește doar câteva formule generale. " +
-           hl("Cu un cod de motiv în fiecare încheiere, ONRC ar putea publica lunar ce lipsește la depunere și ar ști ce verificare să construiască întâi."))
+    b += P("Ce ar ajuta imediat: un cod pentru fiecare motiv de amânare, publicat în încheiere. În buletinul public, motivul apare ca text liber; nu știm dacă sistemul intern al ONRC are deja o clasificare. " +
+           hl("Cu un cod de motiv publicat, ONRC ar putea raporta lunar ce lipsește la depunere și ar ști ce verificare să construiască întâi, dintre cele care nu există deja."))
     return b
 
 

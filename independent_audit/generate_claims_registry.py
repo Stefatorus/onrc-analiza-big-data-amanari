@@ -374,7 +374,7 @@ CLAIMS = [
    f"optim ≈{ro(CV['optimal_shift_delta_wd'])}/zi; câștig zero la ≈{ro(CV['o1_minus_o2_wd'])}/zi", "dosare / zi lucrătoare mutate",
    "B", "PASS", "model în tandem verificat (Lean T13c)", "tandem_bottleneck_analysis.py:conventions", TB, DATE_MJ,
    "Condiționat de ipoteza 1:1 și de ancora 2–6 nov.; nu e textul OUG, ci un mecanism.",
-   "Dacă juriștii delegați sunt luați din operare, câștigul are o limită. Peste un anumit prag, mutarea scade producția totală."),
+   "Dacă consilierii juridici desemnați sunt luați din operare, câștigul are o limită. Peste un anumit prag, mutarea scade producția totală."),
  # ---------- cross-validation & county ----------
  C("C09", "BERC vs portal: monthly medians (May–Sep) agree; modifications throughput differs", "5/5/7/19/39 pe ambele; debit 16%", "zile; %",
    "A", "WARN", "BERC + portal", "reconcile_sources.py:main", LC, DATE_BERC,
@@ -670,14 +670,14 @@ CLAIMS = [
  C("C107", "Budget revenues affected (taxes not collected or delayed), same window, founded scenario: prudent / central / stressed",
    f"{mil(_SC['prudent']['tax'])} / {mil(_SC['central']['tax'])} / {mil(_SC['tensionat']['tax'])}", "milioane lei", "B", "WARN",
    "BERC + cota fiscală efectivă construită din bilanțuri și cotele legale 2026", "cost_founded.py", "cost_founded.json", "BERC până la 18.11.2026",
-   "Încasări pierdute în ipotezele scenariului: calculul impozitează doar partea de activitate presupusă pierdută definitiv, nu suma cotelor legale și nici venituri amânate. "
+   "Încasări afectate în ipotezele scenariului: calculul impozitează doar partea de activitate presupusă pierdută definitiv, nu suma cotelor legale și nici venituri amânate. "
    f"Cifra centrală depinde de două ipoteze fără sursă: partea din vânzările firmelor noi pierdută definitiv ({_PCT(_INC['lost_turnover_fraction'])}%) și costul unei modificări blocate (C109).",
-   f"Încasările bugetare pierdute sunt estimate între circa {rd(_SC['prudent']['tax'] / 1e6, 0)} și {rd(_SC['tensionat']['tax'] / 1e6, 0)} de milioane de lei, cu circa {rd(_SC['central']['tax'] / 1e6, 0)} în scenariul central; cifra centrală presupune, fără o sursă, că {_PCT(_INC['lost_turnover_fraction'])}% din vânzările amânate ale firmelor noi se pierd definitiv."),
+   f"Încasările bugetare afectate sunt estimate între circa {mil(_SC['prudent']['tax'])} și {mil(_SC['tensionat']['tax'])} de milioane de lei, cu circa {mil(_SC['central']['tax'])} în scenariul central; cifra centrală presupune, fără o sursă, că {_PCT(_INC['lost_turnover_fraction'])}% din vânzările amânate ale firmelor noi se pierd definitiv."),
  C("C108", "Exposure of one more day with the reference stock (204.414): economic / fiscal, founded central scenario (prudent–stressed)",
    f"{mil(_SC['central']['daily_econ'])} ({mil(_SC['prudent']['daily_econ'])}–{mil(_SC['tensionat']['daily_econ'])}) / {mil(_SC['central']['daily_tax'])} ({mil(_SC['prudent']['daily_tax'])}–{mil(_SC['tensionat']['daily_tax'])})",
    "milioane lei pe zi", "B", "WARN", "MJ (stocul de referință) + scenariul fundamentat", "cost_founded.py", "cost_founded.json", "BERC până la 18.11.2026",
    "Indicator de sensibilitate: nu se înmulțește cu numărul de zile, pentru că stocul și compoziția lui se schimbă.",
-   f"Fiecare zi în plus cu stocul actual costă, în scenariul central, circa {rd(_SC['central']['daily_econ'] / 1e6, 1)} milioane de lei în economie și circa {rd(_SC['central']['daily_tax'] / 1e6, 1)} milioane la buget."),
+   f"Fiecare zi în plus cu stocul actual costă, în scenariul central, circa {mil(_SC['central']['daily_econ'])} milioane de lei în economie și circa {mil(_SC['central']['daily_tax'])} milioane la buget."),
  C("C109", "Share of the founded central cost from the 'other blocked amendments' channel; largest single driver and its swing",
    f"{rd(100 * _SC['central']['channels_share']['C'])}% · costul pe zi blocată: {rd(_SENS['low'] / 1e6, 0)} / +{rd(_SENS['high'] / 1e6, 0)} mil. lei",
    "% din costul central; variația totalului la valorile prudentă / tensionată ale parametrului", "B", "WARN", "ipoteză nemăsurată (cost pe zi)", "cost_founded.py (sensitivity)", "cost_founded.json", "BERC până la 18.11.2026",
@@ -740,7 +740,7 @@ CLAIMS = [
    "per zi de așteptare (IC 95%)", "B", "PASS", "BERC + bilanțuri MF (cohorta 2024, anul 2025)", "econometrics/ (02_*)", "econometrics.json", "cohorta 2024",
    "Efect nedistins de zero în toate metodele (variabilă instrumentală, diferențe în diferențe, instrument național); estimat pe așteptări de până la circa 35 de zile. "
    "Nu înseamnă «niciun efect durabil»: intervalul impozitului cuprinde și o pierdere de mărimea celei din primul an (C121).",
-   "În anul următor, activitatea și taxele firmelor noi care au așteptat mai mult nu diferă măsurabil: datele nu arată o recuperare a ce s-a pierdut în primul an, dar nici nu exclud o pierdere care continuă."),
+   "În anul următor, activitatea și taxele firmelor noi care au așteptat mai mult nu diferă măsurabil: datele nu pot spune cât din ce s-a pierdut în primul an se recuperează; nu confirmă o recuperare și nici nu exclud o pierdere care continuă. Cifra pentru 2027 presupune o recuperare în același an: e o ipoteză, nu o estimare."),
  C("C121", "Effect of one extra waiting day on new firms in their first (partial) year (IV): turnover / direct tax",
    f"{rd(_ec('A.an_partial_2024.IV.turn_w'), 0)} lei ({rd(_eci('A.an_partial_2024.IV.turn_w')[0], 0)}…{rd(_eci('A.an_partial_2024.IV.turn_w')[1], 0)}) / {rd(_ec('A.an_partial_2024.IV.taxB_w'), 0)} lei ({rd(_eci('A.an_partial_2024.IV.taxB_w')[0], 0)}…{rd(_eci('A.an_partial_2024.IV.taxB_w')[1], 0)})",
    "per zi de așteptare (IC 95%)", "B", "PASS", "BERC + bilanțuri MF (cohorta 2024, anul 2024)", "econometrics/ (02_*)", "econometrics.json", "cohorta 2024",
@@ -754,7 +754,8 @@ CLAIMS = [
    f"Cifra presupune deja că ce se pierde în zilele de așteptare se recuperează imediat după decizie, cât încape în 2027 (brut {_r0('1a_amanat_brut_total')}, recuperat {_r0('1b_recuperat_in_perioada')}); fără nicio recuperare, minusul e cel din C124. "
    "Din bilanțurile firmelor noi vin impozitul direct și numărul de angajați; TVA (pe o pondere presupusă a valorii adăugate) și toată partea modificărilor (ipotezele analizei inițiale) sunt ipoteze. Așteptările prognozate (55–150 de zile) depășesc intervalul pe care a fost estimat efectul.",
    f"Pentru 2027, fără măsuri noi, circa {_r0('1c_efect_net_numerar_amanare')} de milioane de lei din veniturile bugetare nu ar intra în bugetul anului din cauza cozii (interval de simulare de 95%: {_ri('1c_efect_net_numerar_amanare')} de milioane), "
-   f"față de o coadă normală, de {FLOOR_D} zile; o parte se poate recupera ulterior, dar datele nu exclud o pierdere durabilă."),
+   f"față de o coadă normală, de {FLOOR_D} zile. Cifra e netă: din circa {_r0('1a_amanat_brut_total')} de milioane amânate brut, modelul presupune că circa {_r0('1b_recuperat_in_perioada')} se încasează mai târziu în 2027 (ipoteză, nu estimare); "
+   f"{_r0('1c_efect_net_numerar_amanare')} e mediana diferenței pe aceleași simulări, de aceea nu e exact diferența medianelor. Datele nu exclud o pierdere durabilă."),
  C("C123", "Cost of the delay itself for the budget in 2027 (time value of revenue collected later, at the 10-year yield): P50 (95% interval)",
    f"{rd(_ec(_RK + '1d_cost_valoare_in_timp.an_2027'), 0)} ({rd(_eci(_RK + '1d_cost_valoare_in_timp.an_2027')[0], 0)}–{rd(_eci(_RK + '1d_cost_valoare_in_timp.an_2027')[1], 0)})",
    "milioane lei, 2027", "B", "WARN", "ca C122 + randamentul titlurilor de stat la 10 ani (Eurostat)", "econometrics/ (04_*)", "econometrics.json", "prognoză 2027",
@@ -765,13 +766,13 @@ CLAIMS = [
    "milioane lei, 2027", "B", "WARN", "ca C122", "econometrics/ (04_*)", "econometrics.json", "prognoză 2027",
    "Limita de sus nu e o prognoză: presupune că nimic nu se recuperează (venitul amânat brut plus componenta persistentă, mediana sumei). "
    "Componenta persistentă e aproape de zero la mijloc, dar intervalul ei cuprinde atât un câștig, cât și o pierdere de sute de milioane: datele nu o pot exclude.",
-   f"Dacă nimic nu s-ar recupera, minusul din 2027 ar fi, la mijloc, de circa {_r0('B_nerecuperat_impact_(1a+2)')} de milioane de lei ({_ri('B_nerecuperat_impact_(1a+2)')}); "
-   f"componenta persistentă, estimată din efectul cauzal, e de circa {_r0('2_pierdut_persistent_(PARTEA_A)')} de milioane, aproape de zero, dar cu un interval foarte larg ({_ri('2_pierdut_persistent_(PARTEA_A)', '…')})."),
+   f"Dacă nimic nu s-ar recupera, minusul din 2027 ar fi, la mijloc, de circa {_r0('B_nerecuperat_impact_(1a+2)')} de milioane de lei (interval de simulare de 95%: {_ri('B_nerecuperat_impact_(1a+2)')}); e o limită de sus, nu o prognoză. "
+   f"Componenta persistentă, estimată din efectul cauzal, e de circa {_r0('2_pierdut_persistent_(PARTEA_A)')} de milioane (interval de simulare de 95%: {_ri('2_pierdut_persistent_(PARTEA_A)', '…')}; valorile pozitive sunt pierderi): semnul ei nu se poate stabili din date."),
  C("C125", "2027 revenue shift avoided by the best realistic package of measures vs status quo: P50 (95% interval)",
    f"{rd(_ec('B.risc_2027.combinat.evitat_vs_continuitate_A_numerar_(1c+2).an_2027'), 0)} ({rd(_eci('B.risc_2027.combinat.evitat_vs_continuitate_A_numerar_(1c+2).an_2027')[0], 0)}–{rd(_eci('B.risc_2027.combinat.evitat_vs_continuitate_A_numerar_(1c+2).an_2027')[1], 0)})",
    "milioane lei, 2027", "B", "WARN", "ca C122; scenariul „combinat” al motorului", "econometrics/ (04_*)", "econometrics.json", "prognoză 2027",
    "Comparație pe aceleași simulări; depinde de scenariul de măsuri (scenariul „combinat” al motorului). Același reper și aceleași ipoteze ca în C122.",
-   f"Un pachet realist de măsuri ar reduce cu circa {rd(_ec('B.risc_2027.combinat.evitat_vs_continuitate_A_numerar_(1c+2).an_2027'), 0)} de milioane de lei venitul care nu intră în bugetul anului 2027 din cauza cozii."),
+   f"Un pachet realist de măsuri ar reduce cu circa {rd(_ec('B.risc_2027.combinat.evitat_vs_continuitate_A_numerar_(1c+2).an_2027'), 0)} de milioane de lei (interval de simulare de 95%: {rd(_eci('B.risc_2027.combinat.evitat_vs_continuitate_A_numerar_(1c+2).an_2027')[0], 0)}–{rd(_eci('B.risc_2027.combinat.evitat_vs_continuitate_A_numerar_(1c+2).an_2027')[1], 0)}) venitul care nu intră în bugetul anului 2027 din cauza cozii."),
  C("C08", "Union/press backlog figure", "≈210k", "cereri", "C", "WARN", "sindicate/presă", "—", LC, DATE_BERC,
    "Înlocuit de cifra oficială MJ (C28).", "[Se folosește C28]"),
  C("C13", "Oldest still-pending filing in the portal sample", ".".join(reversed(SPK["oldest_pending"]["date"].split("-"))), "dată (eșantion myportal, recoltat 21–22.11.2026)", "A", "PASS", "portal", "stat_pack.py (oldest_pending)", "stat_pack.json", DATE_PORT,
@@ -854,12 +855,12 @@ CLAIMS += [
    "stat_pack_ext.py (efort_aceeasi_perioada) × delay_reasons/07_results.py; calcul în delay_reasons/08_solutions.py", "postponement_solutions.json", DATE_BERC,
    "Plafon: presupune că verificarea prinde toate motivele evitabile. O amânare evitată scoate o decizie de amânare și o a doua analiză a dosarului, nu o decizie finală; "
    "în celelalte, dosarul se amână tot, dar pentru mai puține lipsuri. Ponderile vin din 19.10–18.11.2026.",
-   f"Dacă lipsurile evitabile ar fi prinse la depunere, ar dispărea cel mult circa {_r10(_AMZ * _DST['value'])} de amânări pe zi lucrătoare din circa {ro(round(_AMZ, -3))}; în circa {_r10(_AMZ * _DAN['value'])} de amânări pe zi ar rămâne cel puțin un motiv mai puțin."),
+   f"Dacă lipsurile evitabile ar fi prinse la depunere, ar dispărea cel mult circa {_r10(_AMZ * _DST['value'])} de amânări pe zi lucrătoare din circa {ro(round(_AMZ, -3))}; în circa {_r10(_AMZ * _DAN['value'])} de amânări pe zi ar rămâne cel puțin un motiv mai puțin. O parte din aceste verificări poate exista deja în sistemul ONRC; nu le putem vedea din date publice."),
  C(_DID["levels"], "Automation level of the main solution per postponement reason (12 reasons): Standard / AI only / advanced AI only / not automatable; reasons where the registrar's legal judgement remains",
    f"{_LH['Standard']} / {_LH['Doar cu AI']} / {_LH['Doar cu AI avansat']} / {_LH['Nu se poate automatiza']} din {_NM} · judecata registratorului rămâne în {_LI['Nu se poate automatiza']} din {_NM}",
    "motive de amânare (categorii)", "B", "PASS", "matricea de soluții (evaluarea autorului, asistată de AI)", "delay_reasons/08_solutions.py", "postponement_solutions.json", "22.11.2026",
    "Nu vedem sistemele interne ONRC: o parte din verificări poate exista deja. Nivelul e cel al soluției principale; fiecare motiv are și soluții secundare.",
-   f"Pentru {_LH['Standard']} din cele {_NM} motive, soluția principală e o verificare la depunere fără AI; doar concordanța actelor cere un model AI avansat, iar în {_LI['Nu se poate automatiza']} motive o parte rămâne la judecata registratorului."),
+   f"Pentru {_LH['Standard']} din cele {_NM} motive, soluția principală e o verificare la depunere fără AI; doar concordanța actelor cere un model AI avansat, iar în {_LI['Nu se poate automatiza']} motive o parte rămâne la judecata registratorului. O parte din aceste verificări poate exista deja în sistemul ONRC; nu le putem vedea din date publice."),
  C(_DID["legal"], "Legal frame for automating postponement checks: AI Act dates after the Digital Omnibus; who decides; automated-decision limits",
    "AI Act: risc ridicat (anexa III) de la 2.12.2027 (Reg. 2026/1744); art. 4 și art. 50 aplicabile · decizia rămâne la registrator (L 265/2022, art. 28 alin. (2); GDPR art. 22; L 242/2022, art. 13 alin. (9))",
    "prevederi legale", "C", "PASS",
@@ -910,11 +911,12 @@ _m15 = re.search(r"cel mult (\d+)% din posturile vacantate după (\d\d\.\d\d\.\d
 assert "01.04.2027" in _SLT and "25.09.2026" in _SLT and "HG nr. 656/1997, art. 5^1" in _SLT
 _HPCT, _HDATE = _m15.group(1), _m15.group(2)
 # C52 (OUG extins + 40% din posturile vacante): the scenario assumes the hiring-freeze exceptions are approved (C153)
-HIRE_ASSUMPTION = (f"Scenariul presupune că Ministerul Justiției aprobă excepțiile de la suspendarea concursurilor din 2026 "
-                   f"(cel mult {_HPCT}% din posturile vacantate după {_HDATE} sau posturi unice).")
+HIRE_ASSUMPTION = (f"Scenariul cere excepții de la suspendarea angajărilor (C153) peste plafonul de {_HPCT}% "
+                   f"(cel mult {_HPCT}% din posturile vacantate după {_HDATE}, plus posturile unice), deci probabil o derogare prin lege; "
+                   "câte posturi acoperă excepția poate comunica doar Ministerul Justiției.")
 for _c in CLAIMS:
     if _c["id"] == "C52":
-        _c["rezerva_obligatorie"] = _c["rezerva_obligatorie"].replace("posturi).", "posturi). " + HIRE_ASSUMPTION + " (C153)", 1)
+        _c["rezerva_obligatorie"] = _c["rezerva_obligatorie"].replace("posturi).", "posturi). " + HIRE_ASSUMPTION, 1)
 CLAIMS += [
  C(_RID["after_post"], "Share of archive rejections 19 Oct–18 Nov 2026 with an earlier postponement of the same request (census); by type; median days from the last postponement / from filing to the rejection",
    f"{_rp(_RAP['value'])} ({_rci(_RAP)}) · mențiuni {_rp(_RAPM['value'])} / înmatriculări {_rp(_RAPI['value'])} · mediana: {round(_RMED)} zile de la amânare, {round(_RMED0)} de la depunere",

@@ -43,9 +43,10 @@ ax.text(9.2, 2.35, "decizii finale", ha="center", va="center", fontsize=7, color
 ax.text(9.2, 1.55, f"≈{out} / zi", ha="center", va="center", fontsize=8.5, color=INK, weight="bold")
 # moving staff from operation to decisions
 ax.add_patch(FancyArrowPatch((3.1, 3.05), (6.4, 3.05), connectionstyle="arc3,rad=-0.35", arrowstyle="-|>", mutation_scale=12, color=ALERT, lw=1.4, linestyle="--"))
-ax.text(4.75, 3.78, f"mutarea consilierilor din operare la soluționare: ajută până la ≈{opt}, câștig zero la ≈{zero}",
-        ha="center", va="center", fontsize=6.8, color=ALERT)
-ax.text(5.0, 0.45, "Stocul total la 6 noiembrie: " + total + " de cereri. Întărirea unei singure etape mută blocajul; doar ambele etape reduc stocul.",
-        ha="center", va="center", fontsize=6.8, color=INK2)
+ax.text(4.75, 3.78, f"mutarea consilierilor juridici desemnați din operare la soluționare: ajută până la ≈{opt}, câștig zero la ≈{zero}",
+        ha="center", va="center", fontsize=6.4, color=ALERT)
+ax.text(5.0, 0.45, "Stocul total la 6 noiembrie: " + total + " de cereri. Cu intrări la nivelul din august–octombrie, întărirea unei singure etape mută blocajul;\n"
+        "doar ambele etape reduc stocul. În noiembrie, cu intrări mai mici, stocul a scăzut încet.",
+        ha="center", va="center", fontsize=6.4, color=INK2, linespacing=1.25)
 fig.tight_layout(pad=0.2); G.save_svg_and_png(fig, "fi24_doua_cozi_schema")
 print("ok fi24")

@@ -123,7 +123,7 @@ def section_html(V, E, hl, P, fig):
              [C["CAEN"], C["SEDIU"], C["CERERE"], C["ACT"], C["levels"], C["avoidable"]])
     b += P(hl("Circa una din cinci amânări (" + p["strict"] + ") avea numai motive pe care o verificare la depunere le-ar fi prins; în aproape jumătate (" + p["anyp"] + "), cel puțin un motiv era de acest fel.") + E(C["avoidable"]) +
            " Registrul dă circa " + V("C03").lstrip("≈") + " de amânări pe zi lucrătoare." + E("C03") + " " +
-           hl("Verificările la depunere ar scoate deci cel mult circa " + p["cap_s"] + " de amânări pe zi, iar în circa " + p["cap_a"] + " de amânări pe zi ar rămâne cel puțin un motiv mai puțin.") + E(C["capacity"]) +
+           hl("Verificările la depunere ar scoate deci cel mult circa " + p["cap_s"] + " de amânări pe zi, iar în circa " + p["cap_a"] + " de amânări pe zi ar rămâne cel puțin un motiv mai puțin.") + " O parte din aceste verificări poate exista deja în sistemul ONRC; nu le putem vedea din date publice." + E(C["capacity"]) +
            " Fiecare amânare evitată scutește firma de un termen de completare (după completare, decizia vine în circa " + V("C37").split(" / ")[1].split(",")[0] + " zile) și pe registrator de o a doua analiză a aceluiași dosar." + E("C37"),
            "Ce NU înseamnă", "Nu sunt decizii finale în plus: o amânare evitată scoate o decizie de amânare, nu adaugă o admitere. Cifrele sunt un plafon, pentru că presupun că verificarea prinde tot ce e evitabil. Soluțiile pentru motivele doar parțial evitabile (CAEN, sediu, act constitutiv) ar adăuga la efect, dar efectul lor nu se poate măsura din date." + E(C["capacity"]), key=True)
     b += table_html(V, E)
@@ -144,10 +144,10 @@ def short_items(V, E, hl, profile="it"):
     p = _parts(V); pc = p["pc"]; C = ID
     if profile == "it":
         return [hl("Circa una din cinci amânări (" + p["strict"] + ") avea numai lipsuri pe care o verificare automată la depunere le-ar fi prins.") + E(C["avoidable"]),
-                hl("Pentru " + p["n_std"] + " din " + p["N"] + " motive de amânare ajung reguli fixe, fără AI; doar concordanța actelor cere un model AI avansat, ca ajutor pentru registrator.") + E(C["levels"], C["legal"]),
+                hl("Pentru " + p["n_std"] + " din " + p["N"] + " motive de amânare ajung reguli fixe, fără AI; doar concordanța actelor cere un model AI avansat, ca ajutor pentru registrator.") + " Unele verificări pot exista deja la ONRC." + E(C["levels"], C["legal"]),
                 hl("De construit întâi: codurile CAEN Rev.3 cu declarația de autorizare (motiv în " + pc["CAEN"] + " din amânări) și verificarea dovezii de sediu (" + pc["SEDIU"] + ").") + E(C["CAEN"], C["SEDIU"])]
     return [hl("Cele mai dese motive de amânare: CAEN (" + pc["CAEN"] + "), sediul (" + pc["SEDIU"] + "), cererea și anexa fiscală (" + pc["CERERE"] + ").") + E(C["CAEN"], C["SEDIU"], C["CERERE"]),
-            hl("Verificările la depunere ar scoate cel mult circa " + p["cap_s"] + " de amânări pe zi lucrătoare, din circa " + V("C03").lstrip("≈") + ".") + E(C["capacity"], "C03"),
+            hl("Verificările la depunere ar scoate cel mult circa " + p["cap_s"] + " de amânări pe zi lucrătoare, din circa " + V("C03").lstrip("≈") + ".") + " O parte din aceste verificări poate exista deja în sistemul ONRC; nu le putem vedea din date publice." + E(C["capacity"], "C03"),
             hl("Decizia rămâne la registrator; un program poate doar pregăti și semnala lipsurile.") + E(C["legal"])]
 
 

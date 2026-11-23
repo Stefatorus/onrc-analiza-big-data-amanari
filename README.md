@@ -1,4 +1,4 @@
-# Coada de la Registrul Comerțului — raport, date și cod (noiembrie 2026, versiunea 1.0.1)
+# Coada de la Registrul Comerțului — raport, date și cod (noiembrie 2026, versiunea 1.0.2)
 
 O analiză independentă, din date deschise, a cozii de la Registrul Comerțului (ONRC), făcută de **Ștefan-Lucian Deleanu**. Datele
 sunt 4.077.510 decizii BERC până la 20.11.2026, un eșantion myportal, notele Ministerului Justiției și bilanțurile depuse la MF.
@@ -8,14 +8,14 @@ Depozitul conține rapoartele, datele care le susțin și codul care le produce.
 
 **Estimator interactiv:** [stefatorus.github.io/onrc-analiza-big-data-amanari](https://stefatorus.github.io/onrc-analiza-big-data-amanari/) — motorul de prognoză din raport, rulat în browser, cu scenarii și măsuri; [pagina de audit](https://stefatorus.github.io/onrc-analiza-big-data-amanari/audit.html) arată că reproduce exact motorul Python și cifrele raportului, plus testul pe trecut.
 
-1. **[Ediția executivă](reports/actuale/Raport_ONRC_Coada_2026-11_EXECUTIV.pdf)** (12 p.): situația, prognoza, ce schimbă fiecare măsură, cele două cozi, costul, în grafice explicate.
-2. **[Analiza proiectului de OUG](reports/actuale/Analiza_proiectului_OUG_2026-11.pdf)** (25 p.): textul integral al proiectului și nota de fundamentare, verificate față de date; efectul fiecărui articol; propuneri de completare.
-3. **[Raportul complet](reports/actuale/Raport_ONRC_Coada_2026-11_COMPLET.pdf)** (140 p., versiunea 1.0.1, 23.11.2026): documentul de referință.
+1. **[Ediția executivă](reports/actuale/Raport_ONRC_Coada_2026-11_EXECUTIV.pdf)** (13 p.): situația, prognoza, ce schimbă fiecare măsură, cele două cozi, costul, în grafice explicate.
+2. **[Analiza proiectului de OUG](reports/actuale/Analiza_proiectului_OUG_2026-11.pdf)** (26 p.): textul integral al proiectului și nota de fundamentare, verificate față de date; efectul fiecărui articol; propuneri de completare.
+3. **[Raportul complet](reports/actuale/Raport_ONRC_Coada_2026-11_COMPLET.pdf)** (140 p., versiunea 1.0.2, 23.11.2026): documentul de referință.
    Cuprinsul arată pentru cine e fiecare parte. Fiecare cifră are un cod `[Cxx]`, cu legătură spre registrul afirmațiilor.
 4. **Sinteze pe instituții** (9–11 p. fiecare), în [`reports/sinteze_institutii/`](reports/sinteze_institutii/): ce se cere fiecărei instituții, în limitele competențelor ei.
    * [Ministerul Justiției](reports/sinteze_institutii/Sinteza_MJ.pdf) · [Ministerul Finanțelor și ANAF](reports/sinteze_institutii/Sinteza_MF_ANAF.pdf) · [MEDAT și ADR](reports/sinteze_institutii/Sinteza_MEDAT_ADR.pdf)
    * [Guvernul](reports/sinteze_institutii/Sinteza_Guvern.pdf) · [Parlamentul](reports/sinteze_institutii/Sinteza_Parlament.pdf) · [ONRC](reports/sinteze_institutii/Sinteza_ONRC.pdf)
-5. **[Munca din spatele cozii](reports/pe_parti/Munca_din_spatele_cozii_personal_sindicat_v1.0.1.pdf)** (14 p.), pentru personalul ONRC și sindicat: volumul de muncă la nivel de sistem (decizii pe an și pe zi, amânări ca muncă nevăzută, programul, comparația cu 2023 și 2025), prezentat onest, fără date pe persoane. Este Partea 6 din raportul complet, editată separat.
+5. **[Munca din spatele cozii](reports/pe_parti/Munca_din_spatele_cozii_personal_sindicat.pdf)** (14 p.), pentru personalul ONRC și sindicat: volumul de muncă la nivel de sistem (decizii pe an și pe zi, amânări ca muncă nevăzută, programul, comparația cu 2023 și 2025), prezentat onest, fără date pe persoane. Este Partea 6 din raportul complet, editată separat.
 6. **Analize complementare** (21.11.2026, date până la 18–20.11.2026), în [`reports/analize_complementare/`](reports/analize_complementare/).
    Pentru orice cifră, referința este raportul complet din 23.11.2026.
    * [Atlasul județean, 42 de fișe](reports/analize_complementare/Atlas_judetean_ONRC_42_fise_2026-11-21.pdf) (32 p.)
@@ -36,6 +36,7 @@ Depozitul conține rapoartele, datele care le susțin și codul care le produce.
 
 ## Versiuni
 
+* **1.0.2** (23.11.2026): precizări după a doua rundă de verificare de către aceleași patru modele AI (componența cifrei de 271 mil. lei, intervalele, termenul consultării eliminat ca neconfirmat, un singur termen pentru consilierii juridici desemnați, condițiile analizei pe două cozi). Valorile din registru sunt neschimbate.
 * **1.0.1** (23.11.2026): corecturi după revizuirea critică de către patru modele AI (formulări, coerența cifrelor, încadrarea riscului bugetar pentru 2027, definiția intervalelor, textul integral al proiectului de OUG). Valorile din registrul afirmațiilor sunt neschimbate.
 * **1.0.0** (23.11.2026): prima publicare.
 

@@ -40,7 +40,7 @@ HIRE = BRI.HIRE_40[0].lower() + BRI.HIRE_40[1:]
 CAV = {
     "C04": "valoare cenzurată: «cel puțin»", "C11": "se folosesc dosarele decise pe săptămână",
     "C36": "mărimea depinde de definiție; sensul e același", "C40": "«redepune» = orice cerere ulterioară de același tip",
-    "C52": "scenariu fragil; presupune excepții de la suspendarea concursurilor", "C53": "scenariu; efectele măsurilor sunt ipoteze",
+    "C52": "scenariu fragil; cere excepții de la suspendarea angajărilor peste plafonul de 15%, deci probabil o derogare prin lege", "C53": "scenariu; efectele măsurilor sunt ipoteze",
     "C54": "scenariu foarte sensibil la ipoteze", "C55": "conversia în posturi e o ipoteză de model, nu o normă",
     "C58": "prognoză de model, nu măsurătoare", "C59": "prognoză condiționată de valurile de cereri anunțate",
     "C60": "prognoză; momentul vârfului variază între simulări", "C61": "ipoteze de livrare, nu măsurători",
@@ -54,11 +54,11 @@ CAV = {
     "C112": "partea din stoc e o expunere, nu un cost produs", "C113": "scenariul central; 2026 e parțial",
     "C116": "parametrii fără bază rămân ipoteze declarate",
     "C122": "interval de simulare de 95%, condiționat de ipoteze; față de o coadă normală, de 3 zile; extrapolat dincolo de așteptările pe care s-a estimat efectul",
-    "C123": "valabil doar dacă veniturile se recuperează", "C124": "limită extremă, nu prognoză; componenta persistentă are un interval foarte larg", "C125": "depinde de scenariul de măsuri",
+    "C123": "valabil doar dacă veniturile se recuperează", "C124": "limită de sus, nu prognoză; componenta persistentă are un interval foarte larg și semn nedeterminat", "C125": "depinde de scenariul de măsuri",
     "C127": "clasificare automată verificată pe un eșantion; ponderile nu se adună", "C128": "clasificare automată; ponderile nu se adună",
     "C129": "clasificare automată; ponderile nu se adună",
     "C139": "«evitabil» e evaluarea autorului, asistată de AI, neconfirmată de ONRC",
-    "C140": "un singur evaluator, un model AI", "C141": "plafon: presupune că verificarea prinde tot ce e evitabil",
+    "C140": "un singur evaluator, un model AI", "C141": "plafon: presupune că verificarea prinde tot ce e evitabil; o parte din verificări poate exista deja în sistemul ONRC",
     "C145": "din textul unui eșantion de încheieri", "C147": "eșantion etichetat de un model AI; contează direcția, nu valoarea exactă",
     "C148": "clasificare automată; la înmatriculări eșantion mic", "C149": "eșantion mic",
     "C150": "«evitabil» e evaluarea autorului, asistată de AI, neconfirmată de ONRC",
@@ -126,7 +126,7 @@ def card_schema():
     return card("figures_institutii", "fi24_doua_cozi_schema.svg", "Cum circulă un dosar: două cozi, una după alta",
                 W("Drumul unei cereri: coada de operare (preluare și verificare formală), apoi coada registratorului (decizia). Cifrele: stocul oficial la 6 noiembrie, cererile noi pe zi și deciziile finale pe zi." +
                   E("C28", "C29") + cite("C99") + E("C01"),
-                  "Proiectul aduce consilieri juridici la soluționare. Dacă vin din operare, mutarea ajută doar până la un prag: " + V("C35") + "." + E("C35"),
+                  "Proiectul aduce consilieri juridici desemnați la soluționare. Dacă vin din operare, mutarea ajută doar până la un prag: " + V("C35") + "." + E("C35"),
                   "Cu cele două cozi aproape egale, o decizie de personal se judecă pe tot drumul dosarului, nu pe o singură etapă." + E("C56")),
                 H(PR("C29"), ["C28", "C29"]))
 
@@ -134,15 +134,15 @@ def card_schema():
 def card_tandem():
     return card("figures_institutii", "fi06_tandem.svg", "Cele două cozi la două date oficiale, la o săptămână distanță",
                 W(PR("C33") + E("C33"), PR("C56") + E("C56"), PR("C34") + E("C34")),
-                H("Doar întărirea ambelor etape deodată reduce stocul total; o singură etapă întărită mută blocajul.", ["C56", "C29"]))
+                H("Când intrările sunt la nivelul din august–octombrie, doar întărirea ambelor etape deodată reduce stocul total; o singură etapă întărită mută blocajul. În noiembrie, cu intrări mai mici, stocul a scăzut încet.", ["C56", "C29", "C100"]))
 
 
 def card_canib():
     return card("figures_institutii", "fi10_canibalizare.svg", "Cât ajută mutarea oamenilor de la o coadă la alta",
                 W("Producția totală, după câte dosare pe zi preiau la soluționare oamenii mutați din operare.",
                   "Mutarea ajută până la un optim, iar la un prag câștigul dispare: " + V("C35") + "." + E("C35") +
-                  " Dacă oamenii delegați vin din alte activități ale ONRC sau din posturi ocupate prin concurs, plafonul dispare.",
-                  "De publicat: câți dintre consilierii juridici eligibili lucrează azi la operare. Fără această cifră nu se poate ști dacă delegarea ajută sau doar mută coada."),
+                  " Dacă consilierii juridici desemnați vin din alte activități ale ONRC sau din posturi ocupate prin concurs, plafonul dispare.",
+                  "De publicat: câți dintre consilierii juridici eligibili lucrează azi la operare. Fără această cifră nu se poate ști dacă desemnarea ajută sau doar mută coada."),
                 H(PR("C35"), ["C35"], ' <span class="cav">(mecanism de model, condiționat de ipoteza 1:1; nu e textul OUG)</span>'))
 
 
@@ -199,7 +199,7 @@ def card_amanari():
                 W("Motivele amânărilor din 19 octombrie–18 noiembrie 2026 și nivelul de automatizare al soluției: reguli fixe, AI, AI avansat, judecata registratorului. " + PR("C82") + E("C82"),
                   "Textul proiectului nu tratează amânările. Verificările la depunere țin de ONRC, cu sprijinul ADR; cele care interoghează alte registre cer protocoale, Platforma națională de interoperabilitate și o evaluare de impact privind protecția datelor.",
                   PR("C141") + cite("C141")),
-                H(PR("C143"), ["C143"], ' <span class="cav">(nu vedem sistemele interne ONRC: o parte din verificări poate exista deja)</span>'))
+                H(PR("C143"), ["C143"]))
 
 
 def card_respingeri():
@@ -250,7 +250,7 @@ def MJ():
              "Producția nu s-a prăbușit: " + PR("C87") + E("C87") + " " + hl("Coada vine din cereri: " + PR("C47")) + E("C47")))
     an.append('<h2>Cele două cozi: unde trebuie să ajungă oamenii</h2>' +
               para(hl("Fiecare dosar trece întâi prin operare, apoi la registrator, iar cele două stocuri sunt aproape egale.") + E("C29") +
-                   " De aceea, fiecare decizie de personal a ministerului (excepții, stat de funcții, delegări prin OUG) se judecă pe ambele etape.") +
+                   " De aceea, fiecare decizie de personal a ministerului (excepții, stat de funcții, desemnări prin OUG) se judecă pe ambele etape.") +
               card_schema() + card_tandem() + card_canib())
     an.append('<h2>Personalul: ce poate și ce nu poate face ministerul</h2>' + tiles([
         (V("C51").split("→ ")[1].split(" ")[0], "posturi finanțate, dar neocupate", ["C51"], True),
@@ -262,7 +262,7 @@ def MJ():
              PR("C55") + cite("C55")) + card_grila())
     return dict(
         key="MJ", name="Ministerul Justiției", head="MINISTERUL JUSTIȚIEI", forl="Ministerul Justiției",
-        decide=("<b>Două decizii pentru această săptămână, înainte de adoptarea OUG</b> (consultarea publică se încheie la 24 noiembrie 2026). "
+        decide=("<b>Două decizii pentru această săptămână, înainte de încheierea consultării publice.</b> "
                 "<b>1.</b> Amendarea art. I, astfel încât desemnările să întărească ambele etape, operarea și soluționarea, cu o derogare pentru posturile vacante finanțate (cererea 1): "
                 "proiectul singur câștigă circa " + G34.lstrip("≈") + " de zile în iunie 2028, iar întărirea unei singure etape mută blocajul." + E("C43", "C56") +
                 " <b>2.</b> Conversia automată CAEN „1-la-1” în textul OUG (cererea 2): în scenariile cu val CAEN mare, reduce așteptarea din iunie 2027 la mai puțin de jumătate." + cite("C95") +
@@ -304,7 +304,7 @@ def MF():
     an.append('<h2>Cât costă coada: economia și bugetul</h2>' + tiles([
         (BRI.OCTNOV, "mil. lei pe lună, cost economic în oct.–nov. 2026 (central)", ["C111"], True),
         (V("C106").split(" / ")[1], "mil. lei, cost economic aug.–18 nov. 2026 (central; interval " + V("C106").split(" / ")[0] + "–" + V("C106").split(" / ")[2] + ")", ["C106"], False),
-        (V("C107").split(" / ")[1], "mil. lei, încasări bugetare pierdute, aceeași perioadă (central; depinde de ipoteze fără sursă)", ["C107"], False),
+        (V("C107").split(" / ")[1], "mil. lei, încasări bugetare afectate, aceeași perioadă (central; depinde de ipoteze fără sursă)", ["C107"], False),
         (v0("C108").split(" ")[0], "mil. lei în economie pentru fiecare zi în plus cu stocul actual", ["C108"], False)]) +
         para(hl("Zilele de întârziere sunt măsurate; transformarea lor în lei e un interval de scenarii.") + " " + PR("C105") + E("C105") + " " + PR("C116") + cite("C116"),
              PR("C109") + cite("C109") + " " + PR("C112") + cite("C112"),
@@ -312,11 +312,11 @@ def MF():
              hl(PR("C108")) + cite("C108") + " Proiectul de OUG costă " + V("C83") + "." + E("C83")) + card_cost())
     an.append('<h2>Riscul pentru veniturile din 2027</h2>' + tiles([
         (v0("C122"), "mil. lei care nu intră în bugetul anului 2027 din cauza cozii (interval de simulare de 95%: " + V("C122").split("(")[1].split(")")[0] + ")", ["C122"], True),
-        (V("C124").split(" (")[0], "mil. lei dacă nimic nu se recuperează; componenta persistentă: " + V("C124").split(" / ")[1], ["C124"], False),
+        (V("C124").split(" (")[0], "mil. lei dacă nimic nu se recuperează (limită de sus; interval de simulare de 95%: " + V("C124").split(" / ")[0].split("(")[1].rstrip(")") + "); componenta persistentă: " + V("C124").split(" / ")[1].split(" (")[0] + " (interval de simulare de 95%: " + V("C124").split(" / ")[1].split("(")[1].rstrip(")").replace("-", "−") + "; pozitiv = pierdere)", ["C124"], False),
         (v0("C123"), "mil. lei, costul de finanțare, doar dacă veniturile se recuperează", ["C123"], False),
-        (v0("C125"), "mil. lei evitate de un pachet realist", ["C125"], False)]) +
+        (v0("C125"), "mil. lei evitate de un pachet realist (interval de simulare de 95%: " + V("C125").split("(")[1].rstrip(")") + ")", ["C125"], False)]) +
         para(hl(PR("C122")) + cite("C122") + " " + PR("C124") + cite("C124"),
-             "Cifra presupune deja că o parte din ce se pierde în zilele de așteptare se recuperează în același an; veniturile amânate din cererile depuse înainte de decembrie 2026 nu sunt scăzute. "
+             "Veniturile amânate din cererile depuse înainte de decembrie 2026 nu sunt scăzute. "
              "Din bilanțurile firmelor noi vin impozitul direct și angajații; TVA și toată partea modificărilor sunt ipoteze." + cite("C122"),
              PR("C119") + E("C119") + " " + PR("C121") + E("C121") + " " + hl(PR("C120")) + E("C120")) + card_venituri() + card_cauzal())
     an.append('<h2>Inactivarea fiscală: legătura cu ANAF</h2>' +

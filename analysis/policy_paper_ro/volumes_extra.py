@@ -10,8 +10,8 @@ import rejection_section as RSEC
 ORI = re.search(r"de circa (\S+) ori", REG["C111"]["public_ro"]).group(1)      # Oct 2026 vs a normal month (C111)
 HIRE_S = " În 2026, concursurile pentru posturi vacante sunt suspendate; Ministerul Justiției poate aproba doar excepții limitate."
 NFOUND = V("C116").split(" · ")[1].split(" parametri")[0]                      # e.g. «10 din 18» (C116)
-# the 40%-of-vacant-posts scenario (C52) assumes the 2026 hiring-freeze exceptions are approved (C153); text from the registry
-HIRE_40 = " " + re.search(r"Scenariul presupune că Ministerul Justiției.*?\)\.", REG["C52"]["rezerva_obligatorie"]).group(0)
+# the 40%-of-vacant-posts scenario (C52) needs exceptions above the 15% ceiling (C153), probably a derogation by law; text from the registry
+HIRE_40 = " " + re.search(r"Scenariul cere excepții de la suspendarea angajărilor.*?Ministerul Justiției\.", REG["C52"]["rezerva_obligatorie"]).group(0)
 _KF = json.loads((IA / "out" / "cost_founded.json").read_text(encoding="utf-8"))["scenarios"]["fundamentat"]["central"]
 _KCB = json.loads((IA / "out" / "cost_check.json").read_text(encoding="utf-8"))["oug_budget_mil_lei"]
 _W = {1: "o zi", 2: "două zile", 3: "trei zile", 4: "patru zile", 5: "cinci zile", 6: "șase zile", 7: "șapte zile", 8: "opt zile", 9: "nouă zile", 10: "zece zile"}
@@ -55,7 +55,7 @@ def vol0(pg):
     it_tbl = ('<table class="dt kvt"><thead><tr><th style="width:5%">Nr.</th><th style="width:25%">Ce construim</th><th style="width:22%">De ce</th>'
               '<th style="width:18%">Depinde de</th><th style="width:30%">Cum verificăm că merge</th></tr></thead><tbody>'
               '<tr><td>1</td><td>Conversia automată a codurilor CAEN cu un singur corespondent nou, fără dosar și fără registrator</td><td>Valul CAEN e cea mai mare sursă de risc pentru vârful din 2027' + E("C68") + '</td><td>Temei legal (prevăzut în pachetele evaluate prin OUG) + tabelul oficial de corespondență</td><td>Numărul lunar de cereri doar-CAEN care mai intră în coadă scade; ținta o stabilește ONRC</td></tr>'
-              '<tr><td>2</td><td>Verificări automate înainte de depunere pentru lipsurile formale frecvente</td><td>Circa unul din cinci dosare soluționate fusese amânat înainte' + E("C74") + '</td><td>Lista motivelor de amânare, pe frecvență (Volumul 1, secțiunea 6.4)' + E("C139") + '</td><td>Ponderea amânărilor din decizii scade față de nivelul de azi' + E("C82") + '; ca plafon, circa ' + V("C141").split(" (")[0].lstrip("≈") + ' de amânări pe zi mai puțin' + E("C141") + '</td></tr>'
+              '<tr><td>2</td><td>Verificări automate înainte de depunere pentru lipsurile formale frecvente</td><td>Circa unul din cinci dosare soluționate fusese amânat înainte' + E("C74") + '</td><td>Lista motivelor de amânare, pe frecvență (Volumul 1, secțiunea 6.4)' + E("C139") + '</td><td>Ponderea amânărilor din decizii scade față de nivelul de azi' + E("C82") + '; ca plafon, circa ' + V("C141").split(" (")[0].lstrip("≈") + ' de amânări pe zi mai puțin (unele pot exista deja)' + E("C141") + '</td></tr>'
               '<tr><td>3</td><td>Cereri online structurate preluate fără reintroducere manuală la operare</td><td>Azi, cererile online trec prin aceeași operare și nu sunt mai rapide' + E("C36") + '</td><td>Validarea semnăturii și a câmpurilor din formular</td><td>Timpul de la depunere la trecerea la registrator scade pentru cererile online</td></tr>'
               '<tr><td>4</td><td>Câmpuri noi în date: data și ora trecerii la registrator (<code>data_trecere_registrator</code>), codul tipului de cerere, identificator pseudonimizat al firmei</td><td>Fără ele nu se poate măsura cât stă un dosar în fiecare etapă</td><td>Aprobare GDPR pentru pseudonimizare</td><td>Câmpurile apar în exportul public lunar</td></tr>'
               '</tbody></table><p class="note">Efectul fiecărei măsuri IT, luată separat, nu se poate estima din datele publice. În model, un pachet care include conversia CAEN coboară mult așteptarea' + E("C53", "C54") + '; cifra exactă pentru conversie depinde de câte coduri sunt 1-la-1, pe care doar ONRC le poate număra.</p>')
@@ -76,11 +76,11 @@ def vol0(pg):
          "Volumul 1, sinteza (p. 4), capitolele 8–10; ediția executivă."),
         ("2", "Pentru conducerea ONRC", "Cele două etape lucrează aproape la capacitate. Întărirea uneia singure mută blocajul în cealaltă.",
          [hl("La 6 noiembrie, peste jumătate din stoc (51,9%) era încă la operare.") + E("C29"),
-          hl("Mutarea juriștilor din operare la registrator ajută doar până la un optim; peste el, câștigul dispare.") + E("C35"),
+          hl("Mutarea consilierilor juridici desemnați din operare la registrator ajută doar până la un optim; peste el, câștigul dispare.") + E("C35"),
           hl("Producția din 2026 e puțin peste nivelul din 2025, iar scăderea din august–octombrie e sezonieră, nu o prăbușire.") + E("C87", "C86"),
           *PSEC.short_items(V, E, hl, "onrc")[:2], RSEC.short_item(V, E, hl, "onrc")],
          '<ul class="find">' + "".join(f"<li>{k}</li>" for k in [
-             "Delegați juriști din alte activități, nu din operare; ar fi utilă o cifră publică: câți dintre juriștii eligibili lucrează azi la operare." + E("C35"),
+             "Desemnați consilieri juridici din alte activități, nu din operare; ar fi utilă o cifră publică: câți dintre consilierii juridici eligibili lucrează azi la operare." + E("C35"),
              "O explicație publică a schimbării din 27 aprilie 2026 ar lămuri dacă e un pas de procedură: de atunci aproape niciun dosar nu mai e soluționat în două zile." + E("C32"),
              "Semnalarea lipsurilor la depunere: circa unul din cinci dosare soluționate fusese amânat înainte; tabelul 6.1 din Volumul 1 arată, pe motive, ce se poate verifica automat." + E("C74", "C139"),
              "Volumul 5 arată unde au fost probleme locale înainte de valul național (" + ", ".join(x.split(" +")[0] for x in V("C88").split(" · ")) + ") și unde respingerile sunt cele mai mari; acolo merită verificat ce e diferit." + E("C88", "C90")]) + "</ul>",

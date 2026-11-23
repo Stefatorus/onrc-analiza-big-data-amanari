@@ -64,7 +64,7 @@ def i03_account():
     a1.set_xlabel("cost economic și privat, mil. lei, 1.08–18.11.2026", fontsize=6); a1.legend(fontsize=5.6, frameon=False, loc="upper right")   # upper right is empty (short prudent/central bars); lower right collides with the stressed label
     b = np.array([sc[k]["tax"] / 1e6 for k, _ in names])
     a2.barh(y, b, color=WARN, height=.55)
-    for i in y: a2.text(b[i] + 4, i, rd(b[i], 0) if b[i] >= 10 else rd(b[i], 1), va="center", fontsize=6.2, color=INK)
+    for i in y: a2.text(b[i] + 4, i, rd(b[i], 0) if b[i] >= 100 else rd(b[i], 1) if b[i] >= 10 else rd(b[i], 2), va="center", fontsize=6.2, color=INK)   # same rounding as the registry (C107)
     a2.set_yticks(y); a2.set_yticklabels([]); a2.invert_yaxis(); a2.set_xlim(0, b.max() * 1.25)
     a2.set_xlabel("încasări bugetare afectate, mil. lei", fontsize=6)
     for ax in (a1, a2): G.style_axes(ax, ygrid=False, xgrid=True)

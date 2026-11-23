@@ -40,8 +40,14 @@ def E(*ids):
 ORI = re.search(r"de circa (\S+) ori", REG["C111"]["public_ro"]).group(1)      # Oct–Nov 2026 vs a normal month, as a word (C111)
 _on = [x.strip() for x in V("C111").split(" · ")[2].replace("sept./oct./nov. 2026 ", "").split(" / ")[1:3]]   # Oct, Nov (C111)
 OCTNOV = "–".join(sorted(_on, key=lambda x: float(x.replace(".", "").replace(",", "."))))                      # e.g. «36,3–37,5»
-# the 40%-of-vacant-posts scenario (C52) assumes the 2026 hiring-freeze exceptions are approved (C153); text from the registry
-HIRE_40 = re.search(r"Scenariul presupune că Ministerul Justiției.*?\)\.", REG["C52"]["rezerva_obligatorie"]).group(0)
+# the 40%-of-vacant-posts scenario (C52) needs hiring-freeze exceptions above the 15% ceiling (C153), probably a derogation by law; text from the registry
+HIRE_40 = re.search(r"Scenariul cere excepții de la suspendarea angajărilor.*?Ministerul Justiției\.", REG["C52"]["rezerva_obligatorie"]).group(0)
+# 2027 budget: gross delayed / assumed recovered within 2027 / net (C122), never typed
+_C122 = V("C122"); NET27 = _C122.split(" (")[0]; INT27 = _C122.split("(")[1].split(")")[0]
+GROSS27 = _C122.split("brut amânat ")[1].split(",")[0]; REC27 = _C122.split("recuperat în 2027 ")[1].strip()
+UP27, PERS27 = V("C124").replace("(-", "(−").split(" / "); C125V = V("C125")
+BUDGET27 = (f"Cifra e netă: din circa {GROSS27} de milioane amânate brut, modelul presupune că circa {REC27} se încasează mai târziu în 2027 (ipoteză, nu estimare); "
+            f"{NET27} e mediana diferenței pe aceleași simulări, nu diferența exactă a celor două mediane.")
 def B(cid):   # evidence badge from the registry level (A/E, B/P, C/S)
     return badge(REG[cid]["level"].split("/")[1], inline=True)
 
@@ -164,6 +170,8 @@ GLOSS = '''<div class="gloss-box"><h3>Termeni, pe scurt</h3><dl>
     <dt>CAEN</dt><dd>Codul activității unei firme; trecerea la versiunea Rev. 3 cere actualizarea codurilor.</dd>
     <dt>Operare</dt><dd>Prima etapă: preluarea cererii și verificarea ei formală, de către un operator.</dd>
     <dt>Registrator · soluționare</dt><dd>A doua etapă: registratorul verifică legalitatea și decide (admite, respinge sau amână).</dd>
+    <dt>Consilieri juridici desemnați</dt><dd>Consilierii juridici specialiști ai ONRC desemnați temporar, cu acordul lor scris, să facă controlul de legalitate ca registratori (art. I din proiectul de OUG). Folosim doar acest termen; conducerea de specialitate juridică desemnată deja (art. II) e un grup separat.</dd>
+    <dt>Optim · câștig zero</dt><dd>În modelul în tandem, optimul e numărul de dosare pe zi mutate din operare la soluționare la care producția totală e cea mai mare; câștigul zero e pragul peste care mutarea nu mai aduce nimic, pentru că operarea devine etapa mai lentă.</dd>
     <dt>p10–p90</dt><dd>Intervalul în care cad 8 din 10 variante simulate ale prognozei.</dd>
     <dt>Interval</dt><dd>Spunem mereu ce fel de interval e: de simulare, de încredere sau distanța dintre scenarii (ghidul de lectură).</dd>
   </dl></div>'''   # executive edition: key terms (IT/lawyer review)
@@ -251,13 +259,14 @@ def front(pg):
       (V("C01"), "decizii finale pe zi lucrătoare în octombrie–noiembrie", f"{B('C01')} peste aceeași perioadă din 2025; în plus, circa {V('C03').lstrip('≈').split(' ')[0]} de amânări pe zi, tot muncă a registratorilor{E('C01', 'C30', 'C03')}", False),
       (V("C23") + " zi lucr.", "termenul din lege pentru soluționare, de la înregistrarea cererii", f"{B('C23')} art. 105 alin. (1), Legea 265/2022{E('C23')}", True),
   ])}
+  <p class="note"><strong>Cum se citesc cifrele.</strong> {V("C14")} zile e mediana modificărilor soluționate în săptămâna cea mai recentă (16–20 noiembrie); {V("C84")} zile e mediana tuturor deciziilor finale din 1–20 noiembrie.{E("C14", "C84")} În lei: {V("C106").split(" / ")[1]} de milioane = costul economic al întârzierilor, august–18 noiembrie 2026 (scenariul central){E("C106")}; {NET27} = venituri din 2027 care nu intră în bugetul anului din cauza cozii{E("C122")}; {C125V.split(" (")[0]} = partea evitată de un pachet realist de măsuri{E("C125")}; {UP27.split(" (")[0]} = limita de sus pentru 2027, dacă nimic nu s-ar recupera{E("C124")}.</p>
   <p><strong>Ce se întâmplă.</strong> Fiecare dosar trece prin două etape: <em>operarea</em>, în care un operator introduce și verifică cererea, și <em>soluționarea</em>, în care un registrator decide. La 6 noiembrie, cele două stocuri erau aproape egale; în săptămâna anterioară, stocul total scăzuse ușor.{E('C29', 'C85')} {hl("Modificările soluționate în 16–20 noiembrie au așteptat, în mod obișnuit, " + V("C14") + " zile calendaristice de la înregistrare, iar așteptarea a crescut în fiecare săptămână din octombrie.")}{E('C14', 'C16')} Durata include și timpul în care solicitantul completează dosarul după o amânare și privește doar dosarele deja decise; termenul legal de o zi lucrătoare privește cererea completă. Raportul nu califică întârzierile drept nelegale.</p>
   <p><strong>De ce.</strong> {hl("Cererile au crescut mult mai repede decât producția.")} Registrul emite mai multe decizii pe zi decât în aceeași perioadă a anilor trecuți (circa 9% peste 2025).{E('C30', 'C87', 'C79')} Cererile zilnice au crescut însă cu circa jumătate în august–octombrie (Ministerul Justiției), exact în sezonul în care, în fiecare an, se emit mai puține decizii.{E('C47', 'C86')} {hl('Coada s-a format în câteva săptămâni din septembrie, când au intrat de peste două ori mai multe cereri decât de obicei; din noiembrie, intrările sunt sub ritmul de soluționare și stocul scade încet.')}{E('C99', 'C100')} Așteptarea dosarelor decise crește totuși, pentru că acum se soluționează cererile din vârf. O parte din dosare trec de două ori prin sistem: circa una din cinci decizii e o amânare, iar aproape toate respingerile vin după o amânare neîndeplinită, din aceleași cauze (capitolul 6).{E('C21', 'C144')}</p>
   <p><strong>Ce urmează.</strong> Prognoza fără măsuri noi are trei repere, pe orizonturi diferite: {hl("la mijlocul lui 2027 (30 iunie), o așteptare de " + V('C59') + " zile; la vârf, " + V('C60') + " zile; în iunie 2028, " + V('C42') + " zile.")}{E('C59', 'C60', 'C42')} Comparațiile cu proiectul de OUG și cu pachetele de măsuri de mai jos privesc toate iunie 2028. În model, sistemul e foarte aproape de limită: cu aceleași cereri, {hl("10% mai multă capacitate ar coborî așteptarea din iunie 2028 la " + V('C63').split(' · ')[0].split('→ ')[1] + " de zile, iar 10% mai puțină ar urca-o la " + V('C63').split(' · ')[1].split('→ ')[1].split(' (')[0] + " de zile")}.{E('C63')} Valul CAEN de la începutul lui 2027 e cea mai mare sursă de risc.{E('C68')}</p>
-  <p><strong>Ce poate face proiectul de OUG.</strong> Textul integral pus în consultare prevede desemnarea temporară, cu acordul lor scris, a consilierilor juridici specialiști ai ONRC ca registratori, până la 8 ianuarie 2028 (art. I–II), înscrierea din oficiu a mențiunilor din hotărâri judecătorești și din actele altor autorități (art. III) și adaptarea fluxului informatic în 15 zile (art. IV). Rulat pe aceste măsuri, cu ipotezele de livrare declarate (analiza separată a proiectului de OUG), modelul verificat arată o îmbunătățire reală, dar parțială: în iunie 2028, așteptarea ar rămâne de ordinul a trei luni, față de circa patru luni fără măsuri noi, cu intervale largi.{E('C42', 'C43')} Efectul vine mai ales din capacitatea suplimentară de soluționare. Dacă consilierii juridici delegați sunt luați din operare, câștigul are o limită clară, pentru că operarea e aproape la fel de încărcată.{E('C34', 'C35')}</p>
+  <p><strong>Ce poate face proiectul de OUG.</strong> Textul integral pus în consultare prevede desemnarea temporară, cu acordul lor scris, a consilierilor juridici specialiști ai ONRC ca registratori (în continuare, consilieri juridici desemnați), până la 8 ianuarie 2028 (art. I–II), înscrierea din oficiu a mențiunilor din hotărâri judecătorești și din actele altor autorități (art. III) și adaptarea fluxului informatic în 15 zile (art. IV). Rulat pe aceste măsuri, cu ipotezele de livrare declarate (analiza separată a proiectului de OUG), modelul verificat arată o îmbunătățire reală, dar parțială: în iunie 2028, așteptarea ar rămâne de ordinul a trei luni, față de circa patru luni fără măsuri noi, cu intervale largi.{E('C42', 'C43')} Efectul vine mai ales din capacitatea suplimentară de soluționare. Dacă consilierii juridici desemnați sunt luați din operare, câștigul are o limită clară, pentru că operarea e aproape la fel de încărcată.{E('C34', 'C35')}</p>
   <p><strong>Ce ajută.</strong> {hl("Un pachet minim realist ar coborî așteptarea din iunie 2028, în model, la " + V('C54') + " zile.")}{E('C54')} Pachetul: OUG prelungit, conversia automată a codurilor CAEN cu un singur corespondent nou („1-la-1”), eșalonarea depunerilor și triajul (cererile simple separate la intrare). Cu OUG extins și ocuparea a 40% din posturile vacante finanțate, așteptarea ar coborî la {V('C52')} zile{E('C52')}; în 2026 însă concursurile sunt suspendate. {HIRE_40}{E('C153')} Detalii în capitolul 10.</p>
-  <p><strong>Ce costă.</strong> {hl("În octombrie și noiembrie 2026, întârzierile au costat economia, în scenariul central, circa " + OCTNOV + " milioane de lei pe lună, de circa " + ORI + " ori mai mult decât într-o lună obișnuită; la buget, circa " + V('C111').split('buget nov. 2026 ')[1] + " milioane în noiembrie.")}{E('C111')} Pentru august–18 noiembrie, scenariile dau între circa {V('C106').split(' / ')[0]} și {V('C106').split(' / ')[2]} de milioane de lei, iar fiecare zi în plus cu stocul actual costă circa {V('C108').split(' (')[0]} milioane în economie și {V('C108').split(' / ')[1].split(' (')[0]} milioane la buget (indicator de sensibilitate: nu se înmulțește cu numărul de zile).{E('C106', 'C108')} Zilele sunt măsurate; {V('C116').split(' · ')[1].split(' parametri')[0].replace(' din ', ' din cei ')} parametri care le transformă în lei au bază în date oficiale sau măsurate, restul sunt ipoteze declarate (Volumul 7).{E('C116')} {hl('Pentru 2027, fără măsuri noi, circa ' + V('C122').split(' (')[0] + ' de milioane de lei din veniturile bugetare nu ar intra în bugetul anului din cauza cozii; o parte se poate recupera ulterior, dar datele nu exclud o pierdere durabilă.')} Reperul e o coadă normală, de 3 zile; intervalul de simulare de 95% (percentilele 2,5–97,5 ale variantelor simulate) e de {V('C122').split('(')[1].split(')')[0]} de milioane. Dacă nimic nu s-ar recupera, minusul ar fi de circa {V('C124').split(' (')[0]} de milioane.{E('C122', 'C124', 'C120')}</p>
-  <p><strong>Ce spun sursele publice.</strong> {hl("Majoritatea cifrelor publicate în presă despre coadă se confirmă sau sunt compatibile cu datele noastre; cifra de peste 26.000 de cereri pe zi nu se reproduce din datele BERC analizate de noi pentru cererile de înregistrare, iar capitolul 12 arată valorile noastre și definițiile folosite.")}{E('C91', 'C93')} {hl("Dacă se confirmă cifrele publice despre valul CAEN, așteptarea din iunie 2027 ar putea ajunge la " + V('C94').split(' · ')[1].split('→ ')[1] + "–" + V('C94').split(' · ')[2].split('→ ')[1].split(' (')[0] + " de zile (circa 9–11 luni); conversia automată CAEN ar reduce-o la mai puțin de jumătate.")}{E('C94', 'C95')}</p>
+  <p><strong>Ce costă.</strong> {hl("În octombrie și noiembrie 2026, întârzierile au costat economia, în scenariul central, circa " + OCTNOV + " milioane de lei pe lună, de circa " + ORI + " ori mai mult decât într-o lună obișnuită; la buget, circa " + V('C111').split('buget nov. 2026 ')[1] + " milioane în noiembrie.")}{E('C111')} Pentru august–18 noiembrie, scenariile dau între circa {V('C106').split(' / ')[0]} și {V('C106').split(' / ')[2]} de milioane de lei, iar fiecare zi în plus cu stocul actual costă circa {V('C108').split(' (')[0]} milioane în economie și {V('C108').split(' / ')[1].split(' (')[0]} milioane la buget (indicator de sensibilitate: nu se înmulțește cu numărul de zile).{E('C106', 'C108')} Zilele sunt măsurate; {V('C116').split(' · ')[1].split(' parametri')[0].replace(' din ', ' din cei ')} parametri care le transformă în lei au bază în date oficiale sau măsurate, restul sunt ipoteze declarate (Volumul 7).{E('C116')} {hl('Pentru 2027, fără măsuri noi, circa ' + NET27 + ' de milioane de lei din veniturile bugetare nu ar intra în bugetul anului din cauza cozii; datele nu exclud o pierdere durabilă.')} {BUDGET27} Reperul e o coadă normală, de 3 zile; intervalul de simulare de 95% (percentilele 2,5–97,5 ale variantelor simulate) e de {INT27} de milioane. Dacă nimic nu s-ar recupera, minusul ar fi de circa {UP27.split(' (')[0]} de milioane (interval de simulare de 95%: {UP27.split('(')[1].rstrip(')')}; limită de sus, nu prognoză); componenta persistentă, estimată din efectul cauzal, e de circa {PERS27.split(' (')[0]} de milioane (interval de simulare de 95%: {PERS27.split('(')[1].rstrip(')')}; valorile pozitive sunt pierderi), cu semn nedeterminat.{E('C122', 'C124', 'C120')}</p>
+  <p><strong>Ce spun sursele publice.</strong> {hl("Majoritatea cifrelor publicate în presă despre coadă se confirmă sau sunt compatibile cu datele noastre; cifra de peste 26.000 de cereri pe zi din nota de fundamentare a Ministerului Justiției (§2.2, „media zilnică”) nu se reproduce din datele BERC analizate de noi pentru cererile de înregistrare, iar capitolul 12 din raportul complet arată valorile noastre și definițiile folosite.")}{E('C91', 'C93')} {hl("Dacă se confirmă cifrele publice despre valul CAEN, așteptarea din iunie 2027 ar putea ajunge la " + V('C94').split(' · ')[1].split('→ ')[1] + "–" + V('C94').split(' · ')[2].split('→ ')[1].split(' (')[0] + " de zile (circa 9–11 luni); conversia automată CAEN ar reduce-o la mai puțin de jumătate.")}{E('C94', 'C95')}</p>
   <p><strong>Ce nu putem spune.</strong> Pentru dosarele depuse în octombrie și noiembrie, timpul final nu se poate încă măsura; ce nu afirmăm e în capitolul 11.</p>
   <div class="strip3">
     <div class="s3 s3-est"><div class="s3h">Măsurat direct</div><div class="s3d">Din peste patru milioane de decizii BERC și din eșantionul myportal.</div>
@@ -414,11 +423,11 @@ def ch4():
              "fi06_tandem.svg",
              "Câte cereri așteptau în fiecare etapă la două date oficiale, la o săptămână distanță.",
              "Barele albastre sunt operarea, cele portocalii registratorul. Cifrele colorate arată schimbarea.",
-             "În acea săptămână, blocajul principal era la registrator. Operarea lucra mai repede.",
+             "În acea săptămână, blocajul principal era la registrator. Operarea lucra mai repede. Stocul de la registrator poate cuprinde și dosare care așteaptă completarea de către solicitant.",
              "Nu înseamnă că operarea nu mai e o problemă. Ea rămâne aproape la fel de încărcată (secțiunea 4.3).",
              ["C33", "C29"])
     b += h3("4.3 Cele două etape sunt aproape la fel de încărcate")
-    b += P("În acea săptămână, operarea a lucrat cu circa 16–20% mai repede decât soluționarea." + E('C34') +
+    b += P("În acea săptămână, operarea a lucrat cu circa 16–20% mai repede decât soluționarea; stocul de la registrator poate cuprinde și dosare care așteaptă completarea de către solicitant." + E('C34') +
            " " + hl("Diferența e mică, iar asta are o consecință practică importantă:") + " dacă mutăm oameni din operare la soluționare, operarea poate deveni rapid etapa mai lentă (capitolul 9).",
            "Verificare", "În eșantionul nostru din portal, circa jumătate din dosarele în așteptare erau încă la operare, la fel ca în cifra oficială." + E('C06'))
     b += h3("4.4 Online-ul nu sare peste operare")
@@ -677,7 +686,7 @@ def ch9():
     b = idea("Proiectul de OUG ajută, dar nu readuce termenul la câteva zile. Efectul vine mai ales din capacitatea suplimentară la registrator, iar mutarea de personal din operare are o limită clară.")
     b += h3("9.1 Ce prevede proiectul, articol cu articol")
     b += P("Tabelul urmează textul integral pus în consultare la 18 noiembrie 2026. Modelul a fost rulat pe măsurile pe care le prevede textul, cu ipotezele de livrare declarate; verificarea fiecărei afirmații din preambul și din nota de fundamentare e în analiza separată a proiectului de OUG.",
-           "Rezervă", "Consultarea publică e deschisă până la 24 noiembrie 2026; textul adoptat se poate schimba.")
+           "Rezervă", "Proiectul e în consultare publică; textul adoptat se poate schimba.")
     b += """<div class="tbl-wrap"><div class="tbl-head"><span class="tnum">Tabelul 9.1</span> Articolele proiectului și ce poate schimba fiecare</div>
 <table class="oug-tbl"><thead><tr><th>Articol</th><th>Ce prevede</th><th>Etapa afectată</th><th>Ce poate schimba</th></tr></thead><tbody>
 <tr><td>Art. I</td><td>Consilierii juridici specialiști ai ONRC (personal propriu) pot fi desemnați, prin decizie a directorului general, pentru motive temeinic justificate și cu acordul lor prealabil scris, să facă controlul de legalitate; au calitatea de registrator pentru actele lor și, dacă e cazul, drepturile salariale ale registratorului. Pe durata desemnării nu fac mențiunile din oficiu de la art. III.</td><td>Soluționare</td><td>Crește capacitatea registratorilor. Câștigul depinde de unde vin oamenii (secțiunea 9.3).</td></tr>
@@ -700,23 +709,23 @@ def ch9():
              "Nu este o predicție exactă. Câștigul nu se citește ca diferență între două puncte: se măsoară pe aceleași simulări (pentru Art. III, " + V('C44') + ").",
              ["C42", "C43", "C44"])
     b += h3("9.3 Limita mutării de personal din operare")
-    b += P("Art. I poate aduce la soluționare consilieri juridici ai ONRC. Întrebarea e din ce activități vin ei. Dacă vin din operare, operarea pierde capacitate. " + hl("Pentru că cele două etape sunt aproape la fel de încărcate, câștigul are un optim și apoi dispare.") + E('C35'),
+    b += P("Art. I poate aduce la soluționare consilieri juridici desemnați. Întrebarea e din ce activități vin ei. Dacă vin din operare, operarea pierde capacitate. " + hl("Pentru că cele două etape sunt aproape la fel de încărcate, câștigul are un optim și apoi dispare.") + E('C35'),
            "Analogie", "Dacă muți o persoană de la recepție la medic, cabinetul merge mai repede doar până când recepția devine mai lentă decât medicul. De acolo, mutarea face sala de așteptare de la recepție să crească.")
     b += fig("FIGURA 9.2", "MODEL ÎN TANDEM · CAPACITATE MUTATĂ DIN OPERARE",
              "Mutarea de personal din operare la registrator ajută doar până la un punct",
              "fi10_canibalizare.svg",
              "Ce poate procesa tot sistemul când o parte din capacitatea de operare este mutată la soluționare.",
              "Linia roșie e capacitatea sistemului. Ea urcă până la optim, apoi coboară. Liniile punctate verticale marchează optimul și punctul de câștig zero.",
-             "Delegarea ajută cel mai mult când vine cu oameni noi sau din alte activități, nu din operare.",
+             "Desemnarea ajută cel mai mult când vine cu oameni noi sau din alte activități, nu din operare.",
              "Nu este textul OUG. Este un mecanism, calculat pe ipoteza că un om mutat face același număr de dosare în noua etapă.",
              ["C35", "C34"])
     b += counter_case([
-        "Un argument contrar: juriștii delegați ar putea veni din activități care nu sunt operare, iar atunci problema canibalizării nu apare. E adevărat, și de aceea textul final contează.",
-        "Datele publice nu arată însă din ce activități ar veni oamenii. Pentru o evaluare corectă, ar trebui publicat câți dintre juriștii eligibili lucrează azi la operare.",
+        "Un argument contrar: consilierii juridici desemnați ar putea veni din activități care nu sunt operare, iar atunci problema canibalizării nu apare. E adevărat, și de aceea textul final contează.",
+        "Datele publice nu arată însă din ce activități ar veni oamenii. Pentru o evaluare corectă, ar trebui publicat câți dintre consilierii juridici eligibili lucrează azi la operare.",
     ])
     b += concl("Proiectul de OUG e un pas util, dar nu suficient. Cel mai mult ajută capacitatea nouă la registrator, fără a slăbi operarea. Pentru a readuce termenele la câteva zile, e nevoie de măsuri suplimentare, descrise în capitolul 10.")
     return chapter(9, "rc-09", "Proiectul de OUG, pe articole",
-                   "Ce prevede fiecare articol, ce arată modelul verificat pentru iunie 2028 și de ce contează de unde vin juriștii delegați.",
+                   "Ce prevede fiecare articol, ce arată modelul verificat pentru iunie 2028 și de ce contează de unde vin consilierii juridici desemnați.",
                    "Surse: proiectul OUG și nota de fundamentare (textul integral, consultare MJ, 18.11.2026) · model de coadă verificat · model în tandem verificat", b)
 
 
@@ -736,7 +745,7 @@ def ch10():
          "Eliberează operarea. Azi, online-ul nu sare peste operare (capitolul 4).",
          "Sistemul trebuie să aibă încredere în datele din formularul online."),
         ("Capacitate nouă la registrator, fără a slăbi operarea",
-         "Delegare sau angajare de personal pentru controlul de legalitate.",
+         "Desemnarea de consilieri juridici sau angajarea de personal pentru controlul de legalitate.",
          "Crește etapa cu cea mai lungă coadă.",
          "Dacă oamenii vin din operare, câștigul e limitat (capitolul 9)."),
         ("Extinderea echilibrată a ambelor etape",
@@ -767,7 +776,7 @@ def ch10():
     b += P("Modelul verificat a fost rulat și pentru pachete concrete de măsuri, cu întârzierile lor de implementare. " +
            hl("Un pachet minim realist, cu OUG prelungit, conversia CAEN 1-la-1, eșalonare și triaj, ar coborî așteptarea din iunie 2028, în model, la " + V('C54') + " zile.") + E('C54') +
            " Doar decongestionarea legislativă, fără personal nou, ar da " + V('C53') + " zile" + E('C53') + ", iar OUG extins cu ocuparea a 40% din posturile vacante finanțate, " + V('C52') + " zile." + E('C52') +
-           " Pentru posturi există o limită legală: în 2026, concursurile pentru posturile vacante sunt suspendate. " + HIRE_40 + " O ocupare mai largă decât permit excepțiile ar cere o derogare prin lege sau OUG." + E('C153'),
+           " Pentru posturi există o limită legală: în 2026, concursurile pentru posturile vacante sunt suspendate. " + HIRE_40 + E('C153'),
            "Fragilitate", "Efectul fiecărei măsuri e o ipoteză de intrare, nu o măsurătoare. La o singură schimbare plauzibilă a ipotezelor, câștigul pachetului minim scade vizibil. De aceea dăm intervale și nu promitem un termen de câteva zile.", key=True)
     b += fig("FIGURA 10.1", "MODEL VERIFICAT · PACHETE DE MĂSURI · IUNIE 2028",
              "Pachetele care scot muncă din sistem coboară așteptarea mai mult decât proiectul OUG singur",
@@ -779,9 +788,9 @@ def ch10():
              ["C42", "C43", "C52", "C53", "C54", "C153"])
     b += P("Trei cifre ajută la dimensionarea măsurilor. Circa un sfert din decizii sunt simple actualizări ale codului CAEN: " + V('C50') + "." + E('C50') +
            " Posturile ONRC aprobate, finanțate și ocupate sunt " + V('C51') + "." + E('C51') +
-           " Iar " + hl("doar întărirea ambelor etape deodată reduce stocul total") + ": în modelul în tandem, dacă se întărește doar etapa registratorilor, aceștia rămân fără dosare, iar coada de operare ajunge la circa 199.000 de cereri." + E('C56'),
+           " Iar, " + hl("când intrările sunt la nivelul din august–octombrie, doar întărirea ambelor etape deodată reduce stocul total") + ": în modelul în tandem, dacă se întărește doar etapa registratorilor, aceștia rămân fără dosare, iar coada de operare ajunge la circa 199.000 de cereri. În noiembrie, cu intrări mai mici, stocul a scăzut încet." + E('C56', 'C100'),
            "Exemplu", "Dacă dosarele CAEN simple ar fi convertite automat, fără dosar, ambele etape ar primi cu până la un sfert mai puține dosare. Munca economisită e mai mică de un sfert, pentru că un dosar CAEN simplu cere mai puțin efort decât unul obișnuit; ce parte din ele e convertibilă 1-la-1 nu se știe din datele publice.")
-    b += open_question("Câți dintre consilierii juridici eligibili pentru delegare lucrează azi la operare? Răspunsul decide cât de mult poate ajuta Art. I. Doar ONRC are această informație.")
+    b += open_question("Câți dintre consilierii juridici eligibili pentru desemnare lucrează azi la operare? Răspunsul decide cât de mult poate ajuta Art. I. Doar ONRC are această informație.")
     b += concl("Cele mai bune măsuri scot muncă din sistem sau întăresc ambele etape deodată. Întărirea unei singure etape ajută doar până la un punct. Prelungirea unei perioade de tranziție, singură, amână problema.")
     return chapter(10, "rc-10", "Ce se poate face",
                    "Pârghiile disponibile, explicate pe rând: ce înseamnă, de ce ar funcționa și unde e capcana.",
@@ -1021,29 +1030,29 @@ def main_exec():
          W("Cinci variante pentru iunie 2028: fără măsuri, proiectul de OUG și trei pachete mai largi. Punctul e mijlocul simulărilor, bara e intervalul.",
            "Proiectul singur: " + v0("C43") + " de zile; transferul unor acte administrative (Art. III) schimbă foarte puțin, efectul vine din capacitatea suplimentară." + E("C43", "C44") +
            " Conversia automată CAEN 1-la-1 și eșalonarea, fără personal nou: " + v0("C53") + " de zile." + E("C53") +
-           " OUG extins plus ocuparea a 40% din posturile vacante: " + v0("C52") + " de zile, dar asta cere excepții de la suspendarea angajărilor din 2026." + E("C52", "C153") +
+           " OUG extins plus ocuparea a 40% din posturile vacante: " + v0("C52") + " de zile; " + HIRE_40[0].lower() + HIRE_40[1:] + E("C52", "C153") +
            " Pachetul minim realist: " + v0("C54") + " de zile." + E("C54"),
            "Concluzia pentru consultare: proiectul ar trebui completat cu conversia automată CAEN și cu excepția de la suspendarea angajărilor; altfel câștigul rămâne parțial.")),
         ("figures_institutii", "fi24_doua_cozi_schema.svg", "Cum circulă un dosar: două cozi, una după alta", ["C29", "C35"], True,
          W("Drumul unei cereri: intră în coada de operare (preluare și verificare formală), apoi în coada registratorului (decizie). Cifrele sunt stocul din fiecare coadă la 6 noiembrie, cererile noi pe zi și deciziile finale pe zi." + E("C28", "C29", "C99", "C01"),
-           "Proiectul mută consilieri juridici spre soluționare (săgeata roșie). Mutarea ajută doar până la un prag; peste el, coada de operare crește la fel de repede cât scade cea a registratorului." + E("C35"),
+           "Proiectul aduce consilieri juridici desemnați la soluționare (săgeata roșie). Mutarea ajută doar până la un prag; peste el, coada de operare crește la fel de repede cât scade cea a registratorului." + E("C35"),
            "Cu ambele cozi aproape egale, orice decizie de personal trebuie judecată pe tot drumul dosarului, nu pe o singură etapă." + E("C56"))),
         ("figures_institutii", "fi06_tandem.svg", "Cele două cozi: un dosar trece întâi prin operare, apoi la registrator", ["C29", "C56"], True,
          W("Stocul de cereri nesoluționate, împărțit pe cele două etape: operarea (preluarea și verificarea formală) și soluționarea (decizia registratorului). "
            "La 6 noiembrie, din " + V("C28") + " de cereri, " + V("C29") + " erau încă la operare: cele două cozi sunt aproape egale." + E("C28", "C29") +
            " În săptămâna 30 octombrie–6 noiembrie, operarea a lucrat cu circa 16–20% mai repede decât soluționarea, iar stocul de la registrator a crescut; e o singură săptămână, iar acel stoc poate cuprinde și dosare care așteaptă completarea de către solicitant." + E("C33", "C34"),
-           "Proiectul mută consilieri juridici ai ONRC spre soluționare. Dacă ei sunt luați din operare, registratorii primesc mai puține dosare pregătite: "
-           "întărirea doar a etapei de soluționare îi lasă pe registratori fără dosare, iar coada de la operare crește." + E("C56"),
-           "Doar întărirea ambelor etape deodată reduce stocul total; o singură etapă întărită mută blocajul, nu îl elimină." + E("C56"))),
+           "Proiectul aduce consilieri juridici desemnați la soluționare. Dacă ei sunt luați din operare, registratorii primesc mai puține dosare pregătite: "
+           "când intrările sunt la nivelul din august–octombrie, întărirea doar a etapei de soluționare îi lasă pe registratori fără dosare, iar coada de la operare crește." + E("C56"),
+           "Când intrările sunt la nivelul din august–octombrie, doar întărirea ambelor etape deodată reduce stocul total; o singură etapă întărită mută blocajul, nu îl elimină. În noiembrie, cu intrări mai mici, stocul a scăzut încet." + E("C56", "C100"))),
         ("figures_institutii", "fi10_canibalizare.svg", "Cât ajută mutarea oamenilor de la o coadă la alta", ["C35"], True,
          W("Câștigul de producție totală după câte dosare pe zi preiau la soluționare oamenii mutați din operare.",
            "Mutarea ajută până la un optim; peste el, ce se câștigă la registrator se pierde la operare, iar la un anumit prag câștigul dispare complet (" + V("C35") + ")." + E("C35") +
-           " Concret: dacă delegarea din proiect se face luând oameni din operare, efectul are un plafon; dacă oamenii vin din alte activități ale ONRC sau din posturi noi ocupate, plafonul dispare.",
-           "Recomandarea: delegați consilieri juridici din alte activități, nu din operare, și publicați câți dintre cei eligibili lucrează azi la operare; altfel nu se poate ști dacă mutarea ajută sau doar mută coada.")),
+           " Concret: dacă desemnarea din proiect se face luând oameni din operare, efectul are un plafon; dacă oamenii vin din alte activități ale ONRC sau din posturi noi ocupate, plafonul dispare.",
+           "Recomandarea: desemnați consilieri juridici din alte activități, nu din operare, și publicați câți dintre cei eligibili lucrează azi la operare; altfel nu se poate ști dacă mutarea ajută sau doar mută coada.")),
         ("figures_institutii", "fi15_grila.svg", "Cât contează viteza: intrări vs. capacitate", ["C63"], True,
          W("Așteptarea din iunie 2028 dacă cererile (rânduri) și capacitatea de soluționare (coloane) se abat de la scenariul central; stânga: cazul central, dreapta: varianta nefavorabilă.",
            "Sistemul e la limită: o capacitate cu 10% mai mare sau mai mică mută rezultatul de la circa " + V("C63").split("→ ")[1].split(" ·")[0].lstrip("≈") + " la circa " + V("C63").split("→ ")[2].split(" (")[0].lstrip("≈") + " de zile." + E("C63") +
-           " Capacitatea adăugată de proiect contează doar dacă cresc ambele etape: dacă juriștii delegați sunt luați din operare, câștigul are o limită, iar întărirea unei singure etape mută blocajul." + E("C35", "C56"),
+           " Capacitatea adăugată de proiect contează doar dacă cresc ambele etape: dacă consilierii juridici desemnați sunt luați din operare, câștigul are o limită, iar întărirea unei singure etape mută blocajul." + E("C35", "C56"),
            "Mici diferențe de implementare (câți oameni, de unde sunt luați, cât de repede) schimbă rezultatul cu luni întregi.")),
         ("figures_institutii", "fi22_caen.svg", "Riscul valului CAEN și efectul conversiei automate", ["C94", "C95"], True,
          W("Așteptarea din iunie 2027 dacă firmele depun în masă actualizările CAEN înainte de sfârșitul perioadei de tranziție (roșu) și dacă codurile simple sunt convertite automat (verde).",
@@ -1053,7 +1062,7 @@ def main_exec():
         ("figures_impact", "i07_risc_venituri_2027.svg", "Venituri care nu intră în bugetul anului 2027 din cauza cozii", ["C122", "C124"], True,
          W("Pe trimestre ale anului 2027, veniturile bugetare care nu intră în bugetul anului din cauza cozii, fără măsuri (portocaliu) și cu un pachet realist (verde); liniile: intervalul de simulare de 95% (percentilele 2,5–97,5 ale variantelor simulate)." + E("C122"),
            "Proiectul de OUG costă " + V("C83") + "; " + REG["C125"]["public_ro"][0].lower() + REG["C125"]["public_ro"][1:] + E("C83", "C125"),
-           "Reperul e o coadă normală, de 3 zile; cifra presupune deja că o parte se recuperează în același an. " + REG["C123"]["public_ro"] + E("C122", "C123"))),
+           "Reperul e o coadă normală, de 3 zile. " + BUDGET27 + " " + REG["C123"]["public_ro"] + E("C122", "C123"))),
         ("figures_impact", "i01_cost_lunar.svg", "Costul lunar al întârzierilor", ["C111", "C106"], True,
          W("Costul economic (sus) și încasările bugetare afectate (jos), lună de lună din 2024, în scenariul central; liniile verticale dau intervalul scenariilor.",
            "Proiectul de OUG costă cât circa două zile de coadă în economie; cifra zilnică nu se înmulțește însă cu numărul de zile, iar proiectul singur scurtează coada, nu o elimină: comparația dă doar un ordin de mărime." + E("C108", "C83", "C43"),
@@ -1061,7 +1070,7 @@ def main_exec():
         ("figures_impact", "i08_motive_amanare.svg", "De ce se amână dosarele și ce se poate automatiza", ["C139", "C143"], True,
          W("Motivele amânărilor din 19 octombrie–18 noiembrie 2026, după nivelul de automatizare al soluției (standard, AI, AI avansat, judecata registratorului). Circa una din cinci decizii este o amânare." + E("C82"),
            "Proiectul nu tratează amânările. Verificările la depunere țin de ONRC, cu sprijinul ADR; o parte nu cer o lege nouă, dar cele care interoghează alte registre cer protocoale, Platforma națională de interoperabilitate și o evaluare de impact privind protecția datelor. Nu vedem sistemele interne ONRC: unele verificări pot exista deja." + E("C142", "C143"),
-           "Cel mult circa " + V("C141").split(" (")[0].replace("≈", "") + " de amânări pe zi lucrătoare ar dispărea, iar analiza registratorilor s-ar muta spre dosarele noi." + E("C141"))),
+           "Cel mult circa " + V("C141").split(" (")[0].replace("≈", "") + " de amânări pe zi lucrătoare ar dispărea, iar analiza registratorilor s-ar muta spre dosarele noi; o parte din aceste verificări poate exista deja în sistemul ONRC, iar noi nu le putem vedea din date publice." + E("C141"))),
         ("figures_impact", "i10_motive_respingere.svg", "Respingerile vin aproape toate din amânări nerezolvate", ["C144", "C150"], True,
          W("Ce a precedat respingerile și cum se încheie cererile amânate.",
            "Dintre cererile amânate, circa o treime ajung respinse; prevenirea amânărilor la depunere reduce deci și respingerile." + E("C146"),

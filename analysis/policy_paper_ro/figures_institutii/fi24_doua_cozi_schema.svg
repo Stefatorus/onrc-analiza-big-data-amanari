@@ -3,7 +3,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-11-23T01:34:45.214063</dc:date>
+    <dc:date>2026-11-23T05:04:37.597087</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -27,114 +27,115 @@ z
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 65.24237 88.2 
-Q 76.955956 88.2 86.880688 88.2 
-" clip-path="url(#p982c45044e)" style="fill: none; stroke: #46505c; stroke-width: 1.6; stroke-linecap: round"/>
-    <path d="M 82.080688 85.8 
-L 86.880688 88.2 
-L 82.080688 90.6 
+    <path d="M 64.992482 88.2 
+Q 76.640341 88.2 86.499345 88.2 
+" clip-path="url(#pfb53f2e523)" style="fill: none; stroke: #46505c; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 81.699345 85.8 
+L 86.499345 88.2 
+L 81.699345 90.6 
 z
-" clip-path="url(#p982c45044e)" style="fill: #46505c; stroke: #46505c; stroke-width: 1.6; stroke-linecap: round"/>
+" clip-path="url(#pfb53f2e523)" style="fill: #46505c; stroke: #46505c; stroke-width: 1.6; stroke-linecap: round"/>
    </g>
    <g id="patch_3">
-    <path d="M 94.785965 132.4272 
-L 209.984491 132.4272 
-Q 212.727313 132.4272 212.727313 129.8256 
-L 212.727313 46.5744 
-Q 212.727313 43.9728 209.984491 43.9728 
-L 94.785965 43.9728 
-Q 92.043143 43.9728 92.043143 46.5744 
-L 92.043143 129.8256 
-Q 92.043143 132.4272 94.785965 132.4272 
+    <path d="M 94.380245 132.4272 
+L 209.023111 132.4272 
+Q 211.752703 132.4272 211.752703 129.8256 
+L 211.752703 46.5744 
+Q 211.752703 43.9728 209.023111 43.9728 
+L 94.380245 43.9728 
+Q 91.650653 43.9728 91.650653 46.5744 
+L 91.650653 129.8256 
+Q 91.650653 132.4272 94.380245 132.4272 
 z
-" clip-path="url(#p982c45044e)" style="fill: #14324d; opacity: 0.95"/>
+" clip-path="url(#pfb53f2e523)" style="fill: #14324d; opacity: 0.95"/>
    </g>
    <g id="patch_4">
-    <path d="M 216.097583 88.2 
-Q 227.811169 88.2 237.735901 88.2 
-" clip-path="url(#p982c45044e)" style="fill: none; stroke: #46505c; stroke-width: 1.6; stroke-linecap: round"/>
-    <path d="M 232.935901 85.8 
-L 237.735901 88.2 
-L 232.935901 90.6 
+    <path d="M 215.120044 88.2 
+Q 226.767903 88.2 236.626908 88.2 
+" clip-path="url(#pfb53f2e523)" style="fill: none; stroke: #46505c; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 231.826908 85.8 
+L 236.626908 88.2 
+L 231.826908 90.6 
 z
-" clip-path="url(#p982c45044e)" style="fill: #46505c; stroke: #46505c; stroke-width: 1.6; stroke-linecap: round"/>
+" clip-path="url(#pfb53f2e523)" style="fill: #46505c; stroke: #46505c; stroke-width: 1.6; stroke-linecap: round"/>
    </g>
    <g id="patch_5">
-    <path d="M 245.641178 132.4272 
-L 360.839704 132.4272 
-Q 363.582526 132.4272 363.582526 129.8256 
-L 363.582526 46.5744 
-Q 363.582526 43.9728 360.839704 43.9728 
-L 245.641178 43.9728 
-Q 242.898356 43.9728 242.898356 46.5744 
-L 242.898356 129.8256 
-Q 242.898356 132.4272 245.641178 132.4272 
+    <path d="M 244.507808 132.4272 
+L 359.150674 132.4272 
+Q 361.880266 132.4272 361.880266 129.8256 
+L 361.880266 46.5744 
+Q 361.880266 43.9728 359.150674 43.9728 
+L 244.507808 43.9728 
+Q 241.778216 43.9728 241.778216 46.5744 
+L 241.778216 129.8256 
+Q 241.778216 132.4272 244.507808 132.4272 
 z
-" clip-path="url(#p982c45044e)" style="fill: #b86e14; opacity: 0.95"/>
+" clip-path="url(#pfb53f2e523)" style="fill: #b86e14; opacity: 0.95"/>
    </g>
    <g id="patch_6">
-    <path d="M 366.952795 88.2 
-Q 378.666382 88.2 388.591113 88.2 
-" clip-path="url(#p982c45044e)" style="fill: none; stroke: #46505c; stroke-width: 1.6; stroke-linecap: round"/>
-    <path d="M 383.791113 85.8 
-L 388.591113 88.2 
-L 383.791113 90.6 
+    <path d="M 365.247607 88.2 
+Q 376.895466 88.2 386.75447 88.2 
+" clip-path="url(#pfb53f2e523)" style="fill: none; stroke: #46505c; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 381.95447 85.8 
+L 386.75447 88.2 
+L 381.95447 90.6 
 z
-" clip-path="url(#p982c45044e)" style="fill: #46505c; stroke: #46505c; stroke-width: 1.6; stroke-linecap: round"/>
+" clip-path="url(#pfb53f2e523)" style="fill: #46505c; stroke: #46505c; stroke-width: 1.6; stroke-linecap: round"/>
    </g>
    <g id="patch_7">
-    <path d="M 154.031064 41.532484 
-Q 227.812706 -8.987721 300.302846 40.647986 
-" clip-path="url(#p982c45044e)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #a63228; stroke-width: 1.4; stroke-linecap: round"/>
-    <path d="M 297.698252 35.955856 
-L 300.302846 40.647986 
-L 294.986385 39.916384 
+    <path d="M 153.344157 41.534844 
+Q 226.765382 -8.735437 298.89508 40.650452 
+" clip-path="url(#pfb53f2e523)" style="fill: none; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #a63228; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 296.290352 35.958396 
+L 298.89508 40.650452 
+L 293.578598 39.919001 
 z
-" clip-path="url(#p982c45044e)" style="fill: #a63228; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #a63228; stroke-width: 1.4; stroke-linecap: round"/>
+" clip-path="url(#pfb53f2e523)" style="fill: #a63228; stroke-dasharray: 5.18,2.24; stroke-dashoffset: 0; stroke: #a63228; stroke-width: 1.4; stroke-linecap: round"/>
    </g>
    <g id="text_1">
-    <text style="fill: #46505c; font: 6.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(22.655291 61.2367)">cereri noi</text>
-    <text style="fill: #46505c; font: 6.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(13.407791 68.0995)">(noiembrie, fără</text>
-    <text style="fill: #46505c; font: 6.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(6.832791 75.0373)">înmatriculări în curs)</text>
+    <text style="fill: #46505c; font: 6.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(22.534016 61.2367)">cereri noi</text>
+    <text style="fill: #46505c; font: 6.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(13.286516 68.0995)">(noiembrie, fără</text>
+    <text style="fill: #46505c; font: 6.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(6.711516 75.0373)">înmatriculări în curs)</text>
    </g>
    <g id="text_2">
-    <text style="fill: #1b2128; font: 700 8.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="35.815291" y="109.915359" transform="rotate(-0 35.815291 109.915359)">≈3.039 / zi</text>
+    <text style="fill: #1b2128; font: 700 8.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="35.694016" y="109.915359" transform="rotate(-0 35.694016 109.915359)">≈3.039 / zi</text>
    </g>
    <g id="text_3">
-    <text style="fill: #ffffff; font: 700 8.2px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="152.385228" y="69.512794" transform="rotate(-0 152.385228 69.512794)">COADA 1 · OPERARE</text>
+    <text style="fill: #ffffff; font: 700 8.2px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="151.701678" y="69.512794" transform="rotate(-0 151.701678 69.512794)">COADA 1 · OPERARE</text>
    </g>
    <g id="text_4">
-    <text style="fill: #ffffff; font: 700 15px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="152.385228" y="96.424281" transform="rotate(-0 152.385228 96.424281)">106.060</text>
+    <text style="fill: #ffffff; font: 700 15px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="151.701678" y="96.424281" transform="rotate(-0 151.701678 96.424281)">106.060</text>
    </g>
    <g id="text_5">
-    <text style="fill: #ffffff; font: 6.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="152.385228" y="118.5771" transform="rotate(-0 152.385228 118.5771)">cereri neprelucrate (51,9%)</text>
+    <text style="fill: #ffffff; font: 6.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="151.701678" y="118.5771" transform="rotate(-0 151.701678 118.5771)">cereri neprelucrate (51,9%)</text>
    </g>
    <g id="text_6">
-    <text style="fill: #ffffff; font: 700 8.2px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="303.240441" y="69.512794" transform="rotate(-0 303.240441 69.512794)">COADA 2 · REGISTRATOR</text>
+    <text style="fill: #ffffff; font: 700 8.2px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="301.829241" y="69.512794" transform="rotate(-0 301.829241 69.512794)">COADA 2 · REGISTRATOR</text>
    </g>
    <g id="text_7">
-    <text style="fill: #ffffff; font: 700 15px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="303.240441" y="96.424281" transform="rotate(-0 303.240441 96.424281)">98.354</text>
+    <text style="fill: #ffffff; font: 700 15px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="301.829241" y="96.424281" transform="rotate(-0 301.829241 96.424281)">98.354</text>
    </g>
    <g id="text_8">
-    <text style="fill: #ffffff; font: 6.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="303.240441" y="118.367787" transform="rotate(-0 303.240441 118.367787)">cereri prelucrate, nesoluționate</text>
+    <text style="fill: #ffffff; font: 6.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="301.829241" y="118.367787" transform="rotate(-0 301.829241 118.367787)">cereri prelucrate, nesoluționate</text>
    </g>
    <g id="text_9">
-    <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="431.238803" y="74.833609" transform="rotate(-0 431.238803 74.833609)">decizii finale</text>
+    <text style="fill: #46505c; font: 7px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="429.210203" y="74.833609" transform="rotate(-0 429.210203 74.833609)">decizii finale</text>
    </g>
    <g id="text_10">
-    <text style="fill: #1b2128; font: 700 8.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="431.238803" y="109.915359" transform="rotate(-0 431.238803 109.915359)">≈4.300 / zi</text>
+    <text style="fill: #1b2128; font: 700 8.5px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="429.210203" y="109.915359" transform="rotate(-0 429.210203 109.915359)">≈4.300 / zi</text>
    </g>
    <g id="text_11">
-    <text style="fill: #a63228; font: 6.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="227.812835" y="12.579481" transform="rotate(-0 227.812835 12.579481)">mutarea consilierilor din operare la soluționare: ajută până la ≈440/zi, câștig zero la ≈879/zi</text>
+    <text style="fill: #a63228; font: 6.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="226.76546" y="12.4877" transform="rotate(-0 226.76546 12.4877)">mutarea consilierilor juridici desemnați din operare la soluționare: ajută până la ≈440/zi, câștig zero la ≈879/zi</text>
    </g>
    <g id="text_12">
-    <text style="fill: #46505c; font: 6.8px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif; text-anchor: middle" x="239.24126" y="157.751344" transform="rotate(-0 239.24126 157.751344)">Stocul total la 6 noiembrie: 204.414 de cereri. Întărirea unei singure etape mută blocajul; doar ambele etape reduc stocul.</text>
+    <text style="fill: #46505c; font: 6.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(53.69126 152.82925)">Stocul total la 6 noiembrie: 204.414 de cereri. Cu intrări la nivelul din august–octombrie, întărirea unei singure etape mută blocajul;</text>
+    <text style="fill: #46505c; font: 6.4px 'IBM Plex Sans', 'IBM Plex Sans', Arial, 'DejaVu Sans', sans-serif" transform="translate(115.60176 161.37375)">doar ambele etape reduc stocul. În noiembrie, cu intrări mai mici, stocul a scăzut încet.</text>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="p982c45044e">
-   <rect x="10.672756" y="1.48" width="457.137008" height="173.44"/>
+  <clipPath id="pfb53f2e523">
+   <rect x="10.672756" y="1.48" width="454.932008" height="173.44"/>
   </clipPath>
  </defs>
 </svg>

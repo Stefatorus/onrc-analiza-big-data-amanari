@@ -16,6 +16,8 @@ NFOUND = V("C116").split(" · ")[1].split(" parametri")[0]                      
 PR = lambda c: REG[c]["public_ro"]
 C112_C = "În canalul C" + REG["C112"]["rezerva_obligatorie"].split("În canalul C", 1)[1]     # channel-C stock factor, from the registry
 DROP = re.search(r"cu circa (\d+)%", REG["C116"]["public_ro"]).group(1)          # founded vs initial central (C116)
+_C122 = V("C122"); NET27 = _C122.split(" (")[0]                                   # 2027: net / gross delayed / assumed recovered (C122)
+GROSS27 = _C122.split("brut amânat ")[1].split(",")[0]; REC27 = _C122.split("recuperat în 2027 ")[1].strip(); C125V = V("C125")
 
 KF = json.loads((IA / "out" / "cost_founded.json").read_text(encoding="utf-8"))
 KC = json.loads((IA / "out" / "cost_check.json").read_text(encoding="utf-8"))
@@ -47,7 +49,7 @@ fmtv = lambda v: f"{v:.3f}".rstrip("0").rstrip(".").replace(".", ",") if v < 1 e
 TABLES = {
     "cost_scenarii": dict(columns=["scenario", "cost_economic_mil", "din_care_realizat_mil", "expunere_stoc_mil", "buget_mil", "pe_zi_economic_mil", "pe_zi_buget_mil"],
         rows=[dict(scenario=s, cost_economic_mil=SC[s]["total"] / 1e6, din_care_realizat_mil=real[s], expunere_stoc_mil=SC[s]["total"] / 1e6 - real[s],
-                   buget_mil=SC[s]["tax"] / 1e6, pe_zi_economic_mil=SC[s]["daily_econ"] / 1e6, pe_zi_buget_mil=SC[s]["daily_tax"] / 1e6) for s in ("prudent", "central", "tensionat")],
+                   buget_mil=V("C107").split(" / ")[("prudent", "central", "tensionat").index(s)], pe_zi_economic_mil=SC[s]["daily_econ"] / 1e6, pe_zi_buget_mil=SC[s]["daily_tax"] / 1e6) for s in ("prudent", "central", "tensionat")],
         meta="Scenariul fundamentat. Fereastra: decizii 1.08–18.11.2026, plus expunerea condiționată a stocului de referință. „Pe zi” = încă o zi cu stocul de referință; nu se înmulțește cu numărul de zile.", src="cost_founded.json"),
     "cost_canale_tab": dict(columns=["canal", "prudent", "central", "tensionat", "pondere_centrala_pct"],
         rows=[dict(canal=f"{k} · {n}", prudent=SC["prudent"]["channels"][k] / 1e6, central=SC["central"]["channels"][k] / 1e6, tensionat=SC["tensionat"]["channels"][k] / 1e6,
@@ -103,20 +105,21 @@ def econometrics_section(n):
         " Am legat aproape toate înmatriculările din 2024 de bilanțurile depuse la Ministerul Finanțelor și am verificat rezultatul cu alte două metode (diferențe în diferențe în jurul lansării portalului din 2024 și un instrument național), plus teste placebo.") +
         '<ul class="find">' + "".join(f"<li>{x}</li>" for x in [
             hl("Așteptarea reduce activitatea din primul an: fiecare zi în plus înseamnă mai puține vânzări și mai puține taxe.") + E("C121"),
-            hl("În anul următor, activitatea și taxele firmelor care au așteptat mai mult nu diferă măsurabil: datele nu arată o recuperare a ce s-a pierdut în primul an, dar nici nu exclud o pierdere care continuă.") + E("C120", "C121") +
+            hl(PR("C120")) + E("C120", "C121") +
             " Rezultatul e estimat pe așteptări de până la circa o lună; pentru așteptările de acum, mult mai lungi, nu putem exclude un efect."]) + "</ul>" + P(
         "Estimarea privește doar firmele noi, adică primul canal al contului de impact. Pentru ele, datele nu deosebesc o activitate doar amânată de una pierdută în parte. "
         "Nu spune nimic despre modificările blocate ale firmelor existente, care dau cea mai mare parte din costul pe scenarii." + E("C109") + " Acolo, ipoteza rămâne netestată, iar în cifrele pentru 2027 de mai jos partea modificărilor folosește ipotezele declarate ale analizei inițiale, nu o estimare.") +
         fig("i06_efect_cauzal.svg", "Efectul unei zile în plus de așteptare asupra impozitului direct plătit de o firmă nouă: în primul an (parțial) și în anul următor.", ["C120", "C121"]) +
         sub(f"{n}.1", "Riscul pentru veniturile bugetare din 2027") + P(
         "Combinăm prognoza cozii (2.000 de variante ale motorului verificat), volumele lunare de înmatriculări și modificări, efectele estimate mai sus, cu incertitudinea lor, și cotele legale din 2026. "
-        + hl("Fără măsuri noi, circa " + V("C122").split(" (")[0] + " de milioane de lei din veniturile bugetare nu ar intra în bugetul anului 2027 din cauza cozii (valoarea mediană; interval de simulare de 95%, adică percentilele 2,5–97,5 ale variantelor simulate: " + V("C122").split(" (")[1].split(")")[0] + " milioane); o parte se poate recupera ulterior, dar datele nu exclud o pierdere durabilă.") + E("C122") +
+        + hl("Fără măsuri noi, circa " + NET27 + " de milioane de lei din veniturile bugetare nu ar intra în bugetul anului 2027 din cauza cozii (valoarea mediană; interval de simulare de 95%, adică percentilele 2,5–97,5 ale variantelor simulate: " + V("C122").split(" (")[1].split(")")[0] + " milioane); o parte se poate recupera ulterior, dar datele nu exclud o pierdere durabilă.") + E("C122") +
         " Reperul e o coadă normală, de 3 zile, pentru cererile depuse din decembrie 2026; veniturile amânate din cererile depuse înainte, care ar intra în 2027, nu sunt scăzute. "
-        "Cifra presupune deja că o parte din ce se pierde în zilele de așteptare se recuperează în același an." + E("C122") +
+        "Cifra e netă: din circa " + GROSS27 + " de milioane amânate brut, modelul presupune că circa " + REC27 + " se încasează mai târziu în 2027, imediat după decizie (ipoteză, nu estimare); "
+        + NET27 + " e mediana diferenței pe aceleași simulări, nu diferența exactă a celor două mediane." + E("C122") +
         " " + PR("C123") + E("C123") + " " + hl(PR("C124")) + E("C124") +
         " Din bilanțuri vin doar impozitul direct și angajații firmelor noi; TVA și toată partea modificărilor sunt ipoteze." + E("C122")) +
         fig("i07_risc_venituri_2027.svg", "Venituri bugetare care nu intră în bugetul anului 2027 din cauza cozii, pe trimestre, fără măsuri noi și cu un pachet realist de măsuri (mediana și intervalul de simulare de 95%).", ["C122", "C125"]) + P(
-        hl("Un pachet realist de măsuri ar evita cea mai mare parte a acestei mutări de venituri.") + E("C125") +
+        hl("Un pachet realist de măsuri ar evita cea mai mare parte din acest venit care nu intră în bugetul anului 2027: circa " + C125V.split(" (")[0] + " de milioane de lei (interval de simulare de 95%: " + C125V.split("(")[1].rstrip(")") + ").") + E("C125") +
         " Pentru Ministerul Finanțelor, concluzia practică: riscul merită inclus în evaluarea veniturilor pentru 2027 ca venit care nu intră în bugetul anului din cauza cozii; o parte se poate recupera ulterior, dar datele nu exclud o pierdere durabilă. Mărimea lui depinde direct de cât de repede se golește coada.") +
         P('<span class="note"><b>Specificația.</b> Efecte fixe de săptămână și de oficiu, plus forma juridică; erori standard grupate pe oficiu (ca variantă, pe oficiu și săptămână). Ipoteza de identificare: '
           "aglomerarea unui oficiu într-o săptămână, peste media oficiului și a săptămânii, influențează activitatea firmei doar prin durata așteptării. "

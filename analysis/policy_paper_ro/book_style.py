@@ -11,16 +11,17 @@ import re
 INK, INK3 = "#1b1d1f", "#6b7178"
 
 # edition of the whole document set: change it here only
-VERSION = "1.0.1"
+VERSION = "1.0.2"
 VERSION_DATE = "23.11.2026"
 VERSION_DATE_LONG = "23 noiembrie 2026"
 # the number is wrapped in <code> so the number linter treats it as structural, not as a data figure
 VERSION_HTML = f'<span class="ver">versiunea <code>{VERSION}</code></span>'
 VERSION_FOOT = f"v{VERSION}"
 VERSION_CSS = ".ver code { font: inherit; color: inherit; background: none; padding: 0; border: 0; }"
-VERSION_NOTE = (f'<span class="ver">Versiunea <code>{VERSION}</code></span> ({VERSION_DATE}): corecturi după revizuirea critică '
-                "(formulări, coerența cifrelor, încadrarea riscului bugetar); valorile din registrul afirmațiilor sunt neschimbate, "
-                "s-au corectat doar câteva rotunjiri și formulări din text.")
+VERSION_NOTE = (f'<span class="ver">Versiunea <code>{VERSION}</code></span> ({VERSION_DATE}): precizări după a doua rundă de verificare '
+                "(formulări, intervale, termen); valorile din registrul afirmațiilor sunt neschimbate. "
+                f'<span class="ver">Versiunea <code>1.0.1</code></span> ({VERSION_DATE}): corecturi după revizuirea critică '
+                "(formulări, coerența cifrelor, încadrarea riscului bugetar); s-au corectat doar câteva rotunjiri și formulări din text.")
 
 # builder key -> (part no, title, description); order = order in the complete report
 PARTS = {

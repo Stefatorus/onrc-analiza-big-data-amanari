@@ -6,6 +6,8 @@ Depozitul conține rapoartele, datele care le susțin și codul care le produce.
 
 ## Ce să citești
 
+**Estimator interactiv:** [stefatorus.github.io/onrc-analiza-big-data-amanari](https://stefatorus.github.io/onrc-analiza-big-data-amanari/) — motorul de prognoză din raport, rulat în browser, cu scenarii și măsuri; [pagina de audit](https://stefatorus.github.io/onrc-analiza-big-data-amanari/audit.html) arată că reproduce exact motorul Python și cifrele raportului, plus testul pe trecut.
+
 1. **[Ediția executivă](reports/actuale/Raport_ONRC_Coada_2026-11_EXECUTIV.pdf)** (12 p.): situația, prognoza, ce schimbă fiecare măsură, cele două cozi, costul, în grafice explicate.
 2. **[Analiza proiectului de OUG](reports/actuale/Analiza_proiectului_OUG_2026-11.pdf)** (25 p.): textul integral al proiectului și nota de fundamentare, verificate față de date; efectul fiecărui articol; propuneri de completare.
 3. **[Raportul complet](reports/actuale/Raport_ONRC_Coada_2026-11_COMPLET.pdf)** (140 p., versiunea 1.0.1, 23.11.2026): documentul de referință.

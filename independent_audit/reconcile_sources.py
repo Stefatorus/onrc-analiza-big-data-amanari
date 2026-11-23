@@ -8,13 +8,12 @@ Every downstream tool (model, twin, report) reads that file, so the numbers neve
 Run:  ..\venv\Scripts\python.exe -X utf8 reconcile_sources.py
 """
 from __future__ import annotations
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1])); import config  # repo config.py
 import sys, json; sys.path.insert(0, ".")
 import pandas as pd, numpy as np
 from pathlib import Path
 
 OUT = Path(__file__).resolve().parent / "out"
-BERC = str(config.BERC_PKL)
+BERC = r"W:\SOLOResearch\analysis_decisions.pkl"
 REG = 165                       # active registrators (report 150-185; mid-point)
 RECENT = ("2026-10-01", "2026-11-22")
 FINAL = ["Admis", "Respins", "Renunțat",

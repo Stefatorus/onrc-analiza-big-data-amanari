@@ -1,9 +1,8 @@
 """27.04.2026 step: is it a minimum-wait floor? Wait distribution in working days, before vs after, by category."""
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
-import sys; sys.path.insert(0, str(config.REPO / 'independent_audit' / 'reserves_check'))
+import sys; sys.path.insert(0, r'S:\Projects\SOLOResearch\independent_audit\reserves_check')
 from rocal import HOL
 import pandas as pd, numpy as np
-r = pd.read_pickle(str(config.WORK_DIR / 'raw_compact.pkl'))[['cat', 'app', 'res', 'sol', 'art']]
+r = pd.read_pickle(r'S:\Projects\SOLOResearch\independent_audit\reserves_check\tmp\raw_compact.pkl')[['cat', 'app', 'res', 'sol', 'art']]
 r = r.drop_duplicates('art'); r['cat'] = r.cat.astype(str); r['sol'] = r.sol.astype(str)
 r = r[(r.res >= '2026-03-02') & (r.res < '2026-06-29') & r.cat.isin(['CERERE265', 'INMATRIC265', 'AUTO_AMANARI'])].dropna(subset=['app', 'res'])
 hol = np.array(HOL.values.astype('datetime64[D]'))

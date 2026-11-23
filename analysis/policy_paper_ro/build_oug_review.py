@@ -199,13 +199,13 @@ def body():
                   f"Formularea «funcții învestite» din art. III–IV merită armonizată cu «persoane» din notă. {ext(DRAFT_DOC,'Proiectul')} · {ext(LAW3,'Fișa parlamentară')}."),
             prose("Proiectul lucrează cu personal existent. Reîncadrarea sau recrutarea pe posturi vacante rămân măsuri distincte. "
                   "Textul fixează o autorizare și un termen, iar calendarul efectiv al desemnărilor rămâne o decizie de punere în aplicare.")),
-        section("cifre","Nota susține corect ordinul de mărime al creșterii în august–octombrie din propria comparație. Seria de 26.000 pe zi are nevoie de o definiție publicată.",
+        section("cifre","Nota susține corect ordinul de mărime al creșterii în august–octombrie din propria comparație. Seria de 26.000 pe zi nu se reproduce din datele BERC analizate de noi și are nevoie de o definiție publicată.",
             portal_table(evidence),
             prose(f"Creșterea de la 4.533 la 6.931 înseamnă {n(100*(6931/4533-1),1)}%, conform notei. Din aceeași notă, peste 26.000 pentru ianuarie–iulie "
                   "ar însemna o serie cu altă sferă sau alt numitor. Dacă numărăm cererile care apar ulterior în BERC, ianuarie–iulie dă aproximativ "
                   f"{n(j.at['Ianuarie–iulie 2026','filing_mature_per_day'])} pe zi lucrătoare. Diferențele contorului portalului, cu sferă mai largă, dau aproximativ "
-                  f"{n(j.at['Ianuarie–iulie 2026','portal_per_day'])}. Niciuna dintre seriile reproduse nu justifică singură o creștere comparabilă de opt ori."),
-            prose(f"Pe același calendar de lucru și aceeași definiție, cele două valori ar cere peste {n(july_implied)} cereri pe zi în iulie. "
+                  f"{n(j.at['Ianuarie–iulie 2026','portal_per_day'])}. Creșterea de opt ori nu se reproduce din datele BERC analizate de noi pe o singură definiție; posibil, unități diferite."),
+            prose(f"Pe același calendar de lucru și aceeași definiție, cele două valori ar corespunde unui nivel de peste {n(july_implied)} cereri pe zi în iulie, pe care nu îl regăsim în datele noastre. "
                   "Preambulul folosește primele șapte luni ca reper pentru creșterea ulterioară, iar nota calculează 53% față de primul semestru. "
                   "Cifrele ministerului pentru soluționări în septembrie și octombrie sunt mai apropiate de finalele plus amânările BERC decât de finalele în sens strict. "
                   "Apropierea nu dovedește ce include indicatorul oficial. Pentru reconciliere sunt necesare definiția unui caz închis, perioada exactă, calendarul zilelor și codurile incluse."),
@@ -340,7 +340,7 @@ def body():
         section("decizie","Păstrați instrumentul de redistribuire și condiționați extinderea de probe de capacitate pe etape. Completarea proiectului contează mai mult decât extinderea unei autorizări.",
             tbl("Recomandări","Ce se poate cere înainte de adoptare sau în planul de aplicare",
                 ["Decizie","Formă de punere în aplicare","Probă la prima evaluare"],
-                [("1. Corectați și reconciliați cifrele","Definiții și serii pentru intrări, finale, amânări și cereri la fiecare etapă. Corectați trimiterea legislativă și datarea CAEN.",
+                [("1. Reconciliați cifrele","Definiții și serii pentru intrări, finale, amânări și cereri la fiecare etapă. Precizați trimiterea legislativă și datarea CAEN.",
                   "Cifrele de 4.533 și peste 26.000 au populație, numitor și perioadă verificabile."),
                  ("2. Dimensionați desemnările","Buget de ore nete și repartizare pe tip de cerere. Raport separat pentru conducerea deja desemnată și consilierii nou intrați.",
                   "Crește numărul de finale per oră alocată, fără deteriorarea altor sarcini juridice."),

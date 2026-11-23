@@ -4,7 +4,6 @@ shares, weekly series, durations, figures, taxonomy.csv and the evidence JSON.
 Inputs: _tmp/entries.pkl, _tmp/entry_labels.pkl, _tmp/seg_labels.pkl, _tmp/post_pairs.pkl, _tmp/rejections_raw.pkl (index counts only),
         archive (needed columns only), 04/06 outputs, ../out/delay_reasons.json and ../delay_reasons/07_results.out.json (read-only).
 Outputs: figures/*.png|svg, taxonomy.csv, 07_results.out.json, ../out/rejection_reasons.json (aggregates only)."""
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import os, sys, json, importlib.util, collections, pickle, math
 sys.dont_write_bytecode = True
 import numpy as np, pandas as pd
@@ -82,7 +81,7 @@ def main():
     R = {}
 
     # ---------------- archive: rejections, postponements, waivers
-    df = pd.read_pickle(str(config.BERC_PKL))[['cat', 'app_nr', 'app', 'res', 'county', 'jtype', 'sol']]
+    df = pd.read_pickle(r'W:\SOLOResearch\analysis_decisions.pkl')[['cat', 'app_nr', 'app', 'res', 'county', 'jtype', 'sol']]
     df = df[df.res >= '2026-01-01']
     archive_end = df.res.max()
     df['dd'] = df.res.dt.normalize(); df['ad'] = df.app.dt.normalize()

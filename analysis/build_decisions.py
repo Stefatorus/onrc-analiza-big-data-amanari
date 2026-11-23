@@ -1,6 +1,5 @@
 """One row per BERC decision (2024 baseline + W:/SOLOResearch/articles), saved as a compact pickle for the regressions.
 Usage: python build_decisions.py <out.pkl>"""
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1])); import config  # repo config.py
 import glob
 import json
 import os
@@ -8,7 +7,8 @@ import sys
 
 import pandas as pd
 
-SOURCES = [str(p) for p in config.LEGACY_COUNTIES_DIRS] + [str(config.ARTICLES_DIR / y) for y in ("2023", "2024", "2025", "2026")]
+SOURCES = [r"S:\Projects\SOLOResearch\results\counties_backup", r"S:\Projects\SOLOResearch\results\counties"] + \
+          [rf"W:\SOLOResearch\articles\{y}" for y in ("2023", "2024", "2025", "2026")]
 CATS = {"CERERE265", "INMATRIC265", "AUTO_AMANARI", "CERERE_HJ265"}
 
 rows, seen = [], set()

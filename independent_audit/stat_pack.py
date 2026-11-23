@@ -9,7 +9,6 @@ table: "finale stricte" = Admis/Respins/Renunțat; "finale largi" = + certifică
 Run:  ..\\venv\\Scripts\\python.exe -X utf8 stat_pack.py
 """
 from __future__ import annotations
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1])); import config  # repo config.py
 import json, hashlib, subprocess, sys
 from pathlib import Path
 import numpy as np, pandas as pd
@@ -17,7 +16,7 @@ import numpy as np, pandas as pd
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "out"; SP = OUT / "stat_pack"; SP.mkdir(exist_ok=True)
 PP = HERE.parent / "analysis" / "policy_paper_ro"; AD = PP / "audit_data"
-BERC = Path(str(config.BERC_PKL))
+BERC = Path(r"W:\SOLOResearch\analysis_decisions.pkl")
 STRICT = ["Admis", "Respins", "Renunțat"]
 BROAD = STRICT + ["Certificare înscriere în registrul comerțului", "certificare inscriere mentiuni", "Renunțat din oficiu"]
 HOL = pd.to_datetime([

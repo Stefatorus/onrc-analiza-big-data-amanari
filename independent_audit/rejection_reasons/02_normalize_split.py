@@ -23,7 +23,6 @@ Layer B = the remaining text after removing the formulas and the rejection boile
 "prin încheierea ... s-a acordat termen ..."), de-identified with the SAME functions as delay_reasons/02 (pre_mask, split_segments,
 GROUND_RX; imported read-only) and the same vocabulary whitelist rule (token kept only if in >= 8 entries, >= 4 bulletins, >= 3 counties).
 """
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import sys; sys.dont_write_bytecode = True  # never leave __pycache__ in delay_reasons (read-only reuse)
 import os, re, pickle, collections, importlib.util
 import numpy as np, pandas as pd
@@ -112,7 +111,7 @@ def main():
     r.loc[r.section.isna(), 'section'] = r.loc[r.section.isna(), 'app_nr'].map(sec_by_app)
 
     # archive linkage: the Respins decision itself (category, county, jtype) and earlier postponements of the same request
-    df = pd.read_pickle(str(config.BERC_PKL))[['cat', 'app_nr', 'app', 'res', 'county', 'jtype', 'sol']]
+    df = pd.read_pickle(r'W:\SOLOResearch\analysis_decisions.pkl')[['cat', 'app_nr', 'app', 'res', 'county', 'jtype', 'sol']]
     df = df[df.app_nr.isin(r.app_nr.unique())]
     R = df[df.sol == 'Respins'].copy(); R['din_data'] = R.res.dt.normalize()
     R = R.sort_values('res').drop_duplicates(['app_nr', 'din_data'])

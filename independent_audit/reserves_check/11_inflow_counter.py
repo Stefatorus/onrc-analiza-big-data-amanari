@@ -1,14 +1,13 @@
 """Task 1b: counter increments per filing day (all items registered) vs BERC distinct requests
 with a published decision (by filing date), monthly 2024-2026; compare MJ / press."""
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
-import sys; sys.path.insert(0, str(config.REPO / 'independent_audit' / 'reserves_check'))
+import sys; sys.path.insert(0, r'S:\Projects\SOLOResearch\independent_audit\reserves_check')
 from rocal import is_wd, n_wd, HOL
 import pandas as pd, numpy as np
-b = pd.read_pickle(str(config.BERC_PKL))[['cat','app_nr','app','res','sol','county']]
+b = pd.read_pickle(r'W:\SOLOResearch\analysis_decisions.pkl')[['cat','app_nr','app','res','sol','county']]
 b = b[b.app >= '2023-01-01']; b['d'] = b.app.dt.normalize(); b['y'] = b.d.dt.year
 FIN = ['Admis','Respins','Renunțat','Certificare înscriere în registrul comerțului','Renunțat din oficiu','ADMIS','certificare inscriere mentiuni']
 b['fin'] = b.sol.isin(FIN)
-OUT = str(config.REPO / 'independent_audit' / 'reserves_check')
+OUT = r'S:\Projects\SOLOResearch\independent_audit\reserves_check'
 # ---------- counter level per day, national era (26.07.2024 ->)
 nat = b[b.d >= '2024-07-26']
 lev = nat.groupby('d').app_nr.max()

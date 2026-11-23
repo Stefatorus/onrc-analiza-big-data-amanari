@@ -5,7 +5,6 @@ Se tipărește cu Microsoft Edge headless, ca rapoartele Lab.
 
   ..\\..\\venv\\Scripts\\python -X utf8 build_raport_institutii.py
 """
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import csv, re, os, shutil, subprocess, tempfile, json, sys as _sys
 from pathlib import Path
 
@@ -27,7 +26,7 @@ NOANNEX = "--no-annex" in _sys.argv or BOOK          # edition for the combined 
 if NOANNEX:
     (DELIV / "_dosar").mkdir(exist_ok=True)
     HTML_OUT = HERE / "Raport_ONRC_Coada_2026-11_dosar.html"; PDF_OUT = DELIV / "_dosar" / "Raport_ONRC_Coada_2026-11.pdf"
-EDGE = Path(config.EDGE_PATH or r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe")
+EDGE = Path(r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe")
 
 # ------------------------------------------------------------------ registry
 REG = {r["id"]: r for r in csv.DictReader(open(DELIV / "claims_registry.csv", encoding="utf-8"))}
@@ -186,7 +185,7 @@ def front(pg):
              ("Cap. 10", "Ce se poate face", "Pârghiile, pachetele de măsuri și capcanele lor", "c10"),
              ("PART", "Partea a IV-a · Încrederea în cifre", "Verificări, termeni și proveniența fiecărei cifre", ""),
              ("Cap. 11", "Cât de sigure sunt cifrele", "Verificări, limite și ce nu afirmăm", "c11"),
-             ("Cap. 12", "Sursele noastre și sursele publice", "Ce confirmă presa, ce contrazic datele noastre și riscul CAEN", "c12"),
+             ("Cap. 12", "Sursele noastre și sursele publice", "Ce confirmă presa, ce nu se reproduce din datele noastre și riscul CAEN", "c12"),
              ("Anexa A", "Glosar", "Termenii, explicați o singură dată", "aa"),
              ("Anexa B", "Registrul afirmațiilor", "Fiecare cifră, cu sursă și stare", "ab"),
              ("Anexa C", "Metodă și reproducere", "Scripturi, date, amprente", "ac"),
@@ -242,7 +241,7 @@ def front(pg):
   <p><strong>Ce poate face proiectul de OUG.</strong> Evaluat pe rezumatul pus în consultare (textul integral nu ne-a fost accesibil la data analizei), modelul verificat arată o îmbunătățire reală, dar parțială: în iunie 2028, așteptarea ar rămâne de ordinul a trei luni, față de circa patru luni fără măsuri noi, cu intervale largi.{E('C42', 'C43')} Efectul vine mai ales din capacitatea suplimentară de soluționare. Dacă consilierii juridici delegați sunt luați din operare, câștigul are o limită clară, pentru că operarea e aproape la fel de încărcată.{E('C34', 'C35')}</p>
   <p><strong>Ce ajută.</strong> {hl("Un pachet minim realist ar coborî așteptarea din iunie 2028, în model, la " + V('C54') + " zile.")}{E('C54')} Pachetul: OUG prelungit, conversia automată a codurilor CAEN cu un singur corespondent nou („1-la-1”), eșalonarea depunerilor și triajul (cererile simple separate la intrare). Cu OUG extins și ocuparea a 40% din posturile vacante finanțate, așteptarea ar coborî la {V('C52')} zile{E('C52')}; în 2026 însă concursurile sunt suspendate. {HIRE_40}{E('C153')} Detalii în capitolul 10.</p>
   <p><strong>Ce costă.</strong> {hl("În octombrie și noiembrie 2026, întârzierile au costat economia, în scenariul central, circa " + OCTNOV + " milioane de lei pe lună, de circa " + ORI + " ori mai mult decât într-o lună obișnuită; la buget, circa " + V('C111').split('buget nov. 2026 ')[1] + " milioane în noiembrie.")}{E('C111')} Pentru august–18 noiembrie, scenariile dau între circa {V('C106').split(' / ')[0]} și {V('C106').split(' / ')[2]} de milioane de lei, iar fiecare zi în plus cu stocul actual costă circa {V('C108').split(' (')[0]} milioane în economie și {V('C108').split(' / ')[1].split(' (')[0]} milioane la buget.{E('C106', 'C108')} Zilele sunt măsurate; {V('C116').split(' · ')[1].split(' parametri')[0].replace(' din ', ' din cei ')} parametri care le transformă în lei au bază în date oficiale sau măsurate, restul sunt ipoteze declarate (Volumul 7).{E('C116')} {hl('Pentru 2027, fără măsuri noi, circa ' + V('C122').split(' (')[0] + ' de milioane de lei din veniturile bugetare s-ar încasa abia după 2027: un risc de calendar, nu o pierdere.')} Interval larg; nu găsim un efect durabil la firmele noi.{E('C122', 'C120')}</p>
-  <p><strong>Ce spun sursele publice.</strong> {hl("Majoritatea cifrelor publicate în presă despre coadă se confirmă sau sunt compatibile cu datele noastre; două sunt contrazise, iar capitolul 12 explică de ce ar putea apărea diferențele.")}{E('C91', 'C93')} {hl("Dacă se confirmă cifrele publice despre valul CAEN, așteptarea din iunie 2027 ar putea ajunge la " + V('C94').split(' · ')[1].split('→ ')[1] + "–" + V('C94').split(' · ')[2].split('→ ')[1].split(' (')[0] + " de zile; conversia automată CAEN ar reduce-o la mai puțin de jumătate.")}{E('C94', 'C95')}</p>
+  <p><strong>Ce spun sursele publice.</strong> {hl("Majoritatea cifrelor publicate în presă despre coadă se confirmă sau sunt compatibile cu datele noastre; cifra de peste 26.000 de cereri pe zi nu se reproduce din datele BERC analizate de noi pentru cererile de înregistrare, iar capitolul 12 arată valorile noastre și definițiile folosite.")}{E('C91', 'C93')} {hl("Dacă se confirmă cifrele publice despre valul CAEN, așteptarea din iunie 2027 ar putea ajunge la " + V('C94').split(' · ')[1].split('→ ')[1] + "–" + V('C94').split(' · ')[2].split('→ ')[1].split(' (')[0] + " de zile; conversia automată CAEN ar reduce-o la mai puțin de jumătate.")}{E('C94', 'C95')}</p>
   <p><strong>Ce nu putem spune.</strong> Pentru dosarele depuse în octombrie și noiembrie, timpul final nu se poate încă măsura; ce nu afirmăm e în capitolul 11.</p>
   <div class="strip3">
     <div class="s3 s3-est"><div class="s3h">Măsurat direct</div><div class="s3d">Din peste patru milioane de decizii BERC și din eșantionul myportal.</div>
@@ -804,27 +803,27 @@ def ch11():
 
 def ch12():
     OS = json.loads((ROOT / "independent_audit" / "out" / "osint_crosscheck.json").read_text(encoding="utf-8"))
-    b = idea("Datele noastre sunt sursa de referință: buletinul BERC conține fiecare decizie, cu momentul depunerii și al soluționării. Cifrele publicate în presă le confirmă în cea mai mare parte; unde le contrazic, spunem asta deschis și arătăm explicațiile posibile.")
+    b = idea("Datele noastre sunt sursa de referință: buletinul BERC conține fiecare decizie, cu momentul depunerii și al soluționării. Cifrele publicate în presă le confirmă în cea mai mare parte; unde o cifră nu se reproduce din datele noastre, dăm valoarea noastră, definiția folosită și o explicație posibilă.")
     b += h3("12.1 Ierarhia surselor")
     b += P(hl("Buletinul BERC este sursa de referință pentru decizii și timpi: îl folosim integral, nu ca eșantion.") + " Ce nu e în BERC luăm din surse oficiale: stocul și intrările zilnice din notele Ministerului Justiției, etapa dosarelor din eșantionul nostru myportal. "
            "Presa și agregatorii sunt surse secundare: le comparăm cu datele noastre, dar nu le folosim în locul lor." + E('C91'),
-           "Regula", "Când o cifră publică contrazice BERC, rămâne cifra din BERC. Contradicția se menționează, cu modul în care am obținut cifra noastră și cu toate explicațiile plauzibile ale diferenței.", key=True)
+           "Regula", "Când o cifră publică nu se reproduce din BERC, folosim cifra din BERC și spunem doar atât: valoarea noastră, definiția și perioada folosite și, cel mult, o explicație posibilă neutră (unități sau perioade diferite).", key=True)
     b += h3("12.2 Ce confirmă sursele publice")
     b += P(hl("Majoritatea cifrelor publicate despre coadă se regăsesc în datele noastre.") + " " + V('C91') + "." + E('C91') +
            " Cel mai clar exemplu: statistica oficială a înmatriculărilor și deciziile de admitere din buletin dau practic același număr pe primele nouă luni din 2026 și aceeași scădere în toamnă." + E('C92') +
            " Pragurile de timp din presă (peste 30, respectiv peste 40–45 de zile) sunt confirmate; pentru noiembrie, datele noastre arată chiar valori mai mari." + E('C84', 'C14'),
            "De ce contează", "Două surse independente care spun același lucru fac concluzia mult mai sigură decât oricare dintre ele singură.")
-    b += h3("12.3 Ce contrazic datele noastre și de ce ar putea fi diferențe")
-    b += P(hl("Cifra de peste 26.000 de cereri pe zi nu poate descrie dosarele de înregistrare.") + " Ministerul raportează circa 4.500 pe zi." + E('C93', 'C47') +
-           " Testul de consistență e simplu: dacă ar intra peste 26.000 de dosare pe zi și s-ar emite circa 5.200 de decizii, stocul ar crește cu peste 20.000 pe zi și ar ajunge la milioane în câteva luni; stocul oficial e de 204.414." + E('C28', 'C80') +
-           " Explicația cea mai probabilă e o altă unitate: toate cererile din portal, inclusiv certificate și informări. Nu excludem nici o eroare de transcriere sau o cifră lunară citită ca zilnică.",
-           "Cum am obținut cifra noastră", "Intrările nu apar în BERC, deci folosim nota Ministerului; deciziile zilnice și stocul oficial servesc la verificarea consistenței.")
-    b += P("A doua contradicție privește ordinea de soluționare. Presa descrie o procesare strict cronologică; datele arată că o parte din dosare trec mult mai repede decât ordinea depunerii." + E('C38') +
+    b += h3("12.3 Ce nu se reproduce din datele noastre")
+    b += P(hl("Cifra de peste 26.000 de cereri pe zi din nota de fundamentare a Ministerului (relatată și în presă) nu se reproduce din datele BERC analizate de noi pentru cererile de înregistrare.") +
+           " Din datele noastre: cereri de înregistrare " + V('C98').split(' (')[0] + " în S1 2026; toate tipurile de cereri de pe contorul național, " + V('C165').split(' / ')[0] + " de numere pe zi lucrătoare în ianuarie–iulie 2026, față de " + V('C165').split(' / ')[1] + " în aceeași perioadă din 2025." + E('C93', 'C165', 'C98') +
+           " Explicație posibilă: unități diferite (toate tipurile de cereri de pe contor, față de cererile de înregistrare).",
+           "Cum am obținut cifra noastră", "Contorul național al numerelor de cerere: numărul maxim atins în ianuarie–iulie, împărțit la zilele lucrătoare legale; cererile de înregistrare: cererile cu decizie în BERC, pe luna depunerii.")
+    b += P("Singura afirmație contrazisă, pentru aceeași perioadă, privește ordinea de soluționare. Presa descrie o procesare strict cronologică; în deciziile din 2–19 noiembrie, o parte din dosare trec mult mai repede decât ordinea depunerii." + E('C38') +
            " Explicații posibile: ordinea cronologică poate fi regula de repartizare, nu ordinea deciziilor; unele cereri au prioritate legală sau sunt mai simple; regula poate fi aplicată pe categorii. Datele arată rezultatul, nu cauza.")
     rows = "".join(f'<tr><td>{r["id"]}</td><td>{r["afirmatie"]}</td><td>{r["valoare_publica"]}</td><td>{r["valoarea_noastra"]}</td><td><b>{r["verdict"]}</b></td><td>{r.get("explicatii_posibile") or r["nota"]}</td></tr>' for r in OS["rows"])
     b += f"""<div class="tbl-wrap osint"><div class="tbl-head"><span class="tnum">Tabelul 12.1</span> Afirmațiile din presă despre coadă, față de datele noastre</div>
 <table class="dt"><thead><tr><th>ID</th><th>Afirmația publică</th><th>Valoarea publică</th><th>Datele noastre</th><th>Verdict</th><th>Explicații posibile / notă</th></tr></thead><tbody>{rows}</tbody></table>
-<p class="note">Sursa: compilația de presă din 21.11.2026 (surse citate pentru fiecare afirmație în fișierul Excel, foaia „presa_vs_date_proprii”), comparată cu BERC, eșantionul myportal și nota MJ. Verdictul: CONFIRMAT (aceeași definiție, diferență mică), COMPATIBIL (alt indicator sau altă dată, dar consistent), CONTRAZIS, NEVERIFICABIL din datele noastre.</p></div>"""
+<p class="note">Sursa: compilația de presă din 21.11.2026 (surse citate pentru fiecare afirmație în fișierul Excel, foaia „presa_vs_date_proprii”), comparată cu BERC, eșantionul myportal și nota MJ. Verdictul: CONFIRMAT (aceeași definiție, diferență mică), COMPATIBIL (alt indicator sau altă dată, dar consistent), CONTRAZIS (datele arată clar opusul, pentru aceeași perioadă și definiție), NU SE REPRODUCE din datele BERC analizate (posibil unități sau perioade diferite), NEVERIFICABIL din datele noastre.</p></div>"""
     b += h3("12.4 Dacă se confirmă cifrele publice despre CAEN")
     b += P("Prognoza de bază presupune un val CAEN suplimentar mai mic decât sugerează sursele publice. Nota Ministerului indică 902.243 de cereri CAEN încă așteptate, iar presa spune că aproape două treimi din firme nu și-au actualizat codurile. " +
            hl("Dacă firmele depun în masă înainte de sfârșitul perioadei de tranziție (1 aprilie 2027, după calculul nostru), așteptarea din iunie 2027 ar putea fi de " + V('C94').split(' (')[0] + " zile, față de circa 138 în prognoza de bază.") + E('C94', 'C59') +
@@ -840,9 +839,9 @@ def ch12():
              ["C94", "C95"])
     b += h3("12.5 Ce nu analizăm")
     b += P("Compilația de presă conține și informații despre contractele platformei, despre anchete și despre persoane. Acestea nu țin de coadă, nu pot fi verificate din datele noastre și nu sunt analizate în acest raport.")
-    b += concl("Datele noastre și sursele publice spun, în mare, aceeași poveste. Unde diferă, rămânem la BERC și explicăm de ce ar putea apărea diferența. Cel mai mare risc pe care îl semnalează sursele publice e valul CAEN; față de el, conversia automată e măsura cu cel mai mare efect.")
+    b += concl("Datele noastre și sursele publice spun, în mare, aceeași poveste. Unde o cifră nu se reproduce, rămânem la BERC și arătăm valoarea și definiția noastră. Cel mai mare risc pe care îl semnalează sursele publice e valul CAEN; față de el, conversia automată e măsura cu cel mai mare efect.")
     return chapter(12, "rc-12", "Sursele noastre și sursele publice",
-                   "Ce confirmă presa, ce contrazic datele noastre, de ce ar putea apărea diferențe și ce se întâmplă dacă cifrele publice despre CAEN se confirmă.",
+                   "Ce confirmă presa, ce nu se reproduce din datele noastre și ce se întâmplă dacă cifrele publice despre CAEN se confirmă.",
                    "Surse: BERC (referință) · eșantion myportal · nota MJ · compilație de presă 21.11.2026", b)
 
 # ================================================================== ANNEXES
@@ -992,12 +991,81 @@ def main_exec():
              "Cel mai mult ajută combinația dintre capacitate suplimentară și scoaterea actualizărilor CAEN simple din coadă.",
              "Nu sunt promisiuni: fiecare pachet depinde de cât de bine se implementează fiecare măsură. Pachetul cu 40% din posturile vacante: " + HIRE_40[0].lower() + HIRE_40[1:],
              ["C42", "C43", "C52", "C53", "C54", "C153"])
-    note = ('<section class="front" style="page: rf-synth;">' + pk + '<p class="note">Aceasta este ediția executivă. '
-            'Raportul complet, cu metoda, toate figurile și registrul fiecărei cifre, este '
-            '„Raport_ONRC_Coada_2026-11.pdf”.</p></section>')
-    annex = (f'<section class="front" style="page: rf-synth; break-before: page;"><div class="eyebrow">Anexă</div><h2>{ai_annex.TITLE}</h2>'
-             f'<div class="ai-annex">{ai_annex.body(hl)}</div></section>')
-    html_ = build_html({}).split("<body>")[0] + f"<body>{fr}{note}{annex}</body></html>"
+    note = ''
+    v0 = lambda c: V(c).split(" (")[0]
+    W = lambda a, b, c: (f'<p><b>Ce arată.</b> {a}</p><p><b>Pentru proiectul de OUG.</b> {b}</p><p><b>Impact.</b> {c}</p>')
+    cards = [
+        ("figures_institutii", "fi12_prognoza.svg", "Ce prognozăm: fără măsuri noi, așteptarea crește puternic în 2027", ["C59", "C60"], True,
+         W("Câte zile ar aștepta un dosar depus în fiecare săptămână, până în iunie 2028, dacă nu se schimbă nimic. Linia e mijlocul simulărilor, banda arată 8 din 10 variante. "
+           "Vârful ar ajunge la " + v0("C60") + " de zile." + E("C60"),
+           "Chiar adoptat, proiectul coboară așteptarea din iunie 2028 doar la " + v0("C43") + " de zile, față de " + v0("C42") + " fără el: o îmbunătățire reală, dar termenul legal de o zi lucrătoare rămâne departe." + E("C42", "C43") +
+           " Cel mai mare risc, valul de actualizări CAEN de la începutul lui 2027, nu e tratat direct de rezumatul public al proiectului." + E("C68"),
+           "Fiecare zi în plus cu stocul actual costă, în scenariul central, circa " + v0("C108") + " milioane de lei în economie." + E("C108"))),
+        ("figures_institutii", "fi21_pachete.svg", "Ce schimbă fiecare măsură: așteptarea în iunie 2028, pe pachete", ["C54", "C52", "C153"], True,
+         W("Cinci variante pentru iunie 2028: fără măsuri, proiectul de OUG și trei pachete mai largi. Punctul e mijlocul simulărilor, bara e intervalul.",
+           "Proiectul singur: " + v0("C43") + " de zile; transferul unor acte administrative (Art. III) schimbă foarte puțin, efectul vine din capacitatea suplimentară." + E("C43", "C44") +
+           " Conversia automată CAEN 1-la-1 și eșalonarea, fără personal nou: " + v0("C53") + " de zile." + E("C53") +
+           " OUG extins plus ocuparea a 40% din posturile vacante: " + v0("C52") + " de zile, dar asta cere excepții de la suspendarea angajărilor din 2026." + E("C52", "C153") +
+           " Pachetul minim realist: " + v0("C54") + " de zile." + E("C54"),
+           "Concluzia pentru consultare: proiectul ar trebui completat cu conversia automată CAEN și cu excepția de la suspendarea angajărilor; altfel câștigul rămâne parțial.")),
+        ("figures_institutii", "fi24_doua_cozi_schema.svg", "Cum circulă un dosar: două cozi, una după alta", ["C29", "C35"], True,
+         W("Drumul unei cereri: intră în coada de operare (preluare și verificare formală), apoi în coada registratorului (decizie). Cifrele sunt stocul din fiecare coadă la 6 noiembrie, cererile noi pe zi și deciziile finale pe zi." + E("C28", "C29", "C99", "C01"),
+           "Proiectul mută consilieri juridici spre soluționare (săgeata roșie). Mutarea ajută doar până la un prag; peste el, coada de operare crește la fel de repede cât scade cea a registratorului." + E("C35"),
+           "Cu ambele cozi aproape egale, orice decizie de personal trebuie judecată pe tot drumul dosarului, nu pe o singură etapă." + E("C56"))),
+        ("figures_institutii", "fi06_tandem.svg", "Cele două cozi: un dosar trece întâi prin operare, apoi la registrator", ["C29", "C56"], True,
+         W("Stocul de cereri nesoluționate, împărțit pe cele două etape: operarea (preluarea și verificarea formală) și soluționarea (decizia registratorului). "
+           "La 6 noiembrie, din " + V("C28") + " de cereri, " + V("C29") + " erau încă la operare: cele două cozi sunt aproape egale." + E("C28", "C29") +
+           " Operarea lucra cu circa " + V("C34").replace("≈", "") + " mai repede decât soluționarea: blocajul principal e la registrator, dar operarea e aproape la limită." + E("C34"),
+           "Proiectul mută consilieri juridici ai ONRC spre soluționare. Dacă ei sunt luați din operare, registratorii primesc mai puține dosare pregătite: "
+           "întărirea doar a etapei de soluționare îi lasă pe registratori fără dosare, iar coada de la operare crește." + E("C56"),
+           "Doar întărirea ambelor etape deodată reduce stocul total; o singură etapă întărită mută blocajul, nu îl elimină." + E("C56"))),
+        ("figures_institutii", "fi10_canibalizare.svg", "Cât ajută mutarea oamenilor de la o coadă la alta", ["C35"], True,
+         W("Câștigul de producție totală după câte dosare pe zi preiau la soluționare oamenii mutați din operare.",
+           "Mutarea ajută până la un optim; peste el, ce se câștigă la registrator se pierde la operare, iar la un anumit prag câștigul dispare complet (" + V("C35") + ")." + E("C35") +
+           " Concret: dacă delegarea din proiect se face luând oameni din operare, efectul are un plafon; dacă oamenii vin din alte activități ale ONRC sau din posturi noi ocupate, plafonul dispare.",
+           "Recomandarea: delegați consilieri juridici din alte activități, nu din operare, și publicați câți dintre cei eligibili lucrează azi la operare; altfel nu se poate ști dacă mutarea ajută sau doar mută coada.")),
+        ("figures_institutii", "fi15_grila.svg", "Cât contează viteza: intrări vs. capacitate", ["C63"], True,
+         W("Așteptarea din iunie 2028 dacă cererile (rânduri) și capacitatea de soluționare (coloane) se abat de la scenariul central; stânga: cazul central, dreapta: varianta nefavorabilă.",
+           "Sistemul e la limită: o capacitate cu 10% mai mare sau mai mică mută rezultatul de la circa " + V("C63").split("→ ")[1].split(" ·")[0] + " la circa " + V("C63").split("→ ")[2].split(" (")[0] + " de zile." + E("C63") +
+           " Capacitatea adăugată de proiect contează doar dacă cresc ambele etape: dacă juriștii delegați sunt luați din operare, câștigul are o limită, iar întărirea unei singure etape mută blocajul." + E("C35", "C56"),
+           "Mici diferențe de implementare (câți oameni, de unde sunt luați, cât de repede) schimbă rezultatul cu luni întregi.")),
+        ("figures_institutii", "fi22_caen.svg", "Riscul valului CAEN și efectul conversiei automate", ["C94", "C95"], True,
+         W("Așteptarea din iunie 2027 dacă firmele depun în masă actualizările CAEN înainte de sfârșitul perioadei de tranziție (roșu) și dacă codurile simple sunt convertite automat (verde).",
+           "Dacă se confirmă cifrele publice, așteptarea ar putea urca la " + V("C94").split(" · ")[1].split("→ ")[1] + "–" + V("C94").split(" · ")[2].split("→ ")[1].split(" (")[0] + " de zile; conversia automată o reduce la mai puțin de jumătate." + E("C94", "C95") +
+           " Perioada de tranziție se stabilește prin hotărâre de Guvern, deci măsura decisivă se poate adopta fără o lege nouă." + E("C152"),
+           "E cea mai mare sursă de risc din prognoză și cea mai ieftină de redus.")),
+        ("figures_impact", "i07_risc_venituri_2027.svg", "Venituri bugetare mutate în 2027", ["C122", "C125"], True,
+         W("Pe trimestre ale anului 2027, veniturile bugetare care ar intra mai târziu din cauza cozii, fără măsuri (portocaliu) și cu un pachet realist (verde).",
+           "Proiectul de OUG costă " + V("C83") + "; un pachet realist ar evita mutarea a circa " + v0("C125") + " de milioane de lei din veniturile anului." + E("C83", "C125"),
+           "Fără măsuri, circa " + V("C122").split(" (")[0] + " de milioane de lei ar intra în anul următor; veniturile nu se pierd, dar întârzie, iar costul de finanțare al amânării e de circa " + v0("C123") + " de milioane." + E("C122", "C123"))),
+        ("figures_impact", "i01_cost_lunar.svg", "Costul lunar al întârzierilor", ["C111", "C106"], True,
+         W("Costul economic (sus) și încasările bugetare afectate (jos), lună de lună din 2024, în scenariul central; liniile verticale dau intervalul scenariilor.",
+           "La costul unei zile de coadă, economia pierde în circa două zile cât costă întregul proiect de OUG." + E("C108", "C83"),
+           "Pentru august–18 noiembrie 2026, costul economic e estimat la " + V("C106") + " de milioane de lei (prudent / central / tensionat)." + E("C106"))),
+        ("figures_impact", "i08_motive_amanare.svg", "De ce se amână dosarele și ce se poate automatiza", ["C139", "C143"], True,
+         W("Motivele amânărilor din 19 octombrie–18 noiembrie 2026, după nivelul de automatizare al soluției (standard, AI, AI avansat, judecata registratorului). Circa una din cinci decizii este o amânare." + E("C82"),
+           "Proiectul nu tratează amânările; verificările la depunere țin de ONRC și ADR, nu cer o lege și pot începe imediat.",
+           "Cel mult circa " + V("C141").split(" (")[0].replace("≈", "") + " de amânări pe zi lucrătoare ar dispărea, iar analiza registratorilor s-ar muta spre dosarele noi." + E("C141"))),
+        ("figures_impact", "i10_motive_respingere.svg", "Respingerile vin aproape toate din amânări nerezolvate", ["C144", "C150"], True,
+         W("Ce a precedat respingerile și cum se încheie cererile amânate.",
+           "Dintre cererile amânate, circa o treime ajung respinse; prevenirea amânărilor la depunere reduce deci și respingerile." + E("C146"),
+           "O respingere aduce de obicei o nouă cerere: după o respingere, aproape jumătate din firme depun din nou în 30 de zile, deci aceeași muncă se face de două ori." + E("C103")))]
+    def card(d, svg, title, ids, wide, intro=""):
+        LS.FIG_DIR = str(HERE / d)
+        take = REG[ids[0]]["public_ro"]
+        return (f'<div class="ec{" wide" if wide else ""}"><div class="ect">{title}</div><div class="eci">{intro}</div>{LS.load_inline_svg(svg, svg.split(".")[0] + "_ex")}'
+                f'<div class="ecc">{hl(take)}{E(*ids)}</div></div>')
+    grid = "".join(card(*c) for c in cards)
+    LS.FIG_DIR = str(HERE / "figures_institutii")
+    charts = ('<style>.eg{display:grid;grid-template-columns:1fr 1fr;gap:5mm 6mm}.ec{break-inside:avoid}.ec.wide{grid-column:1 / -1}.ec.wide .ect{font-size:13pt}.ec.wide .ecc{font-size:11pt}.eci{font:400 10.2pt/1.45 var(--serif);margin:0 0 2mm}.eci p{margin:0 0 1.2mm}.eci b{font-family:var(--sans);font-weight:600}.ec{break-inside:auto}.ec svg{break-inside:avoid;max-height:82mm;display:block;margin:0 auto}.ec .eci{break-after:avoid}'
+              '.ec svg{width:100%;height:auto}.ect{font:600 10.5pt/1.25 var(--sans);margin:0 0 1.5mm;border-top:.6mm solid var(--ink);padding-top:1.5mm}'
+              '.ecc{font:400 9.6pt/1.42 var(--serif);margin-top:1mm}</style>'
+              '<section class="front" style="page: rf-synth; break-before: auto; margin-top: 8mm;"><div class="eyebrow">Datele esențiale</div>'
+              '<h2>Ce urmează și ce schimbă fiecare măsură</h2><div class="eg">' + grid + '</div></section>')
+    annex = (f'<section class="front" style="page: rf-synth; break-before: auto;"><p class="note"><b>Despre acest document.</b> {ai_annex.DISCLAIMER} '
+             'Metoda, toate figurile, limitele și registrul fiecărei cifre se află în raportul complet (Raport_ONRC_Coada_2026-11_COMPLET.pdf) și pe GitHub: '
+             'github.com/Stefatorus/onrc-analiza-big-data-amanari.</p></section>')
+    html_ = build_html({}).split("<body>")[0] + f"<body>{fr}{charts}{note}{annex}</body></html>"
     out_html = HERE / "Raport_ONRC_Coada_2026-11_EXECUTIV.html"
     out_pdf = DELIV / "Raport_ONRC_Coada_2026-11_EXECUTIV.pdf"
     out_html.write_text(html_, encoding="utf-8"); compile_pdf(out_html, out_pdf)

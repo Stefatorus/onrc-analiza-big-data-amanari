@@ -1,8 +1,7 @@
 """Refiling after rejection vs baseline 'another request within N days' after an admitted request
 (exact firm id, pseudonymised). Windows 30/90/365 days. Aggregates only."""
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import pandas as pd, numpy as np
-r = pd.read_pickle(str(config.WORK_DIR / 'raw_compact.pkl'))[['cat', 'app', 'sol', 'firm', 'app_id', 'art']]
+r = pd.read_pickle(r'S:\Projects\SOLOResearch\independent_audit\reserves_check\tmp\raw_compact.pkl')[['cat', 'app', 'sol', 'firm', 'app_id', 'art']]
 r = r.drop_duplicates('art'); r['cat'] = r.cat.astype(str); r['sol'] = r.sol.astype(str)
 r = r[(r.cat == 'CERERE265') & (r.firm != 0) & r.sol.isin(['Admis', 'Respins', 'Renunțat'])]
 r = r.drop_duplicates('app_id').sort_values(['firm', 'app'])

@@ -4,12 +4,12 @@ Pentru fiecare afirmație măsurabilă calculăm același lucru din BERC (decizi
 și dăm un verdict pe o scală fixă:
   CONFIRMAT    — aceeași definiție, diferență ≤10% (sau același prag depășit);
   COMPATIBIL   — unitate / dată / definiție diferită, dar valorile sunt consistente;
-  CONTRAZIS    — datele noastre arată altceva;
+  CONTRAZIS    — datele noastre arată clar opusul, pentru aceeași perioadă și aceeași definiție;
+  NU SE REPRODUCE — cifra nu se reproduce din datele BERC analizate de noi (posibil unități sau perioade diferite);
   NEVERIFICABIL— datele noastre nu pot verifica afirmația.
 Scrie out/osint_crosscheck.json și o foaie în Date_ONRC_Coada_2026-11.xlsx.
 """
 from __future__ import annotations
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1])); import config  # repo config.py
 import json, re
 from pathlib import Path
 import pandas as pd
@@ -17,7 +17,17 @@ import pandas as pd
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "out"
 XL = HERE.parent / "analysis" / "raport_executiv_2026-11" / "Date_ONRC_Coada_2026-11.xlsx"
-BERC = Path(str(config.BERC_PKL))
+BERC = Path(r"W:\SOLOResearch\analysis_decisions.pkl")
+COUNTER = Path(r"S:\Projects\onrc-coada-2026-release\data\release_v1\counter_daily_national.csv.gz")
+
+
+def _counter_per_wd(a, b):
+    """All request numbers on the national counter (yearly reset) per LEGAL working day (holidays from stat_pack.py)."""
+    import numpy as np
+    src = (HERE / "stat_pack.py").read_text(encoding="utf-8")
+    hol = np.array(re.findall(r'"(20\d\d-\d\d-\d\d)"', src.split("HOL = pd.to_datetime(")[1].split("])")[0]), dtype="datetime64[D]")
+    d = pd.read_csv(COUNTER, parse_dates=["filing_date"]); s = d[(d.filing_date >= a) & (d.filing_date <= b)]
+    return s.app_nr_max.max() / np.busday_count(np.datetime64(a), np.datetime64(b) + 1, holidays=hol)
 
 
 def pct(a, b): return 100 * (a / b - 1)
@@ -62,11 +72,12 @@ def main():
     _sf = json.loads((OUT / "serials_findings.json").read_text(encoding="utf-8"))
     peak = f"{_sf['inflow']['h1_2026_berc_per_wd']:,}".replace(",", ".")
     cnt = f"{round(_sf['counter']['total_numbers_per_wd_jan_jul_2026'], -2):,.0f}".replace(",", ".")
-    add("P05", "Cereri zilnice ian.–iul. 2026", ">26.000/zi (>8× 2024)",
-        f"intrări de cereri de înregistrare (MJ): 4.533/zi în prima jumătate a lui 2026 · din datele noastre: {peak}/zi · contorul tuturor numerelor de cerere (orice tip): ≈{cnt} pe zi lucrătoare, ian.–iul. 2026",
-        "CONTRAZIS (ca dosare) · COMPATIBIL (ca toate cererile din portal)",
-        "Nota MJ dă 4.533 de cereri de înregistrare pe zi. O cifră de zeci de mii pe zi corespunde contorului tuturor cererilor din portal (inclusiv certificate și informări), nu dosarelor care ajung la registrator.",
-        "Nota MJ (C47) + eșantion myportal")
+    c25 = _counter_per_wd("2025-01-01", "2025-07-31"); c25s = f"{round(c25, -2):,.0f}".replace(",", ".")
+    add("P05", "Cereri zilnice ian.–iul. 2026 (Nota de fundamentare MJ §2.2; presă)", ">26.000/zi (>8× 2024) · sursa: Nota de fundamentare MJ §2.2; presă",
+        f"cereri de înregistrare, din datele noastre: {peak}/zi lucrătoare în S1 2026 (MJ: 4.533) · contorul național, toate tipurile de cereri: ≈{cnt} pe zi lucrătoare în ian.–iul. 2026 și ≈{c25s} în ian.–iul. 2025",
+        "NU SE REPRODUCE din datele BERC analizate · COMPATIBIL ca ordin de mărime cu toate cererile de pe contor",
+        "Cifra nu se reproduce din datele BERC analizate de noi ca cereri de înregistrare; ca ordin de mărime, corespunde tuturor tipurilor de cereri de pe contorul național, al căror nivel e aproape același în 2025 și 2026.",
+        "contorul național al numerelor de cerere + BERC (C98, C165)")
     add("P06", "Procesare strict cronologică", "da",
         "8,7% din modificări și 15,7% din înmatriculări decise în ≤14 zile (2–19 nov.), deși mediana era de 53 / 42 de zile", "CONTRAZIS",
         "O parte din dosare trece mult mai repede decât ordinea depunerii; datele nu arată de ce.", "BERC (C38)")
@@ -117,7 +128,7 @@ def main():
         "P02": "Toate deciziile finale din BERC, diferența dintre momentul deciziei și momentul înregistrării, mediana pe luna deciziei.",
         "P03": "Aceeași metodă, separat pentru modificări (CERERE265) și înmatriculări (INMATRIC265), săptămâna 16–20 noiembrie.",
         "P04": "Mediana pe oficiul de depunere Cluj, deciziile din 1–18 noiembrie.",
-        "P05": "Intrările nu sunt în BERC; folosim nota MJ. Ca test de consistență, comparăm cu deciziile emise zilnic (BERC) și cu stocul oficial.",
+        "P05": "Contorul național al numerelor de cerere (numărul maxim atins, împărțit la zilele lucrătoare legale; contorul repornește anual) și cererile de înregistrare cu decizie în BERC.",
         "P06": "Ponderea dosarelor decise în cel mult 14 zile, față de mediana perioadei (BERC, 2–19 noiembrie).",
         "P07": "Seriile lunare ale celor 42 de oficii (BERC), comparate cu seria națională.",
         "P08": "Nota de fundamentare MJ a proiectului OUG.",
@@ -130,8 +141,7 @@ def main():
         "P09": "—", "P20": "Mărcile temporale ale deciziilor (BERC)."}
     EXPL = {
         "P01": "Dată diferită (sfârșitul lui octombrie față de 6 noiembrie); rotunjire; cifra sindicală poate include și cereri aflate în alte stadii (de exemplu, în termen de completare).",
-        "P05": "Explicații posibile: (1) altă unitate — toate cererile din portal (certificate, informări, copii), nu doar dosarele de înregistrare; contorul numerelor de cerere din portal ajunge, în datele noastre, la zeci de mii pe zi; "
-               "(2) o eroare de transcriere sau o cifră lunară ori cumulată citită ca zilnică; (3) o eroare în sursa primară. Test de consistență: dacă ar intra 26.000 de dosare pe zi și s-ar emite circa 5.200 de decizii, stocul ar crește cu peste 20.000 pe zi, adică ar ajunge la milioane în câteva luni; stocul oficial este de 204.414. Cifra nu poate descrie dosarele de înregistrare.",
+        "P05": "Explicație posibilă: unități diferite. Cifra de peste 26.000 are ordinul de mărime al tuturor tipurilor de cereri de pe contorul național (inclusiv certificate și informări), iar cifrele pentru 2024–2025 și cea de 4.533 din S1 2026 privesc cererile de înregistrare.",
         "P06": "Explicații posibile: (1) ordinea cronologică poate fi regula de repartizare, nu ordinea efectivă a deciziilor; (2) unele cereri au prioritate legală sau sunt mai simple (de exemplu, renunțări sau respingeri rapide); (3) regula poate fi respectată pe categorii sau oficii, nu la nivel național. Datele arată rezultatul, nu cauza.",
         "P07": "Datele sunt consistente cu o coadă comună, dar nu dovedesc modul de repartizare; o explicație alternativă ar fi o încărcare uniformă a tuturor oficiilor.",
         "P10": "Procentele din presă se referă la firme, cifra MJ la cereri; o firmă poate depune o cerere combinată (CAEN + capital).",
@@ -141,9 +151,9 @@ def main():
         "P18": "Eșantionul nostru pe un singur oficiu e prea mic; cifra din presă poate fi corectă."}
     for r in rows:
         r["cum_am_obtinut"] = METHOD.get(r["id"], ""); r["explicatii_posibile"] = EXPL.get(r["id"], "")
-    out = dict(meta="Confruntarea afirmațiilor din compilația de presă (21.11.2026) cu datele noastre. Doar afirmații despre coadă. Sursa de referință e BERC; cifrele publice care o contrazic sunt menționate, cu explicațiile posibile.",
-               scale="CONFIRMAT / COMPATIBIL / CONTRAZIS / NEVERIFICABIL", rows=rows,
-               counts={v: sum(1 for r in rows if r["verdict"].startswith(v)) for v in ("CONFIRMAT", "COMPATIBIL", "CONTRAZIS", "NEVERIFICABIL")},
+    out = dict(meta="Confruntarea afirmațiilor din compilația de presă (21.11.2026) cu datele noastre. Doar afirmații despre coadă. Sursa de referință e BERC; cifrele publice care nu se reproduc din BERC sunt menționate, cu valoarea noastră, definiția folosită și o explicație posibilă neutră.",
+               scale="CONFIRMAT / COMPATIBIL / CONTRAZIS (opusul clar, aceeași perioadă și definiție) / NU SE REPRODUCE din datele BERC analizate / NEVERIFICABIL", rows=rows,
+               counts={v: sum(1 for r in rows if r["verdict"].startswith(v)) for v in ("CONFIRMAT", "COMPATIBIL", "CONTRAZIS", "NU SE REPRODUCE", "NEVERIFICABIL")},
                berc_series=dict(inm_admis={k: int(v) for k, v in inm.items() if k >= "2023-04"}, cer_admis={k: int(v) for k, v in cer.items() if k >= "2025-01"}))
     (OUT / "osint_crosscheck.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     df = pd.DataFrame(rows)

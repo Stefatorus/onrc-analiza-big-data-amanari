@@ -46,9 +46,9 @@ def body(hl=lambda t: f"<mark class='hl'>{t}</mark>"):
            "Portalul arată ce buletinul nu arată: în ce etapă se află un dosar care nu a primit încă decizia, la operare sau la registrator. Dintre aceste dosare, 1.819 au avut toate datele necesare pentru calculul timpilor.")
     b += p("A treia sursă sunt cifrele oficiale ale Ministerului Justiției, din notele din 30 octombrie și 6 noiembrie 2026: stocul de cereri nesoluționate pe cele două etape, intrările zilnice medii, posturile și bugetul proiectului de ordonanță. "
            "Le citez cu sursa și nu le recalculez, pentru că nu am datele din care au fost obținute. "
-           "În sfârșit, am comparat rezultatele cu o compilație de articole de presă din 21 noiembrie 2026, ca să vedem ce confirmă și ce contrazice datele noastre.")
+           "În sfârșit, am comparat rezultatele cu o compilație de articole de presă din 21 noiembrie 2026, ca să vedem ce se confirmă și ce nu se reproduce din datele noastre.")
     b += p(hl("Ierarhia este fixă: buletinul BERC este sursa de referință pentru decizii și timpi; ce nu se află în BERC luăm din sursele oficiale; presa servește doar la comparație.") +
-           " Când o cifră publică contrazice buletinul, rămâne cifra din buletin, iar diferența este menționată și explicată.")
+           " Când o cifră publică nu se reproduce din buletin, rămâne cifra din buletin; menționăm valoarea noastră, definiția folosită și, cel mult, o explicație posibilă neutră.")
 
     b += h("Ce înseamnă fiecare măsură")
     b += p("Măsura centrală a raportului este așteptarea: numărul de zile calendaristice dintre momentul în care cererea a fost înregistrată și momentul în care registratorul a luat decizia finală. "

@@ -1,12 +1,11 @@
 """Task 1d: stock of pending registration requests at 30.10.2026 and 06.11.2026 (and at harvest, 21.11),
 from (a) portal sample of reqNumbers (design-based, stratified by 100k bins) backdated with BERC final
 decision dates, (b) BERC-only lower bound. Also Aug-Oct 2026 inflow of judged requests. Aggregates only."""
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
-import sys; sys.path.insert(0, str(config.REPO / 'independent_audit' / 'reserves_check'))
+import sys; sys.path.insert(0, r'S:\Projects\SOLOResearch\independent_audit\reserves_check')
 from rocal import n_wd
 import pandas as pd, numpy as np
 rng = np.random.default_rng(42)
-m = pd.read_pickle(str(config.WORK_DIR / 'portal_berc_join.pkl'))
+m = pd.read_pickle(r'S:\Projects\SOLOResearch\independent_audit\reserves_check\tmp\portal_berc_join.pkl')
 m['rd'] = pd.to_datetime(m.request_date, errors='coerce')
 LO, HI = 1900000, 4824375
 m = m[(m.req_nr >= LO) & (m.req_nr <= HI)].copy()
@@ -57,11 +56,11 @@ def inflow(lo, hi, J=JUD):
     t = est(ind); wd = n_wd(lo, hi)
     return dict(period=f'{lo}..{hi}', wdays=wd, judged_total=t, per_wd=round(t[0] / wd), per_wd_lo=round(t[1] / wd), per_wd_hi=round(t[2] / wd),
                 share_of_numbers=round((ind * m.w).sum() / ((m.rd.between(lo, pd.Timestamp(hi) + pd.Timedelta('23:59:59')) | (~m.details_found & m.req_nr.between(*rng_nr(lo, hi)))) * m.w).sum(), 3))
-lev = pd.read_csv(str(config.REPO / 'independent_audit' / 'reserves_check' / '11_daily_counter_vs_berc.csv'), index_col=0, parse_dates=True).level
+lev = pd.read_csv(r'S:\Projects\SOLOResearch\independent_audit\reserves_check\11_daily_counter_vs_berc.csv', index_col=0, parse_dates=True).level
 def rng_nr(lo, hi):
     a = lev[:pd.Timestamp(lo) - pd.Timedelta('1D')].iloc[-1] if pd.Timestamp(lo) > lev.index[0] else 0
     return a + 1, lev[:hi].iloc[-1]
 I = pd.DataFrame([inflow('2026-05-12', '2026-07-31'), inflow('2026-08-01', '2026-10-31'), inflow('2026-09-01', '2026-09-30'), inflow('2026-10-01', '2026-10-31'), inflow('2026-11-01', '2026-11-19')])
 print(I.to_string())
-R.to_csv(str(config.REPO / 'independent_audit' / 'reserves_check' / '13_stock_estimates.csv'), index=False)
-I.to_csv(str(config.REPO / 'independent_audit' / 'reserves_check' / '13_inflow_from_sample.csv'), index=False)
+R.to_csv(r'S:\Projects\SOLOResearch\independent_audit\reserves_check\13_stock_estimates.csv', index=False)
+I.to_csv(r'S:\Projects\SOLOResearch\independent_audit\reserves_check\13_inflow_from_sample.csv', index=False)

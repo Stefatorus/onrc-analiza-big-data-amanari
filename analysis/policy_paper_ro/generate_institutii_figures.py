@@ -2,7 +2,6 @@
 aceeași paletă semantică, IBM Plex Sans, lățime 166 mm, fără titluri coapte în imagine.
 Toate cifrele vin din LOCKED_CONSTANTS.json, oug_scenarios.json, BERC și portal.
 """
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import os, sys, json
 import numpy as np, pandas as pd
 import matplotlib
@@ -32,7 +31,7 @@ _B = None
 def berc():
     global _B
     if _B is None:
-        b = pd.read_pickle(str(config.BERC_PKL))
+        b = pd.read_pickle(r"W:\SOLOResearch\analysis_decisions.pkl")
         b = b[b.res.notna() & b.app.notna()].copy()
         b["Wd"] = (b.res - b.app).dt.total_seconds() / 86400
         b["d"] = b.res.dt.normalize()
@@ -369,6 +368,4 @@ def f_cannibal():
 if __name__ == "__main__":
     for fn in (f_history, f_collapse, f_now, f_flow, f_production, f_tandem, f_mix,
                f_counties, f_oug, f_cannibal, f_censoring):
-        if fn is f_collapse and not any(config.PORTAL_DIR.glob("harvest_*.jsonl")):
-            print("skip f_collapse: needs the unpublished myportal sample; committed fi02_colaps_doua_surse.svg kept"); continue
         fn(); print("ok", fn.__name__)

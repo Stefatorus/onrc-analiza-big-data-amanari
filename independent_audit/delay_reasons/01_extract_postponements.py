@@ -2,7 +2,6 @@
 BERC bulletin PDFs (PyMuPDF, same reader as cost_evidence/01). Record-level output (with request numbers, used only for the
 local join to the decisions archive) goes to _tmp/ and is deleted at the end. stdout carries aggregates only.
 """
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import glob, os, re, pickle, collections
 from concurrent.futures import ProcessPoolExecutor
 import fitz
@@ -55,7 +54,7 @@ def parse(path):
 
 
 def main():
-    files = sorted(glob.glob(str(config.BULLETINS_DIR / '*.pdf')))
+    files = sorted(glob.glob(r'W:\SOLOResearch\bulletins\2026\*.pdf'))
     rows, meta = [], []
     with ProcessPoolExecutor(max_workers=6) as ex:
         for stem, bdate, n, out in ex.map(parse, files, chunksize=4):

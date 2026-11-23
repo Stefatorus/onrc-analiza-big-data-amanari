@@ -1,10 +1,9 @@
 """Task 2 quick measurements on the raw-JSON compact table (pseudonymised ids). Aggregates only."""
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
-import sys; sys.path.insert(0, str(config.REPO / 'independent_audit' / 'reserves_check'))
+import sys; sys.path.insert(0, r'S:\Projects\SOLOResearch\independent_audit\reserves_check')
 from rocal import n_wd, is_wd
 import pandas as pd, numpy as np
 from scipy.stats import spearmanr, kendalltau
-r = pd.read_pickle(str(config.WORK_DIR / 'raw_compact.pkl'))
+r = pd.read_pickle(r'S:\Projects\SOLOResearch\independent_audit\reserves_check\tmp\raw_compact.pkl')
 r = r[['cat', 'app_nr_s', 'app', 'res', 'sol', 'firm', 'app_id', 'art', 'created', 'published', 'jt']]
 r['cat'] = r.cat.astype(str); r['sol'] = r.sol.astype(str)
 r = r.drop_duplicates('art')

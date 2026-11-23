@@ -6,10 +6,14 @@ Depozitul conține rapoartele, datele care le susțin și codul care le produce.
 
 ## Ce să citești
 
-1. **[Ediția executivă](reports/actuale/Raport_ONRC_Coada_2026-11_EXECUTIV.pdf)** (9 p.): situația, cauzele, ce se poate decide acum.
-2. **[Raportul complet](reports/actuale/Raport_ONRC_Coada_2026-11_COMPLET.pdf)** (138 p., 23.11.2026): documentul de referință.
+1. **[Ediția executivă](reports/actuale/Raport_ONRC_Coada_2026-11_EXECUTIV.pdf)** (11 p.): situația, prognoza, ce schimbă fiecare măsură, cele două cozi, costul, în grafice explicate.
+2. **[Analiza proiectului de OUG](reports/actuale/Analiza_proiectului_OUG_2026-11.pdf)** (24 p.): textul integral al proiectului și nota de fundamentare, verificate față de date; efectul fiecărui articol; propuneri de completare.
+3. **[Raportul complet](reports/actuale/Raport_ONRC_Coada_2026-11_COMPLET.pdf)** (138 p., 23.11.2026): documentul de referință.
    Cuprinsul arată pentru cine e fiecare parte. Fiecare cifră are un cod `[Cxx]`, cu legătură spre registrul afirmațiilor.
-3. **Analize complementare** (21.11.2026, date până la 18–20.11.2026), în [`reports/analize_complementare/`](reports/analize_complementare/).
+4. **Sinteze pe instituții** (9–10 p. fiecare), în [`reports/sinteze_institutii/`](reports/sinteze_institutii/): ce se cere fiecărei instituții, în limitele competențelor ei.
+   * [Ministerul Justiției](reports/sinteze_institutii/Sinteza_MJ.pdf) · [Ministerul Finanțelor și ANAF](reports/sinteze_institutii/Sinteza_MF_ANAF.pdf) · [MEDAT și ADR](reports/sinteze_institutii/Sinteza_MEDAT_ADR.pdf)
+   * [Guvernul](reports/sinteze_institutii/Sinteza_Guvern.pdf) · [Parlamentul](reports/sinteze_institutii/Sinteza_Parlament.pdf) · [ONRC](reports/sinteze_institutii/Sinteza_ONRC.pdf)
+5. **Analize complementare** (21.11.2026, date până la 18–20.11.2026), în [`reports/analize_complementare/`](reports/analize_complementare/).
    Pentru orice cifră, referința este raportul complet din 23.11.2026.
    * [Atlasul județean, 42 de fișe](reports/analize_complementare/Atlas_judetean_ONRC_42_fise_2026-11-21.pdf) (32 p.)
    * [Criza Registrului Comerțului, raport 2026–2028](reports/analize_complementare/Raport_ONRC_2026_2028_analiza_complementara.pdf) (36 p.)
@@ -17,8 +21,8 @@ Depozitul conține rapoartele, datele care le susțin și codul care le produce.
    * [Analiza steelman: OUG și soluții](reports/analize_complementare/Analiza_steelman_OUG_si_solutii_2026-11-21.pdf) (18 p.)
    * [Costul economic și fiscal al cozii](reports/analize_complementare/Costul_economic_si_fiscal_al_cozii_2026-11-21.pdf) (8 p.)
    * [Cele două blocaje succesive (analiza tandem)](reports/analize_complementare/Analiza_blocajului_tandem_ONRC_2026-11-21.pdf) (4 p.)
-4. **Date:**
-   * [`claims_registry.csv`](analysis/raport_executiv_2026-11/claims_registry.csv): registrul afirmațiilor, 151 de rânduri.
+6. **Date:**
+   * [`claims_registry.csv`](analysis/raport_executiv_2026-11/claims_registry.csv): registrul afirmațiilor (fiecare cifră: sursă, script, amprentă, stare).
    * Rezultatele agregate în [`independent_audit/out/`](independent_audit/out/) și figurile (SVG) în `analysis/policy_paper_ro/figures_*`.
    * În [release-ul v1.0.0](https://github.com/Stefatorus/onrc-analiza-big-data-amanari/releases/tag/v1.0.0):
      * `Date_ONRC_Coada_2026-11.xlsx`, cu toate tabelele;

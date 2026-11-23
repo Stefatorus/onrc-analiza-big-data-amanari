@@ -1,12 +1,11 @@
 """Task 1c: is portal reqNumber the same counter as BERC app_nr? Which portal types reach BERC?
 What are the numbers without companyId? Aggregates only."""
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
-import sys; sys.path.insert(0, str(config.REPO / 'independent_audit'))
+import sys; sys.path.insert(0, r'S:\Projects\SOLOResearch\independent_audit')
 from analyze_portal_snapshot import load
 import pandas as pd, numpy as np
 from scipy.stats import spearmanr
 p = load(None)[['req_nr','s1_found','has_company_id','details_found','request_date','type_code','is_judged','phase_code','stage','solution','solution_term','last_update_date','initial_req_number','req_day']]
-b = pd.read_pickle(str(config.BERC_PKL))[['cat','app_nr','app','res','sol']]
+b = pd.read_pickle(r'W:\SOLOResearch\analysis_decisions.pkl')[['cat','app_nr','app','res','sol']]
 b = b[(b.app>='2026-01-01')]
 FIN = ['Admis','Respins','Renunțat','Certificare înscriere în registrul comerțului','Renunțat din oficiu','ADMIS','certificare inscriere mentiuni']
 b['fin'] = b.sol.isin(FIN)
@@ -48,4 +47,4 @@ print(live.groupby('phase_code').agg(n=('inB','size'), any_berc=('inB','mean'), 
 print('\nsolution_term non-empty by phase:'); print(dj.groupby('phase_code').solution_term.apply(lambda s: (s.astype(str).str.len() >= 8).mean()).round(3).to_string())
 lu = pd.to_datetime(dj.last_update_date.astype(str).str[:19], errors='coerce')
 print('last_update_date range', lu.min(), lu.max(), ' share before request_date:', (lu < pd.to_datetime(dj.request_date)).mean().round(3))
-m.drop(columns=['cats']).assign(cats=m.cats).to_pickle(str(config.WORK_DIR / 'portal_berc_join.pkl'))
+m.drop(columns=['cats']).assign(cats=m.cats).to_pickle(r'S:\Projects\SOLOResearch\independent_audit\reserves_check\tmp\portal_berc_join.pkl')

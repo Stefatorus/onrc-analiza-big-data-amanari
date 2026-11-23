@@ -2,7 +2,6 @@
 waits by category (term granted, filing->postponement, Kaplan-Meier filing->final decision), figures and evidence JSON.
 Inputs: _tmp/entries.pkl, _tmp/entry_labels.pkl, _tmp/seg_labels.pkl, archive (needed columns only), 04/06 outputs.
 Outputs: figures/*.png|svg, taxonomy.csv, 07_results.out.json, ../out/delay_reasons.json (aggregates only)."""
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import os, json, importlib.util, collections, math
 import numpy as np, pandas as pd
 
@@ -68,7 +67,7 @@ def main():
     R = {}
 
     # ---------------- coverage vs archive
-    df = pd.read_pickle(str(config.BERC_PKL))[['cat', 'app_nr', 'app', 'res', 'county', 'jtype', 'sol']]
+    df = pd.read_pickle(r'W:\SOLOResearch\analysis_decisions.pkl')[['cat', 'app_nr', 'app', 'res', 'county', 'jtype', 'sol']]
     df = df[df.res >= '2026-01-01']
     archive_end = df.res.max()
     A = df[df.cat == 'AUTO_AMANARI'].copy(); A['dd'] = A.res.dt.normalize(); A = A.drop_duplicates(['app_nr', 'dd'])

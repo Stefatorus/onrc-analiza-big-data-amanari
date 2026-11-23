@@ -3,8 +3,7 @@ Un singur text, inclus o singură dată la finalul fiecărui document și listat
 
 TITLE = "Utilizarea AI, cerințe, surse și limite"
 
-DISCLAIMER = ("Raport realizat cu ajutorul inteligenței artificiale (Claude Opus 5.5 și Gemini 4 Neon), sub îndrumarea și verificarea autorului. "
-              "Detalii despre cum a fost folosit AI-ul, despre surse și despre limite: anexa „" + TITLE + "”, la finalul documentului.")
+DISCLAIMER = "Realizat cu sprijinul instrumentelor de inteligență artificială, sub coordonarea și verificarea autorului; detaliile, în raportul complet."
 
 
 def body(hl=lambda t: f"<mark class='hl'>{t}</mark>"):
@@ -41,7 +40,7 @@ def body(hl=lambda t: f"<mark class='hl'>{t}</mark>"):
              "Fără date personale; fără cifre despre registratori individuali; clasamente pe oficii acolo unde ajută la localizarea problemelor.",
              "Transparență privind utilizarea AI, sursele, limitele și incertitudinile."])
     b += h("5. Surse de date folosite și ierarhia lor")
-    b += p(hl("Sursa de referință este buletinul BERC, folosit integral; cifrele publice care îl contrazic sunt menționate și explicate, dar nu îl înlocuiesc."))
+    b += p(hl("Sursa de referință este buletinul BERC, folosit integral; cifrele publice care nu se reproduc din el sunt menționate, cu valoarea și definiția noastră, dar nu îl înlocuiesc."))
     b += li(["<b>BERC</b>, Buletinul Electronic al Registrului Comerțului: 4.077.510 decizii, aprilie 2023 – noiembrie 2026.",
              "<b>Portalul myportal.onrc.ro</b>: 7.469 de numere de cerere sondate, recoltate pe 21–22 noiembrie 2026, fără nume, CNP sau date de contact.",
              "<b>Ministerul Justiției</b>: notele din 30 octombrie și 6 noiembrie 2026 (stocuri pe etape, intrări zilnice, buget).",

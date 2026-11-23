@@ -8,7 +8,6 @@
 4. Comparația cu bugetul OUG sub substituție macroeconomică (macro_substitution_stress_test.csv).
 Ieșire: out/cost_check.json. Nu modifică fișierele analizei.
 """
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1])); import config  # repo config.py
 import json
 from pathlib import Path
 import pandas as pd
@@ -49,7 +48,7 @@ def main():
         for a, b in (("total", "published_total"), ("tax", "published_tax"), ("daily_econ", "published_daily_econ"), ("daily_tax", "published_daily_tax")):
             assert abs(rep[s][a] - rep[s][b]) <= max(1.0, 1e-6 * rep[s][b]), (s, a, rep[s][a], rep[s][b])
     # recount the measured inputs from the current archive, same window and filters
-    d = pd.read_pickle(str(config.BERC_PKL))[["cat", "app", "res", "sol", "jtype"]]
+    d = pd.read_pickle("W:/SOLOResearch/analysis_decisions.pkl")[["cat", "app", "res", "sol", "jtype"]]
     d = d[(d.res >= "2026-08-01") & (d.res < "2026-11-19")].copy()
     d["w"] = (d.res - d.app).dt.total_seconds() / 86400
     d = d[d.w.between(0, 365)]

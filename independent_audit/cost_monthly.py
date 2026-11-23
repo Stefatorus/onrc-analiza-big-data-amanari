@@ -6,7 +6,6 @@ condiționată a stocului nu are o lună și se prezintă separat. Verificare: s
 să fie egală cu partea realizată a contului de impact (aceleași formule, stoc = 0).
 Ieșire: out/cost_monthly.json (tabele în formatul stat_pack, citite de raport și de figuri).
 """
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1])); import config  # repo config.py
 import json
 from pathlib import Path
 import pandas as pd
@@ -19,7 +18,7 @@ OUT = HERE / "out" / "cost_monthly.json"
 
 def main():
     inp = pd.DataFrame(json.loads((HERE / "out" / "cost_founded.json").read_text(encoding="utf-8"))["inputs_founded"]).set_index("scenario")  # founded scenario
-    d = pd.read_pickle(str(config.BERC_PKL))[["cat", "app", "res", "sol", "jtype"]]
+    d = pd.read_pickle("W:/SOLOResearch/analysis_decisions.pkl")[["cat", "app", "res", "sol", "jtype"]]
     d = d[(d.res >= "2024-01-01")].copy()
     d["w"] = (d.res - d.app).dt.total_seconds() / 86400
     d = d[d.w.between(0, 365)]

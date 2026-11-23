@@ -8,7 +8,6 @@ If a data refresh changes a published number so that a statement no longer holds
 Run:  ..\\venv\\Scripts\\python.exe -X utf8 gen_lean_v3_witnesses.py
 """
 from __future__ import annotations
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1])); import config  # repo config.py
 import json, csv, re, subprocess, os
 from pathlib import Path
 
@@ -88,7 +87,7 @@ root = (FP / "OnrcProofs.lean").read_text(encoding="utf-8")
 if "OnrcProofs.RegistryV3Witnesses" not in root:
     (FP / "OnrcProofs.lean").write_text(root.rstrip() + "\nimport OnrcProofs.RegistryV3Witnesses\n", encoding="utf-8")
 
-env = dict(os.environ); env["PATH"] = str(Path(config.LAKE).parent if config.LAKE else Path.home() / ".elan" / "bin") + os.pathsep + env.get("PATH", "")
+env = dict(os.environ); env["PATH"] = str(Path.home() / ".elan" / "bin") + os.pathsep + env.get("PATH", "")
 r = subprocess.run(["lake", "build"], cwd=str(FP), capture_output=True, text=True, encoding="utf-8", errors="replace", env=env, timeout=1800)
 ok = r.returncode == 0 and "error" not in r.stdout.lower()
 sorry = "sorry" in (FP / "OnrcProofs" / "RegistryV3Witnesses.lean").read_text(encoding="utf-8")

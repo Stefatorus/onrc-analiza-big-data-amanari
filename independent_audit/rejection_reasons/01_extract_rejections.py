@@ -12,7 +12,6 @@ Record-level output (request numbers, raw reason text) goes to _tmp/ and is dele
 "urmează a respinge ... pe motiv" and "D I S P U N E" is kept as reason text (the header with firm, registrar, applicant is never kept).
 stdout: aggregates only.
 """
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import sys; sys.dont_write_bytecode = True  # never leave __pycache__ in delay_reasons (read-only reuse)
 import glob, os, re, pickle, collections, importlib.util
 from concurrent.futures import ProcessPoolExecutor
@@ -90,7 +89,7 @@ def parse(path):
 
 
 def main():
-    files = sorted(glob.glob(str(config.BULLETINS_DIR / '*.pdf')))
+    files = sorted(glob.glob(r'W:\SOLOResearch\bulletins\2026\*.pdf'))
     IDXR, DOCS, POST, unread = [], [], [], 0
     with ProcessPoolExecutor(max_workers=6) as ex:
         for stem, bdate, idx, docs, post in ex.map(parse, files, chunksize=4):

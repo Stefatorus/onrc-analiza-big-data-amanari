@@ -11,13 +11,12 @@ Notation (per admitted J registration i): e_i = max(0, wait_i - 3) excess calend
        t_direct = median direct tax per calendar day (loss-inclusive) x p_active,
        t_payroll = mean employees per new firm (unfiled = 0) x statutory taxes per employee-day at the gross minimum wage.
 Aggregates only -> cost_evidence/_t5_floor.json."""
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import json, os, numpy as np, pandas as pd
 HERE = os.path.dirname(os.path.abspath(__file__))
 R = json.load(open(os.path.join(HERE, 'official_rates.json'), encoding='utf-8'))
 T3 = {(x['cohort_year'], x['financial_year']): x for x in json.load(open(os.path.join(HERE, '_t3_new_firms.json')))}
 
-d = pd.read_pickle(str(config.BERC_PKL))[['cat', 'app', 'res', 'sol', 'jtype']]
+d = pd.read_pickle('W:/SOLOResearch/analysis_decisions.pkl')[['cat', 'app', 'res', 'sol', 'jtype']]
 d = d[(d.res >= '2026-08-01') & (d.res < '2026-11-19')].copy()
 d['w'] = (d.res - d.app).dt.total_seconds() / 86400
 d = d[d.w.between(0, 365)]

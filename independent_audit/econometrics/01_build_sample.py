@@ -11,7 +11,6 @@ Reguli: data depunerii și a deciziei = data calendaristică locală (precizie d
 platforme: platforma veche, înainte de 26.07.2024, are doar ora 00:00 la depunere).
 """
 from __future__ import annotations
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import json
 import re
 from pathlib import Path
@@ -20,8 +19,8 @@ import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 WORK = HERE / "_work"
-ARTICLES = config.ARTICLES_DIR
-FIN = config.FIN_CACHE
+ARTICLES = Path("W:/SOLOResearch/articles")
+FIN = Path(r"C:\Users\stefa\AppData\Local\Temp\onrc-review-finance")
 YEARS = (2023, 2024, 2025, 2026)
 
 

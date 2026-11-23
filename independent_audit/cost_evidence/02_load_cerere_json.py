@@ -1,9 +1,8 @@
 """Load 2026 CERERE265 decisions from the raw daily JSON (only the fields needed). Record-level output -> _tmp/."""
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import glob, json, os, pandas as pd
 HERE = os.path.dirname(os.path.abspath(__file__)); TMP = os.path.join(HERE, '_tmp'); os.makedirs(TMP, exist_ok=True)
 rows = []
-for fp in sorted(glob.glob(str(config.ARTICLES_DIR / '2026' / '*_CERERE265.json'))) + sorted(glob.glob(str(config.ARTICLES_DIR / '2025' / '2025-12-3*_CERERE265.json'))):
+for fp in sorted(glob.glob(r'W:\SOLOResearch\articles\2026\*_CERERE265.json')) + sorted(glob.glob(r'W:\SOLOResearch\articles\2025\2025-12-3*_CERERE265.json')):
     for r in json.load(open(fp, encoding='utf-8-sig')):
         if (r.get('publicitySituation') or {}).get('identifier') != 'CERERE265':
             continue

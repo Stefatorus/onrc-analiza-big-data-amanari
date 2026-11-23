@@ -1,9 +1,8 @@
 """Task 2: firms behind admitted amendments decided 1 Aug-18 Nov 2026, joined by fiscal code to Ministry of Finance
 balance sheets (2025; 2024 if missing). Aggregates only -> cost_evidence/_t2_amendment_firms.json."""
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import json, os, numpy as np, pandas as pd
 HERE = os.path.dirname(os.path.abspath(__file__)); TMP = os.path.join(HERE, '_tmp')
-FIN = str(config.FIN_CACHE)
+FIN = r'C:\Users\stefa\AppData\Local\Temp\onrc-review-finance'
 MODEL_PER_CHANGE_DAY = {'prudent': .15 * 35, 'central': .20 * 70, 'tensionat': .25 * 110}   # share x lei/blocked day
 
 

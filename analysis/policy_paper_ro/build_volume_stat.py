@@ -6,7 +6,6 @@ deci nu pot diverge de raportul principal. Tabelele de date poartă sursa și am
   ..\\..\\venv\\Scripts\\python -X utf8 build_volume_stat.py --vol2
   ..\\..\\venv\\Scripts\\python -X utf8 build_volume_stat.py --vol3
 """
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import csv, json, re, sys, html, hashlib, shutil, subprocess, tempfile
 from pathlib import Path
 import lab_styles as LS
@@ -23,7 +22,7 @@ SPF = IA / "out" / "stat_pack.json"
 SP = json.loads(SPF.read_text(encoding="utf-8"))
 SP_SHA = hashlib.sha256(SPF.read_bytes()).hexdigest()
 REG = {r["id"]: r for r in csv.DictReader(open(DELIV / "claims_registry.csv", encoding="utf-8"))}
-EDGE = Path(config.EDGE_PATH or r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe")
+EDGE = Path(r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe")
 AUTHOR = "Ștefan-Lucian Deleanu · stefandeleanu.ro"
 
 

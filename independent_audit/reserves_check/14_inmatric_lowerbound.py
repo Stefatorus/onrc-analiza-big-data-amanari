@@ -1,10 +1,9 @@
 """Task 1d add-ons: (i) BERC-only lower bound of the stock (filed <= D, first final decision > D);
 (ii) pending inmatriculari invisible in the portal sample (no companyId): Little-type estimate."""
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
-import sys; sys.path.insert(0, str(config.REPO / 'independent_audit' / 'reserves_check'))
+import sys; sys.path.insert(0, r'S:\Projects\SOLOResearch\independent_audit\reserves_check')
 from rocal import n_wd
 import pandas as pd, numpy as np
-b = pd.read_pickle(str(config.BERC_PKL))[['cat','app_nr','app','res','sol']]
+b = pd.read_pickle(r'W:\SOLOResearch\analysis_decisions.pkl')[['cat','app_nr','app','res','sol']]
 b = b[b.app >= '2025-01-01']; b['y'] = b.app.dt.year; b['cat'] = b.cat.astype(str)
 FIN = ['Admis','Respins','Renunțat','Certificare înscriere în registrul comerțului','Renunțat din oficiu','ADMIS','certificare inscriere mentiuni']
 b['fin'] = b.sol.isin(FIN)

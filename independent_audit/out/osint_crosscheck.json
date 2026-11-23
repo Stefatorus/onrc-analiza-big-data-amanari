@@ -1,6 +1,6 @@
 {
- "meta": "Confruntarea afirmațiilor din compilația de presă (21.11.2026) cu datele noastre. Doar afirmații despre coadă. Sursa de referință e BERC; cifrele publice care o contrazic sunt menționate, cu explicațiile posibile.",
- "scale": "CONFIRMAT / COMPATIBIL / CONTRAZIS / NEVERIFICABIL",
+ "meta": "Confruntarea afirmațiilor din compilația de presă (21.11.2026) cu datele noastre. Doar afirmații despre coadă. Sursa de referință e BERC; cifrele publice care nu se reproduc din BERC sunt menționate, cu valoarea noastră, definiția folosită și o explicație posibilă neutră.",
+ "scale": "CONFIRMAT / COMPATIBIL / CONTRAZIS (opusul clar, aceeași perioadă și definiție) / NU SE REPRODUCE din datele BERC analizate / NEVERIFICABIL",
  "rows": [
   {
    "id": "P01",
@@ -48,14 +48,14 @@
   },
   {
    "id": "P05",
-   "afirmatie": "Cereri zilnice ian.–iul. 2026",
-   "valoare_publica": ">26.000/zi (>8× 2024)",
-   "valoarea_noastra": "intrări de cereri de înregistrare (MJ): 4.533/zi în prima jumătate a lui 2026 · din datele noastre: 4.369/zi · contorul tuturor numerelor de cerere (orice tip): ≈21.100 pe zi lucrătoare, ian.–iul. 2026",
-   "verdict": "CONTRAZIS (ca dosare) · COMPATIBIL (ca toate cererile din portal)",
-   "nota": "Nota MJ dă 4.533 de cereri de înregistrare pe zi. O cifră de zeci de mii pe zi corespunde contorului tuturor cererilor din portal (inclusiv certificate și informări), nu dosarelor care ajung la registrator.",
-   "sursa_noastra": "Nota MJ (C47) + eșantion myportal",
-   "cum_am_obtinut": "Intrările nu sunt în BERC; folosim nota MJ. Ca test de consistență, comparăm cu deciziile emise zilnic (BERC) și cu stocul oficial.",
-   "explicatii_posibile": "Explicații posibile: (1) altă unitate — toate cererile din portal (certificate, informări, copii), nu doar dosarele de înregistrare; contorul numerelor de cerere din portal ajunge, în datele noastre, la zeci de mii pe zi; (2) o eroare de transcriere sau o cifră lunară ori cumulată citită ca zilnică; (3) o eroare în sursa primară. Test de consistență: dacă ar intra 26.000 de dosare pe zi și s-ar emite circa 5.200 de decizii, stocul ar crește cu peste 20.000 pe zi, adică ar ajunge la milioane în câteva luni; stocul oficial este de 204.414. Cifra nu poate descrie dosarele de înregistrare."
+   "afirmatie": "Cereri zilnice ian.–iul. 2026 (Nota de fundamentare MJ §2.2; presă)",
+   "valoare_publica": ">26.000/zi (>8× 2024) · sursa: Nota de fundamentare MJ §2.2; presă",
+   "valoarea_noastra": "cereri de înregistrare, din datele noastre: 4.369/zi lucrătoare în S1 2026 (MJ: 4.533) · contorul național, toate tipurile de cereri: ≈21.100 pe zi lucrătoare în ian.–iul. 2026 și ≈20.600 în ian.–iul. 2025",
+   "verdict": "NU SE REPRODUCE din datele BERC analizate · COMPATIBIL ca ordin de mărime cu toate cererile de pe contor",
+   "nota": "Cifra nu se reproduce din datele BERC analizate de noi ca cereri de înregistrare; ca ordin de mărime, corespunde tuturor tipurilor de cereri de pe contorul național, al căror nivel e aproape același în 2025 și 2026.",
+   "sursa_noastra": "contorul național al numerelor de cerere + BERC (C98, C165)",
+   "cum_am_obtinut": "Contorul național al numerelor de cerere (numărul maxim atins, împărțit la zilele lucrătoare legale; contorul repornește anual) și cererile de înregistrare cu decizie în BERC.",
+   "explicatii_posibile": "Explicație posibilă: unități diferite. Cifra de peste 26.000 are ordinul de mărime al tuturor tipurilor de cereri de pe contorul național (inclusiv certificate și informări), iar cifrele pentru 2024–2025 și cea de 4.533 din S1 2026 privesc cererile de înregistrare."
   },
   {
    "id": "P06",
@@ -215,7 +215,8 @@
  "counts": {
   "CONFIRMAT": 8,
   "COMPATIBIL": 6,
-  "CONTRAZIS": 2,
+  "CONTRAZIS": 1,
+  "NU SE REPRODUCE": 1,
   "NEVERIFICABIL": 3
  },
  "berc_series": {

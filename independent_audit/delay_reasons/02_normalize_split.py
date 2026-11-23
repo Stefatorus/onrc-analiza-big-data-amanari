@@ -14,7 +14,6 @@ De-identification (applied to every text that leaves this step):
   5. vocabulary whitelist: a token survives only if it occurs in >= 8 distinct entries from >= 4 distinct bulletins and
      >= 3 counties; every other token becomes "<x>". Names, street names, firm names are rare -> masked.
 """
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import os, re, pickle, collections, unicodedata
 import numpy as np, pandas as pd
 
@@ -98,7 +97,7 @@ def main():
     out_window = int((r.din_data < WIN[0]).sum())
     r = r[(r.din_data >= WIN[0]) & (r.din_data <= WIN[1])].reset_index(drop=True)
     # county from the archive (request nr + decision day); the PDF section header is the filing office too
-    df = pd.read_pickle(str(config.BERC_PKL))[['cat', 'app_nr', 'res', 'county', 'jtype']]
+    df = pd.read_pickle(r'W:\SOLOResearch\analysis_decisions.pkl')[['cat', 'app_nr', 'res', 'county', 'jtype']]
     a = df[(df.cat == 'AUTO_AMANARI') & (df.res >= '2026-10-01')].copy(); del df
     a['din_data'] = a.res.dt.normalize(); a = a.drop_duplicates(['app_nr', 'din_data'])
     r = r.merge(a[['app_nr', 'din_data', 'county', 'jtype']], on=['app_nr', 'din_data'], how='left')

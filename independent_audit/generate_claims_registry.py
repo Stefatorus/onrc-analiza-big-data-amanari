@@ -12,7 +12,6 @@ Status: PASS publishable; WARN only with `rezerva_obligatorie` glued to the numb
 Gate M2 (CICERO-REELS, 22.11.2026) verdicts are applied: withdrawn claims stay listed as FAIL.
 """
 from __future__ import annotations
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1])); import config  # repo config.py
 import json, csv, hashlib
 from pathlib import Path
 
@@ -75,7 +74,7 @@ CAEN_SE = float(_re.search(r"'cluster_boot_se_pct': ([\d.]+)", _c16).group(1))
 CAEN_N = int(_re.search(r"'n_bulletins': (\d+)", _c16).group(1))
 CAEN_DEFF = float(_re.search(r"'deff': ([\d.]+)", _c16).group(1))
 # PDF bulletins collected for 2026 (the CAEN sample uses CAEN_N of them); counted on disk when the archive is mounted
-_PDF_DIR = config.BULLETINS_DIR
+_PDF_DIR = Path(r"W:\SOLOResearchulletins6")
 NPDF_2026 = 545
 if _PDF_DIR.exists():
     assert len(list(_PDF_DIR.glob("*.pdf"))) == NPDF_2026, "PDF bulletin count changed: update NPDF_2026 and the texts"
@@ -574,10 +573,10 @@ CLAIMS = [
    "Ponderea respingerilor variază mult între oficii: unde e mare, verificările la depunere și ghidurile pentru solicitanți ar avea cel mai mare efect."),
  # ---------- public sources (press / OSINT) vs our data; CAEN compliance constrained by public figures
  C("C91", "Press/OSINT claims about the queue checked against our data (19 claims)",
-   f"{OS['counts']['CONFIRMAT']} confirmate · {OS['counts']['COMPATIBIL']} compatibile · {OS['counts']['CONTRAZIS']} contrazise · {OS['counts']['NEVERIFICABIL']} neverificabile",
+   f"{OS['counts']['CONFIRMAT']} confirmate · {OS['counts']['COMPATIBIL']} compatibile · {OS['counts']['CONTRAZIS']} {'contrazisă' if OS['counts']['CONTRAZIS'] == 1 else 'contrazise'} · {OS['counts'].get('NU SE REPRODUCE', 0)} {'nu se reproduce' if OS['counts'].get('NU SE REPRODUCE', 0) == 1 else 'nu se reproduc'} din datele BERC analizate · {OS['counts']['NEVERIFICABIL']} neverificabile",
    "afirmații din compilația de presă (21.11.2026)", "A", "PASS", "BERC + eșantion myportal + nota MJ, față de compilația de presă", "osint_crosscheck.py", "osint_crosscheck.json", DATE_BERC,
-   "Cifrele din presă sunt surse secundare (nivel C). Doar afirmațiile despre coadă; anchetele și acuzațiile despre persoane nu sunt analizate.",
-   "Majoritatea cifrelor publicate în presă despre coadă se confirmă sau sunt compatibile cu datele noastre; două afirmații sunt contrazise."),
+   "Cifrele din presă sunt surse secundare (nivel C). Doar afirmațiile despre coadă; anchetele și acuzațiile despre persoane nu sunt analizate. «Contrazis» = datele noastre arată clar opusul, pentru aceeași perioadă și aceeași definiție; altfel spunem că cifra nu se reproduce din datele BERC analizate de noi.",
+   "Majoritatea cifrelor publicate în presă despre coadă se confirmă sau sunt compatibile cu datele noastre; o cifră nu se reproduce din datele BERC analizate de noi, iar descrierea unei procesări strict cronologice nu se regăsește în ordinea deciziilor."),
  C("C92", "Registrations: ONRC/press statistics vs our bulletin data",
    f"9 luni 2026: {OSR['P12']['valoarea_noastra'].split(' admise')[0]} (BERC) vs 100.975 (statistica ONRC) · aug.–oct.: {OSR['P13']['valoarea_noastra'].split(' (')[0]} vs −46,8%",
    "înmatriculări admise", "A", "PASS", "BERC INMATRIC265 (decizii Admis) vs statistica ONRC citată în presă", "osint_crosscheck.py (P12, P13)", "osint_crosscheck.json", DATE_BERC,
@@ -948,6 +947,143 @@ CLAIMS += [
    f"În 2026, concursurile pentru posturile vacante din instituțiile publice sunt suspendate; Ministerul Justiției poate aproba excepții pentru ONRC, de cel mult {_HPCT}% din posturile vacantate după 1 ianuarie 2026, plus posturile unice."),
 ]
 # ---------- END rejection_reasons claims ----------
+
+# ---------- draft OUG (proiect + Notă de fundamentare, consultare 18.11.2026): NF figures and derived checks, C154–C164
+# NF figures are QUOTED (level C) and parsed from the extracted text (asserted, never typed); derived values are read from
+# the audited OUG model outputs (audit_oug.py -> audit_data/oug_2026/*.csv), the stat pack and the serial-counter findings.
+_NFF = HERE / "oug_text" / "nota_fundamentare.txt"; SHA["nota_fundamentare.txt"] = sha(_NFF)
+_NF = _NFF.read_text(encoding="utf-8")
+_OUGD = _ADC / "oug_2026"
+for _f in ("evidence_flows.csv", "scenarios.csv", "policy_inputs.csv", "management_expiry.csv"):
+    SHA[_f] = sha(_OUGD / _f)
+def _nfnum(pat):
+    m = re.search(pat, _NF); assert m, f"NF text not found: {pat}"; return m.groups()
+_n24, _n25, _n26 = _nfnum(r"în anul 2024 media zilnică a cererilor depuse era de ([\d.]+), iar în 2025, de ([\d.]+) de cereri, în primele șapte luni ale anului 2026 aceasta a depășit ([\d.]+) de cereri, reprezentând, așadar, o creștere de peste opt ori")
+_ncd, _ncr = _nfnum(r"cele ([\d.]+) de cereri depuse pentru actualizarea obiectului de activitate potrivit CAEN Rev\. 3, alte ([\d.]+) de entități")
+_nkr, _nkt = _nfnum(r"au fost primite ([\d.]+) cereri, dintr-un total de ([\d.]+) de societăți")
+(_nan,) = _nfnum(r"ANAF a comunicat ([\d.]+) de entități vizate de procedurile de dizolvare/radiere")
+_nbm, _nby = _nfnum(r"impact lunar de (\d+) mii lei/lună prin raportare la personalul de specialitate juridică x 12 luni = ([\d.]+) mii lei/an")
+_npa, _npo, _npp = _nfnum(r"Din cele ([\d.]+) de posturi aprobate, sunt ocupate ([\d.]+), reprezentând ([\d,]+)%")
+assert "nu generează impact financiar în anul 2026" in _NF
+assert abs(int(_npo.replace(".", "")) / int(_npa.replace(".", "")) * 100 - float(_npp.replace(",", "."))) < 0.01
+assert int(_nbm) * 12 == int(_nby.replace(".", ""))
+_EF = {r["period"]: r for r in _csv.DictReader(open(_OUGD / "evidence_flows.csv", encoding="utf-8"))}
+_HJ = {r["cat"]: r for r in SPK["categorii"]["rows"]}["CERERE_HJ265"]
+_h1, _ao, _nv = _EF["H1 2026"], _EF["August–octombrie 2026"], _EF["2–17 noiembrie 2026"]
+_hjsh = float(_h1["judicial_per_day"]) / float(_h1["touches_per_day"])
+_SCN = {(r["scenario"], r["period"]): r for r in _csv.DictReader(open(_OUGD / "scenarios.csv", encoding="utf-8"))}
+_sq = lambda s, p: f"≈{round(float(_SCN[(s, p)]['median']))} ({round(float(_SCN[(s, p)]['p10']))}–{round(float(_SCN[(s, p)]['p90']))})"
+assert float(_SCN[("referinta", "2028-01-31")]["within_3"]) == 0 and float(_SCN[("oug_central", "2028-01-31")]["within_3"]) == 0
+_PIN = {r["scenario"]: r for r in _csv.DictReader(open(_OUGD / "policy_inputs.csv", encoding="utf-8"))}
+_pin = lambda s: f"{_PIN[s]['net_fte']} × {_PIN[s]['units_per_fte']} = {_PIN[s]['peak_daily_net']}"
+_AUJ = json.loads((_OUGD / "audit.json").read_text(encoding="utf-8"))
+_MEX = list(_csv.DictReader(open(_OUGD / "management_expiry.csv", encoding="utf-8")))
+_r = lambda x: round(float(x))
+_bud = float(_nby.replace(".", "")) * 1000
+_upl = {s: _bud / float(_PIN[s]["net_units_2027"]) for s in ("oug_redus", "oug_central", "oug_ridicat")}
+_ewave = CC["engine_wave_p10_p50_p90"]; _ncr_i = int(_ncr.replace(".", ""))
+assert _ncr_i == CC["mj_caen_remaining"]
+_h1in = _in["h1_2026_berc_per_wd"]; _j7 = float(_EF["Ianuarie–iulie 2026"]["filing_mature_per_day"])
+_sg = SR["stages_at_harvest"]
+_fd = lambda s: ".".join(reversed(s.split("-")))
+DATE_NF = "Nota de fundamentare a proiectului de OUG (consultare publică, 18.11.2026)"
+_NFSRC = "Ministerul Justiției, Nota de fundamentare a proiectului de OUG, secțiunea 2.2 (text extras)"
+CLAIMS += [
+ C("C154", "Draft-OUG substantiation note: daily requests 2024 / 2025 / first seven months of 2026, and the stated growth factor",
+   f"{_n24} / {_n25} / >{_n26} pe zi («o creștere de peste opt ori»)", "cereri pe zi (definiția MJ, nepublicată)", "C", "WARN", _NFSRC,
+   "oug_text/nota_fundamentare.txt (citat)", "nota_fundamentare.txt", DATE_NF,
+   "Cifră preluată. Seria de peste " + _n26 + " nu se reproduce din datele BERC analizate de noi ca cereri de înregistrare (aceeași notă dă 4.533 pentru S1, C47); ca ordin de mărime, corespunde tuturor tipurilor de cereri de pe contorul național (C165). Explicație posibilă: unități diferite.",
+   "Nota de fundamentare dă " + _n24 + " de cereri pe zi în 2024 și " + _n25 + " în 2025; cifra de peste " + _n26 + " pentru 2026 nu se reproduce din datele BERC analizate de noi ca cereri de înregistrare; ca ordin de mărime, corespunde tuturor tipurilor de cereri de pe contor (C165)."),
+ C("C155", "Draft-OUG substantiation note: status of the legislative waves (CAEN Rev. 3 filings made / entities remaining; capital-increase requests received / companies concerned; entities communicated by ANAF for dissolution)",
+   f"CAEN: {_ncd} cereri depuse · {_ncr} entități rămase · capital: {_nkr} cereri din {_nkt} societăți · ANAF: {_nan} entități pentru dizolvare/radiere",
+   "cereri; entități; societăți", "C", "WARN", _NFSRC, "oug_text/nota_fundamentare.txt (citat)", "nota_fundamentare.txt", DATE_NF,
+   "Cifre preluate, nerecalculate: BERC nu identifică tipul exact al cererii decât în textul buletinelor PDF. O entitate rămasă nu înseamnă o cerere sigură (CAEN e o perioadă de tranziție, C152), iar o listă ANAF nu e un act care se înscrie automat.",
+   "Potrivit notei, " + _ncr + " de entități nu și-au actualizat încă codurile CAEN, " + _nkr + " din " + _nkt + " de societăți au cerut majorarea capitalului, iar ANAF a comunicat " + _nan + " de entități pentru dizolvare."),
+ C("C156", "Draft-OUG substantiation note: budget calculation and staffing ratio",
+   f"{_nbm} mii lei/lună × 12 = {_nby} mii lei (2027) · fără impact în 2026 · {_npo} din {_npa} posturi ocupate = {_npp}%",
+   "mii lei; posturi", "C", "PASS", "Ministerul Justiției, Nota de fundamentare, secțiunile 2.2 și 4.6–4.8 (text extras)",
+   "oug_text/nota_fundamentare.txt (citat; aritmetica verificată)", "nota_fundamentare.txt", DATE_NF,
+   "Aritmetica se verifică; nota nu spune câte persoane, ce diferență salarială pe persoană și cât din sumă revine art. I față de art. II, deci numărul de oameni nu se poate deduce din buget.",
+   f"Nota calculează {_nbm} de mii de lei pe lună, adică {_nby} de mii de lei în 2027, din diferențe salariale; aritmetica se verifică."),
+ C("C157", "BERC category CERERE_HJ265 (mentions based on court decisions): decisions and decisions per legal working day H1 2026 / Aug–Oct 2026 / 2–17 Nov 2026; share of all decisions in H1 2026; whole archive",
+   f"{ro(int(_h1['judicial_all']))} ({rd(float(_h1['judicial_per_day']))}/zi) / {ro(int(_ao['judicial_all']))} ({rd(float(_ao['judicial_per_day']))}/zi) / {_nv['judicial_all']} ({rd(float(_nv['judicial_per_day']))}/zi) · ≈{rd(100 * _hjsh)}% din toate deciziile (S1 2026) · arhivă: {ro(_HJ['decizii'])} ({rd(_HJ['pondere_pct'], 2)}%)",
+   "decizii; decizii pe zi lucrătoare legală; % din finale + amânări", "A", "PASS", "BERC, categoria de buletin CERERE_HJ265; finale + amânări pe zi lucrătoare (audit_oug.py)",
+   "policy_paper_ro/audit_oug.py (evidence) + stat_pack.py (categorii)", "evidence_flows.csv", DATE_BERC,
+   "Reper parțial: categoria de buletin nu e un inventar juridic al actelor de la art. III; poate include și articole de certificare, iar actele altor autorități (de exemplu ANAF) pot apărea în alte categorii sau deloc în BERC.",
+   "Mențiunile publicate în buletin în baza hotărârilor judecătorești sunt puține: sub o jumătate de procent din decizii."),
+ C("C158", "Audited OUG model: wait around the expiry of the measures (31.12.2027 and 31.01.2028), status quo vs full draft (central delivery); paired gain; stock in June 2028",
+   f"31.12.2027: {_sq('referinta', '2027-12-31')} vs {_sq('oug_central', '2027-12-31')} · 31.01.2028: {_sq('referinta', '2028-01-31')} vs {_sq('oug_central', '2028-01-31')} · câștig ≈{_r(_SCN[('oug_central', '2028-01-31')]['median_saved'])} · stoc iunie 2028: ≈{ro(round(float(_SCN[('referinta', '2028-06-30')]['median_stock']), -3))} vs ≈{ro(round(float(_SCN[('oug_central', '2028-06-30')]['median_stock']), -3))}",
+   "zile (mediană, p10–p90); stoc în dosare-echivalent", "B", "WARN", "motorul verificat de prognoză, scenariile OUG (2.000 de variante)", "policy_paper_ro/audit_oug.py", "scenarios.csv", DATE_BERC,
+   "Scenariu, interval larg; câștigul e mediana diferențelor pe aceleași simulări. Stocul e în unități de muncă, comparabil doar cu punctul de pornire al modelului (≈200.000), nu cu stocul oficial în cereri. În nicio variantă centrală coada nu e golită la data expirării.",
+   "La expirarea măsurilor, în ianuarie 2028, modelul arată o așteptare de ordinul a cinci luni fără proiect și de ordinul a patru luni cu proiect: coada nu e golită când măsurile expiră."),
+ C("C159", "Audited OUG model: delivery inputs (net full-time equivalents × standard units per day) for the weak / central / strong variants; start dates",
+   f"redus {_pin('oug_redus')} · central {_pin('oug_central')} · ridicat {_pin('oug_ridicat')} unități/zi · de la {_fd(_AUJ['policy_start'])}; art. III de la {_fd(_AUJ['admin_start'])}",
+   "echivalente de normă întreagă × unități standard pe zi lucrătoare", "B", "WARN", "ipoteze de livrare ale modelului OUG (nu din proiect)", "policy_paper_ro/audit_oug.py", "policy_inputs.csv", DATE_BERC,
+   "Ipoteze, nu măsurători: proiectul și nota nu spun câți consilieri vor fi desemnați, câți acceptă și cât timp net vor avea. Unitățile pe zi sunt o ipoteză de model, nu o normă de lucru.",
+   "Modelul a testat trei variante de livrare: echivalentul a 5, 15 sau 30 de oameni cu normă întreagă ajunși efectiv la soluționare."),
+ C("C160", "Audited OUG model: effect of extending the existing management-delegation mechanism (Art. II) if it contributes 75 / 150 standard units per day; June 2028 without vs with extension; paired gain",
+   " · ".join(f"{r['lost_units']}/zi: {_r(r['june_2028_without_extension'])} → {_r(r['june_2028_with_extension'])}, câștig ≈{_r(r['median_extension_effect'])}" for r in _MEX if r["lost_units"] != "0"),
+   "zile (mediană, iunie 2028)", "B", "WARN", "motorul verificat; contribuția conducerii este o ipoteză (nepublicată)", "policy_paper_ro/audit_oug.py", "management_expiry.csv", DATE_BERC,
+   "Aportul personalului de conducere desemnat nu este publicat; 75 și 150 de unități pe zi sunt ipoteze de test. Câștigul e pe aceleași simulări.",
+   "Dacă mecanismul existent pentru conducere ar expira în ianuarie 2027 fără prelungire, pierderea ar adăuga, în model, circa una-două săptămâni la așteptarea din iunie 2028."),
+ C("C161", "Our measured inflow ratios vs the draft's preamble: Aug–Oct and September 2026 vs H1 2026 and vs January–July 2026",
+   f"aug.–oct. / S1: +{round(100 * (_in['aug_oct']['per_wd'] / _h1in - 1))}% · sept. / S1: ×{rd(_in['sep']['per_wd'] / _h1in)} · față de ian.–iul.: +{round(100 * (_in['aug_oct']['per_wd'] / _j7 - 1))}% / ×{rd(_in['sep']['per_wd'] / _j7)} (MJ: +53%)",
+   "raport între intrările pe zi lucrătoare", "B", "WARN", "contorul național + eșantion myportal + BERC (C98, C99); ian.–iul.: cereri cu decizie în BERC (audit_oug.py)",
+   "serials_consolidate.py; policy_paper_ro/audit_oug.py", "serials_findings.json", DATE_PORT,
+   "Numărătorii sunt estimări din eșantion (C99), numitorii vin din BERC, care subnumără cu câteva procente (C98): raportul poate fi ușor supraestimat.",
+   "Din datele noastre, cererile din august–octombrie au fost cu peste jumătate peste prima parte a anului, iar în septembrie de circa două ori și jumătate: afirmațiile din preambul se confirmă."),
+ C("C162", "CAEN wave assumed in the base forecast vs the 902,243 entities remaining according to the Ministry of Justice",
+   f"≈{ro(round(_ewave[1], -3))} cereri (p10–p90: {ro(round(_ewave[0], -3))}–{ro(round(_ewave[2], -3))}) · ≈{round(100 * _ewave[1] / _ncr_i)}% din {_ncr}",
+   "cereri CAEN în valul ian.–apr. 2027", "B", "WARN", "motorul verificat (valul CAEN) vs nota MJ", "forecast_caen_compliance.py", "forecast_caen_compliance.json", DATE_BERC,
+   "Ipoteză de intrare a prognozei de bază; scenariile cu o pondere mai mare din cifra MJ sunt în C94–C95.",
+   "Prognoza de bază presupune că doar o parte, de ordinul unei pătrimi, din firmele rămase depun actualizarea CAEN în valul din 2027."),
+ C("C163", "Illustrative ratio: draft-OUG budget per extra standard unit of capacity in 2027, weak / central / strong delivery",
+   f"{round(_upl['oug_redus'])} / {round(_upl['oug_central'])} / {round(_upl['oug_ridicat'])} lei pe unitate ({ro(float(_PIN['oug_redus']['net_units_2027']))} / {ro(float(_PIN['oug_central']['net_units_2027']))} / {ro(float(_PIN['oug_ridicat']['net_units_2027']))} unități în 2027)",
+   "lei pe unitate standard de capacitate", "B", "WARN", "nota MJ (bugetul, C156) ÷ capacitatea netă a variantelor de livrare (C159)", "policy_paper_ro/audit_oug.py; build_oug_review.py", "policy_inputs.csv", DATE_NF,
+   "Raport ilustrativ: presupune că se cheltuie toată suma și că fiecare unitate de capacitate e folosită; nu e un cost marginal și nu măsoară dosare închise.",
+   "Raportat la capacitatea suplimentară din model, bugetul proiectului înseamnă de la câteva zeci la câteva sute de lei pe dosar-standard, după cât personal ajunge efectiv la soluționare."),
+ C("C164", "Stock split by stage estimated from the portal sample at harvest (21–22.11.2026): Stage 1 (not yet processed) / Stage 2 (processed, not yet decided)",
+   f"≈{ro(round(_sg['stage1'], -3))} / ≈{ro(round(_sg['stage2'], -3))} ({rd(100 * _sg['share_stage1'])}% la etapa 1; MJ, 6.11: 51,9%)",
+   "cereri nesoluționate", "B", "WARN", "eșantion myportal ponderat pe intervale ale contorului", "reserves_check/13_stock_estimate.py → serials_consolidate.py", "serials_findings.json", DATE_PORT,
+   "Estimare din eșantion, fără înmatriculările încă în curs; etapa e cea afișată în portal, a cărei definiție poate diferi de cea a MJ.",
+   "La sfârșitul lui noiembrie, ponderea cererilor încă neprelucrate scădea, iar cea a cererilor care așteaptă registratorul creștea, în același sens ca în nota Ministerului."),
+]
+# C165: all request numbers issued on the national counter (yearly reset) per LEGAL working day — the scope of the NF «>26.000/zi»
+_CNF = Path(r"S:\Projects\onrc-coada-2026-release\data\release_v1\counter_daily_national.csv.gz"); SHA["counter_daily_national.csv.gz"] = sha(_CNF)
+import numpy as _np
+_HOLS = _re.findall(r'"(20\d\d-\d\d-\d\d)"', (HERE / "stat_pack.py").read_text(encoding="utf-8").split("HOL = pd.to_datetime(")[1].split("])")[0])
+_HNP = _np.array(_HOLS, dtype="datetime64[D]")
+_lwd = lambda a, b: int(_np.busday_count(_np.datetime64(a), _np.datetime64(b) + 1, holidays=_HNP))
+_CD = _pd.read_csv(_CNF, parse_dates=["filing_date"])
+def _cnt(a, b):
+    s = _CD[(_CD.filing_date >= a) & (_CD.filing_date <= b)]
+    assert s.app_nr_min.min() < 1000, "counter did not reset at the start of the window"
+    return int(s.app_nr_max.max()), _lwd(a, b)
+_c26, _c25, _c25y = _cnt("2026-01-01", "2026-07-31"), _cnt("2025-01-01", "2025-07-31"), _cnt("2025-01-01", "2025-12-31")
+_pw = lambda t: t[0] / t[1]
+_wk = lambda a, b: int(_np.busday_count(_np.datetime64(a), _np.datetime64(b) + 1))
+CLAIMS += [
+ C("C165", "All request numbers issued on the national request counter (all request types, yearly reset) per legal working day: Jan–Jul 2026 / Jan–Jul 2025 / full 2025",
+   f"{ro(_pw(_c26))} / {ro(_pw(_c25))} / {ro(_pw(_c25y))} pe zi lucrătoare legală · ian.–iul. 2026 față de 2025: {'+' if _pw(_c26) >= _pw(_c25) else '−'}{round(abs(100 * (_pw(_c26) / _pw(_c25) - 1)))}% ({ro(_c26[0])} numere în {_c26[1]} zile lucrătoare)",
+   "numere de cerere pe zi lucrătoare legală (toate tipurile de cereri)", "A", "PASS",
+   "contorul național al numerelor de cerere (numărul maxim atins în fereastră; contorul repornește anual), calendar legal românesc",
+   "release_v1/counter_daily_national.csv.gz (app_nr_max) + stat_pack.py (zile lucrătoare legale)", "counter_daily_national.csv.gz", DATE_BERC,
+   "Include toate tipurile de cereri de pe contor (și certificate, informări, alte servicii), nu doar cererile de înregistrare. Împărțit la zilele lucrătoare legale; împărțit la toate zilele de luni–vineri (inclusiv sărbătorile legale), ar fi " + f"{ro(_c26[0] / _wk('2026-01-01', '2026-07-31'))} / {ro(_c25[0] / _wk('2025-01-01', '2025-07-31'))} / {ro(_c25y[0] / _wk('2025-01-01', '2025-12-31'))}" + ". Numărul maxim atins presupune că contorul nu sare peste numere.",
+   "Pe contorul național al numerelor de cerere, toate tipurile de cereri dau circa 21.000 de numere pe zi lucrătoare în ianuarie–iulie 2026, aproape la fel ca în 2025: nivelul e stabil de la un an la altul."),
+]
+# C93 (the >26.000/zi figure): the Ministry's figure from the NF §2.2, also reported in the press — neutral wording, our values from C165 and C98
+for _c in CLAIMS:
+    if _c["id"] == "C93":
+        _c.update(
+            text="Ministry of Justice figure (substantiation note §2.2, also reported in the press) of >26,000 requests/day in Jan–Jul 2026 vs our data",
+            value=f">{_n26}/zi (MJ, NF §2.2; relatată și în presă) · contorul național, toate tipurile de cereri: {ro(_pw(_c26))} / {ro(_pw(_c25))} pe zi lucrătoare (ian.–iul. 2026 / 2025) · cereri de înregistrare: {ro(_in['h1_2026_berc_per_wd'])}/zi (S1 2026)",
+            unit="cereri pe zi; numere de cerere pe zi lucrătoare legală",
+            source="Nota de fundamentare MJ, §2.2 (C154); presă; contorul național al numerelor de cerere (C165); BERC (C98)",
+            script="osint_crosscheck.py (P05); generate_claims_registry.py (C165)",
+            data_sha256=SHA["osint_crosscheck.json"],
+            rezerva_obligatorie=f"Cifra nu se reproduce din datele BERC analizate de noi ca cereri de înregistrare (circa {ro(round(_in['h1_2026_berc_per_wd'], -2))} pe zi, C98); ca ordin de mărime, e compatibilă cu toate tipurile de cereri de pe contorul național, al căror nivel e aproape același în 2025 și 2026 (C165). Explicație posibilă: unități diferite.",
+            public_ro=f"Cifra de peste {_n26} de cereri pe zi din nota Ministerului (relatată și în presă) nu se reproduce din datele BERC analizate de noi pentru cererile de înregistrare, circa {ro(round(_in['h1_2026_berc_per_wd'], -2))} pe zi; ca ordin de mărime, corespunde tuturor tipurilor de cereri de pe contorul național, circa {ro(round(_pw(_c26), -3))} pe zi lucrătoare, aproape la fel ca în 2025.")
+# ---------- END draft-OUG claims ----------
 
 def main():
     cols = ["id", "text", "value", "unit", "level", "status", "source", "script", "data_sha256",

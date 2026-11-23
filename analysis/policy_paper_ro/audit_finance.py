@@ -1,5 +1,4 @@
 """Aggregate official balance sheets joined locally to BERC formation cohorts."""
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import json
 import tempfile
 from pathlib import Path
@@ -10,7 +9,7 @@ import requests
 
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "audit_data"
-ARTICLES = config.ARTICLES_DIR
+ARTICLES = Path("W:/SOLOResearch/articles")
 CKAN = "https://data.gov.ro/api/3/action/package_show"
 PACKAGES = {2024: "d3caacb6-2c08-445e-94e6-8d36d00ab250", 2025: "situatii_financiare_2025"}
 
@@ -82,8 +81,8 @@ def summarize(cohort, balances, year, match_year):
 
 def main():
     OUT.mkdir(exist_ok=True)
-    cache = config.FIN_CACHE
-    cache.mkdir(parents=True, exist_ok=True)
+    cache = Path(tempfile.gettempdir()) / "onrc-review-finance"
+    cache.mkdir(exist_ok=True)
     balances, meta = {}, []
     for y in (2024, 2025):
         balances[y], url, duplicates = balance(y, cache)

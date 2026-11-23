@@ -1,12 +1,11 @@
 """Task 3: 2024 and 2025 J registration cohorts (same rule as analysis/policy_paper_ro/audit_finance.py) joined to
 Ministry of Finance balance sheets: effective direct tax, employees, profitability, daily turnover.
 Aggregates only -> cost_evidence/_t3_new_firms.json."""
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import json, os, numpy as np, pandas as pd
 from pathlib import Path
 HERE = os.path.dirname(os.path.abspath(__file__))
-FIN = str(config.FIN_CACHE)
-ARTICLES = config.ARTICLES_DIR
+FIN = r'C:\Users\stefa\AppData\Local\Temp\onrc-review-finance'
+ARTICLES = Path('W:/SOLOResearch/articles')
 COLS = ['CUI', 'I13', 'I14', 'I15', 'I16', 'I17', 'I18', 'I19', 'I20']
 
 

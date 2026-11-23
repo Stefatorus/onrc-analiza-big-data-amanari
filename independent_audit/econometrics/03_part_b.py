@@ -12,7 +12,6 @@ Ieșiri: tables/revenue_at_risk_2027.csv, tables/revenue_at_risk_sensitivity.csv
         partB_results.json (doar agregate).
 """
 from __future__ import annotations
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import hashlib
 import json
 import shutil
@@ -100,7 +99,7 @@ def engine():
 
 # ---------------------------------------------------------------- (b) volumes
 def volumes(days, workday, rng, n):
-    d = pd.read_pickle(str(config.BERC_PKL))[["cat", "app", "res", "sol", "jtype"]]
+    d = pd.read_pickle("W:/SOLOResearch/analysis_decisions.pkl")[["cat", "app", "res", "sol", "jtype"]]
     d = d[d.sol.eq("Admis") & d.cat.isin(["INMATRIC265", "CERERE265"])]
     d["m"] = d.app.dt.to_period("M")
     J = d[(d.cat == "INMATRIC265") & (d.jtype == "J")].groupby("m").size()
@@ -136,7 +135,7 @@ def volumes(days, workday, rng, n):
     locked = dict(n=int(len(d26)), excess_days_sum=float((w - FLOOR).clip(lower=0).sum()),
                   last_decision=str(d26.res.max().date()), ratio_2026_vs_2025_jan_jul=float(ratio))
     # registration/amendment wait ratio by decision week, last 4 complete weeks (queue priority for registrations)
-    dd = pd.read_pickle(str(config.BERC_PKL))[["cat", "app", "res", "sol", "jtype"]]
+    dd = pd.read_pickle("W:/SOLOResearch/analysis_decisions.pkl")[["cat", "app", "res", "sol", "jtype"]]
     dd = dd[dd.sol.isin(["Admis", "Respins"]) & (dd.res >= "2026-06-01") & dd.cat.isin(["INMATRIC265", "CERERE265"])]
     dd["w"] = (dd.res.dt.normalize() - dd.app.dt.normalize()).dt.days
     dd["wk"] = dd.res.dt.to_period("W")

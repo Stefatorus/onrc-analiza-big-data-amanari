@@ -4,7 +4,6 @@ The modeled lead time is for one standard file placed at the end of the modeled
 queue at the close of a date. It does not predict duration for a particular filing
 or reproduce the median duration of decisions published on that date.
 """
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import json
 from pathlib import Path
 
@@ -15,7 +14,7 @@ from scipy.stats import spearmanr
 
 
 HERE = Path(__file__).resolve().parent
-ARCHIVE = Path(str(config.BERC_PKL))
+ARCHIVE = Path("W:/SOLOResearch/analysis_decisions.pkl")
 OUT = HERE / "audit_data"
 START = pd.Timestamp("2026-11-19")
 HORIZON = pd.Timestamp("2028-06-30")

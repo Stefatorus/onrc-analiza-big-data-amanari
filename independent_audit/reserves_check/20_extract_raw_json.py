@@ -2,7 +2,6 @@
 No names, CUI, addresses, euid or raw UUIDs are written: firm / application / article ids
 are replaced by salted 64-bit hashes (salt random per run, never stored).
 Output: reserves_check/tmp/raw_compact.pkl (delete after use)."""
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import json, glob, os, re, hashlib, secrets, sys, time
 import pandas as pd, numpy as np
 SALT = secrets.token_bytes(16)
@@ -12,7 +11,7 @@ def h(x):
 FN = re.compile(r'^(\d+)_([^_]+)_([0-9.]+)_([^_]+)_(.*?)(?:\.pdf)?$', re.I)
 cols = {k: [] for k in ['cat','app_nr_s','app','app_cty','created','publishable','published','res','sol','jt','siruta',
         'reg_year','src','f_office','f_appnr','f_date','f_code','f_doc','firm','app_id','art','corr','orig','has_docnr','has_folder','instance','fvis']}
-files = sorted(glob.glob(str(config.ARTICLES_DIR / '*' / '*.json')))
+files = sorted(glob.glob(r'W:\SOLOResearch\articles\*\*.json'))
 t0=time.time(); bad=0; chunks=[]
 def compact(df):
     for c in ['app','created','publishable','published','res']:
@@ -52,5 +51,5 @@ from pandas.api.types import union_categoricals
 df = pd.concat(chunks, ignore_index=True); del chunks
 for c in ['cat','app_cty','sol','jt','src','f_office','f_code','f_doc']: df[c]=df[c].astype('category')
 df['app_nr_s']=df.app_nr_s.astype(str); df['f_appnr']=df.f_appnr.astype(str)
-df.to_pickle(str(config.WORK_DIR / 'raw_compact.pkl'))
+df.to_pickle(r'S:\Projects\SOLOResearch\independent_audit\reserves_check\tmp\raw_compact.pkl')
 print('done', df.shape, 'bad files', bad, round(time.time()-t0),'s', df.memory_usage(deep=True).sum()/1e9,'GB')

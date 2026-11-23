@@ -11,13 +11,12 @@ Cohorts evaluated: filing days from the origin to 13.09.2026 (the portal sample 
 Writes out/backtest_queue_mechanics.json.
 """
 from __future__ import annotations
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[1])); import config  # repo config.py
 import json
 from pathlib import Path
 import numpy as np, pandas as pd
 
 HERE = Path(__file__).resolve().parent
-BERC = Path(str(config.BERC_PKL))
+BERC = Path(r"W:\SOLOResearch\analysis_decisions.pkl")
 STRICT = ["Admis", "Respins", "Renunțat"]
 CUTOFF = pd.Timestamp("2026-09-13")
 ORIGINS = ["2026-03-02", "2026-06-01", "2026-08-03"]

@@ -5,7 +5,6 @@ bulletin nr (file stem), bulletin date, request nr, fiscal code (only for the lo
 (Admite/Respinge), and boolean object flags computed from the 'având ca obiect: ...' text (fallback: 'referitoare la').
 Record-level output goes to _tmp/ (deleted at the end of the work); stdout carries aggregates only.
 """
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 import glob, os, re, pickle, sys, collections, unicodedata
 from concurrent.futures import ProcessPoolExecutor
 import fitz  # PyMuPDF
@@ -89,7 +88,7 @@ def parse(path):
 
 
 def main():
-    files = sorted(glob.glob(str(config.BULLETINS_DIR / '*.pdf')))
+    files = sorted(glob.glob(r'W:\SOLOResearch\bulletins\2026\*.pdf'))
     rows, meta = [], []
     with ProcessPoolExecutor(max_workers=6) as ex:
         for stem, bdate, bnr, out in ex.map(parse, files, chunksize=4):

@@ -1,5 +1,4 @@
 """Build a conditional four-channel cost ledger in lei with stocks and flows kept distinct."""
-import sys as _sys, pathlib as _pl; _sys.path.insert(0, str(_pl.Path(__file__).resolve().parents[2])); import config  # repo config.py
 from pathlib import Path
 
 import numpy as np
@@ -11,7 +10,7 @@ REFERENCE_STOCK = 204_414  # Ministry of Justice substantiation note, 6 November
 
 
 def main():
-    data = pd.read_pickle(str(config.BERC_PKL))
+    data = pd.read_pickle("W:/SOLOResearch/analysis_decisions.pkl")
     d = data[data.res.between("2026-08-01", "2026-11-19", inclusive="left")].copy()
     d["wait"] = (d.res - d.app).dt.total_seconds() / 86400
     d = d[d.wait.between(0, 365)]

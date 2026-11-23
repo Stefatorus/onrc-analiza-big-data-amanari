@@ -1,0 +1,1 @@
+window.ONRC_VERIFY_SUMMARY={"n_settings": 71, "max_abs_diff_days": 0.0, "all_ok": true, "claims_ok": true, "generated": "2026-11-23 04:36", "engine_js_sha256": "eac44076424dbb87e862fd7eab0021ec53ac3467e1378fe1844fc70fc4d7594a"};

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auditul estimatorului ONRC</title>
+<meta name="description" content="Cum funcționează estimatorul, cum a fost testat pe trecut și dovada că motorul din browser dă aceleași rezultate ca motorul Python al raportului.">
+<link rel="stylesheet" href="css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%231d5e5a'/%3E%3Cpath d='M3 12h10M3 9h7M3 6h4' stroke='%23fff' stroke-width='1.6'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <span class="kicker">Coada de la Registrul Comerțului · 2026–2028</span>
+    <nav><a href="index.html">Estimator</a><a href="audit.html" aria-current="page">Audit</a><a href="https://github.com/Stefatorus/onrc-analiza-big-data-amanari">Rapoarte și cod</a></nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap hero">
+  <div>
+    <div class="kicker">Audit</div>
+    <h1>Cum funcționează estimatorul și cum l-am verificat</h1>
+    <p class="lede">Estimatorul rulează în browser motorul de prognoză din raport. Pagina arată ce face modelul și ce nu face, cum s-a descurcat pe trecut și dovada că varianta din browser dă aceleași cifre ca programul Python din raport.</p>
+  </div>
+  <aside id="summary">Se încarcă rezultatele verificării…</aside>
+</div>
+
+<section class="wrap" id="pe-scurt">
+  <h2>Pe scurt</h2>
+  <div class="tablewrap"><table id="t_summary"></table></div>
+  <div class="box" style="margin-top:14px" id="live">
+    <strong>Verificare în browserul dumneavoastră.</strong> <span id="live_txt">Pagina rulează acum motorul pe scenariile numite din raport și compară rezultatul cu cifrele motorului Python…</span>
+  </div>
+</section>
+
+<section class="wrap" id="model">
+  <h2>Ce este modelul și ce nu este</h2>
+  <div class="cols">
+    <div>
+      <h3>În cuvinte simple</h3>
+      <p>Modelul tratează Registrul ca pe <strong>o singură coadă</strong>, servită în ordinea sosirii. În fiecare zi intră dosare noi și Registrul soluționează câte poate. Ce rămâne nesoluționat trece în ziua următoare: <span class="mono">stoc de mâine = max(0, stoc de azi + intrări − soluționări)</span>.</p>
+      <p>Pentru fiecare zi, modelul pune un dosar standard la capătul cozii și numără câte zile calendaristice trec până când Registrul ajunge la el. Asta e „așteptarea” din grafice.</p>
+      <p>Viitorul nu e cunoscut, așa că modelul rulează în <strong>2.000 de variante</strong>. Fiecare variantă alege altfel ipotezele incerte (tabelul de mai jos), din intervalul lor plauzibil. Cifrele afișate sunt mediana și intervalul în care cad 80% dintre variante.</p>
+    </div>
+    <div>
+      <h3>Ce nu face</h3>
+      <ul class="tight">
+        <li>Nu prezice durata unui dosar anume. Dosarele simple, banda rapidă și diferențele dintre oficii nu apar separat.</li>
+        <li>Nu prezice cererea: valurile CAEN, de capital și fiscale sunt <em>ipoteze</em>, ancorate în nota Ministerului Justiției și în bilanțuri.</li>
+        <li>Nu modelează explicit amânările și respingerile. Ele sunt incluse în ritmul de soluționare măsurat.</li>
+        <li>Efectele măsurilor (25 de dosare pe zi pe post, conversie CAEN de 75%, triaj de +2%) sunt ipotezele raportului, nu efecte observate.</li>
+      </ul>
+      <p class="note">În <a href="https://github.com/Stefatorus/onrc-analiza-big-data-amanari/blob/main/reports/actuale/Raport_ONRC_Coada_2026-11_COMPLET.pdf">raportul complet</a>: capitolele „Prognoza până în 2028”, „Grila de risc: vitezele de intrare și ieșire”, „Ce se poate face”, „Cât de sigure sunt cifrele” și „Metodă și reproducere”; capitolul „Cele două cozi” pentru operare și soluționare.</p>
+    </div>
+  </div>
+
+  <h3 id="etape">De ce o singură pârghie de personal, nu una pentru operare și una pentru registratori</h3>
+  <p class="prose">Un dosar trece prin două etape: operarea (introducerea și verificarea datelor) și soluționarea (decizia registratorului). Raportul le analizează separat în capitolul „Cele două cozi” din <a href="https://github.com/Stefatorus/onrc-analiza-big-data-amanari/blob/main/reports/actuale/Raport_ONRC_Coada_2026-11_COMPLET.pdf">raportul complet</a>. Motorul de prognoză verificat are însă <strong>o singură etapă</strong>: capacitatea lui este ritmul măsurat al deciziilor finale (BERC, 2–17 noiembrie 2026), exprimat în dosare standard. Calculul pe două etape din raport (<code>independent_audit/oug_scenarios.py</code>) este alt model: determinist, până în aprilie 2027 și fără testul pe trecut de mai jos. Dacă l-am combina cu motorul verificat, am obține cifre care nu apar în raport. De aceea estimatorul are o singură pârghie: posturi nete în plus la soluționare. Dacă oamenii ar fi mutați din operare, modelul nu poate arăta efectul (mai mult la soluționare, mai puțin la operare). Raportul discută separat acest risc.</p>
+
+  <h3>Ce e măsurat și ce e presupus</h3>
+  <p class="note">Valorile triunghiulare (minim, cel mai probabil, maxim) din care motorul trage cele 2.000 de variante (<code>audit_data/forecast_inputs.csv</code>, seed 20261121).</p>
+  <div class="tablewrap"><table id="t_params"></table></div>
+
+  <h3>Cum intră fiecare pârghie în motor</h3>
+  <p class="note">Fiecare pârghie folosește aceeași formulă ca scriptul din raport care a produs cifra. Când combinați pârghii, se aplică regula: <span class="mono">capacitate = bază × (1 + capacitate%) + (OUG × rampă + personal + triaj) × zi lucrătoare</span> și <span class="mono">intrări = (flux recurent + val CAEN′ + val de capital′ − transfer Art. III) × (1 + cereri%)</span>. La setările numite, regula dă exact cifrele scripturilor (verificare B mai jos).</p>
+  <div class="tablewrap"><table id="t_levers"></table></div>
+</section>
+
+<section class="wrap" id="backtest">
+  <h2>Testul pe trecut (backtest)</h2>
+  <div class="cols">
+    <div>
+      <h3>Cum s-a făcut</h3>
+      <p>Am „întors ceasul” la trei date din 2026: <strong>2 martie, 1 iunie și 3 august</strong>. De la fiecare dată, aceeași coadă (aceeași regulă de servire, în ordinea sosirii) a fost rulată înainte și comparată cu așteptarea observată în BERC pentru dosarele depuse în fiecare zi. Au contat doar zilele lucrătoare cu cel puțin 200 de dosare, depuse până la 13.09.2026, pentru că dosarele de după nu erau încă aproape toate decise [C73].</p>
+      <p><strong>Testul mecanismului</strong> folosește intrările și capacitatea care s-au produs efectiv. Răspunde la întrebarea: dacă știm câte dosare intră și câte se soluționează, coada reproduce așteptarea? Eroarea medie e de <strong>1,4–2,5 zile</strong>, iar corelația de 0,98–0,99 [C96]. Modelul supraestimează ușor, cu 1–3 zile, coerent cu existența unei benzi mai rapide.</p>
+    </div>
+    <div>
+      <h3>De ce prognoza greșește mai mult</h3>
+      <p><strong>Testul de prognoză</strong> folosește doar ce se știa la fiecare dată de origine: capacitatea egală cu media ultimelor 12 zile cu decizii (regula motorului) și intrările egale cu media ultimelor 8 săptămâni. Eroarea medie urcă la <strong>4,8–11,5 zile</strong>, iar prognoza <em>subestimează</em> așteptarea (deplasare de −11 până la −2,5 zile) [C97].</p>
+      <p>Motivul: în vara și toamna lui 2026 cererea a crescut brusc (valul dinaintea termenului CAEN), iar o prognoză care nu știe de val presupune că cererea rămâne ca înainte. Partea grea nu e mecanismul cozii, ci cererea viitoare. De aceea raportul și estimatorul dau intervale și scenarii, nu o singură cifră.</p>
+    </div>
+  </div>
+  <div class="tablewrap"><table id="t_bt"></table></div>
+  <div class="chart" id="chart_bt">
+    <h3 id="bt_title">Așteptarea pe săptămâna depunerii, de la originea 1 iunie 2026</h3>
+    <div class="sub">Mediana săptămânală, în zile calendaristice. Observat (BERC), mecanism (intrări reale) și prognoză (doar informația de la origine).</div>
+    <div class="seg" id="bt_origin" role="group" aria-label="Originea backtestului" style="max-width:420px;margin-bottom:6px"></div>
+    <div class="legend"><span><i style="border-color:#1b1d1f"></i>Observat</span><span><i></i>Mecanism</span><span><i class="base"></i>Prognoză de la origine</span></div>
+    <svg id="svg_bt" viewBox="0 0 760 260" role="img" aria-label="Grafic backtest"></svg>
+    <p class="note">De la originea 1 iunie, prognoza ajunge sub zero: cu intrările presupuse sub capacitate, coada prognozată se golește. Recursia simplificată din backtest nu taie aceste valori la zero, iar ele intră așa în erorile [C97]. Sunt un semn al subestimării, nu așteptări reale.</p>
+  </div>
+
+  <h3>Ritmul de soluționare, testat în timp real [C70]</h3>
+  <p class="prose">Intrarea cea mai importantă a motorului este ritmul de soluționare: media deciziilor finale din ultimele 12 zile lucrătoare. Am testat regula pe 9 ferestre de câte patru săptămâni (martie–noiembrie 2026). La fiecare origine s-au folosit doar deciziile <strong>publicate până atunci</strong>, nu cele care au apărut mai târziu cu dată retroactivă. Așa se vede și întârzierea de publicare, ca într-o prognoză reală. Eroarea absolută medie e de circa <strong>5,5%</strong>. Ritmul real a fost cel puțin cel prognozat în 7 din 9 ferestre; abaterea cea mai mare, +24%, vine din accelerarea neanticipată din septembrie.</p>
+  <div class="tablewrap"><table id="t_cap"></table></div>
+</section>
+
+<section class="wrap" id="verificare">
+  <h2>Verificarea motorului din browser față de motorul Python</h2>
+  <p class="prose">Codul JavaScript (<code>js/engine.js</code>) este o traducere a funcțiilor <code>prepare_workload()</code> și <code>simulate()</code> din <code>analysis/policy_paper_ro/audit_forecast.py</code>. Pașii de calcul sunt făcuți în aceeași ordine, cu numere în dublă precizie. Browserul primește parametrii celor 2.000 de variante, calculați chiar de funcția motorului, și vectorii de calendar și de formă ai motorului (<span id="sz"></span>). Nu folosim un eșantion mai mic: rulează toate cele 2.000 de variante, deci nu e nevoie de o corecție de eșantionare.</p>
+  <ol class="tight prose">
+    <li><strong>A. Fișierele publicate.</strong> Formulele scripturilor originale (<code>audit_oug.py</code>, <code>steelman_and_solutions_engine.py</code>, <code>forecast_grid.py</code>, <code>forecast_caen_compliance.py</code>), rulate pe motorul nemodificat, refac fișierele de rezultate ale raportului: <span id="vA"></span>.</li>
+    <li><strong>B. Regula de combinare.</strong> Funcția generală de pârghii din Python dă, la setările numite, aceleași așteptări ca formulele originale (intrările diferă cel mult cu 3·10⁻¹² dosare, din ordinea adunărilor): <span id="vB"></span>.</li>
+    <li><strong>C. JavaScript față de Python.</strong> Pe <span id="vCn"></span> setări (scenariile numite, grila de 36 de celule, CAEN 50/80/100% cu și fără conversie, combinații, date de start mutate, cazuri în care unele dosare nu sunt soluționate până în 2030; la ele, Python oprește calculul, așa că am folosit o copie a funcției care marchează aceste dosare „peste orizont” și am comparat cuantilele finite și numărul de cazuri marcate), am comparat p10, mediana și p90 la 30.06.2027, la vârf și la 30.06.2028, toate cele <span id="vCw"></span> de săptămâni ale traiectoriei și câștigurile pe aceleași variante. Pragul cerut era de 0,5 zile: <span id="vC"></span>.</li>
+  </ol>
+  <div class="tablewrap"><table id="t_verify"></table></div>
+  <p class="note" id="v_note"></p>
+</section>
+
+<section class="wrap" id="afirmatii">
+  <h2>Afirmațiile din raport, refăcute de motorul din browser</h2>
+  <p class="prose">Valorile din registrul afirmațiilor (<code>claims_registry.csv</code>), puse lângă valoarea calculată de motorul JavaScript la setarea corespunzătoare. „≤3” înseamnă coadă practic goală, adică limita de jos a măsurii.</p>
+  <div class="tablewrap"><table id="t_claims"></table></div>
+  <h3>Rezervele obligatorii</h3>
+  <div class="tablewrap"><table id="t_reserves"></table></div>
+</section>
+
+<section class="wrap" id="limite">
+  <h2>Limite</h2>
+  <ol class="tight prose">
+    <li>O singură coadă, servită în ordinea sosirii, în dosare standard. Operarea și soluționarea nu sunt separate, iar banda rapidă lipsește.</li>
+    <li>Cererea viitoare e ipoteză. La backtest, o prognoză fără informații despre val a subestimat așteptarea cu până la 11 zile.</li>
+    <li>Efectele măsurilor sunt ipoteze de intrare (posturi, conversie, triaj), nu efecte măsurate.</li>
+    <li>Amânările, respingerile și redepunerile nu sunt modelate separat. Sunt incluse în ritmul de soluționare măsurat.</li>
+    <li>Intervalul p10–p90 arată cât de mult diferă variantele modelului. Nu e un interval de încredere statistic.</li>
+    <li>Ritmul de bază e cel din 2–17 noiembrie 2026. Reorganizări viitoare nu sunt anticipate.</li>
+    <li>Stocul e numărat în dosare-echivalent, nu în cereri oficiale. Rezultatele de după iunie 2030 sunt doar limite de jos.</li>
+    <li>Pachetele P1, P6 și P7 și regimurile de conformare D1–D5 din raport nu sunt în estimator: au formule care nu se reduc la pârghiile de aici.</li>
+  </ol>
+</section>
+
+<section class="wrap" id="surse">
+  <h2>Surse de date</h2>
+  <ul class="tight prose">
+    <li><strong>BERC</strong> (Buletinul Electronic al Registrului Comerțului): decizii până la 20.11.2026. Din ele vin ritmul de soluționare, puntea de stoc și backtestul.</li>
+    <li><strong>Nota de fundamentare a Ministerului Justiției</strong> la proiectul de OUG: stocul de 204.414 cereri la 06.11.2026, 902.243 de cereri CAEN încă așteptate, populațiile pentru capital și dizolvările ANAF. <a id="mj_link" href="#">Sursa</a>.</li>
+    <li><strong>Seria zilnică</strong> <code>analysis/master_stats/daily_solved_and_inflow.csv</code>: profilul pe luni și pe zile ale săptămânii, plus proporția depunerilor în zilele nelucrătoare.</li>
+    <li><strong>Bilanțurile depuse la Ministerul Finanțelor</strong> (CC BY 4.0): verificarea populației pentru majorările de capital.</li>
+    <li>Detalii, licențe și ce se poate reface din ce: <a href="https://github.com/Stefatorus/onrc-analiza-big-data-amanari/blob/main/docs/DATA.md">docs/DATA.md</a>.</li>
+  </ul>
+</section>
+
+<section class="wrap" id="reproducere">
+  <h2>Reproducere</h2>
+  <pre>git clone https://github.com/Stefatorus/onrc-analiza-big-data-amanari
+cd onrc-analiza-big-data-amanari
+# 1. exportă intrările motorului (importă audit_forecast.py nemodificat; nu scrie în audit_data/)
+python -X utf8 -B site/site_export.py
+# 2. compară motorul JavaScript (Node.js) cu motorul Python și cu fișierele publicate
+python -X utf8 -B site/verify_js_vs_py.py      # scrie site/verification.json</pre>
+  <p class="note">Ambele scripturi au nevoie de arhiva BERC (<code>ARCHIVE</code> în <code>audit_forecast.py</code>; vezi docs/DATA.md) și de pachetele fixate în <code>requirements.txt</code>. <code>site_export.py</code> compară fișierele intermediare ale motorului cu cele publicate, octet cu octet: <span id="se_ok"></span>.</p>
+  <div class="tablewrap"><table id="t_sha"></table></div>
+</section>
+
+<section class="wrap" id="autor">
+  <h2>Autor, AI și interese</h2>
+  <p><strong>Ștefan-Lucian Deleanu</strong>, analiză independentă din date deschise. Cod, date și rapoarte: <a href="https://github.com/Stefatorus/onrc-analiza-big-data-amanari">github.com/Stefatorus/onrc-analiza-big-data-amanari</a> · <a href="https://github.com/Stefatorus/onrc-analiza-big-data-amanari/blob/main/reports/actuale/Raport_ONRC_Coada_2026-11_COMPLET.pdf">Raportul complet</a> · <a href="https://github.com/Stefatorus/onrc-analiza-big-data-amanari/blob/main/reports/actuale/Raport_ONRC_Coada_2026-11_EXECUTIV.pdf">Ediția executivă</a> · <a href="https://github.com/Stefatorus/onrc-analiza-big-data-amanari/blob/main/reports/actuale/Analiza_proiectului_OUG_2026-11.pdf">Analiza proiectului de OUG</a>.</p>
+  <p>Realizat cu sprijinul instrumentelor de inteligență artificială, sub coordonarea și verificarea autorului.</p>
+  <p>Declarație de interes: Autorul a avut o activitate de înființare de societăți, închisă. În 2024, a semnalat public vulnerabilități ale platformei myportal.</p>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="index.html">Înapoi la estimator</a> · <a href="verification.json">verification.json</a> · <a href="data/engine_inputs.json">engine_inputs.json</a></p>
+  </div>
+</footer>
+
+<script src="data/engine_inputs.js"></script>
+<script src="data/report_refs.js"></script>
+<script src="data/verification.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/audit.js"></script>
+</body>
+</html>

@@ -15,7 +15,8 @@ Depozitul conține rapoartele, datele care le susțin și codul care le produce.
 4. **Sinteze pe instituții** (9–11 p. fiecare), în [`reports/sinteze_institutii/`](reports/sinteze_institutii/): ce se cere fiecărei instituții, în limitele competențelor ei.
    * [Ministerul Justiției](reports/sinteze_institutii/Sinteza_MJ.pdf) · [Ministerul Finanțelor și ANAF](reports/sinteze_institutii/Sinteza_MF_ANAF.pdf) · [MEDAT și ADR](reports/sinteze_institutii/Sinteza_MEDAT_ADR.pdf)
    * [Guvernul](reports/sinteze_institutii/Sinteza_Guvern.pdf) · [Parlamentul](reports/sinteze_institutii/Sinteza_Parlament.pdf) · [ONRC](reports/sinteze_institutii/Sinteza_ONRC.pdf)
-5. **Analize complementare** (21.11.2026, date până la 18–20.11.2026), în [`reports/analize_complementare/`](reports/analize_complementare/).
+5. **[Munca din spatele cozii](reports/pe_parti/Munca_din_spatele_cozii_personal_sindicat_v1.0.1.pdf)** (14 p.), pentru personalul ONRC și sindicat: volumul de muncă la nivel de sistem (decizii pe an și pe zi, amânări ca muncă nevăzută, programul, comparația cu 2023 și 2025), prezentat onest, fără date pe persoane. Este Partea 6 din raportul complet, editată separat.
+6. **Analize complementare** (21.11.2026, date până la 18–20.11.2026), în [`reports/analize_complementare/`](reports/analize_complementare/).
    Pentru orice cifră, referința este raportul complet din 23.11.2026.
    * [Atlasul județean, 42 de fișe](reports/analize_complementare/Atlas_judetean_ONRC_42_fise_2026-11-21.pdf) (32 p.)
    * [Criza Registrului Comerțului, raport 2026–2028](reports/analize_complementare/Raport_ONRC_2026_2028_analiza_complementara.pdf) (36 p.)
@@ -23,7 +24,7 @@ Depozitul conține rapoartele, datele care le susțin și codul care le produce.
    * [Analiza steelman: OUG și soluții](reports/analize_complementare/Analiza_steelman_OUG_si_solutii_2026-11-21.pdf) (18 p.)
    * [Costul economic și fiscal al cozii](reports/analize_complementare/Costul_economic_si_fiscal_al_cozii_2026-11-21.pdf) (8 p.)
    * [Cele două blocaje succesive (analiza tandem)](reports/analize_complementare/Analiza_blocajului_tandem_ONRC_2026-11-21.pdf) (4 p.)
-6. **Date:**
+7. **Date:**
    * [`claims_registry.csv`](analysis/raport_executiv_2026-11/claims_registry.csv): registrul afirmațiilor (fiecare cifră: sursă, script, amprentă, stare).
    * Rezultatele agregate în [`independent_audit/out/`](independent_audit/out/) și figurile (SVG) în `analysis/policy_paper_ro/figures_*`.
    * În [release-ul v1.0.0](https://github.com/Stefatorus/onrc-analiza-big-data-amanari/releases/tag/v1.0.0):

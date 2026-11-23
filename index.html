@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estimator: așteptarea la Registrul Comerțului</title>
+<meta name="description" content="Cât ar aștepta un dosar depus la Registrul Comerțului (ONRC) până în iunie 2028, în funcție de cereri, capacitate, valul CAEN și măsuri. Rulează în browser motorul de prognoză verificat al raportului.">
+<link rel="stylesheet" href="css/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%231d5e5a'/%3E%3Cpath d='M3 12h10M3 9h7M3 6h4' stroke='%23fff' stroke-width='1.6'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <span class="kicker">Coada de la Registrul Comerțului · 2026–2028</span>
+    <nav><a href="index.html" aria-current="page">Estimator</a><a href="audit.html">Audit</a><a href="https://github.com/Stefatorus/onrc-analiza-big-data-amanari">Rapoarte și cod</a></nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap hero">
+  <div>
+    <h1>Cât ar aștepta un dosar depus la Registrul Comerțului?</h1>
+    <p class="lede">Estimatorul arată câte zile ar aștepta un dosar standard depus într-o anumită săptămână, până în iunie 2028. Puteți schimba ipotezele despre cereri, viteza de soluționare și valul de cereri CAEN, apoi puteți adăuga măsuri: proiectul de OUG, conversia automată a codurilor CAEN sau personal suplimentar. În browser rulează chiar motorul de prognoză din raport, pe aceleași 2.000 de variante.</p>
+  </div>
+  <aside>Rezultatele sunt <strong>intervale dintr-un model</strong>, nu promisiuni pentru un dosar anume. Modelul a fost verificat pe trecut și față de codul Python al raportului; detaliile sunt în <a href="audit.html">pagina de audit</a>.</aside>
+</div>
+
+<section class="wrap" id="estimator" aria-label="Estimator">
+  <div class="est">
+    <form class="panel" id="controls" onsubmit="return false">
+      <div class="kicker" style="margin-bottom:6px">Scenarii din raport</div>
+      <div class="presets" id="presets"></div>
+
+      <fieldset>
+        <legend>Ipoteze despre cerere și capacitate</legend>
+        <div class="ctl">
+          <label class="lab" for="in_pct">Cereri noi <span class="val" id="in_pct_v"></span></label>
+          <input type="range" id="in_pct" min="-30" max="30" step="1" value="0">
+          <div class="hint">Schimbă toate intrările, inclusiv valurile CAEN, de capital și fiscale, de la 19.11.2026 (ca în grila din raport).</div>
+        </div>
+        <div class="ctl">
+          <label class="lab" for="cap_pct">Capacitate de soluționare <span class="val" id="cap_pct_v"></span></label>
+          <input type="range" id="cap_pct" min="-30" max="40" step="1" value="0">
+          <div class="hint">Față de ritmul măsurat în 2–17 noiembrie 2026, cu incertitudinea lui (−10% … +8%).</div>
+        </div>
+        <div class="ctl">
+          <span class="lab">Valul de cereri CAEN, ian.–apr. 2027</span>
+          <div class="seg" id="caen" role="group" aria-label="Valul CAEN">
+            <button type="button" data-v="motor">Ipoteza raportului</button>
+            <button type="button" data-v="0">Fără</button>
+            <button type="button" data-v="0.5">50%</button>
+            <button type="button" data-v="0.8">80%</button>
+            <button type="button" data-v="1">100%</button>
+          </div>
+          <div class="hint" id="caen_hint">Ipoteza raportului: 140.000–390.000 de cereri suplimentare. Procentele se aplică celor 902.243 de cereri CAEN încă așteptate, după nota Ministerului Justiției.</div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Măsuri</legend>
+        <div class="ctl">
+          <span class="lab">Proiectul de OUG din 18.11.2026</span>
+          <div class="seg" id="oug" role="group" aria-label="Proiectul de OUG">
+            <button type="button" data-v="none">Nu</button>
+            <button type="button" data-v="redus">Livrare slabă</button>
+            <button type="button" data-v="central">Central</button>
+            <button type="button" data-v="ridicat">Livrare bună</button>
+          </div>
+          <div class="hint" id="oug_hint"></div>
+          <label class="chk"><input type="checkbox" id="oug_extended"><span>Prelungit după 08.01.2028<small>Sprijinul temporar nu se mai oprește la data din proiect (ca în pachetele P3–P5).</small></span></label>
+        </div>
+        <label class="chk"><input type="checkbox" id="caen_auto"><span>Conversia automată CAEN 1-la-1<small>Scoate 75% din valul CAEN suplimentar, începând cu data de start (ipoteza raportului).</small></span></label>
+        <label class="chk"><input type="checkbox" id="stagger"><span>Eșalonarea majorărilor de capital<small>Aceleași dosare de capital, depuse pe parcursul lui 2027 în loc de un vârf în decembrie.</small></span></label>
+        <div class="ctl">
+          <label class="lab" for="staff_fte">Personal suplimentar la soluționare <span class="val" id="staff_fte_v"></span></label>
+          <input type="range" id="staff_fte" min="0" max="120" step="5" value="0">
+          <div class="hint">Posturi nete în plus, câte 25 de dosare pe zi lucrătoare fiecare, active la 8 săptămâni după data de start. Motorul verificat are o singură etapă, deci operarea și soluționarea nu se pot separa aici (<a href="audit.html#etape">de ce</a>).</div>
+        </div>
+        <label class="chk"><input type="checkbox" id="triage"><span>Triaj pe două benzi<small>+2% din capacitatea medie, de la data de start (ipoteza pachetului P5).</small></span></label>
+        <div class="ctl">
+          <label class="lab" for="start">Data de start a măsurilor <span class="val" id="start_v"></span></label>
+          <input type="range" id="start" min="0" max="57" step="1" value="6">
+          <div class="hint">Toate măsurile pornesc de aici. Transferul din Art. III intră după 15 zile, iar sprijinul din OUG lucrează la jumătate în primele 20 de zile lucrătoare.</div>
+        </div>
+        <details class="adv">
+          <summary>Opțiune avansată: transferul din Art. III</summary>
+          <select id="art3" aria-label="Transfer Art. III">
+            <option value="">Implicit pentru varianta de OUG aleasă</option>
+            <option value="0">0%</option>
+            <option value="0.25">25% din munca de dizolvare ANAF</option>
+            <option value="0.3">30% (pachetele P3–P5)</option>
+            <option value="0.5">50%</option>
+          </select>
+        </details>
+      </fieldset>
+      <button type="button" id="reset" class="linkbtn">Revino la ipotezele raportului, fără măsuri</button>
+    </form>
+
+    <div id="results" aria-live="polite">
+      <div class="tiles" id="tiles"></div>
+      <div id="warn"></div>
+      <div class="chart" id="chart_wait">
+        <h3>Așteptarea unui dosar depus în fiecare săptămână</h3>
+        <div class="sub">Zile calendaristice de la depunere la soluționare, pentru un dosar standard depus luni seara la capătul cozii.</div>
+        <div class="legend" id="legend_wait"></div>
+        <svg id="svg_wait" viewBox="0 0 760 330" role="img" aria-label="Grafic: așteptarea pe săptămâni"></svg>
+        <div class="tip" id="tip_wait"></div>
+      </div>
+      <div class="chart" id="chart_stock">
+        <h3>Volumul de muncă din coadă</h3>
+        <div class="sub">Dosare în așteptare, în echivalent dosar standard (dosarele CAEN cântăresc mai puțin), nu numărul oficial de cereri.</div>
+        <div class="legend" id="legend_stock"></div>
+        <svg id="svg_stock" viewBox="0 0 760 250" role="img" aria-label="Grafic: stocul de dosare"></svg>
+        <div class="tip" id="tip_stock"></div>
+      </div>
+      <div class="status" id="status">Se încarcă motorul…</div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="citire">
+  <h2>Cum se citește</h2>
+  <div class="cols">
+    <div>
+      <h3>Ce înseamnă o cifră</h3>
+      <p>Cifra mare este <strong>mediana</strong> celor 2.000 de variante ale modelului. Intervalul de dedesubt cuprinde 80% dintre variante (de la a 10-a la a 90-a percentilă). Variantele diferă prin ipotezele incerte: stocul de la start, fluxul de cereri, mărimea valurilor și ritmul de soluționare.</p>
+      <p><strong>Vârful</strong> este cea mai lungă așteptare din fiecare variantă între noiembrie 2026 și iunie 2028. Momentul lui diferă de la o variantă la alta, așa că vârful nu se citește pe grafic ca punctul cel mai înalt al medianei.</p>
+      <p>„≤3 zile” este pragul de jos al măsurii: coada e practic goală. Nu înseamnă exact 3 zile.</p>
+    </div>
+    <div>
+      <h3>Comparația „fără măsuri”</h3>
+      <p>Linia punctată folosește aceleași ipoteze despre cereri, capacitate și valul CAEN, dar fără nicio măsură. Câștigul afișat este mediana diferențelor pe aceleași variante, cum face și raportul. Nu este diferența dintre două mediane.</p>
+      <h3>Ce nu este</h3>
+      <p>Nu estimează durata unui dosar anume. Dosarele simple, amânările, respingerile și diferențele dintre oficii nu sunt modelate. Dacă cererile cresc brusc peste ipoteze, așteptarea reală poate fi mai mare; la backtest, o prognoză făcută fără date despre valul de cereri a subestimat așteptarea cu până la 11 zile (<a href="audit.html#backtest">audit</a>).</p>
+    </div>
+  </div>
+  <p class="box" style="margin-top:18px"><strong>Avertisment.</strong> Este un model de coadă cu intervale largi, condiționat de valurile de cereri anunțate. Măsurile sunt modelate prin ipotezele raportului (de exemplu, 25 de dosare pe zi pe post sau o conversie CAEN de 75%); nu sunt efecte măsurate. Pentru orice cifră citată, referința este <a href="https://github.com/Stefatorus/onrc-analiza-big-data-amanari/blob/main/reports/actuale/Raport_ONRC_Coada_2026-11_COMPLET.pdf">raportul complet</a>, cu registrul afirmațiilor.</p>
+</section>
+</main>
+
+<div id="mini" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">
+    <p><strong>Ștefan-Lucian Deleanu</strong> · analiză independentă din date deschise · <a href="audit.html">Audit și reproducere</a> · <a href="https://github.com/Stefatorus/onrc-analiza-big-data-amanari">Depozitul GitHub</a> · <a href="https://github.com/Stefatorus/onrc-analiza-big-data-amanari/blob/main/reports/actuale/Raport_ONRC_Coada_2026-11_EXECUTIV.pdf">Ediția executivă</a> · <a href="https://github.com/Stefatorus/onrc-analiza-big-data-amanari/blob/main/reports/actuale/Raport_ONRC_Coada_2026-11_COMPLET.pdf">Raportul complet</a></p>
+    <p>Realizat cu sprijinul instrumentelor de inteligență artificială, sub coordonarea și verificarea autorului.</p>
+    <p>Declarație de interes: Autorul a avut o activitate de înființare de societăți, închisă. În 2024, a semnalat public vulnerabilități ale platformei myportal.</p>
+  </div>
+</footer>
+
+<script src="data/engine_inputs.js"></script>
+<script src="data/verify_summary.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
